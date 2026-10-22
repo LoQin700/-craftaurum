@@ -276,10 +276,87 @@
         "padding-block-start": 48,
         "padding-block-end": 48
       }
+    },
+    "image_carousel_craftaurum": {
+      "type": "brand-partners",
+      "settings": {
+        "heading": "Trusted by Jewelry Partners Worldwide",
+        "description": "<p>At Craftaurum, we value meaningful partnerships in jewelry design and manufacturing. We bring together thoughtful craftsmanship, reliable quality, and a collaborative approach to every project.</p>",
+        "disclaimer": "Selected collaborations are featured with permission. Other client relationships remain confidential.",
+        "autoplay": true,
+        "autoplay_speed": 3,
+        "padding_top": 40,
+        "padding_bottom": 20
+      },
+      "blocks": {
+        "partner_1": {
+          "type": "partner",
+          "settings": {}
+        },
+        "partner_2": {
+          "type": "partner",
+          "settings": {}
+        },
+        "partner_3": {
+          "type": "partner",
+          "settings": {}
+        },
+        "partner_4": {
+          "type": "partner",
+          "settings": {}
+        },
+        "partner_5": {
+          "type": "partner",
+          "settings": {}
+        },
+        "partner_6": {
+          "type": "partner",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "partner_1",
+        "partner_2",
+        "partner_3",
+        "partner_4",
+        "partner_5",
+        "partner_6"
+      ]
+    },
+    "image_text_silver_craftaurum": {
+      "type": "image-text-feature",
+      "settings": {
+        "heading": "Custom Sterling Silver Jewelry Manufacturing",
+        "top_label": "S925 Jewelry Custom",
+        "top_url": "",
+        "body": "<p>Bring your sterling silver jewelry ideas to life with Craftaurum. From initial concepts and detailed design to production and finishing, we support custom collections with careful attention to craftsmanship.</p><p>Our flexible approach covers distinctive pieces and coordinated collections, with options for finishes and design details to suit your brand.</p><p>Tell us about your project and explore what we can create together.</p>",
+        "image_position": "right",
+        "cta_label": "Start Your Project",
+        "cta_url": "",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "image_text_gold_craftaurum": {
+      "type": "image-text-feature",
+      "settings": {
+        "heading": "Custom Solid Gold Jewelry by Craftaurum",
+        "top_label": "Gold Jewelry Custom",
+        "top_url": "",
+        "body": "<p>Craftaurum works with brands to develop distinctive solid gold jewelry, from individual designs to coordinated collections. We focus on refined details, consistent quality, and a collaborative process from concept to finished piece.</p><p>Explore custom design options, precious metal choices, and finishes tailored to the creative direction of your brand.</p><p>Get in touch to discuss your gold jewelry collection.</p>",
+        "image_position": "left",
+        "cta_label": "",
+        "cta_url": "",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
     }
   },
   "order": [
     "hero_jVaWmY",
+    "image_carousel_craftaurum",
+    "image_text_silver_craftaurum",
+    "image_text_gold_craftaurum",
     "product_list_fa6P9H"
   ]
 }
