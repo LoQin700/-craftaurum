@@ -145,30 +145,38 @@
       "type": "image-text-feature",
       "name": "图文介绍",
       "settings": {
-        "heading": "Custom Jewelry Manufacturing",
-        "top_label": "Explore Our Craft",
+        "heading": "Custom Sterling Silver Jewelry Manufacturing",
+        "top_label": "S925 Jewelry Custom",
         "top_url": "shopify://pages/contact",
-        "body": "<p>Discover thoughtful jewelry craftsmanship and flexible custom design services at Craftaurum.</p>",
+        "body": "<p>Discover the art of custom sterling silver jewelry with Craftaurum. From early design concepts to casting, polishing and plating, our team supports each step of the manufacturing process with care and attention to detail.</p><p>Whether you are developing a signature piece or a complete collection, we help bring your vision to life with thoughtful craftsmanship, flexible customization and consistent finishing.</p><p>Connect with Craftaurum to explore the possibilities for your next jewelry project.</p>",
         "image_position": "right",
         "cta_label": "Start Your Project",
         "cta_url": "shopify://collections/all",
         "padding_top": 32,
-        "padding_bottom": 32
+        "padding_bottom": 32,
+        "heading_preset": "h2",
+        "top_button_style": "button",
+        "body_preset": "h4",
+        "cta_button_style": "button"
       }
     },
     "image_text_feature_YzURpA": {
       "type": "image-text-feature",
       "name": "图文介绍",
       "settings": {
-        "heading": "Custom Jewelry Manufacturing",
-        "top_label": "Explore Our Craft",
+        "heading": "Custom Solid Gold Jewelry at Craftaurum",
+        "top_label": "Gold Jewelry Custom",
         "top_url": "shopify://pages/contact",
-        "body": "<p>Discover thoughtful jewelry craftsmanship and flexible custom design services at Craftaurum.</p>",
-        "image_position": "right",
-        "cta_label": "Start Your Project",
+        "body": "<p>Craftaurum creates custom gold jewelry designed to reflect each brand’s distinctive style. From individual pieces to complete collections, we combine thoughtful design, precise production and a commitment to material quality.</p><p>Our customization options span precious-metal choices, detailed finishing and gold plating in a range of tones and specifications, helping brands develop pieces tailored to their market.</p><p>Speak with our team to explore your ideas and create a collection that feels uniquely yours.</p>",
+        "image_position": "left",
+        "cta_label": "",
         "cta_url": "shopify://collections/all",
         "padding_top": 32,
-        "padding_bottom": 32
+        "padding_bottom": 32,
+        "heading_preset": "h2",
+        "top_button_style": "button",
+        "body_preset": "h4",
+        "cta_button_style": "button"
       }
     }
   },
