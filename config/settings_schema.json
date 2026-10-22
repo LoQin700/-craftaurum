@@ -1094,6 +1094,542 @@
           }
         ],
         "default": "none"
+      },
+      {
+        "type": "header",
+        "content": "移动端全局字号"
+      },
+      {
+        "type": "select",
+        "id": "mobile_type_size_paragraph",
+        "label": "Mobile Paragraph",
+        "options": [
+          {
+            "value": "inherit",
+            "label": "跟随桌面默认"
+          },
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          },
+          {
+            "value": "18",
+            "label": "18px"
+          },
+          {
+            "value": "20",
+            "label": "20px"
+          },
+          {
+            "value": "22",
+            "label": "22px"
+          },
+          {
+            "value": "24",
+            "label": "24px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          },
+          {
+            "value": "32",
+            "label": "32px"
+          },
+          {
+            "value": "36",
+            "label": "36px"
+          },
+          {
+            "value": "40",
+            "label": "40px"
+          },
+          {
+            "value": "44",
+            "label": "44px"
+          },
+          {
+            "value": "48",
+            "label": "48px"
+          },
+          {
+            "value": "56",
+            "label": "56px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
+          },
+          {
+            "value": "72",
+            "label": "72px"
+          }
+        ],
+        "default": "inherit"
+      },
+      {
+        "type": "select",
+        "id": "mobile_type_size_h1",
+        "label": "Mobile H1",
+        "options": [
+          {
+            "value": "inherit",
+            "label": "跟随桌面默认"
+          },
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          },
+          {
+            "value": "18",
+            "label": "18px"
+          },
+          {
+            "value": "20",
+            "label": "20px"
+          },
+          {
+            "value": "22",
+            "label": "22px"
+          },
+          {
+            "value": "24",
+            "label": "24px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          },
+          {
+            "value": "32",
+            "label": "32px"
+          },
+          {
+            "value": "36",
+            "label": "36px"
+          },
+          {
+            "value": "40",
+            "label": "40px"
+          },
+          {
+            "value": "44",
+            "label": "44px"
+          },
+          {
+            "value": "48",
+            "label": "48px"
+          },
+          {
+            "value": "56",
+            "label": "56px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
+          },
+          {
+            "value": "72",
+            "label": "72px"
+          }
+        ],
+        "default": "inherit"
+      },
+      {
+        "type": "select",
+        "id": "mobile_type_size_h2",
+        "label": "Mobile H2",
+        "options": [
+          {
+            "value": "inherit",
+            "label": "跟随桌面默认"
+          },
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          },
+          {
+            "value": "18",
+            "label": "18px"
+          },
+          {
+            "value": "20",
+            "label": "20px"
+          },
+          {
+            "value": "22",
+            "label": "22px"
+          },
+          {
+            "value": "24",
+            "label": "24px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          },
+          {
+            "value": "32",
+            "label": "32px"
+          },
+          {
+            "value": "36",
+            "label": "36px"
+          },
+          {
+            "value": "40",
+            "label": "40px"
+          },
+          {
+            "value": "44",
+            "label": "44px"
+          },
+          {
+            "value": "48",
+            "label": "48px"
+          },
+          {
+            "value": "56",
+            "label": "56px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
+          },
+          {
+            "value": "72",
+            "label": "72px"
+          }
+        ],
+        "default": "inherit"
+      },
+      {
+        "type": "select",
+        "id": "mobile_type_size_h3",
+        "label": "Mobile H3",
+        "options": [
+          {
+            "value": "inherit",
+            "label": "跟随桌面默认"
+          },
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          },
+          {
+            "value": "18",
+            "label": "18px"
+          },
+          {
+            "value": "20",
+            "label": "20px"
+          },
+          {
+            "value": "22",
+            "label": "22px"
+          },
+          {
+            "value": "24",
+            "label": "24px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          },
+          {
+            "value": "32",
+            "label": "32px"
+          },
+          {
+            "value": "36",
+            "label": "36px"
+          },
+          {
+            "value": "40",
+            "label": "40px"
+          },
+          {
+            "value": "44",
+            "label": "44px"
+          },
+          {
+            "value": "48",
+            "label": "48px"
+          },
+          {
+            "value": "56",
+            "label": "56px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
+          },
+          {
+            "value": "72",
+            "label": "72px"
+          }
+        ],
+        "default": "inherit"
+      },
+      {
+        "type": "select",
+        "id": "mobile_type_size_h4",
+        "label": "Mobile H4",
+        "options": [
+          {
+            "value": "inherit",
+            "label": "跟随桌面默认"
+          },
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          },
+          {
+            "value": "18",
+            "label": "18px"
+          },
+          {
+            "value": "20",
+            "label": "20px"
+          },
+          {
+            "value": "22",
+            "label": "22px"
+          },
+          {
+            "value": "24",
+            "label": "24px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          },
+          {
+            "value": "32",
+            "label": "32px"
+          },
+          {
+            "value": "36",
+            "label": "36px"
+          },
+          {
+            "value": "40",
+            "label": "40px"
+          },
+          {
+            "value": "44",
+            "label": "44px"
+          },
+          {
+            "value": "48",
+            "label": "48px"
+          },
+          {
+            "value": "56",
+            "label": "56px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
+          },
+          {
+            "value": "72",
+            "label": "72px"
+          }
+        ],
+        "default": "inherit"
+      },
+      {
+        "type": "select",
+        "id": "mobile_type_size_h5",
+        "label": "Mobile H5",
+        "options": [
+          {
+            "value": "inherit",
+            "label": "跟随桌面默认"
+          },
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          },
+          {
+            "value": "18",
+            "label": "18px"
+          },
+          {
+            "value": "20",
+            "label": "20px"
+          },
+          {
+            "value": "22",
+            "label": "22px"
+          },
+          {
+            "value": "24",
+            "label": "24px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          },
+          {
+            "value": "32",
+            "label": "32px"
+          },
+          {
+            "value": "36",
+            "label": "36px"
+          },
+          {
+            "value": "40",
+            "label": "40px"
+          },
+          {
+            "value": "44",
+            "label": "44px"
+          },
+          {
+            "value": "48",
+            "label": "48px"
+          },
+          {
+            "value": "56",
+            "label": "56px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
+          },
+          {
+            "value": "72",
+            "label": "72px"
+          }
+        ],
+        "default": "inherit"
+      },
+      {
+        "type": "select",
+        "id": "mobile_type_size_h6",
+        "label": "Mobile H6",
+        "options": [
+          {
+            "value": "inherit",
+            "label": "跟随桌面默认"
+          },
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          },
+          {
+            "value": "18",
+            "label": "18px"
+          },
+          {
+            "value": "20",
+            "label": "20px"
+          },
+          {
+            "value": "22",
+            "label": "22px"
+          },
+          {
+            "value": "24",
+            "label": "24px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          },
+          {
+            "value": "32",
+            "label": "32px"
+          },
+          {
+            "value": "36",
+            "label": "36px"
+          },
+          {
+            "value": "40",
+            "label": "40px"
+          },
+          {
+            "value": "44",
+            "label": "44px"
+          },
+          {
+            "value": "48",
+            "label": "48px"
+          },
+          {
+            "value": "56",
+            "label": "56px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
+          },
+          {
+            "value": "72",
+            "label": "72px"
+          }
+        ],
+        "default": "inherit"
       }
     ]
   },
@@ -1456,6 +1992,42 @@
         "step": 1,
         "unit": "px",
         "default": 40
+      },
+      {
+        "type": "color",
+        "id": "palette_primary_button_hover_background",
+        "label": "一级按钮 Hover 背景",
+        "info": "不设置则继承 Horizon 智能 Hover 配色"
+      },
+      {
+        "type": "color",
+        "id": "palette_primary_button_hover_text",
+        "label": "一级按钮 Hover 文字",
+        "info": "不设置则继承 Horizon 智能 Hover 配色"
+      },
+      {
+        "type": "color",
+        "id": "palette_primary_button_hover_border",
+        "label": "一级按钮 Hover 边框",
+        "info": "不设置则继承 Horizon 智能 Hover 配色"
+      },
+      {
+        "type": "color",
+        "id": "palette_secondary_button_hover_background",
+        "label": "二级按钮 Hover 背景",
+        "info": "不设置则继承 Horizon 智能 Hover 配色"
+      },
+      {
+        "type": "color",
+        "id": "palette_secondary_button_hover_text",
+        "label": "二级按钮 Hover 文字",
+        "info": "不设置则继承 Horizon 智能 Hover 配色"
+      },
+      {
+        "type": "color",
+        "id": "palette_secondary_button_hover_border",
+        "label": "二级按钮 Hover 边框",
+        "info": "不设置则继承 Horizon 智能 Hover 配色"
       }
     ]
   },
