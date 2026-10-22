@@ -22,3 +22,9 @@
 - 本次没有修改 `config/settings_data.json`、首页 JSON、商品数据或店铺内容。
 - 后续应验证购物车蒙层 / 外部点击 / Escape / 滚动锁定 / 折扣 / 数量 / 结账；PC、Tablet、Mobile 字号；主次按钮 Hover；多级菜单前进/返回和原位置恢复。
 - 若 Shopify Theme Check 报错，先以仓库当前文件和 CLI 结果定位问题，不应通过堆叠全局 CSS 修补。
+
+## 2026-10-22 合作品牌展示 Section
+- 新增 `sections/brand-partners.liquid`（通用命名），保留参考布局：居中标题、描述、桌面三列/手机单列图片轮播、左右箭头、圆点、底部 NDA。
+- 默认 Craftaurum 英文文案；图片均通过 Theme Editor block `image_picker` 上传，未上传采用 Shopify `image` 占位图；不引用原站图片或 URL。
+- 已提交至 GitHub main：`685b15ea`。未改首页 `templates/index.json`，请在主题编辑器按需添加并上传图片。
+- 代码已提交；Shopify Sync、Theme Check 与三端真实测试尚待确认。
