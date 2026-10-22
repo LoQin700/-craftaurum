@@ -46,3 +46,12 @@
 - 首页银饰内容更新：Sterling Silver 制造、设计、铸造、抛光、镀层、定制范围；左文右图；底部 Start Your Project 链接复用当前接洽页地址。黄金内容更新：定制黄金、金属选择与镀层、工艺及品牌合作；左图右文；无底部 CTA。
 - 已静态验证两份 Section schema、全局设置 JSON、当前 index JSON 均可解析，首页实例次序和左右位置正确。
 - GitHub 已提交；Shopify 同步 / Theme Editor / 三端可视化 / Theme Check 仍待确认。以上全局 CTA 前缀只覆盖符合选择器的文本链接，不涵盖第三方 App 与纯图标按钮。
+
+## 2026-10-22 珠宝系列图片展示 + 全局字号调整
+- 新增 `sections/image-collection-grid.liquid`，后台名称「珠宝系列图片展示」。根据参考源码呈现桌面首行两张大图、次行三张卡片；卡片居中标题、蒙层、hover 蒙层加深、内部线框显现与缩放动画。图片未上传时为 Horizon SVG 占位。
+- 每张卡片支持独立标题、上传图片、系列绑定或自定义 URL；无 URL 不生成空链接。默认图片由用户在 Theme Editor 填写，未引入外部站图片。
+- 手机端标准：**默认**独立开放「每行 1–4 张」（range）与「网格/轮播」（select）；默认 2 列/网格。以后类似列表、图片卡片模块按此实施，除非有特别指示。轮播支持触摸横滑与箭头导航。
+- 蒙层默认透明度 25%，hover 50%；边框动画为缩放淡入，作用域限本 Section；低动态偏好时关闭动画。
+- 首页只追加一个 `image_collection_grid_craftaurum`，顺序在现有两个图文介绍之后；保留原 Hero、轮播与两组图文实例、全部已配置字段。
+- 全局 Typography 目标桌面：正文16、H1 40、H2 32、H3 24、H4 18、H5 16、H6 14（px）；手机：正文14、H1 32、H2 26、H3 20、H4 16、H5 15、H6 14（px）。同时修改 schema 新建默认值与 `settings_data.json` 当前配置。
+- GitHub 已提交，相关 Section Schema、settings JSON、首页 JSON 可解析。Shopify Theme Check、Theme Editor 保存和真实浏览器视觉/交互未执行；需要独立核实同步。
