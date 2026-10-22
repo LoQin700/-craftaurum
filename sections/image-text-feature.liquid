@@ -1,0 +1,76 @@
+{% comment %}Reusable centered heading and alternating image/text feature. Horizon 4.1.3.{% endcomment %}
+<div id="ImageTextFeature-{{ section.id }}" class="section section--page-width image-text-feature" style="--itf-top:{{ section.settings.padding_top }}px;--itf-bottom:{{ section.settings.padding_bottom }}px;">
+  <div class="image-text-feature__header">
+    {% if section.settings.heading != blank %}<h2 class="h2 image-text-feature__title">{{ section.settings.heading | escape }}</h2>{% endif %}
+    {% if section.settings.top_label != blank %}
+      {% if section.settings.top_url != blank %}<a class="button image-text-feature__top-button" href="{{ section.settings.top_url }}"><span aria-hidden="true">»</span> {{ section.settings.top_label | escape }}</a>
+      {% else %}<span class="image-text-feature__top-button image-text-feature__top-button--static"><span aria-hidden="true">»</span> {{ section.settings.top_label | escape }}</span>{% endif %}
+    {% endif %}
+  </div>
+  <div class="image-text-feature__grid{% if section.settings.image_position == 'left' %} image-text-feature__grid--image-left{% endif %}">
+    <div class="image-text-feature__copy">
+      {% if section.settings.body != blank %}<div class="image-text-feature__body rte">{{ section.settings.body }}</div>{% endif %}
+      {% if section.settings.cta_label != blank and section.settings.cta_url != blank %}
+        <div class="image-text-feature__cta"><a class="button" href="{{ section.settings.cta_url }}">{{ section.settings.cta_label | escape }}</a></div>
+      {% endif %}
+    </div>
+    <div class="image-text-feature__media">
+      {% if section.settings.image != blank %}
+        {{ section.settings.image | image_url: width: 1600 | image_tag: loading: 'lazy', widths: '400, 600, 800, 1000, 1200, 1600', sizes: '(min-width: 750px) 48vw, 100vw', class: 'image-text-feature__photo' }}
+      {% else %}
+        {{ 'image' | placeholder_svg_tag: 'image-text-feature__placeholder' }}
+      {% endif %}
+    </div>
+  </div>
+</div>
+<style>
+  #ImageTextFeature-{{ section.id }} {padding-block:var(--itf-top) var(--itf-bottom);}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__header {text-align:center;margin-bottom:46px;}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__title {margin:0 0 15px;}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__top-button {display:inline-flex;align-items:center;justify-content:center;gap:14px;min-width:285px;min-height:57px;padding:12px 24px;}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__top-button--static {background:#151617;color:#fff;font-weight:600;border-radius:4px;}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__top-button span {font-size:1.5em;line-height:.65;}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__grid {display:grid;grid-template-columns:1fr 1fr;column-gap:5%;align-items:start;}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__copy {min-width:0;}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__body {line-height:1.55;}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__body p {margin:0 0 1.25em;}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__body p:last-child {margin-bottom:0;}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__media {width:100%;aspect-ratio:3/2;overflow:hidden;}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__photo, #ImageTextFeature-{{ section.id }} .image-text-feature__placeholder {display:block;width:100%;height:100%;object-fit:cover;}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__placeholder {background:rgb(var(--color-foreground-rgb) / .04);color:rgb(var(--color-foreground-rgb) / .18);}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__grid--image-left .image-text-feature__media {grid-column:1;grid-row:1;}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__grid--image-left .image-text-feature__copy {grid-column:2;grid-row:1;padding-top:20px;}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__cta {display:flex;justify-content:center;margin-top:36px;}
+  #ImageTextFeature-{{ section.id }} .image-text-feature__cta .button {min-width:280px;}
+  @media(max-width:749px) {
+    #ImageTextFeature-{{ section.id }} .image-text-feature__header {margin-bottom:26px;}
+    #ImageTextFeature-{{ section.id }} .image-text-feature__top-button {min-width:0;width:min(100%,320px);}
+    #ImageTextFeature-{{ section.id }} .image-text-feature__grid {grid-template-columns:minmax(0,1fr);gap:22px;}
+    #ImageTextFeature-{{ section.id }} .image-text-feature__copy, #ImageTextFeature-{{ section.id }} .image-text-feature__media,
+    #ImageTextFeature-{{ section.id }} .image-text-feature__grid--image-left .image-text-feature__copy,
+    #ImageTextFeature-{{ section.id }} .image-text-feature__grid--image-left .image-text-feature__media {grid-column:1;grid-row:auto;padding-top:0;}
+    #ImageTextFeature-{{ section.id }} .image-text-feature__grid--image-left .image-text-feature__media {order:0;}
+    #ImageTextFeature-{{ section.id }} .image-text-feature__grid--image-left .image-text-feature__copy {order:1;}
+    #ImageTextFeature-{{ section.id }} .image-text-feature__cta {margin-top:24px;}
+  }
+</style>
+{% schema %}
+{
+  "name":"图文介绍",
+  "tag":"section",
+  "disabled_on":{"groups":["header","footer"]},
+  "settings":[
+    {"type":"text","id":"heading","label":"标题","default":"Custom Jewelry Manufacturing"},
+    {"type":"text","id":"top_label","label":"顶部按钮文案","default":"Explore Our Craft"},
+    {"type":"url","id":"top_url","label":"顶部按钮链接"},
+    {"type":"richtext","id":"body","label":"正文","default":"<p>Discover thoughtful jewelry craftsmanship and flexible custom design services at Craftaurum.</p>"},
+    {"type":"image_picker","id":"image","label":"图片"},
+    {"type":"select","id":"image_position","label":"图片位置（桌面端）","options":[{"value":"right","label":"右侧"},{"value":"left","label":"左侧"}],"default":"right"},
+    {"type":"text","id":"cta_label","label":"底部按钮文案","default":"Start Your Project"},
+    {"type":"url","id":"cta_url","label":"底部按钮链接"},
+    {"type":"range","id":"padding_top","label":"上边距","min":0,"max":100,"step":4,"unit":"px","default":32},
+    {"type":"range","id":"padding_bottom","label":"下边距","min":0,"max":100,"step":4,"unit":"px","default":32}
+  ],
+  "presets":[{"name":"图文介绍"}]
+}
+{% endschema %}
