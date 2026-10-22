@@ -1,0 +1,63 @@
+name: Debug uploaded export normalization
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/debug-finalize.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply transform and record remaining diff
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, re
+          from pathlib import Path
+          diff = json.loads(Path('.compare/diff.json').read_text())
+          for path in diff.get('changed', []):
+              p = Path(path)
+              if not p.exists():
+                  continue
+              text = p.read_text(encoding='utf-8')
+              if path.endswith('.liquid') and (path.startswith('blocks/') or path.startswith('sections/')):
+                  p.write_text('\n\n' + text.lstrip('\n'), encoding='utf-8')
+              elif path == 'config/settings_data.json':
+                  text = re.sub(r'^/\*.*?\*/\s*', '', text, flags=re.S)
+                  p.write_text(json.dumps(json.loads(text), separators=(',', ':'), ensure_ascii=False), encoding='utf-8')
+              elif path == 'config/settings_schema.json':
+                  p.write_text(text.rstrip('\n'), encoding='utf-8')
+              elif path.endswith('.json') and path.startswith('templates/'):
+                  p.write_text(text.replace('*/\n{', '*/{').rstrip('\n'), encoding='utf-8')
+          PY
+          cat .compare/manifest-* > /tmp/uploaded.manifest
+          find assets blocks config layout locales sections snippets templates -type f -print0 | sort -z | xargs -0 sha256sum > /tmp/current.manifest
+          python3 - <<'PY'
+          from pathlib import Path
+          import json
+          def load(path):
+              d={}
+              for line in Path(path).read_text().splitlines():
+                  if line.strip():
+                      h,p=line.split('  ',1); d[p]=h
+              return d
+          u=load('/tmp/uploaded.manifest'); c=load('/tmp/current.manifest')
+          result={'changed':sorted(p for p in u.keys() & c.keys() if u[p]!=c[p]),'missing':sorted(u.keys()-c.keys()),'extra':sorted(c.keys()-u.keys()),'uploaded_file_count':len(u),'repo_file_count':len(c)}
+          Path('.compare/after-transform.json').write_text(json.dumps(result,indent=2)+'\n')
+          print(json.dumps(result,indent=2))
+          PY
+      - name: Commit debug result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Record remaining upload normalization differences" || true
+          git push origin main || true
