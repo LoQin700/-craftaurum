@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "hero_jVaWmY": {
       "type": "hero",
@@ -16,7 +17,6 @@
           "name": "t:names.heading",
           "settings": {
             "text": "<p>Browse our latest products</p>",
-            "text_color": "{{ settings.color_palette.background }}",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -27,6 +27,7 @@
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
+            "text_color": "{{ settings.color_palette.background }}",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -48,6 +49,7 @@
             "custom_button_background": "rgba(0,0,0,0)",
             "custom_button_text": "{{ settings.color_palette.background }}",
             "custom_button_border": "{{ settings.color_palette.background }}",
+            "link_text_color": "",
             "width": "fit-content",
             "custom_width": 100,
             "width_mobile": "fit-content",
@@ -68,6 +70,7 @@
         "custom_mobile_media": false,
         "media_type_1_mobile": "image",
         "media_type_2_mobile": "image",
+        "link": "",
         "open_in_new_tab": false,
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -91,261 +94,63 @@
         "padding-block-end": 72
       }
     },
-    "product_list_fa6P9H": {
-      "type": "product-list",
-      "blocks": {
-        "static-header": {
-          "type": "_product-list-content",
-          "name": "t:names.header",
-          "static": true,
-          "settings": {
-            "content_direction": "row",
-            "vertical_on_mobile": false,
-            "horizontal_alignment": "space-between",
-            "vertical_alignment": "flex-end",
-            "align_baseline": true,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "product_list_text_YFtzcL": {
-              "type": "_product-list-text",
-              "name": "t:names.collection_title",
-              "settings": {
-                "text": "<h3>{{ closest.collection.title }}</h3>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h4",
-                "font": "var(--font-body--family)",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "product_list_button_MWeP9V": {
-              "type": "_product-list-button",
-              "name": "t:names.product_list_button",
-              "settings": {
-                "label": "View all",
-                "open_in_new_tab": false,
-                "style_class": "link",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_list_text_YFtzcL",
-            "product_list_button_MWeP9V"
-          ]
-        },
-        "static-product-card": {
-          "type": "_product-card",
-          "name": "t:names.product_card",
-          "static": true,
-          "settings": {
-            "product_card_gap": 4,
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "product_card_gallery_677WP3": {
-              "type": "_product-card-gallery",
-              "name": "t:names.product_card_media",
-              "settings": {
-                "image_ratio": "adapt",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "product_title_YXxMTj": {
-              "type": "product-title",
-              "name": "t:names.product_title",
-              "settings": {
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 4,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "price_JQzVV4": {
-              "type": "price",
-              "name": "t:names.product_price",
-              "settings": {
-                "show_sale_price_first": true,
-                "show_installments": false,
-                "show_tax_info": false,
-                "type_preset": "h6",
-                "width": "100%",
-                "alignment": "left",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "product_card_gallery_677WP3",
-            "product_title_YXxMTj",
-            "price_JQzVV4"
-          ]
-        }
-      },
-      "name": "t:names.product_list",
-      "settings": {
-        "collection": "all",
-        "layout_type": "grid",
-        "carousel_on_mobile": false,
-        "max_products": 8,
-        "columns": 4,
-        "mobile_columns": "2",
-        "mobile_card_size": "60cqw",
-        "columns_gap": 8,
-        "rows_gap": 24,
-        "icons_style": "arrow",
-        "icons_shape": "none",
-        "section_width": "page-width",
-        "horizontal_alignment": "flex-start",
-        "gap": 28,
-        "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 48,
-        "padding-block-end": 48
-      }
-    },
-    "image_carousel_craftaurum": {
+    "brand_partners_BGpjWX": {
       "type": "brand-partners",
-      "settings": {
-        "heading": "Trusted by Jewelry Partners Worldwide",
-        "description": "<p>At Craftaurum, we value meaningful partnerships in jewelry design and manufacturing. We bring together thoughtful craftsmanship, reliable quality, and a collaborative approach to every project.</p>",
-        "disclaimer": "Selected collaborations are featured with permission. Other client relationships remain confidential.",
-        "autoplay": true,
-        "autoplay_speed": 3,
-        "padding_top": 40,
-        "padding_bottom": 20
-      },
       "blocks": {
-        "partner_1": {
+        "partner_yMQpe9": {
           "type": "partner",
           "settings": {}
         },
-        "partner_2": {
+        "partner_T9B8aG": {
           "type": "partner",
           "settings": {}
         },
-        "partner_3": {
+        "partner_bnyXfW": {
           "type": "partner",
           "settings": {}
         },
-        "partner_4": {
+        "partner_iED7tj": {
           "type": "partner",
           "settings": {}
         },
-        "partner_5": {
+        "partner_RidH9m": {
           "type": "partner",
           "settings": {}
         },
-        "partner_6": {
+        "partner_zmpKU4": {
           "type": "partner",
           "settings": {}
         }
       },
       "block_order": [
-        "partner_1",
-        "partner_2",
-        "partner_3",
-        "partner_4",
-        "partner_5",
-        "partner_6"
-      ]
-    },
-    "image_text_silver_craftaurum": {
-      "type": "image-text-feature",
+        "partner_yMQpe9",
+        "partner_T9B8aG",
+        "partner_bnyXfW",
+        "partner_iED7tj",
+        "partner_RidH9m",
+        "partner_zmpKU4"
+      ],
+      "name": "图片轮播",
       "settings": {
-        "heading": "Custom Sterling Silver Jewelry Manufacturing",
-        "top_label": "S925 Jewelry Custom",
-        "top_url": "",
-        "body": "<p>Bring your sterling silver jewelry ideas to life with Craftaurum. From initial concepts and detailed design to production and finishing, we support custom collections with careful attention to craftsmanship.</p><p>Our flexible approach covers distinctive pieces and coordinated collections, with options for finishes and design details to suit your brand.</p><p>Tell us about your project and explore what we can create together.</p>",
-        "image_position": "right",
-        "cta_label": "Start Your Project",
-        "cta_url": "",
-        "padding_top": 32,
-        "padding_bottom": 32
+        "heading": "Trusted by Jewelry Partners Worldwide",
+        "description": "<p>At Craftaurum, we work with jewelry brands and industry partners to bring thoughtful designs and reliable craftsmanship to life. We value long-term collaboration, consistent quality, and solutions tailored to each partner.</p>",
+        "disclaimer": "Selected partnerships are shown. Additional collaborations remain confidential under NDA.",
+        "autoplay": true,
+        "autoplay_speed": 3,
+        "padding_top": 40,
+        "padding_bottom": 20
       }
     },
-    "image_text_gold_craftaurum": {
+    "image_text_feature_NWRYeQ": {
       "type": "image-text-feature",
+      "name": "图文介绍",
       "settings": {
-        "heading": "Custom Solid Gold Jewelry by Craftaurum",
-        "top_label": "Gold Jewelry Custom",
-        "top_url": "",
-        "body": "<p>Craftaurum works with brands to develop distinctive solid gold jewelry, from individual designs to coordinated collections. We focus on refined details, consistent quality, and a collaborative process from concept to finished piece.</p><p>Explore custom design options, precious metal choices, and finishes tailored to the creative direction of your brand.</p><p>Get in touch to discuss your gold jewelry collection.</p>",
-        "image_position": "left",
-        "cta_label": "",
+        "heading": "Custom Jewelry Manufacturing",
+        "top_label": "Explore Our Craft",
+        "top_url": "shopify://pages/contact",
+        "body": "<p>Discover thoughtful jewelry craftsmanship and flexible custom design services at Craftaurum.</p>",
+        "image_position": "right",
+        "cta_label": "Start Your Project",
         "cta_url": "",
         "padding_top": 32,
         "padding_bottom": 32
@@ -354,9 +159,7 @@
   },
   "order": [
     "hero_jVaWmY",
-    "image_carousel_craftaurum",
-    "image_text_silver_craftaurum",
-    "image_text_gold_craftaurum",
-    "product_list_fa6P9H"
+    "brand_partners_BGpjWX",
+    "image_text_feature_NWRYeQ"
   ]
 }

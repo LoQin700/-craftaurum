@@ -10,14 +10,8 @@
   <div class="image-text-feature__grid{% if section.settings.image_position == 'left' %} image-text-feature__grid--image-left{% endif %}">
     <div class="image-text-feature__copy">
       {% if section.settings.body != blank %}<div class="image-text-feature__body rte">{{ section.settings.body }}</div>{% endif %}
-      {% if section.settings.cta_label != blank %}
-        <div class="image-text-feature__cta">
-          {% if section.settings.cta_url != blank %}
-            <a class="button" href="{{ section.settings.cta_url }}">{{ section.settings.cta_label | escape }}</a>
-          {% else %}
-            <button type="button" class="button" disabled title="Set the button link in the theme editor">{{ section.settings.cta_label | escape }}</button>
-          {% endif %}
-        </div>
+      {% if section.settings.cta_label != blank and section.settings.cta_url != blank %}
+        <div class="image-text-feature__cta"><a class="button" href="{{ section.settings.cta_url }}">{{ section.settings.cta_label | escape }}</a></div>
       {% endif %}
     </div>
     <div class="image-text-feature__media">
