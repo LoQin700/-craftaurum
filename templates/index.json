@@ -151,7 +151,7 @@
         "body": "<p>Discover the art of custom sterling silver jewelry with Craftaurum. From early design concepts to casting, polishing and plating, our team supports each step of the manufacturing process with care and attention to detail.</p><p>Whether you are developing a signature piece or a complete collection, we help bring your vision to life with thoughtful craftsmanship, flexible customization and consistent finishing.</p><p>Connect with Craftaurum to explore the possibilities for your next jewelry project.</p>",
         "image_position": "right",
         "cta_label": "Start Your Project",
-        "cta_url": "shopify://collections/all",
+        "cta_url": "shopify://pages/contact",
         "padding_top": 32,
         "padding_bottom": 32,
         "heading_preset": "h2",
