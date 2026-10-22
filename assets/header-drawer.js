@@ -115,7 +115,11 @@ class HeaderDrawer extends Component {
 
     summary.setAttribute('aria-expanded', 'false');
     details.classList.remove('menu-open');
-    this.refs.menuDrawer.classList.remove('menu-drawer--has-submenu-opened');
+    // Preserve the submenu state when returning from level 3 to level 2.
+    // Only clear it when no other ancestor submenu remains open.
+    if (details === this.refs.details || !details.parentElement?.closest('details.menu-open')) {
+      this.refs.menuDrawer.classList.remove('menu-drawer--has-submenu-opened');
+    }
 
     // Wait for the .menu-drawer element's transition, not the entire details subtree
     // This avoids waiting for child accordion/resource-card animations which can cause issues on Firefox
