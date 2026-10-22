@@ -5,10 +5,10 @@
 <section id="BrandPartners-{{ section.id }}" class="brand-partners section section--page-width" style="--bp-gap:10px;--bp-top:{{ section.settings.padding_top }}px;--bp-bottom:{{ section.settings.padding_bottom }}px;" aria-label="{{ section.settings.heading | escape }}">
   <div class="brand-partners__intro">
     {% if section.settings.heading != blank %}
-      <h2 class="brand-partners__heading h2">{{ section.settings.heading | escape }}</h2>
+      <h2 class="brand-partners__heading {{ section.settings.heading_preset | default: 'h2' }}">{{ section.settings.heading | escape }}</h2>
     {% endif %}
     {% if section.settings.description != blank %}
-      <div class="brand-partners__description rte">{{ section.settings.description }}</div>
+      <div class="brand-partners__description rte {{ section.settings.description_preset | default: 'h4' }}">{{ section.settings.description }}</div>
     {% endif %}
   </div>
   {% if section.blocks.size > 0 %}
@@ -36,7 +36,7 @@
     </div>
   {% endif %}
   {% if section.settings.disclaimer != blank %}
-    <p class="brand-partners__disclaimer">{{ section.settings.disclaimer | escape }}</p>
+    <p class="brand-partners__disclaimer {{ section.settings.disclaimer_preset | default: 'h5' }}">{{ section.settings.disclaimer | escape }}</p>
   {% endif %}
 </section>
 
@@ -45,7 +45,7 @@
   #BrandPartners-{{ section.id }} .brand-partners__intro {text-align:center;margin:0 auto 20px;max-width:1120px;}
   #BrandPartners-{{ section.id }} .brand-partners__heading {margin:0 0 15px;}
   #BrandPartners-{{ section.id }} .brand-partners__description {text-align:center;line-height:1.5;}
-  #BrandPartners-{{ section.id }} .brand-partners__description p {margin:0;}
+  #BrandPartners-{{ section.id }} .brand-partners__description p {margin:0;font-size:inherit;line-height:inherit;}
   #BrandPartners-{{ section.id }} .brand-partners__carousel {position:relative;}
   #BrandPartners-{{ section.id }} .brand-partners__viewport {overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth;overscroll-behavior-inline:contain;}
   #BrandPartners-{{ section.id }} .brand-partners__viewport::-webkit-scrollbar {display:none;}
@@ -138,18 +138,201 @@
 {
   "name": "图片轮播",
   "tag": "section",
-  "disabled_on": {"groups":["header","footer"]},
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
   "settings": [
-    {"type":"text","id":"heading","label":"标题","default":"Trusted by Jewelry Partners Worldwide"},
-    {"type":"richtext","id":"description","label":"介绍文字","default":"<p>At Craftaurum, we work with jewelry brands and industry partners to bring thoughtful designs and reliable craftsmanship to life. We value long-term collaboration, consistent quality, and solutions tailored to each partner.</p>"},
-    {"type":"text","id":"disclaimer","label":"底部说明","default":"Selected partnerships are shown. Additional collaborations remain confidential under NDA."},
-    {"type":"checkbox","id":"autoplay","label":"自动轮播","default":true},
-    {"type":"range","id":"autoplay_speed","label":"自动轮播间隔（秒）","min":2,"max":10,"step":1,"default":3},
-    {"type":"range","id":"padding_top","label":"上边距","min":0,"max":100,"step":4,"unit":"px","default":40},
-    {"type":"range","id":"padding_bottom","label":"下边距","min":0,"max":100,"step":4,"unit":"px","default":20}
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "标题",
+      "default": "Trusted by Jewelry Partners Worldwide"
+    },
+    {
+      "type": "select",
+      "id": "heading_preset",
+      "label": "标题字号预设",
+      "options": [
+        {
+          "label": "H1",
+          "value": "h1"
+        },
+        {
+          "label": "H2",
+          "value": "h2"
+        },
+        {
+          "label": "H3",
+          "value": "h3"
+        },
+        {
+          "label": "H4",
+          "value": "h4"
+        },
+        {
+          "label": "H5",
+          "value": "h5"
+        },
+        {
+          "label": "H6",
+          "value": "h6"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "介绍文字",
+      "default": "<p>At Craftaurum, we work with jewelry brands and industry partners to bring thoughtful designs and reliable craftsmanship to life. We value long-term collaboration, consistent quality, and solutions tailored to each partner.</p>"
+    },
+    {
+      "type": "select",
+      "id": "description_preset",
+      "label": "正文字号预设",
+      "options": [
+        {
+          "label": "H1",
+          "value": "h1"
+        },
+        {
+          "label": "H2",
+          "value": "h2"
+        },
+        {
+          "label": "H3",
+          "value": "h3"
+        },
+        {
+          "label": "H4",
+          "value": "h4"
+        },
+        {
+          "label": "H5",
+          "value": "h5"
+        },
+        {
+          "label": "H6",
+          "value": "h6"
+        }
+      ],
+      "default": "h4"
+    },
+    {
+      "type": "text",
+      "id": "disclaimer",
+      "label": "底部说明",
+      "default": "Selected partnerships are shown. Additional collaborations remain confidential under NDA."
+    },
+    {
+      "type": "select",
+      "id": "disclaimer_preset",
+      "label": "底部说明字号预设",
+      "options": [
+        {
+          "label": "H1",
+          "value": "h1"
+        },
+        {
+          "label": "H2",
+          "value": "h2"
+        },
+        {
+          "label": "H3",
+          "value": "h3"
+        },
+        {
+          "label": "H4",
+          "value": "h4"
+        },
+        {
+          "label": "H5",
+          "value": "h5"
+        },
+        {
+          "label": "H6",
+          "value": "h6"
+        }
+      ],
+      "default": "h5"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "自动轮播",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "自动轮播间隔（秒）",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "上边距",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "下边距",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    }
   ],
-  "blocks": [{"type":"partner","name":"轮播图片","settings":[{"type":"image_picker","id":"image","label":"图片"}]}],
-  "max_blocks":20,
-  "presets":[{"name":"图片轮播","blocks":[{"type":"partner"},{"type":"partner"},{"type":"partner"},{"type":"partner"},{"type":"partner"},{"type":"partner"}]}]
+  "blocks": [
+    {
+      "type": "partner",
+      "name": "轮播图片",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "图片轮播",
+      "blocks": [
+        {
+          "type": "partner"
+        },
+        {
+          "type": "partner"
+        },
+        {
+          "type": "partner"
+        },
+        {
+          "type": "partner"
+        },
+        {
+          "type": "partner"
+        },
+        {
+          "type": "partner"
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}
