@@ -28,3 +28,11 @@
 - 默认 Craftaurum 英文文案；图片均通过 Theme Editor block `image_picker` 上传，未上传采用 Shopify `image` 占位图；不引用原站图片或 URL。
 - 已提交至 GitHub main：`685b15ea`。未改首页 `templates/index.json`，请在主题编辑器按需添加并上传图片。
 - 代码已提交；Shopify Sync、Theme Check 与三端真实测试尚待确认。
+
+## 2026-10-22 首页新增图片轮播及图文介绍
+- `sections/brand-partners.liquid` 的后台 Section / Preset 名称改为 **图片轮播**（原 `brand-partners` 文件路径不变以保留兼容）；图片 Block 使用通用名称。
+- 新增 `sections/image-text-feature.liquid`，后台名 **图文介绍**。居中标题、顶部黑色引导条、左右图文双列、可选底部 CTA；PC 图片左右可切换，Mobile 单列；Image Picker 未设置则使用 Shopify 原生占位图。
+- `templates/index.json` 已挂载：原有 hero 后依次是图片轮播、S925 银饰图文介绍（文左图右）、黄金珠宝图文介绍（图左文右），后面保留原产品列表。
+- 两个实例写入 Craftaurum 专属英文内容，没有引用 Sunrise-jewel 的文案或素材；图片全部留给 Theme Editor 后台上传。
+- 按钮链接未设置：顶部引导条渲染静态标签、第一组底部 CTA 禁用，避免虚假跳转；上线前在编辑器设置真实链接。
+- GitHub 已提交；Shopify 主题同步、Theme Check 和三端实际 UI 仍未现场验证。
