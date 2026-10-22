@@ -151,7 +151,22 @@
         "body": "<p>Discover thoughtful jewelry craftsmanship and flexible custom design services at Craftaurum.</p>",
         "image_position": "right",
         "cta_label": "Start Your Project",
-        "cta_url": "",
+        "cta_url": "shopify://collections/all",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "image_text_feature_YzURpA": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "heading": "Custom Jewelry Manufacturing",
+        "top_label": "Explore Our Craft",
+        "top_url": "shopify://pages/contact",
+        "body": "<p>Discover thoughtful jewelry craftsmanship and flexible custom design services at Craftaurum.</p>",
+        "image_position": "right",
+        "cta_label": "Start Your Project",
+        "cta_url": "shopify://collections/all",
         "padding_top": 32,
         "padding_bottom": 32
       }
@@ -160,6 +175,7 @@
   "order": [
     "hero_jVaWmY",
     "brand_partners_BGpjWX",
-    "image_text_feature_NWRYeQ"
+    "image_text_feature_NWRYeQ",
+    "image_text_feature_YzURpA"
   ]
 }
