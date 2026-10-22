@@ -117,7 +117,7 @@ class HeaderDrawer extends Component {
     details.classList.remove('menu-open');
     // Preserve the submenu state when returning from level 3 to level 2.
     // Only clear it when no other ancestor submenu remains open.
-    if (details === this.refs.details || !details.parentElement?.closest('details.menu-open')) {
+    if (details === this.refs.details || !details.parentElement?.closest('.menu-drawer__submenu')) {
       this.refs.menuDrawer.classList.remove('menu-drawer--has-submenu-opened');
     }
 
