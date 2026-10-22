@@ -36,3 +36,13 @@
 - 两个实例写入 Craftaurum 专属英文内容，没有引用 Sunrise-jewel 的文案或素材；图片全部留给 Theme Editor 后台上传。
 - 按钮链接未设置：顶部引导条渲染静态标签、第一组底部 CTA 禁用，避免虚假跳转；上线前在编辑器设置真实链接。
 - GitHub 已提交；Shopify 主题同步、Theme Check 和三端实际 UI 仍未现场验证。
+
+## 2026-10-22 后续全局设置与首页文案调整
+- 以 main 当前文件为基准检查；当前首页已由用户在编辑器建立 2 个 `image-text-feature` 实例，直接复用 `image_text_feature_NWRYeQ` 和 `image_text_feature_YzURpA`，未创建重复实例、未重置图片字段。
+- Theme Settings 按钮：去掉「胶囊标签」说明及半径编辑控件；原生胶囊标签 CSS 保留并设置 40px 兜底，以免影响筛选/搜索。一级、二级 Hover 设置移回对应按钮分组。
+- Typography：移动端段落与 H1–H6 设置分别紧邻对应桌面字号设置。移动端未指定时仍继承 Horizon。
+- 通用图文介绍新增 Section 后台全局 H1–H6 字号预设选择（标题 H2、副标题 H3、正文 H4）和上/下按钮主、次、文字链接样式选择。通用图片轮播增加标题 H2、正文 H4、底部说明 H5 字号预设。
+- 全局文本 CTA 按钮链接样式增加 » 前缀（排除 SVG/图标操作控件），顶部静态标签也增加 »；其余原生操作按钮避免添加不合适的符号。
+- 首页银饰内容更新：Sterling Silver 制造、设计、铸造、抛光、镀层、定制范围；左文右图；底部 Start Your Project 链接复用当前接洽页地址。黄金内容更新：定制黄金、金属选择与镀层、工艺及品牌合作；左图右文；无底部 CTA。
+- 已静态验证两份 Section schema、全局设置 JSON、当前 index JSON 均可解析，首页实例次序和左右位置正确。
+- GitHub 已提交；Shopify 同步 / Theme Editor / 三端可视化 / Theme Check 仍待确认。以上全局 CTA 前缀只覆盖符合选择器的文本链接，不涵盖第三方 App 与纯图标按钮。
