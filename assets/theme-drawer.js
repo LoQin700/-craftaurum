@@ -78,7 +78,7 @@ export class ThemeDrawer extends Component {
    */
   #onRestore() {
     const { panel } = this.refs;
-    if (this.#modalQuery.matches) {
+    if ((this.#modalQuery.matches || this.hasAttribute('overlay-only'))) {
       lockScroll(panel);
     }
 
@@ -131,7 +131,7 @@ export class ThemeDrawer extends Component {
    * crosses the modal breakpoint while the drawer is open.
    */
   #onModalBreakpointChange = () => {
-    if (!this.isOpen) return;
+    if (!this.isOpen || this.hasAttribute('overlay-only')) return;
 
     const { panel } = this.refs;
     const nestedDialog = this.#getOpenNestedDialog();
@@ -145,7 +145,7 @@ export class ThemeDrawer extends Component {
     panel.close();
     removeTrapFocus();
 
-    if (this.#modalQuery.matches) {
+    if ((this.#modalQuery.matches || this.hasAttribute('overlay-only'))) {
       lockScroll(panel);
       panel.showModal();
     } else {
@@ -215,7 +215,7 @@ export class ThemeDrawer extends Component {
 
     this.#previouslyFocused = /** @type {HTMLElement | null} */ (document.activeElement);
 
-    if (this.#modalQuery.matches) {
+    if ((this.#modalQuery.matches || this.hasAttribute('overlay-only'))) {
       lockScroll(panel);
       panel.showModal();
     } else {
@@ -251,7 +251,7 @@ export class ThemeDrawer extends Component {
     // In modal mode, dialogs live in the browser's top layer where z-index
     // is ignored — stacking follows showModal() call order. Re-calling
     // showModal() moves this dialog to the top of the stack.
-    if (this.#modalQuery.matches && panel.open) {
+    if ((this.#modalQuery.matches || this.hasAttribute('overlay-only')) && panel.open) {
       lockScroll(panel);
       panel.close();
       panel.showModal();
