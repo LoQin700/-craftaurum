@@ -181,16 +181,16 @@
     --color-primary-button-background: rgb({{ settings.palette_primary_button_background.rgba }});
     --color-primary-button-border: rgb({{ settings.palette_primary_button_border.rgba }});
     --color-primary-button-focus-outline: rgb({{ effective_primary_button_focus_outline.rgb }});
-    --color-primary-button-hover-text: rgb({{ effective_primary_button_hover_text.rgba }});
-    --color-primary-button-hover-background: {{ effective_primary_button_hover_background }};
-    --color-primary-button-hover-border: {{ effective_primary_button_hover_border }};
+    --color-primary-button-hover-text: {% if settings.palette_primary_button_hover_text != blank %}{{ settings.palette_primary_button_hover_text }}{% else %}rgb({{ effective_primary_button_hover_text.rgba }}){% endif %};
+    --color-primary-button-hover-background: {% if settings.palette_primary_button_hover_background != blank %}{{ settings.palette_primary_button_hover_background }}{% else %}{{ effective_primary_button_hover_background }}{% endif %};
+    --color-primary-button-hover-border: {% if settings.palette_primary_button_hover_border != blank %}{{ settings.palette_primary_button_hover_border }}{% else %}{{ effective_primary_button_hover_border }}{% endif %};
 
     --color-secondary-button-text: rgb({{ settings.palette_secondary_button_text.rgba }});
     --color-secondary-button-background: rgb({{ settings.palette_secondary_button_background.rgba }});
     --color-secondary-button-border: rgb({{ settings.palette_secondary_button_border.rgba }});
-    --color-secondary-button-hover-text: rgb({{ effective_secondary_button_hover_text.rgba }});
-    --color-secondary-button-hover-background: {{ effective_secondary_button_hover_background }};
-    --color-secondary-button-hover-border: {{ effective_secondary_button_hover_border }};
+    --color-secondary-button-hover-text: {% if settings.palette_secondary_button_hover_text != blank %}{{ settings.palette_secondary_button_hover_text }}{% else %}rgb({{ effective_secondary_button_hover_text.rgba }}){% endif %};
+    --color-secondary-button-hover-background: {% if settings.palette_secondary_button_hover_background != blank %}{{ settings.palette_secondary_button_hover_background }}{% else %}{{ effective_secondary_button_hover_background }}{% endif %};
+    --color-secondary-button-hover-border: {% if settings.palette_secondary_button_hover_border != blank %}{{ settings.palette_secondary_button_hover_border }}{% else %}{{ effective_secondary_button_hover_border }}{% endif %};
 
     --color-input-background: rgb({{ settings.palette_input_background.rgba }});
     --color-input-text: rgb({{ settings.palette_input_text.rgba }});
