@@ -3,8 +3,8 @@
   <div class="image-text-feature__header">
     {% if section.settings.heading != blank %}<h2 class="{{ section.settings.heading_preset | default: 'h2' }} image-text-feature__title">{{ section.settings.heading | escape }}</h2>{% endif %}
     {% if section.settings.top_label != blank %}
-      {% if section.settings.top_url != blank %}<a class="{{ section.settings.top_button_style | default: 'button' }} image-text-feature__top-button" href="{{ section.settings.top_url }}">{{ section.settings.top_label | escape }}</a>
-      {% else %}<span class="image-text-feature__top-button image-text-feature__top-button--static"><span aria-hidden="true">»</span> {{ section.settings.top_label | escape }}</span>{% endif %}
+      {% if section.settings.top_url != blank %}<a class="{{ section.settings.top_button_style | default: 'button' }} image-text-feature__top-button" style="font-size:var(--font-{{ section.settings.subtitle_preset | default: 'h3' }}--size);" href="{{ section.settings.top_url }}">{{ section.settings.top_label | escape }}</a>
+      {% else %}<span class="image-text-feature__top-button image-text-feature__top-button--static" style="font-size:var(--font-{{ section.settings.subtitle_preset | default: 'h3' }}--size);"><span aria-hidden="true">»</span> {{ section.settings.top_label | escape }}</span>{% endif %}
     {% endif %}
   </div>
   <div class="image-text-feature__grid{% if section.settings.image_position == 'left' %} image-text-feature__grid--image-left{% endif %}">
@@ -108,6 +108,38 @@
       "id": "top_label",
       "label": "顶部按钮文案",
       "default": "Explore Our Craft"
+    },
+    {
+      "type": "select",
+      "id": "subtitle_preset",
+      "label": "副标题字号预设",
+      "options": [
+        {
+          "label": "H1",
+          "value": "h1"
+        },
+        {
+          "label": "H2",
+          "value": "h2"
+        },
+        {
+          "label": "H3",
+          "value": "h3"
+        },
+        {
+          "label": "H4",
+          "value": "h4"
+        },
+        {
+          "label": "H5",
+          "value": "h5"
+        },
+        {
+          "label": "H6",
+          "value": "h6"
+        }
+      ],
+      "default": "h3"
     },
     {
       "type": "url",
