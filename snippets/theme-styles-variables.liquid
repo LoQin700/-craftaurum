@@ -711,3 +711,17 @@
   section_id: 'badge-sold-out',
   preset: 'ui'
 %}
+
+{% style %}
+  @media (max-width: 749px) {
+    :root {
+      {% if settings.mobile_type_size_paragraph != blank and settings.mobile_type_size_paragraph != 'inherit' %}--font-paragraph--size: {{ settings.mobile_type_size_paragraph | divided_by: 16.0 }}rem;{% endif %}
+      {% if settings.mobile_type_size_h1 != blank and settings.mobile_type_size_h1 != 'inherit' %}--font-h1--size: {{ settings.mobile_type_size_h1 | divided_by: 16.0 }}rem;{% endif %}
+      {% if settings.mobile_type_size_h2 != blank and settings.mobile_type_size_h2 != 'inherit' %}--font-h2--size: {{ settings.mobile_type_size_h2 | divided_by: 16.0 }}rem;{% endif %}
+      {% if settings.mobile_type_size_h3 != blank and settings.mobile_type_size_h3 != 'inherit' %}--font-h3--size: {{ settings.mobile_type_size_h3 | divided_by: 16.0 }}rem;{% endif %}
+      {% if settings.mobile_type_size_h4 != blank and settings.mobile_type_size_h4 != 'inherit' %}--font-h4--size: {{ settings.mobile_type_size_h4 | divided_by: 16.0 }}rem;{% endif %}
+      {% if settings.mobile_type_size_h5 != blank and settings.mobile_type_size_h5 != 'inherit' %}--font-h5--size: {{ settings.mobile_type_size_h5 | divided_by: 16.0 }}rem;{% endif %}
+      {% if settings.mobile_type_size_h6 != blank and settings.mobile_type_size_h6 != 'inherit' %}--font-h6--size: {{ settings.mobile_type_size_h6 | divided_by: 16.0 }}rem;{% endif %}
+    }
+  }
+{% endstyle %}
