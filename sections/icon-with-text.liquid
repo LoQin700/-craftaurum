@@ -6,7 +6,7 @@
 
 <section
   id="IconWithText-{{ section.id }}"
-  class="ca-icon-text ca-icon-text--{{ section.settings.style_preset }} ca-icon-text--icon-{{ section.settings.icon_position }} section section--{{ content_width }}"
+  class="ca-icon-text ca-icon-text--{{ section.settings.style_preset }} ca-icon-text--icon-{{ section.settings.icon_position }} section section--full-width"
   style="
     --ca-icon-background: {{ section.settings.background_color }};
     --ca-icon-text: {{ section.settings.text_color }};
@@ -14,7 +14,6 @@
     --ca-icon-size: {{ section.settings.icon_size }}px;
     --ca-icon-gap: {{ section.settings.icon_gap }}px;
     --ca-column-gap: {{ section.settings.column_gap }}px;
-    --ca-row-gap: {{ section.settings.row_gap }}px;
     --ca-desktop-columns: {{ desktop_columns }};
     --ca-mobile-columns: {{ mobile_columns }};
     --ca-padding-top: {{ section.settings.padding_top }}px;
@@ -22,7 +21,7 @@
   "
 >
   <div class="ca-icon-text__surface">
-    <div class="ca-icon-text__inner">
+    <div class="ca-icon-text__inner ca-icon-text__inner--{{ content_width }}">
       <header class="ca-icon-text__intro">
         {% if section.settings.eyebrow != blank %}
           <p class="ca-icon-text__eyebrow {{ section.settings.eyebrow_preset }}">{{ section.settings.eyebrow | escape }}</p>
@@ -92,9 +91,19 @@
     padding-block: var(--ca-padding-top) var(--ca-padding-bottom);
   }
 
+  .ca-icon-text__inner--page-width {
+    width: var(--full-page-grid-central-column-width);
+    margin-inline: auto;
+  }
+
+  .ca-icon-text__inner--full-width {
+    width: 100%;
+    padding-inline: max(var(--page-margin), 24px);
+  }
+
   .ca-icon-text__intro {
     max-width: 820px;
-    margin: 0 auto 52px;
+    margin: 0 0 52px;
   }
 
   .ca-icon-text__eyebrow {
@@ -129,7 +138,6 @@
     display: grid;
     grid-template-columns: repeat(var(--ca-desktop-columns), minmax(0, 1fr));
     column-gap: var(--ca-column-gap);
-    row-gap: var(--ca-row-gap);
   }
 
   .ca-icon-text__item {
@@ -158,28 +166,16 @@
     color: color-mix(in srgb, var(--ca-icon-text) 68%, transparent);
   }
 
-  /* Editorial: default, lighter and less "card-like" */
-  .ca-icon-text--editorial .ca-icon-text__intro {
+  .ca-icon-text--left .ca-icon-text__intro,
+  .ca-icon-text--left .ca-icon-text__item {
     text-align: left;
-    margin-left: 0;
   }
 
-  .ca-icon-text--editorial .ca-icon-text__item {
-    padding-top: 6px;
+  .ca-icon-text--centered .ca-icon-text__intro {
+    margin-inline: auto;
+    text-align: center;
   }
 
-  /* Minimal: subtle rhythm only */
-  .ca-icon-text--minimal .ca-icon-text__intro {
-    text-align: left;
-    margin-left: 0;
-  }
-
-  .ca-icon-text--minimal .ca-icon-text__item {
-    padding-block: 10px;
-  }
-
-  /* Centered: still clean, without boxes */
-  .ca-icon-text--centered .ca-icon-text__intro,
   .ca-icon-text--centered .ca-icon-text__item {
     text-align: center;
   }
@@ -189,7 +185,6 @@
     justify-content: center;
   }
 
-  /* Icon positions */
   .ca-icon-text--icon-top .ca-icon-text__item {
     display: block;
   }
@@ -203,30 +198,29 @@
     grid-template-columns: var(--ca-icon-size) minmax(0, 1fr);
     column-gap: var(--ca-icon-gap);
     align-items: start;
-  }
-
-  .ca-icon-text--icon-left.ca-icon-text--centered .ca-icon-text__item {
     text-align: left;
   }
 
+  .ca-icon-text--icon-left .ca-icon-text__icon-wrap {
+    justify-content: flex-start;
+  }
+
   @media screen and (max-width: 749px) {
-    .ca-icon-text__inner {
-      padding-block: min(var(--ca-padding-top), 56px) min(var(--ca-padding-bottom), 56px);
+    .ca-icon-text__inner--full-width {
+      padding-inline: 18px;
     }
 
     .ca-icon-text__intro {
       margin-bottom: 34px;
-      text-align: left;
     }
 
     .ca-icon-text__grid {
       grid-template-columns: repeat(var(--ca-mobile-columns), minmax(0, 1fr));
       column-gap: 20px;
-      row-gap: 32px;
     }
 
     .ca-icon-text--centered .ca-icon-text__intro {
-      text-align: left;
+      text-align: center;
     }
   }
 {% endstylesheet %}
@@ -279,19 +273,15 @@
       "label": "样式预设",
       "options": [
         {
-          "value": "editorial",
-          "label": "编辑型"
-        },
-        {
-          "value": "minimal",
-          "label": "极简"
+          "value": "left",
+          "label": "左对齐"
         },
         {
           "value": "centered",
           "label": "居中"
         }
       ],
-      "default": "editorial"
+      "default": "left"
     },
     {
       "type": "select",
@@ -338,16 +328,6 @@
       "step": 4,
       "unit": "px",
       "default": 32
-    },
-    {
-      "type": "range",
-      "id": "row_gap",
-      "label": "行间距",
-      "min": 20,
-      "max": 80,
-      "step": 4,
-      "unit": "px",
-      "default": 40
     },
     {
       "type": "header",
