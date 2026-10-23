@@ -156,6 +156,16 @@
         %}
       </div>
     {% endif %}
+    {% if section.settings.button_label != blank %}
+      <div class="ca-image-cards__section-action">
+        {% render 'craftaurum-cta',
+          label: section.settings.button_label,
+          link: section.settings.link,
+          style_class: section.settings.button_style,
+          static_label: true
+        %}
+      </div>
+    {% endif %}
   </div>
 </section>
 
@@ -203,6 +213,7 @@
   .ca-image-card__content { padding-top: 14px; }
   .ca-image-card__title { margin: 0 0 8px; }
   .ca-image-card__action { margin-top: 14px; }
+  .ca-image-cards__section-action { display: flex; justify-content: center; margin-top: 26px; }
   .ca-image-cards__carousel { display: none; }
   .ca-image-cards__grid--desktop-hidden { display: none; }
   .ca-image-cards__carousel--desktop { display: block; }
@@ -358,6 +369,36 @@
         }
       ],
       "default": "h5"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "底部按钮文字"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "底部按钮样式",
+      "options": [
+        {
+          "value": "button",
+          "label": "主按钮"
+        },
+        {
+          "value": "button-secondary",
+          "label": "次级按钮"
+        },
+        {
+          "value": "button-unstyled",
+          "label": "文字链接"
+        }
+      ],
+      "default": "button-unstyled"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "底部按钮链接"
     },
     {
       "type": "select",
