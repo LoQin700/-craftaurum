@@ -472,13 +472,20 @@
       "default": 4
     },
     {
-      "type": "range",
+      "type": "select",
       "id": "mobile_columns",
-      "label": "图标文字手机端每行数量",
-      "min": 1,
-      "max": 2,
-      "step": 1,
-      "default": 2
+      "label": "手机端每行数量",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 列"
+        },
+        {
+          "value": "2",
+          "label": "2 列"
+        }
+      ],
+      "default": "2"
     },
     {
       "type": "range",
