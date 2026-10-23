@@ -32,33 +32,15 @@
       "blocks": {
         "photo_1": {
           "type": "image",
-          "settings": {
-            "title": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
+          "settings": {}
         },
         "photo_2": {
           "type": "image",
-          "settings": {
-            "title": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
+          "settings": {}
         },
         "photo_3": {
           "type": "image",
-          "settings": {
-            "title": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -73,6 +55,7 @@
         "body_preset": "h5",
         "button_label": "Explore Rings",
         "button_style": "button-unstyled",
+        "collection": "",
         "link": "",
         "section_width": "page-width",
         "desktop_layout": "grid",
@@ -89,33 +72,15 @@
       "blocks": {
         "photo_1": {
           "type": "image",
-          "settings": {
-            "title": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
+          "settings": {}
         },
         "photo_2": {
           "type": "image",
-          "settings": {
-            "title": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
+          "settings": {}
         },
         "photo_3": {
           "type": "image",
-          "settings": {
-            "title": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -130,6 +95,7 @@
         "body_preset": "h5",
         "button_label": "Explore Earrings",
         "button_style": "button-unstyled",
+        "collection": "",
         "link": "",
         "section_width": "page-width",
         "desktop_layout": "grid",
@@ -146,33 +112,15 @@
       "blocks": {
         "photo_1": {
           "type": "image",
-          "settings": {
-            "title": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
+          "settings": {}
         },
         "photo_2": {
           "type": "image",
-          "settings": {
-            "title": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
+          "settings": {}
         },
         "photo_3": {
           "type": "image",
-          "settings": {
-            "title": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -187,6 +135,7 @@
         "body_preset": "h5",
         "button_label": "Explore Bracelets",
         "button_style": "button-unstyled",
+        "collection": "",
         "link": "",
         "section_width": "page-width",
         "desktop_layout": "grid",
@@ -203,33 +152,15 @@
       "blocks": {
         "photo_1": {
           "type": "image",
-          "settings": {
-            "title": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
+          "settings": {}
         },
         "photo_2": {
           "type": "image",
-          "settings": {
-            "title": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
+          "settings": {}
         },
         "photo_3": {
           "type": "image",
-          "settings": {
-            "title": "",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -244,6 +175,7 @@
         "body_preset": "h5",
         "button_label": "Explore Necklaces",
         "button_style": "button-unstyled",
+        "collection": "",
         "link": "",
         "section_width": "page-width",
         "desktop_layout": "grid",
