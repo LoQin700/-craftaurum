@@ -1,0 +1,726 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "t:names.title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {
+            "text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "custom_hero": {
+      "type": "jewelry-collections-overview",
+      "name": "图文横幅",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "eyebrow": "ODM / OEM JEWELRY CUSTOMIZATION",
+        "heading": "All-in-One Jewelry Customization.",
+        "introduction": "<p>Turn sketches, reference images, existing samples or brand ideas into a custom jewelry collection through a clear development process. Craftaurum supports design review, 3D development, material and finish selection, sampling and production coordination around the needs of your project.</p><p>Whether you are refining one signature piece or building a wider collection, each stage can be shaped around your design direction, target market and brand identity.</p>",
+        "image_position": "right",
+        "image_ratio": "wide",
+        "quote_label": "Start Your Custom Project",
+        "quote_url": "",
+        "catalog_label": "Get B2B Quote",
+        "catalog_url": "",
+        "heading_preset": "h1",
+        "eyebrow_preset": "h5",
+        "body_preset": "h5",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "capabilities": {
+      "type": "content-cards",
+      "name": "图文卡片",
+      "blocks": {
+        "plated": {
+          "type": "card",
+          "settings": {
+            "title": "Plating & Surface Finish",
+            "description": "<p>Explore plating colors and surface directions that help define the final look and character of a jewelry collection.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "render3d": {
+          "type": "card",
+          "settings": {
+            "title": "3D Rendering",
+            "description": "<p>Visualize and refine proportion, structure and key design details digitally before committing to physical sampling.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "setting": {
+          "type": "card",
+          "settings": {
+            "title": "Stone Setting",
+            "description": "<p>Develop gemstone layouts and setting directions around the intended style, structure and visual balance of the piece.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "casting": {
+          "type": "card",
+          "settings": {
+            "title": "Casting",
+            "description": "<p>Translate approved designs into metal components through a controlled casting process suited to the construction of the piece.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "polishing": {
+          "type": "card",
+          "settings": {
+            "title": "Polishing",
+            "description": "<p>Refine surfaces and small details through polishing stages that prepare the jewelry for its final appearance and finishing.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "private_label": {
+          "type": "card",
+          "settings": {
+            "title": "Private Label",
+            "description": "<p>Incorporate brand-led details such as logo direction, custom forms and collection-specific finishing into the product development process.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "plated",
+        "render3d",
+        "setting",
+        "casting",
+        "polishing",
+        "private_label"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "eyebrow": "CUSTOMIZATION CAPABILITIES",
+        "eyebrow_preset": "h5",
+        "heading": "One-Stop Custom Jewelry Development",
+        "heading_preset": "h2",
+        "description": "<p>From digital development and material decisions to finishing and brand details, these capabilities support the practical work behind a custom jewelry project.</p>",
+        "body_preset": "h5",
+        "card_title_preset": "h3",
+        "desktop_layout": "grid",
+        "desktop_columns": "3",
+        "mobile_layout": "carousel",
+        "mobile_columns": "1",
+        "image_ratio": "landscape",
+        "gap": 20,
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "custom_banner": {
+      "type": "jewelry-collections-overview",
+      "name": "图文横幅",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "eyebrow": "CUSTOMIZE EVERY DETAIL",
+        "heading": "Build Each Detail Around Your Brand.",
+        "introduction": "<p>Customization is not limited to one finishing choice. Shape, metal, stones, pearls, plating, surface texture, logo direction and other brand-led details can all be reviewed together so the final product feels connected to your collection.</p><p>The goal is to make each choice work as part of one coherent design rather than as a series of isolated options.</p>",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "quote_label": "Discuss Your Requirements",
+        "quote_url": "",
+        "catalog_label": "",
+        "catalog_url": "",
+        "heading_preset": "h2",
+        "eyebrow_preset": "h5",
+        "body_preset": "h5",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "options": {
+      "type": "icon-with-text",
+      "name": "图标文字",
+      "blocks": {
+        "opt_design": {
+          "type": "item",
+          "settings": {
+            "icon": "ruler",
+            "icon_color": "#c7a85e",
+            "title": "Design & Shape",
+            "description": "<p>Refine silhouette, scale, proportion and structural direction around your references.</p>"
+          }
+        },
+        "opt_metal": {
+          "type": "item",
+          "settings": {
+            "icon": "star",
+            "icon_color": "#c7a85e",
+            "title": "Metal",
+            "description": "<p>Review suitable metal directions based on design intent, positioning and finishing requirements.</p>"
+          }
+        },
+        "opt_stone": {
+          "type": "item",
+          "settings": {
+            "icon": "silhouette",
+            "icon_color": "#c7a85e",
+            "title": "Stone & Pearl",
+            "description": "<p>Explore stone, pearl, color and layout options that support the design concept.</p>"
+          }
+        },
+        "opt_finish": {
+          "type": "item",
+          "settings": {
+            "icon": "sparkle",
+            "icon_color": "#c7a85e",
+            "title": "Plating & Finish",
+            "description": "<p>Choose plating tones, polished surfaces, textures and other finishing directions for the collection.</p>"
+          }
+        },
+        "opt_brand": {
+          "type": "item",
+          "settings": {
+            "icon": "price_tag",
+            "icon_color": "#c7a85e",
+            "title": "Logo & Branding",
+            "description": "<p>Integrate logos, symbols or recognizable brand details into the jewelry where appropriate.</p>"
+          }
+        },
+        "opt_label": {
+          "type": "item",
+          "settings": {
+            "icon": "clipboard",
+            "icon_color": "#c7a85e",
+            "title": "Private Label",
+            "description": "<p>Develop a collection around your own brand direction while keeping product details and review points clearly defined.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "opt_design",
+        "opt_metal",
+        "opt_stone",
+        "opt_finish",
+        "opt_brand",
+        "opt_label"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "style_preset": "left",
+        "icon_position": "top",
+        "icon_size": 32,
+        "icon_gap": 16,
+        "column_gap": 32,
+        "eyebrow": "CUSTOMIZATION OPTIONS",
+        "eyebrow_preset": "h5",
+        "heading": "What Can Be Customized",
+        "heading_preset": "h2",
+        "description": "<p>Review the major product details that can be shaped around the visual identity and practical requirements of your collection.</p>",
+        "body_preset": "h5",
+        "item_title_preset": "h4",
+        "desktop_columns": "3",
+        "mobile_columns": "1",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "process_1": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "Communication",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "HIGH END JEWELRY MANUFACTURING PROCESS",
+        "subtitle_preset": "h5",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>The process starts with your references, design ideas, product requirements and commercial goals. We review what you want to create, where clarification is needed and which details should be confirmed before design development begins.</p><p>Clear communication at this stage reduces unnecessary revisions later in the project.</p>",
+        "body_preset": "h5",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "cta_label": "Get A Quick Quote",
+        "cta_url": "",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "process_2": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "Design",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "STEP 02",
+        "subtitle_preset": "h5",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Design direction is refined around shape, texture, proportion, color and surface treatment. References are translated into clearer product decisions so the concept can move toward a manufacturable design.</p>",
+        "body_preset": "h5",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "cta_label": "",
+        "cta_url": "",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "process_3": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "3D Rendering",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "STEP 03",
+        "subtitle_preset": "h5",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>3D development provides a clearer view of proportion, construction and visual details before physical sampling. It creates a useful checkpoint for refining the design and aligning expectations before the next stage.</p>",
+        "body_preset": "h5",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "cta_label": "",
+        "cta_url": "",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "process_4": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "Sampling",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "STEP 04",
+        "subtitle_preset": "h5",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>A physical sample lets you review the product in hand before repeat production. Proportion, construction, fit, surface finish and other key details can be checked against the approved design direction.</p>",
+        "body_preset": "h5",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "cta_label": "",
+        "cta_url": "",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "process_5": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "Production",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "STEP 05",
+        "subtitle_preset": "h5",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>After the sample direction is confirmed, production follows the agreed design and specification. Key manufacturing and finishing details are organized around the approved reference so the collection can move into repeat production with a clear standard.</p>",
+        "body_preset": "h5",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "cta_label": "",
+        "cta_url": "",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "process_6": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "Delivery",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "STEP 06",
+        "subtitle_preset": "h5",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Once production and final review are complete, the project moves into packing and delivery coordination. Shipment requirements can be aligned with the needs of the order and destination.</p>",
+        "body_preset": "h5",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "cta_label": "Start Your Inquiry",
+        "cta_url": "",
+        "cta_button_style": "button-secondary",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "why_customize": {
+      "type": "icon-with-text",
+      "name": "图标文字",
+      "blocks": {
+        "why_design": {
+          "type": "item",
+          "settings": {
+            "icon": "ruler",
+            "icon_color": "#c7a85e",
+            "title": "Design Support",
+            "description": "<p>Clarify references, structure and product details before the project moves into sampling.</p>"
+          }
+        },
+        "why_flex": {
+          "type": "item",
+          "settings": {
+            "icon": "star",
+            "icon_color": "#c7a85e",
+            "title": "Flexible Customization",
+            "description": "<p>Review materials, finishes and brand-led details around the needs of your collection.</p>"
+          }
+        },
+        "why_sample": {
+          "type": "item",
+          "settings": {
+            "icon": "clipboard",
+            "icon_color": "#c7a85e",
+            "title": "Sample Review",
+            "description": "<p>Use physical samples as a clear checkpoint before repeat production begins.</p>"
+          }
+        },
+        "why_clear": {
+          "type": "item",
+          "settings": {
+            "icon": "chat_bubble",
+            "icon_color": "#c7a85e",
+            "title": "Clear Communication",
+            "description": "<p>Keep decisions and review points visible throughout design, sampling and production.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "why_design",
+        "why_flex",
+        "why_sample",
+        "why_clear"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "style_preset": "left",
+        "icon_position": "top",
+        "icon_size": 32,
+        "icon_gap": 16,
+        "column_gap": 32,
+        "eyebrow": "WHY CUSTOMIZE WITH CRAFTAURUM",
+        "eyebrow_preset": "h5",
+        "heading": "A Clearer Path from Idea to Production",
+        "heading_preset": "h2",
+        "description": "<p>Customization works best when design development, sample review and production communication are treated as one connected process.</p>",
+        "body_preset": "h5",
+        "item_title_preset": "h4",
+        "desktop_columns": "4",
+        "mobile_columns": "1",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "requirements": {
+      "type": "icon-with-text",
+      "name": "图标文字",
+      "blocks": {
+        "req_sketch": {
+          "type": "item",
+          "settings": {
+            "icon": "ruler",
+            "icon_color": "#c7a85e",
+            "title": "Sketches",
+            "description": "<p>Share drawings or rough ideas if you already have a specific design direction.</p>"
+          }
+        },
+        "req_refs": {
+          "type": "item",
+          "settings": {
+            "icon": "eye",
+            "icon_color": "#c7a85e",
+            "title": "Reference Images",
+            "description": "<p>Product, style or detail references help communicate the intended look more quickly.</p>"
+          }
+        },
+        "req_size": {
+          "type": "item",
+          "settings": {
+            "icon": "ruler",
+            "icon_color": "#c7a85e",
+            "title": "Dimensions",
+            "description": "<p>Provide known measurements or size targets where they are important to the design.</p>"
+          }
+        },
+        "req_material": {
+          "type": "item",
+          "settings": {
+            "icon": "star",
+            "icon_color": "#c7a85e",
+            "title": "Preferred Materials",
+            "description": "<p>Tell us your preferred metal, stone, pearl, plating or finish direction if already decided.</p>"
+          }
+        },
+        "req_qty": {
+          "type": "item",
+          "settings": {
+            "icon": "clipboard",
+            "icon_color": "#c7a85e",
+            "title": "Target Quantity",
+            "description": "<p>An estimated quantity helps frame the project and production discussion.</p>"
+          }
+        },
+        "req_market": {
+          "type": "item",
+          "settings": {
+            "icon": "map_pin",
+            "icon_color": "#c7a85e",
+            "title": "Target Market",
+            "description": "<p>Knowing the intended market helps provide useful context for product and project decisions.</p>"
+          }
+        },
+        "req_time": {
+          "type": "item",
+          "settings": {
+            "icon": "stopwatch",
+            "icon_color": "#c7a85e",
+            "title": "Timeline",
+            "description": "<p>Share your target schedule so sampling and production planning can be discussed early.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "req_sketch",
+        "req_refs",
+        "req_size",
+        "req_material",
+        "req_qty",
+        "req_market",
+        "req_time"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "style_preset": "left",
+        "icon_position": "left",
+        "icon_size": 28,
+        "icon_gap": 12,
+        "column_gap": 32,
+        "eyebrow": "PROJECT INFORMATION",
+        "eyebrow_preset": "h5",
+        "heading": "What We Need From You",
+        "heading_preset": "h2",
+        "description": "<p>You do not need a complete technical package to start. The more context you can share, the easier it is to understand the project and identify the next practical step.</p>",
+        "body_preset": "h5",
+        "item_title_preset": "h4",
+        "desktop_columns": "4",
+        "mobile_columns": "1",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "contact": {
+      "type": "section",
+      "blocks": {
+        "contact_heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Start Your Custom Jewelry Project</h2><p>Share your references, design ideas, preferred materials and project requirements with our team.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "contact_form": {
+          "type": "contact-form",
+          "settings": {
+            "width": "custom",
+            "custom_width": 100,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100,
+            "input_style": "default",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "submit-button": {
+              "type": "contact-form-submit-button",
+              "static": true,
+              "settings": {
+                "label": "Submit",
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "block_order": [
+        "contact_heading",
+        "contact_form"
+      ],
+      "name": "t:names.contact_form",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#ffffff",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "padding-block-start": 56,
+        "padding-block-end": 84
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_hero",
+    "capabilities",
+    "custom_banner",
+    "options",
+    "process_1",
+    "process_2",
+    "process_3",
+    "process_4",
+    "process_5",
+    "process_6",
+    "why_customize",
+    "requirements",
+    "contact"
+  ]
+}
