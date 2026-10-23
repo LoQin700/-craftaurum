@@ -1,188 +1,93 @@
-{% comment %}
-  Generic content cards section.
-  Conservative implementation for Shopify section picker compatibility.
-{% endcomment %}
-<section
-  id="ContentCards-{{ section.id }}"
-  class="section section--{{ section.settings.section_width | default: 'page-width' }} spacing-style ca-content-cards{% if section.settings.mobile_layout == 'carousel' %} ca-content-cards--mobile-carousel{% endif %}"
-  style="
-    --padding-block-start: {{ section.settings.padding_top }}px;
-    --padding-block-end: {{ section.settings.padding_bottom }}px;
-    --ca-cards-gap: {{ section.settings.gap }}px;
-    --ca-cards-desktop: {{ section.settings.desktop_columns }};
-    --ca-cards-mobile: {{ section.settings.mobile_columns }};
-  "
->
-  <div class="ca-content-cards__inner">
-    {% if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.description != blank %}
+{% liquid
+  assign content_width = section.settings.section_width | default: 'page-width'
+  assign background_color = section.settings.background_color | default: '#FFFFFF'
+  assign text_color = section.settings.text_color | default: '#17191A'
+  assign accent_color = section.settings.accent_color | default: '#C7A85E'
+  assign desktop_columns = section.settings.desktop_columns | default: 4
+  assign mobile_columns = section.settings.mobile_columns | default: 1
+  assign gap = section.settings.gap | default: 18
+  assign padding_top = section.settings.padding_top | default: 56
+  assign padding_bottom = section.settings.padding_bottom | default: 56
+  assign ratio = '4 / 5'
+  if section.settings.image_ratio == 'square'
+    assign ratio = '1 / 1'
+  elsif section.settings.image_ratio == 'landscape'
+    assign ratio = '4 / 3'
+  endif
+%}
+<section id="ContentCards-{{ section.id }}" class="section section--full-width ca-content-cards"
+  style="--ca-cc-bg:{{ background_color }};--ca-cc-text:{{ text_color }};--ca-cc-accent:{{ accent_color }};--ca-cc-desktop:{{ desktop_columns }};--ca-cc-mobile:{{ mobile_columns }};--ca-cc-gap:{{ gap }}px;--ca-cc-ratio:{{ ratio }};--ca-cc-pt:{{ padding_top }}px;--ca-cc-pb:{{ padding_bottom }}px;">
+  <div class="ca-content-cards__surface">
+    <div class="ca-content-cards__inner ca-content-cards__inner--{{ content_width }}{% if section.settings.desktop_layout == 'carousel' %} is-desktop-carousel{% endif %}{% if section.settings.mobile_layout == 'carousel' %} is-mobile-carousel{% endif %}">
       <header class="ca-content-cards__intro">
-        {% if section.settings.eyebrow != blank %}
-          <p class="ca-content-cards__eyebrow {{ section.settings.eyebrow_preset | default: 'h5' }}">{{ section.settings.eyebrow | escape }}</p>
-        {% endif %}
-        {% if section.settings.heading != blank %}
-          <h2 class="ca-content-cards__heading {{ section.settings.heading_preset | default: 'h2' }}">{{ section.settings.heading | escape }}</h2>
-        {% endif %}
-        {% if section.settings.description != blank %}
-          <div class="ca-content-cards__description rte {{ section.settings.body_preset | default: 'h5' }}">{{ section.settings.description }}</div>
-        {% endif %}
+        {% if section.settings.eyebrow != blank %}<p class="ca-content-cards__eyebrow {{ section.settings.eyebrow_preset | default:'h5' }}">{{ section.settings.eyebrow | escape }}</p>{% endif %}
+        {% if section.settings.heading != blank %}<h2 class="ca-content-cards__heading {{ section.settings.heading_preset | default:'h2' }}">{{ section.settings.heading | escape }}</h2>{% endif %}
+        {% if section.settings.description != blank %}<div class="ca-content-cards__description rte {{ section.settings.body_preset | default:'h5' }}">{{ section.settings.description }}</div>{% endif %}
       </header>
-    {% endif %}
-
-    {% if section.settings.mobile_layout == 'carousel' %}
-      {% capture mobile_slides %}
+      <div class="ca-content-cards__grid">
         {% for block in section.blocks %}
-          {% capture card_content %}
-            <article class="ca-content-card">
-              <div class="ca-content-card__media">
-                {% if block.settings.image != blank %}
-                  {{ block.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'ca-content-card__image ca-content-card__image--primary', widths: '240,360,520,720,960,1200', sizes: '90vw' }}
-                {% else %}
-                  {{ 'image' | placeholder_svg_tag: 'ca-content-card__placeholder' }}
-                {% endif %}
-                {% if block.settings.hover_image != blank %}
-                  {{ block.settings.hover_image | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'ca-content-card__image ca-content-card__image--hover', widths: '240,360,520,720,960,1200', sizes: '90vw' }}
-                {% endif %}
-              </div>
-              <div class="ca-content-card__content">
-                {% if block.settings.title != blank %}
-                  <h3 class="ca-content-card__title {{ section.settings.card_title_preset | default: 'h3' }}">{{ block.settings.title | escape }}</h3>
-                {% endif %}
-                {% if block.settings.description != blank %}
-                  <div class="ca-content-card__text rte {{ section.settings.body_preset | default: 'h5' }}">{{ block.settings.description }}</div>
-                {% endif %}
-                {% if block.settings.button_label != blank %}
-                  <div class="ca-content-card__action">
-                    {% render 'craftaurum-cta',
-                      label: block.settings.button_label,
-                      link: block.settings.link,
-                      style_class: block.settings.button_style,
-                      static_label: true
-                    %}
-                  </div>
-                {% endif %}
-              </div>
-            </article>
-          {% endcapture %}
-          {% render 'slideshow-slide', index: forloop.index0, children: card_content, class: 'ca-content-cards__slide' %}
+          <article class="ca-content-card" {{ block.shopify_attributes }}>
+            <div class="ca-content-card__media">
+              {% if block.settings.image != blank %}
+                {{ block.settings.image | image_url: width: 1400 | image_tag: loading:'lazy', class:'ca-content-card__image ca-content-card__image--primary', widths:'240,360,520,720,960,1200,1400', sizes:'(min-width: 990px) 25vw, 80vw' }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'ca-content-card__placeholder' }}
+              {% endif %}
+              {% if block.settings.hover_image != blank %}
+                {{ block.settings.hover_image | image_url: width: 1400 | image_tag: loading:'lazy', class:'ca-content-card__image ca-content-card__image--hover', widths:'240,360,520,720,960,1200,1400', sizes:'(min-width: 990px) 25vw, 80vw' }}
+              {% endif %}
+            </div>
+            <div class="ca-content-card__content">
+              {% if block.settings.title != blank %}<h3 class="ca-content-card__title {{ section.settings.card_title_preset | default:'h3' }}">{{ block.settings.title | escape }}</h3>{% endif %}
+              {% if block.settings.description != blank %}<div class="ca-content-card__text rte {{ section.settings.body_preset | default:'h5' }}">{{ block.settings.description }}</div>{% endif %}
+              {% if block.settings.button_label != blank %}
+                <div class="ca-content-card__action">
+                  {% render 'craftaurum-cta', label:block.settings.button_label, link:block.settings.link, style_class:block.settings.button_style, static_label:true %}
+                </div>
+              {% endif %}
+            </div>
+          </article>
         {% endfor %}
-      {% endcapture %}
-    {% endif %}
-
-    <div class="ca-content-cards__grid">
-      {% for block in section.blocks %}
-        <article class="ca-content-card" {{ block.shopify_attributes }}>
-          <div class="ca-content-card__media">
-            {% if block.settings.image != blank %}
-              {{ block.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'ca-content-card__image ca-content-card__image--primary', widths: '240,360,520,720,960,1200', sizes: '(min-width: 750px) 25vw, 50vw' }}
-            {% else %}
-              {{ 'image' | placeholder_svg_tag: 'ca-content-card__placeholder' }}
-            {% endif %}
-            {% if block.settings.hover_image != blank %}
-              {{ block.settings.hover_image | image_url: width: 1200 | image_tag: loading: 'lazy', class: 'ca-content-card__image ca-content-card__image--hover', widths: '240,360,520,720,960,1200', sizes: '(min-width: 750px) 25vw, 50vw' }}
-            {% endif %}
-          </div>
-          <div class="ca-content-card__content">
-            {% if block.settings.title != blank %}
-              <h3 class="ca-content-card__title {{ section.settings.card_title_preset | default: 'h3' }}">{{ block.settings.title | escape }}</h3>
-            {% endif %}
-            {% if block.settings.description != blank %}
-              <div class="ca-content-card__text rte {{ section.settings.body_preset | default: 'h5' }}">{{ block.settings.description }}</div>
-            {% endif %}
-            {% if block.settings.button_label != blank %}
-              <div class="ca-content-card__action">
-                {% render 'craftaurum-cta',
-                  label: block.settings.button_label,
-                  link: block.settings.link,
-                  style_class: block.settings.button_style,
-                  static_label: true
-                %}
-              </div>
-            {% endif %}
-          </div>
-        </article>
-      {% endfor %}
-    </div>
-
-    {% if section.settings.mobile_layout == 'carousel' and section.blocks.size > 0 %}
-      {% assign can_scroll = false %}
-      {% if section.blocks.size > 1 %}{% assign can_scroll = true %}{% endif %}
-      <div class="ca-content-cards__mobile-carousel">
-        {% render 'slideshow',
-          class: 'ca-content-cards__slideshow',
-          slides: mobile_slides,
-          slide_count: section.blocks.size,
-          show_arrows: can_scroll,
-          infinite: false,
-          icon_style: 'chevron',
-          icon_shape: 'none'
-        %}
       </div>
-    {% endif %}
+    </div>
   </div>
 </section>
-
 {% stylesheet %}
-  .ca-content-cards__intro { max-width: 980px; margin: 0 auto 32px; text-align: center; }
-  .ca-content-cards__eyebrow { margin: 0 0 10px; color: var(--color-accent, #C7A85E); letter-spacing: .14em; text-transform: uppercase; }
-  .ca-content-cards__heading { margin: 0 0 14px; }
-  .ca-content-cards__description :is(p,ul,ol),
-  .ca-content-card__text :is(p,ul,ol) { font-size: inherit; line-height: inherit; }
-  .ca-content-cards__description p,
-  .ca-content-card__text p { margin: 0; }
-
-  .ca-content-cards__grid {
-    display: grid;
-    grid-template-columns: repeat(var(--ca-cards-desktop), minmax(0,1fr));
-    gap: var(--ca-cards-gap);
+  .ca-content-cards__surface{width:100%;background:var(--ca-cc-bg);color:var(--ca-cc-text)}
+  .ca-content-cards__inner{padding-block:var(--ca-cc-pt) var(--ca-cc-pb)}
+  .ca-content-cards__inner--page-width{width:var(--full-page-grid-central-column-width);margin-inline:auto}
+  .ca-content-cards__inner--full-width{width:100%;padding-inline:max(var(--page-margin),24px)}
+  .ca-content-cards__intro{max-width:960px;margin:0 auto 36px;text-align:center}
+  .ca-content-cards__eyebrow{margin:0 0 10px;color:var(--ca-cc-accent);letter-spacing:.14em;text-transform:uppercase}
+  .ca-content-cards__heading{margin:0 0 14px;color:inherit}
+  .ca-content-cards__description :is(p,ul,ol),.ca-content-card__text :is(p,ul,ol){font-size:inherit;line-height:inherit}
+  .ca-content-cards__description p,.ca-content-card__text p{margin:0}
+  .ca-content-cards__grid{display:grid;grid-template-columns:repeat(var(--ca-cc-desktop),minmax(0,1fr));gap:var(--ca-cc-gap)}
+  .ca-content-card__media{position:relative;aspect-ratio:var(--ca-cc-ratio);overflow:hidden;background:rgb(var(--color-foreground-rgb)/.04)}
+  .ca-content-card__image,.ca-content-card__placeholder{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .35s ease,transform .35s ease}
+  .ca-content-card__image--hover{opacity:0;transform:scale(1.025)}
+  .ca-content-card__content{padding-top:14px}
+  .ca-content-card__title{margin:0 0 8px;color:inherit}
+  .ca-content-card__action{margin-top:14px}
+  .ca-content-cards__inner.is-desktop-carousel .ca-content-cards__grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+  .ca-content-cards__inner.is-desktop-carousel .ca-content-card{flex:0 0 calc((100% - (var(--ca-cc-desktop) - 1)*var(--ca-cc-gap))/var(--ca-cc-desktop));scroll-snap-align:start}
+  @media(hover:hover){
+    .ca-content-card:hover .ca-content-card__image--primary{opacity:0;transform:scale(1.025)}
+    .ca-content-card:hover .ca-content-card__image--hover{opacity:1;transform:scale(1)}
+    .ca-content-card:not(:has(.ca-content-card__image--hover)):hover .ca-content-card__image--primary{opacity:1;transform:scale(1.035)}
   }
-  .ca-content-card__media {
-    position: relative;
-    aspect-ratio: 4 / 5;
-    overflow: hidden;
-    background: rgb(var(--color-foreground-rgb) / .04);
-  }
-  .ca-content-card__image,
-  .ca-content-card__placeholder {
-    position: absolute;
-    inset: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity .35s ease, transform .35s ease;
-  }
-  .ca-content-card__image--hover { opacity: 0; }
-  .ca-content-card__content { padding-top: 14px; }
-  .ca-content-card__title { margin: 0 0 8px; }
-  .ca-content-card__action { margin-top: 14px; }
-  .ca-content-cards__mobile-carousel { display: none; }
-
-  @media (hover:hover) {
-    .ca-content-card:hover .ca-content-card__image--primary { opacity: 0; transform: scale(1.02); }
-    .ca-content-card:hover .ca-content-card__image--hover { opacity: 1; transform: scale(1.02); }
-  }
-
-  @media screen and (max-width: 749px) {
-    .ca-content-cards__grid { grid-template-columns: repeat(var(--ca-cards-mobile), minmax(0,1fr)); }
-    .ca-content-cards__mobile-carousel { display: none; }
-    .ca-content-cards__mobile-carousel slideshow-slides { gap: var(--ca-cards-gap); }
-    .ca-content-cards__mobile-carousel slideshow-slide {
-      width: calc((100% - (var(--ca-cards-mobile) - 1) * var(--ca-cards-gap)) / var(--ca-cards-mobile));
-      flex: 0 0 calc((100% - (var(--ca-cards-mobile) - 1) * var(--ca-cards-gap)) / var(--ca-cards-mobile));
-      min-width: 0;
-    }
-    .ca-content-cards--mobile-carousel .ca-content-cards__grid { display: none; }
-    .ca-content-cards--mobile-carousel .ca-content-cards__mobile-carousel { display: block; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .ca-content-card__image { transition: none; }
+  @media(max-width:749px){
+    .ca-content-cards__inner--full-width{padding-inline:18px}
+    .ca-content-cards__intro{text-align:left;margin-bottom:24px}
+    .ca-content-cards__grid{grid-template-columns:repeat(var(--ca-cc-mobile),minmax(0,1fr))}
+    .ca-content-cards__inner.is-desktop-carousel:not(.is-mobile-carousel) .ca-content-cards__grid{display:grid;overflow:visible}
+    .ca-content-cards__inner.is-mobile-carousel .ca-content-cards__grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+    .ca-content-cards__inner.is-mobile-carousel .ca-content-card{flex:0 0 calc((100% - (var(--ca-cc-mobile) - 1)*var(--ca-cc-gap))/var(--ca-cc-mobile));scroll-snap-align:start}
   }
 {% endstylesheet %}
-
 {% schema %}
 {
-  "name": "备用图文卡片",
+  "name": "图文卡片",
   "tag": "section",
   "disabled_on": {
     "groups": [
@@ -191,6 +96,40 @@
     ]
   },
   "settings": [
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "内容宽度",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "页面宽度"
+        },
+        {
+          "value": "full-width",
+          "label": "全宽"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文字颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "重点颜色",
+      "default": "#C7A85E"
+    },
     {
       "type": "text",
       "id": "eyebrow",
@@ -271,7 +210,7 @@
       "type": "richtext",
       "id": "description",
       "label": "正文",
-      "default": "<p>Build a collection with considered materials, stone settings and finishing options.</p>"
+      "default": "<p>Build a collection of distinctive rings with considered materials, stone settings and finishing options.</p>"
     },
     {
       "type": "select",
@@ -339,19 +278,19 @@
     },
     {
       "type": "select",
-      "id": "section_width",
-      "label": "内容宽度",
+      "id": "desktop_layout",
+      "label": "桌面端布局",
       "options": [
         {
-          "value": "page-width",
-          "label": "页面宽度"
+          "value": "grid",
+          "label": "网格"
         },
         {
-          "value": "full-width",
-          "label": "全宽"
+          "value": "carousel",
+          "label": "轮播"
         }
       ],
-      "default": "page-width"
+      "default": "grid"
     },
     {
       "type": "range",
@@ -388,6 +327,26 @@
       "default": 1
     },
     {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "图片比例",
+      "options": [
+        {
+          "value": "portrait",
+          "label": "4:5"
+        },
+        {
+          "value": "square",
+          "label": "1:1"
+        },
+        {
+          "value": "landscape",
+          "label": "4:3"
+        }
+      ],
+      "default": "portrait"
+    },
+    {
       "type": "range",
       "id": "gap",
       "label": "卡片间距",
@@ -405,7 +364,7 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "default": 48
+      "default": 56
     },
     {
       "type": "range",
@@ -415,7 +374,7 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "default": 48
+      "default": 56
     }
   ],
   "blocks": [
@@ -474,7 +433,38 @@
         {
           "type": "url",
           "id": "link",
-          "label": "链接"
+          "label": "按钮链接"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "图文卡片",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "title": "Gemstone Rings"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "Metal & Minimal Rings"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "Pearl Rings"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "Signature Designs"
+          }
         }
       ]
     }
