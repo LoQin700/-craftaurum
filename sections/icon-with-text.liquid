@@ -1,98 +1,68 @@
-{% comment %}Generic icon with text capabilities section.{% endcomment %}
-<section
-  id="IconWithText-{{ section.id }}"
-  class="section section--{{ section.settings.section_width | default: 'page-width' }} spacing-style ca-icon-text"
-  style="
-    --padding-block-start: {{ section.settings.padding_top }}px;
-    --padding-block-end: {{ section.settings.padding_bottom }}px;
-    --ca-icon-columns: {{ section.settings.desktop_columns }};
-    --ca-icon-mobile-columns: {{ section.settings.mobile_columns }};
-    --ca-icon-gap: {{ section.settings.gap }}px;
-  "
->
-  <div class="ca-icon-text__inner">
-    {% if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.description != blank %}
+{% liquid
+  assign content_width = section.settings.section_width | default:'page-width'
+  assign background_color = section.settings.background_color | default:'#F8F7F4'
+  assign text_color = section.settings.text_color | default:'#17191A'
+  assign accent_color = section.settings.accent_color | default:'#C7A85E'
+  assign desktop_columns = section.settings.desktop_columns | default:4
+  assign mobile_columns = section.settings.mobile_columns | default:2
+  assign gap = section.settings.gap | default:24
+  assign padding_top = section.settings.padding_top | default:56
+  assign padding_bottom = section.settings.padding_bottom | default:56
+%}
+<section id="IconWithText-{{ section.id }}" class="section section--full-width ca-icon-text"
+  style="--ca-iwt-bg:{{ background_color }};--ca-iwt-text:{{ text_color }};--ca-iwt-accent:{{ accent_color }};--ca-iwt-desktop:{{ desktop_columns }};--ca-iwt-mobile:{{ mobile_columns }};--ca-iwt-gap:{{ gap }}px;--ca-iwt-pt:{{ padding_top }}px;--ca-iwt-pb:{{ padding_bottom }}px;">
+  <div class="ca-icon-text__surface">
+    <div class="ca-icon-text__inner ca-icon-text__inner--{{ content_width }}">
       <header class="ca-icon-text__intro">
-        {% if section.settings.eyebrow != blank %}
-          <p class="ca-icon-text__eyebrow {{ section.settings.eyebrow_preset | default: 'h5' }}">{{ section.settings.eyebrow | escape }}</p>
-        {% endif %}
-        {% if section.settings.heading != blank %}
-          <h2 class="ca-icon-text__heading {{ section.settings.heading_preset | default: 'h2' }}">{{ section.settings.heading | escape }}</h2>
-        {% endif %}
-        {% if section.settings.description != blank %}
-          <div class="ca-icon-text__description rte {{ section.settings.body_preset | default: 'h5' }}">{{ section.settings.description }}</div>
-        {% endif %}
+        {% if section.settings.eyebrow != blank %}<p class="ca-icon-text__eyebrow {{ section.settings.eyebrow_preset | default:'h5' }}">{{ section.settings.eyebrow | escape }}</p>{% endif %}
+        {% if section.settings.heading != blank %}<h2 class="ca-icon-text__heading {{ section.settings.heading_preset | default:'h2' }}">{{ section.settings.heading | escape }}</h2>{% endif %}
+        {% if section.settings.description != blank %}<div class="ca-icon-text__description rte {{ section.settings.body_preset | default:'h5' }}">{{ section.settings.description }}</div>{% endif %}
       </header>
-    {% endif %}
-
-    <div class="ca-icon-text__grid">
-      {% for block in section.blocks %}
-        <article class="ca-icon-text__item" {{ block.shopify_attributes }}>
-          <div class="ca-icon-text__icon" aria-hidden="true">
-            {% if block.settings.icon_image != blank %}
-              {{ block.settings.icon_image | image_url: width: 96 | image_tag: loading: 'lazy', class: 'ca-icon-text__icon-image', widths: '48,72,96', sizes: '48px' }}
-            {% else %}
-              <span class="ca-icon-text__fallback"></span>
-            {% endif %}
-          </div>
-          {% if block.settings.title != blank %}
-            <h3 class="ca-icon-text__title {{ section.settings.item_title_preset | default: 'h4' }}">{{ block.settings.title | escape }}</h3>
-          {% endif %}
-          {% if block.settings.description != blank %}
-            <div class="ca-icon-text__body rte {{ section.settings.body_preset | default: 'h5' }}">{{ block.settings.description }}</div>
-          {% endif %}
-        </article>
-      {% endfor %}
+      <div class="ca-icon-text__grid">
+        {% for block in section.blocks %}
+          <article class="ca-icon-text__item" {{ block.shopify_attributes }}>
+            <div class="ca-icon-text__icon">
+              {% if block.settings.icon_image != blank %}
+                {{ block.settings.icon_image | image_url: width:120 | image_tag:loading:'lazy', class:'ca-icon-text__icon-image', widths:'48,72,96,120', sizes:'48px' }}
+              {% else %}
+                <span class="ca-icon-text__fallback" aria-hidden="true"></span>
+              {% endif %}
+            </div>
+            {% if block.settings.title != blank %}<h3 class="ca-icon-text__title {{ section.settings.item_title_preset | default:'h4' }}">{{ block.settings.title | escape }}</h3>{% endif %}
+            {% if block.settings.description != blank %}<div class="ca-icon-text__body rte {{ section.settings.body_preset | default:'h5' }}">{{ block.settings.description }}</div>{% endif %}
+          </article>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
-
 {% stylesheet %}
-  .ca-icon-text__intro { max-width: 860px; margin: 0 auto 34px; text-align: center; }
-  .ca-icon-text__eyebrow { margin: 0 0 10px; color: var(--color-accent, #C7A85E); letter-spacing: .14em; text-transform: uppercase; }
-  .ca-icon-text__heading { margin: 0 0 14px; }
-  .ca-icon-text__description :is(p,ul,ol),
-  .ca-icon-text__body :is(p,ul,ol) { font-size: inherit; line-height: inherit; }
-  .ca-icon-text__description p,
-  .ca-icon-text__body p { margin: 0; }
-
-  .ca-icon-text__grid {
-    display: grid;
-    grid-template-columns: repeat(var(--ca-icon-columns), minmax(0,1fr));
-    gap: var(--ca-icon-gap);
-  }
-  .ca-icon-text__item {
-    padding: 24px 20px;
-    border-top: 1px solid rgb(var(--color-foreground-rgb) / .2);
-  }
-  .ca-icon-text__icon {
-    width: 42px;
-    height: 42px;
-    display: grid;
-    place-items: center;
-    margin-bottom: 18px;
-    color: var(--color-accent, #C7A85E);
-  }
-  .ca-icon-text__icon-image { width: 100%; height: 100%; object-fit: contain; }
-  .ca-icon-text__fallback {
-    width: 22px;
-    height: 22px;
-    border: 1.5px solid currentColor;
-    transform: rotate(45deg);
-  }
-  .ca-icon-text__title { margin: 0 0 10px; }
-  .ca-icon-text__body { opacity: .76; }
-
-  @media screen and (max-width: 749px) {
-    .ca-icon-text__intro { text-align: left; margin-bottom: 24px; }
-    .ca-icon-text__grid { grid-template-columns: repeat(var(--ca-icon-mobile-columns), minmax(0,1fr)); }
-    .ca-icon-text__item { padding-inline: 0; }
+  .ca-icon-text__surface{width:100%;background:var(--ca-iwt-bg);color:var(--ca-iwt-text)}
+  .ca-icon-text__inner{padding-block:var(--ca-iwt-pt) var(--ca-iwt-pb)}
+  .ca-icon-text__inner--page-width{width:var(--full-page-grid-central-column-width);margin-inline:auto}
+  .ca-icon-text__inner--full-width{width:100%;padding-inline:max(var(--page-margin),24px)}
+  .ca-icon-text__intro{max-width:900px;margin:0 auto 34px;text-align:center}
+  .ca-icon-text__eyebrow{margin:0 0 10px;color:var(--ca-iwt-accent);letter-spacing:.14em;text-transform:uppercase}
+  .ca-icon-text__heading{margin:0 0 14px;color:inherit}
+  .ca-icon-text__description :is(p,ul,ol),.ca-icon-text__body :is(p,ul,ol){font-size:inherit;line-height:inherit}
+  .ca-icon-text__description p,.ca-icon-text__body p{margin:0}
+  .ca-icon-text__grid{display:grid;grid-template-columns:repeat(var(--ca-iwt-desktop),minmax(0,1fr));gap:var(--ca-iwt-gap)}
+  .ca-icon-text__item{padding:26px 20px;border-top:1px solid color-mix(in srgb,var(--ca-iwt-text) 18%,transparent)}
+  .ca-icon-text__icon{width:42px;height:42px;display:grid;place-items:center;margin-bottom:18px;color:var(--ca-iwt-accent)}
+  .ca-icon-text__icon-image{width:100%;height:100%;object-fit:contain}
+  .ca-icon-text__fallback{display:block;width:22px;height:22px;border:1.5px solid currentColor;transform:rotate(45deg)}
+  .ca-icon-text__title{margin:0 0 10px;color:inherit}
+  .ca-icon-text__body{opacity:.76}
+  @media(max-width:749px){
+    .ca-icon-text__inner--full-width{padding-inline:18px}
+    .ca-icon-text__intro{text-align:left;margin-bottom:24px}
+    .ca-icon-text__grid{grid-template-columns:repeat(var(--ca-iwt-mobile),minmax(0,1fr))}
+    .ca-icon-text__item{padding-inline:0}
   }
 {% endstylesheet %}
-
 {% schema %}
 {
-  "name": "备用图标文字",
+  "name": "图标文字",
   "tag": "section",
   "disabled_on": {
     "groups": [
@@ -101,6 +71,40 @@
     ]
   },
   "settings": [
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "内容宽度",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "页面宽度"
+        },
+        {
+          "value": "full-width",
+          "label": "全宽"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#F8F7F4"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文字颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "重点颜色",
+      "default": "#C7A85E"
+    },
     {
       "type": "text",
       "id": "eyebrow",
@@ -181,7 +185,7 @@
       "type": "richtext",
       "id": "description",
       "label": "正文",
-      "default": "<p>A consistent development process helps move ideas from design direction to sample review and production planning.</p>"
+      "default": "<p>These capabilities support jewelry projects from early design communication through production review.</p>"
     },
     {
       "type": "select",
@@ -246,22 +250,6 @@
         }
       ],
       "default": "h4"
-    },
-    {
-      "type": "select",
-      "id": "section_width",
-      "label": "内容宽度",
-      "options": [
-        {
-          "value": "page-width",
-          "label": "页面宽度"
-        },
-        {
-          "value": "full-width",
-          "label": "全宽"
-        }
-      ],
-      "default": "page-width"
     },
     {
       "type": "range",
@@ -332,7 +320,38 @@
           "type": "richtext",
           "id": "description",
           "label": "正文",
-          "default": "<p>Turn references and specifications into a clearer development direction for sampling.</p>"
+          "default": "<p>Clarify references, dimensions and design intent before sampling begins.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "图标文字",
+      "blocks": [
+        {
+          "type": "item",
+          "settings": {
+            "title": "Design Development"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "title": "Material Options"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "title": "Sample Support"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "title": "Quality Review"
+          }
         }
       ]
     }
