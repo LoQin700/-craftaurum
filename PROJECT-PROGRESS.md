@@ -190,3 +190,12 @@
 - 其余 Section 使用 Shopify 编辑器风格的唯一 ID 逐个追加：图文横幅、横向 CTA、图文卡片、图文介绍、图标文字、标题说明和原生 Contact Form。
 - 当前 `page.jewelry-rings.json` order 已确认包含 9 个 Section：main + 8 个展示/联系 Section；GitHub 二次读取仍保持该结构。
 - 这次不再依赖 `page.jewelry-showcase` 模板；实际页面以用户后台创建的 `jewelry-rings` 为准。
+
+## 2026-10-23 · Section Picker 缺项复核
+- 用户截图确认 Theme Editor 当前可见：交互图文、分类图片展示、图文介绍、图文横幅、图片画廊、图片轮播、标题说明、横向 CTA。
+- 复核后确认应补的通用能力为：图文卡片、图标文字；旧“图片画廊”为历史 Section，不应继续作为新页面的主卡片模块。
+- `sections/jewelry-collections-overview.liquid` 补充 `presets`，确保“图文横幅”进入添加分区列表。
+- 新建干净版 `sections/content-cards.liquid`（图文卡片）：主图/Hover图、标题、H5正文、每卡CTA；手机1–2列，支持网格/轮播。
+- 新建干净版 `sections/icon-with-text.liquid`（图标文字）：工厂通用能力展示，桌面多列、手机1–2列。
+- 旧 `image-gallery.liquid` 与 `icon-text-list.liquid` 已移除 presets，仅用于保留旧实例兼容。
+- `sections/image-text-feature.liquid` 桌面双列由 `align-items:start` 改为 `align-items:center`，文字与图片垂直居中；左右图片布局均适用。
