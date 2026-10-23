@@ -39,7 +39,7 @@
     {%- render 'stylesheets' -%}
     {% if template.name == 'page' %}
       {% case template.suffix %}
-        {% when 'jewelry-collections', 'jewelry-showcase', 'contact' %}
+        {% when 'jewelry-collections', 'jewelry-showcase', 'jewelry-rings', 'contact' %}
           {{ 'craftaurum-contact.css' | asset_url | stylesheet_tag }}
       {% endcase %}
     {% endif %}
