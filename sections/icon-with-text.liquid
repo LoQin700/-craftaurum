@@ -1,69 +1,184 @@
 {% liquid
-  assign content_width = section.settings.section_width | default:'page-width'
-  assign background_color = section.settings.background_color | default:'#F8F7F4'
-  assign text_color = section.settings.text_color | default:'#17191A'
-  assign accent_color = section.settings.accent_color | default:'#C7A85E'
-  assign desktop_columns = section.settings.desktop_columns | default:4
-  assign mobile_columns = section.settings.mobile_columns | default:2
-  assign gap = section.settings.gap | default:24
-  assign padding_top = section.settings.padding_top | default:56
-  assign padding_bottom = section.settings.padding_bottom | default:56
+  assign content_width = section.settings.section_width
+  assign desktop_columns = section.settings.desktop_columns
+  assign mobile_columns = section.settings.mobile_columns
 %}
-<section id="IconWithText-{{ section.id }}" class="section section--full-width ca-icon-text"
-  style="--ca-iwt-bg:{{ background_color }};--ca-iwt-text:{{ text_color }};--ca-iwt-accent:{{ accent_color }};--ca-iwt-desktop:{{ desktop_columns }};--ca-iwt-mobile:{{ mobile_columns }};--ca-iwt-gap:{{ gap }}px;--ca-iwt-pt:{{ padding_top }}px;--ca-iwt-pb:{{ padding_bottom }}px;">
+
+<section
+  id="IconWithText-{{ section.id }}"
+  class="ca-icon-text section section--{{ content_width }}"
+  style="
+    --ca-icon-background: {{ section.settings.background_color }};
+    --ca-icon-text: {{ section.settings.text_color }};
+    --ca-icon-accent: {{ section.settings.accent_color }};
+    --ca-icon-desktop-columns: {{ desktop_columns }};
+    --ca-icon-mobile-columns: {{ mobile_columns }};
+    --ca-icon-gap: {{ section.settings.gap }}px;
+    --ca-icon-padding-top: {{ section.settings.padding_top }}px;
+    --ca-icon-padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
   <div class="ca-icon-text__surface">
-    <div class="ca-icon-text__inner ca-icon-text__inner--{{ content_width }}">
-      <header class="ca-icon-text__intro">
-        {% if section.settings.eyebrow != blank %}<p class="ca-icon-text__eyebrow {{ section.settings.eyebrow_preset | default:'h5' }}">{{ section.settings.eyebrow | escape }}</p>{% endif %}
-        {% if section.settings.heading != blank %}<h2 class="ca-icon-text__heading {{ section.settings.heading_preset | default:'h2' }}">{{ section.settings.heading | escape }}</h2>{% endif %}
-        {% if section.settings.description != blank %}<div class="ca-icon-text__description rte {{ section.settings.body_preset | default:'h5' }}">{{ section.settings.description }}</div>{% endif %}
-      </header>
+    <div class="ca-icon-text__inner">
+      <div class="ca-icon-text__intro">
+        {% if section.settings.eyebrow != blank %}
+          <p class="ca-icon-text__eyebrow {{ section.settings.eyebrow_preset }}">{{ section.settings.eyebrow | escape }}</p>
+        {% endif %}
+
+        {% if section.settings.heading != blank %}
+          <h2 class="ca-icon-text__heading {{ section.settings.heading_preset }}">{{ section.settings.heading | escape }}</h2>
+        {% endif %}
+
+        {% if section.settings.description != blank %}
+          <div class="ca-icon-text__description rte {{ section.settings.body_preset }}">
+            {{ section.settings.description }}
+          </div>
+        {% endif %}
+      </div>
+
       <div class="ca-icon-text__grid">
         {% for block in section.blocks %}
           <article class="ca-icon-text__item" {{ block.shopify_attributes }}>
-            <div class="ca-icon-text__icon">
+            <div class="ca-icon-text__icon" aria-hidden="true">
               {% if block.settings.icon_image != blank %}
-                {{ block.settings.icon_image | image_url: width:120 | image_tag:loading:'lazy', class:'ca-icon-text__icon-image', widths:'48,72,96,120', sizes:'48px' }}
+                {{
+                  block.settings.icon_image
+                  | image_url: width: 120
+                  | image_tag:
+                    loading: 'lazy',
+                    class: 'ca-icon-text__icon-image',
+                    widths: '48,72,96,120',
+                    sizes: '48px'
+                }}
               {% else %}
-                <span class="ca-icon-text__fallback" aria-hidden="true"></span>
+                <span class="ca-icon-text__fallback"></span>
               {% endif %}
             </div>
-            {% if block.settings.title != blank %}<h3 class="ca-icon-text__title {{ section.settings.item_title_preset | default:'h4' }}">{{ block.settings.title | escape }}</h3>{% endif %}
-            {% if block.settings.description != blank %}<div class="ca-icon-text__body rte {{ section.settings.body_preset | default:'h5' }}">{{ block.settings.description }}</div>{% endif %}
+
+            {% if block.settings.title != blank %}
+              <h3 class="ca-icon-text__title {{ section.settings.item_title_preset }}">{{ block.settings.title | escape }}</h3>
+            {% endif %}
+
+            {% if block.settings.description != blank %}
+              <div class="ca-icon-text__body rte {{ section.settings.body_preset }}">
+                {{ block.settings.description }}
+              </div>
+            {% endif %}
           </article>
         {% endfor %}
       </div>
     </div>
   </div>
 </section>
+
 {% stylesheet %}
-  .ca-icon-text__surface{width:100%;background:var(--ca-iwt-bg);color:var(--ca-iwt-text)}
-  .ca-icon-text__inner{padding-block:var(--ca-iwt-pt) var(--ca-iwt-pb)}
-  .ca-icon-text__inner--page-width{width:var(--full-page-grid-central-column-width);margin-inline:auto}
-  .ca-icon-text__inner--full-width{width:100%;padding-inline:max(var(--page-margin),24px)}
-  .ca-icon-text__intro{max-width:900px;margin:0 auto 34px;text-align:center}
-  .ca-icon-text__eyebrow{margin:0 0 10px;color:var(--ca-iwt-accent);letter-spacing:.14em;text-transform:uppercase}
-  .ca-icon-text__heading{margin:0 0 14px;color:inherit}
-  .ca-icon-text__description :is(p,ul,ol),.ca-icon-text__body :is(p,ul,ol){font-size:inherit;line-height:inherit}
-  .ca-icon-text__description p,.ca-icon-text__body p{margin:0}
-  .ca-icon-text__grid{display:grid;grid-template-columns:repeat(var(--ca-iwt-desktop),minmax(0,1fr));gap:var(--ca-iwt-gap)}
-  .ca-icon-text__item{padding:26px 20px;border-top:1px solid color-mix(in srgb,var(--ca-iwt-text) 18%,transparent)}
-  .ca-icon-text__icon{width:42px;height:42px;display:grid;place-items:center;margin-bottom:18px;color:var(--ca-iwt-accent)}
-  .ca-icon-text__icon-image{width:100%;height:100%;object-fit:contain}
-  .ca-icon-text__fallback{display:block;width:22px;height:22px;border:1.5px solid currentColor;transform:rotate(45deg)}
-  .ca-icon-text__title{margin:0 0 10px;color:inherit}
-  .ca-icon-text__body{opacity:.76}
-  @media(max-width:749px){
-    .ca-icon-text__inner--full-width{padding-inline:18px}
-    .ca-icon-text__intro{text-align:left;margin-bottom:24px}
-    .ca-icon-text__grid{grid-template-columns:repeat(var(--ca-iwt-mobile),minmax(0,1fr))}
-    .ca-icon-text__item{padding-inline:0}
+  .ca-icon-text {
+    background: var(--ca-icon-background);
+    color: var(--ca-icon-text);
+  }
+
+  .ca-icon-text__surface {
+    width: 100%;
+    background: var(--ca-icon-background);
+  }
+
+  .ca-icon-text__inner {
+    padding-block: var(--ca-icon-padding-top) var(--ca-icon-padding-bottom);
+  }
+
+  .ca-icon-text__intro {
+    max-width: 900px;
+    margin: 0 auto 34px;
+    text-align: center;
+  }
+
+  .ca-icon-text__eyebrow {
+    margin: 0 0 10px;
+    color: var(--ca-icon-accent);
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .ca-icon-text__heading {
+    margin: 0 0 14px;
+    color: inherit;
+  }
+
+  .ca-icon-text__description :is(p, ul, ol),
+  .ca-icon-text__body :is(p, ul, ol) {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .ca-icon-text__description p,
+  .ca-icon-text__body p {
+    margin: 0;
+  }
+
+  .ca-icon-text__grid {
+    display: grid;
+    grid-template-columns: repeat(var(--ca-icon-desktop-columns), minmax(0, 1fr));
+    gap: var(--ca-icon-gap);
+  }
+
+  .ca-icon-text__item {
+    padding: 26px 20px;
+    border-top: 1px solid rgb(var(--color-foreground-rgb) / .18);
+  }
+
+  .ca-icon-text__icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 18px;
+    color: var(--ca-icon-accent);
+  }
+
+  .ca-icon-text__icon-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .ca-icon-text__fallback {
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 1.5px solid currentColor;
+    transform: rotate(45deg);
+  }
+
+  .ca-icon-text__title {
+    margin: 0 0 10px;
+    color: inherit;
+  }
+
+  .ca-icon-text__body {
+    opacity: .76;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ca-icon-text__intro {
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    .ca-icon-text__grid {
+      grid-template-columns: repeat(var(--ca-icon-mobile-columns), minmax(0, 1fr));
+    }
+
+    .ca-icon-text__item {
+      padding-inline: 0;
+    }
   }
 {% endstylesheet %}
+
 {% schema %}
 {
   "name": "图标文字",
   "tag": "section",
+  "class": "craftaurum-icon-text-section",
   "disabled_on": {
     "groups": [
       "header",
@@ -325,9 +440,11 @@
       ]
     }
   ],
+  "max_blocks": 12,
   "presets": [
     {
       "name": "图标文字",
+      "category": "文字",
       "blocks": [
         {
           "type": "item",
