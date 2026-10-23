@@ -362,3 +362,11 @@
 - `layout/theme.liquid` 已让上述所有页面加载同一份 `craftaurum-contact.css`。
 - `craftaurum-contact.css` 移除固定 max-width:900px，表单宽度现在真正跟随 Section 的页面宽度 / 全宽设置。
 - 页面标题文案仍可各自不同，但 Contact 的视觉与宽度逻辑统一。
+
+## 2026-10-24 · Customization process section corrected to reference layout
+- Replaced the previous six alternating image-text process sections with one reference-style process cards section.
+- Updated reusable `sections/content-cards.liquid` with a new isolated `process` card style and optional intro CTA. Existing standard card instances remain unchanged.
+- Process style: centered intro, top CTA, 6 image cards, rounded light-gray image border, centered title/body, PC 3 columns x 2 rows, Mobile 1-column carousel.
+- Customization process cards: Communication, Design, 3D Rendering, Sampling, Production, Delivery.
+- Removed old `process_1`–`process_6` sections from `page.customization.json` to avoid duplicated workflow content.
+- Validation PASS: new process settings are schema-valid, 6 cards present, PC 3 columns, mobile carousel, old alternating process instances removed.
