@@ -146,18 +146,19 @@
       "name": "图文介绍",
       "settings": {
         "heading": "Custom Sterling Silver Jewelry Manufacturing",
+        "heading_preset": "h2",
         "top_label": "S925 Jewelry Custom",
+        "subtitle_preset": "h3",
         "top_url": "shopify://pages/contact",
+        "top_button_style": "button",
         "body": "<p>Discover the art of custom sterling silver jewelry with Craftaurum. From early design concepts to casting, polishing and plating, our team supports each step of the manufacturing process with care and attention to detail.</p><p>Whether you are developing a signature piece or a complete collection, we help bring your vision to life with thoughtful craftsmanship, flexible customization and consistent finishing.</p><p>Connect with Craftaurum to explore the possibilities for your next jewelry project.</p>",
+        "body_preset": "h5",
         "image_position": "right",
         "cta_label": "Start Your Project",
         "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button",
         "padding_top": 32,
-        "padding_bottom": 32,
-        "heading_preset": "h2",
-        "top_button_style": "button",
-        "body_preset": "h4",
-        "cta_button_style": "button"
+        "padding_bottom": 32
       }
     },
     "image_text_feature_YzURpA": {
@@ -165,82 +166,26 @@
       "name": "图文介绍",
       "settings": {
         "heading": "Custom Solid Gold Jewelry at Craftaurum",
+        "heading_preset": "h2",
         "top_label": "Gold Jewelry Custom",
+        "subtitle_preset": "h3",
         "top_url": "shopify://pages/contact",
+        "top_button_style": "button",
         "body": "<p>Craftaurum creates custom gold jewelry designed to reflect each brand’s distinctive style. From individual pieces to complete collections, we combine thoughtful design, precise production and a commitment to material quality.</p><p>Our customization options span precious-metal choices, detailed finishing and gold plating in a range of tones and specifications, helping brands develop pieces tailored to their market.</p><p>Speak with our team to explore your ideas and create a collection that feels uniquely yours.</p>",
+        "body_preset": "h4",
         "image_position": "left",
         "cta_label": "",
         "cta_url": "shopify://collections/all",
+        "cta_button_style": "button",
         "padding_top": 32,
-        "padding_bottom": 32,
-        "heading_preset": "h2",
-        "top_button_style": "button",
-        "body_preset": "h4",
-        "cta_button_style": "button"
+        "padding_bottom": 32
       }
-    },
-    "image_collection_grid_craftaurum": {
-      "type": "image-collection-grid",
-      "settings": {
-        "heading": "Explore Our Custom Jewelry Collections",
-        "heading_preset": "h2",
-        "description": "<p>Explore Craftaurum's custom jewelry collections, from refined everyday pieces to distinctive designs tailored to your brand.</p>",
-        "body_preset": "h4",
-        "card_title_preset": "h3",
-        "mobile_columns": 2,
-        "mobile_layout": "grid",
-        "overlay_opacity": 25,
-        "hover_overlay_opacity": 50,
-        "gap": 16,
-        "padding_top": 40,
-        "padding_bottom": 40
-      },
-      "blocks": {
-        "card_1": {
-          "type": "card",
-          "settings": {
-            "title": "Custom Rings"
-          }
-        },
-        "card_2": {
-          "type": "card",
-          "settings": {
-            "title": "Custom Earrings"
-          }
-        },
-        "card_3": {
-          "type": "card",
-          "settings": {
-            "title": "Custom Bracelets"
-          }
-        },
-        "card_4": {
-          "type": "card",
-          "settings": {
-            "title": "Custom Necklaces"
-          }
-        },
-        "card_5": {
-          "type": "card",
-          "settings": {
-            "title": "Artisan Jewelry"
-          }
-        }
-      },
-      "block_order": [
-        "card_1",
-        "card_2",
-        "card_3",
-        "card_4",
-        "card_5"
-      ]
     }
   },
   "order": [
     "hero_jVaWmY",
     "brand_partners_BGpjWX",
     "image_text_feature_NWRYeQ",
-    "image_text_feature_YzURpA",
-    "image_collection_grid_craftaurum"
+    "image_text_feature_YzURpA"
   ]
 }
