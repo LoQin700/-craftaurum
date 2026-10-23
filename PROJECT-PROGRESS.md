@@ -183,3 +183,10 @@
 - 图片字段均保持空白，由 Theme Editor 上传真实素材；Hero 默认 16:9 左文右图；图文卡片桌面4列，手机1列原生轮播。
 - `layout/theme.liquid` 已让 `page.jewelry-rings` 复用此前优化好的 `craftaurum-contact.css`。
 - 静态模板检查 PASS；当前页面模板与 Section 类型映射完整。Shopify 主题编辑器视觉仍需实测。
+
+## 2026-10-23 · jewelry-rings 模板按 Shopify 实际回写结构修正
+- 用户在 Theme Editor 手动向 `jewelry-rings` 添加了一个测试 `interactive-feature`。GitHub 最新模板因此被 Shopify 回写为：默认 `main-page` + `interactive_feature_cFYGmj`，证明之前整份替换 JSON 会被后台保存覆盖。
+- 本次改法改为：以 Shopify 最新回写文件为底稿，完整保留 `main` 和手动生成的 `interactive_feature_cFYGmj` ID；直接把该测试 Section 填成 Rings 的 Why Choose 内容。
+- 其余 Section 使用 Shopify 编辑器风格的唯一 ID 逐个追加：图文横幅、横向 CTA、图文卡片、图文介绍、图标文字、标题说明和原生 Contact Form。
+- 当前 `page.jewelry-rings.json` order 已确认包含 9 个 Section：main + 8 个展示/联系 Section；GitHub 二次读取仍保持该结构。
+- 这次不再依赖 `page.jewelry-showcase` 模板；实际页面以用户后台创建的 `jewelry-rings` 为准。
