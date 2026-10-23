@@ -4,9 +4,9 @@
   width: min(100%, 900px);
   margin-inline: auto;
   padding: clamp(20px, 3.8vw, 48px);
-  border: 1px solid #E4E5E8;
-  background: #FFFFFF;
-  box-shadow: 0 12px 38px rgba(20, 23, 28, .045);
+  border: 1px solid color-mix(in srgb, var(--color-foreground) 18%, transparent);
+  background: var(--color-background);
+  box-shadow: 0 12px 38px rgb(var(--color-foreground-rgb) / .05);
   border-radius: 4px;
 }
 #MainContent .contact-form__form {
@@ -28,27 +28,27 @@
   min-width: 0;
   min-height: 52px;
   padding: 14px 16px;
-  border: 1px solid #D5D8DE;
+  border: 1px solid color-mix(in srgb, var(--color-foreground) 20%, transparent);
   border-radius: 3px;
-  background-color: #FAFAFB;
-  color: #202127;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
   font-size: var(--font-h5--size);
   line-height: 1.45;
   box-shadow: none;
   transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease;
 }
 #MainContent .contact-form__input::placeholder {
-  color: #747984;
+  color: rgb(var(--color-foreground-rgb) / .55);
   opacity: 1;
 }
 #MainContent .contact-form__input:hover {
-  border-color: #A6AAB3;
-  background-color: #FFFFFF;
+  border-color: var(--color-accent, #C7A85E);
+  background-color: var(--color-background);
 }
 #MainContent .contact-form__input:focus-visible {
-  border-color: #4A505A;
-  background-color: #FFFFFF;
-  outline: 2px solid #C6C9CF;
+  border-color: var(--color-accent, #C7A85E);
+  background-color: var(--color-background);
+  outline: 2px solid color-mix(in srgb, var(--color-accent, #C7A85E) 45%, transparent);
   outline-offset: 1px;
 }
 #MainContent .contact-form__input--textarea {
