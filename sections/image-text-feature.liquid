@@ -5,7 +5,7 @@
 {% endcomment %}
 <div
   id="ImageTextFeature-{{ section.id }}"
-  class="section section--page-width spacing-style ca-feature"
+  class="section section--{{ section.settings.section_width | default: 'page-width' }} spacing-style ca-feature"
   style="
     --padding-block-start: {{ section.settings.padding_top }}px;
     --padding-block-end: {{ section.settings.padding_bottom }}px;
@@ -38,7 +38,7 @@
     <div class="ca-feature__columns{% if section.settings.image_position == 'left' %} ca-feature__columns--reverse{% endif %}">
       <div class="ca-feature__copy">
         {% if section.settings.body != blank %}
-          <div class="ca-feature__body rte {{ section.settings.body_preset | default: 'h4' }}">
+          <div class="ca-feature__body rte {{ section.settings.body_preset | default: 'h5' }}">
             {{ section.settings.body }}
           </div>
         {% endif %}
@@ -123,6 +123,22 @@
     ]
   },
   "settings": [
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "内容宽度",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "页面宽度"
+        },
+        {
+          "value": "full-width",
+          "label": "全宽"
+        }
+      ],
+      "default": "page-width"
+    },
     {
       "type": "text",
       "id": "heading",
@@ -265,7 +281,7 @@
           "label": "H6"
         }
       ],
-      "default": "h4"
+      "default": "h5"
     },
     {
       "type": "image_picker",
