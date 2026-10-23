@@ -11,7 +11,7 @@
   endif
   assign card_image = block.settings.image
   if card_image == blank and selected_collection != blank
-    assign card_image = selected_collection.featured_image
+    assign card_image = selected_collection.image
   endif
   assign card_link = block.settings.link
   if card_link == blank and selected_collection != blank
