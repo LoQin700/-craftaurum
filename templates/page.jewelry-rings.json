@@ -58,59 +58,7 @@
         "padding-block-end": 80
       }
     },
-    "interactive_feature_cFYGmj": {
-      "type": "interactive-feature",
-      "blocks": {
-        "item_QJarUi": {
-          "type": "item",
-          "settings": {
-            "title": "Material Selection",
-            "description": "<p>Review metal choices, plating directions, stone options and surface finishes based on the intended look and use of the ring.</p>"
-          }
-        },
-        "item_9zbQMA": {
-          "type": "item",
-          "settings": {
-            "title": "Ring Craftsmanship",
-            "description": "<p>Pay attention to setting structure, polishing, proportions and the small construction details that influence the finished ring.</p>"
-          }
-        },
-        "item_EFeVgi": {
-          "type": "item",
-          "settings": {
-            "title": "Brand-Led Design Development",
-            "description": "<p>Translate references, sketches and brand direction into ring concepts that feel intentional rather than generic.</p>"
-          }
-        },
-        "item_XTCWJt": {
-          "type": "item",
-          "settings": {
-            "title": "Production Review",
-            "description": "<p>Use sample review and agreed specifications to check fit, finish and key construction details before repeat production.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "item_QJarUi",
-        "item_9zbQMA",
-        "item_EFeVgi",
-        "item_XTCWJt"
-      ],
-      "name": "交互图文",
-      "settings": {
-        "section_width": "page-width",
-        "eyebrow": "WHY CHOOSE OUR RINGS",
-        "eyebrow_preset": "h5",
-        "heading": "Focused Capabilities for Ring Development",
-        "heading_preset": "h2",
-        "description": "<p>Ring development depends on more than appearance alone. These are the product-specific areas we focus on when refining a custom ring collection.</p>",
-        "body_preset": "h5",
-        "item_title_preset": "h4",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "jewelry_collections_overview_Ring01": {
+    "hero01": {
       "type": "jewelry-collections-overview",
       "settings": {
         "section_width": "full-width",
@@ -131,7 +79,7 @@
         "padding_bottom": 32
       }
     },
-    "horizontal_cta_Ring01": {
+    "cta01": {
       "type": "horizontal-cta",
       "settings": {
         "section_width": "full-width",
@@ -146,7 +94,7 @@
         "padding_bottom": 36
       }
     },
-    "image_gallery_Ring01": {
+    "cards01": {
       "type": "image-gallery",
       "settings": {
         "eyebrow": "JEWELRY DESIGN RANGE",
@@ -169,7 +117,7 @@
         "padding_bottom": 56
       },
       "blocks": {
-        "image_Gem01": {
+        "gem01": {
           "type": "image",
           "settings": {
             "image": "",
@@ -181,7 +129,7 @@
             "link": ""
           }
         },
-        "image_Min02": {
+        "minimal02": {
           "type": "image",
           "settings": {
             "image": "",
@@ -193,7 +141,7 @@
             "link": ""
           }
         },
-        "image_Pear03": {
+        "pearl03": {
           "type": "image",
           "settings": {
             "image": "",
@@ -205,7 +153,7 @@
             "link": ""
           }
         },
-        "image_Sign04": {
+        "signature04": {
           "type": "image",
           "settings": {
             "image": "",
@@ -219,13 +167,13 @@
         }
       },
       "block_order": [
-        "image_Gem01",
-        "image_Min02",
-        "image_Pear03",
-        "image_Sign04"
+        "gem01",
+        "minimal02",
+        "pearl03",
+        "signature04"
       ]
     },
-    "image_text_feature_Ring01": {
+    "intro01": {
       "type": "image-text-feature",
       "settings": {
         "section_width": "page-width",
@@ -248,7 +196,7 @@
         "padding_bottom": 56
       }
     },
-    "icon_text_list_Ring01": {
+    "icons01": {
       "type": "icon-text-list",
       "settings": {
         "section_width": "page-width",
@@ -266,7 +214,7 @@
         "padding_bottom": 56
       },
       "blocks": {
-        "item_Des01": {
+        "design01": {
           "type": "item",
           "settings": {
             "icon": "design",
@@ -275,7 +223,7 @@
             "description": "<p>Clarify references, dimensions and design intent before sampling begins.</p>"
           }
         },
-        "item_Mat02": {
+        "material02": {
           "type": "item",
           "settings": {
             "icon": "material",
@@ -284,7 +232,7 @@
             "description": "<p>Review suitable metals, stones and finishing directions for the project.</p>"
           }
         },
-        "item_Sam03": {
+        "sample03": {
           "type": "item",
           "settings": {
             "icon": "sample",
@@ -293,7 +241,7 @@
             "description": "<p>Use samples to check proportion, construction and finish before repeat production.</p>"
           }
         },
-        "item_Qua04": {
+        "quality04": {
           "type": "item",
           "settings": {
             "icon": "quality",
@@ -304,13 +252,13 @@
         }
       },
       "block_order": [
-        "item_Des01",
-        "item_Mat02",
-        "item_Sam03",
-        "item_Qua04"
+        "design01",
+        "material02",
+        "sample03",
+        "quality04"
       ]
     },
-    "text_heading_Ring01": {
+    "contacttitle01": {
       "type": "text-heading",
       "settings": {
         "section_width": "page-width",
@@ -323,7 +271,7 @@
         "padding_bottom": 12
       }
     },
-    "section_Ring01": {
+    "contact01": {
       "type": "section",
       "blocks": {
         "contact_form_UwiCkQ": {
@@ -387,17 +335,69 @@
         "padding-block-start": 8,
         "padding-block-end": 64
       }
+    },
+    "interactive_feature_cFYGmj": {
+      "type": "interactive-feature",
+      "blocks": {
+        "item_QJarUi": {
+          "type": "item",
+          "settings": {
+            "title": "Material Selection",
+            "description": "<p>Review metal choices, plating directions, stone options and surface finishes based on the intended look and use of the ring.</p>"
+          }
+        },
+        "item_9zbQMA": {
+          "type": "item",
+          "settings": {
+            "title": "Ring Craftsmanship",
+            "description": "<p>Pay attention to setting structure, polishing, proportions and the small construction details that influence the finished ring.</p>"
+          }
+        },
+        "item_EFeVgi": {
+          "type": "item",
+          "settings": {
+            "title": "Brand-Led Design Development",
+            "description": "<p>Translate references, sketches and brand direction into ring concepts that feel intentional rather than generic.</p>"
+          }
+        },
+        "item_XTCWJt": {
+          "type": "item",
+          "settings": {
+            "title": "Production Review",
+            "description": "<p>Use sample review and agreed specifications to check fit, finish and key construction details before repeat production.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_QJarUi",
+        "item_9zbQMA",
+        "item_EFeVgi",
+        "item_XTCWJt"
+      ],
+      "name": "交互图文",
+      "settings": {
+        "section_width": "page-width",
+        "eyebrow": "WHY CHOOSE OUR RINGS",
+        "eyebrow_preset": "h5",
+        "heading": "Focused Capabilities for Ring Development",
+        "heading_preset": "h2",
+        "description": "<p>Ring development depends on more than appearance alone. These are the product-specific areas we focus on when refining a custom ring collection.</p>",
+        "body_preset": "h5",
+        "item_title_preset": "h4",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
     }
   },
   "order": [
     "main",
-    "jewelry_collections_overview_Ring01",
-    "horizontal_cta_Ring01",
-    "image_gallery_Ring01",
+    "hero01",
+    "cta01",
+    "cards01",
     "interactive_feature_cFYGmj",
-    "image_text_feature_Ring01",
-    "icon_text_list_Ring01",
-    "text_heading_Ring01",
-    "section_Ring01"
+    "intro01",
+    "icons01",
+    "contacttitle01",
+    "contact01"
   ]
 }
