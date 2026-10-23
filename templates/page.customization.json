@@ -292,168 +292,6 @@
         "padding_bottom": 72
       }
     },
-    "process_1": {
-      "type": "image-text-feature",
-      "name": "图文介绍",
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "heading": "Communication",
-        "heading_preset": "h2",
-        "heading_position": "content",
-        "subtitle": "HIGH END JEWELRY MANUFACTURING PROCESS",
-        "top_label": "",
-        "subtitle_preset": "h5",
-        "top_url": "",
-        "top_button_style": "button",
-        "body": "<p>The process starts with your references, design ideas, product requirements and commercial goals. We review what you want to create, where clarification is needed and which details should be confirmed before design development begins.</p><p>Clear communication at this stage reduces unnecessary revisions later in the project.</p>",
-        "body_preset": "h5",
-        "image_position": "left",
-        "image_ratio": "landscape",
-        "cta_label": "Get A Quick Quote",
-        "cta_url": "",
-        "cta_button_style": "button-unstyled",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "process_2": {
-      "type": "image-text-feature",
-      "name": "图文介绍",
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "heading": "Design",
-        "heading_preset": "h2",
-        "heading_position": "content",
-        "subtitle": "STEP 02",
-        "top_label": "",
-        "subtitle_preset": "h5",
-        "top_url": "",
-        "top_button_style": "button",
-        "body": "<p>Design direction is refined around shape, texture, proportion, color and surface treatment. References are translated into clearer product decisions so the concept can move toward a manufacturable design.</p>",
-        "body_preset": "h5",
-        "image_position": "right",
-        "image_ratio": "landscape",
-        "cta_label": "",
-        "cta_url": "",
-        "cta_button_style": "button-unstyled",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "process_3": {
-      "type": "image-text-feature",
-      "name": "图文介绍",
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "heading": "3D Rendering",
-        "heading_preset": "h2",
-        "heading_position": "content",
-        "subtitle": "STEP 03",
-        "top_label": "",
-        "subtitle_preset": "h5",
-        "top_url": "",
-        "top_button_style": "button",
-        "body": "<p>3D development provides a clearer view of proportion, construction and visual details before physical sampling. It creates a useful checkpoint for refining the design and aligning expectations before the next stage.</p>",
-        "body_preset": "h5",
-        "image_position": "left",
-        "image_ratio": "landscape",
-        "cta_label": "",
-        "cta_url": "",
-        "cta_button_style": "button-unstyled",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "process_4": {
-      "type": "image-text-feature",
-      "name": "图文介绍",
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "heading": "Sampling",
-        "heading_preset": "h2",
-        "heading_position": "content",
-        "subtitle": "STEP 04",
-        "top_label": "",
-        "subtitle_preset": "h5",
-        "top_url": "",
-        "top_button_style": "button",
-        "body": "<p>A physical sample lets you review the product in hand before repeat production. Proportion, construction, fit, surface finish and other key details can be checked against the approved design direction.</p>",
-        "body_preset": "h5",
-        "image_position": "right",
-        "image_ratio": "landscape",
-        "cta_label": "",
-        "cta_url": "",
-        "cta_button_style": "button-unstyled",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "process_5": {
-      "type": "image-text-feature",
-      "name": "图文介绍",
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "heading": "Production",
-        "heading_preset": "h2",
-        "heading_position": "content",
-        "subtitle": "STEP 05",
-        "top_label": "",
-        "subtitle_preset": "h5",
-        "top_url": "",
-        "top_button_style": "button",
-        "body": "<p>After the sample direction is confirmed, production follows the agreed design and specification. Key manufacturing and finishing details are organized around the approved reference so the collection can move into repeat production with a clear standard.</p>",
-        "body_preset": "h5",
-        "image_position": "left",
-        "image_ratio": "landscape",
-        "cta_label": "",
-        "cta_url": "",
-        "cta_button_style": "button-unstyled",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "process_6": {
-      "type": "image-text-feature",
-      "name": "图文介绍",
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "heading": "Delivery",
-        "heading_preset": "h2",
-        "heading_position": "content",
-        "subtitle": "STEP 06",
-        "top_label": "",
-        "subtitle_preset": "h5",
-        "top_url": "",
-        "top_button_style": "button",
-        "body": "<p>Once production and final review are complete, the project moves into packing and delivery coordination. Shipment requirements can be aligned with the needs of the order and destination.</p>",
-        "body_preset": "h5",
-        "image_position": "right",
-        "image_ratio": "landscape",
-        "cta_label": "Start Your Inquiry",
-        "cta_url": "",
-        "cta_button_style": "button-secondary",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
     "why_customize": {
       "type": "icon-with-text",
       "blocks": {
@@ -726,6 +564,105 @@
         "padding-block-start": 56,
         "padding-block-end": 84
       }
+    },
+    "process_cards": {
+      "type": "content-cards",
+      "name": "图文卡片",
+      "blocks": {
+        "communication": {
+          "type": "card",
+          "settings": {
+            "title": "Communication",
+            "description": "<p>We begin by reviewing your ideas, references, target product direction and project requirements so the development path is clear from the start.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "design": {
+          "type": "card",
+          "settings": {
+            "title": "Design",
+            "description": "<p>Design details such as shape, proportion, texture, color and surface treatment are refined around the intended collection.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "rendering": {
+          "type": "card",
+          "settings": {
+            "title": "3D Rendering",
+            "description": "<p>3D development helps visualize proportion, structure and key details before moving into physical sampling.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "sampling": {
+          "type": "card",
+          "settings": {
+            "title": "Sampling",
+            "description": "<p>A physical sample provides a practical checkpoint for reviewing construction, fit, finish and overall appearance.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "production": {
+          "type": "card",
+          "settings": {
+            "title": "Production",
+            "description": "<p>After sample confirmation, repeat production follows the approved design direction and agreed product specifications.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "delivery": {
+          "type": "card",
+          "settings": {
+            "title": "Delivery",
+            "description": "<p>Once production and final review are complete, packing and shipment coordination can be arranged around the order requirements.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "communication",
+        "design",
+        "rendering",
+        "sampling",
+        "production",
+        "delivery"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "card_style": "process",
+        "intro_button_label": "Get A Quote",
+        "intro_button_link": "",
+        "intro_button_style": "button",
+        "eyebrow": "",
+        "eyebrow_preset": "h5",
+        "heading": "High End Jewelry Manufacturing Process",
+        "heading_preset": "h2",
+        "description": "<p>From early communication and design development to sampling, production and delivery, each stage is organized to keep the project clear and practical for your brand.</p>",
+        "body_preset": "h5",
+        "card_title_preset": "h3",
+        "desktop_layout": "grid",
+        "desktop_columns": "3",
+        "mobile_layout": "carousel",
+        "mobile_columns": "1",
+        "image_ratio": "landscape",
+        "gap": 32,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
     }
   },
   "order": [
@@ -734,12 +671,7 @@
     "capabilities",
     "custom_banner",
     "options",
-    "process_1",
-    "process_2",
-    "process_3",
-    "process_4",
-    "process_5",
-    "process_6",
+    "process_cards",
     "why_customize",
     "requirements",
     "contact"
