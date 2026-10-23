@@ -361,7 +361,7 @@
           "type": "contact-form",
           "settings": {
             "width": "custom",
-            "custom_width": 50,
+            "custom_width": 100,
             "width_mobile": "custom",
             "custom_width_mobile": 100,
             "background_color": "",
@@ -374,7 +374,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "follow_section_width": true
           },
           "blocks": {
             "submit-button": {
@@ -415,7 +416,7 @@
         "section_height": "",
         "section_height_custom": 50,
         "background_media": "none",
-        "background_color": "",
+        "background_color": "#ffffff",
         "video_position": "cover",
         "background_image_position": "cover",
         "toggle_overlay": false,
@@ -427,8 +428,8 @@
         "border_opacity": 100,
         "border_color": "",
         "border_radius": 0,
-        "padding-block-start": 32,
-        "padding-block-end": 32
+        "padding-block-start": 56,
+        "padding-block-end": 84
       }
     }
   },
