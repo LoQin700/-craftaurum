@@ -1,0 +1,445 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "t:names.title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {
+            "text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "jewelry_collections_overview_tkTByC": {
+      "type": "jewelry-collections-overview",
+      "name": "图文横幅",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "eyebrow": "CUSTOM NECKLACE MANUFACTURING",
+        "heading": "Custom Necklaces for Distinctive Brands.",
+        "introduction": "<p>Develop fashion and personalized necklaces around your brand direction, with flexibility across logo details, color, metal, texture and finishing. Craftaurum supports pearl necklaces, chokers, pendant designs and other custom necklace concepts from development through production planning.</p><p>Each project can be shaped around the intended market, wearing experience and visual identity of your collection.</p>",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "quote_label": "Get B2B Quote",
+        "quote_url": "",
+        "catalog_label": "Request Catalog",
+        "catalog_url": "",
+        "heading_preset": "h1",
+        "eyebrow_preset": "h5",
+        "body_preset": "h5",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "horizontal_cta_Pwad7F": {
+      "type": "horizontal-cta",
+      "name": "横向 CTA",
+      "settings": {
+        "section_width": "full-width",
+        "heading": "From necklace concept to brand-ready production.",
+        "heading_preset": "h3",
+        "description": "<p>Develop chain, pendant and finishing details around a clear design direction and production specification.</p>",
+        "body_preset": "h5",
+        "button_label": "Start Your Necklace Project",
+        "button_link": "",
+        "button_style": "button-secondary",
+        "background_color": "#17191a",
+        "text_color": "#f8f7f4",
+        "button_background_color": "#17191a",
+        "button_text_color": "#f8f7f4",
+        "button_border_color": "#f8f7f4",
+        "button_hover_background_color": "#c7a85e",
+        "button_hover_text_color": "#17191a",
+        "button_hover_border_color": "#c7a85e",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "content_cards_xi8xGJ": {
+      "type": "content-cards",
+      "blocks": {
+        "card_dADhNg": {
+          "type": "card",
+          "settings": {
+            "title": "Pendant Necklaces",
+            "description": "<p>Develop pendant-led designs with flexible shape, scale, stone and branding possibilities.</p>",
+            "button_label": "Explore Details",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "card_WtWhNM": {
+          "type": "card",
+          "settings": {
+            "title": "Pearl Necklaces",
+            "description": "<p>Explore pearl proportions, chain combinations and metal details for refined necklace collections.</p>",
+            "button_label": "Explore Details",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "card_CfDadY": {
+          "type": "card",
+          "settings": {
+            "title": "Choker Necklaces",
+            "description": "<p>Create close-fitting necklace styles with different chain, metal and decorative directions.</p>",
+            "button_label": "Explore Details",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "card_PcNzcH": {
+          "type": "card",
+          "settings": {
+            "title": "Fashion & Logo Necklaces",
+            "description": "<p>Translate brand symbols, textures and graphic references into recognizable necklace concepts.</p>",
+            "button_label": "Explore Details",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_dADhNg",
+        "card_WtWhNM",
+        "card_CfDadY",
+        "card_PcNzcH"
+      ],
+      "name": "图文卡片",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "eyebrow": "NECKLACE DESIGN RANGE",
+        "eyebrow_preset": "h5",
+        "heading": "Explore Custom Necklace Styles",
+        "heading_preset": "h2",
+        "description": "<p>Create a distinctive necklace collection through different chain structures, pendants, materials, textures and finishing directions.</p>",
+        "body_preset": "h5",
+        "card_title_preset": "h3",
+        "desktop_layout": "grid",
+        "desktop_columns": "4",
+        "mobile_layout": "carousel",
+        "mobile_columns": "1",
+        "image_ratio": "portrait",
+        "gap": 20,
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "interactive_feature_cFYGmj": {
+      "type": "interactive-feature",
+      "blocks": {
+        "item_QJarUi": {
+          "type": "item",
+          "settings": {
+            "title": "Customization Options",
+            "description": "<p>Review logo, color, metal, texture, stone and finish options around the intended brand direction.</p>"
+          }
+        },
+        "item_9zbQMA": {
+          "type": "item",
+          "settings": {
+            "title": "Chain & Pendant Construction",
+            "description": "<p>Consider chain proportions, pendant scale, connection points and overall balance during development.</p>"
+          }
+        },
+        "item_EFeVgi": {
+          "type": "item",
+          "settings": {
+            "title": "Brand-Led Design",
+            "description": "<p>Translate references and brand values into necklace details that feel deliberate rather than generic.</p>"
+          }
+        },
+        "item_XTCWJt": {
+          "type": "item",
+          "settings": {
+            "title": "Production Coordination",
+            "description": "<p>Use samples and specifications to align construction, finish and timing before repeat production.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_QJarUi",
+        "item_9zbQMA",
+        "item_EFeVgi",
+        "item_XTCWJt"
+      ],
+      "name": "交互图文",
+      "settings": {
+        "section_width": "page-width",
+        "eyebrow": "WHY CHOOSE OUR NECKLACES",
+        "eyebrow_preset": "h5",
+        "heading": "Focused Capabilities for Custom Necklace Development",
+        "heading_preset": "h2",
+        "description": "<p>Necklace development combines visual design with chain structure, pendant balance and practical wearability. These are the areas we focus on during customization.</p>",
+        "body_preset": "h5",
+        "item_title_preset": "h4",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "image_text_feature_pyXify": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "B2B Necklace Development Built Around Your Brand",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "ABOUT CRAFTAURUM",
+        "top_label": "",
+        "subtitle_preset": "h5",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Craftaurum supports custom necklace projects for jewelry brands and wholesale partners, from early design communication to sampling and production coordination. We focus on the relationship between chain, pendant, material and finishing so the final piece supports both brand identity and wearability.</p><p>Use real development or production imagery here to show the manufacturing process behind custom necklace collections.</p>",
+        "body_preset": "h5",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "cta_label": "Start Your Project",
+        "cta_url": "",
+        "cta_button_style": "button-secondary",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
+    },
+    "icon_with_text_support": {
+      "type": "icon-with-text",
+      "blocks": {
+        "iwt_design": {
+          "type": "item",
+          "settings": {
+            "icon": "ruler",
+            "icon_color": "#c7a85e",
+            "title": "Design Development",
+            "description": "<p>Clarify chain style, pendant scale, references and intended brand direction before sampling.</p>"
+          }
+        },
+        "iwt_material": {
+          "type": "item",
+          "settings": {
+            "icon": "star",
+            "icon_color": "#c7a85e",
+            "title": "Material Options",
+            "description": "<p>Review metals, pearls, stones, textures and finishing directions for the collection.</p>"
+          }
+        },
+        "iwt_sample": {
+          "type": "item",
+          "settings": {
+            "icon": "clipboard",
+            "icon_color": "#c7a85e",
+            "title": "Sample Review",
+            "description": "<p>Check pendant balance, chain proportion, fastening details and overall finish.</p>"
+          }
+        },
+        "iwt_quality": {
+          "type": "item",
+          "settings": {
+            "icon": "check_box",
+            "icon_color": "#c7a85e",
+            "title": "Production Coordination",
+            "description": "<p>Keep specifications and review points clear before repeat production and delivery planning.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "iwt_design",
+        "iwt_material",
+        "iwt_sample",
+        "iwt_quality"
+      ],
+      "name": "图标文字",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "style_preset": "left",
+        "icon_position": "top",
+        "icon_size": 32,
+        "icon_gap": 16,
+        "column_gap": 32,
+        "eyebrow": "MANUFACTURING SUPPORT",
+        "eyebrow_preset": "h5",
+        "heading": "Support for Necklace Collections",
+        "heading_preset": "h2",
+        "description": "<p>Each necklace project is supported by a practical workflow from design review through sample confirmation and production planning.</p>",
+        "body_preset": "h5",
+        "item_title_preset": "h4",
+        "desktop_columns": "4",
+        "mobile_columns": "1",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "section_m4j6NK": {
+      "type": "section",
+      "blocks": {
+        "text_BPhK83": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Contact us</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "contact_form_q8ie8c": {
+          "type": "contact-form",
+          "settings": {
+            "width": "custom",
+            "custom_width": 50,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100,
+            "background_color": "",
+            "input_style": "default",
+            "input_background_color": "{{ settings.color_palette.background }}",
+            "input_text_color": "{{ settings.color_palette.foreground }}",
+            "input_border_color": "{{ settings.color_palette.foreground }}",
+            "border_width": 1,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "submit-button": {
+              "type": "contact-form-submit-button",
+              "static": true,
+              "settings": {
+                "label": "Submit",
+                "style_class": "button",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "block_order": [
+        "text_BPhK83",
+        "contact_form_q8ie8c"
+      ],
+      "name": "t:names.contact_form",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 32,
+        "padding-block-end": 32
+      }
+    }
+  },
+  "order": [
+    "main",
+    "jewelry_collections_overview_tkTByC",
+    "horizontal_cta_Pwad7F",
+    "content_cards_xi8xGJ",
+    "interactive_feature_cFYGmj",
+    "image_text_feature_pyXify",
+    "icon_with_text_support",
+    "section_m4j6NK"
+  ]
+}
