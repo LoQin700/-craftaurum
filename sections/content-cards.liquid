@@ -13,7 +13,7 @@
 
 <section
   id="ContentCards-{{ section.id }}"
-  class="ca-content-cards section section--{{ content_width }}"
+  class="ca-content-cards ca-content-cards--{{ section.settings.card_style | default: 'standard' }} section section--{{ content_width }}"
   style="
     --ca-cards-background: {{ section.settings.background_color }};
     --ca-cards-text: {{ section.settings.text_color }};
@@ -40,6 +40,17 @@
         {% if section.settings.description != blank %}
           <div class="ca-content-cards__description rte {{ section.settings.body_preset }}">
             {{ section.settings.description }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.intro_button_label != blank %}
+          <div class="ca-content-cards__intro-action">
+            {% render 'craftaurum-cta',
+              label: section.settings.intro_button_label,
+              link: section.settings.intro_button_link,
+              style_class: section.settings.intro_button_style,
+              static_label: true
+            %}
           </div>
         {% endif %}
       </div>
@@ -215,6 +226,46 @@
     }
   }
 
+  .ca-content-cards__intro-action {
+    margin-top: 22px;
+  }
+
+  .ca-content-cards--process .ca-content-cards__intro {
+    max-width: 1120px;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+
+  .ca-content-cards--process .ca-content-card__media {
+    border: 6px solid #c7c7c7;
+    border-radius: 28px;
+    background: #f7f7f7;
+  }
+
+  .ca-content-cards--process .ca-content-card__content {
+    padding: 14px 10px 0;
+    text-align: center;
+  }
+
+  .ca-content-cards--process .ca-content-card__title {
+    margin-bottom: 8px;
+  }
+
+  .ca-content-cards--process .ca-content-card__text {
+    max-width: 34ch;
+    margin-inline: auto;
+  }
+
+  .ca-content-cards--process .ca-content-card__action {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ca-content-cards--process .ca-content-card__image,
+  .ca-content-cards--process .ca-content-card__placeholder {
+    border-radius: 21px;
+  }
+
   @media screen and (max-width: 749px) {
     .ca-content-cards__intro {
       text-align: left;
@@ -282,6 +333,52 @@
       "id": "accent_color",
       "label": "重点颜色",
       "default": "#C7A85E"
+    },
+    {
+      "type": "select",
+      "id": "card_style",
+      "label": "卡片样式",
+      "options": [
+        {
+          "value": "standard",
+          "label": "标准"
+        },
+        {
+          "value": "process",
+          "label": "流程"
+        }
+      ],
+      "default": "standard"
+    },
+    {
+      "type": "text",
+      "id": "intro_button_label",
+      "label": "顶部按钮文字"
+    },
+    {
+      "type": "url",
+      "id": "intro_button_link",
+      "label": "顶部按钮链接"
+    },
+    {
+      "type": "select",
+      "id": "intro_button_style",
+      "label": "顶部按钮样式",
+      "options": [
+        {
+          "value": "button",
+          "label": "主按钮"
+        },
+        {
+          "value": "button-secondary",
+          "label": "次级按钮"
+        },
+        {
+          "value": "button-unstyled",
+          "label": "文字链接"
+        }
+      ],
+      "default": "button"
     },
     {
       "type": "text",
