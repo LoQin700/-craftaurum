@@ -8,7 +8,7 @@
   style="
     --padding-block-start: {{ section.settings.padding_top }}px;
     --padding-block-end: {{ section.settings.padding_bottom }}px;
-    --ca-logo-gap: {{ section.settings.columns_gap | default: 10 }}px;
+    --ca-logo-gap: 10px;
     --ca-logo-mobile-columns: {{ section.settings.mobile_columns | default: 1 }};
   "
 >
@@ -312,16 +312,6 @@
       "step": 4,
       "unit": "px",
       "default": 20
-    },
-    {
-      "type": "range",
-      "id": "columns_gap",
-      "label": "图片间距",
-      "min": 0,
-      "max": 40,
-      "step": 2,
-      "unit": "px",
-      "default": 10
     },
     {
       "type": "range",
