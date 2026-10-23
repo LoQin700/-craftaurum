@@ -45,7 +45,7 @@
       }
     },
     "style_cards": {
-      "type": "image-gallery",
+      "type": "content-cards",
       "settings": {
         "eyebrow": "JEWELRY DESIGN RANGE",
         "eyebrow_preset": "h5",
@@ -68,7 +68,7 @@
       },
       "blocks": {
         "gemstone": {
-          "type": "image",
+          "type": "card",
           "settings": {
             "title": "Gemstone Rings",
             "description": "<p>Explore different stone layouts, setting styles and finish directions for your brand.</p>",
@@ -78,7 +78,7 @@
           }
         },
         "minimal": {
-          "type": "image",
+          "type": "card",
           "settings": {
             "title": "Metal & Minimal Rings",
             "description": "<p>Develop clean silhouettes, polished surfaces and understated proportions for refined collections.</p>",
@@ -88,7 +88,7 @@
           }
         },
         "pearl": {
-          "type": "image",
+          "type": "card",
           "settings": {
             "title": "Pearl Rings",
             "description": "<p>Combine pearl proportions with metal details and setting choices suited to your design direction.</p>",
@@ -98,7 +98,7 @@
           }
         },
         "signature": {
-          "type": "image",
+          "type": "card",
           "settings": {
             "title": "Signature Designs",
             "description": "<p>Shape distinctive ring concepts around recognizable details, forms and finishing choices.</p>",
@@ -189,7 +189,7 @@
       }
     },
     "capabilities": {
-      "type": "icon-text-list",
+      "type": "icon-with-text",
       "settings": {
         "section_width": "page-width",
         "eyebrow": "MANUFACTURING SUPPORT",
@@ -209,7 +209,6 @@
         "design": {
           "type": "item",
           "settings": {
-            "icon": "design",
             "title": "Design Development",
             "description": "<p>Clarify references, dimensions and design intent before sampling begins.</p>"
           }
@@ -217,7 +216,6 @@
         "materials": {
           "type": "item",
           "settings": {
-            "icon": "material",
             "title": "Material Options",
             "description": "<p>Review suitable metals, stones and finishing directions for the project.</p>"
           }
@@ -225,7 +223,6 @@
         "sampling": {
           "type": "item",
           "settings": {
-            "icon": "sample",
             "title": "Sample Support",
             "description": "<p>Use samples to check proportion, construction and finish before repeat production.</p>"
           }
@@ -233,7 +230,6 @@
         "quality": {
           "type": "item",
           "settings": {
-            "icon": "quality",
             "title": "Quality Review",
             "description": "<p>Review key visual and construction details against agreed production specifications.</p>"
           }
