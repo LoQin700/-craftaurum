@@ -835,15 +835,6 @@ h6,
   margin-block-end: 0;
 }
 
-/* Shared CTA indicator. Exclude icon/image controls and keep the native button styles. */
-a:is(.button, .button-secondary, .button-unstyled):not(:has(svg)):not([aria-label]):not(.brand-partners__arrow)::before {
-  content: '»';
-  display: inline-block;
-  margin-inline-end: .45em;
-  font-weight: inherit;
-  text-decoration: none;
-}
-
 /* Links */
 a {
   color: currentcolor;
