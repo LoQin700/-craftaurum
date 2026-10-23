@@ -92,10 +92,17 @@
   .ca-feature__columns {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: start;
+    align-items: center;
     gap: var(--ca-feature-gap, 48px);
   }
-  .ca-feature__copy { min-width: 0; padding-block: 4px; }
+  .ca-feature__copy {
+    min-width: 0;
+    padding-block: 4px;
+    align-self: center;
+  }
+  .ca-feature__media {
+    align-self: center;
+  }
   .ca-feature__body { max-width: 100%; }
   .ca-feature__body :is(p, ul, ol) { font-size: inherit; line-height: inherit; }
   .ca-feature__body p { margin: 0 0 1.35em; }
