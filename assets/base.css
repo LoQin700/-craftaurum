@@ -1029,7 +1029,7 @@ button.shopify-payment-button__button--unbranded {
   font-family: var(--font-paragraph--family);
   font-style: var(--font-paragraph--style);
   font-weight: var(--font-paragraph--weight);
-  font-size: var(--font-paragraph--size);
+  font-size: var(--button-font-size-primary, var(--font-paragraph--size));
   line-height: var(--font-paragraph--line-height);
   margin-block: 0;
   transition: color var(--animation-speed) var(--animation-easing),
@@ -1053,6 +1053,7 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button-secondary {
+  font-size: var(--button-font-size-secondary, var(--font-paragraph--size));
   font-family: var(--button-font-family-secondary);
   text-transform: var(--button-text-case-secondary);
   border-radius: var(--style-border-radius-buttons-secondary);
