@@ -103,8 +103,8 @@
         "button_hover_background_color": "#c7a85e",
         "button_hover_text_color": "#17191a",
         "button_hover_border_color": "#c7a85e",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "interactive_feature_cFYGmj": {
@@ -185,13 +185,209 @@
         "padding_top": 32,
         "padding_bottom": 32
       }
+    },
+    "cards01": {
+      "type": "content-cards",
+      "name": "图文卡片",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "eyebrow": "JEWELRY DESIGN RANGE",
+        "eyebrow_preset": "h5",
+        "heading": "Explore Custom Ring Styles",
+        "heading_preset": "h2",
+        "description": "<p>Build a distinctive ring collection through different materials, stone settings, silhouettes and finishing directions.</p>",
+        "body_preset": "h5",
+        "card_title_preset": "h3",
+        "desktop_layout": "grid",
+        "desktop_columns": 4,
+        "mobile_layout": "carousel",
+        "mobile_columns": 1,
+        "image_ratio": "portrait",
+        "gap": 18,
+        "padding_top": 56,
+        "padding_bottom": 56
+      },
+      "blocks": {
+        "card01": {
+          "type": "card",
+          "settings": {
+            "title": "Gemstone Rings",
+            "description": "<p>Explore different stone layouts, setting styles and finishing directions for statement or refined ring designs.</p>",
+            "button_label": "Explore Details",
+            "button_style": "button-unstyled"
+          }
+        },
+        "card02": {
+          "type": "card",
+          "settings": {
+            "title": "Metal & Minimal Rings",
+            "description": "<p>Develop clean silhouettes, polished surfaces and restrained details for modern and versatile collections.</p>",
+            "button_label": "Explore Details",
+            "button_style": "button-unstyled"
+          }
+        },
+        "card03": {
+          "type": "card",
+          "settings": {
+            "title": "Pearl Rings",
+            "description": "<p>Combine pearl proportions with metal structures and subtle settings to create a softer design direction.</p>",
+            "button_label": "Explore Details",
+            "button_style": "button-unstyled"
+          }
+        },
+        "card04": {
+          "type": "card",
+          "settings": {
+            "title": "Signature Designs",
+            "description": "<p>Develop recognizable ring concepts around distinctive forms, details and brand-specific finishing choices.</p>",
+            "button_label": "Explore Details",
+            "button_style": "button-unstyled"
+          }
+        }
+      },
+      "block_order": [
+        "card01",
+        "card02",
+        "card03",
+        "card04"
+      ]
+    },
+    "icons01": {
+      "type": "icon-with-text",
+      "name": "图标文字",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "eyebrow": "MANUFACTURING SUPPORT",
+        "eyebrow_preset": "h5",
+        "heading": "Capabilities That Support Every Collection",
+        "heading_preset": "h2",
+        "description": "<p>These capabilities support ring projects as well as other custom jewelry categories, from early design communication through production review.</p>",
+        "body_preset": "h5",
+        "item_title_preset": "h4",
+        "desktop_columns": 4,
+        "mobile_columns": 2,
+        "gap": 24,
+        "padding_top": 56,
+        "padding_bottom": 56
+      },
+      "blocks": {
+        "icon01": {
+          "type": "item",
+          "settings": {
+            "title": "Design Development",
+            "description": "<p>Clarify references, dimensions and design intent before sampling begins.</p>"
+          }
+        },
+        "icon02": {
+          "type": "item",
+          "settings": {
+            "title": "Material Options",
+            "description": "<p>Review suitable metals, stones and finishing directions for the project.</p>"
+          }
+        },
+        "icon03": {
+          "type": "item",
+          "settings": {
+            "title": "Sample Support",
+            "description": "<p>Use samples to check proportion, construction and finish before repeat production.</p>"
+          }
+        },
+        "icon04": {
+          "type": "item",
+          "settings": {
+            "title": "Quality Review",
+            "description": "<p>Review key visual and construction details against agreed production specifications.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "icon01",
+        "icon02",
+        "icon03",
+        "icon04"
+      ]
+    },
+    "contact01": {
+      "type": "section",
+      "blocks": {
+        "contact_form_UwiCkQ": {
+          "type": "contact-form",
+          "settings": {
+            "width": "custom",
+            "custom_width": 100,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100,
+            "input_style": "default",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "follow_section_width": true
+          },
+          "blocks": {
+            "submit-button": {
+              "type": "contact-form-submit-button",
+              "static": true,
+              "settings": {
+                "label": "Submit",
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "block_order": [
+        "contact_form_UwiCkQ"
+      ],
+      "name": "t:names.contact_form",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "{{ settings.color_palette.background }}",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
     }
   },
   "order": [
     "main",
     "jewelry_collections_overview_tkTByC",
     "horizontal_cta_Pwad7F",
+    "cards01",
     "interactive_feature_cFYGmj",
-    "image_text_feature_pyXify"
+    "image_text_feature_pyXify",
+    "icons01",
+    "contact01"
   ]
 }
