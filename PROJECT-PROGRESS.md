@@ -263,3 +263,20 @@
 - Contact：保留 Horizon 原生 `section.liquid + contact-form`。在原生 Contact Form Block 增加 `follow_section_width`（默认开启）。开启后 Block 宽度固定 100% 跟随 Section：页面宽度 = 页面内容区 100%；全宽 = 全宽内容区 100%。不再被原来的 custom_width 50% 抵消。
 - `page.jewelry-rings.json` 已补齐：Hero → CTA → 图文卡片 → 交互图文 → 图文介绍 → 图标文字 → 原生 Contact。
 - 静态检查 PASS：CTA surface padding、五个独立 Section preset、Contact 跟随宽度、Rings 完整顺序均通过。
+
+## 2026-10-23 · 图标文字视觉与原生 Icon 重构
+- `sections/icon-with-text.liquid` 已从规则四宫格样式改为更轻量的 editorial icon row，默认取消强制顶线与自绘菱形 fallback，减少“AI 模板感”。
+- 直接复用 Horizon 原生 `snippets/icon-or-image.liquid` + `snippets/icon.liquid`：
+  - Block 支持 59 个 Horizon 原生 Icon 预设；
+  - 支持上传自定义 Icon 图片，上传图片时沿用 Horizon 原生优先逻辑；
+  - 支持每个 Block 单独 Icon 颜色。
+- 新增 Section 设置：
+  - 样式预设：编辑型 / 极简 / 居中；
+  - Icon 位置：上方 / 左侧；
+  - Icon 大小：16–96px；
+  - Icon 与文字间距；
+  - 列间距 / 行间距；
+  - PC 2–6 列、Mobile 1–2 列；
+  - 背景色 / 文字色 / 重点色、H1–H6 字号和上下留白。
+- 默认背景继续为 `#F8F7F4`，主文字 `#17191A`，Accent `#C7A85E`。
+- Shopify schema 级校验 PASS：所有 range 步数合法、select 默认值合法、preset block/icon 合法，原生 icon 选项与 Horizon 当前 `blocks/icon.liquid` 完整一致（59 个）。
