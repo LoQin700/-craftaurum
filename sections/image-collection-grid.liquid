@@ -2,9 +2,13 @@
   Craftaurum 2+3 image collections. Shared Shopify collection-aware card.
   Desktop: editorial grid. Mobile: selectable grid or native Horizon Slideshow.
 {% endcomment %}
+{% if section.settings.background_color != blank %}
+  {% render 'contrast-override', background_color: section.settings.background_color, section_id: section.id %}
+{% endif %}
+<div class="section-background{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"></div>
 <div
   id="ImageCollectionGrid-{{ section.id }}"
-  class="section section--page-width spacing-style ca-collection"
+  class="section section--page-width spacing-style ca-collection{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
   style="
     --padding-block-start: {{ section.settings.padding_top }}px;
     --padding-block-end: {{ section.settings.padding_bottom }}px;
@@ -254,6 +258,12 @@
         }
       ],
       "default": "h4"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#F4F4F4"
     },
     {
       "type": "select",
