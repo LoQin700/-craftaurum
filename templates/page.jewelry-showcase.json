@@ -45,7 +45,7 @@
       }
     },
     "style_cards": {
-      "type": "content-cards",
+      "type": "image-gallery",
       "settings": {
         "eyebrow": "JEWELRY DESIGN RANGE",
         "eyebrow_preset": "h5",
@@ -68,7 +68,7 @@
       },
       "blocks": {
         "gemstone": {
-          "type": "card",
+          "type": "image",
           "settings": {
             "title": "Gemstone Rings",
             "description": "<p>Explore different stone layouts, setting styles and finish directions for your brand.</p>",
@@ -78,7 +78,7 @@
           }
         },
         "minimal": {
-          "type": "card",
+          "type": "image",
           "settings": {
             "title": "Metal & Minimal Rings",
             "description": "<p>Develop clean silhouettes, polished surfaces and understated proportions for refined collections.</p>",
@@ -88,7 +88,7 @@
           }
         },
         "pearl": {
-          "type": "card",
+          "type": "image",
           "settings": {
             "title": "Pearl Rings",
             "description": "<p>Combine pearl proportions with metal details and setting choices suited to your design direction.</p>",
@@ -98,7 +98,7 @@
           }
         },
         "signature": {
-          "type": "card",
+          "type": "image",
           "settings": {
             "title": "Signature Designs",
             "description": "<p>Shape distinctive ring concepts around recognizable details, forms and finishing choices.</p>",
@@ -189,7 +189,7 @@
       }
     },
     "capabilities": {
-      "type": "icon-with-text",
+      "type": "interactive-feature",
       "settings": {
         "section_width": "page-width",
         "eyebrow": "MANUFACTURING SUPPORT",
@@ -203,7 +203,8 @@
         "mobile_columns": 2,
         "gap": 24,
         "padding_top": 56,
-        "padding_bottom": 56
+        "padding_bottom": 56,
+        "layout_mode": "icons"
       },
       "blocks": {
         "design": {
