@@ -4,7 +4,7 @@
 {% endcomment %}
 <section
   id="ContentCards-{{ section.id }}"
-  class="section section--{{ section.settings.section_width | default: 'page-width' }} spacing-style ca-content-cards"
+  class="section section--{{ section.settings.section_width | default: 'page-width' }} spacing-style ca-content-cards{% if section.settings.mobile_layout == 'carousel' %} ca-content-cards--mobile-carousel{% endif %}"
   style="
     --padding-block-start: {{ section.settings.padding_top }}px;
     --padding-block-end: {{ section.settings.padding_bottom }}px;
@@ -171,8 +171,8 @@
       flex: 0 0 calc((100% - (var(--ca-cards-mobile) - 1) * var(--ca-cards-gap)) / var(--ca-cards-mobile));
       min-width: 0;
     }
-    .ca-content-cards:has(.ca-content-cards__mobile-carousel) .ca-content-cards__grid { display: none; }
-    .ca-content-cards:has(.ca-content-cards__mobile-carousel) .ca-content-cards__mobile-carousel { display: block; }
+    .ca-content-cards--mobile-carousel .ca-content-cards__grid { display: none; }
+    .ca-content-cards--mobile-carousel .ca-content-cards__mobile-carousel { display: block; }
   }
 
   @media (prefers-reduced-motion: reduce) {
