@@ -133,20 +133,27 @@
       "name": "图片轮播",
       "settings": {
         "heading": "Trusted by Jewelry Partners Worldwide",
+        "heading_preset": "h2",
         "description": "<p>At Craftaurum, we work with jewelry brands and industry partners to bring thoughtful designs and reliable craftsmanship to life. We value long-term collaboration, consistent quality, and solutions tailored to each partner.</p>",
+        "description_preset": "h4",
         "disclaimer": "Selected partnerships are shown. Additional collaborations remain confidential under NDA.",
+        "disclaimer_preset": "h5",
         "autoplay": true,
         "autoplay_speed": 3,
         "padding_top": 40,
-        "padding_bottom": 20
+        "padding_bottom": 20,
+        "mobile_columns": 1,
+        "mobile_layout": "carousel"
       }
     },
     "image_text_feature_NWRYeQ": {
       "type": "image-text-feature",
       "name": "图文介绍",
       "settings": {
+        "section_width": "page-width",
         "heading": "Custom Sterling Silver Jewelry Manufacturing",
         "heading_preset": "h2",
+        "subtitle": "",
         "top_label": "S925 Jewelry Custom",
         "subtitle_preset": "h3",
         "top_url": "shopify://pages/contact",
@@ -156,7 +163,7 @@
         "image_position": "right",
         "cta_label": "Start Your Project",
         "cta_url": "shopify://pages/contact",
-        "cta_button_style": "button",
+        "cta_button_style": "button-unstyled",
         "padding_top": 32,
         "padding_bottom": 32
       }
@@ -165,8 +172,10 @@
       "type": "image-text-feature",
       "name": "图文介绍",
       "settings": {
+        "section_width": "page-width",
         "heading": "Custom Solid Gold Jewelry at Craftaurum",
         "heading_preset": "h2",
+        "subtitle": "",
         "top_label": "Gold Jewelry Custom",
         "subtitle_preset": "h3",
         "top_url": "shopify://pages/contact",
@@ -187,31 +196,41 @@
         "card_1": {
           "type": "card",
           "settings": {
-            "title": "Custom Rings"
+            "title": "Custom Rings",
+            "collection": "",
+            "link": ""
           }
         },
         "card_2": {
           "type": "card",
           "settings": {
-            "title": "Custom Earrings"
+            "title": "Custom Earrings",
+            "collection": "",
+            "link": ""
           }
         },
         "card_3": {
           "type": "card",
           "settings": {
-            "title": "Custom Bracelets"
+            "title": "Custom Bracelets",
+            "collection": "",
+            "link": ""
           }
         },
         "card_4": {
           "type": "card",
           "settings": {
-            "title": "Custom Necklaces"
+            "title": "Custom Necklaces",
+            "collection": "",
+            "link": ""
           }
         },
         "card_5": {
           "type": "card",
           "settings": {
-            "title": "Artisan Jewelry"
+            "title": "Artisan Jewelry",
+            "collection": "",
+            "link": ""
           }
         }
       },
@@ -228,6 +247,7 @@
         "heading_preset": "h2",
         "description": "<p>Discover Craftaurum’s custom jewelry collections, from signature rings and earrings to refined bracelets, necklaces, and artisanal designs created for your brand.</p>",
         "body_preset": "h5",
+        "background_color": "#f4f4f4",
         "card_title_preset": "h3",
         "mobile_columns": 2,
         "mobile_layout": "grid",
