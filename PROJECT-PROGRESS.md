@@ -199,3 +199,14 @@
 - 新建干净版 `sections/icon-with-text.liquid`（图标文字）：工厂通用能力展示，桌面多列、手机1–2列。
 - 旧 `image-gallery.liquid` 与 `icon-text-list.liquid` 已移除 presets，仅用于保留旧实例兼容。
 - `sections/image-text-feature.liquid` 桌面双列由 `align-items:start` 改为 `align-items:center`，文字与图片垂直居中；左右图片布局均适用。
+
+## 2026-10-23 · Section Picker 缺项根因修正（最终结构）
+- 进一步代码复核确认：之前同时存在两组重复 schema 名称（旧/new 图文卡片、旧/new 图标文字），且新建独立 Section 文件并未稳定进入 Shopify Add section picker。
+- 改为只依赖已被 Shopify Theme Editor 实际识别的 Section 文件：
+  - `image-gallery.liquid` 恢复为「图文卡片」并恢复 preset；继续承载主图/Hover图/标题/H5正文/每卡 CTA、手机1–2列网格/轮播。
+  - `interactive-feature.liquid` 改为通用「能力展示」，同一文件提供两个 preset：`交互图文` 与 `图标文字`；通过 `layout_mode` 切换。已有交互图文实例没有 `layout_mode` 时默认继续按 interactive 渲染。
+  - 备用 `content-cards.liquid` / `icon-with-text.liquid` 与旧 `icon-text-list.liquid` 均移除 presets，仅保留兼容，不进入 picker。
+  - 旧 `image-gallery.liquid` / `icon-text-list.liquid` 重名已清理，避免 schema 名冲突。
+- `page.jewelry-showcase.json` 也统一回到 `image-gallery` + `interactive-feature`（icons mode），不再依赖备用 Section。
+- `image-text-feature.liquid` 已改为桌面双列 `align-items:center`，图片与文字垂直居中。
+- 当前预期 Picker 通用项：图文卡片、交互图文、图标文字、图文介绍、图文横幅、分类图片展示、图片轮播、标题说明、横向 CTA。
