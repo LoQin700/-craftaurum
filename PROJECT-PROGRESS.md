@@ -128,3 +128,19 @@
 - 未修改 `templates/index.json`、`templates/collection.json` 或 `templates/product.json`。分类页面的商品网格与单品详情继续原生 Horizon：main-collection 和 product-information。
 - 新模板不能代替 Shopify Admin 中的 Page 数据或导航菜单：需要新建 `Jewelry Collections` 页面、选择 `jewelry-collections` 主题模板，然后把四个 Block 的 Collection 绑定到真实 Shopify 系列，上传图片，最后将菜单项链接到实际页面。
 - 静态验收：Section schema、页面 JSON、Block IDs、默认值/range、Horizon 内建联系表单及产品模板结构均已检查；本次未运行 Shopify CLI Theme Check，未验证 Theme Editor 及前台浏览器实际显示。
+
+## 2026-10-23 15:02 · Jewelry Collections 第二轮统一重构
+
+用户反馈八项整改集中完成：
+1. **Contact Form 视觉**：仍复用原生 `blocks/contact-form.liquid`（不碰提交事件、验证、表单字段）；新增 `assets/craftaurum-contact.css`（宽度、边框、留白、输入框、响应式双列/单列、Focus、提交按钮），由 `layout/theme.liquid` 仅在 `page.jewelry-collections` 模板加载，避免污染其它页面。
+2. **页面宽度/全宽**：所有本轮涉及的自定义 Section 包括 `jewelry-collections-overview`、`image-gallery`、`text-heading` 以及已开发的 `brand-partners`、`image-text-feature`、`image-collection-grid`，统一添加 `section_width` 选择页面宽度/全宽，并接入 Horizon `section--page-width / section--full-width`。
+3. **正文默认字号 H5**：上述自定义 Section 的正文字号预设统一默认 H5，首页既有三类 Section 实例也将原 H4 正文预设更新至 H5；标题等仍允许选 H1–H6。
+4. **通用命名**：旧 `jewelry-collections-overview.liquid` 文件因保留模板兼容和设置 ID 不改文件路径，Theme Editor 改名为「图文横幅」，去掉内置分类 Block，仅保留横幅内容及双 CTA。
+5. **分类图集彻底拆分**：新建 `sections/image-gallery.liquid`，后台「图片画廊」，图像为独立 image Block，可持续增删/排序，不写死 3 张；Shopify 平台自身的 Section Block 上限仍适用。PC 独立 1–6 列 / 网格或 Horizon 原生轮播；Mobile 独立 1–4 列 / 网格或轮播。
+6. **首页其它命名**：`image-collection-grid.liquid` 后台名称从「珠宝系列图片展示」改为「分类图片展示」，现有实例类型不变。
+7. **文字链接箭头与下划线**：`snippets/craftaurum-cta.liquid` 中把 “» 文字” 作为一个内联 `ca-cta__content` 输出，文字链接的下划线作用于整个内联组；彻底移除 `assets/base.css` 中旧版全局伪元素箭头，避免重复和断开的下划线。购物车和表单提交等功能控件保持原生按钮行为。
+8. **后台文案精简**：图片画廊的 Collection 字段只标记「产品系列」，自定义跳转仅「链接」，没有多余的括号解释。
+9. **模板迁移**：`templates/page.jewelry-collections.json` 从原 `jewelry_overview` 下的 Rings/Earrings/Bracelets/Necklaces 四个 category Block，分别迁移为四个独立 `image-gallery` Section，原分类标题、正文、链接、collection、原三个图片槽位已按原字段值迁移到 Gallery Image Block。旧 Hero 实例继续复用其 ID 及设置。末尾新增通用 `text-heading` 锚点段并紧接 Horizon 原生 Contact Form。页面顺序：图文横幅 → 四个图片画廊 → 标题说明 → 原生表单。
+10. 不改 `templates/collection.json` 或 `templates/product.json`。
+
+静态校验通过：全部六个自定义 Section 的 Schema JSON、Range、宽度绑定、页面实例字段映射、四个 Gallery 的 Block 数据和 CTA/Contact 资源引用。**Shopify CLI Theme Check / Shopify 同步 / Theme Editor 保存 / Desktop、Tablet、Mobile 前台视觉尚未在真实商店验证。**
