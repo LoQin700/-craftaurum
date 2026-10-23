@@ -13,8 +13,6 @@
     --ca-overlay: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
     --ca-hover-overlay: {{ section.settings.hover_overlay_opacity | divided_by: 100.0 }};
     --ca-card-type-size: var(--font-{{ section.settings.card_title_preset | default: 'h3' }}--size);
-    --ca-card-type-weight: var(--font-{{ section.settings.card_title_preset | default: 'h3' }}--weight);
-    --ca-card-type-line-height: var(--font-{{ section.settings.card_title_preset | default: 'h3' }}--line-height);
   "
 >
   <div class="ca-collection__inner">
@@ -136,9 +134,6 @@
     text-align: center; padding: 12px; color: #fff;
     pointer-events: none; overflow-wrap: anywhere;
     font-size: var(--ca-card-type-size);
-    font-family: var(--font-heading--family, inherit);
-    font-weight: var(--ca-card-type-weight);
-    line-height: var(--ca-card-type-line-height);
   }
   .ca-collection__card:is(:hover, :focus-visible) .ca-collection__shade { opacity: var(--ca-hover-overlay, .5); }
   .ca-collection__card:is(:hover, :focus-visible) .ca-collection__outline { opacity: 1; transform: scale(1); }
