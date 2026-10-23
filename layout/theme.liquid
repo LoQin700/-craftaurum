@@ -37,8 +37,11 @@
 
     {%- render 'meta-tags' -%}
     {%- render 'stylesheets' -%}
-    {% if template.name == 'page' and template.suffix == 'jewelry-collections' or template.name == 'page' and template.suffix == 'jewelry-showcase' or template.name == 'page' and template.suffix == 'contact' %}
-      {{ 'craftaurum-contact.css' | asset_url | stylesheet_tag }}
+    {% if template.name == 'page' %}
+      {% case template.suffix %}
+        {% when 'jewelry-collections', 'jewelry-showcase', 'contact' %}
+          {{ 'craftaurum-contact.css' | asset_url | stylesheet_tag }}
+      {% endcase %}
     {% endif %}
     {%- render 'fonts' -%}
     {%- render 'scripts' -%}
