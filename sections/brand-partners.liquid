@@ -77,6 +77,27 @@
           autoplay_speed: section.settings.autoplay_speed
         %}
       </div>
+      {% if section.settings.mobile_layout == 'grid' %}
+        <div class="ca-logos__mobile-grid">
+          {% for block in section.blocks %}
+            <div class="ca-logos__tile" {{ block.shopify_attributes }}>
+              {% if block.settings.image != blank %}
+                {{
+                  block.settings.image
+                  | image_url: width: 720
+                  | image_tag:
+                    class: 'ca-logos__image',
+                    loading: 'lazy',
+                    widths: '140, 240, 360, 540, 720',
+                    sizes: '(max-width: 749px) 50vw, 0px'
+                }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'ca-logos__placeholder' }}
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
     {% endif %}
     {% if section.settings.disclaimer != blank %}
       <p class="ca-logos__disclaimer {{ section.settings.disclaimer_preset | default: 'h5' }}">
@@ -114,6 +135,7 @@
     background: rgb(var(--color-foreground-rgb) / 0.04);
   }
   .ca-logos__disclaimer { text-align: center; margin: 18px auto 0; }
+  .ca-logos__mobile-grid { display: none; }
   .ca-logos__carousel slideshow-arrows { pointer-events: none; }
   .ca-logos__carousel slideshow-arrows button { pointer-events: auto; }
   @media screen and (max-width: 749px) {
@@ -122,12 +144,13 @@
       flex-basis: calc((100% - (var(--ca-logo-mobile-columns) - 1) * var(--ca-logo-gap)) / var(--ca-logo-mobile-columns));
       width: calc((100% - (var(--ca-logo-mobile-columns) - 1) * var(--ca-logo-gap)) / var(--ca-logo-mobile-columns));
     }
-    .ca-logos__carousel--mobile-grid slideshow-slides {
+    .ca-logos__carousel--mobile-grid { display: none; }
+    .ca-logos__mobile-grid {
       display: grid;
-      grid-template-columns: repeat(var(--ca-logo-mobile-columns), minmax(0,1fr));
+      grid-template-columns: repeat(var(--ca-logo-mobile-columns), minmax(0, 1fr));
+      gap: var(--ca-logo-gap, 10px);
     }
-    .ca-logos__carousel--mobile-grid slideshow-slide { width: 100%; }
-    .ca-logos__carousel--mobile-grid :is(slideshow-arrows, slideshow-controls) { display: none; }
+    .ca-logos__mobile-grid .ca-logos__tile { min-width: 0; }
   }
 {% endstylesheet %}
 {% schema %}
