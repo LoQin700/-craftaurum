@@ -50,12 +50,34 @@
         "heading",
         "page-content"
       ],
+      "disabled": true,
       "settings": {
         "content_direction": "column",
         "gap": 32,
         "background_color": "{{ settings.color_palette.background }}",
         "padding-block-start": 40,
         "padding-block-end": 80
+      }
+    },
+    "jewelry_collections_overview_tkTByC": {
+      "type": "jewelry-collections-overview",
+      "name": "图文横幅",
+      "settings": {
+        "section_width": "page-width",
+        "eyebrow": "JEWELRY MANUFACTURING",
+        "heading": "Custom Fashion Jewelry",
+        "introduction": "<p>Discover custom jewelry created for brands, designers, and wholesale partners. Craftaurum supports the development of rings, earrings, bracelets, and necklaces with thoughtful detailing and flexible design possibilities.</p><p>From initial concepts to finished collections, our focus is on refined craftsmanship and clear collaboration throughout your project.</p>",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "quote_label": "Get B2B Quote",
+        "quote_url": "",
+        "catalog_label": "Request Catalog",
+        "catalog_url": "",
+        "heading_preset": "h1",
+        "eyebrow_preset": "h5",
+        "body_preset": "h5",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "interactive_feature_cFYGmj": {
@@ -109,63 +131,11 @@
         "padding_top": 56,
         "padding_bottom": 56
       }
-    },
-    "interactive_feature_PPLaeL": {
-      "type": "interactive-feature",
-      "blocks": {
-        "item_zVw9Qf": {
-          "type": "item",
-          "settings": {
-            "title": "Materials & Finishing",
-            "description": "<p>Review metal choices, surface finishes and stone-setting directions for your design.</p>"
-          }
-        },
-        "item_EbDYVX": {
-          "type": "item",
-          "settings": {
-            "title": "Materials & Finishing",
-            "description": "<p>Review metal choices, surface finishes and stone-setting directions for your design.</p>"
-          }
-        },
-        "item_UXUWdz": {
-          "type": "item",
-          "settings": {
-            "title": "Materials & Finishing",
-            "description": "<p>Review metal choices, surface finishes and stone-setting directions for your design.</p>"
-          }
-        },
-        "item_nUYfFp": {
-          "type": "item",
-          "settings": {
-            "title": "Materials & Finishing",
-            "description": "<p>Review metal choices, surface finishes and stone-setting directions for your design.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "item_zVw9Qf",
-        "item_EbDYVX",
-        "item_UXUWdz",
-        "item_nUYfFp"
-      ],
-      "name": "交互图文",
-      "settings": {
-        "section_width": "page-width",
-        "eyebrow": "WHY CHOOSE OUR RINGS",
-        "eyebrow_preset": "h5",
-        "heading": "Focused Capabilities for Custom Ring Development",
-        "heading_preset": "h2",
-        "description": "<p>Explore the details that shape a ring collection, from materials and setting choices to design development and production review.</p>",
-        "body_preset": "h5",
-        "item_title_preset": "h4",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
     }
   },
   "order": [
     "main",
-    "interactive_feature_cFYGmj",
-    "interactive_feature_PPLaeL"
+    "jewelry_collections_overview_tkTByC",
+    "interactive_feature_cFYGmj"
   ]
 }
