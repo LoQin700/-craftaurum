@@ -311,7 +311,7 @@
         "background_color": "#f8f7f4",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
-        "style_preset": "left",
+        "style_preset": "centered",
         "icon_position": "top",
         "icon_size": 32,
         "icon_gap": 16,
