@@ -1,115 +1,129 @@
 {% comment %}
-  Generic capability section with two presets:
-  1) interactive text/image
-  2) icon with text
+  Generic capability section with two distinct presets:
+  - 交互图文: product-specific capabilities with hover/focus/click image switching
+  - 图标文字: factory-wide capabilities, cream background by default
 {% endcomment %}
 {% if section.settings.layout_mode != 'icons' %}
   {{ 'craftaurum-interactive-feature.js' | asset_url | script_tag }}
 {% endif %}
+
 <section
   id="CapabilitySection-{{ section.id }}"
   class="section section--{{ section.settings.section_width | default: 'page-width' }} spacing-style ca-capability ca-capability--{{ section.settings.layout_mode | default: 'interactive' }}"
   style="
     --padding-block-start: {{ section.settings.padding_top }}px;
     --padding-block-end: {{ section.settings.padding_bottom }}px;
+    --ca-cap-background: {{ section.settings.background_color }};
+    --ca-cap-text: {{ section.settings.text_color }};
+    --ca-cap-accent: {{ section.settings.accent_color }};
     --ca-cap-columns: {{ section.settings.desktop_columns }};
     --ca-cap-mobile-columns: {{ section.settings.mobile_columns }};
     --ca-cap-gap: {{ section.settings.gap }}px;
   "
 >
-  <header class="ca-capability__intro">
-    {% if section.settings.eyebrow != blank %}
-      <p class="ca-capability__eyebrow {{ section.settings.eyebrow_preset | default: 'h5' }}">{{ section.settings.eyebrow | escape }}</p>
-    {% endif %}
-    {% if section.settings.heading != blank %}
-      <h2 class="ca-capability__heading {{ section.settings.heading_preset | default: 'h2' }}">{{ section.settings.heading | escape }}</h2>
-    {% endif %}
-    {% if section.settings.description != blank %}
-      <div class="ca-capability__description rte {{ section.settings.body_preset | default: 'h5' }}">{{ section.settings.description }}</div>
-    {% endif %}
-  </header>
+  <div class="ca-capability__surface">
+    <div class="ca-capability__inner">
+      <header class="ca-capability__intro">
+        {% if section.settings.eyebrow != blank %}
+          <p class="ca-capability__eyebrow {{ section.settings.eyebrow_preset | default: 'h5' }}">{{ section.settings.eyebrow | escape }}</p>
+        {% endif %}
+        {% if section.settings.heading != blank %}
+          <h2 class="ca-capability__heading {{ section.settings.heading_preset | default: 'h2' }}">{{ section.settings.heading | escape }}</h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <div class="ca-capability__description rte {{ section.settings.body_preset | default: 'h5' }}">{{ section.settings.description }}</div>
+        {% endif %}
+      </header>
 
-  {% if section.settings.layout_mode == 'icons' %}
-    <div class="ca-capability-icons__grid">
-      {% for block in section.blocks %}
-        <article class="ca-capability-icons__item" {{ block.shopify_attributes }}>
-          <div class="ca-capability-icons__icon" aria-hidden="true">
-            {% if block.settings.icon_image != blank %}
-              {{ block.settings.icon_image | image_url: width: 120 | image_tag: loading: 'lazy', class: 'ca-capability-icons__icon-image', widths: '48,72,96,120', sizes: '48px' }}
-            {% else %}
-              <span class="ca-capability-icons__fallback"></span>
-            {% endif %}
-          </div>
-          {% if block.settings.title != blank %}
-            <h3 class="ca-capability-icons__title {{ section.settings.item_title_preset | default: 'h4' }}">{{ block.settings.title | escape }}</h3>
-          {% endif %}
-          {% if block.settings.description != blank %}
-            <div class="ca-capability-icons__text rte {{ section.settings.body_preset | default: 'h5' }}">{{ block.settings.description }}</div>
-          {% endif %}
-        </article>
-      {% endfor %}
-    </div>
-  {% else %}
-    <craftaurum-interactive-feature class="ca-capability-interactive">
-      <div class="ca-capability-interactive__layout">
-        <div class="ca-capability-interactive__list" role="tablist" aria-label="{{ section.settings.heading | escape }}">
+      {% if section.settings.layout_mode == 'icons' %}
+        <div class="ca-capability-icons__grid">
           {% for block in section.blocks %}
-            <button
-              type="button"
-              class="ca-capability-interactive__item{% if forloop.first %} is-active{% endif %}"
-              data-capability-item
-              role="tab"
-              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
-              aria-controls="CapabilityPanel-{{ section.id }}-{{ block.id }}"
-              {{ block.shopify_attributes }}
-            >
-              <span class="ca-capability-interactive__number">{{ forloop.index | prepend: '0' }}</span>
-              <span class="ca-capability-interactive__copy">
-                {% if block.settings.title != blank %}
-                  <span class="ca-capability-interactive__title {{ section.settings.item_title_preset | default: 'h4' }}">{{ block.settings.title | escape }}</span>
+            <article class="ca-capability-icons__item" {{ block.shopify_attributes }}>
+              <div class="ca-capability-icons__icon" aria-hidden="true">
+                {% if block.settings.icon_image != blank %}
+                  {{ block.settings.icon_image | image_url: width: 120 | image_tag: loading: 'lazy', class: 'ca-capability-icons__icon-image', widths: '48,72,96,120', sizes: '48px' }}
+                {% else %}
+                  <span class="ca-capability-icons__fallback"></span>
                 {% endif %}
-                {% if block.settings.description != blank %}
-                  <span class="ca-capability-interactive__text {{ section.settings.body_preset | default: 'h5' }}">{{ block.settings.description | strip_html }}</span>
-                {% endif %}
-              </span>
-            </button>
-          {% endfor %}
-        </div>
-
-        <div class="ca-capability-interactive__visual">
-          {% for block in section.blocks %}
-            <div
-              id="CapabilityPanel-{{ section.id }}-{{ block.id }}"
-              class="ca-capability-interactive__panel{% if forloop.first %} is-active{% endif %}"
-              data-capability-panel
-              role="tabpanel"
-              aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}"
-            >
-              {% if block.settings.image != blank %}
-                {{
-                  block.settings.image
-                  | image_url: width: 1600
-                  | image_tag:
-                    loading: 'lazy',
-                    class: 'ca-capability-interactive__image',
-                    widths: '420,640,860,1100,1400,1600',
-                    sizes: '(min-width: 750px) 48vw, 100vw'
-                }}
-              {% else %}
-                {{ 'image' | placeholder_svg_tag: 'ca-capability-interactive__placeholder' }}
+              </div>
+              {% if block.settings.title != blank %}
+                <h3 class="ca-capability-icons__title {{ section.settings.item_title_preset | default: 'h4' }}">{{ block.settings.title | escape }}</h3>
               {% endif %}
-            </div>
+              {% if block.settings.description != blank %}
+                <div class="ca-capability-icons__text rte {{ section.settings.body_preset | default: 'h5' }}">{{ block.settings.description }}</div>
+              {% endif %}
+            </article>
           {% endfor %}
         </div>
-      </div>
-    </craftaurum-interactive-feature>
-  {% endif %}
+      {% else %}
+        <craftaurum-interactive-feature class="ca-capability-interactive">
+          <div class="ca-capability-interactive__layout">
+            <div class="ca-capability-interactive__list" role="tablist" aria-label="{{ section.settings.heading | escape }}">
+              {% for block in section.blocks %}
+                <button
+                  type="button"
+                  class="ca-capability-interactive__item{% if forloop.first %} is-active{% endif %}"
+                  data-capability-item
+                  role="tab"
+                  aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+                  aria-controls="CapabilityPanel-{{ section.id }}-{{ block.id }}"
+                  {{ block.shopify_attributes }}
+                >
+                  <span class="ca-capability-interactive__number">{{ forloop.index | prepend: '0' }}</span>
+                  <span class="ca-capability-interactive__copy">
+                    {% if block.settings.title != blank %}
+                      <span class="ca-capability-interactive__title {{ section.settings.item_title_preset | default: 'h4' }}">{{ block.settings.title | escape }}</span>
+                    {% endif %}
+                    {% if block.settings.description != blank %}
+                      <span class="ca-capability-interactive__text {{ section.settings.body_preset | default: 'h5' }}">{{ block.settings.description | strip_html }}</span>
+                    {% endif %}
+                  </span>
+                </button>
+              {% endfor %}
+            </div>
+
+            <div class="ca-capability-interactive__visual">
+              {% for block in section.blocks %}
+                <div
+                  id="CapabilityPanel-{{ section.id }}-{{ block.id }}"
+                  class="ca-capability-interactive__panel{% if forloop.first %} is-active{% endif %}"
+                  data-capability-panel
+                  role="tabpanel"
+                  aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}"
+                >
+                  {% if block.settings.image != blank %}
+                    {{
+                      block.settings.image
+                      | image_url: width: 1600
+                      | image_tag:
+                        loading: 'lazy',
+                        class: 'ca-capability-interactive__image',
+                        widths: '420,640,860,1100,1400,1600',
+                        sizes: '(min-width: 750px) 48vw, 100vw'
+                    }}
+                  {% else %}
+                    {{ 'image' | placeholder_svg_tag: 'ca-capability-interactive__placeholder' }}
+                  {% endif %}
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </craftaurum-interactive-feature>
+      {% endif %}
+    </div>
+  </div>
 </section>
 
 {% stylesheet %}
+  .ca-capability__surface {
+    width: 100%;
+    background: var(--ca-cap-background, #FFFFFF);
+    color: var(--ca-cap-text, #17191A);
+  }
+  .ca-capability__inner { min-width: 0; }
   .ca-capability__intro { max-width: 900px; margin: 0 auto 34px; text-align: center; }
-  .ca-capability__eyebrow { margin: 0 0 10px; color: var(--color-accent, #C7A85E); letter-spacing: .14em; text-transform: uppercase; }
-  .ca-capability__heading { margin: 0 0 14px; }
+  .ca-capability__eyebrow { margin: 0 0 10px; color: var(--ca-cap-accent, #C7A85E); letter-spacing: .14em; text-transform: uppercase; }
+  .ca-capability__heading { margin: 0 0 14px; color: inherit; }
   .ca-capability__description :is(p,ul,ol),
   .ca-capability-icons__text :is(p,ul,ol) { font-size: inherit; line-height: inherit; }
   .ca-capability__description p,
@@ -121,20 +135,31 @@
     gap: clamp(28px,5vw,76px);
     align-items: stretch;
   }
-  .ca-capability-interactive__list { display: flex; flex-direction: column; border-top: 1px solid rgb(var(--color-foreground-rgb) / .18); }
+  .ca-capability-interactive__list { display: flex; flex-direction: column; border-top: 1px solid color-mix(in srgb, var(--ca-cap-text) 18%, transparent); }
   .ca-capability-interactive__item {
-    width: 100%; display: grid; grid-template-columns: 42px minmax(0,1fr); gap: 14px; align-items: start;
-    padding: 22px 0; text-align: left; color: var(--color-foreground); background: transparent; border: 0;
-    border-bottom: 1px solid rgb(var(--color-foreground-rgb) / .18); cursor: pointer;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 42px minmax(0,1fr);
+    gap: 14px;
+    align-items: start;
+    padding: 22px 0;
+    text-align: left;
+    color: var(--ca-cap-text);
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--ca-cap-text) 18%, transparent);
+    cursor: pointer;
     transition: color .22s ease, padding-inline-start .22s ease;
   }
-  .ca-capability-interactive__number { font-size: 12px; line-height: 1.5; letter-spacing: .08em; color: var(--color-accent, #C7A85E); }
+  .ca-capability-interactive__number { font-size: 12px; line-height: 1.5; letter-spacing: .08em; color: var(--ca-cap-accent, #C7A85E); }
   .ca-capability-interactive__copy { display: grid; gap: 7px; }
   .ca-capability-interactive__title { display: block; }
-  .ca-capability-interactive__text { display: block; line-height: 1.65; opacity: .7; }
-  .ca-capability-interactive__item:is(:hover,:focus-visible,.is-active) { color: var(--color-accent, #C7A85E); padding-inline-start: 8px; }
-  .ca-capability-interactive__item.is-active .ca-capability-interactive__text { color: var(--color-foreground); opacity: .78; }
-  .ca-capability-interactive__visual { position: relative; min-height: 520px; overflow: hidden; background: rgb(var(--color-foreground-rgb) / .04); }
+  .ca-capability-interactive__text { display: block; line-height: 1.65; opacity: .68; }
+  .ca-capability-interactive__item:is(:hover,:focus-visible,.is-active) { color: var(--ca-cap-accent, #C7A85E); padding-inline-start: 8px; }
+  .ca-capability-interactive__item.is-active .ca-capability-interactive__text { color: var(--ca-cap-text); opacity: .78; }
+  .ca-capability-interactive__item:focus-visible { outline: 2px solid var(--ca-cap-accent, #C7A85E); outline-offset: 3px; }
+
+  .ca-capability-interactive__visual { position: relative; min-height: 520px; overflow: hidden; background: color-mix(in srgb, var(--ca-cap-text) 4%, transparent); }
   .ca-capability-interactive__panel {
     position: absolute; inset: 0; opacity: 0; transform: scale(1.018); pointer-events: none;
     transition: opacity .36s ease, transform .36s ease;
@@ -148,11 +173,11 @@
     grid-template-columns: repeat(var(--ca-cap-columns), minmax(0,1fr));
     gap: var(--ca-cap-gap);
   }
-  .ca-capability-icons__item { min-width: 0; padding: 24px 20px; border-top: 1px solid rgb(var(--color-foreground-rgb) / .2); }
-  .ca-capability-icons__icon { width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: 18px; color: var(--color-accent, #C7A85E); }
+  .ca-capability-icons__item { min-width: 0; padding: 26px 20px; border-top: 1px solid color-mix(in srgb, var(--ca-cap-text) 18%, transparent); }
+  .ca-capability-icons__icon { width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: 18px; color: var(--ca-cap-accent, #C7A85E); }
   .ca-capability-icons__icon-image { width: 100%; height: 100%; object-fit: contain; }
   .ca-capability-icons__fallback { width: 22px; height: 22px; border: 1.5px solid currentColor; transform: rotate(45deg); display: block; }
-  .ca-capability-icons__title { margin: 0 0 10px; }
+  .ca-capability-icons__title { margin: 0 0 10px; color: inherit; }
   .ca-capability-icons__text { opacity: .76; }
 
   @media screen and (max-width: 749px) {
@@ -164,6 +189,7 @@
     .ca-capability-icons__grid { grid-template-columns: repeat(var(--ca-cap-mobile-columns), minmax(0,1fr)); }
     .ca-capability-icons__item { padding-inline: 0; }
   }
+
   @media (prefers-reduced-motion: reduce) {
     .ca-capability-interactive__item,
     .ca-capability-interactive__panel { transition: none; }
@@ -212,6 +238,24 @@
         }
       ],
       "default": "page-width"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文字颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "重点颜色",
+      "default": "#C7A85E"
     },
     {
       "type": "text",
@@ -442,7 +486,10 @@
     {
       "name": "交互图文",
       "settings": {
-        "layout_mode": "interactive"
+        "layout_mode": "interactive",
+        "background_color": "#FFFFFF",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E"
       },
       "blocks": [
         {
@@ -463,9 +510,12 @@
       "name": "图标文字",
       "settings": {
         "layout_mode": "icons",
+        "background_color": "#F8F7F4",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
         "eyebrow": "MANUFACTURING SUPPORT",
         "heading": "Capabilities That Support Every Collection",
-        "description": "<p>A consistent development process helps move ideas from design direction to sample review and production planning.</p>"
+        "description": "<p>These capabilities support different jewelry categories from early design communication through production review.</p>"
       },
       "blocks": [
         {
