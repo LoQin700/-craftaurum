@@ -63,7 +63,7 @@
         "type": "color_palette",
         "id": "color_palette",
         "default": {
-          "background": "#F8F7F4",
+          "background": "#FFFFFF",
           "foreground": "#17191A",
           "color1": "#C7A85E",
           "color2": "#17191A"
@@ -443,7 +443,7 @@
             "label": "96px"
           }
         ],
-        "default": "40"
+        "default": "24"
       },
       {
         "type": "select",
@@ -559,7 +559,7 @@
             "label": "64px"
           }
         ],
-        "default": "32"
+        "default": "22"
       },
       {
         "type": "select",
@@ -815,7 +815,7 @@
             "label": "96px"
           }
         ],
-        "default": "32"
+        "default": "22"
       },
       {
         "type": "select",
@@ -931,7 +931,7 @@
             "label": "64px"
           }
         ],
-        "default": "26"
+        "default": "20"
       },
       {
         "type": "select",
@@ -1195,7 +1195,7 @@
             "label": "96px"
           }
         ],
-        "default": "24"
+        "default": "20"
       },
       {
         "type": "select",
@@ -1311,7 +1311,7 @@
             "label": "64px"
           }
         ],
-        "default": "20"
+        "default": "18"
       },
       {
         "type": "select",
