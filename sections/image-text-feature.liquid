@@ -9,7 +9,7 @@
   style="
     --padding-block-start: {{ section.settings.padding_top }}px;
     --padding-block-end: {{ section.settings.padding_bottom }}px;
-    --ca-feature-gap: {{ section.settings.column_gap | default: 48 }}px;
+    --ca-feature-gap: 48px;
   "
 >
   <div class="ca-feature__inner">
@@ -287,16 +287,6 @@
         }
       ],
       "default": "right"
-    },
-    {
-      "type": "range",
-      "id": "column_gap",
-      "label": "桌面图文间距",
-      "min": 0,
-      "max": 100,
-      "step": 2,
-      "unit": "px",
-      "default": 48
     },
     {
       "type": "text",
