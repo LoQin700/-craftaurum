@@ -1,152 +1,238 @@
 {% comment %}
-  Reusable editorial image gallery with Shopify image blocks.
-  Uses Horizon slideshow on either breakpoint when carousel is selected.
-  No hardcoded 3-image limit; Shopify's native section block limit applies.
+  Reusable image cards. Images are blocks, not a fixed count.
+  Desktop: grid or Horizon slideshow. Mobile: 1–2 columns, grid or slideshow.
+  Each card supports a hover image, text and the shared Craftaurum CTA.
 {% endcomment %}
-{% liquid
-  assign gallery_url = section.settings.link
-  if gallery_url == blank and section.settings.collection != blank
-    assign gallery_url = section.settings.collection.url
-  endif
-%}
 <section
   id="ImageGallery-{{ section.id }}"
-  class="section section--{{ section.settings.section_width | default: 'page-width' }} spacing-style ca-image-gallery"
+  class="section section--{{ section.settings.section_width | default: 'page-width' }} spacing-style ca-image-cards"
   style="
     --padding-block-start: {{ section.settings.padding_top }}px;
     --padding-block-end: {{ section.settings.padding_bottom }}px;
-    --ca-gallery-gap: {{ section.settings.gap }}px;
-    --ca-gallery-desktop-columns: {{ section.settings.desktop_columns }};
-    --ca-gallery-mobile-columns: {{ section.settings.mobile_columns }};
+    --ca-card-gap: {{ section.settings.gap }}px;
+    --ca-card-desktop-columns: {{ section.settings.desktop_columns }};
+    --ca-card-mobile-columns: {{ section.settings.mobile_columns }};
   "
 >
-  <div class="ca-image-gallery__inner">
-    {% if section.settings.heading != blank or section.settings.description != blank or section.settings.button_label != blank %}
-      <header class="ca-image-gallery__intro">
+  <div class="ca-image-cards__inner">
+    {% if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.description != blank %}
+      <header class="ca-image-cards__intro">
+        {% if section.settings.eyebrow != blank %}
+          <p class="ca-image-cards__eyebrow {{ section.settings.eyebrow_preset | default: 'h5' }}">{{ section.settings.eyebrow | escape }}</p>
+        {% endif %}
         {% if section.settings.heading != blank %}
-          <h2 class="{{ section.settings.heading_preset | default: 'h2' }} ca-image-gallery__heading">{{ section.settings.heading | escape }}</h2>
+          <h2 class="{{ section.settings.heading_preset | default: 'h2' }} ca-image-cards__heading">{{ section.settings.heading | escape }}</h2>
         {% endif %}
         {% if section.settings.description != blank %}
-          <div class="ca-image-gallery__description rte {{ section.settings.body_preset | default: 'h5' }}">{{ section.settings.description }}</div>
-        {% endif %}
-        {% if section.settings.button_label != blank %}
-          <div class="ca-image-gallery__action">
-            {% render 'craftaurum-cta',
-              label: section.settings.button_label,
-              link: gallery_url,
-              style_class: section.settings.button_style,
-              class: 'ca-image-gallery__cta',
-              static_label: true
-            %}
-          </div>
+          <div class="ca-image-cards__description rte {{ section.settings.body_preset | default: 'h5' }}">{{ section.settings.description }}</div>
         {% endif %}
       </header>
     {% endif %}
-    {% if section.blocks.size > 0 %}
-      <div class="ca-image-gallery__grid{% if section.settings.desktop_layout == 'carousel' %} ca-image-gallery__grid--desktop-hidden{% endif %}{% if section.settings.mobile_layout == 'carousel' %} ca-image-gallery__grid--mobile-hidden{% endif %}">
-        {% for block in section.blocks %}
-          <div class="ca-image-gallery__tile" {{ block.shopify_attributes }}>
+
+    {% capture cards_grid %}
+      {% for block in section.blocks %}
+        <article class="ca-image-card" {{ block.shopify_attributes }}>
+          <div class="ca-image-card__media">
             {% if block.settings.image != blank %}
               {{
                 block.settings.image
                 | image_url: width: 1200
                 | image_tag:
                   loading: 'lazy',
-                  class: 'ca-image-gallery__image',
-                  widths: '180, 280, 400, 600, 800, 1000, 1200',
-                  sizes: '(min-width: 750px) 30vw, 45vw'
+                  class: 'ca-image-card__image ca-image-card__image--primary',
+                  widths: '220, 360, 520, 720, 960, 1200',
+                  sizes: '(min-width: 990px) 24vw, (min-width: 750px) 33vw, 50vw'
               }}
             {% else %}
-              {{ 'image' | placeholder_svg_tag: 'ca-image-gallery__placeholder' }}
+              {{ 'image' | placeholder_svg_tag: 'ca-image-card__placeholder' }}
+            {% endif %}
+            {% if block.settings.hover_image != blank %}
+              {{
+                block.settings.hover_image
+                | image_url: width: 1200
+                | image_tag:
+                  loading: 'lazy',
+                  class: 'ca-image-card__image ca-image-card__image--hover',
+                  widths: '220, 360, 520, 720, 960, 1200',
+                  sizes: '(min-width: 990px) 24vw, (min-width: 750px) 33vw, 50vw'
+              }}
             {% endif %}
           </div>
-        {% endfor %}
-      </div>
-      {% if section.settings.desktop_layout == 'carousel' or section.settings.mobile_layout == 'carousel' %}
-        {% capture gallery_slides %}
-          {% for block in section.blocks %}
-            {% capture slide_content %}
-              <div class="ca-image-gallery__tile">
+          {% if block.settings.title != blank or block.settings.description != blank or block.settings.button_label != blank %}
+            <div class="ca-image-card__content">
+              {% if block.settings.title != blank %}
+                <h3 class="ca-image-card__title {{ section.settings.card_title_preset | default: 'h3' }}">{{ block.settings.title | escape }}</h3>
+              {% endif %}
+              {% if block.settings.description != blank %}
+                <div class="ca-image-card__text rte {{ section.settings.body_preset | default: 'h5' }}">{{ block.settings.description }}</div>
+              {% endif %}
+              {% if block.settings.button_label != blank %}
+                <div class="ca-image-card__action">
+                  {% render 'craftaurum-cta',
+                    label: block.settings.button_label,
+                    link: block.settings.link,
+                    style_class: block.settings.button_style,
+                    static_label: true
+                  %}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+        </article>
+      {% endfor %}
+    {% endcapture %}
+
+    <div class="ca-image-cards__grid{% if section.settings.desktop_layout == 'carousel' %} ca-image-cards__grid--desktop-hidden{% endif %}{% if section.settings.mobile_layout == 'carousel' %} ca-image-cards__grid--mobile-hidden{% endif %}">
+      {{ cards_grid }}
+    </div>
+
+    {% if section.settings.desktop_layout == 'carousel' or section.settings.mobile_layout == 'carousel' %}
+      {% capture card_slides %}
+        {% for block in section.blocks %}
+          {% capture slide_content %}
+            <article class="ca-image-card">
+              <div class="ca-image-card__media">
                 {% if block.settings.image != blank %}
                   {{
                     block.settings.image
                     | image_url: width: 1200
                     | image_tag:
                       loading: 'lazy',
-                      class: 'ca-image-gallery__image',
-                      widths: '180, 280, 400, 600, 800, 1000, 1200',
-                      sizes: '(min-width: 750px) 30vw, 45vw'
+                      class: 'ca-image-card__image ca-image-card__image--primary',
+                      widths: '220, 360, 520, 720, 960, 1200',
+                      sizes: '(min-width: 990px) 24vw, (min-width: 750px) 33vw, 50vw'
                   }}
                 {% else %}
-                  {{ 'image' | placeholder_svg_tag: 'ca-image-gallery__placeholder' }}
+                  {{ 'image' | placeholder_svg_tag: 'ca-image-card__placeholder' }}
+                {% endif %}
+                {% if block.settings.hover_image != blank %}
+                  {{
+                    block.settings.hover_image
+                    | image_url: width: 1200
+                    | image_tag:
+                      loading: 'lazy',
+                      class: 'ca-image-card__image ca-image-card__image--hover',
+                      widths: '220, 360, 520, 720, 960, 1200',
+                      sizes: '(min-width: 990px) 24vw, (min-width: 750px) 33vw, 50vw'
+                  }}
                 {% endif %}
               </div>
-            {% endcapture %}
-            {% render 'slideshow-slide',
-              index: forloop.index0,
-              children: slide_content,
-              class: 'ca-image-gallery__slide'
-            %}
-          {% endfor %}
-        {% endcapture %}
-        {% assign can_scroll = false %}
-        {% if section.blocks.size > 1 %}{% assign can_scroll = true %}{% endif %}
-        <div class="ca-image-gallery__carousel{% if section.settings.desktop_layout == 'carousel' %} ca-image-gallery__carousel--desktop{% endif %}{% if section.settings.mobile_layout == 'carousel' %} ca-image-gallery__carousel--mobile{% endif %}">
-          {% render 'slideshow',
-            class: 'ca-image-gallery__slideshow',
-            slides: gallery_slides,
-            slide_count: section.blocks.size,
-            show_arrows: can_scroll,
-            infinite: false,
-            icon_style: 'chevron',
-            icon_shape: 'none'
-          %}
-        </div>
-      {% endif %}
+              {% if block.settings.title != blank or block.settings.description != blank or block.settings.button_label != blank %}
+                <div class="ca-image-card__content">
+                  {% if block.settings.title != blank %}
+                    <h3 class="ca-image-card__title {{ section.settings.card_title_preset | default: 'h3' }}">{{ block.settings.title | escape }}</h3>
+                  {% endif %}
+                  {% if block.settings.description != blank %}
+                    <div class="ca-image-card__text rte {{ section.settings.body_preset | default: 'h5' }}">{{ block.settings.description }}</div>
+                  {% endif %}
+                  {% if block.settings.button_label != blank %}
+                    <div class="ca-image-card__action">
+                      {% render 'craftaurum-cta',
+                        label: block.settings.button_label,
+                        link: block.settings.link,
+                        style_class: block.settings.button_style,
+                        static_label: true
+                      %}
+                    </div>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </article>
+          {% endcapture %}
+          {% render 'slideshow-slide', index: forloop.index0, children: slide_content, class: 'ca-image-cards__slide' %}
+        {% endfor %}
+      {% endcapture %}
+      {% assign can_scroll = false %}
+      {% if section.blocks.size > 1 %}{% assign can_scroll = true %}{% endif %}
+      <div class="ca-image-cards__carousel{% if section.settings.desktop_layout == 'carousel' %} ca-image-cards__carousel--desktop{% endif %}{% if section.settings.mobile_layout == 'carousel' %} ca-image-cards__carousel--mobile{% endif %}">
+        {% render 'slideshow',
+          class: 'ca-image-cards__slideshow',
+          slides: card_slides,
+          slide_count: section.blocks.size,
+          show_arrows: can_scroll,
+          infinite: false,
+          icon_style: 'chevron',
+          icon_shape: 'none'
+        %}
+      </div>
     {% endif %}
   </div>
 </section>
+
 {% stylesheet %}
-  .ca-image-gallery__inner { min-width: 0; }
-  .ca-image-gallery__intro { text-align: center; max-width: 990px; margin: 0 auto 26px; }
-  .ca-image-gallery__heading { margin: 0 0 14px; }
-  .ca-image-gallery__description :is(p, ul, ol) { font-size: inherit; line-height: inherit; }
-  .ca-image-gallery__description p { margin: 0; }
-  .ca-image-gallery__action { display: flex; justify-content: center; margin-top: 16px; }
-  .ca-image-gallery__grid { display: grid; grid-template-columns: repeat(var(--ca-gallery-desktop-columns), minmax(0, 1fr)); gap: var(--ca-gallery-gap); }
-  .ca-image-gallery__tile { min-width: 0; width: 100%; overflow: hidden; aspect-ratio: 4 / 3; background: rgb(var(--color-foreground-rgb) / .04); }
-  .ca-image-gallery__image, .ca-image-gallery__placeholder { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
-  .ca-image-gallery__placeholder { color: rgb(var(--color-foreground-rgb) / .18); }
-  @media (hover: hover) {
-    .ca-image-gallery__tile:hover .ca-image-gallery__image { transform: scale(1.035); }
+  .ca-image-cards__inner { min-width: 0; }
+  .ca-image-cards__intro { text-align: center; max-width: 980px; margin: 0 auto 34px; }
+  .ca-image-cards__eyebrow { margin: 0 0 10px; color: var(--color-accent, #C7A85E); letter-spacing: .14em; text-transform: uppercase; }
+  .ca-image-cards__heading { margin: 0 0 14px; }
+  .ca-image-cards__description :is(p, ul, ol),
+  .ca-image-card__text :is(p, ul, ol) { font-size: inherit; line-height: inherit; }
+  .ca-image-cards__description p,
+  .ca-image-card__text p { margin: 0; }
+
+  .ca-image-cards__grid {
+    display: grid;
+    grid-template-columns: repeat(var(--ca-card-desktop-columns), minmax(0,1fr));
+    gap: var(--ca-card-gap);
   }
-  .ca-image-gallery__carousel { display: none; }
-  .ca-image-gallery__grid--desktop-hidden { display: none; }
-  .ca-image-gallery__carousel--desktop { display: block; }
-  .ca-image-gallery__slideshow slideshow-slides { gap: var(--ca-gallery-gap); }
-  .ca-image-gallery__slideshow slideshow-slide {
-    width: calc((100% - (var(--ca-gallery-desktop-columns) - 1) * var(--ca-gallery-gap)) / var(--ca-gallery-desktop-columns));
-    flex: 0 0 calc((100% - (var(--ca-gallery-desktop-columns) - 1) * var(--ca-gallery-gap)) / var(--ca-gallery-desktop-columns));
+  .ca-image-card { min-width: 0; }
+  .ca-image-card__media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: rgb(var(--color-foreground-rgb) / .04);
+  }
+  .ca-image-card__image,
+  .ca-image-card__placeholder {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity .35s ease, transform .35s ease;
+  }
+  .ca-image-card__image--primary { opacity: 1; transform: scale(1); }
+  .ca-image-card__image--hover { opacity: 0; transform: scale(1.025); }
+  .ca-image-card__placeholder { color: rgb(var(--color-foreground-rgb) / .18); }
+  @media (hover:hover) {
+    .ca-image-card:hover .ca-image-card__image--primary { opacity: 0; transform: scale(1.025); }
+    .ca-image-card:hover .ca-image-card__image--hover { opacity: 1; transform: scale(1); }
+    .ca-image-card:not(:has(.ca-image-card__image--hover)):hover .ca-image-card__image--primary { opacity: 1; transform: scale(1.035); }
+  }
+  .ca-image-card__content { padding-top: 14px; }
+  .ca-image-card__title { margin: 0 0 8px; }
+  .ca-image-card__action { margin-top: 14px; }
+  .ca-image-cards__carousel { display: none; }
+  .ca-image-cards__grid--desktop-hidden { display: none; }
+  .ca-image-cards__carousel--desktop { display: block; }
+  .ca-image-cards__slideshow slideshow-slides { gap: var(--ca-card-gap); }
+  .ca-image-cards__slideshow slideshow-slide {
+    width: calc((100% - (var(--ca-card-desktop-columns) - 1) * var(--ca-card-gap)) / var(--ca-card-desktop-columns));
+    flex: 0 0 calc((100% - (var(--ca-card-desktop-columns) - 1) * var(--ca-card-gap)) / var(--ca-card-desktop-columns));
     min-width: 0;
   }
+
   @media screen and (max-width: 749px) {
-    .ca-image-gallery__grid { grid-template-columns: repeat(var(--ca-gallery-mobile-columns), minmax(0, 1fr)); }
-    .ca-image-gallery__grid--desktop-hidden:not(.ca-image-gallery__grid--mobile-hidden) { display: grid; }
-    .ca-image-gallery__grid--mobile-hidden { display: none; }
-    .ca-image-gallery__carousel--desktop:not(.ca-image-gallery__carousel--mobile) { display: none; }
-    .ca-image-gallery__carousel--mobile { display: block; }
-    .ca-image-gallery__slideshow slideshow-slide {
-      width: calc((100% - (var(--ca-gallery-mobile-columns) - 1) * var(--ca-gallery-gap)) / var(--ca-gallery-mobile-columns));
-      flex-basis: calc((100% - (var(--ca-gallery-mobile-columns) - 1) * var(--ca-gallery-gap)) / var(--ca-gallery-mobile-columns));
+    .ca-image-cards__intro { margin-bottom: 24px; }
+    .ca-image-cards__grid { grid-template-columns: repeat(var(--ca-card-mobile-columns), minmax(0,1fr)); }
+    .ca-image-cards__grid--desktop-hidden:not(.ca-image-cards__grid--mobile-hidden) { display: grid; }
+    .ca-image-cards__grid--mobile-hidden { display: none; }
+    .ca-image-cards__carousel--desktop:not(.ca-image-cards__carousel--mobile) { display: none; }
+    .ca-image-cards__carousel--mobile { display: block; }
+    .ca-image-cards__slideshow slideshow-slide {
+      width: calc((100% - (var(--ca-card-mobile-columns) - 1) * var(--ca-card-gap)) / var(--ca-card-mobile-columns));
+      flex-basis: calc((100% - (var(--ca-card-mobile-columns) - 1) * var(--ca-card-gap)) / var(--ca-card-mobile-columns));
     }
+    .ca-image-card__media { aspect-ratio: 4 / 5; }
   }
   @media (prefers-reduced-motion: reduce) {
-    .ca-image-gallery__image { transition: none; }
+    .ca-image-card__image { transition: none; }
   }
 {% endstylesheet %}
 {% schema %}
 {
-  "name": "图片画廊",
+  "name": "图文卡片",
   "tag": "section",
   "disabled_on": {
     "groups": [
@@ -161,9 +247,47 @@
     },
     {
       "type": "text",
+      "id": "eyebrow",
+      "label": "小标题",
+      "default": "JEWELRY DESIGN RANGE"
+    },
+    {
+      "type": "select",
+      "id": "eyebrow_preset",
+      "label": "小标题字号",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h5"
+    },
+    {
+      "type": "text",
       "id": "heading",
       "label": "标题",
-      "default": "Image Gallery"
+      "default": "Explore Custom Ring Styles"
     },
     {
       "type": "select",
@@ -201,7 +325,7 @@
       "type": "richtext",
       "id": "description",
       "label": "正文",
-      "default": "<p>Explore designs and craftsmanship for your next collection.</p>"
+      "default": "<p>Build a collection with considered materials, stone settings and finishing options.</p>"
     },
     {
       "type": "select",
@@ -236,40 +360,36 @@
       "default": "h5"
     },
     {
-      "type": "text",
-      "id": "button_label",
-      "label": "按钮文字",
-      "default": "Explore Collection"
-    },
-    {
       "type": "select",
-      "id": "button_style",
-      "label": "按钮样式",
+      "id": "card_title_preset",
+      "label": "卡片标题字号",
       "options": [
         {
-          "value": "button",
-          "label": "主按钮"
+          "value": "h1",
+          "label": "H1"
         },
         {
-          "value": "button-secondary",
-          "label": "次级按钮"
+          "value": "h2",
+          "label": "H2"
         },
         {
-          "value": "button-unstyled",
-          "label": "文字链接"
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
         }
       ],
-      "default": "button-unstyled"
-    },
-    {
-      "type": "collection",
-      "id": "collection",
-      "label": "产品系列"
-    },
-    {
-      "type": "url",
-      "id": "link",
-      "label": "链接"
+      "default": "h3"
     },
     {
       "type": "header",
@@ -311,10 +431,10 @@
       "type": "range",
       "id": "desktop_columns",
       "label": "桌面端每行数量",
-      "min": 1,
-      "max": 6,
+      "min": 2,
+      "max": 5,
       "step": 1,
-      "default": 3
+      "default": 4
     },
     {
       "type": "select",
@@ -330,26 +450,26 @@
           "label": "轮播"
         }
       ],
-      "default": "grid"
+      "default": "carousel"
     },
     {
       "type": "range",
       "id": "mobile_columns",
       "label": "手机端每行数量",
       "min": 1,
-      "max": 4,
+      "max": 2,
       "step": 1,
-      "default": 2
+      "default": 1
     },
     {
       "type": "range",
       "id": "gap",
-      "label": "图片间距",
+      "label": "卡片间距",
       "min": 0,
       "max": 40,
       "step": 2,
       "unit": "px",
-      "default": 16
+      "default": 18
     },
     {
       "type": "range",
@@ -359,7 +479,7 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "default": 40
+      "default": 48
     },
     {
       "type": "range",
@@ -369,26 +489,77 @@
       "max": 100,
       "step": 4,
       "unit": "px",
-      "default": 40
+      "default": 48
     }
   ],
   "blocks": [
     {
       "type": "image",
-      "name": "图片",
+      "name": "卡片",
       "settings": [
         {
           "type": "image_picker",
           "id": "image",
-          "label": "图片"
+          "label": "主图片"
+        },
+        {
+          "type": "image_picker",
+          "id": "hover_image",
+          "label": "Hover 图片"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "Gemstone Rings"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "正文",
+          "default": "<p>Explore shapes, finishes and design possibilities for your brand.</p>"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "按钮文字",
+          "default": "Explore Details"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "按钮样式",
+          "options": [
+            {
+              "value": "button",
+              "label": "主按钮"
+            },
+            {
+              "value": "button-secondary",
+              "label": "次级按钮"
+            },
+            {
+              "value": "button-unstyled",
+              "label": "文字链接"
+            }
+          ],
+          "default": "button-unstyled"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "链接"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "图片画廊",
+      "name": "图文卡片",
       "blocks": [
+        {
+          "type": "image"
+        },
         {
           "type": "image"
         },
