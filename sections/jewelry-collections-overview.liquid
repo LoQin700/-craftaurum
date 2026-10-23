@@ -1,0 +1,556 @@
+{% comment %}
+  Craftaurum jewelry category editorial landing page.
+  Inspiration: Sunrise Jewel /our-jewelry/custom-fashion-jewelry/
+  Deliberately keeps products/price/cart on native Horizon collection/product templates.
+{% endcomment %}
+<div
+  id="JewelryOverview-{{ section.id }}"
+  class="section section--page-width spacing-style ca-jewelry-overview"
+  style="
+    --padding-block-start: {{ section.settings.padding_top }}px;
+    --padding-block-end: {{ section.settings.padding_bottom }}px;
+    --ca-jewelry-columns-mobile: {{ section.settings.mobile_columns }};
+    --ca-jewelry-gap: {{ section.settings.image_gap }}px;
+  "
+>
+  <div class="ca-jewelry-overview__inner">
+    <div class="ca-jewelry-overview__hero">
+      <div class="ca-jewelry-overview__hero-media">
+        {% if section.settings.hero_image != blank %}
+          {{
+            section.settings.hero_image
+            | image_url: width: 1600
+            | image_tag:
+              loading: 'eager',
+              fetchpriority: 'high',
+              widths: '360, 540, 720, 960, 1200, 1600',
+              sizes: '(min-width: 750px) 47vw, 100vw',
+              class: 'ca-jewelry-overview__hero-image'
+          }}
+        {% else %}
+          {{ 'image' | placeholder_svg_tag: 'ca-jewelry-overview__placeholder' }}
+        {% endif %}
+      </div>
+      <div class="ca-jewelry-overview__hero-copy">
+        {% if section.settings.eyebrow != blank %}
+          <p class="ca-jewelry-overview__eyebrow {{ section.settings.eyebrow_preset | default: 'h5' }}">{{ section.settings.eyebrow | escape }}</p>
+        {% endif %}
+        <h1 class="ca-jewelry-overview__main-title {{ section.settings.heading_preset | default: 'h1' }}">{{ section.settings.heading | escape }}</h1>
+        {% if section.settings.introduction != blank %}
+          <div class="ca-jewelry-overview__intro-text rte {{ section.settings.body_preset | default: 'h4' }}">{{ section.settings.introduction }}</div>
+        {% endif %}
+        <div class="ca-jewelry-overview__hero-actions">
+          {% if section.settings.quote_label != blank %}
+            {% assign quote_target = section.settings.quote_url | default: '#craftaurum-jewelry-inquiry' %}
+            {% render 'craftaurum-cta',
+              label: section.settings.quote_label,
+              link: quote_target,
+              style_class: 'button',
+              class: 'ca-jewelry-overview__hero-button'
+            %}
+          {% endif %}
+          {% if section.settings.catalog_label != blank %}
+            {% assign catalog_target = section.settings.catalog_url | default: '#craftaurum-jewelry-inquiry' %}
+            {% render 'craftaurum-cta',
+              label: section.settings.catalog_label,
+              link: catalog_target,
+              style_class: 'button-secondary',
+              class: 'ca-jewelry-overview__hero-button'
+            %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% for block in section.blocks %}
+      {% liquid
+        assign collection_target = block.settings.collection
+        assign category_url = block.settings.link
+        if category_url == blank and collection_target != blank
+          assign category_url = collection_target.url
+        endif
+        assign category_title = block.settings.heading
+        if category_title == blank and collection_target != blank
+          assign category_title = collection_target.title
+        endif
+      %}
+      <article id="JewelryOverview-{{ section.id }}-{{ block.id }}" class="ca-jewelry-overview__category" {{ block.shopify_attributes }}>
+        <div class="ca-jewelry-overview__category-copy">
+          {% if category_title != blank %}
+            <h2 class="ca-jewelry-overview__category-title {{ section.settings.category_heading_preset | default: 'h2' }}">{{ category_title | escape }}</h2>
+          {% endif %}
+          {% if block.settings.description != blank %}
+            <div class="ca-jewelry-overview__category-description rte {{ section.settings.body_preset | default: 'h4' }}">
+              {{ block.settings.description }}
+            </div>
+          {% endif %}
+          {% if block.settings.button_label != blank %}
+            <div class="ca-jewelry-overview__category-action">
+              {% render 'craftaurum-cta',
+                label: block.settings.button_label,
+                link: category_url,
+                style_class: 'button-unstyled',
+                static_label: true,
+                class: 'ca-jewelry-overview__category-cta'
+              %}
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="ca-jewelry-overview__gallery{% if section.settings.mobile_layout == 'carousel' %} ca-jewelry-overview__gallery--desktop{% endif %}">
+          {% for i in (1..3) %}
+            {% assign image_key = 'image_' | append: i %}
+            {% assign selected_image = block.settings[image_key] %}
+            <div class="ca-jewelry-overview__gallery-item">
+              {% if selected_image != blank %}
+                {{
+                  selected_image
+                  | image_url: width: 1000
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '200, 320, 480, 640, 800, 1000',
+                    sizes: '(min-width: 750px) 30vw, 48vw',
+                    class: 'ca-jewelry-overview__gallery-image'
+                }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'ca-jewelry-overview__placeholder' }}
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+
+        {% if section.settings.mobile_layout == 'carousel' %}
+          {% capture category_slides %}
+            {% for i in (1..3) %}
+              {% assign image_key = 'image_' | append: i %}
+              {% assign selected_image = block.settings[image_key] %}
+              {% capture image_content %}
+                <div class="ca-jewelry-overview__gallery-item">
+                  {% if selected_image != blank %}
+                    {{
+                      selected_image
+                      | image_url: width: 800
+                      | image_tag:
+                        loading: 'lazy',
+                        widths: '160, 280, 400, 600, 800',
+                        sizes: '50vw',
+                        class: 'ca-jewelry-overview__gallery-image'
+                    }}
+                  {% else %}
+                    {{ 'image' | placeholder_svg_tag: 'ca-jewelry-overview__placeholder' }}
+                  {% endif %}
+                </div>
+              {% endcapture %}
+              {% render 'slideshow-slide', index: forloop.index0, children: image_content, class: 'ca-jewelry-overview__slide' %}
+            {% endfor %}
+          {% endcapture %}
+          <div class="ca-jewelry-overview__mobile-carousel">
+            {% render 'slideshow',
+              slides: category_slides,
+              slide_count: 3,
+              class: 'ca-jewelry-overview__slideshow',
+              show_arrows: true,
+              infinite: false,
+              icon_style: 'chevron',
+              icon_shape: 'none'
+            %}
+          </div>
+        {% endif %}
+      </article>
+    {% endfor %}
+
+    <div id="craftaurum-jewelry-inquiry" class="ca-jewelry-overview__inquiry-anchor" aria-hidden="true"></div>
+  </div>
+</div>
+{% stylesheet %}
+  .ca-jewelry-overview__inner { min-width: 0; }
+  .ca-jewelry-overview__hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(24px, 5vw, 76px);
+    align-items: center;
+    margin-bottom: clamp(40px, 5vw, 76px);
+  }
+  .ca-jewelry-overview__hero-media { min-width: 0; aspect-ratio: 4 / 3; overflow: hidden; }
+  .ca-jewelry-overview__hero-image,
+  .ca-jewelry-overview__placeholder,
+  .ca-jewelry-overview__gallery-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .ca-jewelry-overview__placeholder {
+    background: rgb(var(--color-foreground-rgb) / .05);
+    color: rgb(var(--color-foreground-rgb) / .18);
+  }
+  .ca-jewelry-overview__main-title { margin: 0 0 18px; }
+  .ca-jewelry-overview__eyebrow { margin: 0 0 12px; }
+  .ca-jewelry-overview__intro-text { max-width: 62ch; }
+  .ca-jewelry-overview__intro-text p,
+  .ca-jewelry-overview__category-description p { font-size: inherit; line-height: inherit; }
+  .ca-jewelry-overview__intro-text p { margin: 0 0 1.1em; }
+  .ca-jewelry-overview__intro-text p:last-child { margin-bottom: 0; }
+  .ca-jewelry-overview__hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  .ca-jewelry-overview__hero-button { min-height: 44px; }
+  .ca-jewelry-overview__category { margin: 0 0 clamp(36px, 4vw, 60px); }
+  .ca-jewelry-overview__category-copy { text-align: center; max-width: 950px; margin: 0 auto 24px; }
+  .ca-jewelry-overview__category-title { margin: 0 0 14px; }
+  .ca-jewelry-overview__category-description p { margin: 0; }
+  .ca-jewelry-overview__category-action { display: flex; justify-content: center; margin-top: 16px; }
+  .ca-jewelry-overview__category-cta { text-decoration: underline; text-underline-offset: 4px; }
+  .ca-jewelry-overview__gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--ca-jewelry-gap, 16px);
+  }
+  .ca-jewelry-overview__gallery-item { aspect-ratio: 4 / 3; min-width: 0; overflow: hidden; }
+  .ca-jewelry-overview__gallery-image { transition: transform 300ms ease; }
+  @media (hover:hover) {
+    .ca-jewelry-overview__gallery-item:hover .ca-jewelry-overview__gallery-image { transform: scale(1.035); }
+  }
+  .ca-jewelry-overview__mobile-carousel { display: none; }
+  .ca-jewelry-overview__inquiry-anchor { height: 1px; scroll-margin-top: 100px; }
+  @media (max-width: 749px) {
+    .ca-jewelry-overview__hero { grid-template-columns: minmax(0, 1fr); gap: 22px; margin-bottom: 44px; }
+    .ca-jewelry-overview__hero-actions { justify-content: flex-start; }
+    .ca-jewelry-overview__gallery { grid-template-columns: repeat(var(--ca-jewelry-columns-mobile, 2), minmax(0, 1fr)); }
+    .ca-jewelry-overview__gallery--desktop { display: none; }
+    .ca-jewelry-overview__mobile-carousel { display: block; }
+    .ca-jewelry-overview__slideshow slideshow-slides { gap: var(--ca-jewelry-gap, 16px); }
+    .ca-jewelry-overview__slideshow slideshow-slide {
+      width: calc((100% - (var(--ca-jewelry-columns-mobile) - 1) * var(--ca-jewelry-gap)) / var(--ca-jewelry-columns-mobile));
+      flex: 0 0 calc((100% - (var(--ca-jewelry-columns-mobile) - 1) * var(--ca-jewelry-gap)) / var(--ca-jewelry-columns-mobile));
+      min-width: 0;
+      scroll-snap-align: start;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ca-jewelry-overview__gallery-image { transition: none; }
+  }
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "珠宝系列总览",
+  "tag": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "顶部介绍"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "顶部小标题",
+      "default": "JEWELRY MANUFACTURING"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "主标题",
+      "default": "Custom Fashion Jewelry"
+    },
+    {
+      "type": "richtext",
+      "id": "introduction",
+      "label": "介绍文字",
+      "default": "<p>Discover custom jewelry created for brands, designers, and wholesale partners. Craftaurum supports the development of rings, earrings, bracelets, and necklaces with thoughtful detailing and flexible design possibilities.</p><p>From initial concepts to finished collections, our focus is on refined craftsmanship and clear collaboration throughout your project.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "顶部介绍图片"
+    },
+    {
+      "type": "text",
+      "id": "quote_label",
+      "label": "主按钮文字",
+      "default": "Get B2B Quote"
+    },
+    {
+      "type": "url",
+      "id": "quote_url",
+      "label": "主按钮链接（不设置则跳转本页表单）"
+    },
+    {
+      "type": "text",
+      "id": "catalog_label",
+      "label": "次级按钮文字",
+      "default": "Request Catalog"
+    },
+    {
+      "type": "url",
+      "id": "catalog_url",
+      "label": "次级按钮链接（不设置则跳转本页表单）"
+    },
+    {
+      "type": "header",
+      "content": "全局排版"
+    },
+    {
+      "type": "select",
+      "id": "heading_preset",
+      "label": "主标题字号",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "select",
+      "id": "eyebrow_preset",
+      "label": "小标题字号",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h5"
+    },
+    {
+      "type": "select",
+      "id": "category_heading_preset",
+      "label": "分类标题字号",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "select",
+      "id": "body_preset",
+      "label": "正文字号",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h4"
+    },
+    {
+      "type": "header",
+      "content": "移动端图片"
+    },
+    {
+      "type": "range",
+      "id": "mobile_columns",
+      "label": "每行显示图片数量",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "展示方式",
+      "options": [
+        {
+          "value": "grid",
+          "label": "网格"
+        },
+        {
+          "value": "carousel",
+          "label": "轮播"
+        }
+      ],
+      "default": "grid"
+    },
+    {
+      "type": "range",
+      "id": "image_gap",
+      "label": "图片间距",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "上边距",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "下边距",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "首饰分类展示",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "分类标题",
+          "default": "Custom Jewelry Collection"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "分类介绍",
+          "default": "<p>Explore a versatile collection of jewelry designs and customization possibilities for your brand.</p>"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "关联产品系列（优先使用其链接）"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "自定义跳转链接（优先）"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "按钮文字",
+          "default": "View Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_1",
+          "label": "展示图片 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "展示图片 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "展示图片 3"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "珠宝系列总览",
+      "blocks": [
+        {
+          "type": "category"
+        },
+        {
+          "type": "category"
+        },
+        {
+          "type": "category"
+        },
+        {
+          "type": "category"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
