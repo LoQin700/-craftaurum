@@ -227,7 +227,7 @@
         "opt_finish": {
           "type": "item",
           "settings": {
-            "icon": "sparkle",
+            "icon": "star",
             "icon_color": "#c7a85e",
             "title": "Plating & Finish",
             "description": "<p>Choose plating tones, polished surfaces, textures and other finishing directions for the collection.</p>"
