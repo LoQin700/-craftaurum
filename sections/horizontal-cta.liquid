@@ -2,7 +2,18 @@
 <section
   id="HorizontalCTA-{{ section.id }}"
   class="section section--{{ section.settings.section_width | default: 'full-width' }} spacing-style ca-horizontal-cta"
-  style="--padding-block-start: {{ section.settings.padding_top }}px; --padding-block-end: {{ section.settings.padding_bottom }}px;"
+  style="
+    --padding-block-start: {{ section.settings.padding_top }}px;
+    --padding-block-end: {{ section.settings.padding_bottom }}px;
+    --ca-cta-background: {{ section.settings.background_color }};
+    --ca-cta-text: {{ section.settings.text_color }};
+    --ca-cta-button-background: {{ section.settings.button_background_color }};
+    --ca-cta-button-text: {{ section.settings.button_text_color }};
+    --ca-cta-button-border: {{ section.settings.button_border_color }};
+    --ca-cta-button-hover-background: {{ section.settings.button_hover_background_color }};
+    --ca-cta-button-hover-text: {{ section.settings.button_hover_text_color }};
+    --ca-cta-button-hover-border: {{ section.settings.button_hover_border_color }};
+  "
 >
   <div class="ca-horizontal-cta__inner">
     <div class="ca-horizontal-cta__copy">
@@ -26,7 +37,10 @@
   </div>
 </section>
 {% stylesheet %}
-  .ca-horizontal-cta { background: var(--color-foreground); color: var(--color-background); }
+  .ca-horizontal-cta {
+    background: var(--ca-cta-background, #17191A);
+    color: var(--ca-cta-text, #F8F7F4);
+  }
   .ca-horizontal-cta__inner {
     width: min(100%, 1200px);
     margin: 0 auto;
@@ -40,15 +54,21 @@
   .ca-horizontal-cta__description { color: inherit; opacity: .78; }
   .ca-horizontal-cta__description :is(p,ul,ol) { font-size: inherit; line-height: inherit; }
   .ca-horizontal-cta__description p { margin: 0; }
-  .ca-horizontal-cta .button-secondary {
-    --button-color: var(--color-background);
-    --button-background-color: transparent;
-    --button-border-color: var(--color-background);
+  .ca-horizontal-cta :is(.button, .button-secondary, .button-custom) {
+    --button-color: var(--ca-cta-button-text, #F8F7F4);
+    --button-background-color: var(--ca-cta-button-background, transparent);
+    --button-border-color: var(--ca-cta-button-border, #F8F7F4);
   }
-  .ca-horizontal-cta .button-secondary:hover {
-    --button-color: var(--color-foreground);
-    --button-background-color: var(--color-accent, #C7A85E);
-    --button-border-color: var(--color-accent, #C7A85E);
+  .ca-horizontal-cta :is(.button, .button-secondary, .button-custom):hover {
+    --button-color: var(--ca-cta-button-hover-text, #17191A);
+    --button-background-color: var(--ca-cta-button-hover-background, #C7A85E);
+    --button-border-color: var(--ca-cta-button-hover-border, #C7A85E);
+  }
+  .ca-horizontal-cta .button-unstyled {
+    color: var(--ca-cta-button-text, #F8F7F4);
+  }
+  .ca-horizontal-cta .button-unstyled:hover {
+    color: var(--ca-cta-button-hover-background, #C7A85E);
   }
   @media screen and (max-width: 749px) {
     .ca-horizontal-cta__inner { grid-template-columns: minmax(0,1fr); gap: 18px; padding-inline: 18px; }
@@ -188,6 +208,58 @@
         }
       ],
       "default": "button-secondary"
+    },
+    {
+      "type": "header",
+      "content": "颜色"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文字颜色",
+      "default": "#F8F7F4"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "按钮背景颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "按钮文字颜色",
+      "default": "#F8F7F4"
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "按钮边框颜色",
+      "default": "#F8F7F4"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background_color",
+      "label": "按钮 Hover 背景颜色",
+      "default": "#C7A85E"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_text_color",
+      "label": "按钮 Hover 文字颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_border_color",
+      "label": "按钮 Hover 边框颜色",
+      "default": "#C7A85E"
     },
     {
       "type": "range",
