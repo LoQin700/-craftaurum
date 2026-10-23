@@ -63,21 +63,17 @@
           %}
         {% endcapture %}
       {% endif %}
-      {% assign ca_logo_can_scroll = false %}
-      {% if section.blocks.size > 1 %}{% assign ca_logo_can_scroll = true %}{% endif %}
-      {% assign ca_logo_auto_play = false %}
-      {% if ca_logo_can_scroll and section.settings.autoplay %}{% assign ca_logo_auto_play = true %}{% endif %}
       <div class="ca-logos__carousel{% if section.settings.mobile_layout == 'grid' %} ca-logos__carousel--mobile-grid{% endif %}">
         {% render 'slideshow',
           class: 'ca-logos__slideshow',
           slides: logo_slides,
           controls: logo_controls,
           slide_count: section.blocks.size,
-          show_arrows: ca_logo_can_scroll,
+          show_arrows: true,
           icon_style: 'chevron',
           icon_shape: 'none',
           infinite: true,
-          autoplay: ca_logo_auto_play,
+          autoplay: section.settings.autoplay,
           autoplay_speed: section.settings.autoplay_speed
         %}
       </div>
