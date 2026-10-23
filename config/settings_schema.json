@@ -133,10 +133,6 @@
         "label": "t:settings.size",
         "options": [
           {
-            "value": "10",
-            "label": "10px"
-          },
-          {
             "value": "12",
             "label": "12px"
           },
@@ -151,6 +147,34 @@
           {
             "value": "18",
             "label": "18px"
+          },
+          {
+            "value": "20",
+            "label": "20px"
+          },
+          {
+            "value": "22",
+            "label": "22px"
+          },
+          {
+            "value": "24",
+            "label": "24px"
+          },
+          {
+            "value": "26",
+            "label": "26px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          },
+          {
+            "value": "30",
+            "label": "30px"
+          },
+          {
+            "value": "32",
+            "label": "32px"
           }
         ],
         "default": "16"
@@ -160,10 +184,6 @@
         "id": "mobile_type_size_paragraph",
         "label": "移动端字号（正文）",
         "options": [
-          {
-            "value": "inherit",
-            "label": "跟随桌面默认"
-          },
           {
             "value": "12",
             "label": "12px"
@@ -193,43 +213,15 @@
             "label": "24px"
           },
           {
+            "value": "26",
+            "label": "26px"
+          },
+          {
             "value": "28",
             "label": "28px"
-          },
-          {
-            "value": "32",
-            "label": "32px"
-          },
-          {
-            "value": "36",
-            "label": "36px"
-          },
-          {
-            "value": "40",
-            "label": "40px"
-          },
-          {
-            "value": "44",
-            "label": "44px"
-          },
-          {
-            "value": "48",
-            "label": "48px"
-          },
-          {
-            "value": "56",
-            "label": "56px"
-          },
-          {
-            "value": "64",
-            "label": "64px"
-          },
-          {
-            "value": "72",
-            "label": "72px"
           }
         ],
-        "default": "inherit"
+        "default": "14"
       },
       {
         "type": "select",
@@ -277,10 +269,6 @@
         "label": "t:settings.size",
         "options": [
           {
-            "value": "10",
-            "label": "10px"
-          },
-          {
             "value": "12",
             "label": "12px"
           },
@@ -301,44 +289,156 @@
             "label": "20px"
           },
           {
+            "value": "22",
+            "label": "22px"
+          },
+          {
             "value": "24",
             "label": "24px"
+          },
+          {
+            "value": "26",
+            "label": "26px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          },
+          {
+            "value": "30",
+            "label": "30px"
           },
           {
             "value": "32",
             "label": "32px"
           },
           {
+            "value": "34",
+            "label": "34px"
+          },
+          {
+            "value": "36",
+            "label": "36px"
+          },
+          {
+            "value": "38",
+            "label": "38px"
+          },
+          {
             "value": "40",
             "label": "40px"
+          },
+          {
+            "value": "42",
+            "label": "42px"
+          },
+          {
+            "value": "44",
+            "label": "44px"
+          },
+          {
+            "value": "46",
+            "label": "46px"
           },
           {
             "value": "48",
             "label": "48px"
           },
           {
+            "value": "50",
+            "label": "50px"
+          },
+          {
+            "value": "52",
+            "label": "52px"
+          },
+          {
+            "value": "54",
+            "label": "54px"
+          },
+          {
             "value": "56",
             "label": "56px"
+          },
+          {
+            "value": "58",
+            "label": "58px"
+          },
+          {
+            "value": "60",
+            "label": "60px"
+          },
+          {
+            "value": "62",
+            "label": "62px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
+          },
+          {
+            "value": "66",
+            "label": "66px"
+          },
+          {
+            "value": "68",
+            "label": "68px"
+          },
+          {
+            "value": "70",
+            "label": "70px"
           },
           {
             "value": "72",
             "label": "72px"
           },
           {
+            "value": "74",
+            "label": "74px"
+          },
+          {
+            "value": "76",
+            "label": "76px"
+          },
+          {
+            "value": "78",
+            "label": "78px"
+          },
+          {
+            "value": "80",
+            "label": "80px"
+          },
+          {
+            "value": "82",
+            "label": "82px"
+          },
+          {
+            "value": "84",
+            "label": "84px"
+          },
+          {
+            "value": "86",
+            "label": "86px"
+          },
+          {
             "value": "88",
             "label": "88px"
           },
           {
-            "value": "120",
-            "label": "120px"
+            "value": "90",
+            "label": "90px"
           },
           {
-            "value": "152",
-            "label": "152px"
+            "value": "92",
+            "label": "92px"
           },
           {
-            "value": "184",
-            "label": "184px"
+            "value": "94",
+            "label": "94px"
+          },
+          {
+            "value": "96",
+            "label": "96px"
           }
         ],
         "default": "40"
@@ -348,10 +448,6 @@
         "id": "mobile_type_size_h1",
         "label": "移动端字号（H1）",
         "options": [
-          {
-            "value": "inherit",
-            "label": "跟随桌面默认"
-          },
           {
             "value": "12",
             "label": "12px"
@@ -381,43 +477,87 @@
             "label": "24px"
           },
           {
+            "value": "26",
+            "label": "26px"
+          },
+          {
             "value": "28",
             "label": "28px"
+          },
+          {
+            "value": "30",
+            "label": "30px"
           },
           {
             "value": "32",
             "label": "32px"
           },
           {
+            "value": "34",
+            "label": "34px"
+          },
+          {
             "value": "36",
             "label": "36px"
+          },
+          {
+            "value": "38",
+            "label": "38px"
           },
           {
             "value": "40",
             "label": "40px"
           },
           {
+            "value": "42",
+            "label": "42px"
+          },
+          {
             "value": "44",
             "label": "44px"
+          },
+          {
+            "value": "46",
+            "label": "46px"
           },
           {
             "value": "48",
             "label": "48px"
           },
           {
+            "value": "50",
+            "label": "50px"
+          },
+          {
+            "value": "52",
+            "label": "52px"
+          },
+          {
+            "value": "54",
+            "label": "54px"
+          },
+          {
             "value": "56",
             "label": "56px"
           },
           {
-            "value": "64",
-            "label": "64px"
+            "value": "58",
+            "label": "58px"
           },
           {
-            "value": "72",
-            "label": "72px"
+            "value": "60",
+            "label": "60px"
+          },
+          {
+            "value": "62",
+            "label": "62px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
           }
         ],
-        "default": "inherit"
+        "default": "32"
       },
       {
         "type": "select",
@@ -501,10 +641,6 @@
         "label": "t:settings.size",
         "options": [
           {
-            "value": "10",
-            "label": "10px"
-          },
-          {
             "value": "12",
             "label": "12px"
           },
@@ -525,44 +661,156 @@
             "label": "20px"
           },
           {
+            "value": "22",
+            "label": "22px"
+          },
+          {
             "value": "24",
             "label": "24px"
+          },
+          {
+            "value": "26",
+            "label": "26px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          },
+          {
+            "value": "30",
+            "label": "30px"
           },
           {
             "value": "32",
             "label": "32px"
           },
           {
+            "value": "34",
+            "label": "34px"
+          },
+          {
+            "value": "36",
+            "label": "36px"
+          },
+          {
+            "value": "38",
+            "label": "38px"
+          },
+          {
             "value": "40",
             "label": "40px"
+          },
+          {
+            "value": "42",
+            "label": "42px"
+          },
+          {
+            "value": "44",
+            "label": "44px"
+          },
+          {
+            "value": "46",
+            "label": "46px"
           },
           {
             "value": "48",
             "label": "48px"
           },
           {
+            "value": "50",
+            "label": "50px"
+          },
+          {
+            "value": "52",
+            "label": "52px"
+          },
+          {
+            "value": "54",
+            "label": "54px"
+          },
+          {
             "value": "56",
             "label": "56px"
+          },
+          {
+            "value": "58",
+            "label": "58px"
+          },
+          {
+            "value": "60",
+            "label": "60px"
+          },
+          {
+            "value": "62",
+            "label": "62px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
+          },
+          {
+            "value": "66",
+            "label": "66px"
+          },
+          {
+            "value": "68",
+            "label": "68px"
+          },
+          {
+            "value": "70",
+            "label": "70px"
           },
           {
             "value": "72",
             "label": "72px"
           },
           {
+            "value": "74",
+            "label": "74px"
+          },
+          {
+            "value": "76",
+            "label": "76px"
+          },
+          {
+            "value": "78",
+            "label": "78px"
+          },
+          {
+            "value": "80",
+            "label": "80px"
+          },
+          {
+            "value": "82",
+            "label": "82px"
+          },
+          {
+            "value": "84",
+            "label": "84px"
+          },
+          {
+            "value": "86",
+            "label": "86px"
+          },
+          {
             "value": "88",
             "label": "88px"
           },
           {
-            "value": "120",
-            "label": "120px"
+            "value": "90",
+            "label": "90px"
           },
           {
-            "value": "152",
-            "label": "152px"
+            "value": "92",
+            "label": "92px"
           },
           {
-            "value": "184",
-            "label": "184px"
+            "value": "94",
+            "label": "94px"
+          },
+          {
+            "value": "96",
+            "label": "96px"
           }
         ],
         "default": "32"
@@ -572,10 +820,6 @@
         "id": "mobile_type_size_h2",
         "label": "移动端字号（H2）",
         "options": [
-          {
-            "value": "inherit",
-            "label": "跟随桌面默认"
-          },
           {
             "value": "12",
             "label": "12px"
@@ -605,43 +849,87 @@
             "label": "24px"
           },
           {
+            "value": "26",
+            "label": "26px"
+          },
+          {
             "value": "28",
             "label": "28px"
+          },
+          {
+            "value": "30",
+            "label": "30px"
           },
           {
             "value": "32",
             "label": "32px"
           },
           {
+            "value": "34",
+            "label": "34px"
+          },
+          {
             "value": "36",
             "label": "36px"
+          },
+          {
+            "value": "38",
+            "label": "38px"
           },
           {
             "value": "40",
             "label": "40px"
           },
           {
+            "value": "42",
+            "label": "42px"
+          },
+          {
             "value": "44",
             "label": "44px"
+          },
+          {
+            "value": "46",
+            "label": "46px"
           },
           {
             "value": "48",
             "label": "48px"
           },
           {
+            "value": "50",
+            "label": "50px"
+          },
+          {
+            "value": "52",
+            "label": "52px"
+          },
+          {
+            "value": "54",
+            "label": "54px"
+          },
+          {
             "value": "56",
             "label": "56px"
           },
           {
-            "value": "64",
-            "label": "64px"
+            "value": "58",
+            "label": "58px"
           },
           {
-            "value": "72",
-            "label": "72px"
+            "value": "60",
+            "label": "60px"
+          },
+          {
+            "value": "62",
+            "label": "62px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
           }
         ],
-        "default": "inherit"
+        "default": "26"
       },
       {
         "type": "select",
@@ -733,10 +1021,6 @@
         "label": "t:settings.size",
         "options": [
           {
-            "value": "10",
-            "label": "10px"
-          },
-          {
             "value": "12",
             "label": "12px"
           },
@@ -757,44 +1041,156 @@
             "label": "20px"
           },
           {
+            "value": "22",
+            "label": "22px"
+          },
+          {
             "value": "24",
             "label": "24px"
+          },
+          {
+            "value": "26",
+            "label": "26px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          },
+          {
+            "value": "30",
+            "label": "30px"
           },
           {
             "value": "32",
             "label": "32px"
           },
           {
+            "value": "34",
+            "label": "34px"
+          },
+          {
+            "value": "36",
+            "label": "36px"
+          },
+          {
+            "value": "38",
+            "label": "38px"
+          },
+          {
             "value": "40",
             "label": "40px"
+          },
+          {
+            "value": "42",
+            "label": "42px"
+          },
+          {
+            "value": "44",
+            "label": "44px"
+          },
+          {
+            "value": "46",
+            "label": "46px"
           },
           {
             "value": "48",
             "label": "48px"
           },
           {
+            "value": "50",
+            "label": "50px"
+          },
+          {
+            "value": "52",
+            "label": "52px"
+          },
+          {
+            "value": "54",
+            "label": "54px"
+          },
+          {
             "value": "56",
             "label": "56px"
+          },
+          {
+            "value": "58",
+            "label": "58px"
+          },
+          {
+            "value": "60",
+            "label": "60px"
+          },
+          {
+            "value": "62",
+            "label": "62px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
+          },
+          {
+            "value": "66",
+            "label": "66px"
+          },
+          {
+            "value": "68",
+            "label": "68px"
+          },
+          {
+            "value": "70",
+            "label": "70px"
           },
           {
             "value": "72",
             "label": "72px"
           },
           {
+            "value": "74",
+            "label": "74px"
+          },
+          {
+            "value": "76",
+            "label": "76px"
+          },
+          {
+            "value": "78",
+            "label": "78px"
+          },
+          {
+            "value": "80",
+            "label": "80px"
+          },
+          {
+            "value": "82",
+            "label": "82px"
+          },
+          {
+            "value": "84",
+            "label": "84px"
+          },
+          {
+            "value": "86",
+            "label": "86px"
+          },
+          {
             "value": "88",
             "label": "88px"
           },
           {
-            "value": "120",
-            "label": "120px"
+            "value": "90",
+            "label": "90px"
           },
           {
-            "value": "152",
-            "label": "152px"
+            "value": "92",
+            "label": "92px"
           },
           {
-            "value": "184",
-            "label": "184px"
+            "value": "94",
+            "label": "94px"
+          },
+          {
+            "value": "96",
+            "label": "96px"
           }
         ],
         "default": "24"
@@ -804,10 +1200,6 @@
         "id": "mobile_type_size_h3",
         "label": "移动端字号（H3）",
         "options": [
-          {
-            "value": "inherit",
-            "label": "跟随桌面默认"
-          },
           {
             "value": "12",
             "label": "12px"
@@ -837,43 +1229,87 @@
             "label": "24px"
           },
           {
+            "value": "26",
+            "label": "26px"
+          },
+          {
             "value": "28",
             "label": "28px"
+          },
+          {
+            "value": "30",
+            "label": "30px"
           },
           {
             "value": "32",
             "label": "32px"
           },
           {
+            "value": "34",
+            "label": "34px"
+          },
+          {
             "value": "36",
             "label": "36px"
+          },
+          {
+            "value": "38",
+            "label": "38px"
           },
           {
             "value": "40",
             "label": "40px"
           },
           {
+            "value": "42",
+            "label": "42px"
+          },
+          {
             "value": "44",
             "label": "44px"
+          },
+          {
+            "value": "46",
+            "label": "46px"
           },
           {
             "value": "48",
             "label": "48px"
           },
           {
+            "value": "50",
+            "label": "50px"
+          },
+          {
+            "value": "52",
+            "label": "52px"
+          },
+          {
+            "value": "54",
+            "label": "54px"
+          },
+          {
             "value": "56",
             "label": "56px"
           },
           {
-            "value": "64",
-            "label": "64px"
+            "value": "58",
+            "label": "58px"
           },
           {
-            "value": "72",
-            "label": "72px"
+            "value": "60",
+            "label": "60px"
+          },
+          {
+            "value": "62",
+            "label": "62px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
           }
         ],
-        "default": "inherit"
+        "default": "20"
       },
       {
         "type": "select",
@@ -965,10 +1401,6 @@
         "label": "t:settings.size",
         "options": [
           {
-            "value": "10",
-            "label": "10px"
-          },
-          {
             "value": "12",
             "label": "12px"
           },
@@ -989,44 +1421,156 @@
             "label": "20px"
           },
           {
+            "value": "22",
+            "label": "22px"
+          },
+          {
             "value": "24",
             "label": "24px"
+          },
+          {
+            "value": "26",
+            "label": "26px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          },
+          {
+            "value": "30",
+            "label": "30px"
           },
           {
             "value": "32",
             "label": "32px"
           },
           {
+            "value": "34",
+            "label": "34px"
+          },
+          {
+            "value": "36",
+            "label": "36px"
+          },
+          {
+            "value": "38",
+            "label": "38px"
+          },
+          {
             "value": "40",
             "label": "40px"
+          },
+          {
+            "value": "42",
+            "label": "42px"
+          },
+          {
+            "value": "44",
+            "label": "44px"
+          },
+          {
+            "value": "46",
+            "label": "46px"
           },
           {
             "value": "48",
             "label": "48px"
           },
           {
+            "value": "50",
+            "label": "50px"
+          },
+          {
+            "value": "52",
+            "label": "52px"
+          },
+          {
+            "value": "54",
+            "label": "54px"
+          },
+          {
             "value": "56",
             "label": "56px"
+          },
+          {
+            "value": "58",
+            "label": "58px"
+          },
+          {
+            "value": "60",
+            "label": "60px"
+          },
+          {
+            "value": "62",
+            "label": "62px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
+          },
+          {
+            "value": "66",
+            "label": "66px"
+          },
+          {
+            "value": "68",
+            "label": "68px"
+          },
+          {
+            "value": "70",
+            "label": "70px"
           },
           {
             "value": "72",
             "label": "72px"
           },
           {
+            "value": "74",
+            "label": "74px"
+          },
+          {
+            "value": "76",
+            "label": "76px"
+          },
+          {
+            "value": "78",
+            "label": "78px"
+          },
+          {
+            "value": "80",
+            "label": "80px"
+          },
+          {
+            "value": "82",
+            "label": "82px"
+          },
+          {
+            "value": "84",
+            "label": "84px"
+          },
+          {
+            "value": "86",
+            "label": "86px"
+          },
+          {
             "value": "88",
             "label": "88px"
           },
           {
-            "value": "120",
-            "label": "120px"
+            "value": "90",
+            "label": "90px"
           },
           {
-            "value": "152",
-            "label": "152px"
+            "value": "92",
+            "label": "92px"
           },
           {
-            "value": "184",
-            "label": "184px"
+            "value": "94",
+            "label": "94px"
+          },
+          {
+            "value": "96",
+            "label": "96px"
           }
         ],
         "default": "18"
@@ -1036,10 +1580,6 @@
         "id": "mobile_type_size_h4",
         "label": "移动端字号（H4）",
         "options": [
-          {
-            "value": "inherit",
-            "label": "跟随桌面默认"
-          },
           {
             "value": "12",
             "label": "12px"
@@ -1069,43 +1609,87 @@
             "label": "24px"
           },
           {
+            "value": "26",
+            "label": "26px"
+          },
+          {
             "value": "28",
             "label": "28px"
+          },
+          {
+            "value": "30",
+            "label": "30px"
           },
           {
             "value": "32",
             "label": "32px"
           },
           {
+            "value": "34",
+            "label": "34px"
+          },
+          {
             "value": "36",
             "label": "36px"
+          },
+          {
+            "value": "38",
+            "label": "38px"
           },
           {
             "value": "40",
             "label": "40px"
           },
           {
+            "value": "42",
+            "label": "42px"
+          },
+          {
             "value": "44",
             "label": "44px"
+          },
+          {
+            "value": "46",
+            "label": "46px"
           },
           {
             "value": "48",
             "label": "48px"
           },
           {
+            "value": "50",
+            "label": "50px"
+          },
+          {
+            "value": "52",
+            "label": "52px"
+          },
+          {
+            "value": "54",
+            "label": "54px"
+          },
+          {
             "value": "56",
             "label": "56px"
           },
           {
-            "value": "64",
-            "label": "64px"
+            "value": "58",
+            "label": "58px"
           },
           {
-            "value": "72",
-            "label": "72px"
+            "value": "60",
+            "label": "60px"
+          },
+          {
+            "value": "62",
+            "label": "62px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
           }
         ],
-        "default": "inherit"
+        "default": "16"
       },
       {
         "type": "select",
@@ -1197,10 +1781,6 @@
         "label": "t:settings.size",
         "options": [
           {
-            "value": "10",
-            "label": "10px"
-          },
-          {
             "value": "12",
             "label": "12px"
           },
@@ -1221,44 +1801,156 @@
             "label": "20px"
           },
           {
+            "value": "22",
+            "label": "22px"
+          },
+          {
             "value": "24",
             "label": "24px"
+          },
+          {
+            "value": "26",
+            "label": "26px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          },
+          {
+            "value": "30",
+            "label": "30px"
           },
           {
             "value": "32",
             "label": "32px"
           },
           {
+            "value": "34",
+            "label": "34px"
+          },
+          {
+            "value": "36",
+            "label": "36px"
+          },
+          {
+            "value": "38",
+            "label": "38px"
+          },
+          {
             "value": "40",
             "label": "40px"
+          },
+          {
+            "value": "42",
+            "label": "42px"
+          },
+          {
+            "value": "44",
+            "label": "44px"
+          },
+          {
+            "value": "46",
+            "label": "46px"
           },
           {
             "value": "48",
             "label": "48px"
           },
           {
+            "value": "50",
+            "label": "50px"
+          },
+          {
+            "value": "52",
+            "label": "52px"
+          },
+          {
+            "value": "54",
+            "label": "54px"
+          },
+          {
             "value": "56",
             "label": "56px"
+          },
+          {
+            "value": "58",
+            "label": "58px"
+          },
+          {
+            "value": "60",
+            "label": "60px"
+          },
+          {
+            "value": "62",
+            "label": "62px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
+          },
+          {
+            "value": "66",
+            "label": "66px"
+          },
+          {
+            "value": "68",
+            "label": "68px"
+          },
+          {
+            "value": "70",
+            "label": "70px"
           },
           {
             "value": "72",
             "label": "72px"
           },
           {
+            "value": "74",
+            "label": "74px"
+          },
+          {
+            "value": "76",
+            "label": "76px"
+          },
+          {
+            "value": "78",
+            "label": "78px"
+          },
+          {
+            "value": "80",
+            "label": "80px"
+          },
+          {
+            "value": "82",
+            "label": "82px"
+          },
+          {
+            "value": "84",
+            "label": "84px"
+          },
+          {
+            "value": "86",
+            "label": "86px"
+          },
+          {
             "value": "88",
             "label": "88px"
           },
           {
-            "value": "120",
-            "label": "120px"
+            "value": "90",
+            "label": "90px"
           },
           {
-            "value": "152",
-            "label": "152px"
+            "value": "92",
+            "label": "92px"
           },
           {
-            "value": "184",
-            "label": "184px"
+            "value": "94",
+            "label": "94px"
+          },
+          {
+            "value": "96",
+            "label": "96px"
           }
         ],
         "default": "16"
@@ -1268,10 +1960,6 @@
         "id": "mobile_type_size_h5",
         "label": "移动端字号（H5）",
         "options": [
-          {
-            "value": "inherit",
-            "label": "跟随桌面默认"
-          },
           {
             "value": "12",
             "label": "12px"
@@ -1301,43 +1989,87 @@
             "label": "24px"
           },
           {
+            "value": "26",
+            "label": "26px"
+          },
+          {
             "value": "28",
             "label": "28px"
+          },
+          {
+            "value": "30",
+            "label": "30px"
           },
           {
             "value": "32",
             "label": "32px"
           },
           {
+            "value": "34",
+            "label": "34px"
+          },
+          {
             "value": "36",
             "label": "36px"
+          },
+          {
+            "value": "38",
+            "label": "38px"
           },
           {
             "value": "40",
             "label": "40px"
           },
           {
+            "value": "42",
+            "label": "42px"
+          },
+          {
             "value": "44",
             "label": "44px"
+          },
+          {
+            "value": "46",
+            "label": "46px"
           },
           {
             "value": "48",
             "label": "48px"
           },
           {
+            "value": "50",
+            "label": "50px"
+          },
+          {
+            "value": "52",
+            "label": "52px"
+          },
+          {
+            "value": "54",
+            "label": "54px"
+          },
+          {
             "value": "56",
             "label": "56px"
           },
           {
-            "value": "64",
-            "label": "64px"
+            "value": "58",
+            "label": "58px"
           },
           {
-            "value": "72",
-            "label": "72px"
+            "value": "60",
+            "label": "60px"
+          },
+          {
+            "value": "62",
+            "label": "62px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
           }
         ],
-        "default": "inherit"
+        "default": "14"
       },
       {
         "type": "select",
@@ -1429,10 +2161,6 @@
         "label": "t:settings.size",
         "options": [
           {
-            "value": "10",
-            "label": "10px"
-          },
-          {
             "value": "12",
             "label": "12px"
           },
@@ -1453,44 +2181,156 @@
             "label": "20px"
           },
           {
+            "value": "22",
+            "label": "22px"
+          },
+          {
             "value": "24",
             "label": "24px"
+          },
+          {
+            "value": "26",
+            "label": "26px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          },
+          {
+            "value": "30",
+            "label": "30px"
           },
           {
             "value": "32",
             "label": "32px"
           },
           {
+            "value": "34",
+            "label": "34px"
+          },
+          {
+            "value": "36",
+            "label": "36px"
+          },
+          {
+            "value": "38",
+            "label": "38px"
+          },
+          {
             "value": "40",
             "label": "40px"
+          },
+          {
+            "value": "42",
+            "label": "42px"
+          },
+          {
+            "value": "44",
+            "label": "44px"
+          },
+          {
+            "value": "46",
+            "label": "46px"
           },
           {
             "value": "48",
             "label": "48px"
           },
           {
+            "value": "50",
+            "label": "50px"
+          },
+          {
+            "value": "52",
+            "label": "52px"
+          },
+          {
+            "value": "54",
+            "label": "54px"
+          },
+          {
             "value": "56",
             "label": "56px"
+          },
+          {
+            "value": "58",
+            "label": "58px"
+          },
+          {
+            "value": "60",
+            "label": "60px"
+          },
+          {
+            "value": "62",
+            "label": "62px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
+          },
+          {
+            "value": "66",
+            "label": "66px"
+          },
+          {
+            "value": "68",
+            "label": "68px"
+          },
+          {
+            "value": "70",
+            "label": "70px"
           },
           {
             "value": "72",
             "label": "72px"
           },
           {
+            "value": "74",
+            "label": "74px"
+          },
+          {
+            "value": "76",
+            "label": "76px"
+          },
+          {
+            "value": "78",
+            "label": "78px"
+          },
+          {
+            "value": "80",
+            "label": "80px"
+          },
+          {
+            "value": "82",
+            "label": "82px"
+          },
+          {
+            "value": "84",
+            "label": "84px"
+          },
+          {
+            "value": "86",
+            "label": "86px"
+          },
+          {
             "value": "88",
             "label": "88px"
           },
           {
-            "value": "120",
-            "label": "120px"
+            "value": "90",
+            "label": "90px"
           },
           {
-            "value": "152",
-            "label": "152px"
+            "value": "92",
+            "label": "92px"
           },
           {
-            "value": "184",
-            "label": "184px"
+            "value": "94",
+            "label": "94px"
+          },
+          {
+            "value": "96",
+            "label": "96px"
           }
         ],
         "default": "14"
@@ -1500,10 +2340,6 @@
         "id": "mobile_type_size_h6",
         "label": "移动端字号（H6）",
         "options": [
-          {
-            "value": "inherit",
-            "label": "跟随桌面默认"
-          },
           {
             "value": "12",
             "label": "12px"
@@ -1533,43 +2369,87 @@
             "label": "24px"
           },
           {
+            "value": "26",
+            "label": "26px"
+          },
+          {
             "value": "28",
             "label": "28px"
+          },
+          {
+            "value": "30",
+            "label": "30px"
           },
           {
             "value": "32",
             "label": "32px"
           },
           {
+            "value": "34",
+            "label": "34px"
+          },
+          {
             "value": "36",
             "label": "36px"
+          },
+          {
+            "value": "38",
+            "label": "38px"
           },
           {
             "value": "40",
             "label": "40px"
           },
           {
+            "value": "42",
+            "label": "42px"
+          },
+          {
             "value": "44",
             "label": "44px"
+          },
+          {
+            "value": "46",
+            "label": "46px"
           },
           {
             "value": "48",
             "label": "48px"
           },
           {
+            "value": "50",
+            "label": "50px"
+          },
+          {
+            "value": "52",
+            "label": "52px"
+          },
+          {
+            "value": "54",
+            "label": "54px"
+          },
+          {
             "value": "56",
             "label": "56px"
           },
           {
-            "value": "64",
-            "label": "64px"
+            "value": "58",
+            "label": "58px"
           },
           {
-            "value": "72",
-            "label": "72px"
+            "value": "60",
+            "label": "60px"
+          },
+          {
+            "value": "62",
+            "label": "62px"
+          },
+          {
+            "value": "64",
+            "label": "64px"
           }
         ],
-        "default": "inherit"
+        "default": "12"
       },
       {
         "type": "select",
@@ -1880,6 +2760,94 @@
       },
       {
         "type": "select",
+        "id": "button_font_size_primary",
+        "label": "桌面按钮字号",
+        "options": [
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          },
+          {
+            "value": "18",
+            "label": "18px"
+          },
+          {
+            "value": "20",
+            "label": "20px"
+          },
+          {
+            "value": "22",
+            "label": "22px"
+          },
+          {
+            "value": "24",
+            "label": "24px"
+          },
+          {
+            "value": "26",
+            "label": "26px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          }
+        ],
+        "default": "16"
+      },
+      {
+        "type": "select",
+        "id": "button_font_size_primary_mobile",
+        "label": "手机按钮字号",
+        "options": [
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          },
+          {
+            "value": "18",
+            "label": "18px"
+          },
+          {
+            "value": "20",
+            "label": "20px"
+          },
+          {
+            "value": "22",
+            "label": "22px"
+          },
+          {
+            "value": "24",
+            "label": "24px"
+          },
+          {
+            "value": "26",
+            "label": "26px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          }
+        ],
+        "default": "14"
+      },
+      {
+        "type": "select",
         "id": "button_text_case_primary",
         "label": "t:settings.button_text_case",
         "options": [
@@ -1902,19 +2870,22 @@
         "type": "color",
         "id": "palette_primary_button_hover_background",
         "label": "一级按钮 Hover 背景",
-        "info": "不设置则继承 Horizon 智能 Hover 配色"
+        "info": "不设置则继承 Horizon 智能 Hover 配色",
+        "default": "#E1E3E6"
       },
       {
         "type": "color",
         "id": "palette_primary_button_hover_text",
         "label": "一级按钮 Hover 文字",
-        "info": "不设置则继承 Horizon 智能 Hover 配色"
+        "info": "不设置则继承 Horizon 智能 Hover 配色",
+        "default": "#1B1B1B"
       },
       {
         "type": "color",
         "id": "palette_primary_button_hover_border",
         "label": "一级按钮 Hover 边框",
-        "info": "不设置则继承 Horizon 智能 Hover 配色"
+        "info": "不设置则继承 Horizon 智能 Hover 配色",
+        "default": "#E1E3E6"
       },
       {
         "type": "header",
@@ -1979,6 +2950,94 @@
       },
       {
         "type": "select",
+        "id": "button_font_size_secondary",
+        "label": "桌面按钮字号",
+        "options": [
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          },
+          {
+            "value": "18",
+            "label": "18px"
+          },
+          {
+            "value": "20",
+            "label": "20px"
+          },
+          {
+            "value": "22",
+            "label": "22px"
+          },
+          {
+            "value": "24",
+            "label": "24px"
+          },
+          {
+            "value": "26",
+            "label": "26px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          }
+        ],
+        "default": "16"
+      },
+      {
+        "type": "select",
+        "id": "button_font_size_secondary_mobile",
+        "label": "手机按钮字号",
+        "options": [
+          {
+            "value": "12",
+            "label": "12px"
+          },
+          {
+            "value": "14",
+            "label": "14px"
+          },
+          {
+            "value": "16",
+            "label": "16px"
+          },
+          {
+            "value": "18",
+            "label": "18px"
+          },
+          {
+            "value": "20",
+            "label": "20px"
+          },
+          {
+            "value": "22",
+            "label": "22px"
+          },
+          {
+            "value": "24",
+            "label": "24px"
+          },
+          {
+            "value": "26",
+            "label": "26px"
+          },
+          {
+            "value": "28",
+            "label": "28px"
+          }
+        ],
+        "default": "14"
+      },
+      {
+        "type": "select",
         "id": "button_text_case_secondary",
         "label": "t:settings.button_text_case",
         "options": [
@@ -2001,19 +3060,22 @@
         "type": "color",
         "id": "palette_secondary_button_hover_background",
         "label": "二级按钮 Hover 背景",
-        "info": "不设置则继承 Horizon 智能 Hover 配色"
+        "info": "不设置则继承 Horizon 智能 Hover 配色",
+        "default": "#E1E3E6"
       },
       {
         "type": "color",
         "id": "palette_secondary_button_hover_text",
         "label": "二级按钮 Hover 文字",
-        "info": "不设置则继承 Horizon 智能 Hover 配色"
+        "info": "不设置则继承 Horizon 智能 Hover 配色",
+        "default": "#1B1B1B"
       },
       {
         "type": "color",
         "id": "palette_secondary_button_hover_border",
         "label": "二级按钮 Hover 边框",
-        "info": "不设置则继承 Horizon 智能 Hover 配色"
+        "info": "不设置则继承 Horizon 智能 Hover 配色",
+        "default": "#E1E3E6"
       }
     ]
   },
