@@ -5,10 +5,15 @@
 {% endcapture %}
 
 <div
-  class="contact-form spacing-style size-style"
+  class="contact-form spacing-style{% unless block.settings.follow_section_width %} size-style{% endunless %}{% if block.settings.follow_section_width %} contact-form--follow-section-width{% endif %}"
   style="
     {% render 'spacing-style', settings: block.settings %}
-    {% render 'size-style', settings: block.settings %}
+    {% if block.settings.follow_section_width %}
+      width: 100%;
+      max-width: none;
+    {% else %}
+      {% render 'size-style', settings: block.settings %}
+    {% endif %}
     {% if block.settings.background_color != blank %}background-color: {{ block.settings.background_color }};{% endif %}
     {% if block.settings.input_style == 'custom' %}
       {% render 'input-custom-styles', block_settings: block.settings %}
@@ -184,6 +189,13 @@
   "name": "t:names.contact_form",
   "tag": null,
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "follow_section_width",
+      "label": "跟随分区宽度",
+      "info": "开启后，分区的“页面宽度 / 全宽”会直接控制表单整体宽度。",
+      "default": true
+    },
     {
       "type": "select",
       "id": "width",
