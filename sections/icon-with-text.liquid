@@ -177,14 +177,6 @@
 {% schema %}
 {
   "name": "图标文字",
-  "tag": "section",
-  "class": "craftaurum-icon-text-section",
-  "disabled_on": {
-    "groups": [
-      "header",
-      "footer"
-    ]
-  },
   "settings": [
     {
       "type": "select",
@@ -367,13 +359,32 @@
       "default": "h4"
     },
     {
-      "type": "range",
+      "type": "select",
       "id": "desktop_columns",
       "label": "桌面端每行数量",
-      "min": 2,
-      "max": 6,
-      "step": 1,
-      "default": 4
+      "options": [
+        {
+          "value": "2",
+          "label": "2 列"
+        },
+        {
+          "value": "3",
+          "label": "3 列"
+        },
+        {
+          "value": "4",
+          "label": "4 列"
+        },
+        {
+          "value": "5",
+          "label": "5 列"
+        },
+        {
+          "value": "6",
+          "label": "6 列"
+        }
+      ],
+      "default": "4"
     },
     {
       "type": "select",
@@ -447,11 +458,9 @@
       ]
     }
   ],
-  "max_blocks": 12,
   "presets": [
     {
       "name": "图标文字",
-      "category": "文字",
       "blocks": [
         {
           "type": "item",
