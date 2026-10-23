@@ -1,0 +1,511 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "t:names.title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {
+            "text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "oem_hero": {
+      "type": "jewelry-collections-overview",
+      "name": "图文横幅",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "eyebrow": "OEM JEWELLERY MANUFACTURING",
+        "heading": "OEM Jewellery Manufacturing for Your Brand.",
+        "introduction": "<p>Bring your jewelry ideas to life through a clear OEM development process built around your brand direction and project requirements. From early consultation and design review to sampling, production and finishing, each stage is developed with close attention to detail.</p><p>Craftaurum supports jewelry brands, designers and wholesale partners looking for a practical route from concept to production-ready collections.</p>",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "quote_label": "Customize Your Brand",
+        "quote_url": "",
+        "catalog_label": "Get B2B Quote",
+        "catalog_url": "",
+        "heading_preset": "h1",
+        "eyebrow_preset": "h5",
+        "body_preset": "h5",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "oem_categories": {
+      "type": "image-collection-grid",
+      "name": "分类图片展示",
+      "blocks": {
+        "cat_fashion": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Fashion Jewelry",
+            "link": ""
+          }
+        },
+        "cat_rings": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Rings",
+            "link": ""
+          }
+        },
+        "cat_earrings": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Earrings",
+            "link": ""
+          }
+        },
+        "cat_necklace": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Necklace",
+            "link": ""
+          }
+        },
+        "cat_bracelets": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Bracelets",
+            "link": ""
+          }
+        },
+        "cat_artisanal": {
+          "type": "card",
+          "settings": {
+            "title": "Artisanal Jewelry",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "cat_fashion",
+        "cat_rings",
+        "cat_earrings",
+        "cat_necklace",
+        "cat_bracelets",
+        "cat_artisanal"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "heading": "What We Can Produce",
+        "heading_preset": "h2",
+        "description": "<p>Explore the jewelry categories we can develop for brand and wholesale projects, from core commercial styles to more expressive artisanal concepts.</p>",
+        "body_preset": "h5",
+        "background_color": "#f8f7f4",
+        "card_title_preset": "h3",
+        "mobile_columns": 2,
+        "mobile_layout": "carousel",
+        "overlay_opacity": 20,
+        "hover_overlay_opacity": 45,
+        "gap": 16,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "oem_why": {
+      "type": "jewelry-collections-overview",
+      "name": "图文横幅",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "eyebrow": "OEM JEWELLERY SERVICES",
+        "heading": "Why Choose Our OEM Jewellery Manufacturing Services?",
+        "introduction": "<p>A strong OEM program depends on more than manufacturing alone. Design communication, prototyping, material selection, finishing and production review need to work together as one coordinated process.</p><p>Craftaurum supports each project with clear development steps and practical collaboration so your collection can move from concept toward production with fewer gaps between design intent and execution.</p>",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "quote_label": "Start Your OEM Project",
+        "quote_url": "",
+        "catalog_label": "",
+        "catalog_url": "",
+        "heading_preset": "h2",
+        "eyebrow_preset": "h5",
+        "body_preset": "h5",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "process_1": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "Consultation & Conceptualization",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "OUR OEM JEWELLERY MANUFACTURING PROCESS: UNVEILING CRAFTSMANSHIP",
+        "top_label": "",
+        "subtitle_preset": "h5",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Every OEM project starts with understanding the brand, target market and design direction behind the collection. References, sketches, product ideas and commercial requirements are reviewed together so the development path is clear before sampling begins.</p><p>This early stage establishes the design intent and gives both sides a shared foundation for the work ahead.</p>",
+        "body_preset": "h5",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "cta_label": "Get A Quick Quote",
+        "cta_url": "",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "process_2": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "Design & Prototyping",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "STEP 02",
+        "top_label": "",
+        "subtitle_preset": "h5",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Concepts are translated into workable jewelry designs through sketches, digital development and prototype review. The goal is to refine proportion, construction and visual details before the design moves into repeat production.</p><p>Sampling gives the project a tangible checkpoint where design intent can be compared against the real product.</p>",
+        "body_preset": "h5",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "cta_label": "",
+        "cta_url": "",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "process_3": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "Material Selection",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "STEP 03",
+        "top_label": "",
+        "subtitle_preset": "h5",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Material choices are reviewed against the intended design, positioning and finishing direction of the collection. Depending on the project, this may include sterling silver, brass, gold directions, stones, pearls and other decorative elements.</p><p>The focus is on selecting combinations that support both the visual result and the practical requirements of the finished piece.</p>",
+        "body_preset": "h5",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "cta_label": "",
+        "cta_url": "",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "process_4": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "Precision Manufacturing",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "STEP 04",
+        "top_label": "",
+        "subtitle_preset": "h5",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Once the design and sample direction are confirmed, production follows the agreed construction and finishing specifications. Attention is given to forming, setting, polishing, assembly and other process details that influence the final appearance of the jewelry.</p><p>Clear production specifications help keep repeat pieces aligned with the approved sample.</p>",
+        "body_preset": "h5",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "cta_label": "",
+        "cta_url": "",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "process_5": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "Quality Assurance",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "STEP 05",
+        "top_label": "",
+        "subtitle_preset": "h5",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Quality review is built around the specifications agreed during development. Materials, construction, surface finish and key visual details are checked against the approved direction before the project moves forward.</p><p>This stage helps maintain consistency between the design intention, sample standard and finished production.</p>",
+        "body_preset": "h5",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "cta_label": "",
+        "cta_url": "",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "process_6": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "Customization & Branding",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "STEP 06",
+        "top_label": "",
+        "subtitle_preset": "h5",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>OEM development can incorporate brand-specific details such as logo treatments, custom forms, finish directions and other identity elements that help the final jewelry feel connected to your collection.</p><p>The aim is to carry the brand direction through the product itself rather than treating customization as a final decorative step.</p>",
+        "body_preset": "h5",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "cta_label": "Start Your Inquiry",
+        "cta_url": "",
+        "cta_button_style": "button-secondary",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "oem_advantages": {
+      "type": "icon-with-text",
+      "name": "图标文字",
+      "blocks": {
+        "craft": {
+          "type": "item",
+          "settings": {
+            "icon": "star",
+            "icon_color": "#c7a85e",
+            "title": "Unparalleled Craftsmanship",
+            "description": "<p>Each piece is developed with attention to construction, finishing and the small details that shape the final result.</p>"
+          }
+        },
+        "tailored": {
+          "type": "item",
+          "settings": {
+            "icon": "ruler",
+            "icon_color": "#c7a85e",
+            "title": "Tailored Solutions",
+            "description": "<p>From concept through production planning, development is shaped around the design direction and practical needs of your brand.</p>"
+          }
+        },
+        "quality": {
+          "type": "item",
+          "settings": {
+            "icon": "check_box",
+            "icon_color": "#c7a85e",
+            "title": "Strict Quality Standards",
+            "description": "<p>Material, construction and finish details are reviewed against the agreed project specifications before production approval.</p>"
+          }
+        },
+        "collaboration": {
+          "type": "item",
+          "settings": {
+            "icon": "chat_bubble",
+            "icon_color": "#c7a85e",
+            "title": "Clear Collaboration",
+            "description": "<p>Clear communication and review points keep both sides aligned throughout development, sampling and production.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "craft",
+        "tailored",
+        "quality",
+        "collaboration"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "style_preset": "left",
+        "icon_position": "top",
+        "icon_size": 32,
+        "icon_gap": 16,
+        "column_gap": 32,
+        "eyebrow": "WHY WORK WITH CRAFTAURUM",
+        "eyebrow_preset": "h5",
+        "heading": "OEM Jewellery Manufacturing Support",
+        "heading_preset": "h2",
+        "description": "<p>A practical OEM partnership depends on craftsmanship, customization, clear standards and open communication throughout the project.</p>",
+        "body_preset": "h5",
+        "item_title_preset": "h4",
+        "desktop_columns": "4",
+        "mobile_columns": "1",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "contact": {
+      "type": "section",
+      "blocks": {
+        "contact_heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Start Your OEM Jewellery Project</h2><p>Share your references, target materials, quantities and project requirements with our team.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "contact_form": {
+          "type": "contact-form",
+          "settings": {
+            "width": "custom",
+            "custom_width": 100,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100,
+            "input_style": "default",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "submit-button": {
+              "type": "contact-form-submit-button",
+              "static": true,
+              "settings": {
+                "label": "Submit",
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "block_order": [
+        "contact_heading",
+        "contact_form"
+      ],
+      "name": "t:names.contact_form",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#ffffff",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "padding-block-start": 56,
+        "padding-block-end": 84
+      }
+    }
+  },
+  "order": [
+    "main",
+    "oem_hero",
+    "oem_categories",
+    "oem_why",
+    "process_1",
+    "process_2",
+    "process_3",
+    "process_4",
+    "process_5",
+    "process_6",
+    "oem_advantages",
+    "contact"
+  ]
+}
