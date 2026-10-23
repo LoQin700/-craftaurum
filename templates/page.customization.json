@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -76,7 +85,6 @@
     },
     "capabilities": {
       "type": "content-cards",
-      "name": "图文卡片",
       "blocks": {
         "plated": {
           "type": "card",
@@ -147,6 +155,7 @@
         "polishing",
         "private_label"
       ],
+      "name": "图文卡片",
       "settings": {
         "section_width": "page-width",
         "background_color": "#ffffff",
@@ -195,7 +204,6 @@
     },
     "options": {
       "type": "icon-with-text",
-      "name": "图标文字",
       "blocks": {
         "opt_design": {
           "type": "item",
@@ -260,13 +268,14 @@
         "opt_brand",
         "opt_label"
       ],
+      "name": "图标文字",
       "settings": {
         "section_width": "page-width",
         "background_color": "#f8f7f4",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
-        "style_preset": "left",
-        "icon_position": "top",
+        "style_preset": "centered",
+        "icon_position": "left",
         "icon_size": 32,
         "icon_gap": 16,
         "column_gap": 32,
@@ -295,8 +304,8 @@
         "heading_preset": "h2",
         "heading_position": "content",
         "subtitle": "HIGH END JEWELRY MANUFACTURING PROCESS",
-        "subtitle_preset": "h5",
         "top_label": "",
+        "subtitle_preset": "h5",
         "top_url": "",
         "top_button_style": "button",
         "body": "<p>The process starts with your references, design ideas, product requirements and commercial goals. We review what you want to create, where clarification is needed and which details should be confirmed before design development begins.</p><p>Clear communication at this stage reduces unnecessary revisions later in the project.</p>",
@@ -322,8 +331,8 @@
         "heading_preset": "h2",
         "heading_position": "content",
         "subtitle": "STEP 02",
-        "subtitle_preset": "h5",
         "top_label": "",
+        "subtitle_preset": "h5",
         "top_url": "",
         "top_button_style": "button",
         "body": "<p>Design direction is refined around shape, texture, proportion, color and surface treatment. References are translated into clearer product decisions so the concept can move toward a manufacturable design.</p>",
@@ -349,8 +358,8 @@
         "heading_preset": "h2",
         "heading_position": "content",
         "subtitle": "STEP 03",
-        "subtitle_preset": "h5",
         "top_label": "",
+        "subtitle_preset": "h5",
         "top_url": "",
         "top_button_style": "button",
         "body": "<p>3D development provides a clearer view of proportion, construction and visual details before physical sampling. It creates a useful checkpoint for refining the design and aligning expectations before the next stage.</p>",
@@ -376,8 +385,8 @@
         "heading_preset": "h2",
         "heading_position": "content",
         "subtitle": "STEP 04",
-        "subtitle_preset": "h5",
         "top_label": "",
+        "subtitle_preset": "h5",
         "top_url": "",
         "top_button_style": "button",
         "body": "<p>A physical sample lets you review the product in hand before repeat production. Proportion, construction, fit, surface finish and other key details can be checked against the approved design direction.</p>",
@@ -403,8 +412,8 @@
         "heading_preset": "h2",
         "heading_position": "content",
         "subtitle": "STEP 05",
-        "subtitle_preset": "h5",
         "top_label": "",
+        "subtitle_preset": "h5",
         "top_url": "",
         "top_button_style": "button",
         "body": "<p>After the sample direction is confirmed, production follows the agreed design and specification. Key manufacturing and finishing details are organized around the approved reference so the collection can move into repeat production with a clear standard.</p>",
@@ -430,8 +439,8 @@
         "heading_preset": "h2",
         "heading_position": "content",
         "subtitle": "STEP 06",
-        "subtitle_preset": "h5",
         "top_label": "",
+        "subtitle_preset": "h5",
         "top_url": "",
         "top_button_style": "button",
         "body": "<p>Once production and final review are complete, the project moves into packing and delivery coordination. Shipment requirements can be aligned with the needs of the order and destination.</p>",
@@ -447,7 +456,6 @@
     },
     "why_customize": {
       "type": "icon-with-text",
-      "name": "图标文字",
       "blocks": {
         "why_design": {
           "type": "item",
@@ -492,6 +500,7 @@
         "why_sample",
         "why_clear"
       ],
+      "name": "图标文字",
       "settings": {
         "section_width": "page-width",
         "background_color": "#f8f7f4",
@@ -517,7 +526,6 @@
     },
     "requirements": {
       "type": "icon-with-text",
-      "name": "图标文字",
       "blocks": {
         "req_sketch": {
           "type": "item",
@@ -592,6 +600,7 @@
         "req_market",
         "req_time"
       ],
+      "name": "图标文字",
       "settings": {
         "section_width": "page-width",
         "background_color": "#ffffff",
@@ -650,7 +659,13 @@
             "custom_width": 100,
             "width_mobile": "custom",
             "custom_width_mobile": 100,
+            "background_color": "",
             "input_style": "default",
+            "input_background_color": "{{ settings.color_palette.background }}",
+            "input_text_color": "{{ settings.color_palette.foreground }}",
+            "input_border_color": "{{ settings.color_palette.foreground }}",
+            "border_width": 1,
+            "border_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
@@ -663,6 +678,9 @@
               "settings": {
                 "label": "Submit",
                 "style_class": "button",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
                 "width": "fit-content",
                 "custom_width": 100,
                 "width_mobile": "fit-content",
@@ -689,6 +707,7 @@
         "vertical_alignment_flex_direction_column": "center",
         "gap": 32,
         "section_width": "page-width",
+        "section_height": "",
         "section_height_custom": 50,
         "background_media": "none",
         "background_color": "#ffffff",
@@ -701,6 +720,7 @@
         "border": "none",
         "border_width": 1,
         "border_opacity": 100,
+        "border_color": "",
         "border_radius": 0,
         "padding-block-start": 56,
         "padding-block-end": 84
