@@ -1,0 +1,390 @@
+{% comment %}
+  Generic interactive text/image feature.
+  Desktop: vertically stacked capability items on the left, active image on the right.
+  Hover, focus and click switch the image. Mobile uses tap/focus with the image below the list.
+{% endcomment %}
+{{ 'craftaurum-interactive-feature.js' | asset_url | script_tag }}
+<section
+  id="InteractiveFeature-{{ section.id }}"
+  class="section section--{{ section.settings.section_width | default: 'page-width' }} spacing-style ca-interactive"
+  style="--padding-block-start: {{ section.settings.padding_top }}px; --padding-block-end: {{ section.settings.padding_bottom }}px;"
+>
+  <craftaurum-interactive-feature class="ca-interactive__component">
+    <header class="ca-interactive__intro">
+      {% if section.settings.eyebrow != blank %}
+        <p class="ca-interactive__eyebrow {{ section.settings.eyebrow_preset | default: 'h5' }}">{{ section.settings.eyebrow | escape }}</p>
+      {% endif %}
+      {% if section.settings.heading != blank %}
+        <h2 class="ca-interactive__heading {{ section.settings.heading_preset | default: 'h2' }}">{{ section.settings.heading | escape }}</h2>
+      {% endif %}
+      {% if section.settings.description != blank %}
+        <div class="ca-interactive__description rte {{ section.settings.body_preset | default: 'h5' }}">{{ section.settings.description }}</div>
+      {% endif %}
+    </header>
+
+    <div class="ca-interactive__layout">
+      <div class="ca-interactive__list" role="tablist" aria-label="{{ section.settings.heading | escape }}">
+        {% for block in section.blocks %}
+          <button
+            type="button"
+            class="ca-interactive__item{% if forloop.first %} is-active{% endif %}"
+            data-capability-item
+            role="tab"
+            aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+            aria-controls="CapabilityPanel-{{ section.id }}-{{ block.id }}"
+            {{ block.shopify_attributes }}
+          >
+            <span class="ca-interactive__number">{{ forloop.index | prepend: '0' }}</span>
+            <span class="ca-interactive__copy">
+              {% if block.settings.title != blank %}
+                <span class="ca-interactive__title {{ section.settings.item_title_preset | default: 'h4' }}">{{ block.settings.title | escape }}</span>
+              {% endif %}
+              {% if block.settings.description != blank %}
+                <span class="ca-interactive__text {{ section.settings.body_preset | default: 'h5' }}">{{ block.settings.description | strip_html }}</span>
+              {% endif %}
+            </span>
+          </button>
+        {% endfor %}
+      </div>
+
+      <div class="ca-interactive__visual">
+        {% for block in section.blocks %}
+          <div
+            id="CapabilityPanel-{{ section.id }}-{{ block.id }}"
+            class="ca-interactive__panel{% if forloop.first %} is-active{% endif %}"
+            data-capability-panel
+            role="tabpanel"
+            aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}"
+          >
+            {% if block.settings.image != blank %}
+              {{
+                block.settings.image
+                | image_url: width: 1600
+                | image_tag:
+                  loading: 'lazy',
+                  class: 'ca-interactive__image',
+                  widths: '420, 640, 860, 1100, 1400, 1600',
+                  sizes: '(min-width: 750px) 48vw, 100vw'
+              }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'ca-interactive__placeholder' }}
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </craftaurum-interactive-feature>
+</section>
+
+{% stylesheet %}
+  .ca-interactive__component { display: block; }
+  .ca-interactive__intro { max-width: 900px; margin: 0 auto 34px; text-align: center; }
+  .ca-interactive__eyebrow { margin: 0 0 10px; color: var(--color-accent, #C7A85E); letter-spacing: .14em; text-transform: uppercase; }
+  .ca-interactive__heading { margin: 0 0 14px; }
+  .ca-interactive__description :is(p,ul,ol) { font-size: inherit; line-height: inherit; }
+  .ca-interactive__description p { margin: 0; }
+
+  .ca-interactive__layout {
+    display: grid;
+    grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
+    gap: clamp(28px, 5vw, 76px);
+    align-items: stretch;
+  }
+  .ca-interactive__list { display: flex; flex-direction: column; border-top: 1px solid rgb(var(--color-foreground-rgb) / .18); }
+  .ca-interactive__item {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 42px minmax(0,1fr);
+    gap: 14px;
+    align-items: start;
+    padding: 22px 0;
+    text-align: left;
+    color: var(--color-foreground);
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid rgb(var(--color-foreground-rgb) / .18);
+    cursor: pointer;
+    transition: color .22s ease, padding-inline-start .22s ease;
+  }
+  .ca-interactive__number {
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: .08em;
+    color: var(--color-accent, #C7A85E);
+  }
+  .ca-interactive__copy { display: grid; gap: 7px; }
+  .ca-interactive__title { display: block; }
+  .ca-interactive__text { display: block; line-height: 1.65; opacity: .7; }
+  .ca-interactive__item:is(:hover, :focus-visible, .is-active) {
+    color: var(--color-accent, #C7A85E);
+    padding-inline-start: 8px;
+  }
+  .ca-interactive__item.is-active .ca-interactive__text { color: var(--color-foreground); opacity: .78; }
+  .ca-interactive__item:focus-visible { outline: 2px solid var(--color-accent, #C7A85E); outline-offset: 3px; }
+
+  .ca-interactive__visual { position: relative; min-height: 520px; overflow: hidden; background: rgb(var(--color-foreground-rgb) / .04); }
+  .ca-interactive__panel {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: scale(1.018);
+    pointer-events: none;
+    transition: opacity .36s ease, transform .36s ease;
+  }
+  .ca-interactive__panel.is-active { opacity: 1; transform: scale(1); pointer-events: auto; }
+  .ca-interactive__image,
+  .ca-interactive__placeholder { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .ca-interactive__placeholder { color: rgb(var(--color-foreground-rgb) / .18); }
+
+  @media screen and (max-width: 749px) {
+    .ca-interactive__intro { text-align: left; margin-bottom: 24px; }
+    .ca-interactive__layout { grid-template-columns: minmax(0,1fr); gap: 20px; }
+    .ca-interactive__item { grid-template-columns: 34px minmax(0,1fr); padding: 18px 0; }
+    .ca-interactive__item:is(:hover, :focus-visible, .is-active) { padding-inline-start: 0; }
+    .ca-interactive__visual { min-height: 0; aspect-ratio: 4 / 3; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ca-interactive__item,
+    .ca-interactive__panel { transition: none; }
+  }
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "交互图文",
+  "tag": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "内容宽度",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "页面宽度"
+        },
+        {
+          "value": "full-width",
+          "label": "全宽"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "小标题",
+      "default": "WHY CHOOSE OUR RINGS"
+    },
+    {
+      "type": "select",
+      "id": "eyebrow_preset",
+      "label": "小标题字号",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h5"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "标题",
+      "default": "Focused Capabilities for Custom Ring Development"
+    },
+    {
+      "type": "select",
+      "id": "heading_preset",
+      "label": "标题字号",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "正文",
+      "default": "<p>Explore the details that shape a ring collection, from materials and setting choices to design development and production review.</p>"
+    },
+    {
+      "type": "select",
+      "id": "body_preset",
+      "label": "正文字号",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h5"
+    },
+    {
+      "type": "select",
+      "id": "item_title_preset",
+      "label": "项目标题字号",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h4"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "上边距",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "下边距",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "项目",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "Materials & Finishing"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "正文",
+          "default": "<p>Review metal choices, surface finishes and stone-setting directions for your design.</p>"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "交互图文",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
