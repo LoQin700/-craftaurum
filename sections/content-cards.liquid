@@ -248,14 +248,6 @@
 {% schema %}
 {
   "name": "图文卡片",
-  "tag": "section",
-  "class": "craftaurum-content-cards-section",
-  "disabled_on": {
-    "groups": [
-      "header",
-      "footer"
-    ]
-  },
   "settings": [
     {
       "type": "select",
@@ -454,13 +446,28 @@
       "default": "grid"
     },
     {
-      "type": "range",
+      "type": "select",
       "id": "desktop_columns",
       "label": "桌面端每行数量",
-      "min": 2,
-      "max": 5,
-      "step": 1,
-      "default": 4
+      "options": [
+        {
+          "value": "2",
+          "label": "2 列"
+        },
+        {
+          "value": "3",
+          "label": "3 列"
+        },
+        {
+          "value": "4",
+          "label": "4 列"
+        },
+        {
+          "value": "5",
+          "label": "5 列"
+        }
+      ],
+      "default": "4"
     },
     {
       "type": "select",
@@ -520,9 +527,9 @@
       "label": "卡片间距",
       "min": 0,
       "max": 40,
-      "step": 2,
+      "step": 4,
       "unit": "px",
-      "default": 18
+      "default": 20
     },
     {
       "type": "range",
@@ -606,11 +613,9 @@
       ]
     }
   ],
-  "max_blocks": 20,
   "presets": [
     {
       "name": "图文卡片",
-      "category": "图片",
       "blocks": [
         {
           "type": "card",
