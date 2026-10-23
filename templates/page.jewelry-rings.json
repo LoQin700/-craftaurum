@@ -80,6 +80,22 @@
         "padding_bottom": 40
       }
     },
+    "horizontal_cta_Pwad7F": {
+      "type": "horizontal-cta",
+      "name": "横向 CTA",
+      "settings": {
+        "section_width": "full-width",
+        "heading": "From design concept to custom jewelry production.",
+        "heading_preset": "h3",
+        "description": "<p>One clear process, developed around the needs of your collection.</p>",
+        "body_preset": "h5",
+        "button_label": "Discover Our Process",
+        "button_link": "",
+        "button_style": "button-secondary",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "interactive_feature_cFYGmj": {
       "type": "interactive-feature",
       "blocks": {
@@ -131,11 +147,36 @@
         "padding_top": 56,
         "padding_bottom": 56
       }
+    },
+    "image_text_feature_pyXify": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "heading": "Custom Jewelry Manufacturing",
+        "heading_preset": "h2",
+        "heading_position": "top",
+        "subtitle": "",
+        "top_label": "Explore Our Craft",
+        "subtitle_preset": "h3",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Discover thoughtful jewelry craftsmanship and flexible custom design services at Craftaurum.</p>",
+        "body_preset": "h5",
+        "image_position": "right",
+        "cta_label": "Start Your Project",
+        "cta_url": "",
+        "cta_button_style": "button",
+        "padding_top": 32,
+        "padding_bottom": 32
+      }
     }
   },
   "order": [
     "main",
     "jewelry_collections_overview_tkTByC",
-    "interactive_feature_cFYGmj"
+    "horizontal_cta_Pwad7F",
+    "interactive_feature_cFYGmj",
+    "image_text_feature_pyXify"
   ]
 }
