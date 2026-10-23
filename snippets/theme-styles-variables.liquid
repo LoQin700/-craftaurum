@@ -587,6 +587,8 @@
     /* Button font-family */
     --button-font-family-primary: var(--font-{{ settings.type_font_button_primary }}--family);
     --button-font-family-secondary: var(--font-{{ settings.type_font_button_secondary }}--family);
+    --button-font-size-primary: {{ settings.button_font_size_primary | default: 16 }}px;
+    --button-font-size-secondary: {{ settings.button_font_size_secondary | default: 16 }}px;
 
     /* Button text case */
     --button-text-case: {{ settings.button_text_case }};
@@ -713,15 +715,18 @@
 %}
 
 {% style %}
-  @media (max-width: 749px) {
+  @media screen and (max-width: 749px) {
     :root {
-      {% if settings.mobile_type_size_paragraph != blank and settings.mobile_type_size_paragraph != 'inherit' %}--font-paragraph--size: {{ settings.mobile_type_size_paragraph | divided_by: 16.0 }}rem;{% endif %}
-      {% if settings.mobile_type_size_h1 != blank and settings.mobile_type_size_h1 != 'inherit' %}--font-h1--size: {{ settings.mobile_type_size_h1 | divided_by: 16.0 }}rem;{% endif %}
-      {% if settings.mobile_type_size_h2 != blank and settings.mobile_type_size_h2 != 'inherit' %}--font-h2--size: {{ settings.mobile_type_size_h2 | divided_by: 16.0 }}rem;{% endif %}
-      {% if settings.mobile_type_size_h3 != blank and settings.mobile_type_size_h3 != 'inherit' %}--font-h3--size: {{ settings.mobile_type_size_h3 | divided_by: 16.0 }}rem;{% endif %}
-      {% if settings.mobile_type_size_h4 != blank and settings.mobile_type_size_h4 != 'inherit' %}--font-h4--size: {{ settings.mobile_type_size_h4 | divided_by: 16.0 }}rem;{% endif %}
-      {% if settings.mobile_type_size_h5 != blank and settings.mobile_type_size_h5 != 'inherit' %}--font-h5--size: {{ settings.mobile_type_size_h5 | divided_by: 16.0 }}rem;{% endif %}
-      {% if settings.mobile_type_size_h6 != blank and settings.mobile_type_size_h6 != 'inherit' %}--font-h6--size: {{ settings.mobile_type_size_h6 | divided_by: 16.0 }}rem;{% endif %}
+      {% comment %}Set mobile tokens explicitly, independent of desktop font sizes.{% endcomment %}
+      {% assign mobile_font_names = 'paragraph,h1,h2,h3,h4,h5,h6' | split: ',' %}
+      {% for mobile_font_name in mobile_font_names %}
+        {% assign setting_name = 'mobile_type_size_' | append: mobile_font_name %}
+        {% assign font_size_px = settings[setting_name] | default: 14 %}
+        --font-size--{{ mobile_font_name }}: {{ font_size_px | divided_by: 16.0 }}rem;
+        --font-{{ mobile_font_name }}--size: var(--font-size--{{ mobile_font_name }});
+      {% endfor %}
+      --button-font-size-primary: {{ settings.button_font_size_primary_mobile | default: 14 }}px;
+      --button-font-size-secondary: {{ settings.button_font_size_secondary_mobile | default: 14 }}px;
     }
   }
 {% endstyle %}
