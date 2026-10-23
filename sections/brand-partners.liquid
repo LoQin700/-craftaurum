@@ -1,139 +1,136 @@
 {% comment %}
-  Reusable brand partner logo carousel. Images are uploaded in Theme Editor.
-  Each instance is isolated and uses native Horizon typography/placeholders.
+  Logo image carousel, powered by Horizon slideshow-component.
+  Existing block image IDs and setting IDs remain intact.
 {% endcomment %}
-<section id="BrandPartners-{{ section.id }}" class="brand-partners section section--page-width" style="--bp-gap:10px;--bp-top:{{ section.settings.padding_top }}px;--bp-bottom:{{ section.settings.padding_bottom }}px;" aria-label="{{ section.settings.heading | escape }}">
-  <div class="brand-partners__intro">
-    {% if section.settings.heading != blank %}
-      <h2 class="brand-partners__heading {{ section.settings.heading_preset | default: 'h2' }}">{{ section.settings.heading | escape }}</h2>
+<div
+  id="BrandPartners-{{ section.id }}"
+  class="section section--page-width spacing-style ca-logos"
+  style="
+    --padding-block-start: {{ section.settings.padding_top }}px;
+    --padding-block-end: {{ section.settings.padding_bottom }}px;
+    --ca-logo-gap: {{ section.settings.columns_gap | default: 10 }}px;
+    --ca-logo-mobile-columns: {{ section.settings.mobile_columns | default: 1 }};
+  "
+>
+  <div class="ca-logos__inner">
+    <header class="ca-logos__intro">
+      {% if section.settings.heading != blank %}
+        <h2 class="{{ section.settings.heading_preset | default: 'h2' }} ca-logos__heading">
+          {{ section.settings.heading | escape }}
+        </h2>
+      {% endif %}
+      {% if section.settings.description != blank %}
+        <div class="ca-logos__description rte {{ section.settings.description_preset | default: 'h4' }}">
+          {{ section.settings.description }}
+        </div>
+      {% endif %}
+    </header>
+    {% if section.blocks.size > 0 %}
+      {% capture logo_slides %}
+        {% for block in section.blocks %}
+          {% capture logo_content %}
+            <div class="ca-logos__tile">
+              {% if block.settings.image != blank %}
+                {{
+                  block.settings.image
+                  | image_url: width: 1000
+                  | image_tag:
+                    class: 'ca-logos__image',
+                    loading: 'lazy',
+                    widths: '180, 280, 400, 600, 800, 1000',
+                    sizes: '(min-width: 750px) 31vw, 100vw'
+                }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'ca-logos__placeholder' }}
+              {% endif %}
+            </div>
+          {% endcapture %}
+          {% render 'slideshow-slide',
+            index: forloop.index0,
+            children: logo_content,
+            class: 'ca-logos__slide',
+            attributes: block.shopify_attributes
+          %}
+        {% endfor %}
+      {% endcapture %}
+      {% if section.blocks.size > 1 %}
+        {% capture logo_controls %}
+          {% render 'slideshow-controls',
+            style: 'dots',
+            item_count: section.blocks.size,
+            show_arrows: false,
+            autoplay: false,
+            pagination_position: 'center'
+          %}
+        {% endcapture %}
+      {% endif %}
+      <div class="ca-logos__carousel{% if section.settings.mobile_layout == 'grid' %} ca-logos__carousel--mobile-grid{% endif %}">
+        {% render 'slideshow',
+          class: 'ca-logos__slideshow',
+          slides: logo_slides,
+          controls: logo_controls,
+          slide_count: section.blocks.size,
+          show_arrows: true,
+          icon_style: 'chevron',
+          icon_shape: 'none',
+          infinite: true,
+          autoplay: section.settings.autoplay,
+          autoplay_speed: section.settings.autoplay_speed
+        %}
+      </div>
     {% endif %}
-    {% if section.settings.description != blank %}
-      <div class="brand-partners__description rte {{ section.settings.description_preset | default: 'h4' }}">{{ section.settings.description }}</div>
+    {% if section.settings.disclaimer != blank %}
+      <p class="ca-logos__disclaimer {{ section.settings.disclaimer_preset | default: 'h5' }}">
+        {{ section.settings.disclaimer | escape }}
+      </p>
     {% endif %}
   </div>
-  {% if section.blocks.size > 0 %}
-    <div class="brand-partners__carousel" data-bp-carousel>
-      <div class="brand-partners__viewport" data-bp-viewport tabindex="0" aria-label="Partner logos">
-        <div class="brand-partners__track">
-          {% for block in section.blocks %}
-            <div class="brand-partners__slide" {{ block.shopify_attributes }}>
-              <div class="brand-partners__image">
-                {% if block.settings.image != blank %}
-                  {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', widths: '200, 400, 600, 800', sizes: '(min-width: 750px) 33vw, 100vw', alt: block.settings.image.alt | default: 'Brand partner logo', class: 'brand-partners__logo' }}
-                {% else %}
-                  {{ 'image' | placeholder_svg_tag: 'brand-partners__placeholder' }}
-                {% endif %}
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
-      {% if section.blocks.size > 1 %}
-        <button type="button" class="brand-partners__arrow brand-partners__arrow--prev" data-bp-prev aria-label="Previous logos"><span aria-hidden="true">&#8249;</span></button>
-        <button type="button" class="brand-partners__arrow brand-partners__arrow--next" data-bp-next aria-label="Next logos"><span aria-hidden="true">&#8250;</span></button>
-        <div class="brand-partners__dots" data-bp-dots aria-label="Logo carousel navigation"></div>
-      {% endif %}
-    </div>
-  {% endif %}
-  {% if section.settings.disclaimer != blank %}
-    <p class="brand-partners__disclaimer {{ section.settings.disclaimer_preset | default: 'h5' }}">{{ section.settings.disclaimer | escape }}</p>
-  {% endif %}
-</section>
-
-<style>
-  #BrandPartners-{{ section.id }} {padding-block:var(--bp-top) var(--bp-bottom);}
-  #BrandPartners-{{ section.id }} .brand-partners__intro {text-align:center;margin:0 auto 20px;max-width:1120px;}
-  #BrandPartners-{{ section.id }} .brand-partners__heading {margin:0 0 15px;}
-  #BrandPartners-{{ section.id }} .brand-partners__description {text-align:center;line-height:1.5;}
-  #BrandPartners-{{ section.id }} .brand-partners__description p {margin:0;font-size:inherit;line-height:inherit;}
-  #BrandPartners-{{ section.id }} .brand-partners__carousel {position:relative;}
-  #BrandPartners-{{ section.id }} .brand-partners__viewport {overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth;overscroll-behavior-inline:contain;}
-  #BrandPartners-{{ section.id }} .brand-partners__viewport::-webkit-scrollbar {display:none;}
-  #BrandPartners-{{ section.id }} .brand-partners__track {display:flex;gap:var(--bp-gap);}
-  #BrandPartners-{{ section.id }} .brand-partners__slide {flex:0 0 calc((100% - 2 * var(--bp-gap)) / 3);min-width:0;scroll-snap-align:start;border:1px solid #e9eaee;aspect-ratio:1/1;}
-  #BrandPartners-{{ section.id }} .brand-partners__image {height:100%;width:100%;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--color-background);}
-  #BrandPartners-{{ section.id }} .brand-partners__logo {display:block;width:100%;height:100%;object-fit:contain;}
-  #BrandPartners-{{ section.id }} .brand-partners__placeholder {height:100%;width:100%;background:rgb(var(--color-foreground-rgb) / .04);color:rgb(var(--color-foreground-rgb) / .18);}
-  #BrandPartners-{{ section.id }} .brand-partners__arrow {position:absolute;top:calc(50% - 22px);transform:translateY(-50%);z-index:1;border:0;background:transparent;color:var(--color-foreground);font:inherit;font-size:33px;line-height:1;width:36px;height:44px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
-  #BrandPartners-{{ section.id }} .brand-partners__arrow--prev {left:0;}
-  #BrandPartners-{{ section.id }} .brand-partners__arrow--next {right:0;}
-  #BrandPartners-{{ section.id }} .brand-partners__arrow:focus-visible {outline:2px solid currentColor;outline-offset:2px;}
-  #BrandPartners-{{ section.id }} .brand-partners__dots {display:flex;align-items:center;justify-content:center;gap:8px;padding-top:14px;}
-  #BrandPartners-{{ section.id }} .brand-partners__dot {display:block;width:7px;height:7px;border-radius:50%;border:0;padding:0;background:currentColor;opacity:.25;cursor:pointer;}
-  #BrandPartners-{{ section.id }} .brand-partners__dot[aria-current="true"] {opacity:.9;}
-  #BrandPartners-{{ section.id }} .brand-partners__disclaimer {text-align:center;margin:16px auto 0;line-height:1.3;color:var(--color-foreground);}
-  @media(max-width:749px) {
-    #BrandPartners-{{ section.id }} .brand-partners__slide {flex-basis:100%;}
-    #BrandPartners-{{ section.id }} .brand-partners__intro {margin-bottom:16px;}
-    #BrandPartners-{{ section.id }} .brand-partners__heading {margin-bottom:12px;}
+</div>
+{% stylesheet %}
+  .ca-logos__inner { min-width: 0; }
+  .ca-logos__intro { text-align: center; max-width: 1060px; margin: 0 auto 22px; }
+  .ca-logos__heading { margin: 0 0 16px; }
+  .ca-logos__description :is(p, ul, ol) { font-size: inherit; line-height: inherit; }
+  .ca-logos__description p { margin: 0; }
+  .ca-logos__slideshow slideshow-slides { gap: var(--ca-logo-gap, 10px); }
+  .ca-logos__slideshow slideshow-slide {
+    flex: 0 0 calc((100% - 2 * var(--ca-logo-gap, 10px)) / 3);
+    width: calc((100% - 2 * var(--ca-logo-gap, 10px)) / 3);
+    min-width: 0;
+    scroll-snap-align: start;
   }
-  @media(prefers-reduced-motion:reduce) {
-    #BrandPartners-{{ section.id }} .brand-partners__viewport {scroll-behavior:auto;}
+  .ca-logos__tile {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid rgb(var(--color-foreground-rgb) / 0.13);
+    background: var(--color-background);
   }
-</style>
-<script>
-(function () {
-  const root = document.getElementById('BrandPartners-{{ section.id }}');
-  if (!root || root.dataset.bpReady === 'true') return;
-  root.dataset.bpReady = 'true';
-  const viewport = root.querySelector('[data-bp-viewport]');
-  const slides = [...root.querySelectorAll('.brand-partners__slide')];
-  const dots = root.querySelector('[data-bp-dots]');
-  if (!viewport || slides.length < 2) return;
-  let timer;
-  let current = 0;
-  let count = 1;
-  const step = () => slides[1].offsetLeft - slides[0].offsetLeft;
-  const visible = () => window.matchMedia('(max-width: 749px)').matches ? 1 : 3;
-  function refresh() {
-    count = Math.max(1, slides.length - visible() + 1);
-    current = Math.min(current, count - 1);
-    if (dots) {
-      dots.replaceChildren();
-      for (let i = 0; i < count; i++) {
-        const dot = document.createElement('button');
-        dot.type = 'button'; dot.className = 'brand-partners__dot';
-        dot.setAttribute('aria-label', 'Go to logo ' + (i + 1));
-        dot.setAttribute('aria-current', String(i === current));
-        dot.addEventListener('click', () => go(i));
-        dots.appendChild(dot);
-      }
+  .ca-logos__image { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .ca-logos__placeholder {
+    display: block; height: 100%; width: 100%;
+    color: rgb(var(--color-foreground-rgb) / 0.2);
+    background: rgb(var(--color-foreground-rgb) / 0.04);
+  }
+  .ca-logos__disclaimer { text-align: center; margin: 18px auto 0; }
+  .ca-logos__carousel slideshow-arrows { pointer-events: none; }
+  .ca-logos__carousel slideshow-arrows button { pointer-events: auto; }
+  @media screen and (max-width: 749px) {
+    .ca-logos__intro { margin-bottom: 18px; }
+    .ca-logos__slideshow slideshow-slide {
+      flex-basis: calc((100% - (var(--ca-logo-mobile-columns) - 1) * var(--ca-logo-gap)) / var(--ca-logo-mobile-columns));
+      width: calc((100% - (var(--ca-logo-mobile-columns) - 1) * var(--ca-logo-gap)) / var(--ca-logo-mobile-columns));
     }
-    root.querySelectorAll('.brand-partners__arrow').forEach(b => b.hidden = count < 2);
-    viewport.scrollTo({left: current * step(), behavior:'instant'});
+    .ca-logos__carousel--mobile-grid slideshow-slides {
+      display: grid;
+      grid-template-columns: repeat(var(--ca-logo-mobile-columns), minmax(0,1fr));
+    }
+    .ca-logos__carousel--mobile-grid slideshow-slide { width: 100%; }
+    .ca-logos__carousel--mobile-grid :is(slideshow-arrows, slideshow-controls) { display: none; }
   }
-  function go(index) {
-    current = (index + count) % count;
-    viewport.scrollTo({left: current * step(), behavior: 'smooth'});
-    dots?.querySelectorAll('button').forEach((b, i) => b.setAttribute('aria-current', String(i === current)));
-  }
-  root.querySelector('[data-bp-prev]')?.addEventListener('click', () => go(current - 1));
-  root.querySelector('[data-bp-next]')?.addEventListener('click', () => go(current + 1));
-  let scrollTimeout;
-  viewport.addEventListener('scroll', () => {
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      current = Math.max(0, Math.min(count - 1, Math.round(viewport.scrollLeft / Math.max(step(),1))));
-      dots?.querySelectorAll('button').forEach((b, i) => b.setAttribute('aria-current', String(i === current)));
-    }, 90);
-  }, {passive:true});
-  function stop() {clearInterval(timer);}
-  function start() {
-    stop();
-    if ({{ section.settings.autoplay | json }} && count > 1 && !window.matchMedia('(prefers-reduced-motion: reduce)').matches && !document.hidden)
-      timer = setInterval(() => go(current + 1), {{ section.settings.autoplay_speed | times: 1000 | json }});
-  }
-  viewport.addEventListener('mouseenter', stop);
-  viewport.addEventListener('mouseleave', start);
-  viewport.addEventListener('focusin', stop);
-  viewport.addEventListener('focusout', start);
-  const resize = new ResizeObserver(() => {refresh();start();});
-  resize.observe(viewport);
-  document.addEventListener('visibilitychange', () => document.hidden ? stop() : start());
-  document.addEventListener('shopify:section:unload', event => {if (event.detail?.sectionId === {{ section.id | json }}) {stop();resize.disconnect();}});
-  refresh(); start();
-})();
-</script>
+{% endstylesheet %}
 {% schema %}
 {
   "name": "图片轮播",
@@ -293,6 +290,41 @@
       "step": 4,
       "unit": "px",
       "default": 20
+    },
+    {
+      "type": "range",
+      "id": "columns_gap",
+      "label": "图片间距",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "mobile_columns",
+      "label": "手机每行数量",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "手机显示方式",
+      "options": [
+        {
+          "value": "grid",
+          "label": "网格"
+        },
+        {
+          "value": "carousel",
+          "label": "轮播"
+        }
+      ],
+      "default": "carousel"
     }
   ],
   "blocks": [
