@@ -352,3 +352,13 @@
 - Copy direction was adapted from Sunrise Customization page while avoiding unverified factory/turnaround/logistics claims.
 - Images remain empty for Theme Editor upload.
 - Strict template/schema validation PASS: all custom setting IDs, select values, range values and Horizon icon values are valid.
+
+## 2026-10-24 · Contact Form 全站统一
+- 根因确认：同一个 Horizon 原生 Contact Section 在不同页面模板中保存了不同实例参数，且 `craftaurum-contact.css` 原先只在 `jewelry-collections` / `contact` 两个模板加载。
+- 旧 Jewelry 页面 Contact desktop `custom_width=50`，OEM / Customization 为 100%；Section padding / background 也不同。
+- 部分旧实例未显式保存新增的 `follow_section_width`，因此 Liquid 中被视为 false，继续走旧的 size-style 宽度。
+- 已统一以下模板：contact、jewelry-collections、jewelry-rings、jewelry-fashion、jewelry-earrings、jewelry-necklace、jewelry-bracelets、jewelry-artisanal、oem-jewellery、customization。
+- 统一值：section_width=page-width、background=#fff、padding 56/84、follow_section_width=true、desktop/mobile width=100%、input_style=default。
+- `layout/theme.liquid` 已让上述所有页面加载同一份 `craftaurum-contact.css`。
+- `craftaurum-contact.css` 移除固定 max-width:900px，表单宽度现在真正跟随 Section 的页面宽度 / 全宽设置。
+- 页面标题文案仍可各自不同，但 Contact 的视觉与宽度逻辑统一。
