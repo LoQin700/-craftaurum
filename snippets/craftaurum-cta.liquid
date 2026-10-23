@@ -1,0 +1,55 @@
+{%- doc -%}
+  Shared navigational CTA for Horizon blocks and Craftaurum sections.
+  Functional controls (cart, slider, forms) deliberately remain native.
+  Params: label, link, style_class, block, static_label, show_indicator, class.
+{%- enddoc -%}
+{%- liquid
+  assign cta_label = label | default: block.settings.label
+  assign cta_link = link | default: block.settings.link
+  assign cta_style = style_class | default: block.settings.style_class | default: 'button'
+  assign cta_indicator = show_indicator | default: true
+  assign cta_block_id = block.id
+  assign is_static = false
+  if static_label and cta_link == blank
+    assign is_static = true
+  endif
+-%}
+{%- if cta_label != blank -%}
+  {%- if block != blank -%}
+    {% render 'button-custom-styles', block_settings: block.settings, block_id: cta_block_id %}
+  {%- endif -%}
+  {%- if is_static -%}
+    <span class="ca-cta ca-cta--static {{ cta_style }} {{ class }}">
+      {% if cta_indicator %}<span class="ca-cta__mark" aria-hidden="true">»</span>{% endif %}
+      <span class="ca-cta__label">{{ cta_label | escape }}</span>
+    </span>
+  {%- else -%}
+    <a
+      class="ca-cta {{ cta_style }} {{ class }}{% if block != blank %} size-style {{ cta_style }}--{{ cta_block_id }}{% endif %}"
+      {% if cta_link != blank %}href="{{ cta_link }}"{% else %}role="link" aria-disabled="true"{% endif %}
+      {% if block != blank %}
+        style="{% render 'size-style', settings: block.settings %}"
+        {% if block.settings.open_in_new_tab and cta_link != blank %}target="_blank" rel="noopener noreferrer"{% endif %}
+        {{ block.shopify_attributes }}
+      {% endif %}
+    >
+      {% if cta_indicator %}<span class="ca-cta__mark" aria-hidden="true">»</span>{% endif %}
+      <span class="ca-cta__label">{{ cta_label | escape }}</span>
+    </a>
+  {%- endif -%}
+{%- endif -%}
+{% stylesheet %}
+  .ca-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    text-align: center;
+    max-width: 100%;
+    white-space: normal;
+  }
+  .ca-cta__mark { flex: none; line-height: 1; font-size: 1.15em; }
+  .ca-cta__label { min-width: 0; }
+  .ca-cta--static { cursor: default; }
+  .ca-cta[aria-disabled="true"] { cursor: default; }
+{% endstylesheet %}
