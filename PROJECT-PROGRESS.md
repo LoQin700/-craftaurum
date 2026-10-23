@@ -112,3 +112,19 @@
 - 源头修复：仅修改共用 `snippets/craftaurum-cta.liquid`，先清理可能存在于按钮文本开头的旧 `»` / `›`，统一由共用 CTA 输出单一标记；用高针对性的 `.ca-cta.ca-cta::before` 阻止旧 CSS 伪元素再额外输出箭头；顺便修复 `show_indicator: false` 被 `default` 覆盖的问题。
 - 影响范围：沿用公共 CTA 的图文介绍与 Horizon 导航型 Button Block；**不改变**轮播控件、购物车按钮和首页内容/图片绑定。
 - GitHub 修复提交：`b03337104bb02152e54bc124c03f0aed99fad484`。Shopify Theme Editor 和前台 DOM 未实测，需确认最新代码已同步。
+
+## 2026-10-23 Jewelry Collections 独立展示页面
+
+### 对标依据
+- 参考：https://www.sunrise-jewel.com/our-jewelry/custom-fashion-jewelry/
+- 页面实际逻辑：顶部珠宝定制介绍 + B2B Quote/Catalog → Rings（标题、简介、跳转、3图）→ Earrings（同）→ Bracelets（同）→ Necklaces（同）→ 询盘表单。
+- 本站使用 Craftaurum 原创英文文案，不移植对标站产品图片、产能数字、价格或无法证实的认证承诺。
+
+### 实施与文件
+- 新增 `sections/jewelry-collections-overview.liquid`，后台名称「珠宝系列总览」；Hero 主图与文本可后台编辑，四大类别用可增删/排序 Block，每个支持自定义图1/2/3、标题、富文本、关联 Shopify Collection 与自定义 URL（自定义优先）。
+- 所有导航 CTA 统一 `render 'craftaurum-cta'`；初始 B2B Quote / Catalog 跳至本页原生询盘表单位置，分别可配置外部链接。
+- 手机端类别图片支持每行1–4张、网格/原生 Horizon Slideshow 轮播切换；桌面保留3图一排。
+- 新增 `templates/page.jewelry-collections.json`，预设 Rings / Earrings / Bracelets / Necklaces 四个完整英文内容实例，末尾复用现有 `page.contact.json` 的 Horizon `contact-form` Theme Block。
+- 未修改 `templates/index.json`、`templates/collection.json` 或 `templates/product.json`。分类页面的商品网格与单品详情继续原生 Horizon：main-collection 和 product-information。
+- 新模板不能代替 Shopify Admin 中的 Page 数据或导航菜单：需要新建 `Jewelry Collections` 页面、选择 `jewelry-collections` 主题模板，然后把四个 Block 的 Collection 绑定到真实 Shopify 系列，上传图片，最后将菜单项链接到实际页面。
+- 静态验收：Section schema、页面 JSON、Block IDs、默认值/range、Horizon 内建联系表单及产品模板结构均已检查；本次未运行 Shopify CLI Theme Check，未验证 Theme Editor 及前台浏览器实际显示。
