@@ -180,12 +180,69 @@
         "padding_top": 32,
         "padding_bottom": 32
       }
+    },
+    "image_collection_grid_craftaurum": {
+      "type": "image-collection-grid",
+      "settings": {
+        "heading": "Explore Our Custom Jewelry Collections",
+        "heading_preset": "h2",
+        "description": "<p>Discover Craftaurum’s custom jewelry collections, from signature rings and earrings to refined bracelets, necklaces, and artisanal designs created for your brand.</p>",
+        "body_preset": "h4",
+        "card_title_preset": "h3",
+        "mobile_columns": 2,
+        "mobile_layout": "grid",
+        "overlay_opacity": 25,
+        "hover_overlay_opacity": 50,
+        "gap": 16,
+        "padding_top": 40,
+        "padding_bottom": 40
+      },
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Rings"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Earrings"
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Bracelets"
+          }
+        },
+        "card_4": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Necklaces"
+          }
+        },
+        "card_5": {
+          "type": "card",
+          "settings": {
+            "title": "Artisan Jewelry"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3",
+        "card_4",
+        "card_5"
+      ]
     }
   },
   "order": [
     "hero_jVaWmY",
     "brand_partners_BGpjWX",
     "image_text_feature_NWRYeQ",
-    "image_text_feature_YzURpA"
+    "image_text_feature_YzURpA",
+    "image_collection_grid_craftaurum"
   ]
 }
