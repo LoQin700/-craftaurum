@@ -6,21 +6,24 @@
 
 <section
   id="IconWithText-{{ section.id }}"
-  class="ca-icon-text section section--{{ content_width }}"
+  class="ca-icon-text ca-icon-text--{{ section.settings.style_preset }} ca-icon-text--icon-{{ section.settings.icon_position }} section section--{{ content_width }}"
   style="
     --ca-icon-background: {{ section.settings.background_color }};
     --ca-icon-text: {{ section.settings.text_color }};
     --ca-icon-accent: {{ section.settings.accent_color }};
-    --ca-icon-desktop-columns: {{ desktop_columns }};
-    --ca-icon-mobile-columns: {{ mobile_columns }};
-    --ca-icon-gap: {{ section.settings.gap }}px;
-    --ca-icon-padding-top: {{ section.settings.padding_top }}px;
-    --ca-icon-padding-bottom: {{ section.settings.padding_bottom }}px;
+    --ca-icon-size: {{ section.settings.icon_size }}px;
+    --ca-icon-gap: {{ section.settings.icon_gap }}px;
+    --ca-column-gap: {{ section.settings.column_gap }}px;
+    --ca-row-gap: {{ section.settings.row_gap }}px;
+    --ca-desktop-columns: {{ desktop_columns }};
+    --ca-mobile-columns: {{ mobile_columns }};
+    --ca-padding-top: {{ section.settings.padding_top }}px;
+    --ca-padding-bottom: {{ section.settings.padding_bottom }}px;
   "
 >
   <div class="ca-icon-text__surface">
     <div class="ca-icon-text__inner">
-      <div class="ca-icon-text__intro">
+      <header class="ca-icon-text__intro">
         {% if section.settings.eyebrow != blank %}
           <p class="ca-icon-text__eyebrow {{ section.settings.eyebrow_preset }}">{{ section.settings.eyebrow | escape }}</p>
         {% endif %}
@@ -34,36 +37,39 @@
             {{ section.settings.description }}
           </div>
         {% endif %}
-      </div>
+      </header>
 
       <div class="ca-icon-text__grid">
         {% for block in section.blocks %}
+          {% liquid
+            assign icon_color = block.settings.icon_color
+            if icon_color == blank
+              assign icon_color = section.settings.accent_color
+            endif
+            assign icon_class = 'ca-icon-text__media ca-icon-text__media--' | append: block.id
+          %}
+
           <article class="ca-icon-text__item" {{ block.shopify_attributes }}>
-            <div class="ca-icon-text__icon" aria-hidden="true">
-              {% if block.settings.icon_image != blank %}
-                {{
-                  block.settings.icon_image
-                  | image_url: width: 120
-                  | image_tag:
-                    loading: 'lazy',
-                    class: 'ca-icon-text__icon-image',
-                    widths: '48,72,96,120',
-                    sizes: '48px'
-                }}
-              {% else %}
-                <span class="ca-icon-text__fallback"></span>
-              {% endif %}
+            <div class="ca-icon-text__icon-wrap" style="color: {{ icon_color }};">
+              {% render 'icon-or-image',
+                icon: block.settings.icon,
+                image_upload: block.settings.image_upload,
+                width: section.settings.icon_size,
+                class_name: icon_class
+              %}
             </div>
 
-            {% if block.settings.title != blank %}
-              <h3 class="ca-icon-text__title {{ section.settings.item_title_preset }}">{{ block.settings.title | escape }}</h3>
-            {% endif %}
+            <div class="ca-icon-text__content">
+              {% if block.settings.title != blank %}
+                <h3 class="ca-icon-text__title {{ section.settings.item_title_preset }}">{{ block.settings.title | escape }}</h3>
+              {% endif %}
 
-            {% if block.settings.description != blank %}
-              <div class="ca-icon-text__body rte {{ section.settings.body_preset }}">
-                {{ block.settings.description }}
-              </div>
-            {% endif %}
+              {% if block.settings.description != blank %}
+                <div class="ca-icon-text__body rte {{ section.settings.body_preset }}">
+                  {{ block.settings.description }}
+                </div>
+              {% endif %}
+            </div>
           </article>
         {% endfor %}
       </div>
@@ -83,25 +89,29 @@
   }
 
   .ca-icon-text__inner {
-    padding-block: var(--ca-icon-padding-top) var(--ca-icon-padding-bottom);
+    padding-block: var(--ca-padding-top) var(--ca-padding-bottom);
   }
 
   .ca-icon-text__intro {
-    max-width: 900px;
-    margin: 0 auto 34px;
-    text-align: center;
+    max-width: 820px;
+    margin: 0 auto 52px;
   }
 
   .ca-icon-text__eyebrow {
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     color: var(--ca-icon-accent);
-    letter-spacing: .14em;
+    letter-spacing: .12em;
     text-transform: uppercase;
   }
 
   .ca-icon-text__heading {
-    margin: 0 0 14px;
+    margin: 0 0 16px;
     color: inherit;
+  }
+
+  .ca-icon-text__description {
+    max-width: 760px;
+    color: color-mix(in srgb, var(--ca-icon-text) 72%, transparent);
   }
 
   .ca-icon-text__description :is(p, ul, ol),
@@ -117,59 +127,106 @@
 
   .ca-icon-text__grid {
     display: grid;
-    grid-template-columns: repeat(var(--ca-icon-desktop-columns), minmax(0, 1fr));
-    gap: var(--ca-icon-gap);
+    grid-template-columns: repeat(var(--ca-desktop-columns), minmax(0, 1fr));
+    column-gap: var(--ca-column-gap);
+    row-gap: var(--ca-row-gap);
   }
 
   .ca-icon-text__item {
-    padding: 26px 20px;
-    border-top: 1px solid rgb(var(--color-foreground-rgb) / .18);
+    min-width: 0;
   }
 
-  .ca-icon-text__icon {
-    width: 42px;
-    height: 42px;
-    display: grid;
-    place-items: center;
-    margin-bottom: 18px;
-    color: var(--ca-icon-accent);
-  }
-
-  .ca-icon-text__icon-image {
-    width: 100%;
-    height: 100%;
+  .ca-icon-text__media {
+    display: block;
+    width: var(--ca-icon-size);
+    height: auto;
+    max-width: var(--ca-icon-size);
+    color: currentColor;
     object-fit: contain;
   }
 
-  .ca-icon-text__fallback {
-    display: block;
-    width: 22px;
-    height: 22px;
-    border: 1.5px solid currentColor;
-    transform: rotate(45deg);
+  .ca-icon-text__icon-wrap {
+    flex: 0 0 auto;
   }
 
   .ca-icon-text__title {
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     color: inherit;
   }
 
   .ca-icon-text__body {
-    opacity: .76;
+    color: color-mix(in srgb, var(--ca-icon-text) 68%, transparent);
+  }
+
+  /* Editorial: default, lighter and less "card-like" */
+  .ca-icon-text--editorial .ca-icon-text__intro {
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .ca-icon-text--editorial .ca-icon-text__item {
+    padding-top: 6px;
+  }
+
+  /* Minimal: subtle rhythm only */
+  .ca-icon-text--minimal .ca-icon-text__intro {
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .ca-icon-text--minimal .ca-icon-text__item {
+    padding-block: 10px;
+  }
+
+  /* Centered: still clean, without boxes */
+  .ca-icon-text--centered .ca-icon-text__intro,
+  .ca-icon-text--centered .ca-icon-text__item {
+    text-align: center;
+  }
+
+  .ca-icon-text--centered .ca-icon-text__icon-wrap {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Icon positions */
+  .ca-icon-text--icon-top .ca-icon-text__item {
+    display: block;
+  }
+
+  .ca-icon-text--icon-top .ca-icon-text__icon-wrap {
+    margin-bottom: var(--ca-icon-gap);
+  }
+
+  .ca-icon-text--icon-left .ca-icon-text__item {
+    display: grid;
+    grid-template-columns: var(--ca-icon-size) minmax(0, 1fr);
+    column-gap: var(--ca-icon-gap);
+    align-items: start;
+  }
+
+  .ca-icon-text--icon-left.ca-icon-text--centered .ca-icon-text__item {
+    text-align: left;
   }
 
   @media screen and (max-width: 749px) {
+    .ca-icon-text__inner {
+      padding-block: min(var(--ca-padding-top), 56px) min(var(--ca-padding-bottom), 56px);
+    }
+
     .ca-icon-text__intro {
+      margin-bottom: 34px;
       text-align: left;
-      margin-bottom: 24px;
     }
 
     .ca-icon-text__grid {
-      grid-template-columns: repeat(var(--ca-icon-mobile-columns), minmax(0, 1fr));
+      grid-template-columns: repeat(var(--ca-mobile-columns), minmax(0, 1fr));
+      column-gap: 20px;
+      row-gap: 32px;
     }
 
-    .ca-icon-text__item {
-      padding-inline: 0;
+    .ca-icon-text--centered .ca-icon-text__intro {
+      text-align: left;
     }
   }
 {% endstylesheet %}
@@ -177,14 +234,6 @@
 {% schema %}
 {
   "name": "图标文字",
-  "tag": "section",
-  "class": "craftaurum-icon-text-section",
-  "disabled_on": {
-    "groups": [
-      "header",
-      "footer"
-    ]
-  },
   "settings": [
     {
       "type": "select",
@@ -219,6 +268,90 @@
       "id": "accent_color",
       "label": "重点颜色",
       "default": "#C7A85E"
+    },
+    {
+      "type": "header",
+      "content": "样式"
+    },
+    {
+      "type": "select",
+      "id": "style_preset",
+      "label": "样式预设",
+      "options": [
+        {
+          "value": "editorial",
+          "label": "编辑型"
+        },
+        {
+          "value": "minimal",
+          "label": "极简"
+        },
+        {
+          "value": "centered",
+          "label": "居中"
+        }
+      ],
+      "default": "editorial"
+    },
+    {
+      "type": "select",
+      "id": "icon_position",
+      "label": "Icon 位置",
+      "options": [
+        {
+          "value": "top",
+          "label": "上方"
+        },
+        {
+          "value": "left",
+          "label": "左侧"
+        }
+      ],
+      "default": "top"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Icon 大小",
+      "min": 16,
+      "max": 96,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "icon_gap",
+      "label": "Icon 与文字间距",
+      "min": 8,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "label": "列间距",
+      "min": 16,
+      "max": 64,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "row_gap",
+      "label": "行间距",
+      "min": 20,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "标题"
     },
     {
       "type": "text",
@@ -300,7 +433,7 @@
       "type": "richtext",
       "id": "description",
       "label": "正文",
-      "default": "<p>These capabilities support jewelry projects from early design communication through production review.</p>"
+      "default": "<p>From design development to production review, each stage is supported by a clear and practical manufacturing process.</p>"
     },
     {
       "type": "select",
@@ -367,13 +500,36 @@
       "default": "h4"
     },
     {
-      "type": "range",
+      "type": "header",
+      "content": "布局"
+    },
+    {
+      "type": "select",
       "id": "desktop_columns",
       "label": "桌面端每行数量",
-      "min": 2,
-      "max": 6,
-      "step": 1,
-      "default": 4
+      "options": [
+        {
+          "value": "2",
+          "label": "2 列"
+        },
+        {
+          "value": "3",
+          "label": "3 列"
+        },
+        {
+          "value": "4",
+          "label": "4 列"
+        },
+        {
+          "value": "5",
+          "label": "5 列"
+        },
+        {
+          "value": "6",
+          "label": "6 列"
+        }
+      ],
+      "default": "4"
     },
     {
       "type": "select",
@@ -389,37 +545,27 @@
           "label": "2 列"
         }
       ],
-      "default": "2"
-    },
-    {
-      "type": "range",
-      "id": "gap",
-      "label": "间距",
-      "min": 0,
-      "max": 48,
-      "step": 4,
-      "unit": "px",
-      "default": 24
+      "default": "1"
     },
     {
       "type": "range",
       "id": "padding_top",
       "label": "上边距",
       "min": 0,
-      "max": 100,
+      "max": 120,
       "step": 4,
       "unit": "px",
-      "default": 56
+      "default": 72
     },
     {
       "type": "range",
       "id": "padding_bottom",
       "label": "下边距",
       "min": 0,
-      "max": 100,
+      "max": 120,
       "step": 4,
       "unit": "px",
-      "default": 56
+      "default": 72
     }
   ],
   "blocks": [
@@ -428,9 +574,258 @@
       "name": "项目",
       "settings": [
         {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon 预设",
+          "options": [
+            {
+              "value": "none",
+              "label": "t:options.none"
+            },
+            {
+              "value": "apple",
+              "label": "t:options.apple"
+            },
+            {
+              "value": "arrow",
+              "label": "t:options.arrow"
+            },
+            {
+              "value": "banana",
+              "label": "t:options.banana"
+            },
+            {
+              "value": "bottle",
+              "label": "t:options.bottle"
+            },
+            {
+              "value": "box",
+              "label": "t:options.box"
+            },
+            {
+              "value": "carrot",
+              "label": "t:options.carrot"
+            },
+            {
+              "value": "chat_bubble",
+              "label": "t:options.chat_bubble"
+            },
+            {
+              "value": "check_box",
+              "label": "t:options.check_box"
+            },
+            {
+              "value": "clipboard",
+              "label": "t:options.clipboard"
+            },
+            {
+              "value": "dairy",
+              "label": "t:options.dairy"
+            },
+            {
+              "value": "dairy_free",
+              "label": "t:options.dairy_free"
+            },
+            {
+              "value": "dryer",
+              "label": "t:options.dryer"
+            },
+            {
+              "value": "eye",
+              "label": "t:options.eye"
+            },
+            {
+              "value": "fire",
+              "label": "t:options.fire"
+            },
+            {
+              "value": "gluten_free",
+              "label": "t:options.gluten_free"
+            },
+            {
+              "value": "heart",
+              "label": "t:options.heart"
+            },
+            {
+              "value": "iron",
+              "label": "t:options.iron"
+            },
+            {
+              "value": "leaf",
+              "label": "t:options.leaf"
+            },
+            {
+              "value": "leather",
+              "label": "t:options.leather"
+            },
+            {
+              "value": "lightning_bolt",
+              "label": "t:options.lightning_bolt"
+            },
+            {
+              "value": "lipstick",
+              "label": "t:options.lipstick"
+            },
+            {
+              "value": "lock",
+              "label": "t:options.lock"
+            },
+            {
+              "value": "map_pin",
+              "label": "t:options.map_pin"
+            },
+            {
+              "value": "nut_free",
+              "label": "t:options.nut_free"
+            },
+            {
+              "value": "pants",
+              "label": "t:options.pants"
+            },
+            {
+              "value": "paw_print",
+              "label": "t:options.paw_print"
+            },
+            {
+              "value": "pepper",
+              "label": "t:options.pepper"
+            },
+            {
+              "value": "perfume",
+              "label": "t:options.perfume"
+            },
+            {
+              "value": "plane",
+              "label": "t:options.plane"
+            },
+            {
+              "value": "plant",
+              "label": "t:options.plant"
+            },
+            {
+              "value": "price_tag",
+              "label": "t:options.price_tag"
+            },
+            {
+              "value": "question_mark",
+              "label": "t:options.question_mark"
+            },
+            {
+              "value": "recycle",
+              "label": "t:options.recycle"
+            },
+            {
+              "value": "return",
+              "label": "t:options.return"
+            },
+            {
+              "value": "ruler",
+              "label": "t:options.ruler"
+            },
+            {
+              "value": "serving_dish",
+              "label": "t:options.serving_dish"
+            },
+            {
+              "value": "shirt",
+              "label": "t:options.shirt"
+            },
+            {
+              "value": "shoe",
+              "label": "t:options.shoe"
+            },
+            {
+              "value": "silhouette",
+              "label": "t:options.silhouette"
+            },
+            {
+              "value": "bluesky",
+              "label": "t:options.social_bluesky"
+            },
+            {
+              "value": "facebook",
+              "label": "t:options.social_facebook"
+            },
+            {
+              "value": "instagram",
+              "label": "t:options.social_instagram"
+            },
+            {
+              "value": "linkedin",
+              "label": "t:options.social_linkedin"
+            },
+            {
+              "value": "pinterest",
+              "label": "t:options.social_pinterest"
+            },
+            {
+              "value": "snapchat",
+              "label": "t:options.social_snapchat"
+            },
+            {
+              "value": "spotify",
+              "label": "t:options.social_spotify"
+            },
+            {
+              "value": "threads",
+              "label": "t:options.social_threads"
+            },
+            {
+              "value": "tiktok",
+              "label": "t:options.social_tiktok"
+            },
+            {
+              "value": "tumblr",
+              "label": "t:options.social_tumblr"
+            },
+            {
+              "value": "twitter",
+              "label": "t:options.social_twitter"
+            },
+            {
+              "value": "vimeo",
+              "label": "t:options.social_vimeo"
+            },
+            {
+              "value": "youtube",
+              "label": "t:options.social_youtube"
+            },
+            {
+              "value": "whatsapp",
+              "label": "t:options.social_whatsapp"
+            },
+            {
+              "value": "snowflake",
+              "label": "t:options.snowflake"
+            },
+            {
+              "value": "star",
+              "label": "t:options.star"
+            },
+            {
+              "value": "stopwatch",
+              "label": "t:options.stopwatch"
+            },
+            {
+              "value": "truck",
+              "label": "t:options.truck"
+            },
+            {
+              "value": "washing",
+              "label": "t:options.washing"
+            }
+          ],
+          "default": "star"
+        },
+        {
           "type": "image_picker",
-          "id": "icon_image",
-          "label": "图标"
+          "id": "image_upload",
+          "label": "上传 Icon 图片"
+        },
+        {
+          "type": "color",
+          "id": "icon_color",
+          "label": "Icon 颜色"
         },
         {
           "type": "text",
@@ -442,39 +837,45 @@
           "type": "richtext",
           "id": "description",
           "label": "正文",
-          "default": "<p>Clarify references, dimensions and design intent before sampling begins.</p>"
+          "default": "<p>Clarify references, proportions and design intent before sampling begins.</p>"
         }
       ]
     }
   ],
-  "max_blocks": 12,
   "presets": [
     {
       "name": "图标文字",
-      "category": "文字",
       "blocks": [
         {
           "type": "item",
           "settings": {
-            "title": "Design Development"
+            "icon": "ruler",
+            "title": "Design Development",
+            "description": "<p>Clarify references, proportions and design intent before sampling begins.</p>"
           }
         },
         {
           "type": "item",
           "settings": {
-            "title": "Material Options"
+            "icon": "star",
+            "title": "Material Options",
+            "description": "<p>Review suitable metals, stones and finishing directions for the collection.</p>"
           }
         },
         {
           "type": "item",
           "settings": {
-            "title": "Sample Support"
+            "icon": "clipboard",
+            "title": "Sample Support",
+            "description": "<p>Use samples to review construction, proportion and finish before production.</p>"
           }
         },
         {
           "type": "item",
           "settings": {
-            "title": "Quality Review"
+            "icon": "check_box",
+            "title": "Quality Review",
+            "description": "<p>Check visual and construction details against agreed production specifications.</p>"
           }
         }
       ]
