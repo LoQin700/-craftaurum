@@ -105,3 +105,10 @@
 - CTA 箭头只在公共 CTA 组件渲染；全局 CSS 的粗放伪元素方案已移除。
 - 当前模板次序：Hero → 图片轮播 → 银饰图文 → 黄金图文 → 珠宝系列图片展示。
 - 仍需 Shopify CLI Theme Check、Theme Editor 添加/排序/图片保存与真机桌面/平板/手机验证；**目前仅能确认 GitHub 源码提交和静态一致性，不可宣称前台已验收。**
+
+## 2026-10-23 CTA 重复箭头修复
+- 现象：首页图文介绍的顶部 S925 Jewelry Custom 按钮出现 `» »`。
+- 代码检查：当前 `index.json` 的 `top_label` 为纯文本（无符号），公共 `craftaurum-cta.liquid` 自带一次内联箭头。截图中的额外符号来源尚未通过前台 DOM 验证。
+- 源头修复：仅修改共用 `snippets/craftaurum-cta.liquid`，先清理可能存在于按钮文本开头的旧 `»` / `›`，统一由共用 CTA 输出单一标记；用高针对性的 `.ca-cta.ca-cta::before` 阻止旧 CSS 伪元素再额外输出箭头；顺便修复 `show_indicator: false` 被 `default` 覆盖的问题。
+- 影响范围：沿用公共 CTA 的图文介绍与 Horizon 导航型 Button Block；**不改变**轮播控件、购物车按钮和首页内容/图片绑定。
+- GitHub 修复提交：`b03337104bb02152e54bc124c03f0aed99fad484`。Shopify Theme Editor 和前台 DOM 未实测，需确认最新代码已同步。
