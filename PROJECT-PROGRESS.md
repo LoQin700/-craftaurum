@@ -144,3 +144,30 @@
 10. 不改 `templates/collection.json` 或 `templates/product.json`。
 
 静态校验通过：全部六个自定义 Section 的 Schema JSON、Range、宽度绑定、页面实例字段映射、四个 Gallery 的 Block 数据和 CTA/Contact 资源引用。**Shopify CLI Theme Check / Shopify 同步 / Theme Editor 保存 / Desktop、Tablet、Mobile 前台视觉尚未在真实商店验证。**
+
+## 2026-10-23 · 通用品类展示模板 + 三色体系
+
+### 模板结构
+新增 `templates/page.jewelry-showcase.json`，作为 Rings / Earrings / Bracelets / Necklaces 等品类的通用工厂展示页面。默认顺序：
+1. `图文横幅`：左右图文，新增图片左右位置与 16:9 / 4:3 / 1:1 比例；本模板预设左文右横图 16:9。
+2. `横向 CTA`：深色横条，用共用 `craftaurum-cta`。
+3. `图文卡片`：原 `image-gallery` 升级；每个 Block 有主图、Hover 图、标题、H5 正文、按钮文字 / 主次/文字链接 / URL。桌面 2–5 列网格或轮播；手机严格 1–2 列，默认 1 列 Horizon 原生轮播并保留左右切换。
+4. `交互图文`：产品/品类的细分能力。桌面左侧纵向项目，Hover / Focus / Click 联动右侧图片；手机点击项目切换下方图片。交互脚本为 `assets/craftaurum-interactive-feature.js`，使用 Custom Element 并保护重复注册。
+5. `图文介绍`：扩展 `heading_position`，模板预设左图右文、标题放正文列，用于工厂 / About 简介。
+6. `图标文字`：工厂通用能力，支持上传自定义图标或使用轻量线性 SVG，桌面 2–6 列、手机 1–2 列。
+7. 复用既有 `标题说明 + Horizon Contact Form`，没有重写 Contact Form。
+- `layout/theme.liquid` 已将已优化的 `craftaurum-contact.css` 同时加载到 `page.jewelry-showcase`、`page.jewelry-collections` 和 `page.contact`。
+
+### 全站色调
+- Background：`#F8F7F4`
+- Accent / Logo Gold：`#C7A85E`
+- Dark / Text：`#17191A`
+- `config/settings_schema.json`、`config/settings_data.json` 的 Current + Horizon Preset 已同步。
+- 主/次按钮 Hover 背景与边框为 Gold，Hover 文字为 Dark；文字链接低优先级 Hover 改为 Gold。
+- `snippets/color-palette.liquid` 输出 `--color-accent` / `--color-accent-rgb` 供所有通用 Section 使用。
+- Contact Form、分类图片展示等此前遗留的旧灰白色已按新体系调整；Settings Data 中旧 `#E1E3E6 / #F4F4F4 / #EEF1EA` 已清除。
+
+### 兼容与验证
+- `page.jewelry-collections.json` 已兼容升级后的图文卡片 Block：旧图片保留，新增标题/正文/按钮字段明确为空，不会因 schema default 自动出现重复文案；手机列数限制在 1–2。
+- 静态检查结果 PASS：新旧页面模板无 orphan settings / block settings；所有 Section Schema 可解析；Range 默认值合法；全局色板与按钮 Hover 值匹配；`page.jewelry-showcase` Section 顺序完整。
+- 未运行 Shopify CLI Theme Check，也未在 Shopify Theme Editor / 实际浏览器完成桌面、平板、手机 QA，因此 GitHub 静态通过不等于已上线验收。
