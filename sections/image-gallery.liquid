@@ -1,0 +1,405 @@
+{% comment %}
+  Reusable editorial image gallery with Shopify image blocks.
+  Uses Horizon slideshow on either breakpoint when carousel is selected.
+  No hardcoded 3-image limit; Shopify's native section block limit applies.
+{% endcomment %}
+{% liquid
+  assign gallery_url = section.settings.link
+  if gallery_url == blank and section.settings.collection != blank
+    assign gallery_url = section.settings.collection.url
+  endif
+%}
+<section
+  id="ImageGallery-{{ section.id }}"
+  class="section section--{{ section.settings.section_width | default: 'page-width' }} spacing-style ca-image-gallery"
+  style="
+    --padding-block-start: {{ section.settings.padding_top }}px;
+    --padding-block-end: {{ section.settings.padding_bottom }}px;
+    --ca-gallery-gap: {{ section.settings.gap }}px;
+    --ca-gallery-desktop-columns: {{ section.settings.desktop_columns }};
+    --ca-gallery-mobile-columns: {{ section.settings.mobile_columns }};
+  "
+>
+  <div class="ca-image-gallery__inner">
+    {% if section.settings.heading != blank or section.settings.description != blank or section.settings.button_label != blank %}
+      <header class="ca-image-gallery__intro">
+        {% if section.settings.heading != blank %}
+          <h2 class="{{ section.settings.heading_preset | default: 'h2' }} ca-image-gallery__heading">{{ section.settings.heading | escape }}</h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <div class="ca-image-gallery__description rte {{ section.settings.body_preset | default: 'h5' }}">{{ section.settings.description }}</div>
+        {% endif %}
+        {% if section.settings.button_label != blank %}
+          <div class="ca-image-gallery__action">
+            {% render 'craftaurum-cta',
+              label: section.settings.button_label,
+              link: gallery_url,
+              style_class: section.settings.button_style,
+              class: 'ca-image-gallery__cta',
+              static_label: true
+            %}
+          </div>
+        {% endif %}
+      </header>
+    {% endif %}
+    {% if section.blocks.size > 0 %}
+      <div class="ca-image-gallery__grid{% if section.settings.desktop_layout == 'carousel' %} ca-image-gallery__grid--desktop-hidden{% endif %}{% if section.settings.mobile_layout == 'carousel' %} ca-image-gallery__grid--mobile-hidden{% endif %}">
+        {% for block in section.blocks %}
+          <div class="ca-image-gallery__tile" {{ block.shopify_attributes }}>
+            {% if block.settings.image != blank %}
+              {{
+                block.settings.image
+                | image_url: width: 1200
+                | image_tag:
+                  loading: 'lazy',
+                  class: 'ca-image-gallery__image',
+                  widths: '180, 280, 400, 600, 800, 1000, 1200',
+                  sizes: '(min-width: 750px) 30vw, 45vw'
+              }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'ca-image-gallery__placeholder' }}
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+      {% if section.settings.desktop_layout == 'carousel' or section.settings.mobile_layout == 'carousel' %}
+        {% capture gallery_slides %}
+          {% for block in section.blocks %}
+            {% capture slide_content %}
+              <div class="ca-image-gallery__tile">
+                {% if block.settings.image != blank %}
+                  {{
+                    block.settings.image
+                    | image_url: width: 1200
+                    | image_tag:
+                      loading: 'lazy',
+                      class: 'ca-image-gallery__image',
+                      widths: '180, 280, 400, 600, 800, 1000, 1200',
+                      sizes: '(min-width: 750px) 30vw, 45vw'
+                  }}
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'ca-image-gallery__placeholder' }}
+                {% endif %}
+              </div>
+            {% endcapture %}
+            {% render 'slideshow-slide',
+              index: forloop.index0,
+              children: slide_content,
+              class: 'ca-image-gallery__slide'
+            %}
+          {% endfor %}
+        {% endcapture %}
+        {% assign can_scroll = false %}
+        {% if section.blocks.size > 1 %}{% assign can_scroll = true %}{% endif %}
+        <div class="ca-image-gallery__carousel{% if section.settings.desktop_layout == 'carousel' %} ca-image-gallery__carousel--desktop{% endif %}{% if section.settings.mobile_layout == 'carousel' %} ca-image-gallery__carousel--mobile{% endif %}">
+          {% render 'slideshow',
+            class: 'ca-image-gallery__slideshow',
+            slides: gallery_slides,
+            slide_count: section.blocks.size,
+            show_arrows: can_scroll,
+            infinite: false,
+            icon_style: 'chevron',
+            icon_shape: 'none'
+          %}
+        </div>
+      {% endif %}
+    {% endif %}
+  </div>
+</section>
+{% stylesheet %}
+  .ca-image-gallery__inner { min-width: 0; }
+  .ca-image-gallery__intro { text-align: center; max-width: 990px; margin: 0 auto 26px; }
+  .ca-image-gallery__heading { margin: 0 0 14px; }
+  .ca-image-gallery__description :is(p, ul, ol) { font-size: inherit; line-height: inherit; }
+  .ca-image-gallery__description p { margin: 0; }
+  .ca-image-gallery__action { display: flex; justify-content: center; margin-top: 16px; }
+  .ca-image-gallery__grid { display: grid; grid-template-columns: repeat(var(--ca-gallery-desktop-columns), minmax(0, 1fr)); gap: var(--ca-gallery-gap); }
+  .ca-image-gallery__tile { min-width: 0; width: 100%; overflow: hidden; aspect-ratio: 4 / 3; background: rgb(var(--color-foreground-rgb) / .04); }
+  .ca-image-gallery__image, .ca-image-gallery__placeholder { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+  .ca-image-gallery__placeholder { color: rgb(var(--color-foreground-rgb) / .18); }
+  @media (hover: hover) {
+    .ca-image-gallery__tile:hover .ca-image-gallery__image { transform: scale(1.035); }
+  }
+  .ca-image-gallery__carousel { display: none; }
+  .ca-image-gallery__grid--desktop-hidden { display: none; }
+  .ca-image-gallery__carousel--desktop { display: block; }
+  .ca-image-gallery__slideshow slideshow-slides { gap: var(--ca-gallery-gap); }
+  .ca-image-gallery__slideshow slideshow-slide {
+    width: calc((100% - (var(--ca-gallery-desktop-columns) - 1) * var(--ca-gallery-gap)) / var(--ca-gallery-desktop-columns));
+    flex: 0 0 calc((100% - (var(--ca-gallery-desktop-columns) - 1) * var(--ca-gallery-gap)) / var(--ca-gallery-desktop-columns));
+    min-width: 0;
+  }
+  @media screen and (max-width: 749px) {
+    .ca-image-gallery__grid { grid-template-columns: repeat(var(--ca-gallery-mobile-columns), minmax(0, 1fr)); }
+    .ca-image-gallery__grid--desktop-hidden:not(.ca-image-gallery__grid--mobile-hidden) { display: grid; }
+    .ca-image-gallery__grid--mobile-hidden { display: none; }
+    .ca-image-gallery__carousel--desktop:not(.ca-image-gallery__carousel--mobile) { display: none; }
+    .ca-image-gallery__carousel--mobile { display: block; }
+    .ca-image-gallery__slideshow slideshow-slide {
+      width: calc((100% - (var(--ca-gallery-mobile-columns) - 1) * var(--ca-gallery-gap)) / var(--ca-gallery-mobile-columns));
+      flex-basis: calc((100% - (var(--ca-gallery-mobile-columns) - 1) * var(--ca-gallery-gap)) / var(--ca-gallery-mobile-columns));
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ca-image-gallery__image { transition: none; }
+  }
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "图片画廊",
+  "tag": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "文字内容"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "标题",
+      "default": "Image Gallery"
+    },
+    {
+      "type": "select",
+      "id": "heading_preset",
+      "label": "标题字号",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "正文",
+      "default": "<p>Explore designs and craftsmanship for your next collection.</p>"
+    },
+    {
+      "type": "select",
+      "id": "body_preset",
+      "label": "正文字号",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h5"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "按钮文字",
+      "default": "Explore Collection"
+    },
+    {
+      "type": "select",
+      "id": "button_style",
+      "label": "按钮样式",
+      "options": [
+        {
+          "value": "button",
+          "label": "主按钮"
+        },
+        {
+          "value": "button-secondary",
+          "label": "次级按钮"
+        },
+        {
+          "value": "button-unstyled",
+          "label": "文字链接"
+        }
+      ],
+      "default": "button-unstyled"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "产品系列"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "链接"
+    },
+    {
+      "type": "header",
+      "content": "布局"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "内容宽度",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "页面宽度"
+        },
+        {
+          "value": "full-width",
+          "label": "全宽"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "select",
+      "id": "desktop_layout",
+      "label": "桌面端布局",
+      "options": [
+        {
+          "value": "grid",
+          "label": "网格"
+        },
+        {
+          "value": "carousel",
+          "label": "轮播"
+        }
+      ],
+      "default": "grid"
+    },
+    {
+      "type": "range",
+      "id": "desktop_columns",
+      "label": "桌面端每行数量",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "手机端布局",
+      "options": [
+        {
+          "value": "grid",
+          "label": "网格"
+        },
+        {
+          "value": "carousel",
+          "label": "轮播"
+        }
+      ],
+      "default": "grid"
+    },
+    {
+      "type": "range",
+      "id": "mobile_columns",
+      "label": "手机端每行数量",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "图片间距",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "上边距",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "下边距",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "图片",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "图片画廊",
+      "blocks": [
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        },
+        {
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
