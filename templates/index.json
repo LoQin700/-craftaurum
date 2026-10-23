@@ -138,8 +138,7 @@
         "autoplay": true,
         "autoplay_speed": 3,
         "padding_top": 40,
-        "padding_bottom": 20,
-        "section_width": "page-width"
+        "padding_bottom": 20
       }
     },
     "image_text_feature_NWRYeQ": {
@@ -159,8 +158,7 @@
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button",
         "padding_top": 32,
-        "padding_bottom": 32,
-        "section_width": "page-width"
+        "padding_bottom": 32
       }
     },
     "image_text_feature_YzURpA": {
@@ -180,27 +178,11 @@
         "cta_url": "shopify://collections/all",
         "cta_button_style": "button",
         "padding_top": 32,
-        "padding_bottom": 32,
-        "section_width": "page-width"
+        "padding_bottom": 32
       }
     },
     "image_collection_grid_craftaurum": {
       "type": "image-collection-grid",
-      "settings": {
-        "heading": "Explore Our Custom Jewelry Collections",
-        "heading_preset": "h2",
-        "description": "<p>Discover Craftaurum’s custom jewelry collections, from signature rings and earrings to refined bracelets, necklaces, and artisanal designs created for your brand.</p>",
-        "body_preset": "h5",
-        "card_title_preset": "h3",
-        "mobile_columns": 2,
-        "mobile_layout": "grid",
-        "overlay_opacity": 25,
-        "hover_overlay_opacity": 50,
-        "gap": 16,
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "section_width": "page-width"
-      },
       "blocks": {
         "card_1": {
           "type": "card",
@@ -239,7 +221,22 @@
         "card_3",
         "card_4",
         "card_5"
-      ]
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "heading": "Explore Our Custom Jewelry Collections",
+        "heading_preset": "h2",
+        "description": "<p>Discover Craftaurum’s custom jewelry collections, from signature rings and earrings to refined bracelets, necklaces, and artisanal designs created for your brand.</p>",
+        "body_preset": "h5",
+        "card_title_preset": "h3",
+        "mobile_columns": 2,
+        "mobile_layout": "grid",
+        "overlay_opacity": 25,
+        "hover_overlay_opacity": 50,
+        "gap": 16,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [

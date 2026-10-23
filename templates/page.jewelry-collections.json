@@ -12,6 +12,7 @@
     "jewelry_overview": {
       "type": "jewelry-collections-overview",
       "settings": {
+        "section_width": "page-width",
         "eyebrow": "JEWELRY MANUFACTURING",
         "heading": "Custom Fashion Jewelry",
         "introduction": "<p>Craftaurum presents custom fashion jewelry for brands, design studios, and wholesale partners. Our range includes rings, earrings, bracelets, necklaces, and pendants that can be developed with attention to material, proportion, and finishing detail.</p><p>From early sketches to finished pieces, we approach each collection as an opportunity to translate your creative direction into carefully crafted jewelry.</p>",
@@ -23,8 +24,180 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 24,
-        "section_width": "page-width"
+        "padding_bottom": 24
+      }
+    },
+    "gallery_rings": {
+      "type": "image-gallery",
+      "blocks": {
+        "photo_1": {
+          "type": "image",
+          "settings": {}
+        },
+        "photo_2": {
+          "type": "image",
+          "settings": {}
+        },
+        "photo_3": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "photo_1",
+        "photo_2",
+        "photo_3"
+      ],
+      "settings": {
+        "heading": "Wholesale & Custom Rings",
+        "heading_preset": "h2",
+        "description": "<p>From elegant everyday rings to statement designs, Craftaurum helps brands develop ring collections in different styles and materials. Explore our jewelry-making capabilities and discuss the details that will make your next collection distinctive.</p>",
+        "body_preset": "h5",
+        "button_label": "Explore Rings",
+        "button_style": "button-unstyled",
+        "collection": "",
+        "link": "",
+        "section_width": "page-width",
+        "desktop_layout": "grid",
+        "desktop_columns": 3,
+        "mobile_layout": "grid",
+        "mobile_columns": 2,
+        "gap": 16,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "gallery_earrings": {
+      "type": "image-gallery",
+      "blocks": {
+        "photo_1": {
+          "type": "image",
+          "settings": {}
+        },
+        "photo_2": {
+          "type": "image",
+          "settings": {}
+        },
+        "photo_3": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "photo_1",
+        "photo_2",
+        "photo_3"
+      ],
+      "settings": {
+        "heading": "Exclusive Custom Earrings",
+        "heading_preset": "h2",
+        "description": "<p>Discover versatile earring possibilities, from understated studs and classic hoops to expressive drops and gemstone-led designs. We support custom styles and finishing details that reflect your brand's creative direction.</p>",
+        "body_preset": "h5",
+        "button_label": "Explore Earrings",
+        "button_style": "button-unstyled",
+        "collection": "",
+        "link": "",
+        "section_width": "page-width",
+        "desktop_layout": "grid",
+        "desktop_columns": 3,
+        "mobile_layout": "grid",
+        "mobile_columns": 2,
+        "gap": 16,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "gallery_bracelets": {
+      "type": "image-gallery",
+      "blocks": {
+        "photo_1": {
+          "type": "image",
+          "settings": {}
+        },
+        "photo_2": {
+          "type": "image",
+          "settings": {}
+        },
+        "photo_3": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "photo_1",
+        "photo_2",
+        "photo_3"
+      ],
+      "settings": {
+        "heading": "Tailor-Made Bracelets & Bangles",
+        "heading_preset": "h2",
+        "description": "<p>Explore bracelets and bangles designed for different collections, including delicate chains, sculptural cuffs, and decorative pieces. Craftaurum helps turn your concepts into well-considered jewelry with attention to shape, finish, and comfort.</p>",
+        "body_preset": "h5",
+        "button_label": "Explore Bracelets",
+        "button_style": "button-unstyled",
+        "collection": "",
+        "link": "",
+        "section_width": "page-width",
+        "desktop_layout": "grid",
+        "desktop_columns": 3,
+        "mobile_layout": "carousel",
+        "mobile_columns": 2,
+        "gap": 16,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "gallery_necklaces": {
+      "type": "image-gallery",
+      "blocks": {
+        "photo_1": {
+          "type": "image",
+          "settings": {}
+        },
+        "photo_2": {
+          "type": "image",
+          "settings": {}
+        },
+        "photo_3": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "photo_1",
+        "photo_2",
+        "photo_3"
+      ],
+      "settings": {
+        "heading": "Made-to-Order Necklaces & Pendants",
+        "heading_preset": "h2",
+        "description": "<p>From refined chains to distinctive pendants and layered necklaces, our custom jewelry approach allows you to develop pieces with a recognizable identity. Share your inspiration with Craftaurum and explore options for materials, details, and finishes.</p>",
+        "body_preset": "h5",
+        "button_label": "Explore Necklaces",
+        "button_style": "button-unstyled",
+        "collection": "",
+        "link": "",
+        "section_width": "page-width",
+        "desktop_layout": "grid",
+        "desktop_columns": 3,
+        "mobile_layout": "grid",
+        "mobile_columns": 2,
+        "gap": 16,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "contact_intro": {
+      "type": "text-heading",
+      "settings": {
+        "section_width": "page-width",
+        "heading": "Let's Create Your Next Jewelry Collection",
+        "heading_preset": "h2",
+        "description": "<p>Share your designs, preferred materials and manufacturing requirements. Craftaurum can help you explore the next steps for your project.</p>",
+        "body_preset": "h5",
+        "anchor_id": "craftaurum-jewelry-inquiry",
+        "padding_top": 32,
+        "padding_bottom": 12
       }
     },
     "contact_form": {
@@ -101,179 +274,6 @@
         "border_radius": 0,
         "padding-block-start": 8,
         "padding-block-end": 64
-      }
-    },
-    "gallery_rings": {
-      "type": "image-gallery",
-      "settings": {
-        "heading": "Wholesale & Custom Rings",
-        "heading_preset": "h2",
-        "description": "<p>From elegant everyday rings to statement designs, Craftaurum helps brands develop ring collections in different styles and materials. Explore our jewelry-making capabilities and discuss the details that will make your next collection distinctive.</p>",
-        "body_preset": "h5",
-        "button_label": "Explore Rings",
-        "button_style": "button-unstyled",
-        "collection": "",
-        "link": "",
-        "section_width": "page-width",
-        "desktop_layout": "grid",
-        "desktop_columns": 3,
-        "mobile_layout": "grid",
-        "mobile_columns": 2,
-        "gap": 16,
-        "padding_top": 36,
-        "padding_bottom": 36
-      },
-      "blocks": {
-        "photo_1": {
-          "type": "image",
-          "settings": {}
-        },
-        "photo_2": {
-          "type": "image",
-          "settings": {}
-        },
-        "photo_3": {
-          "type": "image",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "photo_1",
-        "photo_2",
-        "photo_3"
-      ]
-    },
-    "gallery_earrings": {
-      "type": "image-gallery",
-      "settings": {
-        "heading": "Exclusive Custom Earrings",
-        "heading_preset": "h2",
-        "description": "<p>Discover versatile earring possibilities, from understated studs and classic hoops to expressive drops and gemstone-led designs. We support custom styles and finishing details that reflect your brand's creative direction.</p>",
-        "body_preset": "h5",
-        "button_label": "Explore Earrings",
-        "button_style": "button-unstyled",
-        "collection": "",
-        "link": "",
-        "section_width": "page-width",
-        "desktop_layout": "grid",
-        "desktop_columns": 3,
-        "mobile_layout": "grid",
-        "mobile_columns": 2,
-        "gap": 16,
-        "padding_top": 36,
-        "padding_bottom": 36
-      },
-      "blocks": {
-        "photo_1": {
-          "type": "image",
-          "settings": {}
-        },
-        "photo_2": {
-          "type": "image",
-          "settings": {}
-        },
-        "photo_3": {
-          "type": "image",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "photo_1",
-        "photo_2",
-        "photo_3"
-      ]
-    },
-    "gallery_bracelets": {
-      "type": "image-gallery",
-      "settings": {
-        "heading": "Tailor-Made Bracelets & Bangles",
-        "heading_preset": "h2",
-        "description": "<p>Explore bracelets and bangles designed for different collections, including delicate chains, sculptural cuffs, and decorative pieces. Craftaurum helps turn your concepts into well-considered jewelry with attention to shape, finish, and comfort.</p>",
-        "body_preset": "h5",
-        "button_label": "Explore Bracelets",
-        "button_style": "button-unstyled",
-        "collection": "",
-        "link": "",
-        "section_width": "page-width",
-        "desktop_layout": "grid",
-        "desktop_columns": 3,
-        "mobile_layout": "grid",
-        "mobile_columns": 2,
-        "gap": 16,
-        "padding_top": 36,
-        "padding_bottom": 36
-      },
-      "blocks": {
-        "photo_1": {
-          "type": "image",
-          "settings": {}
-        },
-        "photo_2": {
-          "type": "image",
-          "settings": {}
-        },
-        "photo_3": {
-          "type": "image",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "photo_1",
-        "photo_2",
-        "photo_3"
-      ]
-    },
-    "gallery_necklaces": {
-      "type": "image-gallery",
-      "settings": {
-        "heading": "Made-to-Order Necklaces & Pendants",
-        "heading_preset": "h2",
-        "description": "<p>From refined chains to distinctive pendants and layered necklaces, our custom jewelry approach allows you to develop pieces with a recognizable identity. Share your inspiration with Craftaurum and explore options for materials, details, and finishes.</p>",
-        "body_preset": "h5",
-        "button_label": "Explore Necklaces",
-        "button_style": "button-unstyled",
-        "collection": "",
-        "link": "",
-        "section_width": "page-width",
-        "desktop_layout": "grid",
-        "desktop_columns": 3,
-        "mobile_layout": "grid",
-        "mobile_columns": 2,
-        "gap": 16,
-        "padding_top": 36,
-        "padding_bottom": 36
-      },
-      "blocks": {
-        "photo_1": {
-          "type": "image",
-          "settings": {}
-        },
-        "photo_2": {
-          "type": "image",
-          "settings": {}
-        },
-        "photo_3": {
-          "type": "image",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "photo_1",
-        "photo_2",
-        "photo_3"
-      ]
-    },
-    "contact_intro": {
-      "type": "text-heading",
-      "settings": {
-        "section_width": "page-width",
-        "heading": "Let's Create Your Next Jewelry Collection",
-        "heading_preset": "h2",
-        "description": "<p>Share your designs, preferred materials and manufacturing requirements. Craftaurum can help you explore the next steps for your project.</p>",
-        "body_preset": "h5",
-        "anchor_id": "craftaurum-jewelry-inquiry",
-        "padding_top": 32,
-        "padding_bottom": 12
       }
     }
   },
