@@ -1,60 +1,113 @@
-{% comment %}Reusable centered heading and alternating image/text feature. Horizon 4.1.3.{% endcomment %}
-<div id="ImageTextFeature-{{ section.id }}" class="section section--page-width image-text-feature" style="--itf-top:{{ section.settings.padding_top }}px;--itf-bottom:{{ section.settings.padding_bottom }}px;">
-  <div class="image-text-feature__header">
-    {% if section.settings.heading != blank %}<h2 class="{{ section.settings.heading_preset | default: 'h2' }} image-text-feature__title">{{ section.settings.heading | escape }}</h2>{% endif %}
-    {% if section.settings.top_label != blank %}
-      {% if section.settings.top_url != blank %}<a class="{{ section.settings.top_button_style | default: 'button' }} image-text-feature__top-button" style="font-size:var(--font-{{ section.settings.subtitle_preset | default: 'h3' }}--size);" href="{{ section.settings.top_url }}">{{ section.settings.top_label | escape }}</a>
-      {% else %}<span class="image-text-feature__top-button image-text-feature__top-button--static" style="font-size:var(--font-{{ section.settings.subtitle_preset | default: 'h3' }}--size);"><span aria-hidden="true">»</span> {{ section.settings.top_label | escape }}</span>{% endif %}
-    {% endif %}
-  </div>
-  <div class="image-text-feature__grid{% if section.settings.image_position == 'left' %} image-text-feature__grid--image-left{% endif %}">
-    <div class="image-text-feature__copy">
-      {% if section.settings.body != blank %}<div class="image-text-feature__body rte {{ section.settings.body_preset | default: 'h4' }}">{{ section.settings.body }}</div>{% endif %}
-      {% if section.settings.cta_label != blank and section.settings.cta_url != blank %}
-        <div class="image-text-feature__cta"><a class="{{ section.settings.cta_button_style | default: 'button' }}" href="{{ section.settings.cta_url }}">{{ section.settings.cta_label | escape }}</a></div>
+{% comment %}
+  Craftaurum image + copy. Preserves existing section settings and instance IDs.
+  Layout follows Horizon section-width / spacing-style / native type presets.
+  CTA output always uses snippets/craftaurum-cta.liquid.
+{% endcomment %}
+<div
+  id="ImageTextFeature-{{ section.id }}"
+  class="section section--page-width spacing-style ca-feature"
+  style="
+    --padding-block-start: {{ section.settings.padding_top }}px;
+    --padding-block-end: {{ section.settings.padding_bottom }}px;
+    --ca-feature-gap: {{ section.settings.column_gap | default: 48 }}px;
+  "
+>
+  <div class="ca-feature__inner">
+    <header class="ca-feature__header">
+      {% if section.settings.heading != blank %}
+        <h2 class="ca-feature__heading {{ section.settings.heading_preset | default: 'h2' }}">
+          {{ section.settings.heading | escape }}
+        </h2>
       {% endif %}
-    </div>
-    <div class="image-text-feature__media">
-      {% if section.settings.image != blank %}
-        {{ section.settings.image | image_url: width: 1600 | image_tag: loading: 'lazy', widths: '400, 600, 800, 1000, 1200, 1600', sizes: '(min-width: 750px) 48vw, 100vw', class: 'image-text-feature__photo' }}
-      {% else %}
-        {{ 'image' | placeholder_svg_tag: 'image-text-feature__placeholder' }}
+      {% if section.settings.top_label != blank %}
+        <div class="ca-feature__tag">
+          {% render 'craftaurum-cta',
+            label: section.settings.top_label,
+            link: section.settings.top_url,
+            style_class: section.settings.top_button_style,
+            class: 'ca-feature__top-cta',
+            static_label: true
+          %}
+        </div>
       {% endif %}
+    </header>
+
+    <div class="ca-feature__columns{% if section.settings.image_position == 'left' %} ca-feature__columns--reverse{% endif %}">
+      <div class="ca-feature__copy">
+        {% if section.settings.body != blank %}
+          <div class="ca-feature__body rte {{ section.settings.body_preset | default: 'h4' }}">
+            {{ section.settings.body }}
+          </div>
+        {% endif %}
+        {% if section.settings.cta_label != blank and section.settings.cta_url != blank %}
+          <div class="ca-feature__bottom-cta">
+            {% render 'craftaurum-cta',
+              label: section.settings.cta_label,
+              link: section.settings.cta_url,
+              style_class: section.settings.cta_button_style,
+              class: 'ca-feature__action'
+            %}
+          </div>
+        {% endif %}
+      </div>
+      <div class="ca-feature__media">
+        {% if section.settings.image != blank %}
+          {{
+            section.settings.image
+            | image_url: width: 1800
+            | image_tag:
+              loading: 'lazy',
+              class: 'ca-feature__image',
+              widths: '360, 540, 720, 960, 1200, 1500, 1800',
+              sizes: '(min-width: 1200px) 46vw, (min-width: 750px) 48vw, 100vw'
+          }}
+        {% else %}
+          {{ 'image' | placeholder_svg_tag: 'ca-feature__placeholder' }}
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>
-<style>
-  #ImageTextFeature-{{ section.id }} {padding-block:var(--itf-top) var(--itf-bottom);}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__header {text-align:center;margin-bottom:46px;}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__title {margin:0 0 15px;}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__top-button {display:inline-flex;align-items:center;justify-content:center;gap:14px;min-width:285px;min-height:57px;padding:12px 24px;}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__top-button--static::before {content:'»';margin-inline-end:.45em;}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__top-button--static {background:#151617;color:#fff;font-weight:600;border-radius:4px;}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__top-button span {font-size:1.5em;line-height:.65;}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__grid {display:grid;grid-template-columns:1fr 1fr;column-gap:5%;align-items:start;}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__copy {min-width:0;}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__body {line-height:var(--font-h4--line-height,1.55);}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__body p {font-size:inherit;line-height:inherit;margin:0 0 1.25em;}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__body p:last-child {margin-bottom:0;}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__media {width:100%;aspect-ratio:3/2;overflow:hidden;}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__photo, #ImageTextFeature-{{ section.id }} .image-text-feature__placeholder {display:block;width:100%;height:100%;object-fit:cover;}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__placeholder {background:rgb(var(--color-foreground-rgb) / .04);color:rgb(var(--color-foreground-rgb) / .18);}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__grid--image-left .image-text-feature__media {grid-column:1;grid-row:1;}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__grid--image-left .image-text-feature__copy {grid-column:2;grid-row:1;padding-top:20px;}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__cta {display:flex;justify-content:center;margin-top:36px;}
-  #ImageTextFeature-{{ section.id }} .image-text-feature__cta a {min-width:280px;}
-  @media(max-width:749px) {
-    #ImageTextFeature-{{ section.id }} .image-text-feature__header {margin-bottom:26px;}
-    #ImageTextFeature-{{ section.id }} .image-text-feature__top-button {min-width:0;width:min(100%,320px);}
-    #ImageTextFeature-{{ section.id }} .image-text-feature__grid {grid-template-columns:minmax(0,1fr);gap:22px;}
-    #ImageTextFeature-{{ section.id }} .image-text-feature__copy, #ImageTextFeature-{{ section.id }} .image-text-feature__media,
-    #ImageTextFeature-{{ section.id }} .image-text-feature__grid--image-left .image-text-feature__copy,
-    #ImageTextFeature-{{ section.id }} .image-text-feature__grid--image-left .image-text-feature__media {grid-column:1;grid-row:auto;padding-top:0;}
-    #ImageTextFeature-{{ section.id }} .image-text-feature__grid--image-left .image-text-feature__media {order:0;}
-    #ImageTextFeature-{{ section.id }} .image-text-feature__grid--image-left .image-text-feature__copy {order:1;}
-    #ImageTextFeature-{{ section.id }} .image-text-feature__cta {margin-top:24px;}
+
+{% stylesheet %}
+  .ca-feature .ca-feature__inner { min-width: 0; }
+  .ca-feature__header { text-align: center; margin: 0 auto 38px; }
+  .ca-feature__heading { margin: 0 0 16px; }
+  .ca-feature__tag { display: flex; justify-content: center; }
+  .ca-feature__top-cta { min-width: min(300px, 100%); }
+  .ca-feature__columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: var(--ca-feature-gap, 48px);
   }
-</style>
+  .ca-feature__copy { min-width: 0; padding-block: 4px; }
+  .ca-feature__body { max-width: 100%; }
+  .ca-feature__body :is(p, ul, ol) { font-size: inherit; line-height: inherit; }
+  .ca-feature__body p { margin: 0 0 1.35em; }
+  .ca-feature__body p:last-child { margin-bottom: 0; }
+  .ca-feature__bottom-cta { display: flex; justify-content: center; margin-top: 32px; }
+  .ca-feature__action { min-width: min(280px, 100%); }
+  .ca-feature__media { width: 100%; min-width: 0; aspect-ratio: 3 / 2; overflow: hidden; }
+  .ca-feature__image, .ca-feature__placeholder {
+    display: block; width: 100%; height: 100%; object-fit: cover;
+  }
+  .ca-feature__placeholder {
+    color: rgb(var(--color-foreground-rgb) / 0.2);
+    background-color: rgb(var(--color-foreground-rgb) / 0.05);
+  }
+  .ca-feature__columns--reverse .ca-feature__media { grid-column: 1; grid-row: 1; }
+  .ca-feature__columns--reverse .ca-feature__copy { grid-column: 2; grid-row: 1; }
+  @media screen and (max-width: 749px) {
+    .ca-feature__header { margin-bottom: 24px; }
+    .ca-feature__columns { display: flex; flex-direction: column; gap: 22px; }
+    .ca-feature__columns--reverse { flex-direction: column; }
+    .ca-feature__columns--reverse .ca-feature__media { order: 0; }
+    .ca-feature__columns--reverse .ca-feature__copy { order: 1; }
+    .ca-feature__copy, .ca-feature__media { width: 100%; }
+    .ca-feature__bottom-cta { margin-top: 24px; }
+  }
+{% endstylesheet %}
 {% schema %}
 {
   "name": "图文介绍",
@@ -225,6 +278,16 @@
         }
       ],
       "default": "right"
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "label": "桌面图文间距",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "default": 48
     },
     {
       "type": "text",
