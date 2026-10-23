@@ -10,9 +10,13 @@
     --padding-block-start: {{ section.settings.padding_top }}px;
     --padding-block-end: {{ section.settings.padding_bottom }}px;
     --ca-feature-gap: 5%;
+    --ca-feature-background: {{ section.settings.background_color }};
+    --ca-feature-text: {{ section.settings.text_color }};
+    --ca-feature-accent: {{ section.settings.accent_color }};
+    --ca-feature-ratio: {% case section.settings.image_ratio %}{% when 'wide' %}16 / 9{% when 'square' %}1 / 1{% else %}4 / 3{% endcase %};
   "
 >
-  <div class="ca-feature__inner">
+  <div class="ca-feature__surface"><div class="ca-feature__inner">
     {% if section.settings.heading_position != 'content' %}
       <header class="ca-feature__header">
         {% if section.settings.heading != blank %}
@@ -79,11 +83,13 @@
         {% endif %}
       </div>
     </div>
-  </div>
+  </div></div>
 </div>
 
 {% stylesheet %}
+  .ca-feature__surface { width: 100%; background: var(--ca-feature-background, #FFFFFF); color: var(--ca-feature-text, #17191A); }
   .ca-feature .ca-feature__inner { min-width: 0; }
+  .ca-feature__subtitle { color: var(--ca-feature-accent, #C7A85E); }
   .ca-feature__header { text-align: center; margin: 0 auto 38px; }
   .ca-feature__heading { margin: 0 0 16px; }
   .ca-feature__subtitle { margin: 0 0 16px; }
@@ -109,7 +115,7 @@
   .ca-feature__body p:last-child { margin-bottom: 0; }
   .ca-feature__bottom-cta { display: flex; justify-content: center; margin-top: 32px; }
   .ca-feature__action { min-width: min(280px, 100%); }
-  .ca-feature__media { width: 100%; min-width: 0; aspect-ratio: 3 / 2; overflow: hidden; }
+  .ca-feature__media { width: 100%; min-width: 0; aspect-ratio: var(--ca-feature-ratio, 4 / 3); overflow: hidden; }
   .ca-feature__image, .ca-feature__placeholder {
     display: block; width: 100%; height: 100%; object-fit: cover;
   }
@@ -155,6 +161,24 @@
         }
       ],
       "default": "page-width"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文字颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "重点颜色",
+      "default": "#C7A85E"
     },
     {
       "type": "text",
@@ -338,6 +362,26 @@
       "default": "right"
     },
     {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "图片比例",
+      "options": [
+        {
+          "value": "landscape",
+          "label": "4:3"
+        },
+        {
+          "value": "wide",
+          "label": "16:9"
+        },
+        {
+          "value": "square",
+          "label": "1:1"
+        }
+      ],
+      "default": "landscape"
+    },
+    {
       "type": "text",
       "id": "cta_label",
       "label": "底部按钮文案",
@@ -391,7 +435,24 @@
   ],
   "presets": [
     {
-      "name": "图文介绍"
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "heading": "Jewelry Manufacturing Built Around Your Collection",
+        "heading_position": "content",
+        "subtitle": "ABOUT CRAFTAURUM",
+        "subtitle_preset": "h5",
+        "body": "<p>Craftaurum supports jewelry brands and wholesale partners with custom development, sampling and production coordination.</p>",
+        "body_preset": "h5",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "top_label": "",
+        "cta_label": "Learn More About Us",
+        "cta_button_style": "button-unstyled"
+      }
     }
   ]
 }
