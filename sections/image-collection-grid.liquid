@@ -69,13 +69,15 @@
           %}
         {% endcapture %}
       {% endif %}
+      {% assign ca_collection_can_scroll = false %}
+      {% if section.blocks.size > 1 %}{% assign ca_collection_can_scroll = true %}{% endif %}
       <div class="ca-collection__carousel">
         {% render 'slideshow',
           class: 'ca-collection__slideshow',
           slides: mobile_slides,
           controls: mobile_controls,
           slide_count: section.blocks.size,
-          show_arrows: true,
+          show_arrows: ca_collection_can_scroll,
           icon_style: 'chevron',
           icon_shape: 'none',
           infinite: false
