@@ -33,8 +33,7 @@
   {%- endif -%}
   {%- if is_static -%}
     <span class="ca-cta ca-cta--static {{ cta_style }} {{ class }}">
-      {% if cta_indicator %}<span class="ca-cta__mark" aria-hidden="true">»</span>{% endif %}
-      <span class="ca-cta__label">{{ cta_label | escape }}</span>
+      <span class="ca-cta__content">{% if cta_indicator %}<span class="ca-cta__mark" aria-hidden="true">»</span> {% endif %}{{ cta_label | escape }}</span>
     </span>
   {%- else -%}
     <a
@@ -46,8 +45,7 @@
         {{ block.shopify_attributes }}
       {% endif %}
     >
-      {% if cta_indicator %}<span class="ca-cta__mark" aria-hidden="true">»</span>{% endif %}
-      <span class="ca-cta__label">{{ cta_label | escape }}</span>
+      <span class="ca-cta__content">{% if cta_indicator %}<span class="ca-cta__mark" aria-hidden="true">»</span> {% endif %}{{ cta_label | escape }}</span>
     </a>
   {%- endif -%}
 {%- endif -%}
@@ -56,18 +54,21 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5em;
     text-align: center;
     max-width: 100%;
     white-space: normal;
   }
-  /* Keep the arrow in one source of truth: the accessible inline mark. */
-  .ca-cta.ca-cta::before {
-    content: none;
-    display: none;
+  .ca-cta.ca-cta::before { content: none; display: none; }
+  .ca-cta__content { display: inline; min-width: 0; }
+  .ca-cta__mark { display: inline; font-size: 1.08em; line-height: 1; }
+  .ca-cta.button-unstyled { text-decoration: none; }
+  .ca-cta.button-unstyled .ca-cta__content,
+  .ca-cta--static.button-unstyled .ca-cta__content {
+    text-decoration-line: underline;
+    text-decoration-color: currentColor;
+    text-decoration-thickness: 1px;
+    text-underline-offset: .22em;
   }
-  .ca-cta__mark { flex: none; line-height: 1; font-size: 1.15em; }
-  .ca-cta__label { min-width: 0; }
-  .ca-cta--static { cursor: default; }
-  .ca-cta[aria-disabled="true"] { cursor: default; }
+  .ca-cta.button-unstyled:hover .ca-cta__content { text-decoration-thickness: 2px; }
+  .ca-cta--static, .ca-cta[aria-disabled="true"] { cursor: default; }
 {% endstylesheet %}
