@@ -13,16 +13,17 @@
   "
 >
   <div class="ca-feature__inner">
-    <header class="ca-feature__header">
-      {% if section.settings.heading != blank %}
-        <h2 class="ca-feature__heading {{ section.settings.heading_preset | default: 'h2' }}">
-          {{ section.settings.heading | escape }}
-        </h2>
-      {% endif %}
-      {% if section.settings.subtitle != blank %}
-        <p class="ca-feature__subtitle {{ section.settings.subtitle_preset | default: 'h3' }}">{{ section.settings.subtitle | escape }}</p>
-      {% endif %}
-      {% if section.settings.top_label != blank %}
+    {% if section.settings.heading_position != 'content' %}
+      <header class="ca-feature__header">
+        {% if section.settings.heading != blank %}
+          <h2 class="ca-feature__heading {{ section.settings.heading_preset | default: 'h2' }}">
+            {{ section.settings.heading | escape }}
+          </h2>
+        {% endif %}
+        {% if section.settings.subtitle != blank %}
+          <p class="ca-feature__subtitle {{ section.settings.subtitle_preset | default: 'h3' }}">{{ section.settings.subtitle | escape }}</p>
+        {% endif %}
+        {% if section.settings.top_label != blank %}
         <div class="ca-feature__tag">
           {% render 'craftaurum-cta',
             label: section.settings.top_label,
@@ -32,11 +33,20 @@
             static_label: true
           %}
         </div>
-      {% endif %}
-    </header>
+        {% endif %}
+      </header>
+    {% endif %}
 
     <div class="ca-feature__columns{% if section.settings.image_position == 'left' %} ca-feature__columns--reverse{% endif %}">
       <div class="ca-feature__copy">
+        {% if section.settings.heading_position == 'content' %}
+          {% if section.settings.subtitle != blank %}
+            <p class="ca-feature__subtitle {{ section.settings.subtitle_preset | default: 'h3' }}">{{ section.settings.subtitle | escape }}</p>
+          {% endif %}
+          {% if section.settings.heading != blank %}
+            <h2 class="ca-feature__heading {{ section.settings.heading_preset | default: 'h2' }}">{{ section.settings.heading | escape }}</h2>
+          {% endif %}
+        {% endif %}
         {% if section.settings.body != blank %}
           <div class="ca-feature__body rte {{ section.settings.body_preset | default: 'h5' }}">
             {{ section.settings.body }}
@@ -176,6 +186,22 @@
         }
       ],
       "default": "h2"
+    },
+    {
+      "type": "select",
+      "id": "heading_position",
+      "label": "标题位置",
+      "options": [
+        {
+          "value": "top",
+          "label": "顶部居中"
+        },
+        {
+          "value": "content",
+          "label": "正文区域"
+        }
+      ],
+      "default": "top"
     },
     {
       "type": "text",
