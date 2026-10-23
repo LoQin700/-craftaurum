@@ -171,3 +171,15 @@
 - `page.jewelry-collections.json` 已兼容升级后的图文卡片 Block：旧图片保留，新增标题/正文/按钮字段明确为空，不会因 schema default 自动出现重复文案；手机列数限制在 1–2。
 - 静态检查结果 PASS：新旧页面模板无 orphan settings / block settings；所有 Section Schema 可解析；Range 默认值合法；全局色板与按钮 Hover 值匹配；`page.jewelry-showcase` Section 顺序完整。
 - 未运行 Shopify CLI Theme Check，也未在 Shopify Theme Editor / 实际浏览器完成桌面、平板、手机 QA，因此 GitHub 静态通过不等于已上线验收。
+
+## 2026-10-23 · jewelry-rings 页面实例已填充
+- Shopify 后台新建的 `jewelry-rings` 已同步出 `templates/page.jewelry-rings.json`；原模板仅含 `main-page`。
+- 直接在现有模板上填充 Rings 工厂展示结构：图文横幅 → 横向 CTA → 图文卡片 → 交互图文 → 图文介绍 → 图标文字 → 标题说明 → Horizon 原生 Contact Form。
+- Rings 默认文案：
+  - Hero：`Custom Rings Manufacturing.`
+  - 图文卡片：Gemstone Rings / Metal & Minimal Rings / Pearl Rings / Signature Ring Designs。
+  - 交互能力：Material Selection / Ring Craftsmanship / Brand-Led Design Development / Production Review。
+  - 工厂简介、通用制造能力和 Contact 文案均改为 Rings 场景，正文继续默认 H5。
+- 图片字段均保持空白，由 Theme Editor 上传真实素材；Hero 默认 16:9 左文右图；图文卡片桌面4列，手机1列原生轮播。
+- `layout/theme.liquid` 已让 `page.jewelry-rings` 复用此前优化好的 `craftaurum-contact.css`。
+- 静态模板检查 PASS；当前页面模板与 Section 类型映射完整。Shopify 主题编辑器视觉仍需实测。
