@@ -160,9 +160,9 @@
       "name": "图文卡片",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
         "eyebrow": "JEWELRY DESIGN RANGE",
         "eyebrow_preset": "h5",
         "heading": "Explore Custom Ring Styles",
@@ -261,13 +261,57 @@
     },
     "icon_with_text_support": {
       "type": "icon-with-text",
+      "blocks": {
+        "iwt_design": {
+          "type": "item",
+          "settings": {
+            "icon": "ruler",
+            "icon_color": "#c7a85e",
+            "title": "Design Development",
+            "description": "<p>Clarify references, proportions and design intent before sampling begins.</p>"
+          }
+        },
+        "iwt_material": {
+          "type": "item",
+          "settings": {
+            "icon": "star",
+            "icon_color": "#c7a85e",
+            "title": "Material Options",
+            "description": "<p>Review suitable metals, stones and finishing directions for the collection.</p>"
+          }
+        },
+        "iwt_sample": {
+          "type": "item",
+          "settings": {
+            "icon": "clipboard",
+            "icon_color": "#c7a85e",
+            "title": "Sample Support",
+            "description": "<p>Use samples to review construction, proportion and finish before production.</p>"
+          }
+        },
+        "iwt_quality": {
+          "type": "item",
+          "settings": {
+            "icon": "check_box",
+            "icon_color": "#c7a85e",
+            "title": "Quality Review",
+            "description": "<p>Check visual and construction details against agreed production specifications.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "iwt_design",
+        "iwt_material",
+        "iwt_sample",
+        "iwt_quality"
+      ],
       "name": "图标文字",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#F8F7F4",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
-        "style_preset": "editorial",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "style_preset": "centered",
         "icon_position": "top",
         "icon_size": 32,
         "icon_gap": 16,
@@ -284,55 +328,7 @@
         "mobile_columns": "1",
         "padding_top": 72,
         "padding_bottom": 72
-      },
-      "blocks": {
-        "iwt_design": {
-          "type": "item",
-          "settings": {
-            "icon": "ruler",
-            "image_upload": null,
-            "icon_color": "#C7A85E",
-            "title": "Design Development",
-            "description": "<p>Clarify references, proportions and design intent before sampling begins.</p>"
-          }
-        },
-        "iwt_material": {
-          "type": "item",
-          "settings": {
-            "icon": "star",
-            "image_upload": null,
-            "icon_color": "#C7A85E",
-            "title": "Material Options",
-            "description": "<p>Review suitable metals, stones and finishing directions for the collection.</p>"
-          }
-        },
-        "iwt_sample": {
-          "type": "item",
-          "settings": {
-            "icon": "clipboard",
-            "image_upload": null,
-            "icon_color": "#C7A85E",
-            "title": "Sample Support",
-            "description": "<p>Use samples to review construction, proportion and finish before production.</p>"
-          }
-        },
-        "iwt_quality": {
-          "type": "item",
-          "settings": {
-            "icon": "check_box",
-            "image_upload": null,
-            "icon_color": "#C7A85E",
-            "title": "Quality Review",
-            "description": "<p>Check visual and construction details against agreed production specifications.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "iwt_design",
-        "iwt_material",
-        "iwt_sample",
-        "iwt_quality"
-      ]
+      }
     }
   },
   "order": [
