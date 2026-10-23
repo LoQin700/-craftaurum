@@ -337,3 +337,18 @@
   - 第二段不重复标题和介绍，视觉上连续衔接。
 - OEM Jewellery 的 What We Can Produce 保持一个 Section，6 个卡片设置为 PC 3 列 Grid，即上下两排各 3 个。
 - 静态验证 PASS：Schema range 合法、首页 2+3 拆分正确、OEM 6 / 3 列正确、旧写死 CSS 已移除。
+
+## 2026-10-24 · Customization page completed
+- Added `templates/page.customization.json`.
+- Structure:
+  1. Hero / 图文横幅
+  2. Customization Capabilities / 图文卡片 (6 items: Plating & Surface Finish, 3D Rendering, Stone Setting, Casting, Polishing, Private Label)
+  3. Customize Every Detail Around Your Brand / 图文横幅
+  4. What Can Be Customized / 图标文字 (Design & Shape, Metal, Stone & Pearl, Plating & Finish, Logo & Branding, Private Label)
+  5. Six alternating 图文介绍 process sections: Communication, Design, 3D Rendering, Sampling, Production, Delivery
+  6. Why Customize with Craftaurum / 图标文字
+  7. What We Need From You / 图标文字 (Sketches, Reference Images, Dimensions, Preferred Materials, Target Quantity, Target Market, Timeline)
+  8. Horizon native Contact Form
+- Copy direction was adapted from Sunrise Customization page while avoiding unverified factory/turnaround/logistics claims.
+- Images remain empty for Theme Editor upload.
+- Strict template/schema validation PASS: all custom setting IDs, select values, range values and Horizon icon values are valid.
