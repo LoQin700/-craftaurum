@@ -138,7 +138,8 @@
         "autoplay": true,
         "autoplay_speed": 3,
         "padding_top": 40,
-        "padding_bottom": 20
+        "padding_bottom": 20,
+        "section_width": "page-width"
       }
     },
     "image_text_feature_NWRYeQ": {
@@ -158,7 +159,8 @@
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button",
         "padding_top": 32,
-        "padding_bottom": 32
+        "padding_bottom": 32,
+        "section_width": "page-width"
       }
     },
     "image_text_feature_YzURpA": {
@@ -172,13 +174,14 @@
         "top_url": "shopify://pages/contact",
         "top_button_style": "button",
         "body": "<p>Craftaurum creates custom gold jewelry designed to reflect each brand’s distinctive style. From individual pieces to complete collections, we combine thoughtful design, precise production and a commitment to material quality.</p><p>Our customization options span precious-metal choices, detailed finishing and gold plating in a range of tones and specifications, helping brands develop pieces tailored to their market.</p><p>Speak with our team to explore your ideas and create a collection that feels uniquely yours.</p>",
-        "body_preset": "h4",
+        "body_preset": "h5",
         "image_position": "left",
         "cta_label": "",
         "cta_url": "shopify://collections/all",
         "cta_button_style": "button",
         "padding_top": 32,
-        "padding_bottom": 32
+        "padding_bottom": 32,
+        "section_width": "page-width"
       }
     },
     "image_collection_grid_craftaurum": {
@@ -187,7 +190,7 @@
         "heading": "Explore Our Custom Jewelry Collections",
         "heading_preset": "h2",
         "description": "<p>Discover Craftaurum’s custom jewelry collections, from signature rings and earrings to refined bracelets, necklaces, and artisanal designs created for your brand.</p>",
-        "body_preset": "h4",
+        "body_preset": "h5",
         "card_title_preset": "h3",
         "mobile_columns": 2,
         "mobile_layout": "grid",
@@ -195,7 +198,8 @@
         "hover_overlay_opacity": 50,
         "gap": 16,
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "section_width": "page-width"
       },
       "blocks": {
         "card_1": {
