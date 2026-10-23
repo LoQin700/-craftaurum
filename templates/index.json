@@ -247,7 +247,7 @@
         "heading_preset": "h2",
         "description": "<p>Discover Craftaurum’s custom jewelry collections, from signature rings and earrings to refined bracelets, necklaces, and artisanal designs created for your brand.</p>",
         "body_preset": "h5",
-        "background_color": "#f4f4f4",
+        "background_color": "{{ settings.color_palette.color3 }}",
         "card_title_preset": "h3",
         "mobile_columns": 2,
         "mobile_layout": "grid",
