@@ -210,3 +210,44 @@
 - `page.jewelry-showcase.json` 也统一回到 `image-gallery` + `interactive-feature`（icons mode），不再依赖备用 Section。
 - `image-text-feature.liquid` 已改为桌面双列 `align-items:center`，图片与文字垂直居中。
 - 当前预期 Picker 通用项：图文卡片、交互图文、图标文字、图文介绍、图文横幅、分类图片展示、图片轮播、标题说明、横向 CTA。
+
+## 2026-10-23 · Rings 最终确认版（按 HTML 预览落地）
+
+### 最终页面顺序
+`page.jewelry-rings.json`：
+1. 图文横幅：白底、左文右横图、16:9、Rings OEM/ODM 文案。
+2. 横向 CTA：默认全宽，真实黑色背景容器 `#17191A`，文字 `#F8F7F4`，Hover `#C7A85E`。
+3. 图文卡片：白底；桌面 4 列；手机 1 列轮播（设置范围 1–2）；每卡主图/Hover 图/标题/H5 正文/CTA。
+4. 交互图文：白底；Why Choose Our Rings，左侧能力列表，Hover/Focus/Click 联动右图。
+5. 图文介绍：白底；默认左图右文，4:3，图片与文字垂直居中。
+6. 图标文字：默认 `#F8F7F4` 背景，黑字 + 金色重点；桌面 4 列、手机 2 列。
+7. Horizon 原生 Contact Form：不重写表单、不加载 Rings 自定义表单 CSS；继续使用原生 `section.liquid` 的 `section_width`（页面宽度/全宽），Rings 默认页面宽度。
+- 默认 main-page 保持 disabled。
+
+### Section 结构
+- `image-gallery.liquid` 现为「图片展示」通用 Section，提供两个清晰 preset：
+  - 「图片画廊」= 纯图片，手机 1–4 列，网格/轮播。
+  - 「图文卡片」= 图片+Hover图+标题+H5正文+按钮，手机严格 1–2 列，网格/轮播。
+- `interactive-feature.liquid` 现为「能力展示」，两个 preset：
+  - 「交互图文」= 产品细分能力，默认白底。
+  - 「图标文字」= 工厂通用能力，默认 `#F8F7F4`。
+- `horizontal-cta.liquid` 改为内部 surface 真正承担背景，避免 Horizon `.section` 强制 transparent 导致背景色失效。
+- `jewelry-collections-overview.liquid`、`image-text-feature.liquid`、`image-gallery.liquid`、`interactive-feature.liquid` 均补充背景色 / 文字色 / 重点色设置，默认按 Craftaurum 色系。
+
+### 全局视觉
+- 页面背景：`#FFFFFF`
+- 深色 / 主文字：`#17191A`
+- Logo / Accent / Hover：`#C7A85E`
+- Icon with Text 背景：`#F8F7F4`
+- H1–H6 默认桌面：24 / 22 / 20 / 18 / 16 / 14 px
+- H1–H6 默认手机：22 / 20 / 18 / 16 / 14 / 12 px
+- Paragraph：桌面 16 / 手机 14
+- Primary / Secondary Button：桌面 16 / 手机 14
+- 正文型自定义 Section 默认选择 H5。
+
+### 验证
+静态验证 PASS：
+- Rings 模板所有 Section setting / block setting 均与对应 schema 匹配，无 orphan 字段。
+- Hero 白、CTA 黑、Cards 白、Why Choose 白、Factory Intro 白、Icons `#F8F7F4`、Contact 原生。
+- Contact 使用 Horizon 原生 `section + contact-form`，Rings 不再加载 `craftaurum-contact.css`。
+- 全局颜色和连续字号值均与最终要求匹配。
