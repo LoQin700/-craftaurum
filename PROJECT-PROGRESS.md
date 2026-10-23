@@ -80,3 +80,28 @@
 - `config/settings_schema.json`、`config/settings_data.json` 的 current 与 Horizon 主题 preset 同步为这套默认值；其余配置保留。
 - 已读取 GitHub 最新代码并进行静态核查：全部字号选项为 2px 等差、当前值/预设值合法、按钮颜色与变量绑定存在、JSON 可解析。
 - **未执行 Shopify 线上同步确认、Shopify CLI theme check 或真实三端前台 QA**；需分别验证，不能将 GitHub 提交等同于已上线。
+
+## 2026-10-23 Horizon 原生化统一重构（单批次）
+
+### 目标与保留原则
+- 保留原有首页现存 Section IDs、`brand-partners` / `image-text-feature` / `image-collection-grid` 类型、原 Block Type、图片选择器和业务内容字段，防止 Theme Editor 绑定丢失。
+- 视觉参照 Sunrise-jewel：Logo 三列图片轮播；银饰/黄金双列交错图文；2+3 系列图片展示和 Hover 蒙层/线框动画。
+- 组件原则：CTA 使用一个公共 `craftaurum-cta`；轮播使用 Horizon 原生 `slideshow`、`slideshow-slide`、`slideshow-controls`；卡片由公共 `craftaurum-collection-card` 输出。
+- 功能性控件（轮播箭头、购物车、搜索等）继续使用 Horizon 原生按钮机制，**不**向其强加 CTA 前缀。
+
+### 修改文件
+- `snippets/craftaurum-cta.liquid`：新增共用 CTA。主/次/文字/自定义样式、链接、block 属性、尺寸、默认 “»” 标识均由同一个组件渲染。
+- `snippets/button.liquid`、`blocks/button.liquid`：Horizon 原有 Button Theme Block 委派到上述 CTA，保留 block 宽度、目标地址、新窗口与自定义颜色。
+- `assets/base.css`：移除之前全局 `::before` 插入 “»” 的粗放规则，修复对导航/功能按钮布局的干扰。
+- `sections/image-text-feature.liquid`：保留已配置的两个实例，接入 Horizon page-width / spacing-style / H1-H6 预设及公共 CTA；精简设置，并保留左右图文、原图片及链接字段；新加可选纯文本副标题以匹配独立副标题预设，不强迫顶部 CTA 使用副标题字号。
+- `sections/brand-partners.liquid`：改用 Horizon Slideshow 代替自写 setInterval/ResizeObserver/scrollTo；原 Logo Block 图片与文字保持；PC 三列，Mobile 1-4 项/轮播或真正的独立网格；轮播使用原生箭头、圆点、自动播放逻辑。
+- `snippets/craftaurum-collection-card.liquid`：新增共用图片卡片，支持 image_picker，缺图时回退到绑定的 collection.image；标题和链接也支持独立设置或 collection 回退。
+- `sections/image-collection-grid.liquid`：保留 PC 2+3 布局、默认蒙层25%/Hover50%与边框动画，使用公共卡片与 Horizon 原生手机轮播；Mobile 1-4 列/网格或轮播。增加 Horizon 背景色/对比度机制，默认背景#F4F4F4。
+- `templates/index.json`：核对后发现用户当前索引丢失系列图片展示，按之前明确要求恢复在银饰与黄金图文之后；其他四个已有实例及内容不重建。
+
+### 静态核查
+- 自定义 Section Schema 可解析；字段和 Block Type 与当前 index.json 保持兼容。
+- 三个 Section 均不再有自写 `<script>`；Section CSS 改为 `{% stylesheet %}` 与实例根节点 CSS 变量。
+- CTA 箭头只在公共 CTA 组件渲染；全局 CSS 的粗放伪元素方案已移除。
+- 当前模板次序：Hero → 图片轮播 → 银饰图文 → 黄金图文 → 珠宝系列图片展示。
+- 仍需 Shopify CLI Theme Check、Theme Editor 添加/排序/图片保存与真机桌面/平板/手机验证；**目前仅能确认 GitHub 源码提交和静态一致性，不可宣称前台已验收。**
