@@ -299,3 +299,28 @@
   - Artisanal: large pendants / brooches / waist chains / corporate jewelry gifts.
 - Avoided carrying Sunrise-specific claims such as decades of experience, CA65/REACH compliance, low MOQ or other unverified facts into Craftaurum copy.
 - Custom-section schema/template cross-check PASS for all 5 new templates: no unknown custom setting IDs or block setting IDs.
+
+## 2026-10-24 · OEM Jewellery page completed
+- Added `templates/page.oem-jewellery.json`.
+- Structure follows the approved Sunrise OEM Jewellery framework using existing reusable sections only:
+  1. Hero / 图文横幅
+  2. What We Can Produce / 分类图片展示
+  3. Why Choose Our OEM Jewellery Manufacturing Services? / 图文横幅
+  4. Six alternating 图文介绍 process sections:
+     - Consultation & Conceptualization
+     - Design & Prototyping
+     - Material Selection
+     - Precision Manufacturing
+     - Quality Assurance
+     - Customization & Branding
+  5. Icon With Text / OEM advantages:
+     - Unparalleled Craftsmanship
+     - Tailored Solutions
+     - Strict Quality Standards
+     - Clear Collaboration
+  6. Horizon native Contact Form
+- Process image positions alternate left/right across all six sections.
+- Classification area includes 6 categories: Custom Fashion Jewelry, Custom Rings, Custom Earrings, Custom Necklace, Custom Bracelets, Artisanal Jewelry.
+- Copy direction was adapted from Sunrise OEM Jewellery page while avoiding unverified Craftaurum-specific claims such as owning a plating factory.
+- Category images and process images remain empty for Theme Editor upload; links remain unset rather than guessing page handles.
+- Custom section/template cross-check PASS with 0 unknown setting IDs or block setting IDs.
