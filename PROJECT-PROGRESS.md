@@ -251,3 +251,15 @@
 - Hero 白、CTA 黑、Cards 白、Why Choose 白、Factory Intro 白、Icons `#F8F7F4`、Contact 原生。
 - Contact 使用 Horizon 原生 `section + contact-form`，Rings 不再加载 `craftaurum-contact.css`。
 - 全局颜色和连续字号值均与最终要求匹配。
+
+## 2026-10-23 · Rings 四项代码修正
+- 横向 CTA：上下 padding 现在明确应用在黑色 `.ca-horizontal-cta__surface` 内部；Rings 实例默认上下至少 40px，避免黑色区域内部无留白。
+- 图片画廊 / 图文卡片彻底拆分：
+  - `image-gallery.liquid` = 纯「图片画廊」，仅图片、网格/轮播、PC/Mobile 列数、比例。
+  - `content-cards.liquid` = 独立「图文卡片」，主图 + Hover 图 + 标题 + H5 正文 + CTA；PC 2–5列，Mobile 1–2列，网格/Scroll Snap 轮播。
+- 交互图文 / 图标文字彻底拆分：
+  - `interactive-feature.liquid` = 仅「交互图文」。
+  - `icon-with-text.liquid` = 独立「图标文字」，默认背景 `#F8F7F4`。
+- Contact：保留 Horizon 原生 `section.liquid + contact-form`。在原生 Contact Form Block 增加 `follow_section_width`（默认开启）。开启后 Block 宽度固定 100% 跟随 Section：页面宽度 = 页面内容区 100%；全宽 = 全宽内容区 100%。不再被原来的 custom_width 50% 抵消。
+- `page.jewelry-rings.json` 已补齐：Hero → CTA → 图文卡片 → 交互图文 → 图文介绍 → 图标文字 → 原生 Contact。
+- 静态检查 PASS：CTA surface padding、五个独立 Section preset、Contact 跟随宽度、Rings 完整顺序均通过。
