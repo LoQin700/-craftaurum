@@ -1,0 +1,139 @@
+/*
+ * Jewelry Collections editorial page template for Craftaurum.
+ * Assign this template to a Shopify Page in Online Store > Pages.
+ * Product category destinations are configured with each block's Collection picker.
+ */
+{
+  "sections": {
+    "jewelry_overview": {
+      "type": "jewelry-collections-overview",
+      "settings": {
+        "eyebrow": "JEWELRY MANUFACTURING",
+        "heading": "Custom Fashion Jewelry",
+        "introduction": "<p>Craftaurum presents custom fashion jewelry for brands, design studios, and wholesale partners. Our range includes rings, earrings, bracelets, necklaces, and pendants that can be developed with attention to material, proportion, and finishing detail.</p><p>From early sketches to finished pieces, we approach each collection as an opportunity to translate your creative direction into carefully crafted jewelry.</p>",
+        "quote_label": "Get B2B Quote",
+        "catalog_label": "Request Catalog",
+        "heading_preset": "h1",
+        "eyebrow_preset": "h5",
+        "category_heading_preset": "h2",
+        "body_preset": "h4",
+        "mobile_columns": 2,
+        "mobile_layout": "grid",
+        "image_gap": 16,
+        "inquiry_heading": "Let's Create Your Next Jewelry Collection",
+        "inquiry_text": "<p>Share your ideas, preferred materials, and custom manufacturing needs. We would be pleased to discuss your next jewelry project.</p>",
+        "padding_top": 40,
+        "padding_bottom": 24
+      },
+      "blocks": {
+        "category_rings": {
+          "type": "category",
+          "settings": {
+            "heading": "Wholesale & Custom Rings",
+            "description": "<p>From elegant everyday rings to statement designs, Craftaurum helps brands develop ring collections in different styles and materials. Explore our jewelry-making capabilities and discuss the details that will make your next collection distinctive.</p>",
+            "button_label": "Explore Rings"
+          }
+        },
+        "category_earrings": {
+          "type": "category",
+          "settings": {
+            "heading": "Exclusive Custom Earrings",
+            "description": "<p>Discover versatile earring possibilities, from understated studs and classic hoops to expressive drops and gemstone-led designs. We support custom styles and finishing details that reflect your brand's creative direction.</p>",
+            "button_label": "Explore Earrings"
+          }
+        },
+        "category_bracelets": {
+          "type": "category",
+          "settings": {
+            "heading": "Tailor-Made Bracelets & Bangles",
+            "description": "<p>Explore bracelets and bangles designed for different collections, including delicate chains, sculptural cuffs, and decorative pieces. Craftaurum helps turn your concepts into well-considered jewelry with attention to shape, finish, and comfort.</p>",
+            "button_label": "Explore Bracelets"
+          }
+        },
+        "category_necklaces": {
+          "type": "category",
+          "settings": {
+            "heading": "Made-to-Order Necklaces & Pendants",
+            "description": "<p>From refined chains to distinctive pendants and layered necklaces, our custom jewelry approach allows you to develop pieces with a recognizable identity. Share your inspiration with Craftaurum and explore options for materials, details, and finishes.</p>",
+            "button_label": "Explore Necklaces"
+          }
+        }
+      },
+      "block_order": [
+        "category_rings",
+        "category_earrings",
+        "category_bracelets",
+        "category_necklaces"
+      ]
+    },
+    "contact_form": {
+      "type": "section",
+      "blocks": {
+        "contact_form_UwiCkQ": {
+          "type": "contact-form",
+          "settings": {
+            "width": "custom",
+            "custom_width": 50,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100,
+            "input_style": "default",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "submit-button": {
+              "type": "contact-form-submit-button",
+              "static": true,
+              "settings": {
+                "label": "Submit",
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "block_order": [
+        "contact_form_UwiCkQ"
+      ],
+      "name": "t:names.contact_form",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "{{ settings.color_palette.background }}",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 32,
+        "padding-block-end": 84
+      }
+    }
+  },
+  "order": [
+    "jewelry_overview",
+    "contact_form"
+  ]
+}
