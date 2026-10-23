@@ -29,7 +29,7 @@
       {% capture logo_slides %}
         {% for block in section.blocks %}
           {% capture logo_content %}
-            <div class="ca-logos__tile">
+            <div class="ca-logos__tile" {{ block.shopify_attributes }}>
               {% if block.settings.image != blank %}
                 {{
                   block.settings.image
@@ -48,8 +48,7 @@
           {% render 'slideshow-slide',
             index: forloop.index0,
             children: logo_content,
-            class: 'ca-logos__slide',
-            attributes: block.shopify_attributes
+            class: 'ca-logos__slide'
           %}
         {% endfor %}
       {% endcapture %}
