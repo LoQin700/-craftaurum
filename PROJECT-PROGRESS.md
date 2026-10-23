@@ -280,3 +280,22 @@
   - 背景色 / 文字色 / 重点色、H1–H6 字号和上下留白。
 - 默认背景继续为 `#F8F7F4`，主文字 `#17191A`，Accent `#C7A85E`。
 - Shopify schema 级校验 PASS：所有 range 步数合法、select 默认值合法、preset block/icon 合法，原生 icon 选项与 Horizon 当前 `blocks/icon.liquid` 完整一致（59 个）。
+
+## 2026-10-23 · Jewelry category pages completed from Rings structure
+- Kept `page.jewelry-rings.json` unchanged as the structural reference.
+- Added 5 category templates using the same section order as Rings:
+  - `page.jewelry-fashion.json`
+  - `page.jewelry-earrings.json`
+  - `page.jewelry-necklace.json`
+  - `page.jewelry-bracelets.json`
+  - `page.jewelry-artisanal.json`
+- Shared structure: disabled main-page → 图文横幅 → 横向 CTA → 图文卡片 → 交互图文 → 图文介绍 → 图标文字 → Horizon native Contact Form.
+- Images remain empty / Theme Editor replaceable; only category copy and block content were changed.
+- Content direction was adapted from Sunrise Jewel's category pages:
+  - Fashion Jewelry: rings / earrings / bracelets / necklaces, multi-category customization.
+  - Earrings: pearl / stud / hoop / gemstone earrings and custom earring development.
+  - Necklace: pendant / pearl / choker / fashion & logo necklaces and B2B customization.
+  - Bracelets: chain / bead / bangle / statement bracelets, materials/plating/fit.
+  - Artisanal: large pendants / brooches / waist chains / corporate jewelry gifts.
+- Avoided carrying Sunrise-specific claims such as decades of experience, CA65/REACH compliance, low MOQ or other unverified facts into Craftaurum copy.
+- Custom-section schema/template cross-check PASS for all 5 new templates: no unknown custom setting IDs or block setting IDs.
