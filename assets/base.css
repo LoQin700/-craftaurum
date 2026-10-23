@@ -1157,9 +1157,7 @@ button.shopify-payment-button__button--unbranded:hover:not([disabled]) {
 /* Default hover dim for link-style buttons, scoped via :where() so component-specific
    hover rules (.facets__clear-all-link, .header-actions__action, etc.) still win. */
 :where(.button-unstyled):hover {
-  --hover-color-rgb: var(--color-foreground-rgb);
-
-  color: rgb(var(--hover-color-rgb) / var(--opacity-70));
+  color: var(--color-accent, #C7A85E);
 }
 
 .button-unstyled--with-icon {
