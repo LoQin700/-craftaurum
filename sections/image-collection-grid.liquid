@@ -8,7 +8,7 @@
 <div class="section-background{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"></div>
 <div
   id="ImageCollectionGrid-{{ section.id }}"
-  class="section section--page-width spacing-style ca-collection{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  class="section section--{{ section.settings.section_width | default: 'page-width' }} spacing-style ca-collection{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
   style="
     --padding-block-start: {{ section.settings.padding_top }}px;
     --padding-block-end: {{ section.settings.padding_bottom }}px;
@@ -25,7 +25,7 @@
         <h2 class="ca-collection__heading {{ section.settings.heading_preset | default: 'h2' }}">{{ section.settings.heading | escape }}</h2>
       {% endif %}
       {% if section.settings.description != blank %}
-        <div class="ca-collection__description rte {{ section.settings.body_preset | default: 'h4' }}">
+        <div class="ca-collection__description rte {{ section.settings.body_preset | default: 'h5' }}">
           {{ section.settings.description }}
         </div>
       {% endif %}
@@ -186,6 +186,22 @@
   },
   "settings": [
     {
+      "type": "select",
+      "id": "section_width",
+      "label": "内容宽度",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "页面宽度"
+        },
+        {
+          "value": "full-width",
+          "label": "全宽"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
       "type": "text",
       "id": "heading",
       "label": "标题",
@@ -259,7 +275,7 @@
           "label": "H6"
         }
       ],
-      "default": "h4"
+      "default": "h5"
     },
     {
       "type": "color",
