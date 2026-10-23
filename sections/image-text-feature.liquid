@@ -19,6 +19,9 @@
           {{ section.settings.heading | escape }}
         </h2>
       {% endif %}
+      {% if section.settings.subtitle != blank %}
+        <p class="ca-feature__subtitle {{ section.settings.subtitle_preset | default: 'h3' }}">{{ section.settings.subtitle | escape }}</p>
+      {% endif %}
       {% if section.settings.top_label != blank %}
         <div class="ca-feature__tag">
           {% render 'craftaurum-cta',
@@ -73,6 +76,7 @@
   .ca-feature .ca-feature__inner { min-width: 0; }
   .ca-feature__header { text-align: center; margin: 0 auto 38px; }
   .ca-feature__heading { margin: 0 0 16px; }
+  .ca-feature__subtitle { margin: 0 0 16px; }
   .ca-feature__tag { display: flex; justify-content: center; }
   .ca-feature__top-cta { min-width: min(300px, 100%); }
   .ca-feature__columns {
@@ -156,6 +160,11 @@
         }
       ],
       "default": "h2"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "副标题（可选）"
     },
     {
       "type": "text",
