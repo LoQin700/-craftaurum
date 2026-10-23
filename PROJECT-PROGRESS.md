@@ -55,3 +55,28 @@
 - 首页只追加一个 `image_collection_grid_craftaurum`，顺序在现有两个图文介绍之后；保留原 Hero、轮播与两组图文实例、全部已配置字段。
 - 全局 Typography 目标桌面：正文16、H1 40、H2 32、H3 24、H4 18、H5 16、H6 14（px）；手机：正文14、H1 32、H2 26、H3 20、H4 16、H5 15、H6 14（px）。同时修改 schema 新建默认值与 `settings_data.json` 当前配置。
 - GitHub 已提交，相关 Section Schema、settings JSON、首页 JSON 可解析。Shopify Theme Check、Theme Editor 保存和真实浏览器视觉/交互未执行；需要独立核实同步。
+
+## 2026-10-23 全局 Typography 与按钮字号精调
+
+本次改动仅基于当前 `main` 分支完成，不改版式、模板实例或媒体绑定。
+
+### 字号预设与步进
+| 类型 | 桌面默认 (px) | 手机默认 (px) |
+| --- | ---: | ---: |
+| 正文 | 16 | 14 |
+| H1 | 40 | 32 |
+| H2 | 32 | 26 |
+| H3 | 24 | 20 |
+| H4 | 18 | 16 |
+| H5 | 16 | 14 |
+| H6 | 14 | 12 |
+| 一级按钮 | 16 | 14 |
+| 二级按钮 | 16 | 14 |
+
+- 全局文字的桌面/手机设置项全部改为每项间隔 **2px**，无不连续档位。标题桌面候选 12–96px、手机候选 12–64px；正文桌面 12–32px、手机 12–28px。
+- 移动端字号控件移除 `inherit` / 跟随桌面选项，并写入明确的移动端默认字号。Liquid 同时覆盖 `--font-size--*` 和 `--font-*--size` CSS tokens。
+- 主、次按钮各增加桌面与手机独立字号（每 2px 一档，12–28px）；接入 `snippets/theme-styles-variables.liquid` 和 `assets/base.css` 原生按钮选择器。
+- 一级、二级按钮 Hover 背景和边框默认 `#E1E3E6`，Hover 文字默认 `#1B1B1B`（浅色背景上保持对比），均可在 Theme Settings 单独调整。Custom 按钮仍保留自定义样式的回退路径。
+- `config/settings_schema.json`、`config/settings_data.json` 的 current 与 Horizon 主题 preset 同步为这套默认值；其余配置保留。
+- 已读取 GitHub 最新代码并进行静态核查：全部字号选项为 2px 等差、当前值/预设值合法、按钮颜色与变量绑定存在、JSON 可解析。
+- **未执行 Shopify 线上同步确认、Shopify CLI theme check 或真实三端前台 QA**；需分别验证，不能将 GitHub 提交等同于已上线。
