@@ -107,6 +107,79 @@
         "padding_bottom": 36
       }
     },
+    "content_cards_xi8xGJ": {
+      "type": "content-cards",
+      "blocks": {
+        "card_dADhNg": {
+          "type": "card",
+          "settings": {
+            "title": "Gemstone Rings",
+            "description": "<p>Explore shapes, finishes and design possibilities for your brand.</p>",
+            "button_label": "Explore Details",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "card_WtWhNM": {
+          "type": "card",
+          "settings": {
+            "title": "Metal & Minimal Rings",
+            "description": "<p>Explore shapes, finishes and design possibilities for your brand.</p>",
+            "button_label": "Explore Details",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "card_CfDadY": {
+          "type": "card",
+          "settings": {
+            "title": "Pearl Rings",
+            "description": "<p>Explore shapes, finishes and design possibilities for your brand.</p>",
+            "button_label": "Explore Details",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "card_PcNzcH": {
+          "type": "card",
+          "settings": {
+            "title": "Signature Designs",
+            "description": "<p>Explore shapes, finishes and design possibilities for your brand.</p>",
+            "button_label": "Explore Details",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_dADhNg",
+        "card_WtWhNM",
+        "card_CfDadY",
+        "card_PcNzcH"
+      ],
+      "name": "图文卡片",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "eyebrow": "JEWELRY DESIGN RANGE",
+        "eyebrow_preset": "h5",
+        "heading": "Explore Custom Ring Styles",
+        "heading_preset": "h2",
+        "description": "<p>Build a collection of distinctive rings with considered materials, stone settings and finishing options.</p>",
+        "body_preset": "h5",
+        "card_title_preset": "h3",
+        "desktop_layout": "grid",
+        "desktop_columns": "4",
+        "mobile_layout": "carousel",
+        "mobile_columns": "1",
+        "image_ratio": "portrait",
+        "gap": 20,
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
     "interactive_feature_cFYGmj": {
       "type": "interactive-feature",
       "blocks": {
@@ -191,6 +264,7 @@
     "main",
     "jewelry_collections_overview_tkTByC",
     "horizontal_cta_Pwad7F",
+    "content_cards_xi8xGJ",
     "interactive_feature_cFYGmj",
     "image_text_feature_pyXify"
   ]
