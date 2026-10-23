@@ -65,7 +65,6 @@
         "eyebrow": "OEM / ODM RING MANUFACTURING",
         "heading": "Custom Rings Manufacturing.",
         "introduction": "<p>Develop custom gemstone, pearl, signet and metal rings with Craftaurum. From design review and material selection to sampling and finishing, each stage can be shaped around the direction of your collection.</p>",
-        "hero_image": "",
         "image_position": "right",
         "image_ratio": "wide",
         "quote_label": "Request a Manufacturing Quote",
@@ -77,7 +76,8 @@
         "body_preset": "h5",
         "padding_top": 32,
         "padding_bottom": 32
-      }
+      },
+      "name": "图文横幅"
     },
     "cta01": {
       "type": "horizontal-cta",
@@ -92,7 +92,8 @@
         "button_style": "button-secondary",
         "padding_top": 36,
         "padding_bottom": 36
-      }
+      },
+      "name": "横向 CTA"
     },
     "cards01": {
       "type": "image-gallery",
@@ -120,8 +121,6 @@
         "gem01": {
           "type": "image",
           "settings": {
-            "image": "",
-            "hover_image": "",
             "title": "Gemstone Rings",
             "description": "<p>Explore different stone layouts, setting styles and finishing directions for statement or refined ring designs.</p>",
             "button_label": "Explore Details",
@@ -132,8 +131,6 @@
         "minimal02": {
           "type": "image",
           "settings": {
-            "image": "",
-            "hover_image": "",
             "title": "Metal & Minimal Rings",
             "description": "<p>Develop clean silhouettes, polished surfaces and restrained details for modern and versatile collections.</p>",
             "button_label": "Explore Details",
@@ -144,8 +141,6 @@
         "pearl03": {
           "type": "image",
           "settings": {
-            "image": "",
-            "hover_image": "",
             "title": "Pearl Rings",
             "description": "<p>Combine pearl proportions with metal structures and subtle settings to create a softer design direction.</p>",
             "button_label": "Explore Details",
@@ -156,8 +151,6 @@
         "signature04": {
           "type": "image",
           "settings": {
-            "image": "",
-            "hover_image": "",
             "title": "Signature Ring Designs",
             "description": "<p>Develop more recognizable ring concepts around distinctive forms, details and brand-specific finishing choices.</p>",
             "button_label": "Explore Details",
@@ -171,7 +164,8 @@
         "minimal02",
         "pearl03",
         "signature04"
-      ]
+      ],
+      "name": "图文卡片"
     },
     "intro01": {
       "type": "image-text-feature",
@@ -187,14 +181,14 @@
         "top_button_style": "button",
         "body": "<p>Craftaurum works with jewelry brands and wholesale partners on custom development, sampling and production coordination. For ring projects, we focus on clear communication around materials, construction, finishing and the details that influence the final result.</p><p>Use this section for real workshop, setting, polishing or inspection photography so customers can understand the manufacturing process behind the finished rings.</p>",
         "body_preset": "h5",
-        "image": "",
         "image_position": "left",
         "cta_label": "Learn More About Us",
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 56,
         "padding_bottom": 56
-      }
+      },
+      "name": "图文介绍"
     },
     "icons01": {
       "type": "icon-text-list",
@@ -218,7 +212,6 @@
           "type": "item",
           "settings": {
             "icon": "design",
-            "icon_image": "",
             "title": "Design Development",
             "description": "<p>Clarify references, dimensions and design intent before sampling begins.</p>"
           }
@@ -227,7 +220,6 @@
           "type": "item",
           "settings": {
             "icon": "material",
-            "icon_image": "",
             "title": "Material Options",
             "description": "<p>Review suitable metals, stones and finishing directions for the project.</p>"
           }
@@ -236,7 +228,6 @@
           "type": "item",
           "settings": {
             "icon": "sample",
-            "icon_image": "",
             "title": "Sample Support",
             "description": "<p>Use samples to check proportion, construction and finish before repeat production.</p>"
           }
@@ -245,7 +236,6 @@
           "type": "item",
           "settings": {
             "icon": "quality",
-            "icon_image": "",
             "title": "Quality Review",
             "description": "<p>Review key visual and construction details against agreed production specifications.</p>"
           }
@@ -256,7 +246,8 @@
         "material02",
         "sample03",
         "quality04"
-      ]
+      ],
+      "name": "图标文字"
     },
     "contacttitle01": {
       "type": "text-heading",
@@ -269,7 +260,8 @@
         "anchor_id": "craftaurum-jewelry-inquiry",
         "padding_top": 40,
         "padding_bottom": 12
-      }
+      },
+      "name": "标题说明"
     },
     "contact01": {
       "type": "section",
