@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -76,12 +85,12 @@
     },
     "oem_categories": {
       "type": "image-collection-grid",
-      "name": "分类图片展示",
       "blocks": {
         "cat_fashion": {
           "type": "card",
           "settings": {
             "title": "Custom Fashion Jewelry",
+            "collection": "",
             "link": ""
           }
         },
@@ -89,6 +98,7 @@
           "type": "card",
           "settings": {
             "title": "Custom Rings",
+            "collection": "",
             "link": ""
           }
         },
@@ -96,6 +106,7 @@
           "type": "card",
           "settings": {
             "title": "Custom Earrings",
+            "collection": "",
             "link": ""
           }
         },
@@ -103,6 +114,7 @@
           "type": "card",
           "settings": {
             "title": "Custom Necklace",
+            "collection": "",
             "link": ""
           }
         },
@@ -110,6 +122,7 @@
           "type": "card",
           "settings": {
             "title": "Custom Bracelets",
+            "collection": "",
             "link": ""
           }
         },
@@ -117,6 +130,7 @@
           "type": "card",
           "settings": {
             "title": "Artisanal Jewelry",
+            "collection": "",
             "link": ""
           }
         }
@@ -129,23 +143,24 @@
         "cat_bracelets",
         "cat_artisanal"
       ],
+      "name": "分类图片展示",
       "settings": {
         "section_width": "page-width",
         "heading": "What We Can Produce",
         "heading_preset": "h2",
         "description": "<p>Explore the jewelry categories we can develop for brand and wholesale projects, from core commercial styles to more expressive artisanal concepts.</p>",
         "body_preset": "h5",
-        "background_color": "#f8f7f4",
+        "background_color": "{{ settings.color_palette.background }}",
         "card_title_preset": "h3",
+        "desktop_columns": 3,
+        "desktop_layout": "grid",
         "mobile_columns": 2,
         "mobile_layout": "grid",
         "overlay_opacity": 20,
         "hover_overlay_opacity": 45,
         "gap": 16,
         "padding_top": 48,
-        "padding_bottom": 48,
-        "desktop_columns": 3,
-        "desktop_layout": "grid"
+        "padding_bottom": 48
       }
     },
     "oem_why": {
@@ -170,6 +185,76 @@
         "body_preset": "h5",
         "padding_top": 48,
         "padding_bottom": 48
+      }
+    },
+    "oem_advantages": {
+      "type": "icon-with-text",
+      "blocks": {
+        "craft": {
+          "type": "item",
+          "settings": {
+            "icon": "star",
+            "icon_color": "#c7a85e",
+            "title": "Unparalleled Craftsmanship",
+            "description": "<p>Each piece is developed with attention to construction, finishing and the small details that shape the final result.</p>"
+          }
+        },
+        "tailored": {
+          "type": "item",
+          "settings": {
+            "icon": "ruler",
+            "icon_color": "#c7a85e",
+            "title": "Tailored Solutions",
+            "description": "<p>From concept through production planning, development is shaped around the design direction and practical needs of your brand.</p>"
+          }
+        },
+        "quality": {
+          "type": "item",
+          "settings": {
+            "icon": "check_box",
+            "icon_color": "#c7a85e",
+            "title": "Strict Quality Standards",
+            "description": "<p>Material, construction and finish details are reviewed against the agreed project specifications before production approval.</p>"
+          }
+        },
+        "collaboration": {
+          "type": "item",
+          "settings": {
+            "icon": "chat_bubble",
+            "icon_color": "#c7a85e",
+            "title": "Clear Collaboration",
+            "description": "<p>Clear communication and review points keep both sides aligned throughout development, sampling and production.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "craft",
+        "tailored",
+        "quality",
+        "collaboration"
+      ],
+      "name": "图标文字",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "style_preset": "left",
+        "icon_position": "top",
+        "icon_size": 32,
+        "icon_gap": 16,
+        "column_gap": 32,
+        "eyebrow": "WHY WORK WITH CRAFTAURUM",
+        "eyebrow_preset": "h5",
+        "heading": "OEM Jewellery Manufacturing Support",
+        "heading_preset": "h2",
+        "description": "<p>A practical OEM partnership depends on craftsmanship, customization, clear standards and open communication throughout the project.</p>",
+        "body_preset": "h5",
+        "item_title_preset": "h4",
+        "desktop_columns": "4",
+        "mobile_columns": "1",
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "process_1": {
@@ -334,76 +419,6 @@
         "padding_bottom": 56
       }
     },
-    "oem_advantages": {
-      "type": "icon-with-text",
-      "name": "图标文字",
-      "blocks": {
-        "craft": {
-          "type": "item",
-          "settings": {
-            "icon": "star",
-            "icon_color": "#c7a85e",
-            "title": "Unparalleled Craftsmanship",
-            "description": "<p>Each piece is developed with attention to construction, finishing and the small details that shape the final result.</p>"
-          }
-        },
-        "tailored": {
-          "type": "item",
-          "settings": {
-            "icon": "ruler",
-            "icon_color": "#c7a85e",
-            "title": "Tailored Solutions",
-            "description": "<p>From concept through production planning, development is shaped around the design direction and practical needs of your brand.</p>"
-          }
-        },
-        "quality": {
-          "type": "item",
-          "settings": {
-            "icon": "check_box",
-            "icon_color": "#c7a85e",
-            "title": "Strict Quality Standards",
-            "description": "<p>Material, construction and finish details are reviewed against the agreed project specifications before production approval.</p>"
-          }
-        },
-        "collaboration": {
-          "type": "item",
-          "settings": {
-            "icon": "chat_bubble",
-            "icon_color": "#c7a85e",
-            "title": "Clear Collaboration",
-            "description": "<p>Clear communication and review points keep both sides aligned throughout development, sampling and production.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "craft",
-        "tailored",
-        "quality",
-        "collaboration"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#f8f7f4",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "style_preset": "left",
-        "icon_position": "top",
-        "icon_size": 32,
-        "icon_gap": 16,
-        "column_gap": 32,
-        "eyebrow": "WHY WORK WITH CRAFTAURUM",
-        "eyebrow_preset": "h5",
-        "heading": "OEM Jewellery Manufacturing Support",
-        "heading_preset": "h2",
-        "description": "<p>A practical OEM partnership depends on craftsmanship, customization, clear standards and open communication throughout the project.</p>",
-        "body_preset": "h5",
-        "item_title_preset": "h4",
-        "desktop_columns": "4",
-        "mobile_columns": "1",
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
     "contact": {
       "type": "section",
       "blocks": {
@@ -439,7 +454,13 @@
             "custom_width": 100,
             "width_mobile": "custom",
             "custom_width_mobile": 100,
+            "background_color": "",
             "input_style": "default",
+            "input_background_color": "{{ settings.color_palette.background }}",
+            "input_text_color": "{{ settings.color_palette.foreground }}",
+            "input_border_color": "{{ settings.color_palette.foreground }}",
+            "border_width": 1,
+            "border_radius": 0,
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
@@ -452,6 +473,9 @@
               "settings": {
                 "label": "Submit",
                 "style_class": "button",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
                 "width": "fit-content",
                 "custom_width": 100,
                 "width_mobile": "fit-content",
@@ -478,6 +502,7 @@
         "vertical_alignment_flex_direction_column": "center",
         "gap": 32,
         "section_width": "page-width",
+        "section_height": "",
         "section_height_custom": 50,
         "background_media": "none",
         "background_color": "#ffffff",
@@ -490,6 +515,7 @@
         "border": "none",
         "border_width": 1,
         "border_opacity": 100,
+        "border_color": "",
         "border_radius": 0,
         "padding-block-start": 56,
         "padding-block-end": 84
@@ -501,13 +527,13 @@
     "oem_hero",
     "oem_categories",
     "oem_why",
+    "oem_advantages",
     "process_1",
     "process_2",
     "process_3",
     "process_4",
     "process_5",
     "process_6",
-    "oem_advantages",
     "contact"
   ]
 }
