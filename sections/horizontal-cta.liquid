@@ -1,22 +1,35 @@
-{% comment %}Generic horizontal CTA with a real background surface inside Horizon's transparent .section grid.{% endcomment %}
+{% comment %}Generic horizontal CTA. Background is always full-width; setting controls inner content width.{% endcomment %}
+{% liquid
+  assign content_width = section.settings.section_width | default: 'full-width'
+  assign background_color = section.settings.background_color | default: '#17191A'
+  assign text_color = section.settings.text_color | default: '#F8F7F4'
+  assign button_background = section.settings.button_background_color | default: '#17191A'
+  assign button_text = section.settings.button_text_color | default: '#F8F7F4'
+  assign button_border = section.settings.button_border_color | default: '#F8F7F4'
+  assign button_hover_background = section.settings.button_hover_background_color | default: '#C7A85E'
+  assign button_hover_text = section.settings.button_hover_text_color | default: '#17191A'
+  assign button_hover_border = section.settings.button_hover_border_color | default: '#C7A85E'
+  assign padding_top = section.settings.padding_top | default: 36
+  assign padding_bottom = section.settings.padding_bottom | default: 36
+%}
 <section
   id="HorizontalCTA-{{ section.id }}"
-  class="section section--{{ section.settings.section_width | default: 'full-width' }} spacing-style ca-horizontal-cta"
+  class="section section--full-width ca-horizontal-cta"
   style="
-    --padding-block-start: {{ section.settings.padding_top }}px;
-    --padding-block-end: {{ section.settings.padding_bottom }}px;
-    --ca-cta-background: {{ section.settings.background_color }};
-    --ca-cta-text: {{ section.settings.text_color }};
-    --ca-cta-button-background: {{ section.settings.button_background_color }};
-    --ca-cta-button-text: {{ section.settings.button_text_color }};
-    --ca-cta-button-border: {{ section.settings.button_border_color }};
-    --ca-cta-button-hover-background: {{ section.settings.button_hover_background_color }};
-    --ca-cta-button-hover-text: {{ section.settings.button_hover_text_color }};
-    --ca-cta-button-hover-border: {{ section.settings.button_hover_border_color }};
+    --ca-cta-background: {{ background_color }};
+    --ca-cta-text: {{ text_color }};
+    --ca-cta-button-background: {{ button_background }};
+    --ca-cta-button-text: {{ button_text }};
+    --ca-cta-button-border: {{ button_border }};
+    --ca-cta-button-hover-background: {{ button_hover_background }};
+    --ca-cta-button-hover-text: {{ button_hover_text }};
+    --ca-cta-button-hover-border: {{ button_hover_border }};
+    --ca-cta-padding-top: {{ padding_top }}px;
+    --ca-cta-padding-bottom: {{ padding_bottom }}px;
   "
 >
   <div class="ca-horizontal-cta__surface">
-    <div class="ca-horizontal-cta__inner">
+    <div class="ca-horizontal-cta__inner ca-horizontal-cta__inner--{{ content_width }}">
       <div class="ca-horizontal-cta__copy">
         {% if section.settings.heading != blank %}
           <h2 class="ca-horizontal-cta__heading {{ section.settings.heading_preset | default: 'h3' }}">{{ section.settings.heading | escape }}</h2>
@@ -42,16 +55,23 @@
 {% stylesheet %}
   .ca-horizontal-cta__surface {
     width: 100%;
-    background: var(--ca-cta-background, #17191A);
-    color: var(--ca-cta-text, #F8F7F4);
+    background: var(--ca-cta-background);
+    color: var(--ca-cta-text);
   }
   .ca-horizontal-cta__inner {
-    width: min(calc(100% - 48px), 1200px);
-    margin-inline: auto;
     display: grid;
     grid-template-columns: minmax(0,1fr) auto;
     align-items: center;
     gap: 40px;
+    padding-block: var(--ca-cta-padding-top) var(--ca-cta-padding-bottom);
+  }
+  .ca-horizontal-cta__inner--page-width {
+    width: var(--full-page-grid-central-column-width);
+    margin-inline: auto;
+  }
+  .ca-horizontal-cta__inner--full-width {
+    width: 100%;
+    padding-inline: max(var(--page-margin), 24px);
   }
   .ca-horizontal-cta__heading { margin: 0 0 8px; color: inherit; }
   .ca-horizontal-cta__description { color: inherit; opacity: .78; }
@@ -59,24 +79,21 @@
   .ca-horizontal-cta__description p { margin: 0; }
 
   .ca-horizontal-cta :is(.button,.button-secondary,.button-custom) {
-    --button-color: var(--ca-cta-button-text, #F8F7F4);
-    --button-background-color: var(--ca-cta-button-background, transparent);
-    --button-border-color: var(--ca-cta-button-border, #F8F7F4);
+    --button-color: var(--ca-cta-button-text);
+    --button-background-color: var(--ca-cta-button-background);
+    --button-border-color: var(--ca-cta-button-border);
   }
   .ca-horizontal-cta :is(.button,.button-secondary,.button-custom):hover {
-    --button-color: var(--ca-cta-button-hover-text, #17191A);
-    --button-background-color: var(--ca-cta-button-hover-background, #C7A85E);
-    --button-border-color: var(--ca-cta-button-hover-border, #C7A85E);
+    --button-color: var(--ca-cta-button-hover-text);
+    --button-background-color: var(--ca-cta-button-hover-background);
+    --button-border-color: var(--ca-cta-button-hover-border);
   }
-  .ca-horizontal-cta .button-unstyled { color: var(--ca-cta-button-text, #F8F7F4); }
-  .ca-horizontal-cta .button-unstyled:hover { color: var(--ca-cta-button-hover-background, #C7A85E); }
+  .ca-horizontal-cta .button-unstyled { color: var(--ca-cta-button-text); }
+  .ca-horizontal-cta .button-unstyled:hover { color: var(--ca-cta-button-hover-background); }
 
   @media screen and (max-width: 749px) {
-    .ca-horizontal-cta__inner {
-      width: min(calc(100% - 36px), 1200px);
-      grid-template-columns: minmax(0,1fr);
-      gap: 18px;
-    }
+    .ca-horizontal-cta__inner { grid-template-columns: minmax(0,1fr); gap: 18px; }
+    .ca-horizontal-cta__inner--full-width { padding-inline: 18px; }
     .ca-horizontal-cta__action { justify-self: start; }
   }
 {% endstylesheet %}
