@@ -1,11 +1,15 @@
 {% comment %}
-  Craftaurum 2+3 image collections. Shared Shopify collection-aware card.
-  Desktop: editorial grid. Mobile: selectable grid or native Horizon Slideshow.
+  Generic image collection display.
+  Desktop: 1–6 columns, grid or horizontal carousel.
+  Mobile: 1–4 columns, grid or horizontal carousel.
 {% endcomment %}
+
 {% if section.settings.background_color != blank %}
   {% render 'contrast-override', background_color: section.settings.background_color, section_id: section.id %}
 {% endif %}
+
 <div class="section-background{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"></div>
+
 <div
   id="ImageCollectionGrid-{{ section.id }}"
   class="section section--{{ section.settings.section_width | default: 'page-width' }} spacing-style ca-collection{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
@@ -13,6 +17,7 @@
     --padding-block-start: {{ section.settings.padding_top }}px;
     --padding-block-end: {{ section.settings.padding_bottom }}px;
     --ca-collection-gap: {{ section.settings.gap }}px;
+    --ca-desktop-columns: {{ section.settings.desktop_columns }};
     --ca-mobile-columns: {{ section.settings.mobile_columns }};
     --ca-overlay: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
     --ca-hover-overlay: {{ section.settings.hover_overlay_opacity | divided_by: 100.0 }};
@@ -20,18 +25,20 @@
   "
 >
   <div class="ca-collection__inner">
-    <header class="ca-collection__intro">
-      {% if section.settings.heading != blank %}
-        <h2 class="ca-collection__heading {{ section.settings.heading_preset | default: 'h2' }}">{{ section.settings.heading | escape }}</h2>
-      {% endif %}
-      {% if section.settings.description != blank %}
-        <div class="ca-collection__description rte {{ section.settings.body_preset | default: 'h5' }}">
-          {{ section.settings.description }}
-        </div>
-      {% endif %}
-    </header>
+    {% if section.settings.heading != blank or section.settings.description != blank %}
+      <header class="ca-collection__intro">
+        {% if section.settings.heading != blank %}
+          <h2 class="ca-collection__heading {{ section.settings.heading_preset | default: 'h2' }}">{{ section.settings.heading | escape }}</h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <div class="ca-collection__description rte {{ section.settings.body_preset | default: 'h5' }}">
+            {{ section.settings.description }}
+          </div>
+        {% endif %}
+      </header>
+    {% endif %}
 
-    <div class="ca-collection__grid{% if section.settings.mobile_layout == 'carousel' %} ca-collection__grid--desktop-only{% endif %}">
+    <div class="ca-collection__grid{% if section.settings.desktop_layout == 'carousel' %} ca-collection__grid--desktop-carousel{% endif %}{% if section.settings.mobile_layout == 'carousel' %} ca-collection__grid--mobile-carousel{% endif %}">
       {% for block in section.blocks %}
         {% render 'craftaurum-collection-card',
           block: block,
@@ -40,67 +47,63 @@
         %}
       {% endfor %}
     </div>
-
-    {% if section.settings.mobile_layout == 'carousel' and section.blocks.size > 0 %}
-      {% capture mobile_slides %}
-        {% for block in section.blocks %}
-          {% capture mobile_card %}
-            {% render 'craftaurum-collection-card',
-              block: block,
-              card_title_preset: section.settings.card_title_preset,
-              attributes: false
-            %}
-          {% endcapture %}
-          {% render 'slideshow-slide',
-            index: forloop.index0,
-            children: mobile_card,
-            class: 'ca-collection__slide'
-          %}
-        {% endfor %}
-      {% endcapture %}
-      {% if section.blocks.size > 1 %}
-        {% capture mobile_controls %}
-          {% render 'slideshow-controls',
-            style: 'dots',
-            item_count: section.blocks.size,
-            show_arrows: false,
-            autoplay: false,
-            pagination_position: 'center'
-          %}
-        {% endcapture %}
-      {% endif %}
-      {% assign ca_collection_can_scroll = false %}
-      {% if section.blocks.size > 1 %}{% assign ca_collection_can_scroll = true %}{% endif %}
-      <div class="ca-collection__carousel">
-        {% render 'slideshow',
-          class: 'ca-collection__slideshow',
-          slides: mobile_slides,
-          controls: mobile_controls,
-          slide_count: section.blocks.size,
-          show_arrows: ca_collection_can_scroll,
-          icon_style: 'chevron',
-          icon_shape: 'none',
-          infinite: false
-        %}
-      </div>
-    {% endif %}
   </div>
 </div>
 
 {% stylesheet %}
-  .ca-collection__inner { min-width: 0; }
-  .ca-collection__intro { text-align: center; max-width: 980px; margin: 0 auto 28px; }
-  .ca-collection__heading { margin: 0 0 14px; }
-  .ca-collection__description :is(p, ul, ol) { font-size: inherit; line-height: inherit; }
-  .ca-collection__description p { margin: 0; }
+  .ca-collection__inner {
+    min-width: 0;
+  }
+
+  .ca-collection__intro {
+    text-align: center;
+    max-width: 980px;
+    margin: 0 auto 28px;
+  }
+
+  .ca-collection__heading {
+    margin: 0 0 14px;
+  }
+
+  .ca-collection__description :is(p, ul, ol) {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .ca-collection__description p {
+    margin: 0;
+  }
 
   .ca-collection__grid {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(var(--ca-desktop-columns, 3), minmax(0, 1fr));
     gap: var(--ca-collection-gap, 16px);
   }
-  .ca-collection__grid > .ca-collection__item { min-width: 0; grid-column: span 2; }
-  .ca-collection__grid > .ca-collection__item:nth-child(-n+2) { grid-column: span 3; }
+
+  .ca-collection__grid > .ca-collection__item {
+    min-width: 0;
+  }
+
+  .ca-collection__grid--desktop-carousel {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .ca-collection__grid--desktop-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .ca-collection__grid--desktop-carousel > .ca-collection__item {
+    flex: 0 0 calc(
+      (100% - (var(--ca-desktop-columns, 3) - 1) * var(--ca-collection-gap, 16px))
+      / var(--ca-desktop-columns, 3)
+    );
+    scroll-snap-align: start;
+  }
 
   .ca-collection__card {
     display: block;
@@ -112,68 +115,121 @@
     color: var(--color-background);
     text-decoration: none;
   }
+
   .ca-collection__image,
   .ca-collection__placeholder {
-    display: block; width: 100%; height: 100%; object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 350ms ease;
   }
+
   .ca-collection__placeholder {
     background: rgb(var(--color-foreground-rgb) / 0.04);
     color: rgb(var(--color-foreground-rgb) / 0.18);
   }
+
   .ca-collection__shade {
-    position: absolute; inset: 0;
+    position: absolute;
+    inset: 0;
     background: var(--color-foreground);
     opacity: var(--ca-overlay, .25);
     pointer-events: none;
     transition: opacity 350ms ease;
   }
+
   .ca-collection__outline {
-    position: absolute; z-index: 1; pointer-events: none;
-    inset: 12px; border: 1px solid color-mix(in srgb, var(--color-background) 90%, transparent);
-    opacity: 0; transform: scale(1.06);
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    inset: 12px;
+    border: 1px solid color-mix(in srgb, var(--color-background) 90%, transparent);
+    opacity: 0;
+    transform: scale(1.06);
     transition: transform 350ms ease, opacity 350ms ease;
   }
+
   .ca-collection__card-title {
-    position: absolute; z-index: 2; inset: 0;
-    display: flex; align-items: center; justify-content: center;
-    text-align: center; padding: 12px; color: #fff;
-    pointer-events: none; overflow-wrap: anywhere;
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    color: #fff;
+    pointer-events: none;
+    overflow-wrap: anywhere;
     font-size: var(--ca-card-type-size);
   }
-  .ca-collection__card:is(:hover, :focus-visible) .ca-collection__shade { opacity: var(--ca-hover-overlay, .5); }
-  .ca-collection__card:is(:hover, :focus-visible) .ca-collection__outline { opacity: 1; transform: scale(1); }
-  .ca-collection__card:is(:hover, :focus-visible) .ca-collection__image { transform: scale(1.035); }
-  .ca-collection__card:focus-visible { outline: 2px solid var(--color-foreground); outline-offset: 2px; }
 
-  .ca-collection__carousel { display: none; }
+  .ca-collection__card:is(:hover, :focus-visible) .ca-collection__shade {
+    opacity: var(--ca-hover-overlay, .5);
+  }
+
+  .ca-collection__card:is(:hover, :focus-visible) .ca-collection__outline {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .ca-collection__card:is(:hover, :focus-visible) .ca-collection__image {
+    transform: scale(1.035);
+  }
+
+  .ca-collection__card:focus-visible {
+    outline: 2px solid var(--color-foreground);
+    outline-offset: 2px;
+  }
+
   @media screen and (max-width: 749px) {
-    .ca-collection__intro { margin-bottom: 20px; }
-    .ca-collection__grid {
-      grid-template-columns: repeat(var(--ca-mobile-columns, 2), minmax(0, 1fr));
+    .ca-collection__intro {
+      margin-bottom: 20px;
     }
-    .ca-collection__grid > .ca-collection__item,
-    .ca-collection__grid > .ca-collection__item:nth-child(-n+2) { grid-column: span 1; }
+
+    .ca-collection__grid,
+    .ca-collection__grid--desktop-carousel {
+      display: grid;
+      grid-template-columns: repeat(var(--ca-mobile-columns, 2), minmax(0, 1fr));
+      overflow: visible;
+      scroll-snap-type: none;
+    }
+
+    .ca-collection__grid--mobile-carousel {
+      display: flex;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .ca-collection__grid--mobile-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .ca-collection__grid--mobile-carousel > .ca-collection__item {
+      flex: 0 0 calc(
+        (100% - (var(--ca-mobile-columns, 2) - 1) * var(--ca-collection-gap, 16px))
+        / var(--ca-mobile-columns, 2)
+      );
+      scroll-snap-align: start;
+    }
+
     .ca-collection__card-title {
       font-size: clamp(11px, 3.8vw, var(--ca-card-type-size));
       padding: 5px;
     }
-    .ca-collection__grid--desktop-only { display: none; }
-    .ca-collection__carousel { display: block; }
-    .ca-collection__slideshow slideshow-slides { gap: var(--ca-collection-gap, 16px); }
-    .ca-collection__slideshow slideshow-slide {
-      width: calc((100% - (var(--ca-mobile-columns) - 1) * var(--ca-collection-gap)) / var(--ca-mobile-columns));
-      flex: 0 0 calc((100% - (var(--ca-mobile-columns) - 1) * var(--ca-collection-gap)) / var(--ca-mobile-columns));
-      min-width: 0; scroll-snap-align: start;
-    }
-    .ca-collection__slideshow .ca-collection__item { width: 100%; }
   }
+
   @media screen and (prefers-reduced-motion: reduce) {
     .ca-collection__card :is(.ca-collection__image, .ca-collection__outline, .ca-collection__shade) {
       transition: none;
     }
   }
 {% endstylesheet %}
+
 {% schema %}
 {
   "name": "分类图片展示",
@@ -314,6 +370,35 @@
         }
       ],
       "default": "h3"
+    },
+    {
+      "type": "header",
+      "content": "电脑端布局"
+    },
+    {
+      "type": "range",
+      "id": "desktop_columns",
+      "label": "每行显示数量",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "select",
+      "id": "desktop_layout",
+      "label": "展示方式",
+      "options": [
+        {
+          "value": "grid",
+          "label": "网格"
+        },
+        {
+          "value": "carousel",
+          "label": "轮播"
+        }
+      ],
+      "default": "grid"
     },
     {
       "type": "header",
