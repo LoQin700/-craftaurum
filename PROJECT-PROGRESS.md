@@ -324,3 +324,16 @@
 - Copy direction was adapted from Sunrise OEM Jewellery page while avoiding unverified Craftaurum-specific claims such as owning a plating factory.
 - Category images and process images remain empty for Theme Editor upload; links remain unset rather than guessing page handles.
 - Custom section/template cross-check PASS with 0 unknown setting IDs or block setting IDs.
+
+## 2026-10-24 · 分类图片展示布局升级
+- `sections/image-collection-grid.liquid` 从原来写死的桌面端 2+3 布局改为通用配置：
+  - PC 每行 1–6 个（range）；
+  - PC 支持网格 / 横向轮播；
+  - Mobile 保留 1–4 个 / 网格 / 轮播；
+  - 移除旧的 `nth-child(-n+2)` 2+3 写死逻辑。
+- 首页原 5 个分类卡片拆成两个 Section：
+  - 第一段：2 个卡片，PC 2 列 Grid；
+  - 第二段：3 个卡片，PC 3 列 Grid；
+  - 第二段不重复标题和介绍，视觉上连续衔接。
+- OEM Jewellery 的 What We Can Produce 保持一个 Section，6 个卡片设置为 PC 3 列 Grid，即上下两排各 3 个。
+- 静态验证 PASS：Schema range 合法、首页 2+3 拆分正确、OEM 6 / 3 列正确、旧写死 CSS 已移除。
