@@ -1,7 +1,7 @@
 {% comment %}Generic editorial image/text banner, using shared Craftaurum CTA.{% endcomment %}
 <section id="EditorialBanner-{{ section.id }}" class="section section--{{ section.settings.section_width | default: 'page-width' }} spacing-style ca-editorial-banner"
-  style="--padding-block-start: {{ section.settings.padding_top }}px; --padding-block-end: {{ section.settings.padding_bottom }}px;">
-  <div class="ca-editorial-banner__layout">
+  style="--padding-block-start: {{ section.settings.padding_top }}px; --padding-block-end: {{ section.settings.padding_bottom }}px; --ca-banner-ratio: {% case section.settings.image_ratio %}{% when 'wide' %}16 / 9{% when 'square' %}1 / 1{% else %}4 / 3{% endcase %};">
+  <div class="ca-editorial-banner__layout{% if section.settings.image_position == 'right' %} ca-editorial-banner__layout--image-right{% endif %}">
     <div class="ca-editorial-banner__media">
       {% if section.settings.hero_image != blank %}
         {{
@@ -43,7 +43,9 @@
 </section>
 {% stylesheet %}
   .ca-editorial-banner__layout { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: clamp(24px,5vw,76px); align-items: center; }
-  .ca-editorial-banner__media { width: 100%; min-width: 0; aspect-ratio: 4 / 3; overflow: hidden; }
+  .ca-editorial-banner__media { width: 100%; min-width: 0; aspect-ratio: var(--ca-banner-ratio, 4 / 3); overflow: hidden; }
+  .ca-editorial-banner__layout--image-right .ca-editorial-banner__media { grid-column: 2; grid-row: 1; }
+  .ca-editorial-banner__layout--image-right .ca-editorial-banner__content { grid-column: 1; grid-row: 1; }
   .ca-editorial-banner__image, .ca-editorial-banner__placeholder { display: block; width: 100%; height: 100%; object-fit: cover; }
   .ca-editorial-banner__placeholder { background: rgb(var(--color-foreground-rgb) / .04); color: rgb(var(--color-foreground-rgb) / .18); }
   .ca-editorial-banner__content { min-width: 0; }
@@ -56,6 +58,10 @@
   .ca-editorial-banner__actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
   @media (max-width: 749px) {
     .ca-editorial-banner__layout { grid-template-columns: minmax(0,1fr); gap: 22px; }
+    .ca-editorial-banner__layout--image-right .ca-editorial-banner__media,
+    .ca-editorial-banner__layout--image-right .ca-editorial-banner__content { grid-column: 1; grid-row: auto; }
+    .ca-editorial-banner__layout--image-right .ca-editorial-banner__content { order: 0; }
+    .ca-editorial-banner__layout--image-right .ca-editorial-banner__media { order: 1; }
   }
 {% endstylesheet %}
 {% schema %}
@@ -111,6 +117,42 @@
       "type": "image_picker",
       "id": "hero_image",
       "label": "顶部介绍图片"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "图片位置",
+      "options": [
+        {
+          "value": "left",
+          "label": "左侧"
+        },
+        {
+          "value": "right",
+          "label": "右侧"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "图片比例",
+      "options": [
+        {
+          "value": "wide",
+          "label": "横图 16:9"
+        },
+        {
+          "value": "landscape",
+          "label": "横图 4:3"
+        },
+        {
+          "value": "square",
+          "label": "正方形"
+        }
+      ],
+      "default": "landscape"
     },
     {
       "type": "text",
