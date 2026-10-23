@@ -159,7 +159,18 @@
       </article>
     {% endfor %}
 
-    <div id="craftaurum-jewelry-inquiry" class="ca-jewelry-overview__inquiry-anchor" aria-hidden="true"></div>
+    <div id="craftaurum-jewelry-inquiry" class="ca-jewelry-overview__inquiry-anchor">
+      {% if section.settings.inquiry_heading != blank %}
+        <h2 class="ca-jewelry-overview__inquiry-heading {{ section.settings.category_heading_preset | default: 'h2' }}">
+          {{ section.settings.inquiry_heading | escape }}
+        </h2>
+      {% endif %}
+      {% if section.settings.inquiry_text != blank %}
+        <div class="ca-jewelry-overview__inquiry-text rte {{ section.settings.body_preset | default: 'h4' }}">
+          {{ section.settings.inquiry_text }}
+        </div>
+      {% endif %}
+    </div>
   </div>
 </div>
 {% stylesheet %}
@@ -210,7 +221,10 @@
     .ca-jewelry-overview__gallery-item:hover .ca-jewelry-overview__gallery-image { transform: scale(1.035); }
   }
   .ca-jewelry-overview__mobile-carousel { display: none; }
-  .ca-jewelry-overview__inquiry-anchor { height: 1px; scroll-margin-top: 100px; }
+  .ca-jewelry-overview__inquiry-anchor { text-align: center; scroll-margin-top: 100px; padding-top: 12px; }
+  .ca-jewelry-overview__inquiry-heading { margin: 0 0 12px; }
+  .ca-jewelry-overview__inquiry-text { max-width: 740px; margin: 0 auto; }
+  .ca-jewelry-overview__inquiry-text p { font-size: inherit; line-height: inherit; }
   @media (max-width: 749px) {
     .ca-jewelry-overview__hero { grid-template-columns: minmax(0, 1fr); gap: 22px; margin-bottom: 44px; }
     .ca-jewelry-overview__hero-actions { justify-content: flex-start; }
@@ -459,6 +473,22 @@
       "step": 2,
       "unit": "px",
       "default": 16
+    },
+    {
+      "type": "header",
+      "content": "底部询盘"
+    },
+    {
+      "type": "text",
+      "id": "inquiry_heading",
+      "label": "询盘标题",
+      "default": "Let's Create Your Next Jewelry Collection"
+    },
+    {
+      "type": "richtext",
+      "id": "inquiry_text",
+      "label": "询盘介绍",
+      "default": "<p>Share your design ideas, preferred materials, and project details with Craftaurum. Our team can discuss the next steps for your custom jewelry project.</p>"
     },
     {
       "type": "range",
