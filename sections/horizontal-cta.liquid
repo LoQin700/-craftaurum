@@ -1,4 +1,4 @@
-{% comment %}Generic full-width or page-width horizontal CTA band using the shared CTA renderer.{% endcomment %}
+{% comment %}Generic horizontal CTA with a real background surface inside Horizon's transparent .section grid.{% endcomment %}
 <section
   id="HorizontalCTA-{{ section.id }}"
   class="section section--{{ section.settings.section_width | default: 'full-width' }} spacing-style ca-horizontal-cta"
@@ -15,66 +15,72 @@
     --ca-cta-button-hover-border: {{ section.settings.button_hover_border_color }};
   "
 >
-  <div class="ca-horizontal-cta__inner">
-    <div class="ca-horizontal-cta__copy">
-      {% if section.settings.heading != blank %}
-        <h2 class="ca-horizontal-cta__heading {{ section.settings.heading_preset | default: 'h3' }}">{{ section.settings.heading | escape }}</h2>
-      {% endif %}
-      {% if section.settings.description != blank %}
-        <div class="ca-horizontal-cta__description rte {{ section.settings.body_preset | default: 'h5' }}">{{ section.settings.description }}</div>
+  <div class="ca-horizontal-cta__surface">
+    <div class="ca-horizontal-cta__inner">
+      <div class="ca-horizontal-cta__copy">
+        {% if section.settings.heading != blank %}
+          <h2 class="ca-horizontal-cta__heading {{ section.settings.heading_preset | default: 'h3' }}">{{ section.settings.heading | escape }}</h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <div class="ca-horizontal-cta__description rte {{ section.settings.body_preset | default: 'h5' }}">{{ section.settings.description }}</div>
+        {% endif %}
+      </div>
+      {% if section.settings.button_label != blank %}
+        <div class="ca-horizontal-cta__action">
+          {% render 'craftaurum-cta',
+            label: section.settings.button_label,
+            link: section.settings.button_link,
+            style_class: section.settings.button_style,
+            static_label: true
+          %}
+        </div>
       {% endif %}
     </div>
-    {% if section.settings.button_label != blank %}
-      <div class="ca-horizontal-cta__action">
-        {% render 'craftaurum-cta',
-          label: section.settings.button_label,
-          link: section.settings.button_link,
-          style_class: section.settings.button_style,
-          static_label: true
-        %}
-      </div>
-    {% endif %}
   </div>
 </section>
+
 {% stylesheet %}
-  .ca-horizontal-cta {
+  .ca-horizontal-cta__surface {
+    width: 100%;
     background: var(--ca-cta-background, #17191A);
     color: var(--ca-cta-text, #F8F7F4);
   }
   .ca-horizontal-cta__inner {
-    width: min(100%, 1200px);
-    margin: 0 auto;
-    padding-inline: 24px;
+    width: min(calc(100% - 48px), 1200px);
+    margin-inline: auto;
     display: grid;
     grid-template-columns: minmax(0,1fr) auto;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
   }
   .ca-horizontal-cta__heading { margin: 0 0 8px; color: inherit; }
   .ca-horizontal-cta__description { color: inherit; opacity: .78; }
   .ca-horizontal-cta__description :is(p,ul,ol) { font-size: inherit; line-height: inherit; }
   .ca-horizontal-cta__description p { margin: 0; }
-  .ca-horizontal-cta :is(.button, .button-secondary, .button-custom) {
+
+  .ca-horizontal-cta :is(.button,.button-secondary,.button-custom) {
     --button-color: var(--ca-cta-button-text, #F8F7F4);
     --button-background-color: var(--ca-cta-button-background, transparent);
     --button-border-color: var(--ca-cta-button-border, #F8F7F4);
   }
-  .ca-horizontal-cta :is(.button, .button-secondary, .button-custom):hover {
+  .ca-horizontal-cta :is(.button,.button-secondary,.button-custom):hover {
     --button-color: var(--ca-cta-button-hover-text, #17191A);
     --button-background-color: var(--ca-cta-button-hover-background, #C7A85E);
     --button-border-color: var(--ca-cta-button-hover-border, #C7A85E);
   }
-  .ca-horizontal-cta .button-unstyled {
-    color: var(--ca-cta-button-text, #F8F7F4);
-  }
-  .ca-horizontal-cta .button-unstyled:hover {
-    color: var(--ca-cta-button-hover-background, #C7A85E);
-  }
+  .ca-horizontal-cta .button-unstyled { color: var(--ca-cta-button-text, #F8F7F4); }
+  .ca-horizontal-cta .button-unstyled:hover { color: var(--ca-cta-button-hover-background, #C7A85E); }
+
   @media screen and (max-width: 749px) {
-    .ca-horizontal-cta__inner { grid-template-columns: minmax(0,1fr); gap: 18px; padding-inline: 18px; }
+    .ca-horizontal-cta__inner {
+      width: min(calc(100% - 36px), 1200px);
+      grid-template-columns: minmax(0,1fr);
+      gap: 18px;
+    }
     .ca-horizontal-cta__action { justify-self: start; }
   }
 {% endstylesheet %}
+
 {% schema %}
 {
   "name": "横向 CTA",
