@@ -64,23 +64,23 @@
       "name": "图文横幅",
       "settings": {
         "section_width": "page-width",
-        "eyebrow": "OEM / ODM RING MANUFACTURING",
-        "heading": "Custom Rings Manufacturing.",
-        "introduction": "<p>Develop custom gemstone, pearl, signet and metal rings with Craftaurum. From design review and material selection to sampling and finishing, each stage can be shaped around the direction of your collection.</p>",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "eyebrow": "JEWELRY MANUFACTURING",
+        "heading": "Custom Fashion Jewelry",
+        "introduction": "<p>Discover custom jewelry created for brands, designers, and wholesale partners. Craftaurum supports the development of rings, earrings, bracelets, and necklaces with thoughtful detailing and flexible design possibilities.</p><p>From initial concepts to finished collections, our focus is on refined craftsmanship and clear collaboration throughout your project.</p>",
         "image_position": "right",
-        "image_ratio": "wide",
-        "quote_label": "Request a Manufacturing Quote",
+        "image_ratio": "landscape",
+        "quote_label": "Get B2B Quote",
         "quote_url": "",
-        "catalog_label": "",
+        "catalog_label": "Request Catalog",
         "catalog_url": "",
         "heading_preset": "h1",
         "eyebrow_preset": "h5",
         "body_preset": "h5",
-        "padding_top": 32,
-        "padding_bottom": 32,
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E"
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "horizontal_cta_Pwad7F": {
@@ -88,23 +88,23 @@
       "name": "横向 CTA",
       "settings": {
         "section_width": "full-width",
-        "heading": "From ring design concept to custom jewelry production.",
+        "heading": "From design concept to custom jewelry production.",
         "heading_preset": "h3",
-        "description": "<p>A clear development process built around your design direction, materials and production requirements.</p>",
+        "description": "<p>One clear process, developed around the needs of your collection.</p>",
         "body_preset": "h5",
         "button_label": "Discover Our Process",
         "button_link": "",
         "button_style": "button-secondary",
+        "background_color": "#17191a",
+        "text_color": "#f8f7f4",
+        "button_background_color": "#17191a",
+        "button_text_color": "#f8f7f4",
+        "button_border_color": "#f8f7f4",
+        "button_hover_background_color": "#c7a85e",
+        "button_hover_text_color": "#17191a",
+        "button_hover_border_color": "#c7a85e",
         "padding_top": 36,
-        "padding_bottom": 36,
-        "background_color": "#17191A",
-        "text_color": "#F8F7F4",
-        "button_background_color": "#17191A",
-        "button_text_color": "#F8F7F4",
-        "button_border_color": "#F8F7F4",
-        "button_hover_background_color": "#C7A85E",
-        "button_hover_text_color": "#17191A",
-        "button_hover_border_color": "#C7A85E"
+        "padding_bottom": 36
       }
     },
     "interactive_feature_cFYGmj": {
@@ -113,29 +113,29 @@
         "item_QJarUi": {
           "type": "item",
           "settings": {
-            "title": "Material Selection",
-            "description": "<p>Review metal choices, plating directions, stone options and surface finishes based on the intended look and use of the ring.</p>"
+            "title": "Materials & Finishing",
+            "description": "<p>Review metal choices, surface finishes and stone-setting directions for your design.</p>"
           }
         },
         "item_9zbQMA": {
           "type": "item",
           "settings": {
-            "title": "Ring Craftsmanship",
-            "description": "<p>Pay attention to setting structure, polishing, proportions and the small construction details that influence the finished ring.</p>"
+            "title": "Materials & Finishing",
+            "description": "<p>Review metal choices, surface finishes and stone-setting directions for your design.</p>"
           }
         },
         "item_EFeVgi": {
           "type": "item",
           "settings": {
-            "title": "Brand-Led Design Development",
-            "description": "<p>Translate references, sketches and brand direction into ring concepts that feel intentional rather than generic.</p>"
+            "title": "Materials & Finishing",
+            "description": "<p>Review metal choices, surface finishes and stone-setting directions for your design.</p>"
           }
         },
         "item_XTCWJt": {
           "type": "item",
           "settings": {
-            "title": "Production Review",
-            "description": "<p>Use sample review and agreed specifications to check fit, finish and key construction details before repeat production.</p>"
+            "title": "Materials & Finishing",
+            "description": "<p>Review metal choices, surface finishes and stone-setting directions for your design.</p>"
           }
         }
       },
@@ -150,20 +150,13 @@
         "section_width": "page-width",
         "eyebrow": "WHY CHOOSE OUR RINGS",
         "eyebrow_preset": "h5",
-        "heading": "Focused Capabilities for Ring Development",
+        "heading": "Focused Capabilities for Custom Ring Development",
         "heading_preset": "h2",
-        "description": "<p>Ring development depends on more than appearance alone. These are the product-specific areas we focus on when refining a custom ring collection.</p>",
+        "description": "<p>Explore the details that shape a ring collection, from materials and setting choices to design development and production review.</p>",
         "body_preset": "h5",
         "item_title_preset": "h4",
         "padding_top": 56,
-        "padding_bottom": 56,
-        "layout_mode": "interactive",
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
-        "desktop_columns": 4,
-        "mobile_columns": 2,
-        "gap": 24
+        "padding_bottom": 56
       }
     },
     "image_text_feature_pyXify": {
@@ -171,222 +164,26 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "heading": "Jewelry Manufacturing Built Around Your Collection",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "Custom Jewelry Manufacturing",
         "heading_preset": "h2",
-        "heading_position": "content",
-        "subtitle": "ABOUT CRAFTAURUM",
+        "heading_position": "top",
+        "subtitle": "",
         "top_label": "",
-        "subtitle_preset": "h5",
+        "subtitle_preset": "h3",
         "top_url": "",
         "top_button_style": "button",
-        "body": "<p>Craftaurum works with jewelry brands and wholesale partners on custom development, sampling and production coordination. For ring projects, we focus on clear communication around materials, construction, finishing and the details that influence the final result.</p><p>Use real workshop, setting, polishing or inspection photography here so customers can understand the manufacturing process behind the finished rings.</p>",
+        "body": "<p>Discover thoughtful jewelry craftsmanship and flexible custom design services at Craftaurum.</p>",
         "body_preset": "h5",
-        "image_position": "left",
-        "cta_label": "Learn More About Us",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "cta_label": "Start Your Project",
         "cta_url": "",
-        "cta_button_style": "button-unstyled",
-        "padding_top": 56,
-        "padding_bottom": 56,
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
-        "image_ratio": "landscape"
-      }
-    },
-    "image_gallery_RingsCards": {
-      "type": "image-gallery",
-      "name": "图文卡片",
-      "settings": {
-        "display_mode": "cards",
-        "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
-        "eyebrow": "JEWELRY DESIGN RANGE",
-        "eyebrow_preset": "h5",
-        "heading": "Explore Custom Ring Styles",
-        "heading_preset": "h2",
-        "description": "<p>Build a distinctive ring collection through different materials, stone settings, silhouettes and finishing directions.</p>",
-        "body_preset": "h5",
-        "card_title_preset": "h3",
-        "desktop_layout": "grid",
-        "gallery_desktop_columns": 4,
-        "card_desktop_columns": 4,
-        "mobile_layout": "carousel",
-        "gallery_mobile_columns": 2,
-        "card_mobile_columns": 1,
-        "image_ratio": "portrait",
-        "gap": 18,
-        "padding_top": 56,
-        "padding_bottom": 56
-      },
-      "blocks": {
-        "image_Gemstone": {
-          "type": "image",
-          "settings": {
-            "title": "Gemstone Rings",
-            "description": "<p>Explore different stone layouts, setting styles and finishing directions for statement or refined ring designs.</p>",
-            "button_label": "Explore Details",
-            "button_style": "button-unstyled"
-          }
-        },
-        "image_Minimal": {
-          "type": "image",
-          "settings": {
-            "title": "Metal & Minimal Rings",
-            "description": "<p>Develop clean silhouettes, polished surfaces and restrained details for modern and versatile collections.</p>",
-            "button_label": "Explore Details",
-            "button_style": "button-unstyled"
-          }
-        },
-        "image_Pearl": {
-          "type": "image",
-          "settings": {
-            "title": "Pearl Rings",
-            "description": "<p>Combine pearl proportions with metal structures and subtle settings to create a softer design direction.</p>",
-            "button_label": "Explore Details",
-            "button_style": "button-unstyled"
-          }
-        },
-        "image_Signature": {
-          "type": "image",
-          "settings": {
-            "title": "Signature Designs",
-            "description": "<p>Develop recognizable ring concepts around distinctive forms, details and brand-specific finishing choices.</p>",
-            "button_label": "Explore Details",
-            "button_style": "button-unstyled"
-          }
-        }
-      },
-      "block_order": [
-        "image_Gemstone",
-        "image_Minimal",
-        "image_Pearl",
-        "image_Signature"
-      ]
-    },
-    "interactive_feature_RingsIcons": {
-      "type": "interactive-feature",
-      "name": "图标文字",
-      "settings": {
-        "layout_mode": "icons",
-        "section_width": "page-width",
-        "background_color": "#F8F7F4",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
-        "eyebrow": "MANUFACTURING SUPPORT",
-        "eyebrow_preset": "h5",
-        "heading": "Capabilities That Support Every Collection",
-        "heading_preset": "h2",
-        "description": "<p>These capabilities support ring projects as well as other custom jewelry categories, from early design communication through production review.</p>",
-        "body_preset": "h5",
-        "item_title_preset": "h4",
-        "desktop_columns": 4,
-        "mobile_columns": 2,
-        "gap": 24,
-        "padding_top": 56,
-        "padding_bottom": 56
-      },
-      "blocks": {
-        "item_Design": {
-          "type": "item",
-          "settings": {
-            "title": "Design Development",
-            "description": "<p>Clarify references, dimensions and design intent before sampling begins.</p>"
-          }
-        },
-        "item_Material": {
-          "type": "item",
-          "settings": {
-            "title": "Material Options",
-            "description": "<p>Review suitable metals, stones and finishing directions for the project.</p>"
-          }
-        },
-        "item_Sample": {
-          "type": "item",
-          "settings": {
-            "title": "Sample Support",
-            "description": "<p>Use samples to check proportion, construction and finish before repeat production.</p>"
-          }
-        },
-        "item_Quality": {
-          "type": "item",
-          "settings": {
-            "title": "Quality Review",
-            "description": "<p>Review key visual and construction details against agreed production specifications.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "item_Design",
-        "item_Material",
-        "item_Sample",
-        "item_Quality"
-      ]
-    },
-    "section_RingsContact": {
-      "type": "section",
-      "blocks": {
-        "contact_form_UwiCkQ": {
-          "type": "contact-form",
-          "settings": {
-            "width": "custom",
-            "custom_width": 50,
-            "width_mobile": "custom",
-            "custom_width_mobile": 100,
-            "input_style": "default",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "submit-button": {
-              "type": "contact-form-submit-button",
-              "static": true,
-              "settings": {
-                "label": "Submit",
-                "style_class": "button",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": []
-        }
-      },
-      "block_order": [
-        "contact_form_UwiCkQ"
-      ],
-      "name": "t:names.contact_form",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
-        "section_width": "page-width",
-        "section_height_custom": 50,
-        "background_media": "none",
-        "background_color": "#FFFFFF",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_radius": 0,
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "padding-block-start": 40,
-        "padding-block-end": 80
+        "cta_button_style": "button-secondary",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     }
   },
@@ -394,10 +191,7 @@
     "main",
     "jewelry_collections_overview_tkTByC",
     "horizontal_cta_Pwad7F",
-    "image_gallery_RingsCards",
     "interactive_feature_cFYGmj",
-    "image_text_feature_pyXify",
-    "interactive_feature_RingsIcons",
-    "section_RingsContact"
+    "image_text_feature_pyXify"
   ]
 }
