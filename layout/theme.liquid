@@ -37,6 +37,9 @@
 
     {%- render 'meta-tags' -%}
     {%- render 'stylesheets' -%}
+    {% if template.name == 'page' and template.suffix == 'jewelry-collections' %}
+      {{ 'craftaurum-contact.css' | asset_url | stylesheet_tag }}
+    {% endif %}
     {%- render 'fonts' -%}
     {%- render 'scripts' -%}
     {%- render 'theme-styles-variables' -%}
