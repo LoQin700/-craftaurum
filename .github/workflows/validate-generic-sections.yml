@@ -1,0 +1,39 @@
+name: Validate Generic Comparison Guide
+
+on:
+  push:
+    branches:
+      - refactor/generic-comparison-guide
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  theme-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate template structure
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          text = Path('templates/page.solid-gold.json').read_text(encoding='utf-8')
+          page = json.loads(text[text.index('{'):])
+          assert page['sections']['comparison_table']['type'] == 'comparison-table'
+          assert len(page['sections']['comparison_table']['block_order']) == 6
+          assert page['sections']['indexed_guide']['type'] == 'indexed-content-guide'
+          assert len(page['sections']['indexed_guide']['block_order']) == 5
+          assert 'material_compare' not in page['sections']
+          assert 'karat_guide' not in page['sections']
+          print('Generic section template structure: PASS')
+          PY
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
