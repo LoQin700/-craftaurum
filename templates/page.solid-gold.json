@@ -1,0 +1,916 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "t:names.title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {
+            "text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "solid_gold_intro": {
+      "type": "jewelry-collections-overview",
+      "name": "图文横幅",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "eyebrow": "SOLID GOLD JEWELRY MANUFACTURING",
+        "heading": "Custom Solid Gold Jewelry",
+        "introduction": "<p>Develop custom solid gold jewelry for your brand across 10K, 14K, 18K, 20K and 24K options. Craftaurum supports design refinement, sampling and production with clear communication throughout the project.</p><p>From signature pieces to complete collections, each project can be developed around your design direction, target market and material requirements.</p>",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "quote_label": "Contact Factory",
+        "quote_url": "shopify://pages/contact",
+        "catalog_label": "",
+        "catalog_url": "",
+        "heading_preset": "h1",
+        "eyebrow_preset": "h5",
+        "body_preset": "h5",
+        "padding_top": 40,
+        "padding_bottom": 48
+      }
+    },
+    "gold_showcase": {
+      "type": "content-cards",
+      "name": "图文卡片",
+      "blocks": {
+        "rings": {
+          "type": "card",
+          "settings": {
+            "title": "Diamond Gold Rings",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "chains": {
+          "type": "card",
+          "settings": {
+            "title": "Gold Chains",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "bangles": {
+          "type": "card",
+          "settings": {
+            "title": "Gold Bangles",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "earrings": {
+          "type": "card",
+          "settings": {
+            "title": "Gold Earrings",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "pearl_earrings": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Pearl Earrings",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "pendants": {
+          "type": "card",
+          "settings": {
+            "title": "Gold Pendants Necklace",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "rings",
+        "chains",
+        "bangles",
+        "earrings",
+        "pearl_earrings",
+        "pendants"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#F8F7F4",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "card_style": "standard",
+        "intro_button_label": "",
+        "intro_button_link": "",
+        "intro_button_style": "button",
+        "eyebrow": "",
+        "eyebrow_preset": "h5",
+        "heading": "Gold Jewelry Collection",
+        "heading_preset": "h2",
+        "description": "<p>Explore core solid gold jewelry categories available for custom development.</p>",
+        "body_preset": "h5",
+        "card_title_preset": "h4",
+        "desktop_layout": "grid",
+        "desktop_columns": "3",
+        "mobile_layout": "carousel",
+        "mobile_columns": "1",
+        "image_ratio": "square",
+        "gap": 20,
+        "padding_top": 64,
+        "padding_bottom": 72
+      }
+    },
+    "custom_gold": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "heading": "Custom Gold Jewelry",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "",
+        "top_label": "",
+        "subtitle_preset": "h5",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Turn design direction into manufacturable gold jewelry through CAD refinement, sampling, casting, stone setting and final finishing. Each stage can be reviewed around the proportions, construction and finish expected for your collection.</p>",
+        "body_preset": "h5",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "cta_label": "Start Your Project",
+        "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "gold_vermeil": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#F8F7F4",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "heading": "Gold Vermeil Jewelry",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "",
+        "top_label": "",
+        "subtitle_preset": "h5",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Gold vermeil combines a sterling silver base with a thicker gold-plated surface, creating a premium alternative for brands seeking the look of gold with a different material structure and price position.</p>",
+        "body_preset": "h5",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "cta_label": "Explore Gold Vermeil",
+        "cta_url": "",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "low_moq_gold": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "heading": "Custom-made Real Gold Jewelry",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "",
+        "top_label": "",
+        "subtitle_preset": "h5",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>For solid gold projects, early design and cost decisions are especially important. CAD review, sampling and material planning can help control development risk before moving into production, including lower-volume collection launches.</p>",
+        "body_preset": "h5",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "cta_label": "Get A Quick Quote",
+        "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button",
+        "padding_top": 52,
+        "padding_bottom": 64
+      }
+    },
+    "material_compare": {
+      "type": "gold-material-comparison",
+      "name": "黄金材质对比",
+      "blocks": {
+        "solid": {
+          "type": "material",
+          "settings": {
+            "kicker": "FINE JEWELRY",
+            "title": "Solid Gold Jewelry",
+            "description": "<ul><li><strong>Gold composition:</strong> Gold is alloyed with other metals to improve strength and durability. Common jewelry purities include 10K, 14K, 18K, 20K and 22K.</li><li><strong>Process:</strong> Melting and alloying, molding and casting, shaping, soldering, polishing and stone setting.</li><li><strong>Durability:</strong> Designed for long-term wear; higher-karat gold contains more gold but is generally softer.</li></ul>"
+          }
+        },
+        "vermeil": {
+          "type": "material",
+          "settings": {
+            "kicker": "STERLING SILVER BASE",
+            "title": "Gold Vermeil Jewelry",
+            "description": "<ul><li><strong>Process:</strong> Gold plating applied specifically over sterling silver.</li><li><strong>Gold thickness:</strong> Typically thicker than standard gold plating.</li><li><strong>Durability:</strong> Offers a balance between a premium gold appearance, sterling silver construction and accessible pricing.</li></ul>"
+          }
+        },
+        "plated": {
+          "type": "material",
+          "settings": {
+            "kicker": "FASHION JEWELRY",
+            "title": "Gold Plated Jewelry",
+            "description": "<ul><li><strong>Process:</strong> A thin gold layer is plated over another base metal such as brass or silver.</li><li><strong>Gold thickness:</strong> Generally thinner than vermeil.</li><li><strong>Durability:</strong> More dependent on plating specification, wear frequency and care.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "solid",
+        "vermeil",
+        "plated"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "accent_color": "#C7A85E",
+        "line_color": "#D8D5CE",
+        "eyebrow": "",
+        "eyebrow_preset": "h5",
+        "heading": "Solid Gold VS Gold Vermeil VS Gold Plated Jewelry",
+        "heading_preset": "h2",
+        "description": "",
+        "body_preset": "h5",
+        "item_title_preset": "h3",
+        "column_gap": 48,
+        "padding_top": 76,
+        "padding_bottom": 76
+      }
+    },
+    "gold_colors": {
+      "type": "section",
+      "name": "黄金颜色",
+      "blocks": {
+        "yellow_row": {
+          "type": "group",
+          "name": "Yellow Gold",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "center",
+            "gap": 40,
+            "width": "fill",
+            "width_mobile": "fill"
+          },
+          "blocks": {
+            "yellow_images": {
+              "type": "group",
+              "settings": {
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "gap": 14,
+                "width": "custom",
+                "custom_width": 52,
+                "width_mobile": "fill"
+              },
+              "blocks": {
+                "yellow_1": {
+                  "type": "image",
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "width_mobile": "fill"
+                  }
+                },
+                "yellow_2": {
+                  "type": "image",
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "width_mobile": "fill"
+                  }
+                },
+                "yellow_3": {
+                  "type": "image",
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "width_mobile": "fill"
+                  }
+                }
+              },
+              "block_order": [
+                "yellow_1",
+                "yellow_2",
+                "yellow_3"
+              ]
+            },
+            "yellow_copy": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "custom",
+                "custom_width": 48,
+                "width_mobile": "fill"
+              },
+              "blocks": {
+                "yellow_title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h2>Yellow Gold</h2>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h2"
+                  }
+                },
+                "yellow_body": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Pure gold is naturally soft and malleable, so yellow gold jewelry is commonly alloyed with other metals to improve strength and wearability while preserving its classic warm color.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": [
+                "yellow_title",
+                "yellow_body"
+              ]
+            }
+          },
+          "block_order": [
+            "yellow_images",
+            "yellow_copy"
+          ]
+        },
+        "rose_row": {
+          "type": "group",
+          "name": "Rose Gold",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "center",
+            "gap": 40,
+            "width": "fill",
+            "width_mobile": "fill"
+          },
+          "blocks": {
+            "rose_images": {
+              "type": "group",
+              "settings": {
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "gap": 14,
+                "width": "custom",
+                "custom_width": 52,
+                "width_mobile": "fill"
+              },
+              "blocks": {
+                "rose_1": {
+                  "type": "image",
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "width_mobile": "fill"
+                  }
+                },
+                "rose_2": {
+                  "type": "image",
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "width_mobile": "fill"
+                  }
+                },
+                "rose_3": {
+                  "type": "image",
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "width_mobile": "fill"
+                  }
+                }
+              },
+              "block_order": [
+                "rose_1",
+                "rose_2",
+                "rose_3"
+              ]
+            },
+            "rose_copy": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "custom",
+                "custom_width": 48,
+                "width_mobile": "fill"
+              },
+              "blocks": {
+                "rose_title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h2>Rose Gold</h2>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h2"
+                  }
+                },
+                "rose_body": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Rose gold gets its pink tone from copper within the alloy. The exact composition varies by karat and target color, creating a warmer alternative to traditional yellow gold.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": [
+                "rose_title",
+                "rose_body"
+              ]
+            }
+          },
+          "block_order": [
+            "rose_images",
+            "rose_copy"
+          ]
+        },
+        "white_row": {
+          "type": "group",
+          "name": "White Gold",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "center",
+            "gap": 40,
+            "width": "fill",
+            "width_mobile": "fill"
+          },
+          "blocks": {
+            "white_images": {
+              "type": "group",
+              "settings": {
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "gap": 14,
+                "width": "custom",
+                "custom_width": 52,
+                "width_mobile": "fill"
+              },
+              "blocks": {
+                "white_1": {
+                  "type": "image",
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "width_mobile": "fill"
+                  }
+                },
+                "white_2": {
+                  "type": "image",
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "width_mobile": "fill"
+                  }
+                },
+                "white_3": {
+                  "type": "image",
+                  "settings": {
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "width_mobile": "fill"
+                  }
+                }
+              },
+              "block_order": [
+                "white_1",
+                "white_2",
+                "white_3"
+              ]
+            },
+            "white_copy": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "custom",
+                "custom_width": 48,
+                "width_mobile": "fill"
+              },
+              "blocks": {
+                "white_title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h2>White Gold</h2>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h2"
+                  }
+                },
+                "white_body": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>White gold combines gold with light-colored alloy metals and is often rhodium finished for a bright reflective appearance. Composition varies according to karat and manufacturing specification.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte"
+                  }
+                }
+              },
+              "block_order": [
+                "white_title",
+                "white_body"
+              ]
+            }
+          },
+          "block_order": [
+            "white_images",
+            "white_copy"
+          ]
+        }
+      },
+      "block_order": [
+        "yellow_row",
+        "rose_row",
+        "white_row"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 64,
+        "section_width": "page-width",
+        "section_height": "",
+        "background_media": "none",
+        "background_color": "#FFFFFF",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "padding-block-start": 72,
+        "padding-block-end": 72
+      }
+    },
+    "karat_guide": {
+      "type": "gold-karat-guide",
+      "name": "黄金K数指南",
+      "blocks": {
+        "k10": {
+          "type": "karat",
+          "settings": {
+            "title": "10K Gold Jewelry",
+            "gold_content": "41.7% GOLD",
+            "description": "<p>The lowest gold content in this guide and generally the hardest option. It is suitable for frequent wear and projects where durability and a more accessible material cost are priorities.</p>"
+          }
+        },
+        "k14": {
+          "type": "karat",
+          "settings": {
+            "title": "14K Gold Jewelry",
+            "gold_content": "58.5% GOLD",
+            "description": "<p>A widely used balance of gold content, durability and everyday wearability. It is a practical choice for rings, earrings, necklaces and other daily-wear fine jewelry.</p>"
+          }
+        },
+        "k18": {
+          "type": "karat",
+          "settings": {
+            "title": "18K Gold Jewelry",
+            "gold_content": "75% GOLD",
+            "description": "<p>A common premium fine-jewelry standard with richer gold color and higher gold content while retaining enough alloy strength for many jewelry applications.</p>"
+          }
+        },
+        "k20": {
+          "type": "karat",
+          "settings": {
+            "title": "20K Gold Jewelry",
+            "gold_content": "83.3% GOLD",
+            "description": "<p>A higher-purity option positioned between 18K and 24K. It offers a deeper gold character while requiring more consideration around softness and construction.</p>"
+          }
+        },
+        "k24": {
+          "type": "karat",
+          "settings": {
+            "title": "24K Gold Jewelry",
+            "gold_content": "99.9% GOLD",
+            "description": "<p>Nearly pure gold with the richest natural gold color and highest gold content. It is also the softest option and requires suitable product design and wear expectations.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "k10",
+        "k14",
+        "k18",
+        "k20",
+        "k24"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#F8F7F4",
+        "accent_color": "#C7A85E",
+        "line_color": "#D8D5CE",
+        "eyebrow": "GOLD KARAT GUIDE",
+        "eyebrow_preset": "h5",
+        "heading": "10K, 14K, 18K, 20K & 24K Gold Jewelry",
+        "heading_preset": "h2",
+        "description": "<p>Different karat levels change gold content, color, hardness and how a piece is positioned in the market.</p>",
+        "body_preset": "h5",
+        "item_title_preset": "h3",
+        "aside_heading": "Understanding Gold Karat",
+        "aside_title_preset": "h3",
+        "aside_body": "<p>Karat refers to the proportion of pure gold within a gold alloy. Higher karat means greater gold content, while lower karat generally offers greater hardness and durability.</p><p>The right choice depends on product design, target price, expected wear and market positioning.</p>",
+        "column_gap": 64,
+        "padding_top": 76,
+        "padding_bottom": 76
+      }
+    },
+    "jewelry_types": {
+      "type": "image-collection-grid",
+      "name": "分类图片展示",
+      "blocks": {
+        "type_rings": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Rings",
+            "collection": "",
+            "link": ""
+          }
+        },
+        "type_earrings": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Earrings",
+            "collection": "",
+            "link": ""
+          }
+        },
+        "type_bracelets": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Bracelets",
+            "collection": "",
+            "link": ""
+          }
+        },
+        "type_necklaces": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Necklaces",
+            "collection": "",
+            "link": ""
+          }
+        },
+        "type_pendants": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Pendants",
+            "collection": "",
+            "link": ""
+          }
+        },
+        "type_artisan": {
+          "type": "card",
+          "settings": {
+            "title": "Artisan Jewelry",
+            "collection": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "type_rings",
+        "type_earrings",
+        "type_bracelets",
+        "type_necklaces",
+        "type_pendants",
+        "type_artisan"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "heading": "Explore Our Custom Jewelry Types",
+        "heading_preset": "h2",
+        "description": "<p>Continue exploring Craftaurum's custom jewelry categories for your next collection.</p>",
+        "body_preset": "h5",
+        "background_color": "#FFFFFF",
+        "card_title_preset": "h3",
+        "desktop_columns": 3,
+        "desktop_layout": "grid",
+        "mobile_columns": 2,
+        "mobile_layout": "grid",
+        "overlay_opacity": 25,
+        "hover_overlay_opacity": 50,
+        "gap": 16,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "contact": {
+      "type": "section",
+      "blocks": {
+        "contact_heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Start Your Solid Gold Jewelry Project</h2><p>Share your design direction, target karat, quantity and project requirements with our team.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "contact_form": {
+          "type": "contact-form",
+          "settings": {
+            "width": "custom",
+            "custom_width": 100,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100,
+            "background_color": "",
+            "input_style": "default",
+            "input_background_color": "{{ settings.color_palette.background }}",
+            "input_text_color": "{{ settings.color_palette.foreground }}",
+            "input_border_color": "{{ settings.color_palette.foreground }}",
+            "border_width": 1,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "submit-button": {
+              "type": "contact-form-submit-button",
+              "static": true,
+              "settings": {
+                "label": "Submit",
+                "style_class": "button",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "block_order": [
+        "contact_heading",
+        "contact_form"
+      ],
+      "name": "t:names.contact_form",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#F8F7F4",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 72,
+        "padding-block-end": 88
+      }
+    }
+  },
+  "order": [
+    "main",
+    "solid_gold_intro",
+    "gold_showcase",
+    "custom_gold",
+    "gold_vermeil",
+    "low_moq_gold",
+    "material_compare",
+    "gold_colors",
+    "karat_guide",
+    "jewelry_types",
+    "contact"
+  ]
+}
