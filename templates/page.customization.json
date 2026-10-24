@@ -69,12 +69,12 @@
         "accent_color": "#c7a85e",
         "eyebrow": "ODM / OEM JEWELRY CUSTOMIZATION",
         "heading": "All-in-One Jewelry Customization.",
-        "introduction": "<p>Turn sketches, reference images, existing samples or brand ideas into a custom jewelry collection through a clear development process. Craftaurum supports design review, 3D development, material and finish selection, sampling and production coordination around the needs of your project.</p><p>Whether you are refining one signature piece or building a wider collection, each stage can be shaped around your design direction, target market and brand identity.</p>",
+        "introduction": "<p>Turn sketches, references or brand ideas into a custom jewelry collection through design review, 3D development, sampling and production coordination.</p>",
         "image_position": "right",
         "image_ratio": "wide",
         "quote_label": "Start Your Custom Project",
         "quote_url": "",
-        "catalog_label": "Get B2B Quote",
+        "catalog_label": "",
         "catalog_url": "",
         "heading_preset": "h1",
         "eyebrow_preset": "h5",
@@ -90,7 +90,7 @@
           "type": "card",
           "settings": {
             "title": "Plating & Surface Finish",
-            "description": "<p>Explore plating colors and surface directions that help define the final look and character of a jewelry collection.</p>",
+            "description": "<p>Plating colors and surface finishes tailored to the look of your collection.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -100,7 +100,7 @@
           "type": "card",
           "settings": {
             "title": "3D Rendering",
-            "description": "<p>Visualize and refine proportion, structure and key design details digitally before committing to physical sampling.</p>",
+            "description": "<p>Refine proportion and structure digitally before physical sampling.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -110,7 +110,7 @@
           "type": "card",
           "settings": {
             "title": "Stone Setting",
-            "description": "<p>Develop gemstone layouts and setting directions around the intended style, structure and visual balance of the piece.</p>",
+            "description": "<p>Stone layouts and setting directions developed around the design.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -120,7 +120,7 @@
           "type": "card",
           "settings": {
             "title": "Casting",
-            "description": "<p>Translate approved designs into metal components through a controlled casting process suited to the construction of the piece.</p>",
+            "description": "<p>Approved designs translated into metal components for production.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -130,7 +130,7 @@
           "type": "card",
           "settings": {
             "title": "Polishing",
-            "description": "<p>Refine surfaces and small details through polishing stages that prepare the jewelry for its final appearance and finishing.</p>",
+            "description": "<p>Surface refinement and finishing that shape the final appearance.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -140,7 +140,7 @@
           "type": "card",
           "settings": {
             "title": "Private Label",
-            "description": "<p>Incorporate brand-led details such as logo direction, custom forms and collection-specific finishing into the product development process.</p>",
+            "description": "<p>Brand-led details integrated into the product development process.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -169,7 +169,7 @@
         "eyebrow_preset": "h5",
         "heading": "One-Stop Custom Jewelry Development",
         "heading_preset": "h2",
-        "description": "<p>From digital development and material decisions to finishing and brand details, these capabilities support the practical work behind a custom jewelry project.</p>",
+        "description": "<p>Core manufacturing capabilities that support custom jewelry development from design to finishing.</p>",
         "body_preset": "h5",
         "card_title_preset": "h3",
         "desktop_layout": "grid",
@@ -177,33 +177,9 @@
         "mobile_layout": "carousel",
         "mobile_columns": "1",
         "image_ratio": "landscape",
-        "gap": 20,
+        "gap": 24,
         "padding_top": 56,
         "padding_bottom": 56
-      }
-    },
-    "custom_banner": {
-      "type": "jewelry-collections-overview",
-      "name": "图文横幅",
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "eyebrow": "CUSTOMIZE EVERY DETAIL",
-        "heading": "Build Each Detail Around Your Brand.",
-        "introduction": "<p>Customization is not limited to one finishing choice. Shape, metal, stones, pearls, plating, surface texture, logo direction and other brand-led details can all be reviewed together so the final product feels connected to your collection.</p><p>The goal is to make each choice work as part of one coherent design rather than as a series of isolated options.</p>",
-        "image_position": "left",
-        "image_ratio": "landscape",
-        "quote_label": "Discuss Your Requirements",
-        "quote_url": "",
-        "catalog_label": "",
-        "catalog_url": "",
-        "heading_preset": "h2",
-        "eyebrow_preset": "h5",
-        "body_preset": "h5",
-        "padding_top": 48,
-        "padding_bottom": 48
       }
     },
     "options": {
@@ -215,25 +191,16 @@
             "icon": "ruler",
             "icon_color": "#c7a85e",
             "title": "Design & Shape",
-            "description": "<p>Refine silhouette, scale, proportion and structural direction around your references.</p>"
+            "description": "<p>Silhouette, scale, proportion and construction.</p>"
           }
         },
-        "opt_metal": {
+        "opt_materials": {
           "type": "item",
           "settings": {
             "icon": "star",
             "icon_color": "#c7a85e",
-            "title": "Metal",
-            "description": "<p>Review suitable metal directions based on design intent, positioning and finishing requirements.</p>"
-          }
-        },
-        "opt_stone": {
-          "type": "item",
-          "settings": {
-            "icon": "silhouette",
-            "icon_color": "#c7a85e",
-            "title": "Stone & Pearl",
-            "description": "<p>Explore stone, pearl, color and layout options that support the design concept.</p>"
+            "title": "Materials",
+            "description": "<p>Metal, stone, pearl and decorative material directions.</p>"
           }
         },
         "opt_finish": {
@@ -241,8 +208,8 @@
           "settings": {
             "icon": "star",
             "icon_color": "#c7a85e",
-            "title": "Plating & Finish",
-            "description": "<p>Choose plating tones, polished surfaces, textures and other finishing directions for the collection.</p>"
+            "title": "Stone & Finish",
+            "description": "<p>Setting style, plating tone, polish and surface texture.</p>"
           }
         },
         "opt_brand": {
@@ -250,27 +217,16 @@
           "settings": {
             "icon": "price_tag",
             "icon_color": "#c7a85e",
-            "title": "Logo & Branding",
-            "description": "<p>Integrate logos, symbols or recognizable brand details into the jewelry where appropriate.</p>"
-          }
-        },
-        "opt_label": {
-          "type": "item",
-          "settings": {
-            "icon": "clipboard",
-            "icon_color": "#c7a85e",
-            "title": "Private Label",
-            "description": "<p>Develop a collection around your own brand direction while keeping product details and review points clearly defined.</p>"
+            "title": "Branding",
+            "description": "<p>Logo, symbols and private-label details for your collection.</p>"
           }
         }
       },
       "block_order": [
         "opt_design",
-        "opt_metal",
-        "opt_stone",
+        "opt_materials",
         "opt_finish",
-        "opt_brand",
-        "opt_label"
+        "opt_brand"
       ],
       "name": "图标文字",
       "settings": {
@@ -278,8 +234,8 @@
         "background_color": "#f8f7f4",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
-        "style_preset": "centered",
-        "icon_position": "left",
+        "style_preset": "left",
+        "icon_position": "top",
         "icon_size": 32,
         "icon_gap": 16,
         "column_gap": 32,
@@ -287,13 +243,13 @@
         "eyebrow_preset": "h5",
         "heading": "What Can Be Customized",
         "heading_preset": "h2",
-        "description": "<p>Review the major product details that can be shaped around the visual identity and practical requirements of your collection.</p>",
+        "description": "<p>Shape the key details of your jewelry around your brand and collection direction.</p>",
         "body_preset": "h5",
         "item_title_preset": "h4",
-        "desktop_columns": "3",
+        "desktop_columns": "4",
         "mobile_columns": "1",
-        "padding_top": 72,
-        "padding_bottom": 72
+        "padding_top": 64,
+        "padding_bottom": 64
       }
     },
     "process_cards": {
@@ -303,7 +259,7 @@
           "type": "card",
           "settings": {
             "title": "Communication",
-            "description": "<p>We begin by reviewing your ideas, references, target product direction and project requirements so the development path is clear from the start.</p>",
+            "description": "<p>Share your references, requirements and target product direction.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -313,7 +269,7 @@
           "type": "card",
           "settings": {
             "title": "Design",
-            "description": "<p>Design details such as shape, proportion, texture, color and surface treatment are refined around the intended collection.</p>",
+            "description": "<p>Refine shape, proportion, texture, color and key design details.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -323,7 +279,7 @@
           "type": "card",
           "settings": {
             "title": "3D Rendering",
-            "description": "<p>3D development helps visualize proportion, structure and key details before moving into physical sampling.</p>",
+            "description": "<p>Review structure and proportion digitally before sampling.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -333,7 +289,7 @@
           "type": "card",
           "settings": {
             "title": "Sampling",
-            "description": "<p>A physical sample provides a practical checkpoint for reviewing construction, fit, finish and overall appearance.</p>",
+            "description": "<p>Check the physical product, fit, construction and finish.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -343,7 +299,7 @@
           "type": "card",
           "settings": {
             "title": "Production",
-            "description": "<p>After sample confirmation, repeat production follows the approved design direction and agreed product specifications.</p>",
+            "description": "<p>Move into repeat production based on the approved sample.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -353,7 +309,7 @@
           "type": "card",
           "settings": {
             "title": "Delivery",
-            "description": "<p>Once production and final review are complete, packing and shipment coordination can be arranged around the order requirements.</p>",
+            "description": "<p>Complete final review, packing and shipment coordination.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -382,7 +338,7 @@
         "eyebrow_preset": "h5",
         "heading": "High End Jewelry Manufacturing Process",
         "heading_preset": "h2",
-        "description": "<p>From early communication and design development to sampling, production and delivery, each stage is organized to keep the project clear and practical for your brand.</p>",
+        "description": "<p>A clear six-step path from your first idea to finished production.</p>",
         "body_preset": "h5",
         "card_title_preset": "h3",
         "desktop_layout": "grid",
@@ -401,7 +357,7 @@
         "contact_heading": {
           "type": "text",
           "settings": {
-            "text": "<h2>Start Your Custom Jewelry Project</h2><p>Share your references, design ideas, preferred materials and project requirements with our team.</p>",
+            "text": "<h2>Start Your Custom Jewelry Project</h2><p>Share your ideas and project requirements with our team.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -496,15 +452,29 @@
         "padding-block-start": 56,
         "padding-block-end": 84
       }
+    },
+    "requirements": {
+      "type": "text-heading",
+      "name": "标题说明",
+      "settings": {
+        "section_width": "page-width",
+        "heading": "What We Need From You",
+        "heading_preset": "h2",
+        "description": "<p>To get started, share any sketches, reference images, preferred materials, target quantity and timeline you already have. A complete technical package is not required.</p>",
+        "body_preset": "h5",
+        "anchor_id": "",
+        "padding_top": 48,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
     "main",
     "custom_hero",
     "capabilities",
-    "custom_banner",
     "options",
     "process_cards",
+    "requirements",
     "contact"
   ]
 }
