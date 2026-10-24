@@ -60,195 +60,293 @@
       }
     },
     "custom_hero": {
-      "type": "jewelry-collections-overview",
-      "name": "图文横幅",
+      "type": "slideshow",
+      "name": "幻灯片",
+      "blocks": {
+        "custom_slide": {
+          "type": "_slide",
+          "settings": {
+            "media_type_1": "image",
+            "content_direction": "column",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 18,
+            "background_color": "#111313",
+            "toggle_overlay": true,
+            "overlay_color": "#00000070",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 72,
+            "padding-block-end": 72,
+            "padding-inline-start": 72,
+            "padding-inline-end": 72
+          },
+          "blocks": {
+            "eyebrow": {
+              "type": "text",
+              "settings": {
+                "text": "<p>BESPOKE DEVELOPMENT</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "type_preset": "custom",
+                "font": "var(--font-body--family)",
+                "font_size": "0.75rem",
+                "line_height": "normal",
+                "letter_spacing": "loose",
+                "case": "uppercase",
+                "wrap": "pretty",
+                "text_color": "#C7A85E",
+                "background": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "heading": {
+              "type": "text",
+              "settings": {
+                "text": "<h1>Customization with an atelier mindset.</h1>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h1",
+                "text_color": "#FFFFFF",
+                "background": false,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "body": {
+              "type": "text",
+              "settings": {
+                "text": "<p>Develop custom jewelry from design direction and 3D development through sampling, finishing and production.</p>",
+                "width": "100%",
+                "max_width": "narrow",
+                "alignment": "left",
+                "type_preset": "h5",
+                "text_color": "#F8F7F4",
+                "background": false,
+                "padding-block-start": 6,
+                "padding-block-end": 10,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "button": {
+              "type": "button",
+              "settings": {
+                "label": "Start a project",
+                "link": "",
+                "open_in_new_tab": false,
+                "style_class": "button-custom",
+                "custom_button_background": "#C7A85E",
+                "custom_button_text": "#17191A",
+                "custom_button_border": "#C7A85E",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "eyebrow",
+            "heading",
+            "body",
+            "button"
+          ]
+        }
+      },
+      "block_order": [
+        "custom_slide"
+      ],
       "settings": {
-        "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "eyebrow": "ODM / OEM JEWELRY CUSTOMIZATION",
-        "heading": "All-in-One Jewelry Customization.",
-        "introduction": "<p>Turn sketches, references or brand ideas into a custom jewelry collection through design review, 3D development, sampling and production coordination.</p>",
-        "image_position": "right",
-        "image_ratio": "wide",
-        "quote_label": "Start Your Custom Project",
-        "quote_url": "",
-        "catalog_label": "",
-        "catalog_url": "",
-        "heading_preset": "h1",
-        "eyebrow_preset": "h5",
-        "body_preset": "h5",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "display_mode": "full_frame",
+        "section_width": "full-width",
+        "full_frame_on_mobile": false,
+        "slideshow_gap": 12,
+        "corner_radius": 0,
+        "slide_height": "large",
+        "content_position": "on-media",
+        "background_color": "#111313",
+        "icons_style": "none",
+        "icons_shape": "none",
+        "slideshow_controls_style": "none",
+        "autoplay": false,
+        "autoplay_speed": 4,
+        "padding-block-start": 0,
+        "padding-block-end": 0
       }
     },
     "capabilities": {
-      "type": "content-cards",
+      "type": "image-cards",
+      "name": "图片卡片",
       "blocks": {
         "plated": {
           "type": "card",
           "settings": {
-            "title": "Plating & Surface Finish",
+            "link": "",
+            "title": "Plated Jewelry",
             "description": "<p>Plating colors and surface finishes tailored to the look of your collection.</p>",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
           }
         },
         "render3d": {
           "type": "card",
           "settings": {
-            "title": "3D Rendering",
-            "description": "<p>Refine proportion and structure digitally before physical sampling.</p>",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "title": "3D Render",
+            "description": "<p>Refine proportion, structure and key details before physical sampling.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
           }
         },
-        "setting": {
+        "stone": {
           "type": "card",
           "settings": {
-            "title": "Stone Setting",
-            "description": "<p>Stone layouts and setting directions developed around the design.</p>",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "title": "Stone Setting & Making",
+            "description": "<p>Develop setting directions around the structure and visual balance of the piece.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
           }
         },
-        "casting": {
+        "silver": {
           "type": "card",
           "settings": {
-            "title": "Casting",
-            "description": "<p>Approved designs translated into metal components for production.</p>",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "title": "Custom Sterling Silver Jewelry",
+            "description": "<p>Develop silver-led collections around your own design, finish and brand direction.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
           }
         },
-        "polishing": {
+        "gold": {
           "type": "card",
           "settings": {
-            "title": "Polishing",
-            "description": "<p>Surface refinement and finishing that shape the final appearance.</p>",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        },
-        "private_label": {
-          "type": "card",
-          "settings": {
-            "title": "Private Label",
-            "description": "<p>Brand-led details integrated into the product development process.</p>",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "title": "Custom Gold Jewelry",
+            "description": "<p>Build refined gold jewelry concepts around proportion, craftsmanship and finishing.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
           }
         }
       },
       "block_order": [
         "plated",
         "render3d",
-        "setting",
-        "casting",
-        "polishing",
-        "private_label"
+        "stone",
+        "silver",
+        "gold"
       ],
-      "name": "图文卡片",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "card_style": "standard",
-        "intro_button_label": "",
-        "intro_button_link": "",
-        "intro_button_style": "button",
-        "eyebrow": "CUSTOMIZATION CAPABILITIES",
-        "eyebrow_preset": "h5",
-        "heading": "One-Stop Custom Jewelry Development",
+        "background_color": "#FFFFFF",
+        "text_color": "#FFFFFF",
+        "accent_color": "#C7A85E",
+        "heading": "Custom Jewelry Capabilities",
         "heading_preset": "h2",
-        "description": "<p>Core manufacturing capabilities that support custom jewelry development from design to finishing.</p>",
+        "description": "<p>From surface finishing and digital development to stone setting and material-led collections.</p>",
         "body_preset": "h5",
-        "card_title_preset": "h3",
-        "desktop_layout": "grid",
-        "desktop_columns": "3",
-        "mobile_layout": "carousel",
+        "layout_style": "showcase",
+        "desktop_columns": 3,
         "mobile_columns": "1",
+        "mobile_layout": "carousel",
         "image_ratio": "landscape",
-        "gap": 24,
-        "padding_top": 56,
-        "padding_bottom": 56
+        "gap": 20,
+        "overlay_opacity": 45,
+        "hover_overlay_opacity": 60,
+        "content_padding": 24,
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
-    "options": {
-      "type": "icon-with-text",
-      "blocks": {
-        "opt_design": {
-          "type": "item",
-          "settings": {
-            "icon": "ruler",
-            "icon_color": "#c7a85e",
-            "title": "Design & Shape",
-            "description": "<p>Silhouette, scale, proportion and construction.</p>"
-          }
-        },
-        "opt_materials": {
-          "type": "item",
-          "settings": {
-            "icon": "star",
-            "icon_color": "#c7a85e",
-            "title": "Materials",
-            "description": "<p>Metal, stone, pearl and decorative material directions.</p>"
-          }
-        },
-        "opt_finish": {
-          "type": "item",
-          "settings": {
-            "icon": "star",
-            "icon_color": "#c7a85e",
-            "title": "Stone & Finish",
-            "description": "<p>Setting style, plating tone, polish and surface texture.</p>"
-          }
-        },
-        "opt_brand": {
-          "type": "item",
-          "settings": {
-            "icon": "price_tag",
-            "icon_color": "#c7a85e",
-            "title": "Branding",
-            "description": "<p>Logo, symbols and private-label details for your collection.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "opt_design",
-        "opt_materials",
-        "opt_finish",
-        "opt_brand"
-      ],
-      "name": "图标文字",
+    "craft_casting": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#f8f7f4",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "style_preset": "left",
-        "icon_position": "top",
-        "icon_size": 32,
-        "icon_gap": 16,
-        "column_gap": 32,
-        "eyebrow": "CUSTOMIZATION OPTIONS",
-        "eyebrow_preset": "h5",
-        "heading": "What Can Be Customized",
+        "background_color": "#FFFFFF",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "heading": "Casting the Wax Model into Metal",
         "heading_preset": "h2",
-        "description": "<p>Shape the key details of your jewelry around your brand and collection direction.</p>",
+        "heading_position": "content",
+        "subtitle": "",
+        "top_label": "",
+        "subtitle_preset": "h5",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Approved wax models are prepared for casting so the design can move from prototype into metal with its key proportions and construction details intact.</p>",
         "body_preset": "h5",
-        "item_title_preset": "h4",
-        "desktop_columns": "4",
-        "mobile_columns": "1",
-        "padding_top": 64,
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "cta_label": "Custom Jewelry",
+        "cta_url": "",
+        "cta_button_style": "button",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "craft_polishing": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "heading": "Polishing Jewelry",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "",
+        "top_label": "",
+        "subtitle_preset": "h5",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Polishing refines the metal surface and small construction details before final finishing, helping the jewelry achieve a cleaner and more consistent appearance.</p>",
+        "body_preset": "h5",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "cta_label": "Get A Quote",
+        "cta_url": "",
+        "cta_button_style": "button",
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "craft_private_label": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "heading": "Private Label Jewelry Manufacturing",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "",
+        "top_label": "",
+        "subtitle_preset": "h5",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Brand-led details can be carried through the product itself, from custom forms and logo direction to finishing choices that support a recognizable collection identity.</p>",
+        "body_preset": "h5",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "cta_label": "Start Your Project",
+        "cta_url": "",
+        "cta_button_style": "button",
+        "padding_top": 52,
         "padding_bottom": 64
       }
     },
@@ -259,7 +357,7 @@
           "type": "card",
           "settings": {
             "title": "Communication",
-            "description": "<p>Share your references, requirements and target product direction.</p>",
+            "description": "<p>Share references, requirements and product direction.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -269,7 +367,7 @@
           "type": "card",
           "settings": {
             "title": "Design",
-            "description": "<p>Refine shape, proportion, texture, color and key design details.</p>",
+            "description": "<p>Refine shape, proportion, texture and key details.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -289,7 +387,7 @@
           "type": "card",
           "settings": {
             "title": "Sampling",
-            "description": "<p>Check the physical product, fit, construction and finish.</p>",
+            "description": "<p>Check the physical product, construction, fit and finish.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -299,7 +397,7 @@
           "type": "card",
           "settings": {
             "title": "Production",
-            "description": "<p>Move into repeat production based on the approved sample.</p>",
+            "description": "<p>Move into production based on the approved sample.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -327,9 +425,9 @@
       "name": "图文卡片",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
+        "background_color": "#F8F7F4",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
         "card_style": "process",
         "intro_button_label": "Get A Quote",
         "intro_button_link": "",
@@ -338,7 +436,7 @@
         "eyebrow_preset": "h5",
         "heading": "High End Jewelry Manufacturing Process",
         "heading_preset": "h2",
-        "description": "<p>A clear six-step path from your first idea to finished production.</p>",
+        "description": "<p>A clear six-step path from first discussion to finished production.</p>",
         "body_preset": "h5",
         "card_title_preset": "h3",
         "desktop_layout": "grid",
@@ -346,9 +444,9 @@
         "mobile_layout": "carousel",
         "mobile_columns": "1",
         "image_ratio": "landscape",
-        "gap": 32,
-        "padding_top": 64,
-        "padding_bottom": 64
+        "gap": 28,
+        "padding_top": 76,
+        "padding_bottom": 76
       }
     },
     "contact": {
@@ -449,22 +547,8 @@
         "border_opacity": 100,
         "border_color": "",
         "border_radius": 0,
-        "padding-block-start": 56,
-        "padding-block-end": 84
-      }
-    },
-    "requirements": {
-      "type": "text-heading",
-      "name": "标题说明",
-      "settings": {
-        "section_width": "page-width",
-        "heading": "What We Need From You",
-        "heading_preset": "h2",
-        "description": "<p>To get started, share any sketches, reference images, preferred materials, target quantity and timeline you already have. A complete technical package is not required.</p>",
-        "body_preset": "h5",
-        "anchor_id": "",
-        "padding_top": 48,
-        "padding_bottom": 20
+        "padding-block-start": 64,
+        "padding-block-end": 88
       }
     }
   },
@@ -472,9 +556,10 @@
     "main",
     "custom_hero",
     "capabilities",
-    "options",
+    "craft_casting",
+    "craft_polishing",
+    "craft_private_label",
     "process_cards",
-    "requirements",
     "contact"
   ]
 }
