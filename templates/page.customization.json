@@ -61,49 +61,26 @@
     },
     "custom_hero": {
       "type": "slideshow",
-      "name": "幻灯片",
       "blocks": {
-        "custom_slide": {
+        "slide_1": {
           "type": "_slide",
           "settings": {
             "media_type_1": "image",
             "content_direction": "column",
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 18,
+            "gap": 12,
             "background_color": "#111313",
             "toggle_overlay": true,
-            "overlay_color": "#00000070",
+            "overlay_color": "#00000066",
             "overlay_style": "solid",
             "gradient_direction": "to top",
-            "padding-block-start": 72,
-            "padding-block-end": 72,
-            "padding-inline-start": 72,
-            "padding-inline-end": 72
+            "padding-inline-start": 48,
+            "padding-inline-end": 48,
+            "padding-block-start": 48,
+            "padding-block-end": 48
           },
           "blocks": {
-            "eyebrow": {
-              "type": "text",
-              "settings": {
-                "text": "<p>BESPOKE DEVELOPMENT</p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "type_preset": "custom",
-                "font": "var(--font-body--family)",
-                "font_size": "0.75rem",
-                "line_height": "normal",
-                "letter_spacing": "loose",
-                "case": "uppercase",
-                "wrap": "pretty",
-                "text_color": "#C7A85E",
-                "background": false,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
             "heading": {
               "type": "text",
               "settings": {
@@ -112,16 +89,10 @@
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "h1",
-                "text_color": "#FFFFFF",
-                "background": false,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
+                "text_color": "#FFFFFF"
+              }
             },
-            "body": {
+            "text": {
               "type": "text",
               "settings": {
                 "text": "<p>Develop custom jewelry from design direction and 3D development through sampling, finishing and production.</p>",
@@ -130,49 +101,31 @@
                 "alignment": "left",
                 "type_preset": "h5",
                 "text_color": "#F8F7F4",
-                "background": false,
-                "padding-block-start": 6,
-                "padding-block-end": 10,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
+                "padding-block-end": 20
+              }
             },
             "button": {
               "type": "button",
               "settings": {
                 "label": "Start a project",
                 "link": "",
-                "open_in_new_tab": false,
-                "style_class": "button-custom",
-                "custom_button_background": "#C7A85E",
-                "custom_button_text": "#17191A",
-                "custom_button_border": "#C7A85E",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
+                "style_class": "button"
+              }
             }
           },
           "block_order": [
-            "eyebrow",
             "heading",
-            "body",
+            "text",
             "button"
           ]
         }
       },
       "block_order": [
-        "custom_slide"
+        "slide_1"
       ],
       "settings": {
         "display_mode": "full_frame",
         "section_width": "full-width",
-        "full_frame_on_mobile": false,
-        "slideshow_gap": 12,
-        "corner_radius": 0,
         "slide_height": "large",
         "content_position": "on-media",
         "background_color": "#111313",
@@ -180,7 +133,6 @@
         "icons_shape": "none",
         "slideshow_controls_style": "none",
         "autoplay": false,
-        "autoplay_speed": 4,
         "padding-block-start": 0,
         "padding-block-end": 0
       }
