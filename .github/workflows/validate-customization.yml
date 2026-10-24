@@ -18,13 +18,12 @@ jobs:
         shell: bash
         run: |
           python3 - <<'PY'
-          import json, re
+          import json
           from pathlib import Path
 
           def load_json_template(path):
               text = Path(path).read_text(encoding='utf-8')
-              text = re.sub(r'^/\\*.*?\\*/\\s*', '', text, flags=re.S)
-              return json.loads(text)
+              return json.loads(text[text.index('{'):])
 
           page = load_json_template('templates/page.customization.json')
           expected = [
