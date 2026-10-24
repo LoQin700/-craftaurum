@@ -15,7 +15,6 @@
   style="
     --ca-image-cards-bg: {{ section.settings.background_color }};
     --ca-image-cards-text: {{ section.settings.text_color }};
-    --ca-image-cards-accent: {{ section.settings.accent_color }};
     --ca-image-cards-gap: {{ section.settings.gap }}px;
     --ca-image-cards-cols: {{ section.settings.desktop_columns }};
     --ca-image-cards-mobile-cols: {{ section.settings.mobile_columns }};
@@ -35,26 +34,19 @@
             <h2 class="ca-image-cards__heading {{ section.settings.heading_preset }}">{{ section.settings.heading | escape }}</h2>
           {% endif %}
           {% if section.settings.description != blank %}
-            <div class="ca-image-cards__description rte {{ section.settings.body_preset }}">{{ section.settings.description }}</div>
+            <div class="ca-image-cards__description rte {{ section.settings.body_preset }}">
+              {{ section.settings.description }}
+            </div>
           {% endif %}
         </header>
       {% endif %}
 
       <div class="ca-image-cards__grid ca-image-cards__grid--{{ section.settings.layout_style }}{% if section.settings.mobile_layout == 'carousel' %} ca-image-cards__grid--mobile-carousel{% endif %}">
         {% for block in section.blocks %}
-          {% if block.settings.link != blank %}
-            <a
-              class="ca-image-card ca-image-card--h-{{ block.settings.horizontal_alignment }} ca-image-card--v-{{ block.settings.vertical_position }}"
-              href="{{ block.settings.link }}"
-              {{ block.shopify_attributes }}
-            >
-          {% else %}
-            <article
-              class="ca-image-card ca-image-card--h-{{ block.settings.horizontal_alignment }} ca-image-card--v-{{ block.settings.vertical_position }}"
-              {{ block.shopify_attributes }}
-            >
-          {% endif %}
-
+          <article
+            class="ca-image-card ca-image-card--h-{{ block.settings.horizontal_alignment }} ca-image-card--v-{{ block.settings.vertical_position }}"
+            {{ block.shopify_attributes }}
+          >
             <div class="ca-image-card__media">
               {% if block.settings.image != blank %}
                 {{
@@ -78,15 +70,20 @@
                 <h3 class="ca-image-card__title h3">{{ block.settings.title | escape }}</h3>
               {% endif %}
               {% if block.settings.description != blank %}
-                <div class="ca-image-card__text rte {{ section.settings.body_preset }}">{{ block.settings.description }}</div>
+                <div class="ca-image-card__text rte {{ section.settings.body_preset }}">
+                  {{ block.settings.description }}
+                </div>
               {% endif %}
             </div>
 
-          {% if block.settings.link != blank %}
-            </a>
-          {% else %}
-            </article>
-          {% endif %}
+            {% if block.settings.link != blank %}
+              <a
+                class="ca-image-card__link"
+                href="{{ block.settings.link }}"
+                aria-label="{{ block.settings.title | escape }}"
+              ></a>
+            {% endif %}
+          </article>
         {% endfor %}
       </div>
     </div>
@@ -115,11 +112,6 @@
 
   .ca-image-cards__heading {
     margin: 0 0 12px;
-    color: var(--color-foreground);
-  }
-
-  .ca-image-cards__description {
-    color: color-mix(in srgb, var(--color-foreground) 70%, transparent);
   }
 
   .ca-image-cards__description p,
@@ -141,8 +133,8 @@
     grid-column: span 4;
   }
 
-  .ca-image-cards__grid--showcase > .ca-image-card:nth-last-child(2):nth-child(4),
-  .ca-image-cards__grid--showcase > .ca-image-card:nth-last-child(1):nth-child(5) {
+  .ca-image-cards__grid--showcase > .ca-image-card:nth-child(4),
+  .ca-image-cards__grid--showcase > .ca-image-card:nth-child(5) {
     grid-column: span 6;
     aspect-ratio: 16 / 9;
   }
@@ -154,8 +146,7 @@
     overflow: hidden;
     isolation: isolate;
     color: var(--ca-image-cards-text);
-    text-decoration: none;
-    background: rgb(var(--color-foreground-rgb) / .05);
+    background: #f4f4f4;
   }
 
   .ca-image-card__media,
@@ -171,16 +162,16 @@
   .ca-image-card__placeholder {
     display: block;
     object-fit: cover;
-    transition: transform .45s cubic-bezier(.2,.7,.2,1);
+    transition: transform .4s ease;
   }
 
   .ca-image-card__overlay {
     position: absolute;
     inset: 0;
     z-index: 1;
-    background: linear-gradient(to top, rgba(0,0,0,.88) 0%, rgba(0,0,0,.42) 38%, rgba(0,0,0,.08) 72%, transparent 100%);
+    background: linear-gradient(to top, rgba(0,0,0,.88), rgba(0,0,0,.34) 42%, rgba(0,0,0,0) 78%);
     opacity: var(--ca-image-cards-overlay);
-    transition: opacity .35s ease;
+    transition: opacity .3s ease;
     pointer-events: none;
   }
 
@@ -195,18 +186,18 @@
   }
 
   .ca-image-card--h-left .ca-image-card__content {
-    text-align: left;
     align-items: flex-start;
+    text-align: left;
   }
 
   .ca-image-card--h-center .ca-image-card__content {
-    text-align: center;
     align-items: center;
+    text-align: center;
   }
 
   .ca-image-card--h-right .ca-image-card__content {
-    text-align: right;
     align-items: flex-end;
+    text-align: right;
   }
 
   .ca-image-card--v-top .ca-image-card__content {
@@ -227,18 +218,19 @@
   }
 
   .ca-image-card__text {
-    max-width: 44ch;
+    max-width: 42ch;
     color: inherit;
   }
 
-  .ca-image-card__text :is(p, ul, ol) {
-    font-size: inherit;
-    line-height: 1.5;
+  .ca-image-card__link {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
   }
 
   @media (hover: hover) {
     .ca-image-card:hover .ca-image-card__image {
-      transform: scale(1.045);
+      transform: scale(1.04);
     }
 
     .ca-image-card:hover .ca-image-card__overlay {
@@ -258,9 +250,10 @@
     }
 
     .ca-image-cards__grid--showcase > .ca-image-card,
-    .ca-image-cards__grid--showcase > .ca-image-card:nth-last-child(2):nth-child(4),
-    .ca-image-cards__grid--showcase > .ca-image-card:nth-last-child(1):nth-child(5) {
+    .ca-image-cards__grid--showcase > .ca-image-card:nth-child(4),
+    .ca-image-cards__grid--showcase > .ca-image-card:nth-child(5) {
       grid-column: auto;
+      aspect-ratio: var(--ca-image-cards-ratio);
     }
 
     .ca-image-cards__grid--mobile-carousel {
@@ -277,7 +270,7 @@
     }
 
     .ca-image-cards__grid--mobile-carousel .ca-image-card {
-      flex: 0 0 calc((100% - (var(--ca-image-cards-mobile-cols) - 1) * var(--ca-image-cards-gap)) / var(--ca-image-cards-mobile-cols));
+      flex: 0 0 86%;
       scroll-snap-align: start;
     }
   }
