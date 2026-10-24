@@ -13,7 +13,7 @@
 
 <section
   id="ContentCards-{{ section.id }}"
-  class="ca-content-cards ca-content-cards--{{ section.settings.card_style | default: 'standard' }} section section--full-width"
+  class="ca-content-cards ca-content-cards--{{ section.settings.card_style | default: 'standard' }} section section--{{ content_width }}"
   style="
     --ca-cards-background: {{ section.settings.background_color }};
     --ca-cards-text: {{ section.settings.text_color }};
@@ -27,7 +27,7 @@
   "
 >
   <div class="ca-content-cards__surface">
-    <div class="ca-content-cards__inner ca-content-cards__inner--{{ content_width }}">
+    <div class="ca-content-cards__inner">
       <div class="ca-content-cards__intro">
         {% if section.settings.eyebrow != blank %}
           <p class="ca-content-cards__eyebrow {{ section.settings.eyebrow_preset }}">{{ section.settings.eyebrow | escape }}</p>
@@ -117,28 +117,28 @@
 
 {% stylesheet %}
   .ca-content-cards {
-    background: var(--ca-cards-background);
     color: var(--ca-cards-text);
   }
 
-  .ca-content-cards__surface {
-    width: 100%;
+  .ca-content-cards::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
     background: var(--ca-cards-background);
+    pointer-events: none;
+  }
+
+  .ca-content-cards__surface {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background: transparent;
   }
 
   .ca-content-cards__inner {
     min-width: 0;
     padding-block: var(--ca-cards-padding-top) var(--ca-cards-padding-bottom);
-  }
-
-  .ca-content-cards__inner--page-width {
-    width: var(--full-page-grid-central-column-width);
-    margin-inline: auto;
-  }
-
-  .ca-content-cards__inner--full-width {
-    width: 100%;
-    padding-inline: max(var(--page-margin), 24px);
   }
 
   .ca-content-cards__intro {
@@ -310,10 +310,6 @@
   }
 
   @media screen and (max-width: 749px) {
-    .ca-content-cards__inner--full-width {
-      padding-inline: 18px;
-    }
-
     .ca-content-cards__intro {
       text-align: left;
       margin-bottom: 24px;
