@@ -161,6 +161,10 @@
         "background_color": "#ffffff",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
+        "card_style": "standard",
+        "intro_button_label": "",
+        "intro_button_link": "",
+        "intro_button_style": "button",
         "eyebrow": "CUSTOMIZATION CAPABILITIES",
         "eyebrow_preset": "h5",
         "heading": "One-Stop Custom Jewelry Development",
@@ -292,282 +296,8 @@
         "padding_bottom": 72
       }
     },
-    "why_customize": {
-      "type": "icon-with-text",
-      "blocks": {
-        "why_design": {
-          "type": "item",
-          "settings": {
-            "icon": "ruler",
-            "icon_color": "#c7a85e",
-            "title": "Design Support",
-            "description": "<p>Clarify references, structure and product details before the project moves into sampling.</p>"
-          }
-        },
-        "why_flex": {
-          "type": "item",
-          "settings": {
-            "icon": "star",
-            "icon_color": "#c7a85e",
-            "title": "Flexible Customization",
-            "description": "<p>Review materials, finishes and brand-led details around the needs of your collection.</p>"
-          }
-        },
-        "why_sample": {
-          "type": "item",
-          "settings": {
-            "icon": "clipboard",
-            "icon_color": "#c7a85e",
-            "title": "Sample Review",
-            "description": "<p>Use physical samples as a clear checkpoint before repeat production begins.</p>"
-          }
-        },
-        "why_clear": {
-          "type": "item",
-          "settings": {
-            "icon": "chat_bubble",
-            "icon_color": "#c7a85e",
-            "title": "Clear Communication",
-            "description": "<p>Keep decisions and review points visible throughout design, sampling and production.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "why_design",
-        "why_flex",
-        "why_sample",
-        "why_clear"
-      ],
-      "name": "图标文字",
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#f8f7f4",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "style_preset": "left",
-        "icon_position": "top",
-        "icon_size": 32,
-        "icon_gap": 16,
-        "column_gap": 32,
-        "eyebrow": "WHY CUSTOMIZE WITH CRAFTAURUM",
-        "eyebrow_preset": "h5",
-        "heading": "A Clearer Path from Idea to Production",
-        "heading_preset": "h2",
-        "description": "<p>Customization works best when design development, sample review and production communication are treated as one connected process.</p>",
-        "body_preset": "h5",
-        "item_title_preset": "h4",
-        "desktop_columns": "4",
-        "mobile_columns": "1",
-        "padding_top": 72,
-        "padding_bottom": 72
-      }
-    },
-    "requirements": {
-      "type": "icon-with-text",
-      "blocks": {
-        "req_sketch": {
-          "type": "item",
-          "settings": {
-            "icon": "ruler",
-            "icon_color": "#c7a85e",
-            "title": "Sketches",
-            "description": "<p>Share drawings or rough ideas if you already have a specific design direction.</p>"
-          }
-        },
-        "req_refs": {
-          "type": "item",
-          "settings": {
-            "icon": "eye",
-            "icon_color": "#c7a85e",
-            "title": "Reference Images",
-            "description": "<p>Product, style or detail references help communicate the intended look more quickly.</p>"
-          }
-        },
-        "req_size": {
-          "type": "item",
-          "settings": {
-            "icon": "ruler",
-            "icon_color": "#c7a85e",
-            "title": "Dimensions",
-            "description": "<p>Provide known measurements or size targets where they are important to the design.</p>"
-          }
-        },
-        "req_material": {
-          "type": "item",
-          "settings": {
-            "icon": "star",
-            "icon_color": "#c7a85e",
-            "title": "Preferred Materials",
-            "description": "<p>Tell us your preferred metal, stone, pearl, plating or finish direction if already decided.</p>"
-          }
-        },
-        "req_qty": {
-          "type": "item",
-          "settings": {
-            "icon": "clipboard",
-            "icon_color": "#c7a85e",
-            "title": "Target Quantity",
-            "description": "<p>An estimated quantity helps frame the project and production discussion.</p>"
-          }
-        },
-        "req_market": {
-          "type": "item",
-          "settings": {
-            "icon": "map_pin",
-            "icon_color": "#c7a85e",
-            "title": "Target Market",
-            "description": "<p>Knowing the intended market helps provide useful context for product and project decisions.</p>"
-          }
-        },
-        "req_time": {
-          "type": "item",
-          "settings": {
-            "icon": "stopwatch",
-            "icon_color": "#c7a85e",
-            "title": "Timeline",
-            "description": "<p>Share your target schedule so sampling and production planning can be discussed early.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "req_sketch",
-        "req_refs",
-        "req_size",
-        "req_material",
-        "req_qty",
-        "req_market",
-        "req_time"
-      ],
-      "name": "图标文字",
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "style_preset": "left",
-        "icon_position": "left",
-        "icon_size": 28,
-        "icon_gap": 12,
-        "column_gap": 32,
-        "eyebrow": "PROJECT INFORMATION",
-        "eyebrow_preset": "h5",
-        "heading": "What We Need From You",
-        "heading_preset": "h2",
-        "description": "<p>You do not need a complete technical package to start. The more context you can share, the easier it is to understand the project and identify the next practical step.</p>",
-        "body_preset": "h5",
-        "item_title_preset": "h4",
-        "desktop_columns": "4",
-        "mobile_columns": "1",
-        "padding_top": 64,
-        "padding_bottom": 64
-      }
-    },
-    "contact": {
-      "type": "section",
-      "blocks": {
-        "contact_heading": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Start Your Custom Jewelry Project</h2><p>Share your references, design ideas, preferred materials and project requirements with our team.</p>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "text_color": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "contact_form": {
-          "type": "contact-form",
-          "settings": {
-            "width": "custom",
-            "custom_width": 100,
-            "width_mobile": "custom",
-            "custom_width_mobile": 100,
-            "background_color": "",
-            "input_style": "default",
-            "input_background_color": "{{ settings.color_palette.background }}",
-            "input_text_color": "{{ settings.color_palette.foreground }}",
-            "input_border_color": "{{ settings.color_palette.foreground }}",
-            "border_width": 1,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "follow_section_width": true
-          },
-          "blocks": {
-            "submit-button": {
-              "type": "contact-form-submit-button",
-              "static": true,
-              "settings": {
-                "label": "Submit",
-                "style_class": "button",
-                "custom_button_background": "{{ settings.color_palette.foreground }}",
-                "custom_button_text": "{{ settings.color_palette.background }}",
-                "custom_button_border": "{{ settings.color_palette.background }}",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": []
-        }
-      },
-      "block_order": [
-        "contact_heading",
-        "contact_form"
-      ],
-      "name": "t:names.contact_form",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "background_media": "none",
-        "background_color": "#ffffff",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_color": "",
-        "border_radius": 0,
-        "padding-block-start": 56,
-        "padding-block-end": 84
-      }
-    },
     "process_cards": {
       "type": "content-cards",
-      "name": "图文卡片",
       "blocks": {
         "communication": {
           "type": "card",
@@ -638,6 +368,7 @@
         "production",
         "delivery"
       ],
+      "name": "图文卡片",
       "settings": {
         "section_width": "page-width",
         "background_color": "#ffffff",
@@ -663,6 +394,108 @@
         "padding_top": 64,
         "padding_bottom": 64
       }
+    },
+    "contact": {
+      "type": "section",
+      "blocks": {
+        "contact_heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Start Your Custom Jewelry Project</h2><p>Share your references, design ideas, preferred materials and project requirements with our team.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "contact_form": {
+          "type": "contact-form",
+          "settings": {
+            "width": "custom",
+            "custom_width": 100,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100,
+            "background_color": "",
+            "input_style": "default",
+            "input_background_color": "{{ settings.color_palette.background }}",
+            "input_text_color": "{{ settings.color_palette.foreground }}",
+            "input_border_color": "{{ settings.color_palette.foreground }}",
+            "border_width": 1,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "submit-button": {
+              "type": "contact-form-submit-button",
+              "static": true,
+              "settings": {
+                "label": "Submit",
+                "style_class": "button",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "block_order": [
+        "contact_heading",
+        "contact_form"
+      ],
+      "name": "t:names.contact_form",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#ffffff",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 56,
+        "padding-block-end": 84
+      }
     }
   },
   "order": [
@@ -672,8 +505,6 @@
     "custom_banner",
     "options",
     "process_cards",
-    "why_customize",
-    "requirements",
     "contact"
   ]
 }
