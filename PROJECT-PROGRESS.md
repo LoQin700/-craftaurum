@@ -394,3 +394,17 @@
   - image softly scales on hover
 - Removed previous Customization Options / What We Need From You presentation blocks from the page flow to reduce copy density.
 - Strict schema validation PASS across slideshow nested blocks, image cards, alternating image-text blocks, and process cards.
+
+## 2026-10-24 · Customization code-error correction
+- Reworked the newly added `sections/image-cards.liquid` after identifying parser-risky conditional opening/closing tags.
+- Image cards now use one fixed `<article>` structure with an optional absolute-position link layer; no conditional tag switching.
+- Simplified Customization Hero Slideshow to mirror Horizon's own slideshow preset structure more closely:
+  - one `_slide`
+  - nested `text` / `text` / `button`
+  - removed nonessential nested settings from the prior version.
+- Current schema/template cross-check PASS for:
+  - slideshow section settings
+  - _slide nested settings
+  - text/button child blocks
+  - image-cards section settings and blocks
+- This correction is specifically to remove code/parser issues before further visual tuning.
