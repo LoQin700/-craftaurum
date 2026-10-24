@@ -69,11 +69,11 @@
             "content_direction": "column",
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 12,
-            "background_color": "#111313",
+            "gap": 14,
+            "background_color": "#17191A",
             "toggle_overlay": true,
-            "overlay_color": "#00000066",
-            "overlay_style": "solid",
+            "overlay_color": "#00000070",
+            "overlay_style": "gradient",
             "gradient_direction": "to top",
             "padding-inline-start": 48,
             "padding-inline-end": 48,
@@ -90,7 +90,8 @@
                 "alignment": "left",
                 "type_preset": "h1",
                 "text_color": "#FFFFFF"
-              }
+              },
+              "blocks": {}
             },
             "text": {
               "type": "text",
@@ -102,15 +103,25 @@
                 "type_preset": "h5",
                 "text_color": "#F8F7F4",
                 "padding-block-end": 20
-              }
+              },
+              "blocks": {}
             },
             "button": {
               "type": "button",
               "settings": {
                 "label": "Start a project",
-                "link": "",
-                "style_class": "button"
-              }
+                "link": "shopify://pages/contact",
+                "open_in_new_tab": false,
+                "style_class": "button-custom",
+                "custom_button_background": "#C7A85E",
+                "custom_button_text": "#17191A",
+                "custom_button_border": "#C7A85E",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -128,7 +139,7 @@
         "section_width": "full-width",
         "slide_height": "large",
         "content_position": "on-media",
-        "background_color": "#111313",
+        "background_color": "#17191A",
         "icons_style": "none",
         "icons_shape": "none",
         "slideshow_controls_style": "none",
@@ -201,12 +212,12 @@
       ],
       "settings": {
         "section_width": "page-width",
-        "background_color": "#FFFFFF",
+        "background_color": "#F8F7F4",
         "text_color": "#FFFFFF",
         "accent_color": "#C7A85E",
         "heading": "Custom Jewelry Capabilities",
         "heading_preset": "h2",
-        "description": "<p>From surface finishing and digital development to stone setting and material-led collections.</p>",
+        "description": "<p>Focused development capabilities for custom collections, from digital refinement to finishing and production.</p>",
         "body_preset": "h5",
         "layout_style": "showcase",
         "desktop_columns": 3,
@@ -241,7 +252,7 @@
         "body_preset": "h5",
         "image_position": "left",
         "image_ratio": "landscape",
-        "cta_label": "Custom Jewelry",
+        "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button",
         "padding_top": 52,
@@ -253,7 +264,7 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#FFFFFF",
+        "background_color": "#F8F7F4",
         "text_color": "#17191A",
         "accent_color": "#C7A85E",
         "heading": "Polishing Jewelry",
@@ -268,7 +279,7 @@
         "body_preset": "h5",
         "image_position": "right",
         "image_ratio": "landscape",
-        "cta_label": "Get A Quote",
+        "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button",
         "padding_top": 52,
@@ -295,7 +306,7 @@
         "body_preset": "h5",
         "image_position": "left",
         "image_ratio": "landscape",
-        "cta_label": "Start Your Project",
+        "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button",
         "padding_top": 52,
@@ -381,14 +392,14 @@
         "text_color": "#17191A",
         "accent_color": "#C7A85E",
         "card_style": "process",
-        "intro_button_label": "Get A Quote",
+        "intro_button_label": "",
         "intro_button_link": "",
         "intro_button_style": "button",
         "eyebrow": "",
         "eyebrow_preset": "h5",
         "heading": "High End Jewelry Manufacturing Process",
         "heading_preset": "h2",
-        "description": "<p>A clear six-step path from first discussion to finished production.</p>",
+        "description": "<p>Six clear stages from first discussion to finished production.</p>",
         "body_preset": "h5",
         "card_title_preset": "h3",
         "desktop_layout": "grid",
@@ -396,7 +407,7 @@
         "mobile_layout": "carousel",
         "mobile_columns": "1",
         "image_ratio": "landscape",
-        "gap": 28,
+        "gap": 24,
         "padding_top": 76,
         "padding_bottom": 76
       }
