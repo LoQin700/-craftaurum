@@ -370,3 +370,27 @@
 - Customization process cards: Communication, Design, 3D Rendering, Sampling, Production, Delivery.
 - Removed old `process_1`–`process_6` sections from `page.customization.json` to avoid duplicated workflow content.
 - Validation PASS: new process settings are schema-valid, 6 cards present, PC 3 columns, mobile carousel, old alternating process instances removed.
+
+## 2026-10-24 · Customization page full visual rebuild
+- Rebuilt `page.customization.json` around the approved Sunrise-inspired structure:
+  1. Horizon native Slideshow hero (full-width, dark editorial treatment)
+  2. New reusable `图片卡片` section for capability showcase
+  3. Three alternating `图文介绍` sections for Casting / Polishing / Private Label
+  4. Existing 6-step Process cards
+  5. Native Contact Form
+- Added `sections/image-cards.liquid`:
+  - image + title + body + optional link
+  - no eyebrow / no button
+  - per-card horizontal alignment: left / center / right
+  - per-card vertical position: top / center / bottom
+  - gradient overlay, hover overlay increase, hover image zoom
+  - desktop equal-grid or showcase 3+2 layout
+  - showcase 5-card mode uses first row 3 cards and second row 2 wider 16:9 cards
+  - mobile 1–2 columns, grid or carousel
+- Process card visual changed from thick gray outer border to subtle inner outline:
+  - no heavy outer frame
+  - inset 1px warm-gold outline
+  - hover outline becomes accent gold and tightens
+  - image softly scales on hover
+- Removed previous Customization Options / What We Need From You presentation blocks from the page flow to reduce copy density.
+- Strict schema validation PASS across slideshow nested blocks, image cards, alternating image-text blocks, and process cards.
