@@ -1,0 +1,656 @@
+{% liquid
+  assign ratio = '4 / 3'
+  if section.settings.image_ratio == 'wide'
+    assign ratio = '16 / 9'
+  elsif section.settings.image_ratio == 'square'
+    assign ratio = '1 / 1'
+  elsif section.settings.image_ratio == 'portrait'
+    assign ratio = '4 / 5'
+  endif
+%}
+
+<section
+  id="ImageCards-{{ section.id }}"
+  class="ca-image-cards section section--{{ section.settings.section_width }}"
+  style="
+    --ca-image-cards-bg: {{ section.settings.background_color }};
+    --ca-image-cards-text: {{ section.settings.text_color }};
+    --ca-image-cards-accent: {{ section.settings.accent_color }};
+    --ca-image-cards-gap: {{ section.settings.gap }}px;
+    --ca-image-cards-cols: {{ section.settings.desktop_columns }};
+    --ca-image-cards-mobile-cols: {{ section.settings.mobile_columns }};
+    --ca-image-cards-ratio: {{ ratio }};
+    --ca-image-cards-overlay: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    --ca-image-cards-hover-overlay: {{ section.settings.hover_overlay_opacity | divided_by: 100.0 }};
+    --ca-image-cards-content-padding: {{ section.settings.content_padding }}px;
+    --ca-image-cards-padding-top: {{ section.settings.padding_top }}px;
+    --ca-image-cards-padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="ca-image-cards__surface">
+    <div class="ca-image-cards__inner">
+      {% if section.settings.heading != blank or section.settings.description != blank %}
+        <header class="ca-image-cards__intro">
+          {% if section.settings.heading != blank %}
+            <h2 class="ca-image-cards__heading {{ section.settings.heading_preset }}">{{ section.settings.heading | escape }}</h2>
+          {% endif %}
+          {% if section.settings.description != blank %}
+            <div class="ca-image-cards__description rte {{ section.settings.body_preset }}">{{ section.settings.description }}</div>
+          {% endif %}
+        </header>
+      {% endif %}
+
+      <div class="ca-image-cards__grid ca-image-cards__grid--{{ section.settings.layout_style }}{% if section.settings.mobile_layout == 'carousel' %} ca-image-cards__grid--mobile-carousel{% endif %}">
+        {% for block in section.blocks %}
+          {% if block.settings.link != blank %}
+            <a
+              class="ca-image-card ca-image-card--h-{{ block.settings.horizontal_alignment }} ca-image-card--v-{{ block.settings.vertical_position }}"
+              href="{{ block.settings.link }}"
+              {{ block.shopify_attributes }}
+            >
+          {% else %}
+            <article
+              class="ca-image-card ca-image-card--h-{{ block.settings.horizontal_alignment }} ca-image-card--v-{{ block.settings.vertical_position }}"
+              {{ block.shopify_attributes }}
+            >
+          {% endif %}
+
+            <div class="ca-image-card__media">
+              {% if block.settings.image != blank %}
+                {{
+                  block.settings.image
+                  | image_url: width: 1800
+                  | image_tag:
+                    loading: 'lazy',
+                    class: 'ca-image-card__image',
+                    widths: '360,520,720,960,1200,1600,1800',
+                    sizes: '(min-width: 990px) 33vw, 88vw'
+                }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'ca-image-card__placeholder' }}
+              {% endif %}
+            </div>
+
+            <span class="ca-image-card__overlay" aria-hidden="true"></span>
+
+            <div class="ca-image-card__content">
+              {% if block.settings.title != blank %}
+                <h3 class="ca-image-card__title h3">{{ block.settings.title | escape }}</h3>
+              {% endif %}
+              {% if block.settings.description != blank %}
+                <div class="ca-image-card__text rte {{ section.settings.body_preset }}">{{ block.settings.description }}</div>
+              {% endif %}
+            </div>
+
+          {% if block.settings.link != blank %}
+            </a>
+          {% else %}
+            </article>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .ca-image-cards {
+    background: var(--ca-image-cards-bg);
+  }
+
+  .ca-image-cards__surface {
+    width: 100%;
+    background: var(--ca-image-cards-bg);
+  }
+
+  .ca-image-cards__inner {
+    padding-block: var(--ca-image-cards-padding-top) var(--ca-image-cards-padding-bottom);
+  }
+
+  .ca-image-cards__intro {
+    max-width: 860px;
+    margin: 0 auto 36px;
+    text-align: center;
+  }
+
+  .ca-image-cards__heading {
+    margin: 0 0 12px;
+    color: var(--color-foreground);
+  }
+
+  .ca-image-cards__description {
+    color: color-mix(in srgb, var(--color-foreground) 70%, transparent);
+  }
+
+  .ca-image-cards__description p,
+  .ca-image-card__text p {
+    margin: 0;
+  }
+
+  .ca-image-cards__grid {
+    display: grid;
+    grid-template-columns: repeat(var(--ca-image-cards-cols), minmax(0, 1fr));
+    gap: var(--ca-image-cards-gap);
+  }
+
+  .ca-image-cards__grid--showcase {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .ca-image-cards__grid--showcase > .ca-image-card {
+    grid-column: span 4;
+  }
+
+  .ca-image-cards__grid--showcase > .ca-image-card:nth-last-child(2):nth-child(4),
+  .ca-image-cards__grid--showcase > .ca-image-card:nth-last-child(1):nth-child(5) {
+    grid-column: span 6;
+  }
+
+  .ca-image-card {
+    position: relative;
+    min-width: 0;
+    aspect-ratio: var(--ca-image-cards-ratio);
+    overflow: hidden;
+    isolation: isolate;
+    color: var(--ca-image-cards-text);
+    text-decoration: none;
+    background: rgb(var(--color-foreground-rgb) / .05);
+  }
+
+  .ca-image-card__media,
+  .ca-image-card__image,
+  .ca-image-card__placeholder {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ca-image-card__image,
+  .ca-image-card__placeholder {
+    display: block;
+    object-fit: cover;
+    transition: transform .45s cubic-bezier(.2,.7,.2,1);
+  }
+
+  .ca-image-card__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(0,0,0,.88) 0%, rgba(0,0,0,.42) 38%, rgba(0,0,0,.08) 72%, transparent 100%);
+    opacity: var(--ca-image-cards-overlay);
+    transition: opacity .35s ease;
+    pointer-events: none;
+  }
+
+  .ca-image-card__content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: var(--ca-image-cards-content-padding);
+    pointer-events: none;
+  }
+
+  .ca-image-card--h-left .ca-image-card__content {
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .ca-image-card--h-center .ca-image-card__content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .ca-image-card--h-right .ca-image-card__content {
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  .ca-image-card--v-top .ca-image-card__content {
+    justify-content: flex-start;
+  }
+
+  .ca-image-card--v-center .ca-image-card__content {
+    justify-content: center;
+  }
+
+  .ca-image-card--v-bottom .ca-image-card__content {
+    justify-content: flex-end;
+  }
+
+  .ca-image-card__title {
+    margin: 0 0 8px;
+    color: inherit;
+  }
+
+  .ca-image-card__text {
+    max-width: 44ch;
+    color: inherit;
+  }
+
+  .ca-image-card__text :is(p, ul, ol) {
+    font-size: inherit;
+    line-height: 1.5;
+  }
+
+  @media (hover: hover) {
+    .ca-image-card:hover .ca-image-card__image {
+      transform: scale(1.045);
+    }
+
+    .ca-image-card:hover .ca-image-card__overlay {
+      opacity: var(--ca-image-cards-hover-overlay);
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ca-image-cards__intro {
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    .ca-image-cards__grid,
+    .ca-image-cards__grid--showcase {
+      grid-template-columns: repeat(var(--ca-image-cards-mobile-cols), minmax(0, 1fr));
+    }
+
+    .ca-image-cards__grid--showcase > .ca-image-card,
+    .ca-image-cards__grid--showcase > .ca-image-card:nth-last-child(2):nth-child(4),
+    .ca-image-cards__grid--showcase > .ca-image-card:nth-last-child(1):nth-child(5) {
+      grid-column: auto;
+    }
+
+    .ca-image-cards__grid--mobile-carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: var(--ca-image-cards-gap);
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .ca-image-cards__grid--mobile-carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .ca-image-cards__grid--mobile-carousel .ca-image-card {
+      flex: 0 0 calc((100% - (var(--ca-image-cards-mobile-cols) - 1) * var(--ca-image-cards-gap)) / var(--ca-image-cards-mobile-cols));
+      scroll-snap-align: start;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ca-image-card__image,
+    .ca-image-card__overlay {
+      transition: none;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "图片卡片",
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "内容宽度",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "页面宽度"
+        },
+        {
+          "value": "full-width",
+          "label": "全宽"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文字颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "重点颜色",
+      "default": "#C7A85E"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "标题",
+      "default": "One-Stop Custom Jewelry Development"
+    },
+    {
+      "type": "select",
+      "id": "heading_preset",
+      "label": "标题字号",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "正文",
+      "default": "<p>Explore the development capabilities behind a custom jewelry collection.</p>"
+    },
+    {
+      "type": "select",
+      "id": "body_preset",
+      "label": "正文字号",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        },
+        {
+          "value": "h4",
+          "label": "H4"
+        },
+        {
+          "value": "h5",
+          "label": "H5"
+        },
+        {
+          "value": "h6",
+          "label": "H6"
+        }
+      ],
+      "default": "h5"
+    },
+    {
+      "type": "select",
+      "id": "layout_style",
+      "label": "电脑端排列",
+      "options": [
+        {
+          "value": "uniform",
+          "label": "等宽网格"
+        },
+        {
+          "value": "showcase",
+          "label": "展示型 3+2"
+        }
+      ],
+      "default": "showcase"
+    },
+    {
+      "type": "range",
+      "id": "desktop_columns",
+      "label": "电脑端每行数量",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "select",
+      "id": "mobile_columns",
+      "label": "手机端每行数量",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 列"
+        },
+        {
+          "value": "2",
+          "label": "2 列"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "手机端展示方式",
+      "options": [
+        {
+          "value": "grid",
+          "label": "网格"
+        },
+        {
+          "value": "carousel",
+          "label": "轮播"
+        }
+      ],
+      "default": "carousel"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "图片比例",
+      "options": [
+        {
+          "value": "landscape",
+          "label": "4:3"
+        },
+        {
+          "value": "wide",
+          "label": "16:9"
+        },
+        {
+          "value": "square",
+          "label": "1:1"
+        },
+        {
+          "value": "portrait",
+          "label": "4:5"
+        }
+      ],
+      "default": "landscape"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "卡片间距",
+      "min": 0,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "蒙层透明度",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "hover_overlay_opacity",
+      "label": "Hover 蒙层透明度",
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "unit": "%",
+      "default": 55
+    },
+    {
+      "type": "range",
+      "id": "content_padding",
+      "label": "文字内边距",
+      "min": 12,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "上边距",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "下边距",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 72
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "图片卡片",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "图片"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "图片链接"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "标题",
+          "default": "Plated Jewelry"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "正文",
+          "default": "<p>Plating and surface finishing developed around your collection direction.</p>"
+        },
+        {
+          "type": "select",
+          "id": "horizontal_alignment",
+          "label": "文字水平对齐",
+          "options": [
+            {
+              "value": "left",
+              "label": "左"
+            },
+            {
+              "value": "center",
+              "label": "中"
+            },
+            {
+              "value": "right",
+              "label": "右"
+            }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "select",
+          "id": "vertical_position",
+          "label": "文字垂直位置",
+          "options": [
+            {
+              "value": "top",
+              "label": "上"
+            },
+            {
+              "value": "center",
+              "label": "中"
+            },
+            {
+              "value": "bottom",
+              "label": "下"
+            }
+          ],
+          "default": "bottom"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "图片卡片",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "title": "Plated Jewelry"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "3D Render"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "Stone Setting & Making"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "Custom Sterling Silver Jewelry"
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "title": "Custom Gold Jewelry"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
