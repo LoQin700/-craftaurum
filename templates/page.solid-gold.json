@@ -263,57 +263,6 @@
         "padding_bottom": 64
       }
     },
-    "material_compare": {
-      "type": "gold-material-comparison",
-      "name": "黄金材质对比",
-      "blocks": {
-        "solid": {
-          "type": "material",
-          "settings": {
-            "kicker": "FINE JEWELRY",
-            "title": "Solid Gold Jewelry",
-            "description": "<ul><li><strong>Gold composition:</strong> Gold is alloyed with other metals to improve strength and durability. Common jewelry purities include 10K, 14K, 18K, 20K and 22K.</li><li><strong>Process:</strong> Melting and alloying, molding and casting, shaping, soldering, polishing and stone setting.</li><li><strong>Durability:</strong> Designed for long-term wear; higher-karat gold contains more gold but is generally softer.</li></ul>"
-          }
-        },
-        "vermeil": {
-          "type": "material",
-          "settings": {
-            "kicker": "STERLING SILVER BASE",
-            "title": "Gold Vermeil Jewelry",
-            "description": "<ul><li><strong>Process:</strong> Gold plating applied specifically over sterling silver.</li><li><strong>Gold thickness:</strong> Typically thicker than standard gold plating.</li><li><strong>Durability:</strong> Offers a balance between a premium gold appearance, sterling silver construction and accessible pricing.</li></ul>"
-          }
-        },
-        "plated": {
-          "type": "material",
-          "settings": {
-            "kicker": "FASHION JEWELRY",
-            "title": "Gold Plated Jewelry",
-            "description": "<ul><li><strong>Process:</strong> A thin gold layer is plated over another base metal such as brass or silver.</li><li><strong>Gold thickness:</strong> Generally thinner than vermeil.</li><li><strong>Durability:</strong> More dependent on plating specification, wear frequency and care.</li></ul>"
-          }
-        }
-      },
-      "block_order": [
-        "solid",
-        "vermeil",
-        "plated"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "accent_color": "#C7A85E",
-        "line_color": "#D8D5CE",
-        "eyebrow": "",
-        "eyebrow_preset": "h5",
-        "heading": "Solid Gold VS Gold Vermeil VS Gold Plated Jewelry",
-        "heading_preset": "h2",
-        "description": "",
-        "body_preset": "h5",
-        "item_title_preset": "h3",
-        "column_gap": 48,
-        "padding_top": 76,
-        "padding_bottom": 76
-      }
-    },
     "gold_colors": {
       "type": "section",
       "name": "黄金颜色",
@@ -645,78 +594,6 @@
         "padding-block-end": 72
       }
     },
-    "karat_guide": {
-      "type": "gold-karat-guide",
-      "name": "黄金K数指南",
-      "blocks": {
-        "k10": {
-          "type": "karat",
-          "settings": {
-            "title": "10K Gold Jewelry",
-            "gold_content": "41.7% GOLD",
-            "description": "<p>The lowest gold content in this guide and generally the hardest option. It is suitable for frequent wear and projects where durability and a more accessible material cost are priorities.</p>"
-          }
-        },
-        "k14": {
-          "type": "karat",
-          "settings": {
-            "title": "14K Gold Jewelry",
-            "gold_content": "58.5% GOLD",
-            "description": "<p>A widely used balance of gold content, durability and everyday wearability. It is a practical choice for rings, earrings, necklaces and other daily-wear fine jewelry.</p>"
-          }
-        },
-        "k18": {
-          "type": "karat",
-          "settings": {
-            "title": "18K Gold Jewelry",
-            "gold_content": "75% GOLD",
-            "description": "<p>A common premium fine-jewelry standard with richer gold color and higher gold content while retaining enough alloy strength for many jewelry applications.</p>"
-          }
-        },
-        "k20": {
-          "type": "karat",
-          "settings": {
-            "title": "20K Gold Jewelry",
-            "gold_content": "83.3% GOLD",
-            "description": "<p>A higher-purity option positioned between 18K and 24K. It offers a deeper gold character while requiring more consideration around softness and construction.</p>"
-          }
-        },
-        "k24": {
-          "type": "karat",
-          "settings": {
-            "title": "24K Gold Jewelry",
-            "gold_content": "99.9% GOLD",
-            "description": "<p>Nearly pure gold with the richest natural gold color and highest gold content. It is also the softest option and requires suitable product design and wear expectations.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "k10",
-        "k14",
-        "k18",
-        "k20",
-        "k24"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#F8F7F4",
-        "accent_color": "#C7A85E",
-        "line_color": "#D8D5CE",
-        "eyebrow": "GOLD KARAT GUIDE",
-        "eyebrow_preset": "h5",
-        "heading": "10K, 14K, 18K, 20K & 24K Gold Jewelry",
-        "heading_preset": "h2",
-        "description": "<p>Different karat levels change gold content, color, hardness and how a piece is positioned in the market.</p>",
-        "body_preset": "h5",
-        "item_title_preset": "h3",
-        "aside_heading": "Understanding Gold Karat",
-        "aside_title_preset": "h3",
-        "aside_body": "<p>Karat refers to the proportion of pure gold within a gold alloy. Higher karat means greater gold content, while lower karat generally offers greater hardness and durability.</p><p>The right choice depends on product design, target price, expected wear and market positioning.</p>",
-        "column_gap": 64,
-        "padding_top": 76,
-        "padding_bottom": 76
-      }
-    },
     "jewelry_types": {
       "type": "image-collection-grid",
       "name": "分类图片展示",
@@ -898,6 +775,190 @@
         "padding-block-start": 72,
         "padding-block-end": 88
       }
+    },
+    "comparison_table": {
+      "type": "comparison-table",
+      "name": "对比表格",
+      "blocks": {
+        "base_material": {
+          "type": "row",
+          "settings": {
+            "label": "Base Material",
+            "value_1": "<p>Gold alloy throughout the piece</p>",
+            "value_2": "<p>925 Sterling Silver</p>",
+            "value_3": "<p>Brass, silver or another compatible base metal</p>"
+          }
+        },
+        "gold_structure": {
+          "type": "row",
+          "settings": {
+            "label": "Gold Structure",
+            "value_1": "<p>Gold alloy throughout</p>",
+            "value_2": "<p>Gold layer over sterling silver</p>",
+            "value_3": "<p>Gold layer over base metal</p>"
+          }
+        },
+        "gold_thickness": {
+          "type": "row",
+          "settings": {
+            "label": "Gold Thickness",
+            "value_1": "<p>Not applicable</p>",
+            "value_2": "<p>Thicker plating specification</p>",
+            "value_3": "<p>Standard or thinner plating specification</p>"
+          }
+        },
+        "durability": {
+          "type": "row",
+          "settings": {
+            "label": "Durability",
+            "value_1": "<p><strong>Highest</strong><br>Suitable for long-term fine jewelry wear</p>",
+            "value_2": "<p><strong>Medium–High</strong><br>Depends on plating specification and care</p>",
+            "value_3": "<p><strong>Medium</strong><br>More sensitive to wear, moisture and plating loss</p>"
+          }
+        },
+        "positioning": {
+          "type": "row",
+          "settings": {
+            "label": "Positioning",
+            "value_1": "<p>Fine jewelry / premium collection</p>",
+            "value_2": "<p>Premium accessible jewelry</p>",
+            "value_3": "<p>Fashion jewelry / trend-led collections</p>"
+          }
+        },
+        "best_for": {
+          "type": "row",
+          "settings": {
+            "label": "Best For",
+            "value_1": "<p>High-value signature pieces and long-term collections</p>",
+            "value_2": "<p>Premium silver collections with a gold finish</p>",
+            "value_3": "<p>Higher-volume or fashion-led product launches</p>"
+          }
+        }
+      },
+      "block_order": [
+        "base_material",
+        "gold_structure",
+        "gold_thickness",
+        "durability",
+        "positioning",
+        "best_for"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "accent_color": "#C7A85E",
+        "line_color": "#D8D5CE",
+        "label_background": "#F8F7F4",
+        "eyebrow": "",
+        "eyebrow_preset": "h5",
+        "heading": "Solid Gold VS Gold Vermeil VS Gold Plated Jewelry",
+        "heading_preset": "h2",
+        "description": "",
+        "body_preset": "h5",
+        "column_count": "3",
+        "comparison_label": "Comparison",
+        "column_title_preset": "h4",
+        "column_1_kicker": "FINE JEWELRY",
+        "column_1_title": "Solid Gold Jewelry",
+        "column_2_kicker": "STERLING SILVER BASE",
+        "column_2_title": "Gold Vermeil Jewelry",
+        "column_3_kicker": "FASHION JEWELRY",
+        "column_3_title": "Gold Plated Jewelry",
+        "padding_top": 76,
+        "padding_bottom": 76
+      }
+    },
+    "indexed_guide": {
+      "type": "indexed-content-guide",
+      "name": "索引内容指南",
+      "blocks": {
+        "k10": {
+          "type": "item",
+          "settings": {
+            "index_label": "10K Gold",
+            "value": "41.7%",
+            "heading": "10K Gold Jewelry",
+            "description": "<p>With the lowest gold content in this guide, 10K offers greater hardness and durability. It is well suited to frequent wear and more cost-conscious fine-jewelry programs.</p>",
+            "meta_label": "Best For",
+            "meta_value": "Everyday Wear"
+          }
+        },
+        "k14": {
+          "type": "item",
+          "settings": {
+            "index_label": "14K Gold",
+            "value": "58.5%",
+            "heading": "14K Gold Jewelry",
+            "description": "<p>A popular middle ground that balances recognizable gold value with practical durability, making it versatile across rings, earrings and necklaces.</p>",
+            "meta_label": "Best For",
+            "meta_value": "Daily Fine Jewelry"
+          }
+        },
+        "k18": {
+          "type": "item",
+          "settings": {
+            "index_label": "18K Gold",
+            "value": "75%",
+            "heading": "18K Gold Jewelry",
+            "description": "<p>A premium fine-jewelry standard with richer gold color and higher gold content while retaining practical alloy strength for many jewelry applications.</p>",
+            "meta_label": "Best For",
+            "meta_value": "Premium Collections"
+          }
+        },
+        "k20": {
+          "type": "item",
+          "settings": {
+            "index_label": "20K Gold",
+            "value": "83.3%",
+            "heading": "20K Gold Jewelry",
+            "description": "<p>A higher-purity option with deeper gold character, positioned between 18K and 24K while requiring more consideration around softness and construction.</p>",
+            "meta_label": "Best For",
+            "meta_value": "High-Purity Pieces"
+          }
+        },
+        "k24": {
+          "type": "item",
+          "settings": {
+            "index_label": "24K Gold",
+            "value": "99.9%",
+            "heading": "24K Gold Jewelry",
+            "description": "<p>Nearly pure gold with the richest natural gold color and highest gold content, but also the greatest softness and malleability.</p>",
+            "meta_label": "Best For",
+            "meta_value": "Pure Gold Positioning"
+          }
+        }
+      },
+      "block_order": [
+        "k10",
+        "k14",
+        "k18",
+        "k20",
+        "k24"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "accent_color": "#C7A85E",
+        "line_color": "#D8D5CE",
+        "eyebrow": "GOLD KARAT GUIDE",
+        "eyebrow_preset": "h5",
+        "heading": "Gold Karat Guide",
+        "heading_preset": "h2",
+        "description": "<p>Compare common karat levels by gold content, durability and how each option is positioned for jewelry development.</p>",
+        "body_preset": "h5",
+        "item_title_preset": "h3",
+        "item_image_shape": "square",
+        "item_image_size": 88,
+        "index_aria_label": "Gold karat guide navigation",
+        "value_suffix": "GOLD",
+        "feature_image_position": "left",
+        "feature_heading": "What Does Karat Mean?",
+        "feature_title_preset": "h3",
+        "feature_body": "<p>Karat refers to the proportion of pure gold within an alloy. The right choice is not simply “higher is better”; it depends on design, wear expectations, target price and market positioning.</p>",
+        "column_gap": 56,
+        "padding_top": 76,
+        "padding_bottom": 76
+      }
     }
   },
   "order": [
@@ -907,9 +968,9 @@
     "custom_gold",
     "gold_vermeil",
     "low_moq_gold",
-    "material_compare",
+    "comparison_table",
     "gold_colors",
-    "karat_guide",
+    "indexed_guide",
     "jewelry_types",
     "contact"
   ]
