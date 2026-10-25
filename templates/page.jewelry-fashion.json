@@ -80,7 +80,8 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "hero_image": "shopify://shop_images/custom-fashion-jewelry.jpg"
       }
     },
     "horizontal_cta_Pwad7F": {
@@ -117,7 +118,8 @@
             "description": "<p>Develop fashion, statement and refined ring concepts with different metals, stones and finishing directions.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/rings.jpg"
           }
         },
         "card_WtWhNM": {
@@ -127,7 +129,8 @@
             "description": "<p>Build hoop, stud, pearl and fashion earring collections around your target market and brand language.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/gold-earrings.jpg"
           }
         },
         "card_CfDadY": {
@@ -137,7 +140,8 @@
             "description": "<p>Explore chain, bead, bangle and statement bracelet directions for coordinated collections.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/chain-bracelets.jpg"
           }
         },
         "card_PcNzcH": {
@@ -147,7 +151,8 @@
             "description": "<p>Create pendant, pearl, choker and fashion necklace styles with flexible branding and finishing options.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/nameplate-necklace.jpg"
           }
         }
       },
@@ -187,28 +192,32 @@
           "type": "item",
           "settings": {
             "title": "Collection Planning",
-            "description": "<p>Organize category direction, references and intended market positioning before development begins.</p>"
+            "description": "<p>Organize category direction, references and intended market positioning before development begins.</p>",
+            "image": "shopify://shop_images/custom-design-jewelry.jpg"
           }
         },
         "item_9zbQMA": {
           "type": "item",
           "settings": {
             "title": "Material & Finish Options",
-            "description": "<p>Review suitable metals, stones, plating directions and surface finishes across the collection.</p>"
+            "description": "<p>Review suitable metals, stones, plating directions and surface finishes across the collection.</p>",
+            "image": "shopify://shop_images/plated-jewelry-2.jpg"
           }
         },
         "item_EFeVgi": {
           "type": "item",
           "settings": {
             "title": "Brand Customization",
-            "description": "<p>Translate logo, color, texture and design references into product details that support your brand identity.</p>"
+            "description": "<p>Translate logo, color, texture and design references into product details that support your brand identity.</p>",
+            "image": "shopify://shop_images/custom-letters-jewelry.jpg"
           }
         },
         "item_XTCWJt": {
           "type": "item",
           "settings": {
             "title": "Collection Consistency",
-            "description": "<p>Review samples and specifications across categories so the finished range feels cohesive.</p>"
+            "description": "<p>Review samples and specifications across categories so the finished range feels cohesive.</p>",
+            "image": "shopify://shop_images/checking.jpg"
           }
         }
       },
@@ -256,7 +265,8 @@
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 32,
-        "padding_bottom": 32
+        "padding_bottom": 32,
+        "image": "shopify://shop_images/OEM-JEWELLERY.jpg"
       }
     },
     "icon_with_text_support": {

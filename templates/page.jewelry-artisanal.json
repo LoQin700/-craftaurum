@@ -80,7 +80,8 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "hero_image": "shopify://shop_images/French-jewelry-700x441.jpg"
       }
     },
     "horizontal_cta_Pwad7F": {
@@ -117,7 +118,8 @@
             "description": "<p>Develop oversized pendant concepts with distinctive proportions, surfaces and handcrafted details.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/S1028-N.jpg"
           }
         },
         "card_WtWhNM": {
@@ -127,7 +129,8 @@
             "description": "<p>Create brooch designs around brand motifs, decorative forms and flexible metal or finish choices.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/Christmas-brooch.jpg"
           }
         },
         "card_CfDadY": {
@@ -137,7 +140,8 @@
             "description": "<p>Explore custom waist-chain concepts with attention to proportion, movement and distinctive visual details.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/pearls-necklace.jpg"
           }
         },
         "card_PcNzcH": {
@@ -147,7 +151,8 @@
             "description": "<p>Develop jewelry-led gift pieces that reflect a brand, event or partnership through custom design details.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/custom-pearl-jewelry-set.jpg"
           }
         }
       },
@@ -187,28 +192,32 @@
           "type": "item",
           "settings": {
             "title": "Creative Direction",
-            "description": "<p>Translate visual references and brand ideas into more distinctive jewelry or accessory forms.</p>"
+            "description": "<p>Translate visual references and brand ideas into more distinctive jewelry or accessory forms.</p>",
+            "image": "shopify://shop_images/custom-design-jewelry.jpg"
           }
         },
         "item_9zbQMA": {
           "type": "item",
           "settings": {
             "title": "Material Versatility",
-            "description": "<p>Review metal, stone, texture and finish options based on the intended expression of the piece.</p>"
+            "description": "<p>Review metal, stone, texture and finish options based on the intended expression of the piece.</p>",
+            "image": "shopify://shop_images/pearl-materials.jpg"
           }
         },
         "item_EFeVgi": {
           "type": "item",
           "settings": {
             "title": "Hand-Finished Details",
-            "description": "<p>Pay attention to surface treatment, assembly and detail work that influence the character of the final piece.</p>"
+            "description": "<p>Pay attention to surface treatment, assembly and detail work that influence the character of the final piece.</p>",
+            "image": "shopify://shop_images/gemstone-setting-400x400.jpg"
           }
         },
         "item_XTCWJt": {
           "type": "item",
           "settings": {
             "title": "Project-Specific Production",
-            "description": "<p>Use sampling and clear specifications to organize production around unusual forms or special project requirements.</p>"
+            "description": "<p>Use sampling and clear specifications to organize production around unusual forms or special project requirements.</p>",
+            "image": "shopify://shop_images/jewelry-manufacturer.jpg"
           }
         }
       },
@@ -256,7 +265,8 @@
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 32,
-        "padding_bottom": 32
+        "padding_bottom": 32,
+        "image": "shopify://shop_images/jewelry-manufacturer.jpg"
       }
     },
     "icon_with_text_support": {
