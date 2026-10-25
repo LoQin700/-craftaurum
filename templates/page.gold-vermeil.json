@@ -61,7 +61,6 @@
     },
     "intro_rich_text": {
       "type": "section",
-      "name": "富文本开场",
       "blocks": {
         "intro_text": {
           "type": "text",
@@ -92,6 +91,7 @@
       "block_order": [
         "intro_text"
       ],
+      "name": "富文本开场",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -123,7 +123,6 @@
     },
     "unlock_business": {
       "type": "overlap-image-text",
-      "name": "叠层图文",
       "blocks": {
         "image_1": {
           "type": "image",
@@ -152,6 +151,7 @@
         "image_1",
         "image_2"
       ],
+      "name": "叠层图文",
       "settings": {
         "section_width": "page-width",
         "background_color": "#F8F7F4",
@@ -179,7 +179,6 @@
     },
     "vermeil_types": {
       "type": "content-cards",
-      "name": "图文卡片",
       "blocks": {
         "rings": {
           "type": "card",
@@ -250,6 +249,7 @@
         "diamond_rings",
         "pendants"
       ],
+      "name": "图文卡片",
       "settings": {
         "section_width": "page-width",
         "background_color": "#FFFFFF",
@@ -278,7 +278,6 @@
     },
     "vermeil_compare": {
       "type": "comparison-table",
-      "name": "对比表格",
       "blocks": {
         "base_material": {
           "type": "row",
@@ -343,20 +342,13 @@
         "positioning",
         "best_for"
       ],
+      "name": "对比表格",
       "settings": {
         "section_width": "page-width",
-        "intro_alignment": "center",
-        "cell_padding": 20,
         "background_color": "#F8F7F4",
         "accent_color": "#C7A85E",
         "line_color": "#D8D5CE",
         "label_background": "#EFECE5",
-        "header_background": "#F3EEE3",
-        "cell_background": "#FFFFFF",
-        "alternate_row_background": "#FCFBF8",
-        "header_text_color": "#17191A",
-        "body_text_color": "#4F514E",
-        "metric_text_color": "#17191A",
         "eyebrow": "",
         "eyebrow_preset": "h5",
         "heading": "Gold Vermeil VS Gold Plated VS Solid Gold",
@@ -373,13 +365,11 @@
         "column_3_kicker": "FINE JEWELRY",
         "column_3_title": "Solid Gold",
         "padding_top": 76,
-        "padding_bottom": 76,
-        "hover_background": "#F8F2E5"
+        "padding_bottom": 76
       }
     },
     "vermeil_guide": {
       "type": "content-guide",
-      "name": "内容指南",
       "blocks": {
         "definition": {
           "type": "item",
@@ -417,11 +407,13 @@
         "base_material",
         "thickness"
       ],
+      "name": "内容指南",
       "settings": {
         "section_width": "page-width",
         "background_color": "#FFFFFF",
         "line_color": "#D8D5CE",
         "hover_background_color": "#F8F7F4",
+        "item_padding_inline": 20,
         "intro_alignment": "center",
         "eyebrow": "MATERIAL GUIDE",
         "eyebrow_size": 12,
@@ -454,13 +446,11 @@
         "feature_body_color": "#4F514E",
         "column_gap": 56,
         "padding_top": 76,
-        "padding_bottom": 76,
-        "item_padding_inline": 20
+        "padding_bottom": 76
       }
     },
     "why_choose": {
       "type": "section",
-      "name": "Why Choose Craftaurum",
       "blocks": {
         "why_heading": {
           "type": "text",
@@ -721,6 +711,7 @@
         "why_heading",
         "why_grid"
       ],
+      "name": "Why Choose Craftaurum",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,

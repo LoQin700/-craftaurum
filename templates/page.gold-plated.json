@@ -61,7 +61,6 @@
     },
     "intro_rich_text": {
       "type": "section",
-      "name": "富文本开场",
       "blocks": {
         "intro_text": {
           "type": "text",
@@ -77,7 +76,7 @@
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "text_color": "#17191A",
+            "text_color": "#17191a",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -92,6 +91,7 @@
       "block_order": [
         "intro_text"
       ],
+      "name": "富文本开场",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -105,7 +105,7 @@
         "section_height": "",
         "section_height_custom": 50,
         "background_media": "none",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "video_position": "cover",
         "background_image_position": "cover",
         "toggle_overlay": false,
@@ -121,9 +121,134 @@
         "padding-block-end": 56
       }
     },
+    "plating_colors": {
+      "type": "content-cards",
+      "blocks": {
+        "rings": {
+          "type": "card",
+          "settings": {
+            "title": "18K Gold Plated",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "earrings": {
+          "type": "card",
+          "settings": {
+            "title": "20K Gold Plated",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "necklaces": {
+          "type": "card",
+          "settings": {
+            "title": "22K Gold Plated",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "bracelets": {
+          "type": "card",
+          "settings": {
+            "title": "Rose Gold Plated",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "diamond_rings": {
+          "type": "card",
+          "settings": {
+            "title": "White Gold Plated",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "pendants": {
+          "type": "card",
+          "settings": {
+            "title": "Black Plated",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "rings",
+        "earrings",
+        "necklaces",
+        "bracelets",
+        "diamond_rings",
+        "pendants"
+      ],
+      "name": "图文卡片",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "card_style": "standard",
+        "intro_button_label": "",
+        "intro_button_link": "",
+        "intro_button_style": "button",
+        "eyebrow": "",
+        "eyebrow_preset": "h5",
+        "heading": "Custom Plating Colors",
+        "heading_preset": "h2",
+        "description": "<p>Explore common plating color directions for custom jewelry development.</p>",
+        "body_preset": "h5",
+        "card_title_preset": "h4",
+        "desktop_layout": "grid",
+        "desktop_columns": "3",
+        "mobile_layout": "carousel",
+        "mobile_columns": "1",
+        "image_ratio": "square",
+        "gap": 20,
+        "padding_top": 72,
+        "padding_bottom": 76
+      }
+    },
+    "plating_capability": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "In-house Jewelry Plating Capability",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "",
+        "top_label": "",
+        "subtitle_preset": "h5",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Plating quality depends on more than color alone. We support controlled finishing around surface preparation, plating specification, color consistency and final protection so each collection can be developed with a clear target appearance and wear expectation.</p><p>For custom programs, plating direction can be coordinated with the base material, product construction and production quantity from the beginning of development.</p>",
+        "body_preset": "h5",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "cta_label": "Start Your Project",
+        "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
     "why_choose": {
       "type": "section",
-      "name": "Why Choose Craftaurum",
       "blocks": {
         "why_heading": {
           "type": "text",
@@ -139,7 +264,7 @@
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "text_color": "#17191A",
+            "text_color": "#17191a",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -158,27 +283,70 @@
             "horizontal_alignment": "space-between",
             "vertical_alignment": "center",
             "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
             "gap": 16,
             "width": "fill",
-            "width_mobile": "fill"
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "why_1": {
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 8,
                 "width": "fill",
+                "custom_width": 100,
                 "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
                 "background_media": "none",
-                "background_color": "#FFFFFF",
+                "background_color": "#ffffff",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
                 "border": "solid",
                 "border_width": 1,
                 "border_opacity": 100,
-                "border_color": "#D8D5CE",
+                "border_color": "#d8d5ce",
                 "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
                 "padding-block-start": 22,
                 "padding-block-end": 22,
                 "padding-inline-start": 22,
@@ -199,7 +367,7 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
-                    "text_color": "#17191A",
+                    "text_color": "#17191a",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -219,18 +387,35 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 8,
                 "width": "fill",
+                "custom_width": 100,
                 "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
                 "background_media": "none",
-                "background_color": "#FFFFFF",
+                "background_color": "#ffffff",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
                 "border": "solid",
                 "border_width": 1,
                 "border_opacity": 100,
-                "border_color": "#D8D5CE",
+                "border_color": "#d8d5ce",
                 "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
                 "padding-block-start": 22,
                 "padding-block-end": 22,
                 "padding-inline-start": 22,
@@ -251,7 +436,7 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
-                    "text_color": "#17191A",
+                    "text_color": "#17191a",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -271,18 +456,35 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 8,
                 "width": "fill",
+                "custom_width": 100,
                 "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
                 "background_media": "none",
-                "background_color": "#FFFFFF",
+                "background_color": "#ffffff",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
                 "border": "solid",
                 "border_width": 1,
                 "border_opacity": 100,
-                "border_color": "#D8D5CE",
+                "border_color": "#d8d5ce",
                 "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
                 "padding-block-start": 22,
                 "padding-block-end": 22,
                 "padding-inline-start": 22,
@@ -303,7 +505,7 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
-                    "text_color": "#17191A",
+                    "text_color": "#17191a",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -323,18 +525,35 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 8,
                 "width": "fill",
+                "custom_width": 100,
                 "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
                 "background_media": "none",
-                "background_color": "#FFFFFF",
+                "background_color": "#ffffff",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
                 "border": "solid",
                 "border_width": 1,
                 "border_opacity": 100,
-                "border_color": "#D8D5CE",
+                "border_color": "#d8d5ce",
                 "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
                 "padding-block-start": 22,
                 "padding-block-end": 22,
                 "padding-inline-start": 22,
@@ -355,7 +574,7 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
-                    "text_color": "#17191A",
+                    "text_color": "#17191a",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -384,6 +603,7 @@
         "why_heading",
         "why_grid"
       ],
+      "name": "Why Choose Craftaurum",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -397,7 +617,7 @@
         "section_height": "",
         "section_height_custom": 50,
         "background_media": "none",
-        "background_color": "#F8F7F4",
+        "background_color": "#f8f7f4",
         "video_position": "cover",
         "background_image_position": "cover",
         "toggle_overlay": false,
@@ -411,6 +631,377 @@
         "border_radius": 0,
         "padding-block-start": 72,
         "padding-block-end": 76
+      }
+    },
+    "plating_durability_story": {
+      "type": "section",
+      "blocks": {
+        "story_copy": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 24,
+            "width": "custom",
+            "custom_width": 48,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 16
+          },
+          "blocks": {
+            "tarnish": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Jewelry Tarnish—How Long Can Plated Jewelry Last?</h2><p>The service life of plated jewelry depends on the base material, surface preparation, plating specification, protective finishing and everyday wear. For projects that need additional surface protection, e-coating or nano protective finishes can be considered as part of the finishing system.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "#17191a",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "contact": {
+              "type": "button",
+              "settings": {
+                "label": "Contact Factory",
+                "link": "shopify://pages/contact",
+                "open_in_new_tab": false,
+                "style_class": "button",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
+                "link_text_color": "",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            },
+            "knowing": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Knowing Gold Plated Jewelry</h2><p>Gold plated jewelry gives brands broad flexibility in color, finish, base material and price positioning. Its durability is not determined by one universal number; the plating and protective finish should be specified around the product category, target market and expected wear.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "#17191a",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "tarnish",
+            "contact",
+            "knowing"
+          ]
+        },
+        "story_image": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image_ratio": "square",
+            "width": "custom",
+            "custom_width": 52,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "story_copy",
+        "story_image"
+      ],
+      "name": "镀层耐久图文",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 42,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#ffffff",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 72,
+        "padding-block-end": 20
+      }
+    },
+    "plating_process_gallery": {
+      "type": "section",
+      "blocks": {
+        "gallery_1": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image_ratio": "landscape",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "gallery_2": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image_ratio": "landscape",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "gallery_3": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image_ratio": "landscape",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "gallery_1",
+        "gallery_2",
+        "gallery_3"
+      ],
+      "name": "图片画廊",
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#ffffff",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 72
+      }
+    },
+    "plated_compare": {
+      "type": "comparison-table",
+      "blocks": {
+        "base_material": {
+          "type": "row",
+          "settings": {
+            "label": "Base Material",
+            "value_1": "<p>Brass, silver or another compatible base metal</p>",
+            "value_2": "<p>925 Sterling Silver</p>",
+            "value_3": "<p>Gold alloy throughout the piece</p>"
+          }
+        },
+        "gold_structure": {
+          "type": "row",
+          "settings": {
+            "label": "Gold Structure",
+            "value_1": "<p>Gold layer over base metal</p>",
+            "value_2": "<p>Gold layer over sterling silver</p>",
+            "value_3": "<p>Gold throughout the piece</p>"
+          }
+        },
+        "thickness": {
+          "type": "row",
+          "settings": {
+            "label": "Gold Thickness",
+            "value_1": "<p>Customizable by project requirement</p>",
+            "value_2": "<p>Substantial gold layer over sterling silver</p>",
+            "value_3": "<p>Not applicable</p>"
+          }
+        },
+        "durability": {
+          "type": "row",
+          "settings": {
+            "label": "Durability",
+            "value_1": "<p><strong>Variable</strong><br/>Depends on plating specification, protection and wear</p>",
+            "value_2": "<p><strong>Medium–High</strong><br/>Premium plated construction with proper care</p>",
+            "value_3": "<p><strong>Highest</strong><br/>Designed for long-term fine jewelry wear</p>"
+          }
+        },
+        "positioning": {
+          "type": "row",
+          "settings": {
+            "label": "Price Position",
+            "value_1": "<p>Fashion / accessible</p>",
+            "value_2": "<p>Premium accessible</p>",
+            "value_3": "<p>Fine jewelry / premium</p>"
+          }
+        },
+        "best_for": {
+          "type": "row",
+          "settings": {
+            "label": "Best For",
+            "value_1": "<p>Trend-led, flexible and higher-volume collections</p>",
+            "value_2": "<p>Premium silver collections with a gold finish</p>",
+            "value_3": "<p>High-value signature and long-term collections</p>"
+          }
+        }
+      },
+      "block_order": [
+        "base_material",
+        "gold_structure",
+        "thickness",
+        "durability",
+        "positioning",
+        "best_for"
+      ],
+      "name": "对比表格",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "accent_color": "#c7a85e",
+        "line_color": "#d8d5ce",
+        "label_background": "#efece5",
+        "eyebrow": "",
+        "eyebrow_preset": "h5",
+        "heading": "Gold Plated VS Gold Vermeil VS Solid Gold",
+        "heading_preset": "h2",
+        "description": "<p>Compare three common material directions by construction, durability and collection positioning.</p>",
+        "body_preset": "h5",
+        "column_count": "3",
+        "comparison_label": "Comparison",
+        "column_title_preset": "h4",
+        "column_1_kicker": "FASHION / FLEXIBLE",
+        "column_1_title": "Gold Plated",
+        "column_2_kicker": "STERLING SILVER BASE",
+        "column_2_title": "Gold Vermeil",
+        "column_3_kicker": "FINE JEWELRY",
+        "column_3_title": "Solid Gold",
+        "padding_top": 76,
+        "padding_bottom": 76
       }
     },
     "contact": {
@@ -499,7 +1090,7 @@
         "section_height": "",
         "section_height_custom": 50,
         "background_media": "none",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "video_position": "cover",
         "background_image_position": "cover",
         "toggle_overlay": false,
@@ -513,512 +1104,6 @@
         "border_radius": 0,
         "padding-block-start": 72,
         "padding-block-end": 88
-      }
-    },
-    "plating_capability": {
-      "type": "image-text-feature",
-      "name": "图文介绍",
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#F8F7F4",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
-        "heading": "In-house Jewelry Plating Capability",
-        "heading_preset": "h2",
-        "heading_position": "content",
-        "subtitle": "",
-        "top_label": "",
-        "subtitle_preset": "h5",
-        "top_url": "",
-        "top_button_style": "button",
-        "body": "<p>Plating quality depends on more than color alone. We support controlled finishing around surface preparation, plating specification, color consistency and final protection so each collection can be developed with a clear target appearance and wear expectation.</p><p>For custom programs, plating direction can be coordinated with the base material, product construction and production quantity from the beginning of development.</p>",
-        "body_preset": "h5",
-        "image_position": "left",
-        "image_ratio": "landscape",
-        "cta_label": "Start Your Project",
-        "cta_url": "shopify://pages/contact",
-        "cta_button_style": "button",
-        "padding_top": 64,
-        "padding_bottom": 64
-      }
-    },
-    "plating_colors": {
-      "type": "content-cards",
-      "name": "图文卡片",
-      "blocks": {
-        "rings": {
-          "type": "card",
-          "settings": {
-            "title": "18K Gold Plated",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        },
-        "earrings": {
-          "type": "card",
-          "settings": {
-            "title": "20K Gold Plated",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        },
-        "necklaces": {
-          "type": "card",
-          "settings": {
-            "title": "22K Gold Plated",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        },
-        "bracelets": {
-          "type": "card",
-          "settings": {
-            "title": "Rose Gold Plated",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        },
-        "diamond_rings": {
-          "type": "card",
-          "settings": {
-            "title": "White Gold Plated",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        },
-        "pendants": {
-          "type": "card",
-          "settings": {
-            "title": "Black Plated",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "rings",
-        "earrings",
-        "necklaces",
-        "bracelets",
-        "diamond_rings",
-        "pendants"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
-        "card_style": "standard",
-        "intro_button_label": "",
-        "intro_button_link": "",
-        "intro_button_style": "button",
-        "eyebrow": "",
-        "eyebrow_preset": "h5",
-        "heading": "Custom Plating Colors",
-        "heading_preset": "h2",
-        "description": "<p>Explore common plating color directions for custom jewelry development.</p>",
-        "body_preset": "h5",
-        "card_title_preset": "h4",
-        "desktop_layout": "grid",
-        "desktop_columns": "3",
-        "mobile_layout": "carousel",
-        "mobile_columns": "1",
-        "image_ratio": "square",
-        "gap": 20,
-        "padding_top": 72,
-        "padding_bottom": 76
-      }
-    },
-    "plated_compare": {
-      "type": "comparison-table",
-      "name": "对比表格",
-      "blocks": {
-        "base_material": {
-          "type": "row",
-          "settings": {
-            "label": "Base Material",
-            "value_1": "<p>Brass, silver or another compatible base metal</p>",
-            "value_2": "<p>925 Sterling Silver</p>",
-            "value_3": "<p>Gold alloy throughout the piece</p>"
-          }
-        },
-        "gold_structure": {
-          "type": "row",
-          "settings": {
-            "label": "Gold Structure",
-            "value_1": "<p>Gold layer over base metal</p>",
-            "value_2": "<p>Gold layer over sterling silver</p>",
-            "value_3": "<p>Gold throughout the piece</p>"
-          }
-        },
-        "thickness": {
-          "type": "row",
-          "settings": {
-            "label": "Gold Thickness",
-            "value_1": "<p>Customizable by project requirement</p>",
-            "value_2": "<p>Substantial gold layer over sterling silver</p>",
-            "value_3": "<p>Not applicable</p>"
-          }
-        },
-        "durability": {
-          "type": "row",
-          "settings": {
-            "label": "Durability",
-            "value_1": "<p><strong>Variable</strong><br/>Depends on plating specification, protection and wear</p>",
-            "value_2": "<p><strong>Medium–High</strong><br/>Premium plated construction with proper care</p>",
-            "value_3": "<p><strong>Highest</strong><br/>Designed for long-term fine jewelry wear</p>"
-          }
-        },
-        "positioning": {
-          "type": "row",
-          "settings": {
-            "label": "Price Position",
-            "value_1": "<p>Fashion / accessible</p>",
-            "value_2": "<p>Premium accessible</p>",
-            "value_3": "<p>Fine jewelry / premium</p>"
-          }
-        },
-        "best_for": {
-          "type": "row",
-          "settings": {
-            "label": "Best For",
-            "value_1": "<p>Trend-led, flexible and higher-volume collections</p>",
-            "value_2": "<p>Premium silver collections with a gold finish</p>",
-            "value_3": "<p>High-value signature and long-term collections</p>"
-          }
-        }
-      },
-      "block_order": [
-        "base_material",
-        "gold_structure",
-        "thickness",
-        "durability",
-        "positioning",
-        "best_for"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "intro_alignment": "center",
-        "cell_padding": 20,
-        "background_color": "#F8F7F4",
-        "accent_color": "#C7A85E",
-        "line_color": "#D8D5CE",
-        "label_background": "#EFECE5",
-        "header_background": "#F3EEE3",
-        "cell_background": "#FFFFFF",
-        "alternate_row_background": "#FCFBF8",
-        "header_text_color": "#17191A",
-        "body_text_color": "#4F514E",
-        "metric_text_color": "#17191A",
-        "eyebrow": "",
-        "eyebrow_preset": "h5",
-        "heading": "Gold Plated VS Gold Vermeil VS Solid Gold",
-        "heading_preset": "h2",
-        "description": "<p>Compare three common material directions by construction, durability and collection positioning.</p>",
-        "body_preset": "h5",
-        "column_count": "3",
-        "comparison_label": "Comparison",
-        "column_title_preset": "h4",
-        "column_1_kicker": "FASHION / FLEXIBLE",
-        "column_1_title": "Gold Plated",
-        "column_2_kicker": "STERLING SILVER BASE",
-        "column_2_title": "Gold Vermeil",
-        "column_3_kicker": "FINE JEWELRY",
-        "column_3_title": "Solid Gold",
-        "padding_top": 76,
-        "padding_bottom": 76,
-        "hover_background": "#F8F2E5"
-      }
-    },
-    "plating_durability_story": {
-      "type": "section",
-      "name": "镀层耐久图文",
-      "blocks": {
-        "story_copy": {
-          "type": "group",
-          "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 24,
-            "width": "custom",
-            "custom_width": 48,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "background_media": "none",
-            "background_color": "",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_color": "",
-            "border_radius": 0,
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 16
-          },
-          "blocks": {
-            "tarnish": {
-              "type": "text",
-              "settings": {
-                "text": "<h2>Jewelry Tarnish—How Long Can Plated Jewelry Last?</h2><p>The service life of plated jewelry depends on the base material, surface preparation, plating specification, protective finishing and everyday wear. For projects that need additional surface protection, e-coating or nano protective finishes can be considered as part of the finishing system.</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "text_color": "#17191A",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "contact": {
-              "type": "button",
-              "settings": {
-                "label": "Contact Factory",
-                "link": "shopify://pages/contact",
-                "open_in_new_tab": false,
-                "style_class": "button",
-                "custom_button_background": "{{ settings.color_palette.foreground }}",
-                "custom_button_text": "{{ settings.color_palette.background }}",
-                "custom_button_border": "{{ settings.color_palette.background }}",
-                "link_text_color": "",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            },
-            "knowing": {
-              "type": "text",
-              "settings": {
-                "text": "<h2>Knowing Gold Plated Jewelry</h2><p>Gold plated jewelry gives brands broad flexibility in color, finish, base material and price positioning. Its durability is not determined by one universal number; the plating and protective finish should be specified around the product category, target market and expected wear.</p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "text_color": "#17191A",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "tarnish",
-            "contact",
-            "knowing"
-          ]
-        },
-        "story_image": {
-          "type": "image",
-          "settings": {
-            "link": "",
-            "image_ratio": "portrait",
-            "width": "custom",
-            "custom_width": 52,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_color": "",
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "story_copy",
-        "story_image"
-      ],
-      "settings": {
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "space-between",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 42,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "background_media": "none",
-        "background_color": "#FFFFFF",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_color": "",
-        "border_radius": 0,
-        "padding-block-start": 72,
-        "padding-block-end": 20
-      }
-    },
-    "plating_process_gallery": {
-      "type": "section",
-      "name": "图片画廊",
-      "blocks": {
-        "gallery_1": {
-          "type": "image",
-          "settings": {
-            "link": "",
-            "image_ratio": "landscape",
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_color": "",
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "gallery_2": {
-          "type": "image",
-          "settings": {
-            "link": "",
-            "image_ratio": "landscape",
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_color": "",
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "gallery_3": {
-          "type": "image",
-          "settings": {
-            "link": "",
-            "image_ratio": "landscape",
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_color": "",
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "gallery_1",
-        "gallery_2",
-        "gallery_3"
-      ],
-      "settings": {
-        "content_direction": "row",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "flex-start",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 12,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "background_media": "none",
-        "background_color": "#FFFFFF",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_color": "",
-        "border_radius": 0,
-        "padding-block-start": 0,
-        "padding-block-end": 72
       }
     }
   },
