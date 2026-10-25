@@ -1,0 +1,74 @@
+name: Validate Gold Vermeil Range Fix
+
+on:
+  push:
+    branches:
+      - fix/gold-vermeil-range-validation
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate layered image ranges
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json,re
+          from pathlib import Path
+
+          src=Path('sections/overlap-image-text.liquid').read_text(encoding='utf-8')
+          m=re.search(r'{% schema %}\s*(.*?)\s*{% endschema %}',src,re.S)
+          assert m, 'schema not found'
+          schema=json.loads(m.group(1))
+          tpl_text=Path('templates/page.gold-vermeil.json').read_text(encoding='utf-8')
+          tpl=json.loads(tpl_text[tpl_text.index('{'):])
+
+          problems=[]
+          def valid(setting,value,label):
+              if not isinstance(value,(int,float)): return
+              mn,mx,step=setting['min'],setting['max'],setting['step']
+              n=(value-mn)/step
+              if value<mn or value>mx or abs(n-round(n))>1e-9:
+                  problems.append((label,value,mn,mx,step))
+
+          for s in schema.get('settings',[]):
+              if s.get('type')=='range' and 'default' in s:
+                  valid(s,s['default'],f"section default {s['id']}")
+
+          bdefs={b['type']:b for b in schema.get('blocks',[])}
+          for bt,b in bdefs.items():
+              for s in b.get('settings',[]):
+                  if s.get('type')=='range' and 'default' in s:
+                      valid(s,s['default'],f"block {bt} default {s['id']}")
+
+          for pi,preset in enumerate(schema.get('presets',[])):
+              for bi,b in enumerate(preset.get('blocks',[])):
+                  defs={s['id']:s for s in bdefs[b['type']]['settings'] if s.get('type')=='range'}
+                  for k,v in b.get('settings',{}).items():
+                      if k in defs: valid(defs[k],v,f"preset {pi} block {bi} {k}")
+
+          inst=tpl['sections']['unlock_business']
+          sdefs={s['id']:s for s in schema['settings'] if s.get('type')=='range'}
+          for k,v in inst.get('settings',{}).items():
+              if k in sdefs: valid(sdefs[k],v,f"template section {k}")
+
+          for bid,b in inst.get('blocks',{}).items():
+              defs={s['id']:s for s in bdefs[b['type']]['settings'] if s.get('type')=='range'}
+              for k,v in b.get('settings',{}).items():
+                  if k in defs: valid(defs[k],v,f"template block {bid} {k}")
+
+          assert not problems, problems
+          print('All layered-image range values are valid.')
+          PY
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
