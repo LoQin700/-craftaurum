@@ -64,9 +64,9 @@
       "name": "图文横幅",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
         "eyebrow": "SOLID GOLD JEWELRY MANUFACTURING",
         "heading": "Custom Solid Gold Jewelry",
         "introduction": "<p>Develop custom solid gold jewelry for your brand across 10K, 14K, 18K, 20K and 24K options. Craftaurum supports design refinement, sampling and production with clear communication throughout the project.</p><p>From signature pieces to complete collections, each project can be developed around your design direction, target market and material requirements.</p>",
@@ -85,7 +85,6 @@
     },
     "gold_showcase": {
       "type": "content-cards",
-      "name": "图文卡片",
       "blocks": {
         "rings": {
           "type": "card",
@@ -156,11 +155,12 @@
         "pearl_earrings",
         "pendants"
       ],
+      "name": "图文卡片",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#F8F7F4",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
         "card_style": "standard",
         "intro_button_label": "",
         "intro_button_link": "",
@@ -187,9 +187,9 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
         "heading": "Custom Gold Jewelry",
         "heading_preset": "h2",
         "heading_position": "content",
@@ -214,9 +214,9 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#F8F7F4",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
         "heading": "Gold Vermeil Jewelry",
         "heading_preset": "h2",
         "heading_position": "content",
@@ -241,9 +241,9 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
         "heading": "Custom-made Real Gold Jewelry",
         "heading_preset": "h2",
         "heading_position": "content",
@@ -263,9 +263,100 @@
         "padding_bottom": 64
       }
     },
+    "comparison_table": {
+      "type": "comparison-table",
+      "blocks": {
+        "base_material": {
+          "type": "row",
+          "settings": {
+            "label": "Base Material",
+            "value_1": "<p>Gold alloy throughout the piece</p>",
+            "value_2": "<p>925 Sterling Silver</p>",
+            "value_3": "<p>Brass, silver or another compatible base metal</p>"
+          }
+        },
+        "gold_structure": {
+          "type": "row",
+          "settings": {
+            "label": "Gold Structure",
+            "value_1": "<p>Gold alloy throughout</p>",
+            "value_2": "<p>Gold layer over sterling silver</p>",
+            "value_3": "<p>Gold layer over base metal</p>"
+          }
+        },
+        "gold_thickness": {
+          "type": "row",
+          "settings": {
+            "label": "Gold Thickness",
+            "value_1": "<p>Not applicable</p>",
+            "value_2": "<p>Thicker plating specification</p>",
+            "value_3": "<p>Standard or thinner plating specification</p>"
+          }
+        },
+        "durability": {
+          "type": "row",
+          "settings": {
+            "label": "Durability",
+            "value_1": "<p><strong>Highest</strong><br/>Suitable for long-term fine jewelry wear</p>",
+            "value_2": "<p><strong>Medium–High</strong><br/>Depends on plating specification and care</p>",
+            "value_3": "<p><strong>Medium</strong><br/>More sensitive to wear, moisture and plating loss</p>"
+          }
+        },
+        "positioning": {
+          "type": "row",
+          "settings": {
+            "label": "Positioning",
+            "value_1": "<p>Fine jewelry / premium collection</p>",
+            "value_2": "<p>Premium accessible jewelry</p>",
+            "value_3": "<p>Fashion jewelry / trend-led collections</p>"
+          }
+        },
+        "best_for": {
+          "type": "row",
+          "settings": {
+            "label": "Best For",
+            "value_1": "<p>High-value signature pieces and long-term collections</p>",
+            "value_2": "<p>Premium silver collections with a gold finish</p>",
+            "value_3": "<p>Higher-volume or fashion-led product launches</p>"
+          }
+        }
+      },
+      "block_order": [
+        "base_material",
+        "gold_structure",
+        "gold_thickness",
+        "durability",
+        "positioning",
+        "best_for"
+      ],
+      "name": "对比表格",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "accent_color": "#c7a85e",
+        "line_color": "#d8d5ce",
+        "label_background": "#f8f7f4",
+        "eyebrow": "",
+        "eyebrow_preset": "h5",
+        "heading": "Solid Gold VS Gold Vermeil VS Gold Plated Jewelry",
+        "heading_preset": "h2",
+        "description": "",
+        "body_preset": "h5",
+        "column_count": "3",
+        "comparison_label": "Comparison",
+        "column_title_preset": "h4",
+        "column_1_kicker": "FINE JEWELRY",
+        "column_1_title": "Solid Gold Jewelry",
+        "column_2_kicker": "STERLING SILVER BASE",
+        "column_2_title": "Gold Vermeil Jewelry",
+        "column_3_kicker": "FASHION JEWELRY",
+        "column_3_title": "Gold Plated Jewelry",
+        "padding_top": 76,
+        "padding_bottom": 76
+      }
+    },
     "gold_colors": {
       "type": "section",
-      "name": "黄金颜色",
       "blocks": {
         "yellow_row": {
           "type": "group",
@@ -275,9 +366,36 @@
             "vertical_on_mobile": true,
             "horizontal_alignment": "space-between",
             "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
             "gap": 40,
             "width": "fill",
-            "width_mobile": "fill"
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "yellow_images": {
@@ -287,35 +405,103 @@
                 "vertical_on_mobile": false,
                 "horizontal_alignment": "flex-start",
                 "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
                 "gap": 14,
                 "width": "custom",
                 "custom_width": 52,
-                "width_mobile": "fill"
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "yellow_1": {
                   "type": "image",
                   "settings": {
+                    "link": "",
                     "image_ratio": "square",
                     "width": "fill",
-                    "width_mobile": "fill"
-                  }
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "yellow_2": {
                   "type": "image",
                   "settings": {
+                    "link": "",
                     "image_ratio": "square",
                     "width": "fill",
-                    "width_mobile": "fill"
-                  }
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "yellow_3": {
                   "type": "image",
                   "settings": {
+                    "link": "",
                     "image_ratio": "square",
                     "width": "fill",
-                    "width_mobile": "fill"
-                  }
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -328,12 +514,39 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
                 "width": "custom",
                 "custom_width": 48,
-                "width_mobile": "fill"
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "yellow_title": {
@@ -343,8 +556,23 @@
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h2"
-                  }
+                    "type_preset": "h2",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "yellow_body": {
                   "type": "text",
@@ -353,8 +581,23 @@
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "rte"
-                  }
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -376,9 +619,36 @@
             "vertical_on_mobile": true,
             "horizontal_alignment": "space-between",
             "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
             "gap": 40,
             "width": "fill",
-            "width_mobile": "fill"
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "rose_images": {
@@ -388,35 +658,103 @@
                 "vertical_on_mobile": false,
                 "horizontal_alignment": "flex-start",
                 "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
                 "gap": 14,
                 "width": "custom",
                 "custom_width": 52,
-                "width_mobile": "fill"
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "rose_1": {
                   "type": "image",
                   "settings": {
+                    "link": "",
                     "image_ratio": "square",
                     "width": "fill",
-                    "width_mobile": "fill"
-                  }
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "rose_2": {
                   "type": "image",
                   "settings": {
+                    "link": "",
                     "image_ratio": "square",
                     "width": "fill",
-                    "width_mobile": "fill"
-                  }
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "rose_3": {
                   "type": "image",
                   "settings": {
+                    "link": "",
                     "image_ratio": "square",
                     "width": "fill",
-                    "width_mobile": "fill"
-                  }
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -429,12 +767,39 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
                 "width": "custom",
                 "custom_width": 48,
-                "width_mobile": "fill"
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "rose_title": {
@@ -444,8 +809,23 @@
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h2"
-                  }
+                    "type_preset": "h2",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "rose_body": {
                   "type": "text",
@@ -454,8 +834,23 @@
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "rte"
-                  }
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -477,9 +872,36 @@
             "vertical_on_mobile": true,
             "horizontal_alignment": "space-between",
             "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
             "gap": 40,
             "width": "fill",
-            "width_mobile": "fill"
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "white_images": {
@@ -489,35 +911,103 @@
                 "vertical_on_mobile": false,
                 "horizontal_alignment": "flex-start",
                 "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
                 "gap": 14,
                 "width": "custom",
                 "custom_width": 52,
-                "width_mobile": "fill"
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "white_1": {
                   "type": "image",
                   "settings": {
+                    "link": "",
                     "image_ratio": "square",
                     "width": "fill",
-                    "width_mobile": "fill"
-                  }
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "white_2": {
                   "type": "image",
                   "settings": {
+                    "link": "",
                     "image_ratio": "square",
                     "width": "fill",
-                    "width_mobile": "fill"
-                  }
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "white_3": {
                   "type": "image",
                   "settings": {
+                    "link": "",
                     "image_ratio": "square",
                     "width": "fill",
-                    "width_mobile": "fill"
-                  }
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -530,12 +1020,39 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "center",
                 "gap": 12,
                 "width": "custom",
                 "custom_width": 48,
-                "width_mobile": "fill"
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
                 "white_title": {
@@ -545,8 +1062,23 @@
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "h2"
-                  }
+                    "type_preset": "h2",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 },
                 "white_body": {
                   "type": "text",
@@ -555,8 +1087,23 @@
                     "width": "100%",
                     "max_width": "normal",
                     "alignment": "left",
-                    "type_preset": "rte"
-                  }
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
                 }
               },
               "block_order": [
@@ -576,27 +1123,132 @@
         "rose_row",
         "white_row"
       ],
+      "name": "黄金颜色",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "center",
         "gap": 64,
         "section_width": "page-width",
         "section_height": "",
+        "section_height_custom": 50,
         "background_media": "none",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
         "border": "none",
         "border_width": 1,
         "border_opacity": 100,
+        "border_color": "",
         "border_radius": 0,
         "padding-block-start": 72,
         "padding-block-end": 72
       }
     },
+    "indexed_guide": {
+      "type": "indexed-content-guide",
+      "blocks": {
+        "k10": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/custom_stone_jewelry.jpg",
+            "index_label": "10K Gold",
+            "value": "41.7%",
+            "heading": "10K Gold Jewelry",
+            "description": "<p>With the lowest gold content in this guide, 10K offers greater hardness and durability. It is well suited to frequent wear and more cost-conscious fine-jewelry programs.</p>",
+            "meta_label": "Best For",
+            "meta_value": "Everyday Wear"
+          }
+        },
+        "k14": {
+          "type": "item",
+          "settings": {
+            "index_label": "14K Gold",
+            "value": "58.5%",
+            "heading": "14K Gold Jewelry",
+            "description": "<p>A popular middle ground that balances recognizable gold value with practical durability, making it versatile across rings, earrings and necklaces.</p>",
+            "meta_label": "Best For",
+            "meta_value": "Daily Fine Jewelry"
+          }
+        },
+        "k18": {
+          "type": "item",
+          "settings": {
+            "index_label": "18K Gold",
+            "value": "75%",
+            "heading": "18K Gold Jewelry",
+            "description": "<p>A premium fine-jewelry standard with richer gold color and higher gold content while retaining practical alloy strength for many jewelry applications.</p>",
+            "meta_label": "Best For",
+            "meta_value": "Premium Collections"
+          }
+        },
+        "k20": {
+          "type": "item",
+          "settings": {
+            "index_label": "20K Gold",
+            "value": "83.3%",
+            "heading": "20K Gold Jewelry",
+            "description": "<p>A higher-purity option with deeper gold character, positioned between 18K and 24K while requiring more consideration around softness and construction.</p>",
+            "meta_label": "Best For",
+            "meta_value": "High-Purity Pieces"
+          }
+        },
+        "k24": {
+          "type": "item",
+          "settings": {
+            "index_label": "24K Gold",
+            "value": "99.9%",
+            "heading": "24K Gold Jewelry",
+            "description": "<p>Nearly pure gold with the richest natural gold color and highest gold content, but also the greatest softness and malleability.</p>",
+            "meta_label": "Best For",
+            "meta_value": "Pure Gold Positioning"
+          }
+        }
+      },
+      "block_order": [
+        "k10",
+        "k14",
+        "k18",
+        "k20",
+        "k24"
+      ],
+      "name": "索引内容指南",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "accent_color": "#c7a85e",
+        "line_color": "#d8d5ce",
+        "eyebrow": "GOLD KARAT GUIDE",
+        "eyebrow_preset": "h5",
+        "heading": "Gold Karat Guide",
+        "heading_preset": "h3",
+        "description": "<p>Compare common karat levels by gold content, durability and how each option is positioned for jewelry development.</p>",
+        "body_preset": "h5",
+        "item_title_preset": "h3",
+        "item_image_shape": "square",
+        "item_image_size": 88,
+        "index_aria_label": "Gold karat guide navigation",
+        "value_suffix": "GOLD",
+        "feature_image": "shopify://shop_images/plated_jewelry.jpg",
+        "feature_image_position": "left",
+        "feature_heading": "What Does Karat Mean?",
+        "feature_title_preset": "h3",
+        "feature_body": "<p>Karat refers to the proportion of pure gold within an alloy. The right choice is not simply “higher is better”; it depends on design, wear expectations, target price and market positioning.</p>",
+        "column_gap": 56,
+        "padding_top": 76,
+        "padding_bottom": 76
+      }
+    },
     "jewelry_types": {
       "type": "image-collection-grid",
-      "name": "分类图片展示",
       "blocks": {
         "type_rings": {
           "type": "card",
@@ -655,13 +1307,14 @@
         "type_pendants",
         "type_artisan"
       ],
+      "name": "分类图片展示",
       "settings": {
         "section_width": "page-width",
         "heading": "Explore Our Custom Jewelry Types",
         "heading_preset": "h2",
         "description": "<p>Continue exploring Craftaurum's custom jewelry categories for your next collection.</p>",
         "body_preset": "h5",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "card_title_preset": "h3",
         "desktop_columns": 3,
         "desktop_layout": "grid",
@@ -760,7 +1413,7 @@
         "section_height": "",
         "section_height_custom": 50,
         "background_media": "none",
-        "background_color": "#F8F7F4",
+        "background_color": "#f8f7f4",
         "video_position": "cover",
         "background_image_position": "cover",
         "toggle_overlay": false,
@@ -774,190 +1427,6 @@
         "border_radius": 0,
         "padding-block-start": 72,
         "padding-block-end": 88
-      }
-    },
-    "comparison_table": {
-      "type": "comparison-table",
-      "name": "对比表格",
-      "blocks": {
-        "base_material": {
-          "type": "row",
-          "settings": {
-            "label": "Base Material",
-            "value_1": "<p>Gold alloy throughout the piece</p>",
-            "value_2": "<p>925 Sterling Silver</p>",
-            "value_3": "<p>Brass, silver or another compatible base metal</p>"
-          }
-        },
-        "gold_structure": {
-          "type": "row",
-          "settings": {
-            "label": "Gold Structure",
-            "value_1": "<p>Gold alloy throughout</p>",
-            "value_2": "<p>Gold layer over sterling silver</p>",
-            "value_3": "<p>Gold layer over base metal</p>"
-          }
-        },
-        "gold_thickness": {
-          "type": "row",
-          "settings": {
-            "label": "Gold Thickness",
-            "value_1": "<p>Not applicable</p>",
-            "value_2": "<p>Thicker plating specification</p>",
-            "value_3": "<p>Standard or thinner plating specification</p>"
-          }
-        },
-        "durability": {
-          "type": "row",
-          "settings": {
-            "label": "Durability",
-            "value_1": "<p><strong>Highest</strong><br>Suitable for long-term fine jewelry wear</p>",
-            "value_2": "<p><strong>Medium–High</strong><br>Depends on plating specification and care</p>",
-            "value_3": "<p><strong>Medium</strong><br>More sensitive to wear, moisture and plating loss</p>"
-          }
-        },
-        "positioning": {
-          "type": "row",
-          "settings": {
-            "label": "Positioning",
-            "value_1": "<p>Fine jewelry / premium collection</p>",
-            "value_2": "<p>Premium accessible jewelry</p>",
-            "value_3": "<p>Fashion jewelry / trend-led collections</p>"
-          }
-        },
-        "best_for": {
-          "type": "row",
-          "settings": {
-            "label": "Best For",
-            "value_1": "<p>High-value signature pieces and long-term collections</p>",
-            "value_2": "<p>Premium silver collections with a gold finish</p>",
-            "value_3": "<p>Higher-volume or fashion-led product launches</p>"
-          }
-        }
-      },
-      "block_order": [
-        "base_material",
-        "gold_structure",
-        "gold_thickness",
-        "durability",
-        "positioning",
-        "best_for"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "accent_color": "#C7A85E",
-        "line_color": "#D8D5CE",
-        "label_background": "#F8F7F4",
-        "eyebrow": "",
-        "eyebrow_preset": "h5",
-        "heading": "Solid Gold VS Gold Vermeil VS Gold Plated Jewelry",
-        "heading_preset": "h2",
-        "description": "",
-        "body_preset": "h5",
-        "column_count": "3",
-        "comparison_label": "Comparison",
-        "column_title_preset": "h4",
-        "column_1_kicker": "FINE JEWELRY",
-        "column_1_title": "Solid Gold Jewelry",
-        "column_2_kicker": "STERLING SILVER BASE",
-        "column_2_title": "Gold Vermeil Jewelry",
-        "column_3_kicker": "FASHION JEWELRY",
-        "column_3_title": "Gold Plated Jewelry",
-        "padding_top": 76,
-        "padding_bottom": 76
-      }
-    },
-    "indexed_guide": {
-      "type": "indexed-content-guide",
-      "name": "索引内容指南",
-      "blocks": {
-        "k10": {
-          "type": "item",
-          "settings": {
-            "index_label": "10K Gold",
-            "value": "41.7%",
-            "heading": "10K Gold Jewelry",
-            "description": "<p>With the lowest gold content in this guide, 10K offers greater hardness and durability. It is well suited to frequent wear and more cost-conscious fine-jewelry programs.</p>",
-            "meta_label": "Best For",
-            "meta_value": "Everyday Wear"
-          }
-        },
-        "k14": {
-          "type": "item",
-          "settings": {
-            "index_label": "14K Gold",
-            "value": "58.5%",
-            "heading": "14K Gold Jewelry",
-            "description": "<p>A popular middle ground that balances recognizable gold value with practical durability, making it versatile across rings, earrings and necklaces.</p>",
-            "meta_label": "Best For",
-            "meta_value": "Daily Fine Jewelry"
-          }
-        },
-        "k18": {
-          "type": "item",
-          "settings": {
-            "index_label": "18K Gold",
-            "value": "75%",
-            "heading": "18K Gold Jewelry",
-            "description": "<p>A premium fine-jewelry standard with richer gold color and higher gold content while retaining practical alloy strength for many jewelry applications.</p>",
-            "meta_label": "Best For",
-            "meta_value": "Premium Collections"
-          }
-        },
-        "k20": {
-          "type": "item",
-          "settings": {
-            "index_label": "20K Gold",
-            "value": "83.3%",
-            "heading": "20K Gold Jewelry",
-            "description": "<p>A higher-purity option with deeper gold character, positioned between 18K and 24K while requiring more consideration around softness and construction.</p>",
-            "meta_label": "Best For",
-            "meta_value": "High-Purity Pieces"
-          }
-        },
-        "k24": {
-          "type": "item",
-          "settings": {
-            "index_label": "24K Gold",
-            "value": "99.9%",
-            "heading": "24K Gold Jewelry",
-            "description": "<p>Nearly pure gold with the richest natural gold color and highest gold content, but also the greatest softness and malleability.</p>",
-            "meta_label": "Best For",
-            "meta_value": "Pure Gold Positioning"
-          }
-        }
-      },
-      "block_order": [
-        "k10",
-        "k14",
-        "k18",
-        "k20",
-        "k24"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "accent_color": "#C7A85E",
-        "line_color": "#D8D5CE",
-        "eyebrow": "GOLD KARAT GUIDE",
-        "eyebrow_preset": "h5",
-        "heading": "Gold Karat Guide",
-        "heading_preset": "h2",
-        "description": "<p>Compare common karat levels by gold content, durability and how each option is positioned for jewelry development.</p>",
-        "body_preset": "h5",
-        "item_title_preset": "h3",
-        "item_image_shape": "square",
-        "item_image_size": 88,
-        "index_aria_label": "Gold karat guide navigation",
-        "value_suffix": "GOLD",
-        "feature_image_position": "left",
-        "feature_heading": "What Does Karat Mean?",
-        "feature_title_preset": "h3",
-        "feature_body": "<p>Karat refers to the proportion of pure gold within an alloy. The right choice is not simply “higher is better”; it depends on design, wear expectations, target price and market positioning.</p>",
-        "column_gap": 56,
-        "padding_top": 76,
-        "padding_bottom": 76
       }
     }
   },
