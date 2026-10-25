@@ -491,7 +491,7 @@
             "content_direction": "row",
             "vertical_on_mobile": true,
             "horizontal_alignment": "space-between",
-            "vertical_alignment": "stretch",
+            "vertical_alignment": "center",
             "align_baseline": false,
             "gap": 16,
             "width": "fill",
