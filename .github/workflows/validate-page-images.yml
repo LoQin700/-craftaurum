@@ -1,0 +1,58 @@
+name: Validate Page Image Assignments
+
+on:
+  push:
+    branches:
+      - content/assign-page-images
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate template image references
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          files=[
+              'templates/page.solid-gold.json',
+              'templates/page.gold-vermeil.json',
+              'templates/page.gold-plated.json',
+          ]
+          total=0
+          for file in files:
+              text=Path(file).read_text(encoding='utf-8')
+              data=json.loads(text[text.index('{'):])
+              refs=[]
+              def walk(x):
+                  if isinstance(x,dict):
+                      for k,v in x.items():
+                          if k=='image' and isinstance(v,str) and v:
+                              refs.append(v)
+                          walk(v)
+                  elif isinstance(x,list):
+                      for v in x: walk(v)
+              walk(data)
+              assert refs, f'No image refs in {file}'
+              bad=[r for r in refs if not r.startswith('shopify://shop_images/')]
+              assert not bad, (file,bad)
+              print(file, len(refs))
+              for r in refs:
+                  print('  ',r)
+              total+=len(refs)
+          print('TOTAL IMAGE REFS', total)
+          PY
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
