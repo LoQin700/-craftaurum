@@ -131,7 +131,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/18K.jpg"
           }
         },
         "earrings": {
@@ -141,7 +142,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/20K.jpg"
           }
         },
         "necklaces": {
@@ -151,7 +153,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/22K.jpg"
           }
         },
         "bracelets": {
@@ -161,7 +164,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/YE25928.jpg"
           }
         },
         "diamond_rings": {
@@ -171,7 +175,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/YE26053.jpg"
           }
         },
         "pendants": {
@@ -181,7 +186,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/plated-jewelry-2.jpg"
           }
         }
       },
@@ -244,7 +250,8 @@
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button",
         "padding_top": 64,
-        "padding_bottom": 64
+        "padding_bottom": 64,
+        "image": "shopify://shop_images/gold-plated-factory.jpg"
       }
     },
     "why_choose": {
@@ -768,7 +775,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "image": "shopify://shop_images/jewelry-plated-prepare-1.jpg"
           },
           "blocks": {}
         }
@@ -828,7 +836,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "image": "shopify://shop_images/custom-design-jewelry.jpg"
           },
           "blocks": {}
         },
@@ -850,7 +859,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "image": "shopify://shop_images/plating-jewelry.jpg"
           },
           "blocks": {}
         },
@@ -872,7 +882,8 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "image": "shopify://shop_images/gemstone-setting.jpg"
           },
           "blocks": {}
         }
