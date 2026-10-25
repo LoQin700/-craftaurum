@@ -82,7 +82,8 @@
             "padding-block-start": 48,
             "padding-block-end": 48,
             "padding-inline-start": 48,
-            "padding-inline-end": 48
+            "padding-inline-end": 48,
+            "image_1": "shopify://shop_images/custom-design-jewelry.jpg"
           },
           "blocks": {
             "heading": {
@@ -192,7 +193,8 @@
             "title": "Plated Jewelry",
             "description": "<p>Plating colors and surface finishes tailored to the look of your collection.</p>",
             "horizontal_alignment": "left",
-            "vertical_position": "bottom"
+            "vertical_position": "bottom",
+            "image": "shopify://shop_images/plated-jewelry-2.jpg"
           }
         },
         "render3d": {
@@ -202,7 +204,8 @@
             "title": "3D Render",
             "description": "<p>Refine proportion, structure and key details before physical sampling.</p>",
             "horizontal_alignment": "left",
-            "vertical_position": "bottom"
+            "vertical_position": "bottom",
+            "image": "shopify://shop_images/3d-render-1.jpg"
           }
         },
         "stone": {
@@ -212,7 +215,8 @@
             "title": "Stone Setting & Making",
             "description": "<p>Develop setting directions around the structure and visual balance of the piece.</p>",
             "horizontal_alignment": "left",
-            "vertical_position": "bottom"
+            "vertical_position": "bottom",
+            "image": "shopify://shop_images/gemstone-setting-400x400.jpg"
           }
         },
         "silver": {
@@ -222,7 +226,8 @@
             "title": "Custom Sterling Silver Jewelry",
             "description": "<p>Develop silver-led collections around your own design, finish and brand direction.</p>",
             "horizontal_alignment": "left",
-            "vertical_position": "bottom"
+            "vertical_position": "bottom",
+            "image": "shopify://shop_images/custom-sterling-silver-jewelry-3.jpg"
           }
         },
         "gold": {
@@ -232,7 +237,8 @@
             "title": "Custom Gold Jewelry",
             "description": "<p>Build refined gold jewelry concepts around proportion, craftsmanship and finishing.</p>",
             "horizontal_alignment": "left",
-            "vertical_position": "bottom"
+            "vertical_position": "bottom",
+            "image": "shopify://shop_images/custom-gold-jewelry-2.jpg"
           }
         }
       },
@@ -290,7 +296,8 @@
         "cta_url": "",
         "cta_button_style": "button",
         "padding_top": 52,
-        "padding_bottom": 52
+        "padding_bottom": 52,
+        "image": "shopify://shop_images/jewelry-manufacturer.jpg"
       }
     },
     "craft_polishing": {
@@ -317,7 +324,8 @@
         "cta_url": "",
         "cta_button_style": "button",
         "padding_top": 52,
-        "padding_bottom": 52
+        "padding_bottom": 52,
+        "image": "shopify://shop_images/polishing.jpg"
       }
     },
     "craft_private_label": {
@@ -344,7 +352,8 @@
         "cta_url": "",
         "cta_button_style": "button",
         "padding_top": 52,
-        "padding_bottom": 64
+        "padding_bottom": 64,
+        "image": "shopify://shop_images/OEM-JEWELLERY.jpg"
       }
     },
     "process_cards": {
@@ -357,7 +366,8 @@
             "description": "<p>Share references, requirements and product direction.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/NDA-4.jpg"
           }
         },
         "design": {
@@ -367,7 +377,8 @@
             "description": "<p>Refine shape, proportion, texture and key details.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/custom-design-jewelry.jpg"
           }
         },
         "rendering": {
@@ -377,7 +388,8 @@
             "description": "<p>Review structure and proportion digitally before sampling.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/3d-render-1.jpg"
           }
         },
         "sampling": {
@@ -387,7 +399,8 @@
             "description": "<p>Check the physical product, construction, fit and finish.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/jewelry-design.jpg"
           }
         },
         "production": {
@@ -397,7 +410,8 @@
             "description": "<p>Move into production based on the approved sample.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/jewelry-manufacturer.jpg"
           }
         },
         "delivery": {
@@ -407,7 +421,8 @@
             "description": "<p>Complete final review, packing and shipment coordination.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/delivery.jpg"
           }
         }
       },
