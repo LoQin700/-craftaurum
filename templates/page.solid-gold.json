@@ -80,7 +80,8 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 48
+        "padding_bottom": 48,
+        "hero_image": "shopify://shop_images/solid-gold-jewelry.jpg"
       }
     },
     "gold_showcase": {
@@ -93,7 +94,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/diamond-gold-rings.jpg"
           }
         },
         "chains": {
@@ -103,7 +105,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/S1028-N.jpg"
           }
         },
         "bangles": {
@@ -113,7 +116,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/YB7671.jpg"
           }
         },
         "earrings": {
@@ -123,7 +127,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/gold-earrings.jpg"
           }
         },
         "pearl_earrings": {
@@ -133,7 +138,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/pearl-earrings-2.jpg"
           }
         },
         "pendants": {
@@ -143,7 +149,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/nameplate-necklace.jpg"
           }
         }
       },
@@ -206,7 +213,8 @@
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-unstyled",
         "padding_top": 52,
-        "padding_bottom": 52
+        "padding_bottom": 52,
+        "image": "shopify://shop_images/custom-design-jewelry.jpg"
       }
     },
     "gold_vermeil": {
@@ -233,7 +241,8 @@
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 52,
-        "padding_bottom": 52
+        "padding_bottom": 52,
+        "image": "shopify://shop_images/gold-vermeil-earrings.jpg"
       }
     },
     "low_moq_gold": {
@@ -260,7 +269,8 @@
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button",
         "padding_top": 52,
-        "padding_bottom": 64
+        "padding_bottom": 64,
+        "image": "shopify://shop_images/custom_real_gold_jewelry.jpg"
       }
     },
     "comparison_table": {
@@ -455,7 +465,8 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/18K.jpg"
                   },
                   "blocks": {}
                 },
@@ -477,7 +488,8 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/20K.jpg"
                   },
                   "blocks": {}
                 },
@@ -499,7 +511,8 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/22K.jpg"
                   },
                   "blocks": {}
                 }
@@ -708,7 +721,8 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/S1180-E.jpg"
                   },
                   "blocks": {}
                 },
@@ -730,7 +744,8 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/YE25928.jpg"
                   },
                   "blocks": {}
                 },
@@ -752,7 +767,8 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/YB6747.jpg"
                   },
                   "blocks": {}
                 }
@@ -961,7 +977,8 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/YE26053.jpg"
                   },
                   "blocks": {}
                 },
@@ -983,7 +1000,8 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/custom-sterling-silver-jewelry-3.jpg"
                   },
                   "blocks": {}
                 },
@@ -1005,7 +1023,8 @@
                     "padding-block-start": 0,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/plated-pearl-rings.jpg"
                   },
                   "blocks": {}
                 }
@@ -1163,7 +1182,8 @@
             "heading": "10K Gold Jewelry",
             "description": "<p>With the lowest gold content in this guide, 10K offers greater hardness and durability. It is well suited to frequent wear and more cost-conscious fine-jewelry programs.</p>",
             "meta_label": "Best For",
-            "meta_value": "Everyday Wear"
+            "meta_value": "Everyday Wear",
+            "image": "shopify://shop_images/solid-gold-jewelry.jpg"
           }
         },
         "k14": {
@@ -1173,7 +1193,8 @@
             "heading": "14K Gold Jewelry",
             "description": "<p>A popular middle ground that balances recognizable gold value with practical durability, making it versatile across rings, earrings and necklaces.</p>",
             "meta_label": "Best For",
-            "meta_value": "Daily Fine Jewelry"
+            "meta_value": "Daily Fine Jewelry",
+            "image": "shopify://shop_images/rings.jpg"
           }
         },
         "k18": {
@@ -1183,7 +1204,8 @@
             "heading": "18K Gold Jewelry",
             "description": "<p>A premium fine-jewelry standard with richer gold color and higher gold content while retaining practical alloy strength for many jewelry applications.</p>",
             "meta_label": "Best For",
-            "meta_value": "Premium Collections"
+            "meta_value": "Premium Collections",
+            "image": "shopify://shop_images/diamond-gold-rings.jpg"
           }
         },
         "k20": {
@@ -1193,7 +1215,8 @@
             "heading": "20K Gold Jewelry",
             "description": "<p>A higher-purity option with deeper gold character, positioned between 18K and 24K while requiring more consideration around softness and construction.</p>",
             "meta_label": "Best For",
-            "meta_value": "High-Purity Pieces"
+            "meta_value": "High-Purity Pieces",
+            "image": "shopify://shop_images/gold-earrings.jpg"
           }
         },
         "k24": {
@@ -1203,7 +1226,8 @@
             "heading": "24K Gold Jewelry",
             "description": "<p>Nearly pure gold with the richest natural gold color and highest gold content, but also the greatest softness and malleability.</p>",
             "meta_label": "Best For",
-            "meta_value": "Pure Gold Positioning"
+            "meta_value": "Pure Gold Positioning",
+            "image": "shopify://shop_images/custom_real_gold_jewelry.jpg"
           }
         }
       },
@@ -1243,7 +1267,7 @@
         "item_image_shape": "square",
         "item_image_size": 88,
         "value_suffix": "GOLD",
-        "feature_image": "shopify://shop_images/plated_jewelry.jpg",
+        "feature_image": "shopify://shop_images/Custom_Gold_Jewelry.jpg",
         "feature_image_ratio": "landscape",
         "feature_alignment": "left",
         "feature_heading": "What Does Karat Mean?",
@@ -1265,7 +1289,8 @@
           "settings": {
             "title": "Custom Rings",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/rings.jpg"
           }
         },
         "type_earrings": {
@@ -1273,7 +1298,8 @@
           "settings": {
             "title": "Custom Earrings",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/gold-earrings.jpg"
           }
         },
         "type_bracelets": {
@@ -1281,7 +1307,8 @@
           "settings": {
             "title": "Custom Bracelets",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/chain-bracelets.jpg"
           }
         },
         "type_necklaces": {
@@ -1289,7 +1316,8 @@
           "settings": {
             "title": "Custom Necklaces",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/butterfly-necklace.jpg"
           }
         },
         "type_pendants": {
@@ -1297,7 +1325,8 @@
           "settings": {
             "title": "Custom Pendants",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/nameplate-necklace.jpg"
           }
         },
         "type_artisan": {
@@ -1305,7 +1334,8 @@
           "settings": {
             "title": "Artisan Jewelry",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/OEM-JEWELLERY.jpg"
           }
         }
       },
