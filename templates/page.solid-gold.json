@@ -1159,7 +1159,6 @@
         "k10": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/custom_stone_jewelry.jpg",
             "index_label": "",
             "value": "41.7%",
             "heading": "10K Gold Jewelry",
@@ -1237,13 +1236,13 @@
         "item_image_size": 88,
         "value_suffix": "GOLD",
         "feature_image": "shopify://shop_images/plated_jewelry.jpg",
+        "feature_image_ratio": "landscape",
         "feature_heading": "What Does Karat Mean?",
         "feature_title_preset": "h3",
         "feature_body": "<p>Karat refers to the proportion of pure gold within an alloy. The right choice is not simply “higher is better”; it depends on design, wear expectations, target price and market positioning.</p>",
         "column_gap": 56,
         "padding_top": 76,
-        "padding_bottom": 76,
-        "feature_image_ratio": "landscape"
+        "padding_bottom": 76
       }
     },
     "jewelry_types": {
