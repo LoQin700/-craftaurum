@@ -12,6 +12,7 @@
     --padding-block-end: {{ section.settings.padding_bottom }}px;
     --ca-guide-gap: {{ section.settings.column_gap }}px;
     --ca-guide-image-size: {{ section.settings.item_image_size }}px;
+    --ca-guide-item-padding-inline: {{ section.settings.item_padding_inline }}px;
 
     --ca-guide-line: {{ section.settings.line_color }};
     --ca-guide-eyebrow-color: {{ section.settings.eyebrow_color }};
@@ -193,7 +194,7 @@
   }
 
   .ca-content-guide__item {
-    padding: 26px 0 28px;
+    padding: 26px var(--ca-guide-item-padding-inline) 28px;
     border-bottom: 1px solid var(--ca-guide-line);
     transition: background-color .25s ease;
   }
@@ -411,7 +412,7 @@
     }
 
     .ca-content-guide__item {
-      padding: 22px 0 24px;
+      padding: 22px min(var(--ca-guide-item-padding-inline), 16px) 24px;
     }
 
     .ca-content-guide__item-head {
@@ -451,6 +452,7 @@
     { "type": "color", "id": "background_color", "label": "背景颜色", "default": "#FFFFFF" },
     { "type": "color", "id": "line_color", "label": "分隔线颜色", "default": "#D8D5CE" },
     { "type": "color", "id": "hover_background_color", "label": "项目 Hover 底色", "default": "#F8F7F4" },
+    { "type": "range", "id": "item_padding_inline", "label": "项目左右内边距", "min": 0, "max": 40, "step": 2, "unit": "px", "default": 20 },
 
     { "type": "header", "content": "顶部标题区" },
     {

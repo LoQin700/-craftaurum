@@ -355,12 +355,13 @@
         "padding_bottom": 76,
         "intro_alignment": "center",
         "cell_padding": 20,
-        "header_background": "#FFFFFF",
+        "header_background": "#F3EEE3",
         "cell_background": "#FFFFFF",
         "alternate_row_background": "#FCFBF8",
         "header_text_color": "#17191A",
         "body_text_color": "#4F514E",
-        "metric_text_color": "#17191A"
+        "metric_text_color": "#17191A",
+        "hover_background": "#F8F2E5"
       }
     },
     "gold_colors": {
@@ -1267,7 +1268,8 @@
         "feature_title_color": "#17191A",
         "feature_body_size": 16,
         "feature_body_color": "#4F514E",
-        "hover_background_color": "#F8F7F4"
+        "hover_background_color": "#F8F7F4",
+        "item_padding_inline": 20
       }
     },
     "jewelry_types": {

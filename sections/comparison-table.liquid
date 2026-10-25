@@ -16,6 +16,7 @@
     --ca-compare-header-bg: {{ section.settings.header_background }};
     --ca-compare-cell-bg: {{ section.settings.cell_background }};
     --ca-compare-alt-bg: {{ section.settings.alternate_row_background }};
+    --ca-compare-hover-bg: {{ section.settings.hover_background }};
     --ca-compare-header-text: {{ section.settings.header_text_color }};
     --ca-compare-body-text: {{ section.settings.body_text_color }};
     --ca-compare-metric-text: {{ section.settings.metric_text_color }};
@@ -172,6 +173,7 @@
     display: grid;
     border-bottom: 1px solid var(--ca-compare-line);
     background: var(--ca-compare-cell-bg);
+    transition: background-color .22s ease;
   }
 
   .ca-compare__row--alt {
@@ -197,6 +199,7 @@
     padding-bottom: calc(var(--ca-compare-cell-padding) + 4px);
     background: var(--ca-compare-header-bg);
     color: var(--ca-compare-header-text);
+    font-family: var(--font-heading--family);
   }
 
   .ca-compare__metric {
@@ -232,6 +235,13 @@
   .ca-compare__product-title {
     display: block;
     margin: 0;
+    font-family: var(--font-heading--family);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .ca-compare__desktop .ca-compare__row:not(.ca-compare__row--head):hover > * {
+      background: var(--ca-compare-hover-bg);
+    }
   }
 
   .ca-compare__value {
@@ -285,6 +295,7 @@
       padding: 14px 16px;
       background: var(--ca-compare-label-bg);
       color: var(--ca-compare-metric-text);
+      font-family: var(--font-heading--family);
       border-bottom: 1px solid var(--ca-compare-line);
       font-size: 12px;
       line-height: 1.4;
@@ -313,6 +324,7 @@
 
     .ca-compare__mobile-name strong {
       display: block;
+      font-family: var(--font-heading--family);
     }
 
     .ca-compare__mobile-kicker {
@@ -384,9 +396,10 @@
     { "type": "color", "id": "accent_color", "label": "重点颜色", "default": "#C7A85E" },
     { "type": "color", "id": "line_color", "label": "分隔线颜色", "default": "#D8D5CE" },
     { "type": "color", "id": "label_background", "label": "对比项背景", "default": "#F8F7F4" },
-    { "type": "color", "id": "header_background", "label": "表头背景", "default": "#FFFFFF" },
+    { "type": "color", "id": "header_background", "label": "表头背景", "default": "#F3EEE3" },
     { "type": "color", "id": "cell_background", "label": "内容行背景", "default": "#FFFFFF" },
     { "type": "color", "id": "alternate_row_background", "label": "交替行背景", "default": "#FCFBF8" },
+    { "type": "color", "id": "hover_background", "label": "行 Hover 高亮", "default": "#F8F2E5" },
     { "type": "color", "id": "header_text_color", "label": "表头文字颜色", "default": "#17191A" },
     { "type": "color", "id": "body_text_color", "label": "内容文字颜色", "default": "#4F514E" },
     { "type": "color", "id": "metric_text_color", "label": "对比项文字颜色", "default": "#17191A" },
