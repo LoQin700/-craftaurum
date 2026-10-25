@@ -561,7 +561,7 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 40,
+            "gap": 16,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -608,7 +608,7 @@
                 "height": "fit",
                 "custom_height": 100,
                 "background_media": "none",
-                "background_color": "",
+                "background_color": "#F6F2EB",
                 "video_position": "cover",
                 "background_image_position": "cover",
                 "toggle_overlay": false,
@@ -623,10 +623,10 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-start": 18,
+                "padding-block-end": 18,
+                "padding-inline-start": 18,
+                "padding-inline-end": 18
               },
               "blocks": {
                 "sterling_silver_rings_1": {
@@ -723,7 +723,7 @@
                 "height": "fit",
                 "custom_height": 100,
                 "background_media": "none",
-                "background_color": "",
+                "background_color": "#E7DED0",
                 "video_position": "cover",
                 "background_image_position": "cover",
                 "toggle_overlay": false,
@@ -738,10 +738,10 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-start": 32,
+                "padding-block-end": 32,
+                "padding-inline-start": 32,
+                "padding-inline-end": 32
               },
               "blocks": {
                 "sterling_silver_rings_title": {
@@ -802,8 +802,8 @@
             }
           },
           "block_order": [
-            "sterling_silver_rings_images",
-            "sterling_silver_rings_copy"
+            "sterling_silver_rings_copy",
+            "sterling_silver_rings_images"
           ]
         },
         "earrings_row": {
@@ -817,7 +817,7 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 40,
+            "gap": 16,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -864,7 +864,7 @@
                 "height": "fit",
                 "custom_height": 100,
                 "background_media": "none",
-                "background_color": "",
+                "background_color": "#F6F2EB",
                 "video_position": "cover",
                 "background_image_position": "cover",
                 "toggle_overlay": false,
@@ -879,10 +879,10 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-start": 18,
+                "padding-block-end": 18,
+                "padding-inline-start": 18,
+                "padding-inline-end": 18
               },
               "blocks": {
                 "sterling_silver_earrings_1": {
@@ -979,7 +979,7 @@
                 "height": "fit",
                 "custom_height": 100,
                 "background_media": "none",
-                "background_color": "",
+                "background_color": "#E7DED0",
                 "video_position": "cover",
                 "background_image_position": "cover",
                 "toggle_overlay": false,
@@ -994,10 +994,10 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-start": 32,
+                "padding-block-end": 32,
+                "padding-inline-start": 32,
+                "padding-inline-end": 32
               },
               "blocks": {
                 "sterling_silver_earrings_title": {
@@ -1058,8 +1058,8 @@
             }
           },
           "block_order": [
-            "sterling_silver_earrings_images",
-            "sterling_silver_earrings_copy"
+            "sterling_silver_earrings_copy",
+            "sterling_silver_earrings_images"
           ]
         },
         "necklaces_row": {
@@ -1073,7 +1073,7 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 40,
+            "gap": 16,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -1120,7 +1120,7 @@
                 "height": "fit",
                 "custom_height": 100,
                 "background_media": "none",
-                "background_color": "",
+                "background_color": "#F6F2EB",
                 "video_position": "cover",
                 "background_image_position": "cover",
                 "toggle_overlay": false,
@@ -1135,10 +1135,10 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-start": 18,
+                "padding-block-end": 18,
+                "padding-inline-start": 18,
+                "padding-inline-end": 18
               },
               "blocks": {
                 "sterling_silver_necklace_pendants_1": {
@@ -1235,7 +1235,7 @@
                 "height": "fit",
                 "custom_height": 100,
                 "background_media": "none",
-                "background_color": "",
+                "background_color": "#E7DED0",
                 "video_position": "cover",
                 "background_image_position": "cover",
                 "toggle_overlay": false,
@@ -1250,10 +1250,10 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-start": 32,
+                "padding-block-end": 32,
+                "padding-inline-start": 32,
+                "padding-inline-end": 32
               },
               "blocks": {
                 "sterling_silver_necklace_pendants_title": {
@@ -1314,8 +1314,8 @@
             }
           },
           "block_order": [
-            "sterling_silver_necklace_pendants_images",
-            "sterling_silver_necklace_pendants_copy"
+            "sterling_silver_necklace_pendants_copy",
+            "sterling_silver_necklace_pendants_images"
           ]
         },
         "bracelets_row": {
@@ -1329,7 +1329,7 @@
             "align_baseline": false,
             "horizontal_alignment_flex_direction_column": "flex-start",
             "vertical_alignment_flex_direction_column": "center",
-            "gap": 40,
+            "gap": 16,
             "width": "fill",
             "custom_width": 100,
             "width_mobile": "fill",
@@ -1376,7 +1376,7 @@
                 "height": "fit",
                 "custom_height": 100,
                 "background_media": "none",
-                "background_color": "",
+                "background_color": "#F6F2EB",
                 "video_position": "cover",
                 "background_image_position": "cover",
                 "toggle_overlay": false,
@@ -1391,10 +1391,10 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-start": 18,
+                "padding-block-end": 18,
+                "padding-inline-start": 18,
+                "padding-inline-end": 18
               },
               "blocks": {
                 "sterling_silver_bracelets_1": {
@@ -1491,7 +1491,7 @@
                 "height": "fit",
                 "custom_height": 100,
                 "background_media": "none",
-                "background_color": "",
+                "background_color": "#E7DED0",
                 "video_position": "cover",
                 "background_image_position": "cover",
                 "toggle_overlay": false,
@@ -1506,10 +1506,10 @@
                 "link": "",
                 "open_in_new_tab": false,
                 "placeholder": "",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-block-start": 32,
+                "padding-block-end": 32,
+                "padding-inline-start": 32,
+                "padding-inline-end": 32
               },
               "blocks": {
                 "sterling_silver_bracelets_title": {
@@ -1570,8 +1570,8 @@
             }
           },
           "block_order": [
-            "sterling_silver_bracelets_images",
-            "sterling_silver_bracelets_copy"
+            "sterling_silver_bracelets_copy",
+            "sterling_silver_bracelets_images"
           ]
         }
       },
@@ -1589,7 +1589,7 @@
         "align_baseline": false,
         "horizontal_alignment_flex_direction_column": "flex-start",
         "vertical_alignment_flex_direction_column": "center",
-        "gap": 64,
+        "gap": 28,
         "section_width": "page-width",
         "section_height": "",
         "section_height_custom": 50,
