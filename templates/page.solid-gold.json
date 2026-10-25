@@ -1167,7 +1167,6 @@
         "k10": {
           "type": "item",
           "settings": {
-            "index_label": "",
             "value": "41.7%",
             "heading": "10K Gold Jewelry",
             "description": "<p>With the lowest gold content in this guide, 10K offers greater hardness and durability. It is well suited to frequent wear and more cost-conscious fine-jewelry programs.</p>",
@@ -1178,7 +1177,6 @@
         "k14": {
           "type": "item",
           "settings": {
-            "index_label": "",
             "value": "58.5%",
             "heading": "14K Gold Jewelry",
             "description": "<p>A popular middle ground that balances recognizable gold value with practical durability, making it versatile across rings, earrings and necklaces.</p>",
@@ -1189,7 +1187,6 @@
         "k18": {
           "type": "item",
           "settings": {
-            "index_label": "",
             "value": "75%",
             "heading": "18K Gold Jewelry",
             "description": "<p>A premium fine-jewelry standard with richer gold color and higher gold content while retaining practical alloy strength for many jewelry applications.</p>",
@@ -1200,7 +1197,6 @@
         "k20": {
           "type": "item",
           "settings": {
-            "index_label": "",
             "value": "83.3%",
             "heading": "20K Gold Jewelry",
             "description": "<p>A higher-purity option with deeper gold character, positioned between 18K and 24K while requiring more consideration around softness and construction.</p>",
@@ -1211,7 +1207,6 @@
         "k24": {
           "type": "item",
           "settings": {
-            "index_label": "",
             "value": "99.9%",
             "heading": "24K Gold Jewelry",
             "description": "<p>Nearly pure gold with the richest natural gold color and highest gold content, but also the greatest softness and malleability.</p>",
@@ -1259,8 +1254,6 @@
         "description_size": 16,
         "description_color": "#5F615E",
         "item_alignment": "left",
-        "item_label_size": 12,
-        "item_label_color": "#C7A85E",
         "item_title_size": 24,
         "item_title_color": "#17191A",
         "item_body_size": 16,
@@ -1269,12 +1262,12 @@
         "value_color": "#C7A85E",
         "meta_size": 12,
         "meta_color": "#5F615E",
-        "image_background_color": "#F1EFEB",
         "feature_alignment": "left",
         "feature_title_size": 24,
         "feature_title_color": "#17191A",
         "feature_body_size": 16,
-        "feature_body_color": "#4F514E"
+        "feature_body_color": "#4F514E",
+        "hover_background_color": "#F8F7F4"
       }
     },
     "jewelry_types": {

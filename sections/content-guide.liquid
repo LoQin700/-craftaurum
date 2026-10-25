@@ -17,19 +17,17 @@
     --ca-guide-eyebrow-color: {{ section.settings.eyebrow_color }};
     --ca-guide-heading-color: {{ section.settings.heading_color }};
     --ca-guide-description-color: {{ section.settings.description_color }};
-    --ca-guide-item-label-color: {{ section.settings.item_label_color }};
     --ca-guide-item-title-color: {{ section.settings.item_title_color }};
     --ca-guide-item-body-color: {{ section.settings.item_body_color }};
     --ca-guide-value-color: {{ section.settings.value_color }};
     --ca-guide-meta-color: {{ section.settings.meta_color }};
     --ca-guide-feature-title-color: {{ section.settings.feature_title_color }};
     --ca-guide-feature-body-color: {{ section.settings.feature_body_color }};
-    --ca-guide-image-bg: {{ section.settings.image_background_color }};
+    --ca-guide-hover-bg: {{ section.settings.hover_background_color }};
 
     --ca-guide-eyebrow-size: {{ section.settings.eyebrow_size }}px;
     --ca-guide-heading-size: {{ section.settings.heading_size }}px;
     --ca-guide-description-size: {{ section.settings.description_size }}px;
-    --ca-guide-item-label-size: {{ section.settings.item_label_size }}px;
     --ca-guide-item-title-size: {{ section.settings.item_title_size }}px;
     --ca-guide-item-body-size: {{ section.settings.item_body_size }}px;
     --ca-guide-value-size: {{ section.settings.value_size }}px;
@@ -69,10 +67,6 @@
                     sizes: section.settings.item_image_size | append: 'px'
                 }}
               </div>
-            {% endif %}
-
-            {% if block.settings.index_label != blank %}
-              <p class="ca-content-guide__item-label">{{ block.settings.index_label | escape }}</p>
             {% endif %}
 
             <div class="ca-content-guide__item-head">
@@ -191,7 +185,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr);
     gap: var(--ca-guide-gap);
-    align-items: start;
+    align-items: center;
   }
 
   .ca-content-guide__list {
@@ -201,6 +195,13 @@
   .ca-content-guide__item {
     padding: 26px 0 28px;
     border-bottom: 1px solid var(--ca-guide-line);
+    transition: background-color .25s ease;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .ca-content-guide__item:hover {
+      background: var(--ca-guide-hover-bg);
+    }
   }
 
   .ca-content-guide__item--left {
@@ -227,7 +228,6 @@
     width: var(--ca-guide-image-size);
     margin-bottom: 16px;
     overflow: hidden;
-    background: var(--ca-guide-image-bg);
   }
 
   .ca-content-guide__thumb--circle {
@@ -252,15 +252,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  .ca-content-guide__item-label {
-    margin: 0 0 7px;
-    color: var(--ca-guide-item-label-color);
-    font-size: var(--ca-guide-item-label-size);
-    line-height: 1.35;
-    letter-spacing: .09em;
-    text-transform: uppercase;
   }
 
   .ca-content-guide__item-head {
@@ -329,15 +320,17 @@
     color: var(--ca-guide-value-color);
   }
 
+  .ca-content-guide__aside {
+    align-self: center;
+  }
+
   .ca-content-guide__aside-sticky {
-    position: sticky;
-    top: calc(var(--header-height, 0px) + 24px);
+    position: static;
   }
 
   .ca-content-guide__feature-media {
     width: 100%;
     overflow: hidden;
-    background: var(--ca-guide-image-bg);
   }
 
   .ca-content-guide__feature-media--square {
@@ -457,7 +450,7 @@
     { "type": "header", "content": "基础颜色" },
     { "type": "color", "id": "background_color", "label": "背景颜色", "default": "#FFFFFF" },
     { "type": "color", "id": "line_color", "label": "分隔线颜色", "default": "#D8D5CE" },
-    { "type": "color", "id": "image_background_color", "label": "图片占位背景", "default": "#F1EFEB" },
+    { "type": "color", "id": "hover_background_color", "label": "项目 Hover 底色", "default": "#F8F7F4" },
 
     { "type": "header", "content": "顶部标题区" },
     {
@@ -495,9 +488,6 @@
       ],
       "default": "left"
     },
-    { "type": "range", "id": "item_label_size", "label": "项目短标签字号", "min": 10, "max": 22, "step": 1, "unit": "px", "default": 12 },
-    { "type": "color", "id": "item_label_color", "label": "项目短标签颜色", "default": "#C7A85E" },
-
     { "type": "range", "id": "item_title_size", "label": "项目标题字号", "min": 16, "max": 44, "step": 1, "unit": "px", "default": 24 },
     { "type": "color", "id": "item_title_color", "label": "项目标题颜色", "default": "#17191A" },
 
@@ -577,7 +567,6 @@
       "name": "指南项目",
       "settings": [
         { "type": "image_picker", "id": "image", "label": "小图" },
-        { "type": "text", "id": "index_label", "label": "项目短标签" },
         { "type": "text", "id": "value", "label": "数值", "default": "100%" },
         { "type": "text", "id": "heading", "label": "项目标题", "default": "Item Title" },
         { "type": "richtext", "id": "description", "label": "正文", "default": "<p>Add the detailed explanation for this item here.</p>" },
