@@ -13,11 +13,18 @@
     --ca-compare-accent: {{ section.settings.accent_color }};
     --ca-compare-line: {{ section.settings.line_color }};
     --ca-compare-label-bg: {{ section.settings.label_background }};
+    --ca-compare-header-bg: {{ section.settings.header_background }};
+    --ca-compare-cell-bg: {{ section.settings.cell_background }};
+    --ca-compare-alt-bg: {{ section.settings.alternate_row_background }};
+    --ca-compare-header-text: {{ section.settings.header_text_color }};
+    --ca-compare-body-text: {{ section.settings.body_text_color }};
+    --ca-compare-metric-text: {{ section.settings.metric_text_color }};
+    --ca-compare-cell-padding: {{ section.settings.cell_padding }}px;
   "
 >
   <div class="ca-compare__inner">
     {% if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.description != blank %}
-      <header class="ca-compare__intro">
+      <header class="ca-compare__intro ca-compare__intro--{{ section.settings.intro_alignment }}">
         {% if section.settings.eyebrow != blank %}
           <p class="ca-compare__eyebrow {{ section.settings.eyebrow_preset }}">{{ section.settings.eyebrow | escape }}</p>
         {% endif %}
@@ -30,7 +37,7 @@
       </header>
     {% endif %}
 
-    <div class="ca-compare__scroll">
+    <div class="ca-compare__desktop">
       <div class="ca-compare__table ca-compare__table--{{ section.settings.column_count }}">
         <div class="ca-compare__row ca-compare__row--head">
           <div class="ca-compare__metric ca-compare__metric--head">{{ section.settings.comparison_label | escape }}</div>
@@ -60,7 +67,7 @@
         </div>
 
         {% for block in section.blocks %}
-          <div class="ca-compare__row" {{ block.shopify_attributes }}>
+          <div class="ca-compare__row{% if forloop.index | modulo: 2 == 0 %} ca-compare__row--alt{% endif %}" {{ block.shopify_attributes }}>
             <div class="ca-compare__metric">{{ block.settings.label | escape }}</div>
             <div class="ca-compare__value rte {{ section.settings.body_preset }}">{{ block.settings.value_1 }}</div>
             <div class="ca-compare__value rte {{ section.settings.body_preset }}">{{ block.settings.value_2 }}</div>
@@ -71,16 +78,72 @@
         {% endfor %}
       </div>
     </div>
+
+    <div class="ca-compare__mobile">
+      {% for block in section.blocks %}
+        <article class="ca-compare__mobile-group{% if forloop.index | modulo: 2 == 0 %} ca-compare__mobile-group--alt{% endif %}" {{ block.shopify_attributes }}>
+          <h3 class="ca-compare__mobile-metric">{{ block.settings.label | escape }}</h3>
+
+          <div class="ca-compare__mobile-option">
+            <div class="ca-compare__mobile-name">
+              {% if section.settings.column_1_kicker != blank %}
+                <span class="ca-compare__mobile-kicker">{{ section.settings.column_1_kicker | escape }}</span>
+              {% endif %}
+              <strong>{{ section.settings.column_1_title | escape }}</strong>
+            </div>
+            <div class="ca-compare__mobile-value rte">{{ block.settings.value_1 }}</div>
+          </div>
+
+          <div class="ca-compare__mobile-option">
+            <div class="ca-compare__mobile-name">
+              {% if section.settings.column_2_kicker != blank %}
+                <span class="ca-compare__mobile-kicker">{{ section.settings.column_2_kicker | escape }}</span>
+              {% endif %}
+              <strong>{{ section.settings.column_2_title | escape }}</strong>
+            </div>
+            <div class="ca-compare__mobile-value rte">{{ block.settings.value_2 }}</div>
+          </div>
+
+          {% if section.settings.column_count == '3' %}
+            <div class="ca-compare__mobile-option">
+              <div class="ca-compare__mobile-name">
+                {% if section.settings.column_3_kicker != blank %}
+                  <span class="ca-compare__mobile-kicker">{{ section.settings.column_3_kicker | escape }}</span>
+                {% endif %}
+                <strong>{{ section.settings.column_3_title | escape }}</strong>
+              </div>
+              <div class="ca-compare__mobile-value rte">{{ block.settings.value_3 }}</div>
+            </div>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
   </div>
 </section>
 
 {% stylesheet %}
-  .ca-compare__inner { min-width: 0; }
+  .ca-compare__inner {
+    min-width: 0;
+  }
 
   .ca-compare__intro {
     max-width: 980px;
-    margin: 0 auto 42px;
+    margin-bottom: 42px;
+  }
+
+  .ca-compare__intro--left {
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .ca-compare__intro--center {
+    margin-inline: auto;
     text-align: center;
+  }
+
+  .ca-compare__intro--right {
+    margin-left: auto;
+    text-align: right;
   }
 
   .ca-compare__eyebrow {
@@ -90,62 +153,70 @@
     text-transform: uppercase;
   }
 
-  .ca-compare__heading { margin: 0 0 14px; }
-  .ca-compare__description p { margin: 0; }
+  .ca-compare__heading {
+    margin: 0 0 14px;
+  }
 
-  .ca-compare__scroll {
-    min-width: 0;
-    overflow-x: auto;
-    scrollbar-width: thin;
+  .ca-compare__description p {
+    margin: 0;
   }
 
   .ca-compare__table {
     width: 100%;
-    min-width: 760px;
     border-top: 1px solid var(--ca-compare-line);
     border-left: 1px solid var(--ca-compare-line);
+    background: var(--ca-compare-cell-bg);
   }
 
   .ca-compare__row {
     display: grid;
     border-bottom: 1px solid var(--ca-compare-line);
+    background: var(--ca-compare-cell-bg);
+  }
+
+  .ca-compare__row--alt {
+    background: var(--ca-compare-alt-bg);
   }
 
   .ca-compare__table--2 .ca-compare__row {
-    grid-template-columns: minmax(150px, .72fr) repeat(2, minmax(230px, 1fr));
+    grid-template-columns: minmax(160px, .7fr) repeat(2, minmax(0, 1fr));
   }
 
   .ca-compare__table--3 .ca-compare__row {
-    grid-template-columns: minmax(160px, .72fr) repeat(3, minmax(220px, 1fr));
+    grid-template-columns: minmax(170px, .72fr) repeat(3, minmax(0, 1fr));
   }
 
   .ca-compare__row > * {
     min-width: 0;
-    padding: 20px 22px;
+    padding: var(--ca-compare-cell-padding);
     border-right: 1px solid var(--ca-compare-line);
   }
 
   .ca-compare__row--head > * {
-    padding-top: 26px;
-    padding-bottom: 26px;
+    padding-top: calc(var(--ca-compare-cell-padding) + 4px);
+    padding-bottom: calc(var(--ca-compare-cell-padding) + 4px);
+    background: var(--ca-compare-header-bg);
+    color: var(--ca-compare-header-text);
   }
 
   .ca-compare__metric {
+    display: flex;
+    align-items: flex-start;
     background: var(--ca-compare-label-bg);
+    color: var(--ca-compare-metric-text);
     font-size: 12px;
-    line-height: 1.35;
-    letter-spacing: .09em;
+    line-height: 1.4;
+    letter-spacing: .08em;
     text-transform: uppercase;
     font-weight: 700;
   }
 
   .ca-compare__metric--head {
-    display: flex;
     align-items: center;
   }
 
   .ca-compare__product {
-    background: transparent;
+    min-height: 100%;
   }
 
   .ca-compare__kicker {
@@ -163,33 +234,116 @@
     margin: 0;
   }
 
+  .ca-compare__value {
+    color: var(--ca-compare-body-text);
+    line-height: 1.55;
+  }
+
   .ca-compare__value :is(p, ul, ol) {
     font-size: inherit;
     line-height: inherit;
   }
 
-  .ca-compare__value p { margin: 0; }
-  .ca-compare__value strong { font-weight: 700; }
+  .ca-compare__value p {
+    margin: 0;
+  }
+
+  .ca-compare__value strong {
+    font-weight: 700;
+    color: var(--ca-compare-header-text);
+  }
+
+  .ca-compare__mobile {
+    display: none;
+  }
 
   @media screen and (max-width: 749px) {
     .ca-compare__intro {
       margin-bottom: 28px;
-      text-align: left;
     }
 
-    .ca-compare__table {
-      min-width: 820px;
+    .ca-compare__desktop {
+      display: none;
     }
 
-    .ca-compare__metric {
-      position: sticky;
-      left: 0;
-      z-index: 2;
-      box-shadow: 1px 0 0 var(--ca-compare-line);
+    .ca-compare__mobile {
+      display: block;
+      border-top: 1px solid var(--ca-compare-line);
     }
 
-    .ca-compare__row--head .ca-compare__metric {
-      z-index: 3;
+    .ca-compare__mobile-group {
+      border-bottom: 1px solid var(--ca-compare-line);
+      background: var(--ca-compare-cell-bg);
+    }
+
+    .ca-compare__mobile-group--alt {
+      background: var(--ca-compare-alt-bg);
+    }
+
+    .ca-compare__mobile-metric {
+      margin: 0;
+      padding: 14px 16px;
+      background: var(--ca-compare-label-bg);
+      color: var(--ca-compare-metric-text);
+      border-bottom: 1px solid var(--ca-compare-line);
+      font-size: 12px;
+      line-height: 1.4;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .ca-compare__mobile-option {
+      display: grid;
+      grid-template-columns: minmax(112px, .42fr) minmax(0, 1fr);
+      gap: 16px;
+      align-items: start;
+      padding: 16px;
+    }
+
+    .ca-compare__mobile-option + .ca-compare__mobile-option {
+      border-top: 1px solid var(--ca-compare-line);
+    }
+
+    .ca-compare__mobile-name {
+      color: var(--ca-compare-header-text);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .ca-compare__mobile-name strong {
+      display: block;
+    }
+
+    .ca-compare__mobile-kicker {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ca-compare-accent);
+      font-size: 9px;
+      line-height: 1.25;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .ca-compare__mobile-value {
+      color: var(--ca-compare-body-text);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .ca-compare__mobile-value p {
+      margin: 0;
+    }
+
+    .ca-compare__mobile-value strong {
+      color: var(--ca-compare-header-text);
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .ca-compare__mobile-option {
+      grid-template-columns: 1fr;
+      gap: 8px;
     }
   }
 {% endstylesheet %}
@@ -210,11 +364,34 @@
       ],
       "default": "page-width"
     },
-    { "type": "color", "id": "background_color", "label": "背景颜色", "default": "#FFFFFF" },
+
+    { "type": "header", "content": "布局" },
+    {
+      "type": "select",
+      "id": "intro_alignment",
+      "label": "标题区对齐",
+      "options": [
+        { "value": "left", "label": "左对齐" },
+        { "value": "center", "label": "居中" },
+        { "value": "right", "label": "右对齐" }
+      ],
+      "default": "center"
+    },
+    { "type": "range", "id": "cell_padding", "label": "表格单元格间距", "min": 12, "max": 36, "step": 2, "unit": "px", "default": 20 },
+
+    { "type": "header", "content": "颜色" },
+    { "type": "color", "id": "background_color", "label": "Section 背景", "default": "#FFFFFF" },
     { "type": "color", "id": "accent_color", "label": "重点颜色", "default": "#C7A85E" },
     { "type": "color", "id": "line_color", "label": "分隔线颜色", "default": "#D8D5CE" },
-    { "type": "color", "id": "label_background", "label": "左侧对比项背景", "default": "#F8F7F4" },
+    { "type": "color", "id": "label_background", "label": "对比项背景", "default": "#F8F7F4" },
+    { "type": "color", "id": "header_background", "label": "表头背景", "default": "#FFFFFF" },
+    { "type": "color", "id": "cell_background", "label": "内容行背景", "default": "#FFFFFF" },
+    { "type": "color", "id": "alternate_row_background", "label": "交替行背景", "default": "#FCFBF8" },
+    { "type": "color", "id": "header_text_color", "label": "表头文字颜色", "default": "#17191A" },
+    { "type": "color", "id": "body_text_color", "label": "内容文字颜色", "default": "#4F514E" },
+    { "type": "color", "id": "metric_text_color", "label": "对比项文字颜色", "default": "#17191A" },
 
+    { "type": "header", "content": "标题" },
     { "type": "text", "id": "eyebrow", "label": "小标题", "default": "COMPARISON" },
     {
       "type": "select",
