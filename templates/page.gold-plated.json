@@ -641,87 +641,6 @@
         "padding_bottom": 76
       }
     },
-    "plating_guide": {
-      "type": "content-guide",
-      "name": "内容指南",
-      "blocks": {
-        "thickness": {
-          "type": "item",
-          "settings": {
-            "value": "",
-            "heading": "Plating Thickness",
-            "description": "<p>Plating thickness can be specified according to product category, expected wear, target cost and collection positioning. Rather than using one fixed number for every product, the specification should match the intended use.</p>",
-            "meta_label": "Specification",
-            "meta_value": "Customizable by Project"
-          }
-        },
-        "ecoating": {
-          "type": "item",
-          "settings": {
-            "value": "",
-            "heading": "E-Coating Protection",
-            "description": "<p>A protective e-coating layer can be used after plating to help reduce direct exposure to moisture, skin oils and everyday abrasion, supporting a more stable surface finish.</p>",
-            "meta_label": "Purpose",
-            "meta_value": "Additional Surface Protection"
-          }
-        },
-        "nano": {
-          "type": "item",
-          "settings": {
-            "value": "",
-            "heading": "Nano Protective Finish",
-            "description": "<p>For selected products and finishing programs, additional protective surface treatment can be considered to support color retention and wear resistance while keeping the final appearance clean.</p>",
-            "meta_label": "Purpose",
-            "meta_value": "Wear & Color Support"
-          }
-        }
-      },
-      "block_order": [
-        "thickness",
-        "ecoating",
-        "nano"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "line_color": "#D8D5CE",
-        "hover_background_color": "#F8F7F4",
-        "intro_alignment": "center",
-        "eyebrow": "PLATING GUIDE",
-        "eyebrow_size": 12,
-        "eyebrow_color": "#C7A85E",
-        "heading": "Understanding Plated Jewelry Durability",
-        "heading_size": 42,
-        "heading_color": "#17191A",
-        "description": "<p>Plating performance depends on the full finishing system—not only the visible gold color.</p>",
-        "description_size": 16,
-        "description_color": "#5F615E",
-        "item_alignment": "left",
-        "item_title_size": 24,
-        "item_title_color": "#17191A",
-        "item_body_size": 16,
-        "item_body_color": "#4F514E",
-        "value_size": 12,
-        "value_color": "#C7A85E",
-        "meta_size": 12,
-        "meta_color": "#5F615E",
-        "item_image_shape": "square",
-        "item_image_size": 88,
-        "value_suffix": "",
-        "feature_image_ratio": "landscape",
-        "feature_alignment": "left",
-        "feature_heading": "How We Improve Plated Jewelry Durability",
-        "feature_title_size": 24,
-        "feature_title_color": "#17191A",
-        "feature_body": "<p>Durability is influenced by surface preparation, base material, plating specification, protective finishing and how the jewelry is worn. For each project, these factors should be considered together instead of relying on a single universal thickness claim.</p>",
-        "feature_body_size": 16,
-        "feature_body_color": "#4F514E",
-        "column_gap": 56,
-        "padding_top": 76,
-        "padding_bottom": 76,
-        "item_padding_inline": 20
-      }
-    },
     "plated_compare": {
       "type": "comparison-table",
       "name": "对比表格",
@@ -822,6 +741,285 @@
         "padding_bottom": 76,
         "hover_background": "#F8F2E5"
       }
+    },
+    "plating_durability_story": {
+      "type": "section",
+      "name": "镀层耐久图文",
+      "blocks": {
+        "story_copy": {
+          "type": "group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 24,
+            "width": "custom",
+            "custom_width": 48,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 16
+          },
+          "blocks": {
+            "tarnish": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Jewelry Tarnish—How Long Can Plated Jewelry Last?</h2><p>The service life of plated jewelry depends on the base material, surface preparation, plating specification, protective finishing and everyday wear. For projects that need additional surface protection, e-coating or nano protective finishes can be considered as part of the finishing system.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "#17191A",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "contact": {
+              "type": "button",
+              "settings": {
+                "label": "Contact Factory",
+                "link": "shopify://pages/contact",
+                "open_in_new_tab": false,
+                "style_class": "button",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
+                "link_text_color": "",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            },
+            "knowing": {
+              "type": "text",
+              "settings": {
+                "text": "<h2>Knowing Gold Plated Jewelry</h2><p>Gold plated jewelry gives brands broad flexibility in color, finish, base material and price positioning. Its durability is not determined by one universal number; the plating and protective finish should be specified around the product category, target market and expected wear.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "#17191A",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "tarnish",
+            "contact",
+            "knowing"
+          ]
+        },
+        "story_image": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image_ratio": "portrait",
+            "width": "custom",
+            "custom_width": 52,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "story_copy",
+        "story_image"
+      ],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "space-between",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 42,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#FFFFFF",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 72,
+        "padding-block-end": 20
+      }
+    },
+    "plating_process_gallery": {
+      "type": "section",
+      "name": "图片画廊",
+      "blocks": {
+        "gallery_1": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image_ratio": "landscape",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "gallery_2": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image_ratio": "landscape",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "gallery_3": {
+          "type": "image",
+          "settings": {
+            "link": "",
+            "image_ratio": "landscape",
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "gallery_1",
+        "gallery_2",
+        "gallery_3"
+      ],
+      "settings": {
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 12,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#FFFFFF",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 0,
+        "padding-block-end": 72
+      }
     }
   },
   "order": [
@@ -830,7 +1028,8 @@
     "plating_colors",
     "plating_capability",
     "why_choose",
-    "plating_guide",
+    "plating_durability_story",
+    "plating_process_gallery",
     "plated_compare",
     "contact"
   ]
