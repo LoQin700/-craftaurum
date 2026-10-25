@@ -351,7 +351,7 @@
         "accent_color": "#C7A85E",
         "line_color": "#D8D5CE",
         "label_background": "#EFECE5",
-        "header_background": "#FFFFFF",
+        "header_background": "#F3EEE3",
         "cell_background": "#FFFFFF",
         "alternate_row_background": "#FCFBF8",
         "header_text_color": "#17191A",
@@ -373,7 +373,8 @@
         "column_3_kicker": "FINE JEWELRY",
         "column_3_title": "Solid Gold",
         "padding_top": 76,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "hover_background": "#F8F2E5"
       }
     },
     "vermeil_guide": {
@@ -453,7 +454,8 @@
         "feature_body_color": "#4F514E",
         "column_gap": 56,
         "padding_top": 76,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "item_padding_inline": 20
       }
     },
     "why_choose": {
