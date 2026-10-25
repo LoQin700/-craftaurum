@@ -80,7 +80,8 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "hero_image": "shopify://shop_images/OEM-JEWELLERY.jpg"
       }
     },
     "oem_categories": {
@@ -91,7 +92,8 @@
           "settings": {
             "title": "Custom Fashion Jewelry",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/custom-fashion-jewelry.jpg"
           }
         },
         "cat_rings": {
@@ -99,7 +101,8 @@
           "settings": {
             "title": "Custom Rings",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/rings.jpg"
           }
         },
         "cat_earrings": {
@@ -107,7 +110,8 @@
           "settings": {
             "title": "Custom Earrings",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/gold-earrings.jpg"
           }
         },
         "cat_necklace": {
@@ -115,7 +119,8 @@
           "settings": {
             "title": "Custom Necklace",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/nameplate-necklace.jpg"
           }
         },
         "cat_bracelets": {
@@ -123,7 +128,8 @@
           "settings": {
             "title": "Custom Bracelets",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/chain-bracelets.jpg"
           }
         },
         "cat_artisanal": {
@@ -131,7 +137,8 @@
           "settings": {
             "title": "Artisanal Jewelry",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/French-jewelry-700x441.jpg"
           }
         }
       },
@@ -184,7 +191,8 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 48,
-        "padding_bottom": 48
+        "padding_bottom": 48,
+        "hero_image": "shopify://shop_images/jewelry-manufacturer.jpg"
       }
     },
     "oem_advantages": {
@@ -281,7 +289,8 @@
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 56,
-        "padding_bottom": 56
+        "padding_bottom": 56,
+        "image": "shopify://shop_images/custom-design-jewelry.jpg"
       }
     },
     "process_2": {
@@ -308,7 +317,8 @@
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 56,
-        "padding_bottom": 56
+        "padding_bottom": 56,
+        "image": "shopify://shop_images/3d-render-1.jpg"
       }
     },
     "process_3": {
@@ -335,7 +345,8 @@
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 56,
-        "padding_bottom": 56
+        "padding_bottom": 56,
+        "image": "shopify://shop_images/pearl-materials.jpg"
       }
     },
     "process_4": {
@@ -362,7 +373,8 @@
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 56,
-        "padding_bottom": 56
+        "padding_bottom": 56,
+        "image": "shopify://shop_images/cutting.jpg"
       }
     },
     "process_5": {
@@ -389,7 +401,8 @@
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 56,
-        "padding_bottom": 56
+        "padding_bottom": 56,
+        "image": "shopify://shop_images/jewelry-checking.jpg"
       }
     },
     "process_6": {
@@ -416,7 +429,8 @@
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 56,
-        "padding_bottom": 56
+        "padding_bottom": 56,
+        "image": "shopify://shop_images/custom-letters-jewelry.jpg"
       }
     },
     "contact": {
