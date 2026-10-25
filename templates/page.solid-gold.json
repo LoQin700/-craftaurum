@@ -352,7 +352,15 @@
         "column_3_kicker": "FASHION JEWELRY",
         "column_3_title": "Gold Plated Jewelry",
         "padding_top": 76,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "intro_alignment": "center",
+        "cell_padding": 20,
+        "header_background": "#FFFFFF",
+        "cell_background": "#FFFFFF",
+        "alternate_row_background": "#FCFBF8",
+        "header_text_color": "#17191A",
+        "body_text_color": "#4F514E",
+        "metric_text_color": "#17191A"
       }
     },
     "gold_colors": {
@@ -1242,7 +1250,31 @@
         "feature_body": "<p>Karat refers to the proportion of pure gold within an alloy. The right choice is not simply “higher is better”; it depends on design, wear expectations, target price and market positioning.</p>",
         "column_gap": 56,
         "padding_top": 76,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "intro_alignment": "center",
+        "eyebrow_size": 12,
+        "eyebrow_color": "#C7A85E",
+        "heading_size": 42,
+        "heading_color": "#17191A",
+        "description_size": 16,
+        "description_color": "#5F615E",
+        "item_alignment": "left",
+        "item_label_size": 12,
+        "item_label_color": "#C7A85E",
+        "item_title_size": 24,
+        "item_title_color": "#17191A",
+        "item_body_size": 16,
+        "item_body_color": "#4F514E",
+        "value_size": 12,
+        "value_color": "#C7A85E",
+        "meta_size": 12,
+        "meta_color": "#5F615E",
+        "image_background_color": "#F1EFEB",
+        "feature_alignment": "left",
+        "feature_title_size": 24,
+        "feature_title_color": "#17191A",
+        "feature_body_size": 16,
+        "feature_body_color": "#4F514E"
       }
     },
     "jewelry_types": {
