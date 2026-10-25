@@ -24,7 +24,8 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 24
+        "padding_bottom": 24,
+        "hero_image": "shopify://shop_images/custom-fashion-jewelry.jpg"
       }
     },
     "gallery_rings": {
@@ -32,15 +33,21 @@
       "blocks": {
         "photo_1": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/rings.jpg"
+          }
         },
         "photo_2": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/November-birthstone-rings-1.jpg"
+          }
         },
         "photo_3": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/diamond-gold-rings.jpg"
+          }
         }
       },
       "block_order": [
@@ -72,15 +79,21 @@
       "blocks": {
         "photo_1": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/gold-earrings.jpg"
+          }
         },
         "photo_2": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/pearl-earrings-2.jpg"
+          }
         },
         "photo_3": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/S1180-E.jpg"
+          }
         }
       },
       "block_order": [
@@ -112,15 +125,21 @@
       "blocks": {
         "photo_1": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/chain-bracelets.jpg"
+          }
         },
         "photo_2": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/pearl-bracelets.jpg"
+          }
         },
         "photo_3": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/butterfly-bracelets.jpg"
+          }
         }
       },
       "block_order": [
@@ -152,15 +171,21 @@
       "blocks": {
         "photo_1": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/nameplate-necklace.jpg"
+          }
         },
         "photo_2": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/butterfly-necklace.jpg"
+          }
         },
         "photo_3": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/pearl-necklace.jpg"
+          }
         }
       },
       "block_order": [
