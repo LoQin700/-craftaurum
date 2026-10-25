@@ -141,8 +141,8 @@
           "settings": {
             "image_ratio": "portrait",
             "width": 54,
-            "x_offset": 82,
-            "y_offset": -30,
+            "x_offset": 80,
+            "y_offset": -32,
             "rotation": 4,
             "z_index": 2
           }
