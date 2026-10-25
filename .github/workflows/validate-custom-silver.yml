@@ -1,0 +1,89 @@
+name: Validate Custom Silver Jewelry Page
+
+on:
+  push:
+    branches:
+      - feature/custom-silver-jewelry-page
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate template structure and images
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          path=Path('templates/page.custom-silver-jewelry.json')
+          text=path.read_text(encoding='utf-8')
+          page=json.loads(text[text.index('{'):])
+
+          expected=[
+            'main',
+            'silver_factory',
+            'tarnish_intro',
+            'gold_plated_tarnish',
+            'gold_vermeil_tarnish',
+            'lost_wax_casting',
+            'showcase_intro',
+            'silver_rings',
+            'silver_earrings',
+            'silver_necklaces',
+            'silver_bracelets',
+            'silver_factory_process',
+            'custom_options',
+            'contact'
+          ]
+          assert page['order']==expected
+
+          assert page['sections']['silver_factory']['type']=='jewelry-collections-overview'
+          assert page['sections']['gold_plated_tarnish']['type']=='image-text-feature'
+          assert page['sections']['gold_vermeil_tarnish']['type']=='image-text-feature'
+          assert page['sections']['lost_wax_casting']['type']=='image-text-feature'
+          assert page['sections']['silver_factory_process']['type']=='interactive-feature'
+
+          for sid in ['silver_rings','silver_earrings','silver_necklaces','silver_bracelets']:
+              sec=page['sections'][sid]
+              assert sec['type']=='content-cards'
+              assert len(sec['block_order'])==3
+
+          assert page['sections']['custom_options']['type']=='content-cards'
+          assert len(page['sections']['custom_options']['block_order'])==4
+
+          refs=[]
+          def walk(x):
+              if isinstance(x,dict):
+                  for k,v in x.items():
+                      if k in ('image','hero_image') and isinstance(v,str) and v:
+                          refs.append(v)
+                      walk(v)
+              elif isinstance(x,list):
+                  for v in x:
+                      walk(v)
+          walk(page)
+
+          assert len(refs)>=24, len(refs)
+          bad=[r for r in refs if not r.startswith('shopify://shop_images/')]
+          assert not bad, bad
+
+          print('Custom Silver page structure: PASS')
+          print('Image refs:', len(refs))
+          for r in refs:
+              print(' ',r)
+          PY
+
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
