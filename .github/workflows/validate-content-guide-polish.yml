@@ -1,0 +1,41 @@
+name: Validate Content Guide Polish
+
+on:
+  push:
+    branches:
+      - refactor/content-guide-polish
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  theme-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate content guide structure
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          text = Path('templates/page.solid-gold.json').read_text(encoding='utf-8')
+          page = json.loads(text[text.index('{'):])
+          guide = page['sections']['indexed_guide']
+          assert guide['type'] == 'content-guide'
+          assert 'item_label_size' not in guide['settings']
+          assert 'item_label_color' not in guide['settings']
+          assert 'image_background_color' not in guide['settings']
+          assert guide['settings']['hover_background_color'] == '#F8F7F4'
+          for bid in guide['block_order']:
+              assert 'index_label' not in guide['blocks'][bid]['settings']
+          print('Content guide polish structure: PASS')
+          PY
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
