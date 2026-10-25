@@ -91,7 +91,9 @@
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 100,
-        "padding-block-end": 72
+        "padding-block-end": 72,
+        "image_1": "shopify://shop_images/custom-fashion-jewelry.jpg",
+        "image_1_mobile": "shopify://shop_images/custom-fashion-jewelry.jpg"
       }
     },
     "brand_partners_BGpjWX": {
@@ -99,27 +101,39 @@
       "blocks": {
         "partner_yMQpe9": {
           "type": "partner",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Wholesale_Jewelry_Partner.jpg"
+          }
         },
         "partner_T9B8aG": {
           "type": "partner",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Wholesale_Jewelry_Partner-001.jpg"
+          }
         },
         "partner_bnyXfW": {
           "type": "partner",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Wholesale_Jewelry_Partner-002.jpg"
+          }
         },
         "partner_iED7tj": {
           "type": "partner",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Wholesale_Jewelry_Partner-003.jpg"
+          }
         },
         "partner_RidH9m": {
           "type": "partner",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Wholesale_Jewelry_Partner-004.jpg"
+          }
         },
         "partner_zmpKU4": {
           "type": "partner",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Wholesale_Jewelry_Partner-005.jpg"
+          }
         }
       },
       "block_order": [
@@ -165,7 +179,8 @@
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-unstyled",
         "padding_top": 32,
-        "padding_bottom": 32
+        "padding_bottom": 32,
+        "image": "shopify://shop_images/custom-sterling-silver-jewelry-3.jpg"
       }
     },
     "image_text_feature_YzURpA": {
@@ -187,7 +202,8 @@
         "cta_url": "shopify://collections/all",
         "cta_button_style": "button",
         "padding_top": 32,
-        "padding_bottom": 32
+        "padding_bottom": 32,
+        "image": "shopify://shop_images/solid-gold-jewelry.jpg"
       }
     },
     "image_collection_grid_home_2": {
@@ -199,7 +215,8 @@
           "settings": {
             "title": "Custom Rings",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/rings.jpg"
           }
         },
         "card_2": {
@@ -207,7 +224,8 @@
           "settings": {
             "title": "Custom Earrings",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/gold-earrings.jpg"
           }
         }
       },
@@ -243,7 +261,8 @@
           "settings": {
             "title": "Custom Bracelets",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/chain-bracelets.jpg"
           }
         },
         "card_4": {
@@ -251,7 +270,8 @@
           "settings": {
             "title": "Custom Necklaces",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/nameplate-necklace.jpg"
           }
         },
         "card_5": {
@@ -259,7 +279,8 @@
           "settings": {
             "title": "Artisan Jewelry",
             "collection": "",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/OEM-JEWELLERY.jpg"
           }
         }
       },
