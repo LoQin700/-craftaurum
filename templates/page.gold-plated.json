@@ -1,0 +1,837 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "t:names.title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {
+            "text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "intro_rich_text": {
+      "type": "section",
+      "name": "富文本开场",
+      "blocks": {
+        "intro_text": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Gold Plated Jewelry Manufacturer</h1><p>Craftaurum develops custom gold plated jewelry for brands that need flexible color, finish and pricing options across rings, earrings, necklaces, bracelets and other collection categories. Plating direction can be developed around your target look, base material, wear expectations and market position.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "#17191A",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "intro_text"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#FFFFFF",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 64,
+        "padding-block-end": 56
+      }
+    },
+    "why_choose": {
+      "type": "section",
+      "name": "Why Choose Craftaurum",
+      "blocks": {
+        "why_heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Why Choose Craftaurum for Custom Plated Jewelry?</h2><p>We support plating development as part of the complete jewelry manufacturing process, helping brands control color, finish, material direction and production consistency from sample to bulk order.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "#17191A",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "why_grid": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "gap": 16,
+            "width": "fill",
+            "width_mobile": "fill"
+          },
+          "blocks": {
+            "why_1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 8,
+                "width": "fill",
+                "width_mobile": "fill",
+                "background_media": "none",
+                "background_color": "#FFFFFF",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#D8D5CE",
+                "border_radius": 0,
+                "padding-block-start": 22,
+                "padding-block-end": 22,
+                "padding-inline-start": 22,
+                "padding-inline-end": 22
+              },
+              "blocks": {
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Custom Plating Development</h3><p>Build plating color and finish around your design direction, target market and product positioning.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#17191A",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text"
+              ]
+            },
+            "why_2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 8,
+                "width": "fill",
+                "width_mobile": "fill",
+                "background_media": "none",
+                "background_color": "#FFFFFF",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#D8D5CE",
+                "border_radius": 0,
+                "padding-block-start": 22,
+                "padding-block-end": 22,
+                "padding-inline-start": 22,
+                "padding-inline-end": 22
+              },
+              "blocks": {
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Consistent Color & Finish</h3><p>Coordinate surface preparation, plating and final QC for more consistent collection-level results.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#17191A",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text"
+              ]
+            },
+            "why_3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 8,
+                "width": "fill",
+                "width_mobile": "fill",
+                "background_media": "none",
+                "background_color": "#FFFFFF",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#D8D5CE",
+                "border_radius": 0,
+                "padding-block-start": 22,
+                "padding-block-end": 22,
+                "padding-inline-start": 22,
+                "padding-inline-end": 22
+              },
+              "blocks": {
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Flexible Base Materials</h3><p>Develop plated jewelry across suitable silver, brass and other compatible material directions.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#17191A",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text"
+              ]
+            },
+            "why_4": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 8,
+                "width": "fill",
+                "width_mobile": "fill",
+                "background_media": "none",
+                "background_color": "#FFFFFF",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#D8D5CE",
+                "border_radius": 0,
+                "padding-block-start": 22,
+                "padding-block-end": 22,
+                "padding-inline-start": 22,
+                "padding-inline-end": 22
+              },
+              "blocks": {
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Scalable Production</h3><p>Support sampling, lower-volume launches and repeat production as your collection grows.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#17191A",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text"
+              ]
+            }
+          },
+          "block_order": [
+            "why_1",
+            "why_2",
+            "why_3",
+            "why_4"
+          ]
+        }
+      },
+      "block_order": [
+        "why_heading",
+        "why_grid"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 36,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#F8F7F4",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 72,
+        "padding-block-end": 76
+      }
+    },
+    "contact": {
+      "type": "section",
+      "blocks": {
+        "contact_heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Start Your Custom Plated Jewelry Project</h2><p>Share your product type, target color, base material, quantity and finish requirements with our team.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "contact_form": {
+          "type": "contact-form",
+          "settings": {
+            "width": "custom",
+            "custom_width": 100,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100,
+            "background_color": "",
+            "input_style": "default",
+            "input_background_color": "{{ settings.color_palette.background }}",
+            "input_text_color": "{{ settings.color_palette.foreground }}",
+            "input_border_color": "{{ settings.color_palette.foreground }}",
+            "border_width": 1,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "submit-button": {
+              "type": "contact-form-submit-button",
+              "static": true,
+              "settings": {
+                "label": "Submit",
+                "style_class": "button",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "block_order": [
+        "contact_heading",
+        "contact_form"
+      ],
+      "name": "t:names.contact_form",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#FFFFFF",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 72,
+        "padding-block-end": 88
+      }
+    },
+    "plating_capability": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#F8F7F4",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "heading": "In-house Jewelry Plating Capability",
+        "heading_preset": "h2",
+        "heading_position": "content",
+        "subtitle": "",
+        "top_label": "",
+        "subtitle_preset": "h5",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Plating quality depends on more than color alone. We support controlled finishing around surface preparation, plating specification, color consistency and final protection so each collection can be developed with a clear target appearance and wear expectation.</p><p>For custom programs, plating direction can be coordinated with the base material, product construction and production quantity from the beginning of development.</p>",
+        "body_preset": "h5",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "cta_label": "Start Your Project",
+        "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "plating_colors": {
+      "type": "content-cards",
+      "name": "图文卡片",
+      "blocks": {
+        "rings": {
+          "type": "card",
+          "settings": {
+            "title": "18K Gold Plated",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "earrings": {
+          "type": "card",
+          "settings": {
+            "title": "20K Gold Plated",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "necklaces": {
+          "type": "card",
+          "settings": {
+            "title": "22K Gold Plated",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "bracelets": {
+          "type": "card",
+          "settings": {
+            "title": "Rose Gold Plated",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "diamond_rings": {
+          "type": "card",
+          "settings": {
+            "title": "White Gold Plated",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "pendants": {
+          "type": "card",
+          "settings": {
+            "title": "Black Plated",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "rings",
+        "earrings",
+        "necklaces",
+        "bracelets",
+        "diamond_rings",
+        "pendants"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "card_style": "standard",
+        "intro_button_label": "",
+        "intro_button_link": "",
+        "intro_button_style": "button",
+        "eyebrow": "",
+        "eyebrow_preset": "h5",
+        "heading": "Custom Plating Colors",
+        "heading_preset": "h2",
+        "description": "<p>Explore common plating color directions for custom jewelry development.</p>",
+        "body_preset": "h5",
+        "card_title_preset": "h4",
+        "desktop_layout": "grid",
+        "desktop_columns": "3",
+        "mobile_layout": "carousel",
+        "mobile_columns": "1",
+        "image_ratio": "square",
+        "gap": 20,
+        "padding_top": 72,
+        "padding_bottom": 76
+      }
+    },
+    "plating_guide": {
+      "type": "content-guide",
+      "name": "内容指南",
+      "blocks": {
+        "thickness": {
+          "type": "item",
+          "settings": {
+            "value": "",
+            "heading": "Plating Thickness",
+            "description": "<p>Plating thickness can be specified according to product category, expected wear, target cost and collection positioning. Rather than using one fixed number for every product, the specification should match the intended use.</p>",
+            "meta_label": "Specification",
+            "meta_value": "Customizable by Project"
+          }
+        },
+        "ecoating": {
+          "type": "item",
+          "settings": {
+            "value": "",
+            "heading": "E-Coating Protection",
+            "description": "<p>A protective e-coating layer can be used after plating to help reduce direct exposure to moisture, skin oils and everyday abrasion, supporting a more stable surface finish.</p>",
+            "meta_label": "Purpose",
+            "meta_value": "Additional Surface Protection"
+          }
+        },
+        "nano": {
+          "type": "item",
+          "settings": {
+            "value": "",
+            "heading": "Nano Protective Finish",
+            "description": "<p>For selected products and finishing programs, additional protective surface treatment can be considered to support color retention and wear resistance while keeping the final appearance clean.</p>",
+            "meta_label": "Purpose",
+            "meta_value": "Wear & Color Support"
+          }
+        }
+      },
+      "block_order": [
+        "thickness",
+        "ecoating",
+        "nano"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "line_color": "#D8D5CE",
+        "hover_background_color": "#F8F7F4",
+        "intro_alignment": "center",
+        "eyebrow": "PLATING GUIDE",
+        "eyebrow_size": 12,
+        "eyebrow_color": "#C7A85E",
+        "heading": "Understanding Plated Jewelry Durability",
+        "heading_size": 42,
+        "heading_color": "#17191A",
+        "description": "<p>Plating performance depends on the full finishing system—not only the visible gold color.</p>",
+        "description_size": 16,
+        "description_color": "#5F615E",
+        "item_alignment": "left",
+        "item_title_size": 24,
+        "item_title_color": "#17191A",
+        "item_body_size": 16,
+        "item_body_color": "#4F514E",
+        "value_size": 12,
+        "value_color": "#C7A85E",
+        "meta_size": 12,
+        "meta_color": "#5F615E",
+        "item_image_shape": "square",
+        "item_image_size": 88,
+        "value_suffix": "",
+        "feature_image_ratio": "landscape",
+        "feature_alignment": "left",
+        "feature_heading": "How We Improve Plated Jewelry Durability",
+        "feature_title_size": 24,
+        "feature_title_color": "#17191A",
+        "feature_body": "<p>Durability is influenced by surface preparation, base material, plating specification, protective finishing and how the jewelry is worn. For each project, these factors should be considered together instead of relying on a single universal thickness claim.</p>",
+        "feature_body_size": 16,
+        "feature_body_color": "#4F514E",
+        "column_gap": 56,
+        "padding_top": 76,
+        "padding_bottom": 76,
+        "item_padding_inline": 20
+      }
+    },
+    "plated_compare": {
+      "type": "comparison-table",
+      "name": "对比表格",
+      "blocks": {
+        "base_material": {
+          "type": "row",
+          "settings": {
+            "label": "Base Material",
+            "value_1": "<p>Brass, silver or another compatible base metal</p>",
+            "value_2": "<p>925 Sterling Silver</p>",
+            "value_3": "<p>Gold alloy throughout the piece</p>"
+          }
+        },
+        "gold_structure": {
+          "type": "row",
+          "settings": {
+            "label": "Gold Structure",
+            "value_1": "<p>Gold layer over base metal</p>",
+            "value_2": "<p>Gold layer over sterling silver</p>",
+            "value_3": "<p>Gold throughout the piece</p>"
+          }
+        },
+        "thickness": {
+          "type": "row",
+          "settings": {
+            "label": "Gold Thickness",
+            "value_1": "<p>Customizable by project requirement</p>",
+            "value_2": "<p>Substantial gold layer over sterling silver</p>",
+            "value_3": "<p>Not applicable</p>"
+          }
+        },
+        "durability": {
+          "type": "row",
+          "settings": {
+            "label": "Durability",
+            "value_1": "<p><strong>Variable</strong><br/>Depends on plating specification, protection and wear</p>",
+            "value_2": "<p><strong>Medium–High</strong><br/>Premium plated construction with proper care</p>",
+            "value_3": "<p><strong>Highest</strong><br/>Designed for long-term fine jewelry wear</p>"
+          }
+        },
+        "positioning": {
+          "type": "row",
+          "settings": {
+            "label": "Price Position",
+            "value_1": "<p>Fashion / accessible</p>",
+            "value_2": "<p>Premium accessible</p>",
+            "value_3": "<p>Fine jewelry / premium</p>"
+          }
+        },
+        "best_for": {
+          "type": "row",
+          "settings": {
+            "label": "Best For",
+            "value_1": "<p>Trend-led, flexible and higher-volume collections</p>",
+            "value_2": "<p>Premium silver collections with a gold finish</p>",
+            "value_3": "<p>High-value signature and long-term collections</p>"
+          }
+        }
+      },
+      "block_order": [
+        "base_material",
+        "gold_structure",
+        "thickness",
+        "durability",
+        "positioning",
+        "best_for"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "intro_alignment": "center",
+        "cell_padding": 20,
+        "background_color": "#F8F7F4",
+        "accent_color": "#C7A85E",
+        "line_color": "#D8D5CE",
+        "label_background": "#EFECE5",
+        "header_background": "#F3EEE3",
+        "cell_background": "#FFFFFF",
+        "alternate_row_background": "#FCFBF8",
+        "header_text_color": "#17191A",
+        "body_text_color": "#4F514E",
+        "metric_text_color": "#17191A",
+        "eyebrow": "",
+        "eyebrow_preset": "h5",
+        "heading": "Gold Plated VS Gold Vermeil VS Solid Gold",
+        "heading_preset": "h2",
+        "description": "<p>Compare three common material directions by construction, durability and collection positioning.</p>",
+        "body_preset": "h5",
+        "column_count": "3",
+        "comparison_label": "Comparison",
+        "column_title_preset": "h4",
+        "column_1_kicker": "FASHION / FLEXIBLE",
+        "column_1_title": "Gold Plated",
+        "column_2_kicker": "STERLING SILVER BASE",
+        "column_2_title": "Gold Vermeil",
+        "column_3_kicker": "FINE JEWELRY",
+        "column_3_title": "Solid Gold",
+        "padding_top": 76,
+        "padding_bottom": 76,
+        "hover_background": "#F8F2E5"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "intro_rich_text",
+    "plating_colors",
+    "plating_capability",
+    "why_choose",
+    "plating_guide",
+    "plated_compare",
+    "contact"
+  ]
+}
