@@ -132,7 +132,8 @@
             "x_offset": -72,
             "y_offset": 24,
             "rotation": -5,
-            "z_index": 1
+            "z_index": 1,
+            "image": "shopify://shop_images/gold-vermeil-earrings.jpg"
           }
         },
         "image_2": {
@@ -143,7 +144,8 @@
             "x_offset": 80,
             "y_offset": -32,
             "rotation": 4,
-            "z_index": 2
+            "z_index": 2,
+            "image": "shopify://shop_images/gold-vermeil-necklace.jpg"
           }
         }
       },
@@ -187,7 +189,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/rings.jpg"
           }
         },
         "earrings": {
@@ -197,7 +200,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/gold-vermeil-earrings.jpg"
           }
         },
         "necklaces": {
@@ -207,7 +211,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/gold-vermeil-necklace.jpg"
           }
         },
         "bracelets": {
@@ -217,7 +222,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/pearl-bracelets.jpg"
           }
         },
         "diamond_rings": {
@@ -227,7 +233,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/diamond-gold-rings.jpg"
           }
         },
         "pendants": {
@@ -237,7 +244,8 @@
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/S1028-N.jpg"
           }
         }
       },
@@ -378,7 +386,8 @@
             "heading": "Gold Vermeil Jewelry",
             "description": "<p>Gold vermeil is a premium plated-jewelry construction that uses sterling silver as the base and a more substantial gold layer than conventional gold plating.</p>",
             "meta_label": "Structure",
-            "meta_value": "Sterling Silver + Gold Layer"
+            "meta_value": "Sterling Silver + Gold Layer",
+            "image": "shopify://shop_images/gold-vermeil-earrings.jpg"
           }
         },
         "base_material": {
@@ -388,7 +397,8 @@
             "heading": "Base Material",
             "description": "<p>Sterling silver provides the precious-metal foundation of vermeil jewelry. It supports a premium feel, reliable manufacturing and a clear material story for the finished collection.</p>",
             "meta_label": "Core Material",
-            "meta_value": "Sterling Silver"
+            "meta_value": "Sterling Silver",
+            "image": "shopify://shop_images/custom-sterling-silver-jewelry-3.jpg"
           }
         },
         "thickness": {
@@ -398,7 +408,8 @@
             "heading": "Plating Thickness",
             "description": "<p>Vermeil is distinguished from ordinary gold-plated jewelry by its sterling silver base and a substantially thicker gold layer. Plating specifications can be developed around color, karat and wear expectations.</p>",
             "meta_label": "Common Direction",
-            "meta_value": "Premium Gold Finish"
+            "meta_value": "Premium Gold Finish",
+            "image": "shopify://shop_images/plating-jewelry-400x400.jpg"
           }
         }
       },
@@ -446,7 +457,8 @@
         "feature_body_color": "#4F514E",
         "column_gap": 56,
         "padding_top": 76,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "feature_image": "shopify://shop_images/gold-vermeil-necklace.jpg"
       }
     },
     "why_choose": {
