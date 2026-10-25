@@ -1,0 +1,50 @@
+name: Validate Silver Triptych Showcase
+
+on:
+  push:
+    branches:
+      - refactor/custom-silver-showcase-triptych
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate template structure
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          text=Path('templates/page.custom-silver-jewelry.json').read_text(encoding='utf-8')
+          page=json.loads(text[text.index('{'):])
+          assert 'silver_showcase_rows' in page['sections']
+          for old in ['silver_rings','silver_earrings','silver_necklaces','silver_bracelets']:
+              assert old not in page['sections']
+              assert old not in page['order']
+          sec=page['sections']['silver_showcase_rows']
+          assert sec['type']=='section'
+          assert len(sec['block_order'])==4
+          for rid in sec['block_order']:
+              row=sec['blocks'][rid]
+              assert row['type']=='group'
+              assert len(row['block_order'])==2
+              image_group=row['blocks'][row['block_order'][0]]
+              assert image_group['type']=='group'
+              assert len(image_group['block_order'])==3
+              for iid in image_group['block_order']:
+                  ref=image_group['blocks'][iid]['settings']['image']
+                  assert ref.startswith('shopify://shop_images/')
+          print('Silver triptych showcase: PASS')
+          PY
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
