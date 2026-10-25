@@ -1154,13 +1154,13 @@
       }
     },
     "indexed_guide": {
-      "type": "indexed-content-guide",
+      "type": "content-guide",
       "blocks": {
         "k10": {
           "type": "item",
           "settings": {
             "image": "shopify://shop_images/custom_stone_jewelry.jpg",
-            "index_label": "10K Gold",
+            "index_label": "",
             "value": "41.7%",
             "heading": "10K Gold Jewelry",
             "description": "<p>With the lowest gold content in this guide, 10K offers greater hardness and durability. It is well suited to frequent wear and more cost-conscious fine-jewelry programs.</p>",
@@ -1171,7 +1171,7 @@
         "k14": {
           "type": "item",
           "settings": {
-            "index_label": "14K Gold",
+            "index_label": "",
             "value": "58.5%",
             "heading": "14K Gold Jewelry",
             "description": "<p>A popular middle ground that balances recognizable gold value with practical durability, making it versatile across rings, earrings and necklaces.</p>",
@@ -1182,7 +1182,7 @@
         "k18": {
           "type": "item",
           "settings": {
-            "index_label": "18K Gold",
+            "index_label": "",
             "value": "75%",
             "heading": "18K Gold Jewelry",
             "description": "<p>A premium fine-jewelry standard with richer gold color and higher gold content while retaining practical alloy strength for many jewelry applications.</p>",
@@ -1193,7 +1193,7 @@
         "k20": {
           "type": "item",
           "settings": {
-            "index_label": "20K Gold",
+            "index_label": "",
             "value": "83.3%",
             "heading": "20K Gold Jewelry",
             "description": "<p>A higher-purity option with deeper gold character, positioned between 18K and 24K while requiring more consideration around softness and construction.</p>",
@@ -1204,7 +1204,7 @@
         "k24": {
           "type": "item",
           "settings": {
-            "index_label": "24K Gold",
+            "index_label": "",
             "value": "99.9%",
             "heading": "24K Gold Jewelry",
             "description": "<p>Nearly pure gold with the richest natural gold color and highest gold content, but also the greatest softness and malleability.</p>",
@@ -1220,7 +1220,7 @@
         "k20",
         "k24"
       ],
-      "name": "索引内容指南",
+      "name": "内容指南",
       "settings": {
         "section_width": "page-width",
         "background_color": "#ffffff",
@@ -1235,16 +1235,15 @@
         "item_title_preset": "h3",
         "item_image_shape": "square",
         "item_image_size": 88,
-        "index_aria_label": "Gold karat guide navigation",
         "value_suffix": "GOLD",
         "feature_image": "shopify://shop_images/plated_jewelry.jpg",
-        "feature_image_position": "left",
         "feature_heading": "What Does Karat Mean?",
         "feature_title_preset": "h3",
         "feature_body": "<p>Karat refers to the proportion of pure gold within an alloy. The right choice is not simply “higher is better”; it depends on design, wear expectations, target price and market positioning.</p>",
         "column_gap": 56,
         "padding_top": 76,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "feature_image_ratio": "landscape"
       }
     },
     "jewelry_types": {
