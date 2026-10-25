@@ -311,266 +311,6 @@
       },
       "name": "银饰展示标题"
     },
-    "silver_rings": {
-      "type": "content-cards",
-      "blocks": {
-        "card_1": {
-          "type": "card",
-          "settings": {
-            "title": "Stone Silver Rings",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/November-birthstone-rings-1.jpg"
-          }
-        },
-        "card_2": {
-          "type": "card",
-          "settings": {
-            "title": "Diamond Silver Rings",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/S1158-R.jpg"
-          }
-        },
-        "card_3": {
-          "type": "card",
-          "settings": {
-            "title": "Gold Plated Silver Rings",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/plated-pearl-rings.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "card_1",
-        "card_2",
-        "card_3"
-      ],
-      "name": "图文卡片",
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
-        "eyebrow": "",
-        "eyebrow_preset": "h5",
-        "heading": "Sterling Silver Rings",
-        "heading_preset": "h2",
-        "description": "<p>Custom silver rings can be developed around gemstone setting, plated finishes and clean metal-led designs.</p>",
-        "body_preset": "h5",
-        "card_title_preset": "h4",
-        "desktop_layout": "grid",
-        "desktop_columns": "3",
-        "mobile_layout": "carousel",
-        "mobile_columns": "1",
-        "image_ratio": "square",
-        "gap": 20,
-        "padding_top": 28,
-        "padding_bottom": 40
-      }
-    },
-    "silver_earrings": {
-      "type": "content-cards",
-      "blocks": {
-        "card_1": {
-          "type": "card",
-          "settings": {
-            "title": "Seasonal Silver Earrings",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/Christmas-earrings-set.jpg"
-          }
-        },
-        "card_2": {
-          "type": "card",
-          "settings": {
-            "title": "Gold Plated Earrings",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/YE25928.jpg"
-          }
-        },
-        "card_3": {
-          "type": "card",
-          "settings": {
-            "title": "Gemstone Earrings",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/YE26053.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "card_1",
-        "card_2",
-        "card_3"
-      ],
-      "name": "图文卡片",
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
-        "eyebrow": "",
-        "eyebrow_preset": "h5",
-        "heading": "Sterling Silver Earrings",
-        "heading_preset": "h2",
-        "description": "<p>Develop silver earrings across seasonal, plated, gemstone and pearl-led directions.</p>",
-        "body_preset": "h5",
-        "card_title_preset": "h4",
-        "desktop_layout": "grid",
-        "desktop_columns": "3",
-        "mobile_layout": "carousel",
-        "mobile_columns": "1",
-        "image_ratio": "square",
-        "gap": 20,
-        "padding_top": 28,
-        "padding_bottom": 40
-      }
-    },
-    "silver_necklaces": {
-      "type": "content-cards",
-      "blocks": {
-        "card_1": {
-          "type": "card",
-          "settings": {
-            "title": "Custom Silver Necklace",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/S1028-N.jpg"
-          }
-        },
-        "card_2": {
-          "type": "card",
-          "settings": {
-            "title": "Nameplate Necklace",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/nameplate-necklace.jpg"
-          }
-        },
-        "card_3": {
-          "type": "card",
-          "settings": {
-            "title": "Pearl Silver Necklace",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/pearl-necklace.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "card_1",
-        "card_2",
-        "card_3"
-      ],
-      "name": "图文卡片",
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
-        "eyebrow": "",
-        "eyebrow_preset": "h5",
-        "heading": "Sterling Silver Necklace & Pendants",
-        "heading_preset": "h2",
-        "description": "<p>From delicate chains to personalized and pearl-led pendants, silver offers a flexible base for custom necklace collections.</p>",
-        "body_preset": "h5",
-        "card_title_preset": "h4",
-        "desktop_layout": "grid",
-        "desktop_columns": "3",
-        "mobile_layout": "carousel",
-        "mobile_columns": "1",
-        "image_ratio": "square",
-        "gap": 20,
-        "padding_top": 28,
-        "padding_bottom": 40
-      }
-    },
-    "silver_bracelets": {
-      "type": "content-cards",
-      "blocks": {
-        "card_1": {
-          "type": "card",
-          "settings": {
-            "title": "Link Chain Bracelet",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/chain-bracelets.jpg"
-          }
-        },
-        "card_2": {
-          "type": "card",
-          "settings": {
-            "title": "Pearl Bracelet",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/pearl-bracelets.jpg"
-          }
-        },
-        "card_3": {
-          "type": "card",
-          "settings": {
-            "title": "Custom Silver Bracelet",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/YB7671.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "card_1",
-        "card_2",
-        "card_3"
-      ],
-      "name": "图文卡片",
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
-        "eyebrow": "",
-        "eyebrow_preset": "h5",
-        "heading": "Sterling Silver Bracelets",
-        "heading_preset": "h2",
-        "description": "<p>Build bracelet collections with link chains, pearl details, stones and plated finishes.</p>",
-        "body_preset": "h5",
-        "card_title_preset": "h4",
-        "desktop_layout": "grid",
-        "desktop_columns": "3",
-        "mobile_layout": "carousel",
-        "mobile_columns": "1",
-        "image_ratio": "square",
-        "gap": 20,
-        "padding_top": 28,
-        "padding_bottom": 40
-      }
-    },
     "silver_factory_process": {
       "type": "interactive-feature",
       "blocks": {
@@ -805,6 +545,1070 @@
         "padding-block-start": 72,
         "padding-block-end": 88
       }
+    },
+    "silver_showcase_rows": {
+      "type": "section",
+      "name": "银饰三联图展示",
+      "blocks": {
+        "rings_row": {
+          "type": "group",
+          "name": "Sterling Silver Rings",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 40,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "sterling_silver_rings_images": {
+              "type": "group",
+              "settings": {
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 14,
+                "width": "custom",
+                "custom_width": 52,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "sterling_silver_rings_1": {
+                  "type": "image",
+                  "settings": {
+                    "link": "",
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/November-birthstone-rings-1.jpg"
+                  },
+                  "blocks": {}
+                },
+                "sterling_silver_rings_2": {
+                  "type": "image",
+                  "settings": {
+                    "link": "",
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/S1158-R.jpg"
+                  },
+                  "blocks": {}
+                },
+                "sterling_silver_rings_3": {
+                  "type": "image",
+                  "settings": {
+                    "link": "",
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/plated-pearl-rings.jpg"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "sterling_silver_rings_1",
+                "sterling_silver_rings_2",
+                "sterling_silver_rings_3"
+              ]
+            },
+            "sterling_silver_rings_copy": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "custom",
+                "custom_width": 48,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "sterling_silver_rings_title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h2>Sterling Silver Rings</h2>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h2",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "sterling_silver_rings_body": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Custom silver rings can be developed around gemstone setting, plated finishes and clean metal-led designs, including stone rings, diamond-set styles and gold plated silver directions.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "sterling_silver_rings_title",
+                "sterling_silver_rings_body"
+              ]
+            }
+          },
+          "block_order": [
+            "sterling_silver_rings_images",
+            "sterling_silver_rings_copy"
+          ]
+        },
+        "earrings_row": {
+          "type": "group",
+          "name": "Sterling Silver Earrings",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 40,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "sterling_silver_earrings_images": {
+              "type": "group",
+              "settings": {
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 14,
+                "width": "custom",
+                "custom_width": 52,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "sterling_silver_earrings_1": {
+                  "type": "image",
+                  "settings": {
+                    "link": "",
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/Christmas-earrings-set.jpg"
+                  },
+                  "blocks": {}
+                },
+                "sterling_silver_earrings_2": {
+                  "type": "image",
+                  "settings": {
+                    "link": "",
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/YE25928.jpg"
+                  },
+                  "blocks": {}
+                },
+                "sterling_silver_earrings_3": {
+                  "type": "image",
+                  "settings": {
+                    "link": "",
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/YE26053.jpg"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "sterling_silver_earrings_1",
+                "sterling_silver_earrings_2",
+                "sterling_silver_earrings_3"
+              ]
+            },
+            "sterling_silver_earrings_copy": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "custom",
+                "custom_width": 48,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "sterling_silver_earrings_title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h2>Sterling Silver Earrings</h2>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h2",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "sterling_silver_earrings_body": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Develop silver earrings across seasonal, plated, gemstone and pearl-led directions for both everyday and statement collections.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "sterling_silver_earrings_title",
+                "sterling_silver_earrings_body"
+              ]
+            }
+          },
+          "block_order": [
+            "sterling_silver_earrings_images",
+            "sterling_silver_earrings_copy"
+          ]
+        },
+        "necklaces_row": {
+          "type": "group",
+          "name": "Sterling Silver Necklace & Pendants",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 40,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "sterling_silver_necklace_pendants_images": {
+              "type": "group",
+              "settings": {
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 14,
+                "width": "custom",
+                "custom_width": 52,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "sterling_silver_necklace_pendants_1": {
+                  "type": "image",
+                  "settings": {
+                    "link": "",
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/S1028-N.jpg"
+                  },
+                  "blocks": {}
+                },
+                "sterling_silver_necklace_pendants_2": {
+                  "type": "image",
+                  "settings": {
+                    "link": "",
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/nameplate-necklace.jpg"
+                  },
+                  "blocks": {}
+                },
+                "sterling_silver_necklace_pendants_3": {
+                  "type": "image",
+                  "settings": {
+                    "link": "",
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/pearl-necklace.jpg"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "sterling_silver_necklace_pendants_1",
+                "sterling_silver_necklace_pendants_2",
+                "sterling_silver_necklace_pendants_3"
+              ]
+            },
+            "sterling_silver_necklace_pendants_copy": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "custom",
+                "custom_width": 48,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "sterling_silver_necklace_pendants_title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h2>Sterling Silver Necklace & Pendants</h2>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h2",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "sterling_silver_necklace_pendants_body": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>From delicate chains to personalized and pearl-led pendants, sterling silver offers a flexible base for custom necklace collections.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "sterling_silver_necklace_pendants_title",
+                "sterling_silver_necklace_pendants_body"
+              ]
+            }
+          },
+          "block_order": [
+            "sterling_silver_necklace_pendants_images",
+            "sterling_silver_necklace_pendants_copy"
+          ]
+        },
+        "bracelets_row": {
+          "type": "group",
+          "name": "Sterling Silver Bracelets",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 40,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "sterling_silver_bracelets_images": {
+              "type": "group",
+              "settings": {
+                "content_direction": "row",
+                "vertical_on_mobile": false,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 14,
+                "width": "custom",
+                "custom_width": 52,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "sterling_silver_bracelets_1": {
+                  "type": "image",
+                  "settings": {
+                    "link": "",
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/chain-bracelets.jpg"
+                  },
+                  "blocks": {}
+                },
+                "sterling_silver_bracelets_2": {
+                  "type": "image",
+                  "settings": {
+                    "link": "",
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/pearl-bracelets.jpg"
+                  },
+                  "blocks": {}
+                },
+                "sterling_silver_bracelets_3": {
+                  "type": "image",
+                  "settings": {
+                    "link": "",
+                    "image_ratio": "square",
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0,
+                    "image": "shopify://shop_images/YB7671.jpg"
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "sterling_silver_bracelets_1",
+                "sterling_silver_bracelets_2",
+                "sterling_silver_bracelets_3"
+              ]
+            },
+            "sterling_silver_bracelets_copy": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 12,
+                "width": "custom",
+                "custom_width": 48,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "sterling_silver_bracelets_title": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h2>Sterling Silver Bracelets</h2>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "h2",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                },
+                "sterling_silver_bracelets_body": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Build bracelet collections with link chains, pearl details, stones and plated finishes to suit different design directions and price points.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "sterling_silver_bracelets_title",
+                "sterling_silver_bracelets_body"
+              ]
+            }
+          },
+          "block_order": [
+            "sterling_silver_bracelets_images",
+            "sterling_silver_bracelets_copy"
+          ]
+        }
+      },
+      "block_order": [
+        "rings_row",
+        "earrings_row",
+        "necklaces_row",
+        "bracelets_row"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 64,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#ffffff",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 24,
+        "padding-block-end": 72
+      }
     }
   },
   "order": [
@@ -815,10 +1619,7 @@
     "gold_vermeil_tarnish",
     "lost_wax_casting",
     "showcase_intro",
-    "silver_rings",
-    "silver_earrings",
-    "silver_necklaces",
-    "silver_bracelets",
+    "silver_showcase_rows",
     "silver_factory_process",
     "custom_options",
     "contact"
