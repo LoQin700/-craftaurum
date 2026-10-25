@@ -80,7 +80,8 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "hero_image": "shopify://shop_images/nameplate-necklace.jpg"
       }
     },
     "horizontal_cta_Pwad7F": {
@@ -117,7 +118,8 @@
             "description": "<p>Develop pendant-led designs with flexible shape, scale, stone and branding possibilities.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/S1028-N.jpg"
           }
         },
         "card_WtWhNM": {
@@ -127,7 +129,8 @@
             "description": "<p>Explore pearl proportions, chain combinations and metal details for refined necklace collections.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/pearl-necklace.jpg"
           }
         },
         "card_CfDadY": {
@@ -137,7 +140,8 @@
             "description": "<p>Create close-fitting necklace styles with different chain, metal and decorative directions.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/butterfly-necklace.jpg"
           }
         },
         "card_PcNzcH": {
@@ -147,7 +151,8 @@
             "description": "<p>Translate brand symbols, textures and graphic references into recognizable necklace concepts.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "",
+            "image": "shopify://shop_images/custom-inital-necklace.jpg"
           }
         }
       },
@@ -187,28 +192,32 @@
           "type": "item",
           "settings": {
             "title": "Customization Options",
-            "description": "<p>Review logo, color, metal, texture, stone and finish options around the intended brand direction.</p>"
+            "description": "<p>Review logo, color, metal, texture, stone and finish options around the intended brand direction.</p>",
+            "image": "shopify://shop_images/custom-design-jewelry.jpg"
           }
         },
         "item_9zbQMA": {
           "type": "item",
           "settings": {
             "title": "Chain & Pendant Construction",
-            "description": "<p>Consider chain proportions, pendant scale, connection points and overall balance during development.</p>"
+            "description": "<p>Consider chain proportions, pendant scale, connection points and overall balance during development.</p>",
+            "image": "shopify://shop_images/cutting.jpg"
           }
         },
         "item_EFeVgi": {
           "type": "item",
           "settings": {
             "title": "Brand-Led Design",
-            "description": "<p>Translate references and brand values into necklace details that feel deliberate rather than generic.</p>"
+            "description": "<p>Translate references and brand values into necklace details that feel deliberate rather than generic.</p>",
+            "image": "shopify://shop_images/jewelry-design.jpg"
           }
         },
         "item_XTCWJt": {
           "type": "item",
           "settings": {
             "title": "Production Coordination",
-            "description": "<p>Use samples and specifications to align construction, finish and timing before repeat production.</p>"
+            "description": "<p>Use samples and specifications to align construction, finish and timing before repeat production.</p>",
+            "image": "shopify://shop_images/checking.jpg"
           }
         }
       },
@@ -256,7 +265,8 @@
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 32,
-        "padding_bottom": 32
+        "padding_bottom": 32,
+        "image": "shopify://shop_images/custom-inital-necklace.jpg"
       }
     },
     "icon_with_text_support": {
