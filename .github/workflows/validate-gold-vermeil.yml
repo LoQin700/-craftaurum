@@ -1,0 +1,43 @@
+name: Validate Gold Vermeil Page
+
+on:
+  push:
+    branches:
+      - feature/gold-vermeil-page
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  theme-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Gold Vermeil template structure
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          text = Path('templates/page.gold-vermeil.json').read_text(encoding='utf-8')
+          page = json.loads(text[text.index('{'):])
+          expected = [
+              'main','intro_rich_text','unlock_business','vermeil_types',
+              'vermeil_compare','vermeil_guide','why_choose','contact'
+          ]
+          assert page['order'] == expected
+          assert page['sections']['unlock_business']['type'] == 'overlap-image-text'
+          assert len(page['sections']['unlock_business']['block_order']) == 2
+          assert page['sections']['vermeil_compare']['type'] == 'comparison-table'
+          assert page['sections']['vermeil_guide']['type'] == 'content-guide'
+          assert page['sections']['why_choose']['type'] == 'section'
+          print('Gold Vermeil template structure: PASS')
+          PY
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
