@@ -1,0 +1,80 @@
+name: Validate Content Guide V2
+
+on:
+  push:
+    branches:
+      - refactor/content-guide-v2
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate content guide schema and Festival settings
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          liquid=Path('sections/content-guide.liquid').read_text(encoding='utf-8')
+          schema=json.loads(liquid.split('{% schema %}',1)[1].split('{% endschema %}',1)[0].strip())
+          defs={s.get('id'):s for s in schema.get('settings',[]) if s.get('id')}
+
+          assert defs['intro_style']['type']=='select'
+          assert {o['value'] for o in defs['intro_style']['options']}=={'style_1','style_2'}
+          assert defs['item_layout']['type']=='select'
+          assert {o['value'] for o in defs['item_layout']['options']}=={'style_1','style_2'}
+          assert defs['show_index']['type']=='checkbox'
+          assert defs['intro_style']['default']=='style_1'
+          assert defs['item_layout']['default']=='style_1'
+          assert defs['show_index']['default'] is False
+
+          text=Path('templates/page.festival-jewelry.json').read_text(encoding='utf-8')
+          page=json.loads(text[text.index('{'):])
+          sec=page['sections']['customization_guide']
+          s=sec['settings']
+          assert s['intro_style']=='style_2'
+          assert s['item_layout']=='style_2'
+          assert s['show_index'] is True
+          assert s['heading_size']==35
+          assert s['column_gap']==64
+
+          errors=[]
+          for key,value in s.items():
+              spec=defs.get(key)
+              if not spec:
+                  continue
+              if spec.get('type')=='range':
+                  lo,hi,step=spec['min'],spec['max'],spec['step']
+                  if value < lo or value > hi:
+                      errors.append(f'{key}={value} outside {lo}..{hi}')
+                  else:
+                      q=(value-lo)/step
+                      if abs(q-round(q)) > 1e-9:
+                          errors.append(f'{key}={value} not aligned to step {step} from min {lo}')
+              elif spec.get('type')=='select':
+                  allowed={o['value'] for o in spec.get('options',[])}
+                  if value not in allowed:
+                      errors.append(f'{key}={value!r} not in {sorted(allowed)}')
+
+          assert not errors, '\n'.join(errors)
+          assert 'ca-content-guide__intro--style_2' in liquid
+          assert 'ca-content-guide__item-layout--style_2' in liquid
+          assert 'ca-content-guide__index' in liquid
+
+          print('Content Guide V2 validation: PASS')
+          PY
+
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
