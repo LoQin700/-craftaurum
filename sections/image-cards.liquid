@@ -25,7 +25,7 @@
     --ca-image-cards-content-padding: {{ section.settings.content_padding }}px;
     --ca-image-cards-padding-top: {{ section.settings.padding_top }}px;
     --ca-image-cards-padding-bottom: {{ section.settings.padding_bottom }}px;
-    --ca-image-cards-heading-size: {{ section.settings.heading_size | default: 42 }}px;
+    --ca-image-cards-heading-size: {{ section.settings.heading_size | default: 35 }}px;
     --ca-image-cards-body-size: {{ section.settings.body_size | default: 16 }}px;
     --ca-image-cards-card-title-size: {{ section.settings.card_title_size | default: 22 }}px;
     --ca-image-cards-card-body-size: {{ section.settings.card_body_size | default: 15 }}px;
@@ -370,7 +370,7 @@
       "label": "正文",
       "default": "<p>Explore the development capabilities behind a custom jewelry collection.</p>"
     },
-    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":2,"unit":"px","default":42},
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
     {"type":"range","id":"body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
     {"type":"range","id":"card_title_size","label":"卡片标题字号","min":14,"max":36,"step":1,"unit":"px","default":22},
     {"type":"range","id":"card_body_size","label":"卡片正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
