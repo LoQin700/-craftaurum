@@ -16,7 +16,7 @@
 <section id="ImageGallery-{{ section.id }}" class="section section--full-width ca-gallery"
   style="--ca-gallery-bg:{{ background_color }};--ca-gallery-gap:{{ gap }}px;--ca-gallery-desktop:{{ desktop_columns }};--ca-gallery-mobile:{{ mobile_columns }};--ca-gallery-ratio:{{ ratio }};--ca-gallery-pt:{{ padding_top }}px;--ca-gallery-pb:{{ padding_bottom }}px;">
   <div class="ca-gallery__surface">
-    <div class="ca-gallery__inner ca-gallery__inner--{{ content_width }}{% if section.settings.desktop_layout == 'carousel' %} is-desktop-carousel{% endif %}{% if section.settings.mobile_layout == 'carousel' %} is-mobile-carousel{% endif %}">
+    <div class="ca-gallery__inner ca-gallery__inner--{{ content_width }}{% if section.settings.desktop_layout == 'carousel' %} is-desktop-carousel{% endif %}{% if section.settings.mobile_layout == 'carousel' %} is-mobile-carousel{% endif %}" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-in' }}">
       <div class="ca-gallery__grid">
         {% for block in section.blocks %}
           <div class="ca-gallery__item" {{ block.shopify_attributes }}>
@@ -81,6 +81,17 @@
       "id": "background_color",
       "label": "背景颜色",
       "default": "#FFFFFF"
+    },
+    {
+      "type": "select",
+      "id": "animation_style",
+      "label": "入场动画",
+      "options": [
+        { "value": "fade-up", "label": "Fade Up" },
+        { "value": "fade-in", "label": "Fade In" },
+        { "value": "soft-zoom", "label": "Soft Zoom" }
+      ],
+      "default": "fade-in"
     },
     {
       "type": "select",
