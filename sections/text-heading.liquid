@@ -1,19 +1,20 @@
 <section {% if section.settings.anchor_id != blank %}id="{{ section.settings.anchor_id | handleize }}"{% endif %}
   class="section section--{{ section.settings.section_width | default: 'page-width' }} spacing-style ca-text-heading"
-  style="--padding-block-start: {{ section.settings.padding_top }}px; --padding-block-end: {{ section.settings.padding_bottom }}px;">
-  <div class="ca-text-heading__inner">
+  style="--padding-block-start: {{ section.settings.padding_top }}px; --padding-block-end: {{ section.settings.padding_bottom }}px; --ca-text-heading-size: {{ section.settings.heading_size | default: 35 }}px; --ca-text-body-size: {{ section.settings.body_size | default: 16 }}px;">
+  <div class="ca-text-heading__inner" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
     {% if section.settings.heading != blank %}
-      <h2 class="{{ section.settings.heading_preset | default: 'h2' }} ca-text-heading__title">{{ section.settings.heading | escape }}</h2>
+      <h2 class="ca-text-heading__title">{{ section.settings.heading | escape }}</h2>
     {% endif %}
     {% if section.settings.description != blank %}
-      <div class="rte {{ section.settings.body_preset | default: 'h5' }} ca-text-heading__body">{{ section.settings.description }}</div>
+      <div class="rte ca-text-heading__body">{{ section.settings.description }}</div>
     {% endif %}
   </div>
 </section>
 {% stylesheet %}
   .ca-text-heading { scroll-margin-top: 110px; }
   .ca-text-heading__inner { text-align: center; max-width: 850px; margin: 0 auto; }
-  .ca-text-heading__title { margin: 0 0 14px; }
+  .ca-text-heading__title { margin: 0 0 14px; font-size: var(--ca-text-heading-size); line-height: 1.08; }
+  .ca-text-heading__body { font-size: var(--ca-text-body-size); line-height: 1.6; }
   .ca-text-heading__body :is(p,ul,ol) { font-size: inherit; line-height: inherit; }
   .ca-text-heading__body p { margin: 0; }
 {% endstylesheet %}
@@ -50,76 +51,15 @@
       "label": "标题",
       "default": "Let's Create Something Together"
     },
-    {
-      "type": "select",
-      "id": "heading_preset",
-      "label": "标题字号",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h2"
-    },
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
     {
       "type": "richtext",
       "id": "description",
       "label": "正文",
       "default": "<p>Tell us about your project and our team will get in touch.</p>"
     },
-    {
-      "type": "select",
-      "id": "body_preset",
-      "label": "正文字号",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h5"
-    },
+    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
     {
       "type": "text",
       "id": "anchor_id",

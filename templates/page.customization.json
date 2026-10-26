@@ -256,9 +256,7 @@
         "text_color": "#ffffff",
         "accent_color": "#c7a85e",
         "heading": "Custom Jewelry Capabilities",
-        "heading_preset": "h2",
         "description": "<p>Focused development capabilities for custom collections, from digital refinement to finishing and production.</p>",
-        "body_preset": "h5",
         "layout_style": "showcase",
         "desktop_columns": 3,
         "mobile_columns": "1",
@@ -266,10 +264,14 @@
         "image_ratio": "landscape",
         "gap": 20,
         "overlay_opacity": 45,
-        "hover_overlay_opacity": 60,
         "content_padding": 24,
         "padding_top": 72,
-        "padding_bottom": 72
+        "padding_bottom": 72,
+        "heading_size": 35,
+        "body_size": 16,
+        "card_title_size": 22,
+        "card_body_size": 15,
+        "animation_style": "fade-up"
       }
     },
     "craft_casting": {
@@ -281,15 +283,12 @@
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "heading": "Casting the Wax Model into Metal",
-        "heading_preset": "h2",
         "heading_position": "content",
         "subtitle": "",
         "top_label": "",
-        "subtitle_preset": "h5",
         "top_url": "",
         "top_button_style": "button",
         "body": "<p>Approved wax models are prepared for casting so the design can move from prototype into metal with its key proportions and construction details intact.</p>",
-        "body_preset": "h5",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "",
@@ -297,7 +296,11 @@
         "cta_button_style": "button",
         "padding_top": 52,
         "padding_bottom": 52,
-        "image": "shopify://shop_images/jewelry-manufacturer.jpg"
+        "image": "shopify://shop_images/jewelry-manufacturer.jpg",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "animation_style": "fade-up"
       }
     },
     "craft_polishing": {
@@ -309,15 +312,12 @@
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "heading": "Polishing Jewelry",
-        "heading_preset": "h2",
         "heading_position": "content",
         "subtitle": "",
         "top_label": "",
-        "subtitle_preset": "h5",
         "top_url": "",
         "top_button_style": "button",
         "body": "<p>Polishing refines the metal surface and small construction details before final finishing, helping the jewelry achieve a cleaner and more consistent appearance.</p>",
-        "body_preset": "h5",
         "image_position": "right",
         "image_ratio": "landscape",
         "cta_label": "",
@@ -325,7 +325,11 @@
         "cta_button_style": "button",
         "padding_top": 52,
         "padding_bottom": 52,
-        "image": "shopify://shop_images/polishing.jpg"
+        "image": "shopify://shop_images/polishing.jpg",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "animation_style": "fade-up"
       }
     },
     "craft_private_label": {
@@ -337,15 +341,12 @@
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "heading": "Private Label Jewelry Manufacturing",
-        "heading_preset": "h2",
         "heading_position": "content",
         "subtitle": "",
         "top_label": "",
-        "subtitle_preset": "h5",
         "top_url": "",
         "top_button_style": "button",
         "body": "<p>Brand-led details can be carried through the product itself, from custom forms and logo direction to finishing choices that support a recognizable collection identity.</p>",
-        "body_preset": "h5",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "",
@@ -353,7 +354,11 @@
         "cta_button_style": "button",
         "padding_top": 52,
         "padding_bottom": 64,
-        "image": "shopify://shop_images/OEM-JEWELLERY.jpg"
+        "image": "shopify://shop_images/OEM-JEWELLERY.jpg",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "animation_style": "fade-up"
       }
     },
     "process_cards": {
@@ -441,12 +446,8 @@
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "eyebrow": "",
-        "eyebrow_preset": "h5",
         "heading": "High End Jewelry Manufacturing Process",
-        "heading_preset": "h2",
         "description": "<p>Six clear stages from first discussion to finished production.</p>",
-        "body_preset": "h5",
-        "card_title_preset": "h3",
         "desktop_columns": "3",
         "mobile_layout": "carousel",
         "mobile_columns": "1",
@@ -455,7 +456,13 @@
         "card_text_alignment": "left",
         "gap": 24,
         "padding_top": 76,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 16,
+        "card_title_size": 20,
+        "card_body_size": 15,
+        "animation_style": "fade-up"
       }
     },
     "contact": {

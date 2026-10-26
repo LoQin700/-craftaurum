@@ -20,18 +20,19 @@
     --ca-desktop-columns: {{ section.settings.desktop_columns }};
     --ca-mobile-columns: {{ section.settings.mobile_columns }};
     --ca-overlay: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
-    --ca-hover-overlay: {{ section.settings.hover_overlay_opacity | divided_by: 100.0 }};
-    --ca-card-type-size: var(--font-{{ section.settings.card_title_preset | default: 'h3' }}--size);
+    --ca-collection-heading-size: {{ section.settings.heading_size | default: 35 }}px;
+    --ca-collection-body-size: {{ section.settings.body_size | default: 16 }}px;
+    --ca-card-type-size: {{ section.settings.card_title_size | default: 18 }}px;
   "
 >
-  <div class="ca-collection__inner">
+  <div class="ca-collection__inner" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
     {% if section.settings.heading != blank or section.settings.description != blank %}
       <header class="ca-collection__intro">
         {% if section.settings.heading != blank %}
-          <h2 class="ca-collection__heading {{ section.settings.heading_preset | default: 'h2' }}">{{ section.settings.heading | escape }}</h2>
+          <h2 class="ca-collection__heading">{{ section.settings.heading | escape }}</h2>
         {% endif %}
         {% if section.settings.description != blank %}
-          <div class="ca-collection__description rte {{ section.settings.body_preset | default: 'h5' }}">
+          <div class="ca-collection__description rte">
             {{ section.settings.description }}
           </div>
         {% endif %}
@@ -42,7 +43,6 @@
       {% for block in section.blocks %}
         {% render 'craftaurum-collection-card',
           block: block,
-          card_title_preset: section.settings.card_title_preset,
           attributes: true
         %}
       {% endfor %}
@@ -54,6 +54,9 @@
   .ca-collection__inner {
     min-width: 0;
   }
+
+  .ca-collection__heading { font-size: var(--ca-collection-heading-size); line-height: 1.08; }
+  .ca-collection__description { font-size: var(--ca-collection-body-size); line-height: 1.6; }
 
   .ca-collection__intro {
     text-align: center;
@@ -122,7 +125,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 350ms ease;
   }
 
   .ca-collection__placeholder {
@@ -136,19 +138,8 @@
     background: var(--color-foreground);
     opacity: var(--ca-overlay, .25);
     pointer-events: none;
-    transition: opacity 350ms ease;
   }
 
-  .ca-collection__outline {
-    position: absolute;
-    z-index: 1;
-    pointer-events: none;
-    inset: 12px;
-    border: 1px solid color-mix(in srgb, var(--color-background) 90%, transparent);
-    opacity: 0;
-    transform: scale(1.06);
-    transition: transform 350ms ease, opacity 350ms ease;
-  }
 
   .ca-collection__card-title {
     position: absolute;
@@ -165,18 +156,6 @@
     font-size: var(--ca-card-type-size);
   }
 
-  .ca-collection__card:is(:hover, :focus-visible) .ca-collection__shade {
-    opacity: var(--ca-hover-overlay, .5);
-  }
-
-  .ca-collection__card:is(:hover, :focus-visible) .ca-collection__outline {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  .ca-collection__card:is(:hover, :focus-visible) .ca-collection__image {
-    transform: scale(1.035);
-  }
 
   .ca-collection__card:focus-visible {
     outline: 2px solid var(--color-foreground);
@@ -223,11 +202,6 @@
     }
   }
 
-  @media screen and (prefers-reduced-motion: reduce) {
-    .ca-collection__card :is(.ca-collection__image, .ca-collection__outline, .ca-collection__shade) {
-      transition: none;
-    }
-  }
 {% endstylesheet %}
 
 {% schema %}
@@ -263,113 +237,21 @@
       "label": "标题",
       "default": "Explore Our Custom Jewelry Collections"
     },
-    {
-      "type": "select",
-      "id": "heading_preset",
-      "label": "标题字号预设",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h2"
-    },
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
     {
       "type": "richtext",
       "id": "description",
       "label": "介绍文字",
       "default": "<p>Discover Craftaurum's custom jewelry categories, combining thoughtful design and quality craftsmanship for your next collection.</p>"
     },
-    {
-      "type": "select",
-      "id": "body_preset",
-      "label": "正文字号预设",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h5"
-    },
+    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"range","id":"card_title_size","label":"卡片标题字号","min":14,"max":30,"step":1,"unit":"px","default":18},
+    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
     {
       "type": "color",
       "id": "background_color",
       "label": "背景颜色",
       "default": "#F8F7F4"
-    },
-    {
-      "type": "select",
-      "id": "card_title_preset",
-      "label": "卡片标题字号预设",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h3"
     },
     {
       "type": "header",
@@ -442,16 +324,6 @@
       "step": 5,
       "unit": "%",
       "default": 25
-    },
-    {
-      "type": "range",
-      "id": "hover_overlay_opacity",
-      "label": "悬停蒙层深度",
-      "min": 0,
-      "max": 90,
-      "step": 5,
-      "unit": "%",
-      "default": 50
     },
     {
       "type": "range",

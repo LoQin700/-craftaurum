@@ -76,12 +76,14 @@
         "quote_url": "shopify://pages/contact",
         "catalog_label": "",
         "catalog_url": "",
-        "heading_preset": "h1",
-        "eyebrow_preset": "h5",
-        "body_preset": "h5",
         "padding_top": 40,
         "padding_bottom": 48,
-        "hero_image": "shopify://shop_images/solid-gold-jewelry.jpg"
+        "hero_image": "shopify://shop_images/solid-gold-jewelry.jpg",
+        "use_background": true,
+        "eyebrow_size": 12,
+        "heading_size": 58,
+        "body_size": 16,
+        "animation_style": "fade-up"
       }
     },
     "gold_showcase": {
@@ -168,17 +170,12 @@
         "background_color": "#f8f7f4",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
-        "card_style": "standard",
         "intro_button_label": "",
         "intro_button_link": "",
         "intro_button_style": "button",
         "eyebrow": "",
-        "eyebrow_preset": "h5",
         "heading": "Gold Jewelry Collection",
-        "heading_preset": "h2",
         "description": "<p>Explore core solid gold jewelry categories available for custom development.</p>",
-        "body_preset": "h5",
-        "card_title_preset": "h4",
         "desktop_layout": "grid",
         "desktop_columns": "3",
         "mobile_layout": "carousel",
@@ -186,7 +183,19 @@
         "image_ratio": "square",
         "gap": 20,
         "padding_top": 64,
-        "padding_bottom": 72
+        "padding_bottom": 72,
+        "intro_style": "style_1",
+        "show_divider": false,
+        "divider_color": "#D8D5CE",
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 16,
+        "card_title_size": 18,
+        "card_body_size": 15,
+        "animation_style": "fade-up",
+        "image_width": 100,
+        "card_text_alignment": "left",
+        "row_gap": 36
       }
     },
     "custom_gold": {
@@ -198,15 +207,12 @@
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "heading": "Custom Gold Jewelry",
-        "heading_preset": "h2",
         "heading_position": "content",
         "subtitle": "",
         "top_label": "",
-        "subtitle_preset": "h5",
         "top_url": "",
         "top_button_style": "button",
         "body": "<p>Turn design direction into manufacturable gold jewelry through CAD refinement, sampling, casting, stone setting and final finishing. Each stage can be reviewed around the proportions, construction and finish expected for your collection.</p>",
-        "body_preset": "h5",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "Start Your Project",
@@ -214,7 +220,11 @@
         "cta_button_style": "button-unstyled",
         "padding_top": 52,
         "padding_bottom": 52,
-        "image": "shopify://shop_images/custom-design-jewelry.jpg"
+        "image": "shopify://shop_images/custom-design-jewelry.jpg",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "animation_style": "fade-up"
       }
     },
     "gold_vermeil": {
@@ -226,15 +236,12 @@
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "heading": "Gold Vermeil Jewelry",
-        "heading_preset": "h2",
         "heading_position": "content",
         "subtitle": "",
         "top_label": "",
-        "subtitle_preset": "h5",
         "top_url": "",
         "top_button_style": "button",
         "body": "<p>Gold vermeil combines a sterling silver base with a thicker gold-plated surface, creating a premium alternative for brands seeking the look of gold with a different material structure and price position.</p>",
-        "body_preset": "h5",
         "image_position": "right",
         "image_ratio": "landscape",
         "cta_label": "Explore Gold Vermeil",
@@ -242,7 +249,11 @@
         "cta_button_style": "button-unstyled",
         "padding_top": 52,
         "padding_bottom": 52,
-        "image": "shopify://shop_images/gold-vermeil-earrings.jpg"
+        "image": "shopify://shop_images/gold-vermeil-earrings.jpg",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "animation_style": "fade-up"
       }
     },
     "low_moq_gold": {
@@ -254,15 +265,12 @@
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "heading": "Custom-made Real Gold Jewelry",
-        "heading_preset": "h2",
         "heading_position": "content",
         "subtitle": "",
         "top_label": "",
-        "subtitle_preset": "h5",
         "top_url": "",
         "top_button_style": "button",
         "body": "<p>For solid gold projects, early design and cost decisions are especially important. CAD review, sampling and material planning can help control development risk before moving into production, including lower-volume collection launches.</p>",
-        "body_preset": "h5",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "Get A Quick Quote",
@@ -270,7 +278,11 @@
         "cta_button_style": "button",
         "padding_top": 52,
         "padding_bottom": 64,
-        "image": "shopify://shop_images/custom_real_gold_jewelry.jpg"
+        "image": "shopify://shop_images/custom_real_gold_jewelry.jpg",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "animation_style": "fade-up"
       }
     },
     "comparison_table": {
@@ -347,14 +359,10 @@
         "line_color": "#d8d5ce",
         "label_background": "#f8f7f4",
         "eyebrow": "",
-        "eyebrow_preset": "h5",
         "heading": "Solid Gold VS Gold Vermeil VS Gold Plated Jewelry",
-        "heading_preset": "h2",
         "description": "",
-        "body_preset": "h5",
         "column_count": "3",
         "comparison_label": "Comparison",
-        "column_title_preset": "h4",
         "column_1_kicker": "FINE JEWELRY",
         "column_1_title": "Solid Gold Jewelry",
         "column_2_kicker": "STERLING SILVER BASE",
@@ -362,7 +370,12 @@
         "column_3_kicker": "FASHION JEWELRY",
         "column_3_title": "Gold Plated Jewelry",
         "padding_top": 76,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 15,
+        "column_title_size": 18,
+        "animation_style": "fade-up"
       }
     },
     "gold_colors": {
@@ -412,15 +425,16 @@
         "text_background": "#E7DED0",
         "image_background": "#F6F2EB",
         "text_color": "#17191A",
-        "heading_preset": "h2",
-        "body_preset": "h5",
         "text_padding": 32,
         "image_padding": 18,
         "image_gap": 14,
         "panel_gap": 16,
         "row_gap": 28,
         "padding_top": 72,
-        "padding_bottom": 72
+        "padding_bottom": 72,
+        "heading_size": 35,
+        "body_size": 16,
+        "animation_style": "fade-up"
       }
     },
     "indexed_guide": {
@@ -501,7 +515,7 @@
         "eyebrow_size": 12,
         "eyebrow_color": "#C7A85E",
         "heading": "Gold Karat Guide",
-        "heading_size": 42,
+        "heading_size": 35,
         "heading_color": "#17191A",
         "description": "<p>Compare common karat levels by gold content, durability and how each option is positioned for jewelry development.</p>",
         "description_size": 16,
@@ -602,20 +616,20 @@
       "settings": {
         "section_width": "page-width",
         "heading": "Explore Our Custom Jewelry Types",
-        "heading_preset": "h2",
         "description": "<p>Continue exploring Craftaurum's custom jewelry categories for your next collection.</p>",
-        "body_preset": "h5",
         "background_color": "#ffffff",
-        "card_title_preset": "h3",
         "desktop_columns": 3,
         "desktop_layout": "grid",
         "mobile_columns": 2,
         "mobile_layout": "grid",
         "overlay_opacity": 25,
-        "hover_overlay_opacity": 50,
         "gap": 16,
         "padding_top": 72,
-        "padding_bottom": 72
+        "padding_bottom": 72,
+        "heading_size": 35,
+        "body_size": 16,
+        "card_title_size": 18,
+        "animation_style": "fade-up"
       }
     },
     "contact": {

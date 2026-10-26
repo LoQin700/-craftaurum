@@ -21,7 +21,6 @@
     --ca-image-cards-mobile-cols: {{ section.settings.mobile_columns }};
     --ca-image-cards-ratio: {{ ratio }};
     --ca-image-cards-overlay: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
-    --ca-image-cards-hover-overlay: {{ section.settings.hover_overlay_opacity | divided_by: 100.0 }};
     --ca-image-cards-content-padding: {{ section.settings.content_padding }}px;
     --ca-image-cards-padding-top: {{ section.settings.padding_top }}px;
     --ca-image-cards-padding-bottom: {{ section.settings.padding_bottom }}px;
@@ -182,7 +181,6 @@
   .ca-image-card__placeholder {
     display: block;
     object-fit: cover;
-    transition: transform .4s ease;
   }
 
   .ca-image-card__overlay {
@@ -191,7 +189,6 @@
     z-index: 1;
     background: linear-gradient(to top, rgba(0,0,0,.88), rgba(0,0,0,.34) 42%, rgba(0,0,0,0) 78%);
     opacity: var(--ca-image-cards-overlay);
-    transition: opacity .3s ease;
     pointer-events: none;
   }
 
@@ -257,15 +254,6 @@
     outline-offset: -5px;
   }
 
-  @media (hover: hover) {
-    .ca-image-card:hover .ca-image-card__image {
-      transform: scale(1.04);
-    }
-
-    .ca-image-card:hover .ca-image-card__overlay {
-      opacity: var(--ca-image-cards-hover-overlay);
-    }
-  }
 
   @media screen and (max-width: 749px) {
     .ca-image-cards__intro {
@@ -475,16 +463,6 @@
       "step": 5,
       "unit": "%",
       "default": 40
-    },
-    {
-      "type": "range",
-      "id": "hover_overlay_opacity",
-      "label": "Hover 蒙层透明度",
-      "min": 0,
-      "max": 90,
-      "step": 5,
-      "unit": "%",
-      "default": 55
     },
     {
       "type": "range",

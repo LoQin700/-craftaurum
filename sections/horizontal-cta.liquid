@@ -13,16 +13,18 @@
     --ca-cta-button-hover-background: {{ section.settings.button_hover_background_color }};
     --ca-cta-button-hover-text: {{ section.settings.button_hover_text_color }};
     --ca-cta-button-hover-border: {{ section.settings.button_hover_border_color }};
+    --ca-cta-heading-size: {{ section.settings.heading_size | default: 35 }}px;
+    --ca-cta-body-size: {{ section.settings.body_size | default: 16 }}px;
   "
 >
   <div class="ca-horizontal-cta__surface">
-    <div class="ca-horizontal-cta__inner">
+    <div class="ca-horizontal-cta__inner" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
       <div class="ca-horizontal-cta__copy">
         {% if section.settings.heading != blank %}
-          <h2 class="ca-horizontal-cta__heading {{ section.settings.heading_preset | default: 'h3' }}">{{ section.settings.heading | escape }}</h2>
+          <h2 class="ca-horizontal-cta__heading">{{ section.settings.heading | escape }}</h2>
         {% endif %}
         {% if section.settings.description != blank %}
-          <div class="ca-horizontal-cta__description rte {{ section.settings.body_preset | default: 'h5' }}">{{ section.settings.description }}</div>
+          <div class="ca-horizontal-cta__description rte">{{ section.settings.description }}</div>
         {% endif %}
       </div>
       {% if section.settings.button_label != blank %}
@@ -54,8 +56,8 @@
     align-items: center;
     gap: 40px;
   }
-  .ca-horizontal-cta__heading { margin: 0 0 8px; color: inherit; }
-  .ca-horizontal-cta__description { color: inherit; opacity: .78; }
+  .ca-horizontal-cta__heading { margin: 0 0 8px; color: inherit; font-size: var(--ca-cta-heading-size); line-height: 1.08; }
+  .ca-horizontal-cta__description { color: inherit; opacity: .78; font-size: var(--ca-cta-body-size); line-height: 1.6; }
   .ca-horizontal-cta__description :is(p,ul,ol) { font-size: inherit; line-height: inherit; }
   .ca-horizontal-cta__description p { margin: 0; }
 
@@ -115,76 +117,15 @@
       "label": "标题",
       "default": "From design concept to custom jewelry production."
     },
-    {
-      "type": "select",
-      "id": "heading_preset",
-      "label": "标题字号",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h3"
-    },
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":64,"step":1,"unit":"px","default":35},
     {
       "type": "richtext",
       "id": "description",
       "label": "正文",
       "default": "<p>One clear process, developed around the needs of your collection.</p>"
     },
-    {
-      "type": "select",
-      "id": "body_preset",
-      "label": "正文字号",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h5"
-    },
+    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":16},
+    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
     {
       "type": "text",
       "id": "button_label",

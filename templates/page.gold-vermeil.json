@@ -129,8 +129,6 @@
           "settings": {
             "image_ratio": "portrait",
             "width": 58,
-            "x_offset": -72,
-            "y_offset": 24,
             "rotation": -5,
             "z_index": 1,
             "image": "shopify://shop_images/gold-vermeil-earrings.jpg"
@@ -141,8 +139,6 @@
           "settings": {
             "image_ratio": "portrait",
             "width": 54,
-            "x_offset": 80,
-            "y_offset": -32,
             "rotation": 4,
             "z_index": 2,
             "image": "shopify://shop_images/gold-vermeil-necklace.jpg"
@@ -163,12 +159,11 @@
         "desktop_layout": "overlap",
         "mobile_layout": "slider",
         "visual_height": 560,
-        "hover_scale": 3,
         "visual_aria_label": "Gold vermeil jewelry imagery",
         "text_alignment": "left",
         "eyebrow": "GOLD VERMEIL FOR BRANDS",
         "heading": "Unlock Gold Vermeil Jewelry for Your Business",
-        "heading_size": 42,
+        "heading_size": 35,
         "body": "<p>Gold vermeil offers brands a refined balance between precious-metal positioning and accessible collection development. A sterling silver base supports a substantial gold-plated finish, making it suitable for premium rings, earrings, necklaces and bracelets.</p><p>We can support design development, sampling, plating specification and scalable production around your collection goals.</p>",
         "body_size": 16,
         "button_label": "Start Your Project",
@@ -176,7 +171,10 @@
         "button_style": "button",
         "column_gap": 64,
         "padding_top": 72,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "overlap_amount": 32,
+        "eyebrow_size": 12,
+        "animation_style": "soft-zoom"
       }
     },
     "vermeil_types": {
@@ -263,17 +261,12 @@
         "background_color": "#FFFFFF",
         "text_color": "#17191A",
         "accent_color": "#C7A85E",
-        "card_style": "standard",
         "intro_button_label": "",
         "intro_button_link": "",
         "intro_button_style": "button",
         "eyebrow": "",
-        "eyebrow_preset": "h5",
         "heading": "Check Gold Vermeil Jewelry",
-        "heading_preset": "h2",
         "description": "<p>Explore core product categories available for custom gold vermeil development.</p>",
-        "body_preset": "h5",
-        "card_title_preset": "h4",
         "desktop_layout": "grid",
         "desktop_columns": "3",
         "mobile_layout": "carousel",
@@ -281,7 +274,19 @@
         "image_ratio": "square",
         "gap": 20,
         "padding_top": 72,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "intro_style": "style_1",
+        "show_divider": false,
+        "divider_color": "#D8D5CE",
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 16,
+        "card_title_size": 18,
+        "card_body_size": 15,
+        "animation_style": "fade-up",
+        "image_width": 100,
+        "card_text_alignment": "left",
+        "row_gap": 36
       }
     },
     "vermeil_compare": {
@@ -358,14 +363,10 @@
         "line_color": "#D8D5CE",
         "label_background": "#EFECE5",
         "eyebrow": "",
-        "eyebrow_preset": "h5",
         "heading": "Gold Vermeil VS Gold Plated VS Solid Gold",
-        "heading_preset": "h2",
         "description": "<p>Compare the material structure, gold layer and market positioning of three common jewelry directions.</p>",
-        "body_preset": "h5",
         "column_count": "3",
         "comparison_label": "Comparison",
-        "column_title_preset": "h4",
         "column_1_kicker": "STERLING SILVER BASE",
         "column_1_title": "Gold Vermeil",
         "column_2_kicker": "FASHION JEWELRY",
@@ -373,7 +374,12 @@
         "column_3_kicker": "FINE JEWELRY",
         "column_3_title": "Solid Gold",
         "padding_top": 76,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 15,
+        "column_title_size": 18,
+        "animation_style": "fade-up"
       }
     },
     "vermeil_guide": {
@@ -430,7 +436,7 @@
         "eyebrow_size": 12,
         "eyebrow_color": "#C7A85E",
         "heading": "Understanding Gold Vermeil Jewelry",
-        "heading_size": 42,
+        "heading_size": 35,
         "heading_color": "#17191A",
         "description": "<p>Understand the material foundation and plating specification behind a premium vermeil collection.</p>",
         "description_size": 16,
