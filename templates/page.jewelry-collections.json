@@ -21,11 +21,13 @@
         "quote_url": "",
         "catalog_label": "Request Catalog",
         "catalog_url": "",
-        "heading_preset": "h1",
-        "eyebrow_preset": "h5",
-        "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 24
+        "padding_bottom": 24,
+        "use_background": true,
+        "eyebrow_size": 12,
+        "heading_size": 58,
+        "body_size": 16,
+        "animation_style": "fade-up"
       }
     },
     "gallery_rings": {
@@ -217,12 +219,13 @@
       "settings": {
         "section_width": "page-width",
         "heading": "Let's Create Your Next Jewelry Collection",
-        "heading_preset": "h2",
         "description": "<p>Share your designs, preferred materials and manufacturing requirements. Craftaurum can help you explore the next steps for your project.</p>",
-        "body_preset": "h5",
         "anchor_id": "craftaurum-jewelry-inquiry",
         "padding_top": 32,
-        "padding_bottom": 12
+        "padding_bottom": 12,
+        "heading_size": 35,
+        "body_size": 16,
+        "animation_style": "fade-up"
       }
     },
     "contact_form": {
