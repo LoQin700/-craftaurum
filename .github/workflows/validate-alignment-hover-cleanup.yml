@@ -1,0 +1,49 @@
+name: Validate Alignment Hover Cleanup
+
+on:
+  push:
+    branches:
+      - fix/v2-alignment-remove-hover-images
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate V2 alignment and hover image cleanup
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          interactive=Path('sections/interactive-feature.liquid').read_text(encoding='utf-8')
+          cards=Path('sections/content-cards.liquid').read_text(encoding='utf-8')
+
+          assert 'grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);' in interactive
+          assert 'gap:clamp(28px,5vw,76px);' in interactive
+          assert '.ca-capability__intro--style_2' in interactive
+          assert 'max-width:none;' in interactive
+
+          assert 'hover_image' not in cards
+          assert 'image--hover' not in cards
+          assert 'image--primary' not in cards
+          assert '"label": "Hover 图片"' not in cards
+
+          assert '.ca-content-cards__intro--style_2' in cards
+          assert 'max-width: none;' in cards
+
+          print('Alignment and hover-image cleanup: PASS')
+          PY
+
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
