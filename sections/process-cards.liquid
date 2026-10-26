@@ -187,7 +187,6 @@
     border: 1px solid color-mix(in srgb, var(--ca-process-accent) 58%, transparent);
     pointer-events: none;
     opacity: .82;
-    transition: border-color .3s ease, opacity .3s ease;
   }
 
   .ca-process-card__image,
@@ -222,13 +221,6 @@
     margin-top: 14px;
   }
 
-  @media (hover: hover) {
-    .ca-process-card:hover .ca-process-card__media::after {
-      border-color: var(--ca-process-accent);
-      opacity: 1;
-    }
-
-  }
 
   @media screen and (max-width: 749px) {
     .ca-process-cards__intro {
