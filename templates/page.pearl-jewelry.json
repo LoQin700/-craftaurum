@@ -144,7 +144,6 @@
         "background_color": "#ffffff",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
-        "card_style": "standard",
         "intro_button_label": "",
         "intro_button_link": "",
         "intro_button_style": "button",
@@ -161,6 +160,7 @@
         "mobile_columns": "1",
         "image_ratio": "square",
         "image_width": 30,
+        "card_text_alignment": "left",
         "gap": 20,
         "padding_top": 64,
         "padding_bottom": 72
@@ -218,7 +218,7 @@
         "body_size": 16,
         "button_label": "Start Your Pearl Jewelry Business",
         "button_link": "shopify://pages/contact",
-        "button_style": "button",
+        "button_style": "button-unstyled",
         "column_gap": 64,
         "padding_top": 72,
         "padding_bottom": 76
@@ -308,7 +308,6 @@
         "background_color": "#ffffff",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
-        "card_style": "standard",
         "intro_button_label": "",
         "intro_button_link": "",
         "intro_button_style": "button",
@@ -325,6 +324,7 @@
         "mobile_columns": "1",
         "image_ratio": "square",
         "image_width": 65,
+        "card_text_alignment": "left",
         "gap": 40,
         "padding_top": 72,
         "padding_bottom": 76
