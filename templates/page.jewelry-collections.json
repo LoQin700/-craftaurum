@@ -59,12 +59,9 @@
       ],
       "settings": {
         "heading": "Wholesale & Custom Rings",
-        "heading_preset": "h2",
         "description": "<p>From elegant everyday rings to statement designs, Craftaurum helps brands develop ring collections in different styles and materials. Explore our jewelry-making capabilities and discuss the details that will make your next collection distinctive.</p>",
-        "body_preset": "h5",
         "button_label": "Explore Rings",
         "button_style": "button-unstyled",
-        "collection": "",
         "link": "",
         "section_width": "page-width",
         "desktop_layout": "grid",
@@ -73,7 +70,13 @@
         "mobile_columns": 2,
         "gap": 16,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "intro_alignment": "left",
+        "heading_size": 35,
+        "body_size": 16,
+        "animation_style": "fade-in",
+        "background_color": "#ffffff",
+        "image_ratio": "square"
       }
     },
     "gallery_earrings": {
@@ -105,12 +108,9 @@
       ],
       "settings": {
         "heading": "Exclusive Custom Earrings",
-        "heading_preset": "h2",
         "description": "<p>Discover versatile earring possibilities, from understated studs and classic hoops to expressive drops and gemstone-led designs. We support custom styles and finishing details that reflect your brand's creative direction.</p>",
-        "body_preset": "h5",
         "button_label": "Explore Earrings",
         "button_style": "button-unstyled",
-        "collection": "",
         "link": "",
         "section_width": "page-width",
         "desktop_layout": "grid",
@@ -119,7 +119,13 @@
         "mobile_columns": 2,
         "gap": 16,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "intro_alignment": "left",
+        "heading_size": 35,
+        "body_size": 16,
+        "animation_style": "fade-in",
+        "background_color": "#ffffff",
+        "image_ratio": "square"
       }
     },
     "gallery_bracelets": {
@@ -151,12 +157,9 @@
       ],
       "settings": {
         "heading": "Tailor-Made Bracelets & Bangles",
-        "heading_preset": "h2",
         "description": "<p>Explore bracelets and bangles designed for different collections, including delicate chains, sculptural cuffs, and decorative pieces. Craftaurum helps turn your concepts into well-considered jewelry with attention to shape, finish, and comfort.</p>",
-        "body_preset": "h5",
         "button_label": "Explore Bracelets",
         "button_style": "button-unstyled",
-        "collection": "",
         "link": "",
         "section_width": "page-width",
         "desktop_layout": "grid",
@@ -165,7 +168,13 @@
         "mobile_columns": 2,
         "gap": 16,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "intro_alignment": "left",
+        "heading_size": 35,
+        "body_size": 16,
+        "animation_style": "fade-in",
+        "background_color": "#ffffff",
+        "image_ratio": "square"
       }
     },
     "gallery_necklaces": {
@@ -197,12 +206,9 @@
       ],
       "settings": {
         "heading": "Made-to-Order Necklaces & Pendants",
-        "heading_preset": "h2",
         "description": "<p>From refined chains to distinctive pendants and layered necklaces, our custom jewelry approach allows you to develop pieces with a recognizable identity. Share your inspiration with Craftaurum and explore options for materials, details, and finishes.</p>",
-        "body_preset": "h5",
         "button_label": "Explore Necklaces",
         "button_style": "button-unstyled",
-        "collection": "",
         "link": "",
         "section_width": "page-width",
         "desktop_layout": "grid",
@@ -211,7 +217,13 @@
         "mobile_columns": 2,
         "gap": 16,
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "intro_alignment": "left",
+        "heading_size": 35,
+        "body_size": 16,
+        "animation_style": "fade-in",
+        "background_color": "#ffffff",
+        "image_ratio": "square"
       }
     },
     "contact_intro": {
