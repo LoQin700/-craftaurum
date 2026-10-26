@@ -18,21 +18,25 @@
     --ca-mobile-columns: {{ mobile_columns }};
     --ca-padding-top: {{ section.settings.padding_top }}px;
     --ca-padding-bottom: {{ section.settings.padding_bottom }}px;
+    --ca-eyebrow-size: {{ section.settings.eyebrow_size | default: 12 }}px;
+    --ca-heading-size: {{ section.settings.heading_size | default: 35 }}px;
+    --ca-body-size: {{ section.settings.body_size | default: 15 }}px;
+    --ca-item-title-size: {{ section.settings.item_title_size | default: 18 }}px;
   "
 >
   <div class="ca-icon-text__surface">
-    <div class="ca-icon-text__inner ca-icon-text__inner--{{ content_width }}">
+    <div class="ca-icon-text__inner ca-icon-text__inner--{{ content_width }}" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
       <header class="ca-icon-text__intro">
         {% if section.settings.eyebrow != blank %}
-          <p class="ca-icon-text__eyebrow {{ section.settings.eyebrow_preset }}">{{ section.settings.eyebrow | escape }}</p>
+          <p class="ca-icon-text__eyebrow">{{ section.settings.eyebrow | escape }}</p>
         {% endif %}
 
         {% if section.settings.heading != blank %}
-          <h2 class="ca-icon-text__heading {{ section.settings.heading_preset }}">{{ section.settings.heading | escape }}</h2>
+          <h2 class="ca-icon-text__heading">{{ section.settings.heading | escape }}</h2>
         {% endif %}
 
         {% if section.settings.description != blank %}
-          <div class="ca-icon-text__description rte {{ section.settings.body_preset }}">
+          <div class="ca-icon-text__description rte">
             {{ section.settings.description }}
           </div>
         {% endif %}
@@ -60,11 +64,11 @@
 
             <div class="ca-icon-text__content">
               {% if block.settings.title != blank %}
-                <h3 class="ca-icon-text__title {{ section.settings.item_title_preset }}">{{ block.settings.title | escape }}</h3>
+                <h3 class="ca-icon-text__title">{{ block.settings.title | escape }}</h3>
               {% endif %}
 
               {% if block.settings.description != blank %}
-                <div class="ca-icon-text__body rte {{ section.settings.body_preset }}">
+                <div class="ca-icon-text__body rte">
                   {{ block.settings.description }}
                 </div>
               {% endif %}
@@ -111,6 +115,7 @@
     color: var(--ca-icon-accent);
     letter-spacing: .12em;
     text-transform: uppercase;
+    font-size: var(--ca-eyebrow-size);
   }
 
   .ca-icon-text__heading {
@@ -119,6 +124,8 @@
   }
 
   .ca-icon-text__description {
+    font-size: var(--ca-body-size);
+    line-height: 1.6;
     max-width: 760px;
     color: color-mix(in srgb, var(--ca-icon-text) 72%, transparent);
   }
@@ -160,6 +167,8 @@
   .ca-icon-text__title {
     margin: 0 0 8px;
     color: inherit;
+    font-size: var(--ca-item-title-size);
+    line-height: 1.25;
   }
 
   .ca-icon-text__body {
@@ -339,146 +348,23 @@
       "label": "小标题",
       "default": "MANUFACTURING SUPPORT"
     },
-    {
-      "type": "select",
-      "id": "eyebrow_preset",
-      "label": "小标题字号",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h5"
-    },
+    {"type":"range","id":"eyebrow_size","label":"小标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
     {
       "type": "text",
       "id": "heading",
       "label": "标题",
       "default": "Capabilities That Support Every Collection"
     },
-    {
-      "type": "select",
-      "id": "heading_preset",
-      "label": "标题字号",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h2"
-    },
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
     {
       "type": "richtext",
       "id": "description",
       "label": "正文",
       "default": "<p>From design development to production review, each stage is supported by a clear and practical manufacturing process.</p>"
     },
-    {
-      "type": "select",
-      "id": "body_preset",
-      "label": "正文字号",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h5"
-    },
-    {
-      "type": "select",
-      "id": "item_title_preset",
-      "label": "项目标题字号",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h4"
-    },
+    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
+    {"type":"range","id":"item_title_size","label":"项目标题字号","min":14,"max":30,"step":1,"unit":"px","default":18},
+    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
     {
       "type": "header",
       "content": "布局"
@@ -551,7 +437,7 @@
   "blocks": [
     {
       "type": "item",
-      "name": "项目",
+      "name": "图标文字",
       "settings": [
         {
           "type": "select",
