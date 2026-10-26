@@ -77,11 +77,13 @@
         "quote_url": "shopify://pages/contact",
         "catalog_label": "",
         "catalog_url": "",
-        "heading_preset": "h1",
-        "eyebrow_preset": "h5",
-        "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 48
+        "padding_bottom": 48,
+        "use_background": true,
+        "eyebrow_size": 12,
+        "heading_size": 58,
+        "body_size": 16,
+        "animation_style": "fade-up"
       }
     },
     "tarnish_intro": {
@@ -174,15 +176,12 @@
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "heading": "Gold Plated Jewelry Factory",
-        "heading_preset": "h2",
         "heading_position": "content",
         "subtitle": "",
         "top_label": "",
-        "subtitle_preset": "h3",
         "top_url": "",
         "top_button_style": "button",
         "body": "<p>Gold plating applies a thin gold layer over a compatible base metal such as sterling silver or brass. For custom silver jewelry, plating color and finish can be developed around the target appearance, expected wear and price positioning.</p><p><strong>Process:</strong> Electroplating a gold layer over the prepared metal surface.<br><strong>Gold Thickness:</strong> Specified according to project requirements.<br><strong>Durability:</strong> Influenced by plating thickness, protective finish and wear conditions.</p>",
-        "body_preset": "h5",
         "image": "shopify://shop_images/plated-jewelry-2.jpg",
         "image_position": "left",
         "image_ratio": "landscape",
@@ -190,7 +189,11 @@
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 32,
-        "padding_bottom": 32
+        "padding_bottom": 32,
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "animation_style": "fade-up"
       }
     },
     "gold_vermeil_tarnish": {
@@ -202,15 +205,12 @@
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "heading": "Gold Vermeil Jewelry",
-        "heading_preset": "h2",
         "heading_position": "content",
         "subtitle": "",
         "top_label": "",
-        "subtitle_preset": "h3",
         "top_url": "",
         "top_button_style": "button",
         "body": "<p>Gold vermeil uses sterling silver as the base and a substantially thicker gold-plated surface than ordinary gold plating. It is a strong option for brands seeking a premium gold appearance while retaining a precious silver foundation.</p><p><strong>Process:</strong> Gold plating applied specifically over sterling silver.<br><strong>Gold Thickness:</strong> A substantial gold layer suitable for vermeil positioning.<br><strong>Durability:</strong> A premium plated construction that balances wear performance and accessible fine-jewelry positioning.</p>",
-        "body_preset": "h5",
         "image": "shopify://shop_images/gold-vermeil-necklace.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
@@ -218,7 +218,11 @@
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 32,
-        "padding_bottom": 48
+        "padding_bottom": 48,
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "animation_style": "fade-up"
       }
     },
     "lost_wax_casting": {
@@ -230,15 +234,12 @@
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "heading": "Lost Wax Casting Jewelry",
-        "heading_preset": "h2",
         "heading_position": "top",
         "subtitle": "Casting Jewelry",
         "top_label": "",
-        "subtitle_preset": "h3",
         "top_url": "",
         "top_button_style": "button",
         "body": "<p>Lost wax casting transforms a refined wax model into finished metal jewelry. After the design is confirmed, wax models are assembled, invested in a ceramic shell and heated so the wax can be removed. Molten silver is then poured into the mold to reproduce the approved form.</p><p>This process supports both detailed custom silver jewelry and repeatable production while preserving the proportions and construction established during development.</p>",
-        "body_preset": "h5",
         "image": "shopify://shop_images/jewelry-manufacturer.jpg",
         "image_position": "left",
         "image_ratio": "landscape",
@@ -246,7 +247,11 @@
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 56,
-        "padding_bottom": 56
+        "padding_bottom": 56,
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "animation_style": "fade-up"
       }
     },
     "showcase_intro": {
@@ -369,15 +374,16 @@
         "text_background": "#e7ded0",
         "image_background": "#f6f2eb",
         "text_color": "#17191a",
-        "heading_preset": "h2",
-        "body_preset": "h5",
         "text_padding": 32,
         "image_padding": 18,
         "image_gap": 14,
         "panel_gap": 0,
         "row_gap": 28,
         "padding_top": 24,
-        "padding_bottom": 72
+        "padding_bottom": 72,
+        "heading_size": 35,
+        "body_size": 16,
+        "animation_style": "fade-up"
       }
     },
     "silver_factory_process": {
@@ -425,15 +431,16 @@
       "name": "交互图文",
       "settings": {
         "section_width": "page-width",
-        "eyebrow": "SILVER JEWELRY MANUFACTURING",
-        "eyebrow_preset": "h5",
         "heading": "High-end Custom Silver Jewelry Factory",
-        "heading_preset": "h2",
         "description": "<p>Follow the main manufacturing stages from design development through casting, polishing and quality checking.</p>",
-        "body_preset": "h5",
-        "item_title_preset": "h4",
         "padding_top": 72,
-        "padding_bottom": 72
+        "padding_bottom": 72,
+        "intro_style": "style_1",
+        "heading_size": 35,
+        "body_size": 16,
+        "item_title_size": 20,
+        "item_body_size": 15,
+        "animation_style": "fade-up"
       }
     },
     "custom_options": {
@@ -496,17 +503,12 @@
         "background_color": "#f8f7f4",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
-        "card_style": "standard",
         "intro_button_label": "",
         "intro_button_link": "",
         "intro_button_style": "button",
         "eyebrow": "",
-        "eyebrow_preset": "h5",
         "heading": "Unlimited Custom Jewelry Options",
-        "heading_preset": "h2",
         "description": "<p>Combine sterling silver with plating, gemstones, pearls and multiple chain styles to build a distinctive collection.</p>",
-        "body_preset": "h5",
-        "card_title_preset": "h3",
         "desktop_layout": "grid",
         "desktop_columns": "4",
         "mobile_layout": "carousel",
@@ -514,7 +516,19 @@
         "image_ratio": "square",
         "gap": 20,
         "padding_top": 72,
-        "padding_bottom": 72
+        "padding_bottom": 72,
+        "intro_style": "style_1",
+        "show_divider": false,
+        "divider_color": "#D8D5CE",
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 16,
+        "card_title_size": 18,
+        "card_body_size": 15,
+        "animation_style": "fade-up",
+        "image_width": 100,
+        "card_text_alignment": "left",
+        "row_gap": 36
       }
     },
     "contact": {
