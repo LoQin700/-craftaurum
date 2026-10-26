@@ -323,7 +323,7 @@
         "mobile_layout": "carousel",
         "mobile_columns": "1",
         "image_ratio": "square",
-        "gap": 20,
+        "gap": 40,
         "padding_top": 72,
         "padding_bottom": 76
       }
