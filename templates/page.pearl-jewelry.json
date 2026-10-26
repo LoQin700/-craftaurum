@@ -1,0 +1,783 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "t:names.title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {
+            "text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "pearl_intro": {
+      "type": "jewelry-collections-overview",
+      "name": "图文横幅",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "eyebrow": "CUSTOM PEARL JEWELRY",
+        "heading": "Pearl Jewelry Manufacturer",
+        "introduction": "<p>Craftaurum develops custom pearl jewelry for brands seeking refined combinations of pearls, precious-metal components and polished finishing. From pearl earrings and necklaces to rings, bracelets and complete jewelry sets, each project can be developed around your collection direction and target market.</p><p>We support design refinement, material matching, sampling and production for custom pearl jewelry programs.</p>",
+        "hero_image": "shopify://shop_images/custom-pearl-jewelry-set.jpg",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "quote_label": "Contact Jewelry Factory",
+        "quote_url": "shopify://pages/contact",
+        "catalog_label": "",
+        "catalog_url": "",
+        "heading_preset": "h1",
+        "eyebrow_preset": "h5",
+        "body_preset": "h5",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "pearl_types": {
+      "type": "content-cards",
+      "blocks": {
+        "freshwater": {
+          "type": "card",
+          "settings": {
+            "title": "Freshwater Pearl",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": "",
+            "image": "shopify://shop_images/pearl-materials.jpg"
+          }
+        },
+        "akoya": {
+          "type": "card",
+          "settings": {
+            "title": "Akoya Pearl",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": "",
+            "image": "shopify://shop_images/pearl-earrings-2.jpg"
+          }
+        },
+        "southsea": {
+          "type": "card",
+          "settings": {
+            "title": "South Sea Pearl",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": "",
+            "image": "shopify://shop_images/pearls-necklace.jpg"
+          }
+        },
+        "tahitian": {
+          "type": "card",
+          "settings": {
+            "title": "Tahitian Pearl",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": "",
+            "image": "shopify://shop_images/baroque-pearl-earrings.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "freshwater",
+        "akoya",
+        "southsea",
+        "tahitian"
+      ],
+      "name": "图文卡片",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "card_style": "standard",
+        "intro_button_label": "",
+        "intro_button_link": "",
+        "intro_button_style": "button",
+        "eyebrow": "",
+        "eyebrow_preset": "h5",
+        "heading": "Different Types of Pearl We Use",
+        "heading_preset": "h2",
+        "description": "<p>Pearl type, size, shape, luster and color can all influence the final design direction. We match pearl selection to the intended product, metal finish and collection positioning.</p>",
+        "body_preset": "h5",
+        "card_title_preset": "h4",
+        "desktop_layout": "grid",
+        "desktop_columns": "4",
+        "mobile_layout": "carousel",
+        "mobile_columns": "1",
+        "image_ratio": "square",
+        "gap": 20,
+        "padding_top": 64,
+        "padding_bottom": 72
+      }
+    },
+    "pearl_business": {
+      "type": "overlap-image-text",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image_ratio": "portrait",
+            "width": 58,
+            "x_offset": -72,
+            "y_offset": 24,
+            "rotation": -4,
+            "z_index": 1,
+            "image": "shopify://shop_images/pearls-necklace.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image_ratio": "portrait",
+            "width": 54,
+            "x_offset": 80,
+            "y_offset": -32,
+            "rotation": 4,
+            "z_index": 2,
+            "image": "shopify://shop_images/pearl-materials.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2"
+      ],
+      "name": "叠层图文",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#F8F7F4",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "image_position": "left",
+        "desktop_layout": "overlap",
+        "mobile_layout": "slider",
+        "visual_height": 560,
+        "hover_scale": 3,
+        "visual_aria_label": "Pearl jewelry and pearl material imagery",
+        "text_alignment": "left",
+        "eyebrow": "PEARL JEWELRY FOR BRANDS",
+        "heading": "Expand Your Business with Pearl Jewelry",
+        "heading_size": 42,
+        "body": "<p>Pearl jewelry continues to hold a strong position across premium, bridal, gifting and fashion-led collections. By combining pearl selection with custom metal components, plating and stone-setting details, brands can develop pearl jewelry with a distinct visual identity.</p><p>Craftaurum supports sampling and scalable production for custom pearl jewelry collections.</p>",
+        "body_size": 16,
+        "button_label": "Start Your Pearl Jewelry Business",
+        "button_link": "shopify://pages/contact",
+        "button_style": "button",
+        "column_gap": 64,
+        "padding_top": 72,
+        "padding_bottom": 76
+      }
+    },
+    "pearl_products": {
+      "type": "content-cards",
+      "blocks": {
+        "silver_necklace": {
+          "type": "card",
+          "settings": {
+            "title": "Silver Pearl Necklace",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": "",
+            "image": "shopify://shop_images/silver-pearl-necklace.jpg"
+          }
+        },
+        "baroque_earrings": {
+          "type": "card",
+          "settings": {
+            "title": "Baroque Pearl Earrings",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": "",
+            "image": "shopify://shop_images/baroque-pearl-earrings.jpg"
+          }
+        },
+        "plated_rings": {
+          "type": "card",
+          "settings": {
+            "title": "Plated Pearl Rings",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": "",
+            "image": "shopify://shop_images/plated-pearl-rings.jpg"
+          }
+        },
+        "pearl_earrings": {
+          "type": "card",
+          "settings": {
+            "title": "Pearl Earrings",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": "",
+            "image": "shopify://shop_images/pearl-earrings-2.jpg"
+          }
+        },
+        "pearl_necklace": {
+          "type": "card",
+          "settings": {
+            "title": "Pearl Necklace",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": "",
+            "image": "shopify://shop_images/pearl-necklace.jpg"
+          }
+        },
+        "pearl_bracelets": {
+          "type": "card",
+          "settings": {
+            "title": "Pearl Bracelets",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": "",
+            "image": "shopify://shop_images/pearl-bracelets.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "silver_necklace",
+        "baroque_earrings",
+        "plated_rings",
+        "pearl_earrings",
+        "pearl_necklace",
+        "pearl_bracelets"
+      ],
+      "name": "图文卡片",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#FFFFFF",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "card_style": "standard",
+        "intro_button_label": "",
+        "intro_button_link": "",
+        "intro_button_style": "button",
+        "eyebrow": "",
+        "eyebrow_preset": "h5",
+        "heading": "Custom Pearl Jewelry Factory",
+        "heading_preset": "h2",
+        "description": "<p>Explore pearl jewelry directions across necklaces, earrings, rings and bracelets for custom collection development.</p>",
+        "body_preset": "h5",
+        "card_title_preset": "h4",
+        "desktop_layout": "grid",
+        "desktop_columns": "3",
+        "mobile_layout": "carousel",
+        "mobile_columns": "1",
+        "image_ratio": "square",
+        "gap": 20,
+        "padding_top": 72,
+        "padding_bottom": 76
+      }
+    },
+    "pearl_process": {
+      "type": "interactive-feature",
+      "blocks": {
+        "matching": {
+          "type": "item",
+          "settings": {
+            "title": "Jewelry Design Matching",
+            "description": "<p>Match pearl size, shape, color and luster with the metal structure, finish and overall design so the two materials work together as one piece.</p>",
+            "image": "shopify://shop_images/custom-design-jewelry.jpg"
+          }
+        },
+        "processing": {
+          "type": "item",
+          "settings": {
+            "title": "Metal Jewelry Processing",
+            "description": "<p>Prepare and finish the metal components through forming, setting, polishing and plating so pearls can be securely integrated into the approved design.</p>",
+            "image": "shopify://shop_images/jewelry-manufacturer.jpg"
+          }
+        },
+        "inspection": {
+          "type": "item",
+          "settings": {
+            "title": "Quality Inspection and Finishing",
+            "description": "<p>Review pearl condition, attachment security, metal surface, setting quality and overall consistency before the finished jewelry is approved.</p>",
+            "image": "shopify://shop_images/jewelry-checking.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "matching",
+        "processing",
+        "inspection"
+      ],
+      "name": "交互图文",
+      "settings": {
+        "section_width": "page-width",
+        "eyebrow": "PEARL JEWELRY MANUFACTURING",
+        "eyebrow_preset": "h5",
+        "heading": "Learn Our Process of Custom Pearl Jewelry Manufacture",
+        "heading_preset": "h2",
+        "description": "<p>Three key stages help align the pearl, metal construction and final finish throughout development and production.</p>",
+        "body_preset": "h5",
+        "item_title_preset": "h4",
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "pearl_why": {
+      "type": "section",
+      "blocks": {
+        "why_heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Why Choose Craftaurum for Custom Pearl Jewelry?</h2><p>We combine jewelry manufacturing experience with careful pearl selection, metal processing and finishing to support custom pearl collections for brands and wholesale partners.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "#17191A",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "why_grid": {
+          "type": "group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "space-between",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "gap": 16,
+            "width": "fill",
+            "width_mobile": "fill"
+          },
+          "blocks": {
+            "why_1": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 8,
+                "width": "fill",
+                "width_mobile": "fill",
+                "background_media": "none",
+                "background_color": "#FFFFFF",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#D8D5CE",
+                "border_radius": 0,
+                "padding-block-start": 22,
+                "padding-block-end": 22,
+                "padding-inline-start": 22,
+                "padding-inline-end": 22
+              },
+              "blocks": {
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Custom Design</h3><p>Develop pearl jewelry from sketches, references or an existing collection direction.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#17191A",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text"
+              ]
+            },
+            "why_2": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 8,
+                "width": "fill",
+                "width_mobile": "fill",
+                "background_media": "none",
+                "background_color": "#FFFFFF",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#D8D5CE",
+                "border_radius": 0,
+                "padding-block-start": 22,
+                "padding-block-end": 22,
+                "padding-inline-start": 22,
+                "padding-inline-end": 22
+              },
+              "blocks": {
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Premium Quality</h3><p>Control pearl matching, metal finishing and final assembly throughout sampling and production.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#17191A",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text"
+              ]
+            },
+            "why_3": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 8,
+                "width": "fill",
+                "width_mobile": "fill",
+                "background_media": "none",
+                "background_color": "#FFFFFF",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#D8D5CE",
+                "border_radius": 0,
+                "padding-block-start": 22,
+                "padding-block-end": 22,
+                "padding-inline-start": 22,
+                "padding-inline-end": 22
+              },
+              "blocks": {
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Authentic Materials</h3><p>Work with sterling silver, gold-plated finishes and selected pearl types according to the product direction.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#17191A",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text"
+              ]
+            },
+            "why_4": {
+              "type": "group",
+              "settings": {
+                "content_direction": "column",
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "flex-start",
+                "gap": 8,
+                "width": "fill",
+                "width_mobile": "fill",
+                "background_media": "none",
+                "background_color": "#FFFFFF",
+                "border": "solid",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "#D8D5CE",
+                "border_radius": 0,
+                "padding-block-start": 22,
+                "padding-block-end": 22,
+                "padding-inline-start": 22,
+                "padding-inline-end": 22
+              },
+              "blocks": {
+                "text": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<h3>Flexible Production</h3><p>Support sampling, lower-volume launches and repeat production for growing pearl jewelry collections.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "#17191A",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text"
+              ]
+            }
+          },
+          "block_order": [
+            "why_1",
+            "why_2",
+            "why_3",
+            "why_4"
+          ]
+        }
+      },
+      "block_order": [
+        "why_heading",
+        "why_grid"
+      ],
+      "name": "Why Choose Craftaurum",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 36,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#F8F7F4",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 72,
+        "padding-block-end": 76
+      }
+    },
+    "contact": {
+      "type": "section",
+      "blocks": {
+        "contact_heading": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>Start Your Custom Pearl Jewelry Project</h2><p>Share your pearl type, product category, metal finish, quantity and design direction with our team.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "contact_form": {
+          "type": "contact-form",
+          "settings": {
+            "width": "custom",
+            "custom_width": 100,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100,
+            "background_color": "",
+            "input_style": "default",
+            "input_background_color": "{{ settings.color_palette.background }}",
+            "input_text_color": "{{ settings.color_palette.foreground }}",
+            "input_border_color": "{{ settings.color_palette.foreground }}",
+            "border_width": 1,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "submit-button": {
+              "type": "contact-form-submit-button",
+              "static": true,
+              "settings": {
+                "label": "Submit",
+                "style_class": "button",
+                "custom_button_background": "{{ settings.color_palette.foreground }}",
+                "custom_button_text": "{{ settings.color_palette.background }}",
+                "custom_button_border": "{{ settings.color_palette.background }}",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "block_order": [
+        "contact_heading",
+        "contact_form"
+      ],
+      "name": "t:names.contact_form",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
+        "background_color": "#FFFFFF",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 72,
+        "padding-block-end": 88
+      }
+    }
+  },
+  "order": [
+    "main",
+    "pearl_intro",
+    "pearl_types",
+    "pearl_business",
+    "pearl_products",
+    "pearl_process",
+    "pearl_why",
+    "contact"
+  ]
+}
