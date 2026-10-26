@@ -10,17 +10,20 @@
     --padding-block-end: {{ section.settings.padding_bottom }}px;
     --ca-logo-gap: 10px;
     --ca-logo-mobile-columns: {{ section.settings.mobile_columns | default: 1 }};
+    --ca-logo-heading-size: {{ section.settings.heading_size | default: 35 }}px;
+    --ca-logo-body-size: {{ section.settings.body_size | default: 16 }}px;
+    --ca-logo-disclaimer-size: {{ section.settings.disclaimer_size | default: 13 }}px;
   "
 >
-  <div class="ca-logos__inner">
+  <div class="ca-logos__inner" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-in' }}">
     <header class="ca-logos__intro">
       {% if section.settings.heading != blank %}
-        <h2 class="{{ section.settings.heading_preset | default: 'h2' }} ca-logos__heading">
+        <h2 class="ca-logos__heading">
           {{ section.settings.heading | escape }}
         </h2>
       {% endif %}
       {% if section.settings.description != blank %}
-        <div class="ca-logos__description rte {{ section.settings.description_preset | default: 'h5' }}">
+        <div class="ca-logos__description rte">
           {{ section.settings.description }}
         </div>
       {% endif %}
@@ -100,7 +103,7 @@
       {% endif %}
     {% endif %}
     {% if section.settings.disclaimer != blank %}
-      <p class="ca-logos__disclaimer {{ section.settings.disclaimer_preset | default: 'h5' }}">
+      <p class="ca-logos__disclaimer">
         {{ section.settings.disclaimer | escape }}
       </p>
     {% endif %}
@@ -109,7 +112,8 @@
 {% stylesheet %}
   .ca-logos__inner { min-width: 0; }
   .ca-logos__intro { text-align: center; max-width: 1060px; margin: 0 auto 22px; }
-  .ca-logos__heading { margin: 0 0 16px; }
+  .ca-logos__heading { margin: 0 0 16px; font-size: var(--ca-logo-heading-size); line-height: 1.08; }
+  .ca-logos__description { font-size: var(--ca-logo-body-size); line-height: 1.6; }
   .ca-logos__description :is(p, ul, ol) { font-size: inherit; line-height: inherit; }
   .ca-logos__description p { margin: 0; }
   .ca-logos__slideshow slideshow-slides { gap: var(--ca-logo-gap, 10px); }
@@ -134,7 +138,7 @@
     color: rgb(var(--color-foreground-rgb) / 0.2);
     background: rgb(var(--color-foreground-rgb) / 0.04);
   }
-  .ca-logos__disclaimer { text-align: center; margin: 18px auto 0; }
+  .ca-logos__disclaimer { text-align: center; margin: 18px auto 0; font-size: var(--ca-logo-disclaimer-size); line-height: 1.5; opacity: .68; }
   .ca-logos__mobile-grid { display: none; }
   .ca-logos__carousel slideshow-arrows { pointer-events: none; }
   .ca-logos__carousel slideshow-arrows button { pointer-events: auto; }
@@ -155,7 +159,7 @@
 {% endstylesheet %}
 {% schema %}
 {
-  "name": "图片轮播",
+  "name": "品牌合作",
   "tag": "section",
   "disabled_on": {
     "groups": [
@@ -186,114 +190,22 @@
       "label": "标题",
       "default": "Trusted by Jewelry Partners Worldwide"
     },
-    {
-      "type": "select",
-      "id": "heading_preset",
-      "label": "标题字号预设",
-      "options": [
-        {
-          "label": "H1",
-          "value": "h1"
-        },
-        {
-          "label": "H2",
-          "value": "h2"
-        },
-        {
-          "label": "H3",
-          "value": "h3"
-        },
-        {
-          "label": "H4",
-          "value": "h4"
-        },
-        {
-          "label": "H5",
-          "value": "h5"
-        },
-        {
-          "label": "H6",
-          "value": "h6"
-        }
-      ],
-      "default": "h2"
-    },
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
     {
       "type": "richtext",
       "id": "description",
       "label": "介绍文字",
       "default": "<p>At Craftaurum, we work with jewelry brands and industry partners to bring thoughtful designs and reliable craftsmanship to life. We value long-term collaboration, consistent quality, and solutions tailored to each partner.</p>"
     },
-    {
-      "type": "select",
-      "id": "description_preset",
-      "label": "正文字号预设",
-      "options": [
-        {
-          "label": "H1",
-          "value": "h1"
-        },
-        {
-          "label": "H2",
-          "value": "h2"
-        },
-        {
-          "label": "H3",
-          "value": "h3"
-        },
-        {
-          "label": "H4",
-          "value": "h4"
-        },
-        {
-          "label": "H5",
-          "value": "h5"
-        },
-        {
-          "label": "H6",
-          "value": "h6"
-        }
-      ],
-      "default": "h5"
-    },
+    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
     {
       "type": "text",
       "id": "disclaimer",
       "label": "底部说明",
       "default": "Selected partnerships are shown. Additional collaborations remain confidential under NDA."
     },
-    {
-      "type": "select",
-      "id": "disclaimer_preset",
-      "label": "底部说明字号预设",
-      "options": [
-        {
-          "label": "H1",
-          "value": "h1"
-        },
-        {
-          "label": "H2",
-          "value": "h2"
-        },
-        {
-          "label": "H3",
-          "value": "h3"
-        },
-        {
-          "label": "H4",
-          "value": "h4"
-        },
-        {
-          "label": "H5",
-          "value": "h5"
-        },
-        {
-          "label": "H6",
-          "value": "h6"
-        }
-      ],
-      "default": "h5"
-    },
+    {"type":"range","id":"disclaimer_size","label":"底部说明字号","min":10,"max":18,"step":1,"unit":"px","default":13},
+    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-in"},
     {
       "type": "checkbox",
       "id": "autoplay",
@@ -371,7 +283,7 @@
   "max_blocks": 20,
   "presets": [
     {
-      "name": "图片轮播",
+      "name": "品牌合作",
       "blocks": [
         {
           "type": "partner"
