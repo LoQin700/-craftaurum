@@ -82,8 +82,8 @@
         "heading_size": 60,
         "body_size": 16,
         "animation_style": "fade-in",
-        "padding_top": 28,
-        "padding_bottom": 40
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     },
     "pearl_types": {
@@ -166,12 +166,12 @@
         "mobile_layout": "carousel",
         "mobile_columns": "1",
         "image_ratio": "square",
-        "image_width": 100,
-        "card_text_alignment": "left",
-        "gap": 18,
-        "row_gap": 44,
+        "image_width": 20,
+        "card_text_alignment": "center",
+        "gap": 0,
+        "row_gap": 36,
         "padding_top": 64,
-        "padding_bottom": 96
+        "padding_bottom": 72
       }
     },
     "pearl_business": {
@@ -183,7 +183,7 @@
             "image": "shopify://shop_images/pearls-necklace.jpg",
             "image_ratio": "portrait",
             "width": 58,
-            "rotation": -3,
+            "rotation": -4,
             "z_index": 1
           }
         },
@@ -193,7 +193,7 @@
             "image": "shopify://shop_images/pearl-materials.jpg",
             "image_ratio": "portrait",
             "width": 54,
-            "rotation": 3,
+            "rotation": 4,
             "z_index": 2
           }
         }
@@ -205,14 +205,14 @@
       "name": "叠层图文",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#f6f2eb",
+        "background_color": "#f8f7f4",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "image_position": "left",
         "desktop_layout": "overlap",
         "mobile_layout": "slider",
-        "visual_height": 620,
-        "overlap_amount": 34,
+        "visual_height": 560,
+        "overlap_amount": 28,
         "visual_aria_label": "Pearl jewelry and pearl material imagery",
         "text_alignment": "left",
         "eyebrow": "PEARL JEWELRY FOR BRANDS",
@@ -225,9 +225,9 @@
         "button_link": "shopify://pages/contact",
         "button_style": "button-unstyled",
         "animation_style": "soft-zoom",
-        "column_gap": 72,
-        "padding_top": 96,
-        "padding_bottom": 96
+        "column_gap": 64,
+        "padding_top": 72,
+        "padding_bottom": 76
       }
     },
     "pearl_products": {
@@ -334,12 +334,12 @@
         "mobile_layout": "carousel",
         "mobile_columns": "1",
         "image_ratio": "square",
-        "image_width": 100,
-        "card_text_alignment": "left",
-        "gap": 18,
-        "row_gap": 48,
-        "padding_top": 88,
-        "padding_bottom": 96
+        "image_width": 95,
+        "card_text_alignment": "center",
+        "gap": 0,
+        "row_gap": 36,
+        "padding_top": 72,
+        "padding_bottom": 76
       }
     },
     "pearl_process": {
@@ -395,8 +395,8 @@
         "desktop_columns": 4,
         "mobile_columns": "2",
         "gap": 24,
-        "padding_top": 96,
-        "padding_bottom": 88
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "pearl_why": {
@@ -452,8 +452,8 @@
         "desktop_columns": "4",
         "mobile_columns": "1",
         "animation_style": "fade-in",
-        "padding_top": 88,
-        "padding_bottom": 96
+        "padding_top": 72,
+        "padding_bottom": 76
       }
     },
     "contact": {
@@ -471,8 +471,8 @@
         "body_size": 16,
         "phone_required": false,
         "animation_style": "fade-up",
-        "padding_top": 104,
-        "padding_bottom": 104
+        "padding_top": 88,
+        "padding_bottom": 88
       }
     }
   },
