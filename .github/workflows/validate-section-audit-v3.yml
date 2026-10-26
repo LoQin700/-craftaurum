@@ -108,6 +108,11 @@ jobs:
                       continue
 
                   schema = schemas[stype]
+
+                  if stype != banner_type and 'heading_size' in sec.get('settings', {}):
+                      if sec['settings']['heading_size'] != 35:
+                          errors.append(f'{template_path}:{sid}.heading_size={sec["settings"]["heading_size"]} must be 35')
+
                   setting_defs = {
                       s.get('id'): s
                       for s in schema.get('settings', [])
