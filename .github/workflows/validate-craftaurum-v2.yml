@@ -1,0 +1,100 @@
+name: Validate Craftaurum V2 Sections
+
+on:
+  push:
+    branches:
+      - refactor/craftaurum-v2-sections
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate schemas and V2 wiring
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, re
+          from pathlib import Path
+
+          sections = [
+            'sections/jewelry-collections-overview.liquid',
+            'sections/content-cards.liquid',
+            'sections/overlap-image-text.liquid',
+            'sections/interactive-feature.liquid',
+            'sections/process-cards.liquid',
+            'sections/triptych-split-rows.liquid',
+            'sections/image-text-feature.liquid',
+            'sections/image-cards.liquid',
+            'sections/comparison-table.liquid',
+            'sections/content-guide.liquid',
+            'sections/why-choose-craftaurum.liquid',
+            'sections/editorial-contact.liquid',
+          ]
+          old_ids = {
+            'heading_preset','body_preset','eyebrow_preset',
+            'card_title_preset','subtitle_preset','item_title_preset',
+            'column_title_preset'
+          }
+
+          for filename in sections:
+              text = Path(filename).read_text(encoding='utf-8')
+              assert '{% schema %}' in text and '{% endschema %}' in text, filename
+              schema_text = text.split('{% schema %}',1)[1].split('{% endschema %}',1)[0].strip()
+              schema = json.loads(schema_text)
+              ids = {x.get('id') for x in schema.get('settings',[]) if isinstance(x,dict)}
+              assert 'animation_style' in ids, (filename, 'missing animation_style')
+              assert not (ids & old_ids), (filename, ids & old_ids)
+              assert any(x.get('type')=='range' and '字号' in x.get('label','') for x in schema.get('settings',[]) if isinstance(x,dict)), (filename, 'missing font range')
+
+          content = Path('sections/content-cards.liquid').read_text(encoding='utf-8')
+          assert '"value": "style_1"' in content and '"value": "style_2"' in content
+          assert '"id": "show_divider"' in content
+
+          overlap = Path('sections/overlap-image-text.liquid').read_text(encoding='utf-8')
+          overlap_schema = overlap.split('{% schema %}',1)[1].split('{% endschema %}',1)[0]
+          assert '"value": "overlap"' in overlap_schema
+          assert '"value": "split"' in overlap_schema
+          assert '"id": "overlap_amount"' in overlap_schema
+          assert '"id": "hover_scale"' not in overlap_schema
+          assert '"id": "x_offset"' not in overlap_schema
+          assert '"id": "y_offset"' not in overlap_schema
+          assert '"id": "rotation"' in overlap_schema
+
+          interactive = Path('sections/interactive-feature.liquid').read_text(encoding='utf-8')
+          interactive_schema = interactive.split('{% schema %}',1)[1].split('{% endschema %}',1)[0]
+          assert '"id": "eyebrow"' not in interactive_schema
+          assert '"value": "style_1"' in interactive_schema and '"value": "style_2"' in interactive_schema
+          assert '"value": "match_text"' in interactive_schema
+          assert '"value": "fixed"' in interactive_schema
+
+          contact = Path('sections/editorial-contact.liquid').read_text(encoding='utf-8')
+          assert '"id":"phone_required"' in contact
+          assert 'contact[phone]' in contact
+          assert 'contact[company]' in contact
+
+          page_text = Path('templates/page.pearl-jewelry.json').read_text(encoding='utf-8')
+          page = json.loads(page_text[page_text.index('{'):])
+          assert page['sections']['pearl_types']['settings']['intro_style']=='style_2'
+          assert page['sections']['pearl_types']['settings']['show_divider'] is True
+          assert page['sections']['pearl_process']['settings']['intro_style']=='style_2'
+          assert page['sections']['pearl_process']['settings']['visual_height_mode']=='match_text'
+          assert page['sections']['pearl_why']['type']=='why-choose-craftaurum'
+          assert page['sections']['pearl_why']['settings']['desktop_columns']=='4'
+          assert page['sections']['contact']['type']=='editorial-contact'
+
+          print('Craftaurum V2 schema/template validation: PASS')
+          PY
+
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
