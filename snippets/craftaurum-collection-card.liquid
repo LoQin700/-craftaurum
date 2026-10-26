@@ -1,7 +1,7 @@
 {%- doc -%}
   Shared card for the Craftaurum image collection section.
   Uses the collection's native image and title as fallback, preserving block controls.
-  Params: block, card_title_preset, attributes (boolean).
+  Params: block, attributes (boolean).
 {%- enddoc -%}
 {% liquid
   assign selected_collection = block.settings.collection
@@ -17,7 +17,6 @@
   if card_link == blank and selected_collection != blank
     assign card_link = selected_collection.url
   endif
-  assign title_preset = card_title_preset | default: 'h3'
 %}
 <div class="ca-collection__item"{% if attributes %} {{ block.shopify_attributes }}{% endif %}>
   {% if card_link != blank %}
@@ -39,9 +38,8 @@
         {{ 'image' | placeholder_svg_tag: 'ca-collection__placeholder' }}
       {% endif %}
       <span class="ca-collection__shade" aria-hidden="true"></span>
-      <span class="ca-collection__outline" aria-hidden="true"></span>
       {% if card_title != blank %}
-        <span class="ca-collection__card-title {{ title_preset }}">{{ card_title | escape }}</span>
+        <span class="ca-collection__card-title">{{ card_title | escape }}</span>
       {% endif %}
   {% if card_link != blank %}</a>{% else %}</div>{% endif %}
 </div>
