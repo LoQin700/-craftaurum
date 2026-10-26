@@ -2,6 +2,9 @@
 {% liquid
   assign content_width = section.settings.section_width | default: 'page-width'
   assign background_color = section.settings.background_color | default: '#FFFFFF'
+  unless section.settings.use_background
+    assign background_color = 'transparent'
+  endunless
   assign text_color = section.settings.text_color | default: '#17191A'
   assign accent_color = section.settings.accent_color | default: '#C7A85E'
   assign padding_top = section.settings.padding_top | default: 32
@@ -25,11 +28,14 @@
     --ca-banner-ratio: {{ ratio }};
     --ca-banner-padding-top: {{ padding_top }}px;
     --ca-banner-padding-bottom: {{ padding_bottom }}px;
+    --ca-banner-eyebrow-size: {{ section.settings.eyebrow_size | default: 12 }}px;
+    --ca-banner-heading-size: {{ section.settings.heading_size | default: 58 }}px;
+    --ca-banner-body-size: {{ section.settings.body_size | default: 16 }}px;
   "
 >
   <div class="ca-editorial-banner__surface">
     <div class="ca-editorial-banner__inner ca-editorial-banner__inner--{{ content_width }}">
-      <div class="ca-editorial-banner__layout{% if image_position == 'right' %} ca-editorial-banner__layout--image-right{% endif %}">
+      <div class="ca-editorial-banner__layout{% if image_position == 'right' %} ca-editorial-banner__layout--image-right{% endif %}" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
         <div class="ca-editorial-banner__media">
           {% if section.settings.hero_image != blank %}
             {{
@@ -48,13 +54,13 @@
         </div>
         <div class="ca-editorial-banner__content">
           {% if section.settings.eyebrow != blank %}
-            <p class="ca-editorial-banner__eyebrow {{ section.settings.eyebrow_preset | default: 'h5' }}">{{ section.settings.eyebrow | escape }}</p>
+            <p class="ca-editorial-banner__eyebrow">{{ section.settings.eyebrow | escape }}</p>
           {% endif %}
           {% if section.settings.heading != blank %}
-            <h1 class="ca-editorial-banner__title {{ section.settings.heading_preset | default: 'h1' }}">{{ section.settings.heading | escape }}</h1>
+            <h1 class="ca-editorial-banner__title">{{ section.settings.heading | escape }}</h1>
           {% endif %}
           {% if section.settings.introduction != blank %}
-            <div class="ca-editorial-banner__body rte {{ section.settings.body_preset | default: 'h5' }}">{{ section.settings.introduction }}</div>
+            <div class="ca-editorial-banner__body rte">{{ section.settings.introduction }}</div>
           {% endif %}
           <div class="ca-editorial-banner__actions">
             {% if section.settings.quote_label != blank %}
@@ -115,9 +121,10 @@
     color: var(--ca-banner-accent);
     letter-spacing: .12em;
     text-transform: uppercase;
+    font-size: var(--ca-banner-eyebrow-size);
   }
-  .ca-editorial-banner__title { margin: 0 0 18px; color: inherit; }
-  .ca-editorial-banner__body { max-width: 64ch; }
+  .ca-editorial-banner__title { margin: 0 0 18px; color: inherit; font-size: var(--ca-banner-heading-size); line-height: 1.02; }
+  .ca-editorial-banner__body { max-width: 64ch; font-size: var(--ca-banner-body-size); }
   .ca-editorial-banner__body :is(p,ul,ol) { font-size:inherit; line-height:inherit; }
   .ca-editorial-banner__body p { margin:0 0 1.2em; }
   .ca-editorial-banner__body p:last-child { margin-bottom:0; }
@@ -130,6 +137,7 @@
     .ca-editorial-banner__layout--image-right .ca-editorial-banner__content { grid-column:1; grid-row:auto; }
     .ca-editorial-banner__layout--image-right .ca-editorial-banner__content { order:0; }
     .ca-editorial-banner__layout--image-right .ca-editorial-banner__media { order:1; }
+    .ca-editorial-banner__title { font-size: min(var(--ca-banner-heading-size), 48px); }
   }
 {% endstylesheet %}
 
@@ -161,10 +169,17 @@
       "default": "page-width"
     },
     {
+      "type": "checkbox",
+      "id": "use_background",
+      "label": "使用背景颜色",
+      "default": true
+    },
+    {
       "type": "color",
       "id": "background_color",
       "label": "背景颜色",
-      "default": "#FFFFFF"
+      "default": "#F8F7F4",
+      "visible_if": "{{ section.settings.use_background }}"
     },
     {
       "type": "color",
@@ -264,100 +279,45 @@
       "label": "次级按钮链接"
     },
     {
-      "type": "select",
-      "id": "heading_preset",
-      "label": "主标题字号",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h1"
-    },
-    {
-      "type": "select",
-      "id": "eyebrow_preset",
+      "type": "range",
+      "id": "eyebrow_size",
       "label": "小标题字号",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h5"
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "主标题字号",
+      "min": 28,
+      "max": 88,
+      "step": 2,
+      "unit": "px",
+      "default": 58
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 16
     },
     {
       "type": "select",
-      "id": "body_preset",
-      "label": "正文字号",
+      "id": "animation_style",
+      "label": "入场动画",
       "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
+        { "value": "fade-up", "label": "Fade Up" },
+        { "value": "fade-in", "label": "Fade In" },
+        { "value": "soft-zoom", "label": "Soft Zoom" }
       ],
-      "default": "h5"
+      "default": "fade-up"
     },
     {
       "type": "range",
@@ -395,9 +355,6 @@
         "image_ratio": "wide",
         "quote_label": "Request a Manufacturing Quote",
         "catalog_label": "",
-        "heading_preset": "h1",
-        "eyebrow_preset": "h5",
-        "body_preset": "h5",
         "padding_top": 32,
         "padding_bottom": 32
       }

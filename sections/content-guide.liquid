@@ -37,7 +37,7 @@
     --ca-guide-feature-body-size: {{ section.settings.feature_body_size }}px;
   "
 >
-  <div class="ca-content-guide__inner">
+  <div class="ca-content-guide__inner" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
     {% if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.description != blank %}
       <header class="ca-content-guide__intro ca-content-guide__intro--{{ section.settings.intro_alignment }}">
         {% if section.settings.eyebrow != blank %}
@@ -447,6 +447,12 @@
       ],
       "default": "page-width"
     },
+
+    { "type": "select", "id": "animation_style", "label": "入场动画", "options": [
+      { "value": "fade-up", "label": "Fade Up" },
+      { "value": "fade-in", "label": "Fade In" },
+      { "value": "soft-zoom", "label": "Soft Zoom" }
+    ], "default": "fade-up" },
 
     { "type": "header", "content": "基础颜色" },
     { "type": "color", "id": "background_color", "label": "背景颜色", "default": "#FFFFFF" },

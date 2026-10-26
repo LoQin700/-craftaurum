@@ -32,35 +32,44 @@
     --ca-cards-card-action-align: {{ card_action_alignment }};
     --ca-cards-padding-top: {{ section.settings.padding_top }}px;
     --ca-cards-padding-bottom: {{ section.settings.padding_bottom }}px;
+    --ca-cards-divider: {{ section.settings.divider_color | default: '#D8D5CE' }};
+    --ca-cards-eyebrow-size: {{ section.settings.eyebrow_size | default: 12 }}px;
+    --ca-cards-heading-size: {{ section.settings.heading_size | default: 42 }}px;
+    --ca-cards-body-size: {{ section.settings.body_size | default: 16 }}px;
+    --ca-cards-card-title-size: {{ section.settings.card_title_size | default: 18 }}px;
+    --ca-cards-card-body-size: {{ section.settings.card_body_size | default: 15 }}px;
   "
 >
   <div class="ca-content-cards__surface">
-    <div class="ca-content-cards__inner">
-      <div class="ca-content-cards__intro">
-        {% if section.settings.eyebrow != blank %}
-          <p class="ca-content-cards__eyebrow {{ section.settings.eyebrow_preset }}">{{ section.settings.eyebrow | escape }}</p>
-        {% endif %}
+    <div class="ca-content-cards__inner" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
+      <div class="ca-content-cards__intro ca-content-cards__intro--{{ section.settings.intro_style | default: 'style_1' }}{% if section.settings.show_divider %} ca-content-cards__intro--divider{% endif %}">
+        <div class="ca-content-cards__intro-title">
+          {% if section.settings.eyebrow != blank %}
+            <p class="ca-content-cards__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+          {% endif %}
+          {% if section.settings.heading != blank %}
+            <h2 class="ca-content-cards__heading">{{ section.settings.heading | escape }}</h2>
+          {% endif %}
+        </div>
 
-        {% if section.settings.heading != blank %}
-          <h2 class="ca-content-cards__heading {{ section.settings.heading_preset }}">{{ section.settings.heading | escape }}</h2>
-        {% endif %}
+        <div class="ca-content-cards__intro-copy">
+          {% if section.settings.description != blank %}
+            <div class="ca-content-cards__description rte">
+              {{ section.settings.description }}
+            </div>
+          {% endif %}
 
-        {% if section.settings.description != blank %}
-          <div class="ca-content-cards__description rte {{ section.settings.body_preset }}">
-            {{ section.settings.description }}
-          </div>
-        {% endif %}
-
-        {% if section.settings.intro_button_label != blank %}
-          <div class="ca-content-cards__intro-action">
-            {% render 'craftaurum-cta',
-              label: section.settings.intro_button_label,
-              link: section.settings.intro_button_link,
-              style_class: section.settings.intro_button_style,
-              static_label: true
-            %}
-          </div>
-        {% endif %}
+          {% if section.settings.intro_button_label != blank %}
+            <div class="ca-content-cards__intro-action">
+              {% render 'craftaurum-cta',
+                label: section.settings.intro_button_label,
+                link: section.settings.intro_button_link,
+                style_class: section.settings.intro_button_style,
+                static_label: true
+              %}
+            </div>
+          {% endif %}
+        </div>
       </div>
 
       <div class="ca-content-cards__grid{% if section.settings.desktop_layout == 'carousel' %} ca-content-cards__grid--desktop-carousel{% endif %}{% if section.settings.mobile_layout == 'carousel' %} ca-content-cards__grid--mobile-carousel{% endif %}">
@@ -96,11 +105,11 @@
 
             <div class="ca-content-card__content">
               {% if block.settings.title != blank %}
-                <h3 class="ca-content-card__title {{ section.settings.card_title_preset }}">{{ block.settings.title | escape }}</h3>
+                <h3 class="ca-content-card__title">{{ block.settings.title | escape }}</h3>
               {% endif %}
 
               {% if block.settings.description != blank %}
-                <div class="ca-content-card__text rte {{ section.settings.body_preset }}">
+                <div class="ca-content-card__text rte">
                   {{ block.settings.description }}
                 </div>
               {% endif %}
@@ -150,9 +159,31 @@
   }
 
   .ca-content-cards__intro {
-    max-width: 960px;
+    max-width: 1120px;
     margin: 0 auto 36px;
+  }
+
+  .ca-content-cards__intro--divider {
+    border-top: 1px solid var(--ca-cards-divider);
+    padding-top: 24px;
+  }
+
+  .ca-content-cards__intro--style_1 {
+    max-width: 960px;
     text-align: center;
+  }
+
+  .ca-content-cards__intro--style_1 .ca-content-cards__intro-copy {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  .ca-content-cards__intro--style_2 {
+    display: grid;
+    grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
+    gap: clamp(32px, 6vw, 92px);
+    align-items: end;
+    text-align: left;
   }
 
   .ca-content-cards__eyebrow {
@@ -160,11 +191,24 @@
     color: var(--ca-cards-accent);
     letter-spacing: .14em;
     text-transform: uppercase;
+    font-size: var(--ca-cards-eyebrow-size);
   }
 
   .ca-content-cards__heading {
     margin: 0 0 14px;
     color: inherit;
+    font-size: var(--ca-cards-heading-size);
+    line-height: 1.08;
+  }
+
+  .ca-content-cards__description {
+    font-size: var(--ca-cards-body-size);
+    line-height: 1.6;
+  }
+
+  .ca-content-card__text {
+    font-size: var(--ca-cards-card-body-size);
+    line-height: 1.6;
   }
 
   .ca-content-cards__description :is(p, ul, ol),
@@ -218,6 +262,8 @@
   .ca-content-card__title {
     margin: 0 0 8px;
     color: inherit;
+    font-size: var(--ca-cards-card-title-size);
+    line-height: 1.25;
   }
 
   .ca-content-card__action {
@@ -259,6 +305,18 @@
     .ca-content-cards__intro {
       text-align: left;
       margin-bottom: 24px;
+    }
+
+    .ca-content-cards__intro--style_2 {
+      display: block;
+    }
+
+    .ca-content-cards__intro--style_2 .ca-content-cards__intro-title {
+      margin-bottom: 14px;
+    }
+
+    .ca-content-cards__heading {
+      font-size: min(var(--ca-cards-heading-size), 44px);
     }
 
     .ca-content-cards__grid {
@@ -328,6 +386,29 @@
       "default": "#C7A85E"
     },
     {
+      "type": "select",
+      "id": "intro_style",
+      "label": "顶部布局",
+      "options": [
+        { "value": "style_1", "label": "Style 1" },
+        { "value": "style_2", "label": "Style 2" }
+      ],
+      "default": "style_1"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_divider",
+      "label": "显示顶部细分隔线",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "分隔线颜色",
+      "default": "#D8D5CE",
+      "visible_if": "{{ section.settings.show_divider }}"
+    },
+    {
       "type": "text",
       "id": "intro_button_label",
       "label": "顶部按钮文字"
@@ -364,74 +445,10 @@
       "default": "JEWELRY DESIGN RANGE"
     },
     {
-      "type": "select",
-      "id": "eyebrow_preset",
-      "label": "小标题字号",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h5"
-    },
-    {
       "type": "text",
       "id": "heading",
       "label": "标题",
       "default": "Explore Custom Ring Styles"
-    },
-    {
-      "type": "select",
-      "id": "heading_preset",
-      "label": "标题字号",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h2"
     },
     {
       "type": "richtext",
@@ -440,68 +457,65 @@
       "default": "<p>Build a collection of distinctive rings with considered materials, stone settings and finishing options.</p>"
     },
     {
-      "type": "select",
-      "id": "body_preset",
-      "label": "正文字号",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h5"
+      "type": "range",
+      "id": "eyebrow_size",
+      "label": "小标题字号",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 42
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "说明字号",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "card_title_size",
+      "label": "卡片标题字号",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "card_body_size",
+      "label": "卡片正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 15
     },
     {
       "type": "select",
-      "id": "card_title_preset",
-      "label": "卡片标题字号",
+      "id": "animation_style",
+      "label": "入场动画",
       "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
+        { "value": "fade-up", "label": "Fade Up" },
+        { "value": "fade-in", "label": "Fade In" },
+        { "value": "soft-zoom", "label": "Soft Zoom" }
       ],
-      "default": "h3"
+      "default": "fade-up"
     },
     {
       "type": "select",

@@ -28,17 +28,20 @@
     --ca-feature-padding-top: {{ padding_top }}px;
     --ca-feature-padding-bottom: {{ padding_bottom }}px;
     --ca-feature-gap: 5%;
+    --ca-feature-heading-size: {{ section.settings.heading_size | default: 42 }}px;
+    --ca-feature-subtitle-size: {{ section.settings.subtitle_size | default: 12 }}px;
+    --ca-feature-body-size: {{ section.settings.body_size | default: 16 }}px;
   "
 >
   <div class="ca-feature__surface">
-    <div class="ca-feature__inner ca-feature__inner--{{ content_width }}">
+    <div class="ca-feature__inner ca-feature__inner--{{ content_width }}" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
       {% if section.settings.heading_position != 'content' %}
         <header class="ca-feature__header">
           {% if section.settings.heading != blank %}
-            <h2 class="ca-feature__heading {{ section.settings.heading_preset | default: 'h2' }}">{{ section.settings.heading | escape }}</h2>
+            <h2 class="ca-feature__heading">{{ section.settings.heading | escape }}</h2>
           {% endif %}
           {% if section.settings.subtitle != blank %}
-            <p class="ca-feature__subtitle {{ section.settings.subtitle_preset | default: 'h3' }}">{{ section.settings.subtitle | escape }}</p>
+            <p class="ca-feature__subtitle">{{ section.settings.subtitle | escape }}</p>
           {% endif %}
           {% if section.settings.top_label != blank %}
             <div class="ca-feature__tag">
@@ -58,14 +61,14 @@
         <div class="ca-feature__copy">
           {% if section.settings.heading_position == 'content' %}
             {% if section.settings.subtitle != blank %}
-              <p class="ca-feature__subtitle {{ section.settings.subtitle_preset | default: 'h3' }}">{{ section.settings.subtitle | escape }}</p>
+              <p class="ca-feature__subtitle">{{ section.settings.subtitle | escape }}</p>
             {% endif %}
             {% if section.settings.heading != blank %}
-              <h2 class="ca-feature__heading {{ section.settings.heading_preset | default: 'h2' }}">{{ section.settings.heading | escape }}</h2>
+              <h2 class="ca-feature__heading">{{ section.settings.heading | escape }}</h2>
             {% endif %}
           {% endif %}
           {% if section.settings.body != blank %}
-            <div class="ca-feature__body rte {{ section.settings.body_preset | default: 'h5' }}">{{ section.settings.body }}</div>
+            <div class="ca-feature__body rte">{{ section.settings.body }}</div>
           {% endif %}
           {% if section.settings.cta_label != blank %}
             <div class="ca-feature__bottom-cta">
@@ -119,12 +122,13 @@
     padding-inline:max(var(--page-margin),24px);
   }
   .ca-feature__header { text-align:center; margin:0 auto 38px; }
-  .ca-feature__heading { margin:0 0 16px; color:inherit; }
+  .ca-feature__heading { margin:0 0 16px; color:inherit; font-size:var(--ca-feature-heading-size); line-height:1.08; }
   .ca-feature__subtitle {
     margin:0 0 16px;
     color:var(--ca-feature-accent);
     letter-spacing:.12em;
     text-transform:uppercase;
+    font-size:var(--ca-feature-subtitle-size);
   }
   .ca-feature__tag { display:flex; justify-content:center; }
   .ca-feature__top-cta { min-width:min(300px,100%); }
@@ -147,7 +151,7 @@
     overflow:hidden;
     align-self:center;
   }
-  .ca-feature__body { max-width:100%; }
+  .ca-feature__body { max-width:100%; font-size:var(--ca-feature-body-size); line-height:1.6; }
   .ca-feature__body :is(p,ul,ol) { font-size:inherit; line-height:inherit; }
   .ca-feature__body p { margin:0 0 1.35em; }
   .ca-feature__body p:last-child { margin-bottom:0; }
@@ -227,38 +231,10 @@
       "label": "标题",
       "default": "Custom Jewelry Manufacturing"
     },
-    {
-      "type": "select",
-      "id": "heading_preset",
-      "label": "标题字号预设",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h2"
-    },
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":2,"unit":"px","default":42},
+    {"type":"range","id":"subtitle_size","label":"副标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
+    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
     {
       "type": "select",
       "id": "heading_position",
@@ -285,38 +261,6 @@
       "id": "top_label",
       "label": "顶部按钮文案",
       "default": "Explore Our Craft"
-    },
-    {
-      "type": "select",
-      "id": "subtitle_preset",
-      "label": "副标题字号预设",
-      "options": [
-        {
-          "label": "H1",
-          "value": "h1"
-        },
-        {
-          "label": "H2",
-          "value": "h2"
-        },
-        {
-          "label": "H3",
-          "value": "h3"
-        },
-        {
-          "label": "H4",
-          "value": "h4"
-        },
-        {
-          "label": "H5",
-          "value": "h5"
-        },
-        {
-          "label": "H6",
-          "value": "h6"
-        }
-      ],
-      "default": "h3"
     },
     {
       "type": "url",
@@ -348,38 +292,6 @@
       "id": "body",
       "label": "正文",
       "default": "<p>Discover thoughtful jewelry craftsmanship and flexible custom design services at Craftaurum.</p>"
-    },
-    {
-      "type": "select",
-      "id": "body_preset",
-      "label": "正文字号预设",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h5"
     },
     {
       "type": "image_picker",
@@ -485,9 +397,7 @@
         "heading": "Jewelry Manufacturing Built Around Your Collection",
         "heading_position": "content",
         "subtitle": "ABOUT CRAFTAURUM",
-        "subtitle_preset": "h5",
         "body": "<p>Craftaurum supports jewelry brands and wholesale partners with custom development, sampling and production coordination.</p>",
-        "body_preset": "h5",
         "image_position": "left",
         "image_ratio": "landscape",
         "top_label": "",

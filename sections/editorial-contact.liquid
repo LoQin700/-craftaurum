@@ -1,0 +1,168 @@
+<section
+  id="EditorialContact-{{ section.id }}"
+  class="section section--{{ section.settings.section_width }} ca-editorial-contact"
+  style="
+    --ca-contact-bg: {{ section.settings.background_color }};
+    --ca-contact-text: {{ section.settings.text_color }};
+    --ca-contact-eyebrow-size: {{ section.settings.eyebrow_size }}px;
+    --ca-contact-heading-size: {{ section.settings.heading_size }}px;
+    --ca-contact-body-size: {{ section.settings.body_size }}px;
+    --ca-contact-padding-top: {{ section.settings.padding_top }}px;
+    --ca-contact-padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="ca-editorial-contact__surface">
+    <div class="ca-editorial-contact__inner" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
+      <div class="ca-editorial-contact__copy">
+        {% if section.settings.eyebrow != blank %}
+          <p class="ca-editorial-contact__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+        {% endif %}
+        {% if section.settings.heading != blank %}
+          <h2 class="ca-editorial-contact__heading">{{ section.settings.heading | escape }}</h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <div class="ca-editorial-contact__body rte">{{ section.settings.description }}</div>
+        {% endif %}
+      </div>
+
+      <div class="ca-editorial-contact__form-wrap">
+        {% form 'contact', class: 'ca-editorial-contact__form' %}
+          {% if form.posted_successfully? %}
+            <p class="ca-editorial-contact__status">Thank you. Your inquiry has been submitted.</p>
+          {% elsif form.errors %}
+            <div class="ca-editorial-contact__status">{{ form.errors | default_errors }}</div>
+          {% endif %}
+
+          <label class="ca-editorial-contact__field">
+            <span>Name</span>
+            <input type="text" name="contact[name]" value="{{ form.name }}" autocomplete="name" required>
+          </label>
+
+          <label class="ca-editorial-contact__field">
+            <span>Email</span>
+            <input type="email" name="contact[email]" value="{{ form.email }}" autocomplete="email" required>
+          </label>
+
+          <label class="ca-editorial-contact__field">
+            <span>Company</span>
+            <input type="text" name="contact[company]" autocomplete="organization">
+          </label>
+
+          <label class="ca-editorial-contact__field">
+            <span>Phone</span>
+            <input type="tel" name="contact[phone]" value="{{ form.phone }}" autocomplete="tel"{% if section.settings.phone_required %} required{% endif %}>
+          </label>
+
+          <label class="ca-editorial-contact__field ca-editorial-contact__field--message">
+            <span>Tell us about your project</span>
+            <textarea name="contact[body]" required>{{ form.body }}</textarea>
+          </label>
+
+          <button type="submit" class="ca-editorial-contact__submit">Submit inquiry</button>
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .ca-editorial-contact::before {
+    content:'';
+    position:absolute;
+    inset:0;
+    background:var(--ca-contact-bg);
+    pointer-events:none;
+  }
+  .ca-editorial-contact__surface { position:relative; z-index:1; color:var(--ca-contact-text); }
+  .ca-editorial-contact__inner {
+    display:grid;
+    grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);
+    gap:clamp(48px,7vw,110px);
+    padding-block:var(--ca-contact-padding-top) var(--ca-contact-padding-bottom);
+  }
+  .ca-editorial-contact__copy { align-self:start; padding-top:6px; }
+  .ca-editorial-contact__eyebrow {
+    margin:0 0 22px;
+    color:color-mix(in srgb,var(--ca-contact-text) 58%,transparent);
+    font-size:var(--ca-contact-eyebrow-size);
+    letter-spacing:.15em;
+    text-transform:uppercase;
+  }
+  .ca-editorial-contact__heading {
+    margin:0 0 56px;
+    max-width:13ch;
+    color:inherit;
+    font-size:var(--ca-contact-heading-size);
+    line-height:1.02;
+  }
+  .ca-editorial-contact__body {
+    max-width:62ch;
+    font-size:var(--ca-contact-body-size);
+    line-height:1.6;
+  }
+  .ca-editorial-contact__body p { margin:0; }
+  .ca-editorial-contact__form { display:grid; gap:0; }
+  .ca-editorial-contact__field {
+    display:grid;
+    gap:7px;
+    padding:0 0 14px;
+    margin-bottom:26px;
+    border-bottom:1px solid color-mix(in srgb,var(--ca-contact-text) 30%,transparent);
+  }
+  .ca-editorial-contact__field span {
+    font-size:14px;
+    color:color-mix(in srgb,var(--ca-contact-text) 62%,transparent);
+  }
+  .ca-editorial-contact__field input,
+  .ca-editorial-contact__field textarea {
+    width:100%;
+    padding:0;
+    border:0;
+    outline:0;
+    border-radius:0;
+    background:transparent;
+    color:var(--ca-contact-text);
+    font:inherit;
+    box-shadow:none;
+  }
+  .ca-editorial-contact__field textarea { min-height:84px; resize:vertical; }
+  .ca-editorial-contact__submit {
+    width:max-content;
+    margin-top:6px;
+    padding:14px 22px;
+    border:1px solid var(--ca-contact-text);
+    border-radius:0;
+    background:var(--ca-contact-text);
+    color:var(--ca-contact-bg);
+    cursor:pointer;
+  }
+  .ca-editorial-contact__status { margin:0 0 24px; }
+  @media screen and (max-width:749px) {
+    .ca-editorial-contact__inner { grid-template-columns:1fr; gap:42px; }
+    .ca-editorial-contact__heading { margin-bottom:24px; font-size:min(var(--ca-contact-heading-size),48px); }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name":"联系表单 - Editorial",
+  "tag":"section",
+  "disabled_on":{"groups":["header","footer"]},
+  "settings":[
+    {"type":"select","id":"section_width","label":"内容宽度","options":[{"value":"page-width","label":"页面宽度"},{"value":"full-width","label":"全宽"}],"default":"page-width"},
+    {"type":"color","id":"background_color","label":"背景颜色","default":"#F8F7F4"},
+    {"type":"color","id":"text_color","label":"文字颜色","default":"#17191A"},
+    {"type":"text","id":"eyebrow","label":"小标题","default":"START A PROJECT"},
+    {"type":"range","id":"eyebrow_size","label":"小标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
+    {"type":"text","id":"heading","label":"标题","default":"Start Your Custom Jewelry Project"},
+    {"type":"range","id":"heading_size","label":"标题字号","min":28,"max":80,"step":2,"unit":"px","default":56},
+    {"type":"richtext","id":"description","label":"说明","default":"<p>Share your product direction, material requirements and quantity with our team.</p>"},
+    {"type":"range","id":"body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"checkbox","id":"phone_required","label":"Phone 必填","default":false},
+    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
+    {"type":"range","id":"padding_top","label":"上边距","min":0,"max":160,"step":4,"unit":"px","default":88},
+    {"type":"range","id":"padding_bottom","label":"下边距","min":0,"max":160,"step":4,"unit":"px","default":88}
+  ],
+  "presets":[{"name":"联系表单 - Editorial"}]
+}
+{% endschema %}

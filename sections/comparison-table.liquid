@@ -21,19 +21,23 @@
     --ca-compare-body-text: {{ section.settings.body_text_color }};
     --ca-compare-metric-text: {{ section.settings.metric_text_color }};
     --ca-compare-cell-padding: {{ section.settings.cell_padding }}px;
+    --ca-compare-eyebrow-size: {{ section.settings.eyebrow_size | default: 12 }}px;
+    --ca-compare-heading-size: {{ section.settings.heading_size | default: 42 }}px;
+    --ca-compare-body-size: {{ section.settings.body_size | default: 15 }}px;
+    --ca-compare-column-title-size: {{ section.settings.column_title_size | default: 18 }}px;
   "
 >
-  <div class="ca-compare__inner">
+  <div class="ca-compare__inner" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
     {% if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.description != blank %}
       <header class="ca-compare__intro ca-compare__intro--{{ section.settings.intro_alignment }}">
         {% if section.settings.eyebrow != blank %}
-          <p class="ca-compare__eyebrow {{ section.settings.eyebrow_preset }}">{{ section.settings.eyebrow | escape }}</p>
+          <p class="ca-compare__eyebrow">{{ section.settings.eyebrow | escape }}</p>
         {% endif %}
         {% if section.settings.heading != blank %}
-          <h2 class="ca-compare__heading {{ section.settings.heading_preset }}">{{ section.settings.heading | escape }}</h2>
+          <h2 class="ca-compare__heading">{{ section.settings.heading | escape }}</h2>
         {% endif %}
         {% if section.settings.description != blank %}
-          <div class="ca-compare__description rte {{ section.settings.body_preset }}">{{ section.settings.description }}</div>
+          <div class="ca-compare__description rte">{{ section.settings.description }}</div>
         {% endif %}
       </header>
     {% endif %}
@@ -47,14 +51,14 @@
             {% if section.settings.column_1_kicker != blank %}
               <span class="ca-compare__kicker">{{ section.settings.column_1_kicker | escape }}</span>
             {% endif %}
-            <strong class="ca-compare__product-title {{ section.settings.column_title_preset }}">{{ section.settings.column_1_title | escape }}</strong>
+            <strong class="ca-compare__product-title">{{ section.settings.column_1_title | escape }}</strong>
           </div>
 
           <div class="ca-compare__product">
             {% if section.settings.column_2_kicker != blank %}
               <span class="ca-compare__kicker">{{ section.settings.column_2_kicker | escape }}</span>
             {% endif %}
-            <strong class="ca-compare__product-title {{ section.settings.column_title_preset }}">{{ section.settings.column_2_title | escape }}</strong>
+            <strong class="ca-compare__product-title">{{ section.settings.column_2_title | escape }}</strong>
           </div>
 
           {% if section.settings.column_count == '3' %}
@@ -62,18 +66,19 @@
               {% if section.settings.column_3_kicker != blank %}
                 <span class="ca-compare__kicker">{{ section.settings.column_3_kicker | escape }}</span>
               {% endif %}
-              <strong class="ca-compare__product-title {{ section.settings.column_title_preset }}">{{ section.settings.column_3_title | escape }}</strong>
+              <strong class="ca-compare__product-title">{{ section.settings.column_3_title | escape }}</strong>
             </div>
           {% endif %}
         </div>
 
         {% for block in section.blocks %}
-          <div class="ca-compare__row{% if forloop.index | modulo: 2 == 0 %} ca-compare__row--alt{% endif %}" {{ block.shopify_attributes }}>
+          {% assign row_modulo = forloop.index | modulo: 2 %}
+          <div class="ca-compare__row{% if row_modulo == 0 %} ca-compare__row--alt{% endif %}" {{ block.shopify_attributes }}>
             <div class="ca-compare__metric">{{ block.settings.label | escape }}</div>
-            <div class="ca-compare__value rte {{ section.settings.body_preset }}">{{ block.settings.value_1 }}</div>
-            <div class="ca-compare__value rte {{ section.settings.body_preset }}">{{ block.settings.value_2 }}</div>
+            <div class="ca-compare__value rte">{{ block.settings.value_1 }}</div>
+            <div class="ca-compare__value rte">{{ block.settings.value_2 }}</div>
             {% if section.settings.column_count == '3' %}
-              <div class="ca-compare__value rte {{ section.settings.body_preset }}">{{ block.settings.value_3 }}</div>
+              <div class="ca-compare__value rte">{{ block.settings.value_3 }}</div>
             {% endif %}
           </div>
         {% endfor %}
@@ -82,7 +87,8 @@
 
     <div class="ca-compare__mobile">
       {% for block in section.blocks %}
-        <article class="ca-compare__mobile-group{% if forloop.index | modulo: 2 == 0 %} ca-compare__mobile-group--alt{% endif %}" {{ block.shopify_attributes }}>
+        {% assign row_modulo = forloop.index | modulo: 2 %}
+        <article class="ca-compare__mobile-group{% if row_modulo == 0 %} ca-compare__mobile-group--alt{% endif %}" {{ block.shopify_attributes }}>
           <h3 class="ca-compare__mobile-metric">{{ block.settings.label | escape }}</h3>
 
           <div class="ca-compare__mobile-option">
@@ -152,11 +158,16 @@
     color: var(--ca-compare-accent);
     letter-spacing: .14em;
     text-transform: uppercase;
+    font-size: var(--ca-compare-eyebrow-size);
   }
 
   .ca-compare__heading {
     margin: 0 0 14px;
+    font-size: var(--ca-compare-heading-size);
+    line-height: 1.08;
   }
+
+  .ca-compare__description { font-size: var(--ca-compare-body-size); line-height: 1.6; }
 
   .ca-compare__description p {
     margin: 0;
@@ -236,6 +247,8 @@
     display: block;
     margin: 0;
     font-family: var(--font-heading--family);
+    font-size: var(--ca-compare-column-title-size);
+    line-height: 1.25;
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -246,6 +259,7 @@
 
   .ca-compare__value {
     color: var(--ca-compare-body-text);
+    font-size: var(--ca-compare-body-size);
     line-height: 1.55;
   }
 
@@ -406,41 +420,18 @@
 
     { "type": "header", "content": "标题" },
     { "type": "text", "id": "eyebrow", "label": "小标题", "default": "COMPARISON" },
-    {
-      "type": "select",
-      "id": "eyebrow_preset",
-      "label": "小标题字号",
-      "options": [
-        { "value": "h4", "label": "H4" },
-        { "value": "h5", "label": "H5" },
-        { "value": "h6", "label": "H6" }
-      ],
-      "default": "h5"
-    },
     { "type": "text", "id": "heading", "label": "标题", "default": "Compare Options" },
-    {
-      "type": "select",
-      "id": "heading_preset",
-      "label": "标题字号",
-      "options": [
-        { "value": "h1", "label": "H1" },
-        { "value": "h2", "label": "H2" },
-        { "value": "h3", "label": "H3" }
-      ],
-      "default": "h2"
-    },
     { "type": "richtext", "id": "description", "label": "介绍文字" },
-    {
-      "type": "select",
-      "id": "body_preset",
-      "label": "正文字号",
-      "options": [
-        { "value": "h4", "label": "H4" },
-        { "value": "h5", "label": "H5" },
-        { "value": "h6", "label": "H6" }
-      ],
-      "default": "h5"
-    },
+
+    { "type": "range", "id": "eyebrow_size", "label": "小标题字号", "min": 10, "max": 20, "step": 1, "unit": "px", "default": 12 },
+    { "type": "range", "id": "heading_size", "label": "标题字号", "min": 24, "max": 72, "step": 2, "unit": "px", "default": 42 },
+    { "type": "range", "id": "body_size", "label": "正文字号", "min": 12, "max": 22, "step": 1, "unit": "px", "default": 15 },
+    { "type": "range", "id": "column_title_size", "label": "列标题字号", "min": 14, "max": 30, "step": 1, "unit": "px", "default": 18 },
+    { "type": "select", "id": "animation_style", "label": "入场动画", "options": [
+      { "value": "fade-up", "label": "Fade Up" },
+      { "value": "fade-in", "label": "Fade In" },
+      { "value": "soft-zoom", "label": "Soft Zoom" }
+    ], "default": "fade-up" },
 
     { "type": "header", "content": "对比列" },
     {
@@ -454,17 +445,6 @@
       "default": "3"
     },
     { "type": "text", "id": "comparison_label", "label": "左上角文字", "default": "Comparison" },
-    {
-      "type": "select",
-      "id": "column_title_preset",
-      "label": "列标题字号",
-      "options": [
-        { "value": "h3", "label": "H3" },
-        { "value": "h4", "label": "H4" },
-        { "value": "h5", "label": "H5" }
-      ],
-      "default": "h4"
-    },
 
     { "type": "text", "id": "column_1_kicker", "label": "第 1 列顶部标签" },
     { "type": "text", "id": "column_1_title", "label": "第 1 列标题", "default": "Option One" },

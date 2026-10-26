@@ -18,9 +18,11 @@
     --ca-triptych-text-bg: {{ section.settings.text_background }};
     --ca-triptych-image-bg: {{ section.settings.image_background }};
     --ca-triptych-text-color: {{ section.settings.text_color }};
+    --ca-triptych-heading-size: {{ section.settings.heading_size | default: 32 }}px;
+    --ca-triptych-body-size: {{ section.settings.body_size | default: 16 }}px;
   "
 >
-  <div class="ca-triptych-split__rows">
+  <div class="ca-triptych-split__rows" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
     {% for block in section.blocks %}
       <article
         class="ca-triptych-split__row ca-triptych-split__row--image-{{ section.settings.image_position }}"
@@ -28,10 +30,10 @@
       >
         <div class="ca-triptych-split__copy">
           {% if block.settings.heading != blank %}
-            <h3 class="ca-triptych-split__title {{ section.settings.heading_preset }}">{{ block.settings.heading | escape }}</h3>
+            <h3 class="ca-triptych-split__title">{{ block.settings.heading | escape }}</h3>
           {% endif %}
           {% if block.settings.body != blank %}
-            <div class="ca-triptych-split__body rte {{ section.settings.body_preset }}">{{ block.settings.body }}</div>
+            <div class="ca-triptych-split__body rte">{{ block.settings.body }}</div>
           {% endif %}
         </div>
 
@@ -102,10 +104,13 @@
   .ca-triptych-split__title {
     margin: 0 0 12px;
     color: inherit;
+    font-size: var(--ca-triptych-heading-size);
+    line-height: 1.15;
   }
 
   .ca-triptych-split__body {
     color: inherit;
+    font-size: var(--ca-triptych-body-size);
     line-height: 1.6;
   }
 
@@ -185,28 +190,13 @@
     { "type": "color", "id": "text_background", "label": "文字区域背景", "default": "#E7DED0" },
     { "type": "color", "id": "image_background", "label": "图片区背景", "default": "#F6F2EB" },
     { "type": "color", "id": "text_color", "label": "文字颜色", "default": "#17191A" },
-    {
-      "type": "select",
-      "id": "heading_preset",
-      "label": "标题字号",
-      "options": [
-        { "value": "h2", "label": "H2" },
-        { "value": "h3", "label": "H3" },
-        { "value": "h4", "label": "H4" }
-      ],
-      "default": "h2"
-    },
-    {
-      "type": "select",
-      "id": "body_preset",
-      "label": "正文字号",
-      "options": [
-        { "value": "h4", "label": "H4" },
-        { "value": "h5", "label": "H5" },
-        { "value": "h6", "label": "H6" }
-      ],
-      "default": "h5"
-    },
+    { "type": "range", "id": "heading_size", "label": "标题字号", "min": 18, "max": 56, "step": 1, "unit": "px", "default": 32 },
+    { "type": "range", "id": "body_size", "label": "正文字号", "min": 12, "max": 22, "step": 1, "unit": "px", "default": 16 },
+    { "type": "select", "id": "animation_style", "label": "入场动画", "options": [
+      { "value": "fade-up", "label": "Fade Up" },
+      { "value": "fade-in", "label": "Fade In" },
+      { "value": "soft-zoom", "label": "Soft Zoom" }
+    ], "default": "fade-up" },
     { "type": "range", "id": "text_padding", "label": "文字区域内边距", "min": 0, "max": 72, "step": 2, "unit": "px", "default": 32 },
     { "type": "range", "id": "image_padding", "label": "图片区内边距", "min": 0, "max": 48, "step": 2, "unit": "px", "default": 18 },
     { "type": "range", "id": "image_gap", "label": "图片间距", "min": 0, "max": 32, "step": 2, "unit": "px", "default": 14 },

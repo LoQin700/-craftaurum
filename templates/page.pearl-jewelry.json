@@ -64,7 +64,7 @@
       "name": "图文横幅",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#ffffff",
+        "background_color": "#F8F7F4",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "eyebrow": "CUSTOM PEARL JEWELRY",
@@ -77,11 +77,13 @@
         "quote_url": "shopify://pages/contact",
         "catalog_label": "",
         "catalog_url": "",
-        "heading_preset": "h1",
-        "eyebrow_preset": "h5",
-        "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 52,
+        "use_background": true,
+        "eyebrow_size": 12,
+        "heading_size": 60,
+        "body_size": 16,
+        "animation_style": "fade-up"
       }
     },
     "pearl_types": {
@@ -148,22 +150,27 @@
         "intro_button_link": "",
         "intro_button_style": "button",
         "eyebrow": "",
-        "eyebrow_preset": "h5",
         "heading": "Different Types of Pearl We Use",
-        "heading_preset": "h2",
         "description": "<p>Pearl type, size, shape, luster and color can all influence the final design direction. We match pearl selection to the intended product, metal finish and collection positioning.</p>",
-        "body_preset": "h5",
-        "card_title_preset": "h4",
         "desktop_layout": "grid",
         "desktop_columns": "4",
         "mobile_layout": "carousel",
         "mobile_columns": "1",
         "image_ratio": "square",
-        "image_width": 30,
+        "image_width": 100,
         "card_text_alignment": "left",
         "gap": 20,
         "padding_top": 64,
-        "padding_bottom": 72
+        "padding_bottom": 72,
+        "intro_style": "style_2",
+        "show_divider": true,
+        "divider_color": "#D8D5CE",
+        "eyebrow_size": 12,
+        "heading_size": 52,
+        "body_size": 16,
+        "card_title_size": 18,
+        "card_body_size": 14,
+        "animation_style": "fade-up"
       }
     },
     "pearl_business": {
@@ -175,8 +182,6 @@
             "image": "shopify://shop_images/pearls-necklace.jpg",
             "image_ratio": "portrait",
             "width": 58,
-            "x_offset": -72,
-            "y_offset": 24,
             "rotation": -4,
             "z_index": 1
           }
@@ -187,8 +192,6 @@
             "image": "shopify://shop_images/pearl-materials.jpg",
             "image_ratio": "portrait",
             "width": 54,
-            "x_offset": 80,
-            "y_offset": -32,
             "rotation": 4,
             "z_index": 2
           }
@@ -208,7 +211,6 @@
         "desktop_layout": "overlap",
         "mobile_layout": "slider",
         "visual_height": 560,
-        "hover_scale": 3,
         "visual_aria_label": "Pearl jewelry and pearl material imagery",
         "text_alignment": "left",
         "eyebrow": "PEARL JEWELRY FOR BRANDS",
@@ -221,7 +223,10 @@
         "button_style": "button-unstyled",
         "column_gap": 64,
         "padding_top": 72,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "overlap_amount": 28,
+        "eyebrow_size": 12,
+        "animation_style": "soft-zoom"
       }
     },
     "pearl_products": {
@@ -312,12 +317,8 @@
         "intro_button_link": "",
         "intro_button_style": "button",
         "eyebrow": "",
-        "eyebrow_preset": "h5",
         "heading": "Custom Pearl Jewelry Factory",
-        "heading_preset": "h2",
         "description": "<p>Explore pearl jewelry directions across necklaces, earrings, rings and bracelets for custom collection development.</p>",
-        "body_preset": "h5",
-        "card_title_preset": "h4",
         "desktop_layout": "grid",
         "desktop_columns": "3",
         "mobile_layout": "carousel",
@@ -327,7 +328,16 @@
         "card_text_alignment": "left",
         "gap": 40,
         "padding_top": 72,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "intro_style": "style_1",
+        "show_divider": false,
+        "divider_color": "#D8D5CE",
+        "eyebrow_size": 12,
+        "heading_size": 42,
+        "body_size": 16,
+        "card_title_size": 18,
+        "card_body_size": 14,
+        "animation_style": "fade-up"
       }
     },
     "pearl_process": {
@@ -366,503 +376,98 @@
       "name": "交互图文",
       "settings": {
         "section_width": "page-width",
-        "eyebrow": "PEARL JEWELRY MANUFACTURING",
-        "eyebrow_preset": "h5",
         "heading": "Learn Our Process of Custom Pearl Jewelry Manufacture",
-        "heading_preset": "h2",
         "description": "<p>Three key stages help align the pearl, metal construction and final finish throughout development and production.</p>",
-        "body_preset": "h5",
-        "item_title_preset": "h4",
         "padding_top": 72,
-        "padding_bottom": 72
+        "padding_bottom": 72,
+        "layout_mode": "interactive",
+        "background_color": "#F8F7F4",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "intro_style": "style_2",
+        "heading_size": 44,
+        "body_size": 16,
+        "item_title_size": 20,
+        "item_body_size": 15,
+        "visual_height_mode": "match_text",
+        "visual_height": 520,
+        "animation_style": "fade-up"
       }
     },
     "pearl_why": {
-      "type": "section",
+      "type": "why-choose-craftaurum",
+      "name": "Why Choose Craftaurum",
       "blocks": {
-        "why_heading": {
-          "type": "text",
+        "custom_design": {
+          "type": "item",
           "settings": {
-            "text": "<h2>Why Choose Craftaurum for Custom Pearl Jewelry?</h2><p>We combine jewelry manufacturing experience with careful pearl selection, metal processing and finishing to support custom pearl collections for brands and wholesale partners.</p>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "text_color": "#17191a",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "title": "Custom Design",
+            "description": "<p>Develop pearl jewelry from sketches, references or an existing collection direction.</p>"
+          }
         },
-        "why_grid": {
-          "type": "group",
+        "premium_quality": {
+          "type": "item",
           "settings": {
-            "content_direction": "row",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "space-between",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 16,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "background_media": "none",
-            "background_color": "",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_color": "",
-            "border_radius": 0,
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "why_1": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "background_media": "none",
-                "background_color": "#ffffff",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "border": "solid",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_color": "#d8d5ce",
-                "border_radius": 0,
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 22,
-                "padding-block-end": 22,
-                "padding-inline-start": 22,
-                "padding-inline-end": 22
-              },
-              "blocks": {
-                "text": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Custom Design</h3><p>Develop pearl jewelry from sketches, references or an existing collection direction.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "#17191a",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text"
-              ]
-            },
-            "why_2": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "background_media": "none",
-                "background_color": "#ffffff",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "border": "solid",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_color": "#d8d5ce",
-                "border_radius": 0,
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 22,
-                "padding-block-end": 22,
-                "padding-inline-start": 22,
-                "padding-inline-end": 22
-              },
-              "blocks": {
-                "text": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Premium Quality</h3><p>Control pearl matching, metal finishing and final assembly throughout sampling and production.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "#17191a",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text"
-              ]
-            },
-            "why_3": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "background_media": "none",
-                "background_color": "#ffffff",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "border": "solid",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_color": "#d8d5ce",
-                "border_radius": 0,
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 22,
-                "padding-block-end": 22,
-                "padding-inline-start": 22,
-                "padding-inline-end": 22
-              },
-              "blocks": {
-                "text": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Authentic Materials</h3><p>Work with sterling silver, gold-plated finishes and selected pearl types according to the product direction.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "#17191a",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text"
-              ]
-            },
-            "why_4": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "background_media": "none",
-                "background_color": "#ffffff",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "border": "solid",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_color": "#d8d5ce",
-                "border_radius": 0,
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 22,
-                "padding-block-end": 22,
-                "padding-inline-start": 22,
-                "padding-inline-end": 22
-              },
-              "blocks": {
-                "text": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Flexible Production</h3><p>Support sampling, lower-volume launches and repeat production for growing pearl jewelry collections.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "#17191a",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text"
-              ]
-            }
-          },
-          "block_order": [
-            "why_1",
-            "why_2",
-            "why_3",
-            "why_4"
-          ]
+            "title": "Premium Quality",
+            "description": "<p>Control pearl matching, metal finishing and final assembly throughout sampling and production.</p>"
+          }
+        },
+        "authentic_materials": {
+          "type": "item",
+          "settings": {
+            "title": "Authentic Materials",
+            "description": "<p>Work with sterling silver, gold-plated finishes and selected pearl types according to the product direction.</p>"
+          }
+        },
+        "flexible_production": {
+          "type": "item",
+          "settings": {
+            "title": "Flexible Production",
+            "description": "<p>Support sampling, lower-volume launches and repeat production for growing pearl jewelry collections.</p>"
+          }
         }
       },
       "block_order": [
-        "why_heading",
-        "why_grid"
+        "custom_design",
+        "premium_quality",
+        "authentic_materials",
+        "flexible_production"
       ],
-      "name": "Why Choose Craftaurum",
       "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 36,
         "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "background_media": "none",
-        "background_color": "#f8f7f4",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_color": "",
-        "border_radius": 0,
-        "padding-block-start": 72,
-        "padding-block-end": 76
+        "background_color": "#FFFFFF",
+        "text_color": "#17191A",
+        "line_color": "#D8D5CE",
+        "heading": "Why Choose Craftaurum for Custom Pearl Jewelry?",
+        "heading_size": 42,
+        "description": "<p>We combine jewelry manufacturing experience with careful pearl selection, metal processing and finishing to support custom pearl collections for brands and wholesale partners.</p>",
+        "body_size": 16,
+        "item_title_size": 20,
+        "item_body_size": 15,
+        "desktop_columns": "4",
+        "mobile_columns": "1",
+        "animation_style": "fade-up",
+        "padding_top": 72,
+        "padding_bottom": 76
       }
     },
     "contact": {
-      "type": "section",
-      "blocks": {
-        "contact_heading": {
-          "type": "text",
-          "settings": {
-            "text": "<h2>Start Your Custom Pearl Jewelry Project</h2><p>Share your pearl type, product category, metal finish, quantity and design direction with our team.</p>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "text_color": "",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "contact_form": {
-          "type": "contact-form",
-          "settings": {
-            "width": "custom",
-            "custom_width": 100,
-            "width_mobile": "custom",
-            "custom_width_mobile": 100,
-            "background_color": "",
-            "input_style": "default",
-            "input_background_color": "{{ settings.color_palette.background }}",
-            "input_text_color": "{{ settings.color_palette.foreground }}",
-            "input_border_color": "{{ settings.color_palette.foreground }}",
-            "border_width": 1,
-            "border_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "submit-button": {
-              "type": "contact-form-submit-button",
-              "static": true,
-              "settings": {
-                "label": "Submit",
-                "style_class": "button",
-                "custom_button_background": "{{ settings.color_palette.foreground }}",
-                "custom_button_text": "{{ settings.color_palette.background }}",
-                "custom_button_border": "{{ settings.color_palette.background }}",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": []
-        }
-      },
-      "block_order": [
-        "contact_heading",
-        "contact_form"
-      ],
-      "name": "t:names.contact_form",
+      "type": "editorial-contact",
+      "name": "联系表单 - Editorial",
       "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 32,
         "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "background_media": "none",
-        "background_color": "#ffffff",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_color": "",
-        "border_radius": 0,
-        "padding-block-start": 72,
-        "padding-block-end": 88
+        "background_color": "#F8F7F4",
+        "text_color": "#17191A",
+        "eyebrow": "START A PROJECT",
+        "eyebrow_size": 12,
+        "heading": "Start Your Custom Pearl Jewelry Project",
+        "heading_size": 56,
+        "description": "<p>Share your pearl type, product category, metal finish, quantity and design direction with our team.</p>",
+        "body_size": 16,
+        "phone_required": false,
+        "animation_style": "fade-up",
+        "padding_top": 88,
+        "padding_bottom": 88
       }
     }
   },

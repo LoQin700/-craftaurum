@@ -43,6 +43,9 @@
           {{ 'craftaurum-contact.css' | asset_url | stylesheet_tag }}
       {% endcase %}
     {% endif %}
+    <script>document.documentElement.classList.add('js');</script>
+    {{ 'craftaurum-reveal.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'craftaurum-reveal.js' | asset_url }}" defer></script>
     {%- render 'fonts' -%}
     {%- render 'scripts' -%}
     {%- render 'theme-styles-variables' -%}

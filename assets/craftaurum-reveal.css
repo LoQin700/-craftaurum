@@ -1,0 +1,37 @@
+[data-ca-reveal] {
+  --ca-reveal-duration: 680ms;
+  --ca-reveal-ease: cubic-bezier(.2,.7,.2,1);
+}
+
+html.js [data-ca-reveal]:not(.ca-reveal-visible) {
+  opacity: 0;
+  transition:
+    opacity var(--ca-reveal-duration) var(--ca-reveal-ease),
+    transform var(--ca-reveal-duration) var(--ca-reveal-ease);
+  will-change: opacity, transform;
+}
+
+html.js [data-ca-reveal="fade-up"]:not(.ca-reveal-visible) {
+  transform: translate3d(0, 22px, 0);
+}
+
+html.js [data-ca-reveal="fade-in"]:not(.ca-reveal-visible) {
+  transform: none;
+}
+
+html.js [data-ca-reveal="soft-zoom"]:not(.ca-reveal-visible) {
+  transform: scale(.975);
+}
+
+html.js [data-ca-reveal].ca-reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.js [data-ca-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
