@@ -1,0 +1,72 @@
+name: Validate Pearl Jewelry Page
+
+on:
+  push:
+    branches:
+      - feature/pearl-jewelry-page
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate Pearl Jewelry template
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          text=Path('templates/page.pearl-jewelry.json').read_text(encoding='utf-8')
+          page=json.loads(text[text.index('{'):])
+
+          expected=[
+            'main','pearl_intro','pearl_types','pearl_business',
+            'pearl_products','pearl_process','pearl_why','contact'
+          ]
+          assert page['order']==expected
+
+          assert page['sections']['pearl_intro']['type']=='jewelry-collections-overview'
+          assert page['sections']['pearl_types']['type']=='content-cards'
+          assert len(page['sections']['pearl_types']['block_order'])==4
+          assert page['sections']['pearl_business']['type']=='overlap-image-text'
+          assert len(page['sections']['pearl_business']['block_order'])==2
+          assert page['sections']['pearl_products']['type']=='content-cards'
+          assert len(page['sections']['pearl_products']['block_order'])==6
+          assert page['sections']['pearl_process']['type']=='interactive-feature'
+          assert len(page['sections']['pearl_process']['block_order'])==3
+          assert page['sections']['pearl_why']['type']=='section'
+
+          refs=[]
+          def walk(x):
+              if isinstance(x,dict):
+                  for k,v in x.items():
+                      if k in ('image','hero_image') and isinstance(v,str) and v:
+                          refs.append(v)
+                      walk(v)
+              elif isinstance(x,list):
+                  for v in x: walk(v)
+
+          walk(page)
+          assert len(refs)>=16, len(refs)
+          bad=[r for r in refs if not r.startswith('shopify://shop_images/')]
+          assert not bad, bad
+
+          print('Pearl Jewelry template: PASS')
+          print('Image refs:', len(refs))
+          for ref in refs:
+              print(' ',ref)
+          PY
+
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
