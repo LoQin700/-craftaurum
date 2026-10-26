@@ -70,6 +70,7 @@
         "eyebrow": "CUSTOM FASHION JEWELRY",
         "heading": "Custom Fashion Jewelry Manufacturing.",
         "introduction": "<p>Develop multi-category jewelry collections for your brand across rings, earrings, bracelets and necklaces. Explore different metals, stones and finishing directions, then refine each design from early concept through sampling and production planning.</p><p>Craftaurum supports flexible collection development for brands, designers and wholesale partners looking for a consistent manufacturing partner across multiple jewelry categories.</p>",
+        "hero_image": "shopify://shop_images/custom-fashion-jewelry.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
         "quote_label": "Get B2B Quote",
@@ -80,8 +81,7 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 40,
-        "hero_image": "shopify://shop_images/custom-fashion-jewelry.jpg"
+        "padding_bottom": 40
       }
     },
     "horizontal_cta_Pwad7F": {
@@ -114,45 +114,45 @@
         "card_dADhNg": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/rings.jpg",
             "title": "Custom Rings",
             "description": "<p>Develop fashion, statement and refined ring concepts with different metals, stones and finishing directions.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/rings.jpg"
+            "link": ""
           }
         },
         "card_WtWhNM": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/gold-earrings.jpg",
             "title": "Custom Earrings",
             "description": "<p>Build hoop, stud, pearl and fashion earring collections around your target market and brand language.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/gold-earrings.jpg"
+            "link": ""
           }
         },
         "card_CfDadY": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/chain-bracelets.jpg",
             "title": "Custom Bracelets",
             "description": "<p>Explore chain, bead, bangle and statement bracelet directions for coordinated collections.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/chain-bracelets.jpg"
+            "link": ""
           }
         },
         "card_PcNzcH": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/nameplate-necklace.jpg",
             "title": "Custom Necklaces",
             "description": "<p>Create pendant, pearl, choker and fashion necklace styles with flexible branding and finishing options.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/nameplate-necklace.jpg"
+            "link": ""
           }
         }
       },
@@ -259,14 +259,14 @@
         "top_button_style": "button",
         "body": "<p>Craftaurum supports jewelry brands and wholesale partners with coordinated development across rings, earrings, bracelets and necklaces. The goal is to keep design direction, material choices and finishing standards aligned from one category to the next.</p><p>Use this section for workshop, sampling or multi-category production photography that shows how a complete collection moves through development.</p>",
         "body_preset": "h5",
+        "image": "shopify://shop_images/OEM-JEWELLERY.jpg",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "Start Your Project",
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 32,
-        "padding_bottom": 32,
-        "image": "shopify://shop_images/OEM-JEWELLERY.jpg"
+        "padding_bottom": 32
       }
     },
     "icon_with_text_support": {
@@ -384,8 +384,7 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "follow_section_width": true
+            "padding-inline-end": 0
           },
           "blocks": {
             "submit-button": {

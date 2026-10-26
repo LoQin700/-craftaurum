@@ -16,6 +16,7 @@
         "eyebrow": "JEWELRY MANUFACTURING",
         "heading": "Custom Fashion Jewelry",
         "introduction": "<p>Craftaurum presents custom fashion jewelry for brands, design studios, and wholesale partners. Our range includes rings, earrings, bracelets, necklaces, and pendants that can be developed with attention to material, proportion, and finishing detail.</p><p>From early sketches to finished pieces, we approach each collection as an opportunity to translate your creative direction into carefully crafted jewelry.</p>",
+        "hero_image": "shopify://shop_images/custom-fashion-jewelry.jpg",
         "quote_label": "Get B2B Quote",
         "quote_url": "",
         "catalog_label": "Request Catalog",
@@ -24,8 +25,7 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 24,
-        "hero_image": "shopify://shop_images/custom-fashion-jewelry.jpg"
+        "padding_bottom": 24
       }
     },
     "gallery_rings": {
@@ -245,8 +245,7 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "follow_section_width": true
+            "padding-inline-end": 0
           },
           "blocks": {
             "submit-button": {

@@ -70,6 +70,7 @@
         "eyebrow": "CUSTOM BRACELET MANUFACTURING",
         "heading": "High-End Custom Bracelet Production.",
         "introduction": "<p>Develop custom bracelets across chain, bead, bangle and fashion-led directions using materials such as sterling silver and brass, with flexible plating and finishing options. Each design can be refined around the intended look, wearing experience and market of your collection.</p><p>Craftaurum supports brands and wholesale partners from early design review through sampling and production coordination.</p>",
+        "hero_image": "shopify://shop_images/chain-bracelets.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
         "quote_label": "Get B2B Quote",
@@ -80,8 +81,7 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 40,
-        "hero_image": "shopify://shop_images/chain-bracelets.jpg"
+        "padding_bottom": 40
       }
     },
     "horizontal_cta_Pwad7F": {
@@ -114,45 +114,45 @@
         "card_dADhNg": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/chain-bracelets.jpg",
             "title": "Chain Bracelets",
             "description": "<p>Develop refined or statement chain bracelet concepts with flexible link, clasp and finish directions.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/chain-bracelets.jpg"
+            "link": ""
           }
         },
         "card_WtWhNM": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/pearl-bracelets.jpg",
             "title": "Beaded Bracelets",
             "description": "<p>Create bead-led bracelet styles using different materials, proportions and decorative details.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/pearl-bracelets.jpg"
+            "link": ""
           }
         },
         "card_CfDadY": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/YB7671.jpg",
             "title": "Bangles",
             "description": "<p>Explore clean, sculptural or embellished bangle designs for modern jewelry collections.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/YB7671.jpg"
+            "link": ""
           }
         },
         "card_PcNzcH": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/butterfly-bracelets.jpg",
             "title": "Statement Bracelets",
             "description": "<p>Develop bold fashion bracelet concepts with distinctive forms, textures and finishing choices.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/butterfly-bracelets.jpg"
+            "link": ""
           }
         }
       },
@@ -259,14 +259,14 @@
         "top_button_style": "button",
         "body": "<p>Craftaurum supports bracelet development for jewelry brands and wholesale partners across chain, bead, bangle and fashion-led styles. We focus on material choices, structure, fit, surface finish and the details that influence how the finished bracelet looks and wears.</p><p>Use workshop, assembly, polishing or inspection photography here to show the manufacturing process behind custom bracelets.</p>",
         "body_preset": "h5",
+        "image": "shopify://shop_images/custom-fashion-jewelry.jpg",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "Start Your Project",
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 32,
-        "padding_bottom": 32,
-        "image": "shopify://shop_images/custom-fashion-jewelry.jpg"
+        "padding_bottom": 32
       }
     },
     "icon_with_text_support": {
@@ -384,8 +384,7 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "follow_section_width": true
+            "padding-inline-end": 0
           },
           "blocks": {
             "submit-button": {

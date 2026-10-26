@@ -64,12 +64,13 @@
       "name": "图文横幅",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
         "eyebrow": "STERLING SILVER JEWELRY",
         "heading": "Silver Jewelry Factory",
         "introduction": "<p>Craftaurum manufactures custom sterling silver jewelry for brands, designers and wholesale partners. We support 925 sterling silver jewelry development across rings, earrings, necklaces, pendants and bracelets, with flexible finishing and stone-setting options.</p><p>From design development to sampling and production, each project is built around your collection direction and market needs.</p>",
+        "hero_image": "shopify://shop_images/custom-sterling-silver-jewelry-3.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
         "quote_label": "Contact Jewelry Factory",
@@ -80,8 +81,7 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 48,
-        "hero_image": "shopify://shop_images/custom-sterling-silver-jewelry-3.jpg"
+        "padding_bottom": 48
       }
     },
     "tarnish_intro": {
@@ -101,7 +101,7 @@
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "text_color": "#17191A",
+            "text_color": "#17191a",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -135,6 +135,7 @@
         "heading",
         "button"
       ],
+      "name": "抗氧化介绍",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -148,7 +149,7 @@
         "section_height": "",
         "section_height_custom": 50,
         "background_media": "none",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "video_position": "cover",
         "background_image_position": "cover",
         "toggle_overlay": false,
@@ -162,17 +163,16 @@
         "border_radius": 0,
         "padding-block-start": 48,
         "padding-block-end": 32
-      },
-      "name": "抗氧化介绍"
+      }
     },
     "gold_plated_tarnish": {
       "type": "image-text-feature",
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
         "heading": "Gold Plated Jewelry Factory",
         "heading_preset": "h2",
         "heading_position": "content",
@@ -183,14 +183,14 @@
         "top_button_style": "button",
         "body": "<p>Gold plating applies a thin gold layer over a compatible base metal such as sterling silver or brass. For custom silver jewelry, plating color and finish can be developed around the target appearance, expected wear and price positioning.</p><p><strong>Process:</strong> Electroplating a gold layer over the prepared metal surface.<br><strong>Gold Thickness:</strong> Specified according to project requirements.<br><strong>Durability:</strong> Influenced by plating thickness, protective finish and wear conditions.</p>",
         "body_preset": "h5",
+        "image": "shopify://shop_images/plated-jewelry-2.jpg",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 32,
-        "padding_bottom": 32,
-        "image": "shopify://shop_images/plated-jewelry-2.jpg"
+        "padding_bottom": 32
       }
     },
     "gold_vermeil_tarnish": {
@@ -198,9 +198,9 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#F8F7F4",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
         "heading": "Gold Vermeil Jewelry",
         "heading_preset": "h2",
         "heading_position": "content",
@@ -211,14 +211,14 @@
         "top_button_style": "button",
         "body": "<p>Gold vermeil uses sterling silver as the base and a substantially thicker gold-plated surface than ordinary gold plating. It is a strong option for brands seeking a premium gold appearance while retaining a precious silver foundation.</p><p><strong>Process:</strong> Gold plating applied specifically over sterling silver.<br><strong>Gold Thickness:</strong> A substantial gold layer suitable for vermeil positioning.<br><strong>Durability:</strong> A premium plated construction that balances wear performance and accessible fine-jewelry positioning.</p>",
         "body_preset": "h5",
+        "image": "shopify://shop_images/gold-vermeil-necklace.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
         "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 32,
-        "padding_bottom": 48,
-        "image": "shopify://shop_images/gold-vermeil-necklace.jpg"
+        "padding_bottom": 48
       }
     },
     "lost_wax_casting": {
@@ -226,9 +226,9 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
         "heading": "Lost Wax Casting Jewelry",
         "heading_preset": "h2",
         "heading_position": "top",
@@ -239,14 +239,14 @@
         "top_button_style": "button",
         "body": "<p>Lost wax casting transforms a refined wax model into finished metal jewelry. After the design is confirmed, wax models are assembled, invested in a ceramic shell and heated so the wax can be removed. Molten silver is then poured into the mold to reproduce the approved form.</p><p>This process supports both detailed custom silver jewelry and repeatable production while preserving the proportions and construction established during development.</p>",
         "body_preset": "h5",
+        "image": "shopify://shop_images/jewelry-manufacturer.jpg",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 56,
-        "padding_bottom": 56,
-        "image": "shopify://shop_images/jewelry-manufacturer.jpg"
+        "padding_bottom": 56
       }
     },
     "showcase_intro": {
@@ -266,7 +266,7 @@
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "text_color": "#17191A",
+            "text_color": "#17191a",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -281,6 +281,7 @@
       "block_order": [
         "heading"
       ],
+      "name": "银饰展示标题",
       "settings": {
         "content_direction": "column",
         "vertical_on_mobile": true,
@@ -294,7 +295,7 @@
         "section_height": "",
         "section_height_custom": 50,
         "background_media": "none",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "video_position": "cover",
         "background_image_position": "cover",
         "toggle_overlay": false,
@@ -308,8 +309,76 @@
         "border_radius": 0,
         "padding-block-start": 48,
         "padding-block-end": 32
+      }
+    },
+    "silver_showcase_rows": {
+      "type": "triptych-split-rows",
+      "blocks": {
+        "rings_row": {
+          "type": "row",
+          "settings": {
+            "image_1": "shopify://shop_images/November-birthstone-rings-1.jpg",
+            "image_2": "shopify://shop_images/S1158-R.jpg",
+            "image_3": "shopify://shop_images/plated-pearl-rings.jpg",
+            "heading": "Sterling Silver Rings",
+            "body": "<p>Custom silver rings can be developed around gemstone setting, plated finishes and clean metal-led designs, including stone rings, diamond-set styles and gold plated silver directions.</p>"
+          }
+        },
+        "earrings_row": {
+          "type": "row",
+          "settings": {
+            "image_1": "shopify://shop_images/Christmas-earrings-set.jpg",
+            "image_2": "shopify://shop_images/YE25928.jpg",
+            "image_3": "shopify://shop_images/YE26053.jpg",
+            "heading": "Sterling Silver Earrings",
+            "body": "<p>Develop silver earrings across seasonal, plated, gemstone and pearl-led directions for both everyday and statement collections.</p>"
+          }
+        },
+        "necklaces_row": {
+          "type": "row",
+          "settings": {
+            "image_1": "shopify://shop_images/S1028-N.jpg",
+            "image_2": "shopify://shop_images/nameplate-necklace.jpg",
+            "image_3": "shopify://shop_images/pearl-necklace.jpg",
+            "heading": "Sterling Silver Necklace & Pendants",
+            "body": "<p>From delicate chains to personalized and pearl-led pendants, sterling silver offers a flexible base for custom necklace collections.</p>"
+          }
+        },
+        "bracelets_row": {
+          "type": "row",
+          "settings": {
+            "image_1": "shopify://shop_images/chain-bracelets.jpg",
+            "image_2": "shopify://shop_images/pearl-bracelets.jpg",
+            "image_3": "shopify://shop_images/YB7671.jpg",
+            "heading": "Sterling Silver Bracelets",
+            "body": "<p>Build bracelet collections with link chains, pearl details, stones and plated finishes to suit different design directions and price points.</p>"
+          }
+        }
       },
-      "name": "银饰展示标题"
+      "block_order": [
+        "rings_row",
+        "earrings_row",
+        "necklaces_row",
+        "bracelets_row"
+      ],
+      "name": "三联图文",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "image_position": "right",
+        "text_background": "#e7ded0",
+        "image_background": "#f6f2eb",
+        "text_color": "#17191a",
+        "heading_preset": "h2",
+        "body_preset": "h5",
+        "text_padding": 32,
+        "image_padding": 18,
+        "image_gap": 14,
+        "panel_gap": 0,
+        "row_gap": 28,
+        "padding_top": 24,
+        "padding_bottom": 72
+      }
     },
     "silver_factory_process": {
       "type": "interactive-feature",
@@ -373,45 +442,45 @@
         "plated": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/plating-jewelry.jpg",
             "title": "Gold Plated Jewelry",
             "description": "<p>Develop silver jewelry with custom gold colors and finishing directions.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/plating-jewelry.jpg"
+            "link": ""
           }
         },
         "stone": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/gemstone-setting.jpg",
             "title": "Stone Jewelry",
             "description": "<p>Combine sterling silver with gemstones, diamonds, moissanite and other stone-setting options.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/gemstone-setting.jpg"
+            "link": ""
           }
         },
         "pearls": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/pearl-materials.jpg",
             "title": "Pearls Jewelry",
             "description": "<p>Use round, baroque and other pearl types across earrings, necklaces, rings and bracelets.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/pearl-materials.jpg"
+            "link": ""
           }
         },
         "chains": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/chain-bracelets.jpg",
             "title": "Link Chain Jewelry",
             "description": "<p>Explore box, curb, bead, snake, Figaro and other chain directions for custom silver jewelry.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/chain-bracelets.jpg"
+            "link": ""
           }
         }
       },
@@ -424,9 +493,13 @@
       "name": "图文卡片",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#F8F7F4",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "card_style": "standard",
+        "intro_button_label": "",
+        "intro_button_link": "",
+        "intro_button_style": "button",
         "eyebrow": "",
         "eyebrow_preset": "h5",
         "heading": "Unlimited Custom Jewelry Options",
@@ -544,75 +617,6 @@
         "border_radius": 0,
         "padding-block-start": 72,
         "padding-block-end": 88
-      }
-    },
-    "silver_showcase_rows": {
-      "type": "triptych-split-rows",
-      "name": "三联图文",
-      "blocks": {
-        "rings_row": {
-          "type": "row",
-          "settings": {
-            "image_1": "shopify://shop_images/November-birthstone-rings-1.jpg",
-            "image_2": "shopify://shop_images/S1158-R.jpg",
-            "image_3": "shopify://shop_images/plated-pearl-rings.jpg",
-            "heading": "Sterling Silver Rings",
-            "body": "<p>Custom silver rings can be developed around gemstone setting, plated finishes and clean metal-led designs, including stone rings, diamond-set styles and gold plated silver directions.</p>"
-          }
-        },
-        "earrings_row": {
-          "type": "row",
-          "settings": {
-            "image_1": "shopify://shop_images/Christmas-earrings-set.jpg",
-            "image_2": "shopify://shop_images/YE25928.jpg",
-            "image_3": "shopify://shop_images/YE26053.jpg",
-            "heading": "Sterling Silver Earrings",
-            "body": "<p>Develop silver earrings across seasonal, plated, gemstone and pearl-led directions for both everyday and statement collections.</p>"
-          }
-        },
-        "necklaces_row": {
-          "type": "row",
-          "settings": {
-            "image_1": "shopify://shop_images/S1028-N.jpg",
-            "image_2": "shopify://shop_images/nameplate-necklace.jpg",
-            "image_3": "shopify://shop_images/pearl-necklace.jpg",
-            "heading": "Sterling Silver Necklace & Pendants",
-            "body": "<p>From delicate chains to personalized and pearl-led pendants, sterling silver offers a flexible base for custom necklace collections.</p>"
-          }
-        },
-        "bracelets_row": {
-          "type": "row",
-          "settings": {
-            "image_1": "shopify://shop_images/chain-bracelets.jpg",
-            "image_2": "shopify://shop_images/pearl-bracelets.jpg",
-            "image_3": "shopify://shop_images/YB7671.jpg",
-            "heading": "Sterling Silver Bracelets",
-            "body": "<p>Build bracelet collections with link chains, pearl details, stones and plated finishes to suit different design directions and price points.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "rings_row",
-        "earrings_row",
-        "necklaces_row",
-        "bracelets_row"
-      ],
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "image_position": "right",
-        "text_background": "#E7DED0",
-        "image_background": "#F6F2EB",
-        "text_color": "#17191A",
-        "heading_preset": "h2",
-        "body_preset": "h5",
-        "text_padding": 32,
-        "image_padding": 18,
-        "image_gap": 14,
-        "panel_gap": 16,
-        "row_gap": 28,
-        "padding_top": 24,
-        "padding_bottom": 72
       }
     }
   },

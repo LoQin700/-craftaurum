@@ -70,6 +70,7 @@
         "eyebrow": "ARTISANAL JEWELRY MANUFACTURING",
         "heading": "High-End Artisanal Jewelry.",
         "introduction": "<p>Develop distinctive artisanal jewelry and accessory concepts where craftsmanship and creative form are central to the design. Craftaurum can support projects across large pendants, brooches, waist chains and jewelry-led corporate gifts using a range of metal and finishing directions.</p><p>These projects are suited to brands looking for more expressive, object-like or limited-feel designs beyond standard jewelry categories.</p>",
+        "hero_image": "shopify://shop_images/French-jewelry-700x441.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
         "quote_label": "Get B2B Quote",
@@ -80,8 +81,7 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 40,
-        "hero_image": "shopify://shop_images/French-jewelry-700x441.jpg"
+        "padding_bottom": 40
       }
     },
     "horizontal_cta_Pwad7F": {
@@ -114,45 +114,45 @@
         "card_dADhNg": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/S1028-N.jpg",
             "title": "Large Pendant Necklaces",
             "description": "<p>Develop oversized pendant concepts with distinctive proportions, surfaces and handcrafted details.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/S1028-N.jpg"
+            "link": ""
           }
         },
         "card_WtWhNM": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/Christmas-brooch.jpg",
             "title": "Custom Brooches",
             "description": "<p>Create brooch designs around brand motifs, decorative forms and flexible metal or finish choices.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/Christmas-brooch.jpg"
+            "link": ""
           }
         },
         "card_CfDadY": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/pearls-necklace.jpg",
             "title": "Waist Chains",
             "description": "<p>Explore custom waist-chain concepts with attention to proportion, movement and distinctive visual details.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/pearls-necklace.jpg"
+            "link": ""
           }
         },
         "card_PcNzcH": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/custom-pearl-jewelry-set.jpg",
             "title": "Corporate Jewelry Gifts",
             "description": "<p>Develop jewelry-led gift pieces that reflect a brand, event or partnership through custom design details.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/custom-pearl-jewelry-set.jpg"
+            "link": ""
           }
         }
       },
@@ -259,14 +259,14 @@
         "top_button_style": "button",
         "body": "<p>Craftaurum supports custom artisanal projects that sit beyond standard ring, earring, bracelet and necklace categories. From brooches and large pendants to waist chains and jewelry-led gift pieces, development can be shaped around a more specific creative brief.</p><p>Use close-up workshop or hand-finishing photography here to emphasize the craft and material character behind these projects.</p>",
         "body_preset": "h5",
+        "image": "shopify://shop_images/jewelry-manufacturer.jpg",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "Start Your Project",
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 32,
-        "padding_bottom": 32,
-        "image": "shopify://shop_images/jewelry-manufacturer.jpg"
+        "padding_bottom": 32
       }
     },
     "icon_with_text_support": {
@@ -384,8 +384,7 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "follow_section_width": true
+            "padding-inline-end": 0
           },
           "blocks": {
             "submit-button": {

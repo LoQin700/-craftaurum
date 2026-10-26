@@ -70,6 +70,7 @@
         "eyebrow": "CUSTOM EARRINGS MANUFACTURING",
         "heading": "Tailor-Made Custom Earrings.",
         "introduction": "<p>Develop custom earrings for your brand across hoop, stud, pearl and gemstone directions. From initial references and material selection to sampling and finishing, each design can be refined around the style and market of your collection.</p><p>Craftaurum supports earring development for brands and wholesale partners seeking clear communication, flexible customization and consistent production review.</p>",
+        "hero_image": "shopify://shop_images/gold-earrings.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
         "quote_label": "Get B2B Quote",
@@ -80,8 +81,7 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 40,
-        "hero_image": "shopify://shop_images/gold-earrings.jpg"
+        "padding_bottom": 40
       }
     },
     "horizontal_cta_Pwad7F": {
@@ -114,45 +114,45 @@
         "card_dADhNg": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/pearl-earrings-2.jpg",
             "title": "Pearl Earrings",
             "description": "<p>Develop refined pearl earring styles using different pearl proportions, metal structures and finishing choices.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/pearl-earrings-2.jpg"
+            "link": ""
           }
         },
         "card_WtWhNM": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/S1180-E.jpg",
             "title": "Stud Earrings",
             "description": "<p>Create compact everyday or statement studs with flexible stone, shape and surface-detail options.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/S1180-E.jpg"
+            "link": ""
           }
         },
         "card_CfDadY": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/gold-vermeil-earrings.jpg",
             "title": "Hoop Earrings",
             "description": "<p>Explore classic, sculptural and embellished hoop directions for different brand aesthetics.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/gold-vermeil-earrings.jpg"
+            "link": ""
           }
         },
         "card_PcNzcH": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/baroque-pearl-earrings.jpg",
             "title": "Gemstone Earrings",
             "description": "<p>Build stone-led earring designs around setting style, color direction and overall proportion.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/baroque-pearl-earrings.jpg"
+            "link": ""
           }
         }
       },
@@ -259,14 +259,14 @@
         "top_button_style": "button",
         "body": "<p>Craftaurum works with jewelry brands and wholesale partners on custom earring development, sampling and production coordination. We focus on the details that affect the finished result, including proportion, fastening structure, setting style and surface finish.</p><p>Use real workshop, polishing, setting or inspection photography here to show how earring designs move from concept to finished product.</p>",
         "body_preset": "h5",
+        "image": "shopify://shop_images/OEM-JEWELLERY.jpg",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "Start Your Project",
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 32,
-        "padding_bottom": 32,
-        "image": "shopify://shop_images/OEM-JEWELLERY.jpg"
+        "padding_bottom": 32
       }
     },
     "icon_with_text_support": {
@@ -384,8 +384,7 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "follow_section_width": true
+            "padding-inline-end": 0
           },
           "blocks": {
             "submit-button": {

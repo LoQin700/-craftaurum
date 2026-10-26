@@ -70,6 +70,7 @@
         "eyebrow": "OEM JEWELLERY MANUFACTURING",
         "heading": "OEM Jewellery Manufacturing for Your Brand.",
         "introduction": "<p>Bring your jewelry ideas to life through a clear OEM development process built around your brand direction and project requirements. From early consultation and design review to sampling, production and finishing, each stage is developed with close attention to detail.</p><p>Craftaurum supports jewelry brands, designers and wholesale partners looking for a practical route from concept to production-ready collections.</p>",
+        "hero_image": "shopify://shop_images/OEM-JEWELLERY.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
         "quote_label": "Customize Your Brand",
@@ -80,8 +81,7 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 40,
-        "hero_image": "shopify://shop_images/OEM-JEWELLERY.jpg"
+        "padding_bottom": 40
       }
     },
     "oem_categories": {
@@ -91,54 +91,54 @@
           "type": "card",
           "settings": {
             "title": "Custom Fashion Jewelry",
+            "image": "shopify://shop_images/custom-fashion-jewelry.jpg",
             "collection": "",
-            "link": "",
-            "image": "shopify://shop_images/custom-fashion-jewelry.jpg"
+            "link": ""
           }
         },
         "cat_rings": {
           "type": "card",
           "settings": {
             "title": "Custom Rings",
+            "image": "shopify://shop_images/rings.jpg",
             "collection": "",
-            "link": "",
-            "image": "shopify://shop_images/rings.jpg"
+            "link": ""
           }
         },
         "cat_earrings": {
           "type": "card",
           "settings": {
             "title": "Custom Earrings",
+            "image": "shopify://shop_images/gold-earrings.jpg",
             "collection": "",
-            "link": "",
-            "image": "shopify://shop_images/gold-earrings.jpg"
+            "link": ""
           }
         },
         "cat_necklace": {
           "type": "card",
           "settings": {
             "title": "Custom Necklace",
+            "image": "shopify://shop_images/nameplate-necklace.jpg",
             "collection": "",
-            "link": "",
-            "image": "shopify://shop_images/nameplate-necklace.jpg"
+            "link": ""
           }
         },
         "cat_bracelets": {
           "type": "card",
           "settings": {
             "title": "Custom Bracelets",
+            "image": "shopify://shop_images/chain-bracelets.jpg",
             "collection": "",
-            "link": "",
-            "image": "shopify://shop_images/chain-bracelets.jpg"
+            "link": ""
           }
         },
         "cat_artisanal": {
           "type": "card",
           "settings": {
             "title": "Artisanal Jewelry",
+            "image": "shopify://shop_images/French-jewelry-700x441.jpg",
             "collection": "",
-            "link": "",
-            "image": "shopify://shop_images/French-jewelry-700x441.jpg"
+            "link": ""
           }
         }
       },
@@ -181,6 +181,7 @@
         "eyebrow": "OEM JEWELLERY SERVICES",
         "heading": "Why Choose Our OEM Jewellery Manufacturing Services?",
         "introduction": "<p>A strong OEM program depends on more than manufacturing alone. Design communication, prototyping, material selection, finishing and production review need to work together as one coordinated process.</p><p>Craftaurum supports each project with clear development steps and practical collaboration so your collection can move from concept toward production with fewer gaps between design intent and execution.</p>",
+        "hero_image": "shopify://shop_images/jewelry-manufacturer.jpg",
         "image_position": "left",
         "image_ratio": "landscape",
         "quote_label": "Start Your OEM Project",
@@ -191,8 +192,7 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 48,
-        "padding_bottom": 48,
-        "hero_image": "shopify://shop_images/jewelry-manufacturer.jpg"
+        "padding_bottom": 48
       }
     },
     "oem_advantages": {
@@ -283,14 +283,14 @@
         "top_button_style": "button",
         "body": "<p>Every OEM project starts with understanding the brand, target market and design direction behind the collection. References, sketches, product ideas and commercial requirements are reviewed together so the development path is clear before sampling begins.</p><p>This early stage establishes the design intent and gives both sides a shared foundation for the work ahead.</p>",
         "body_preset": "h5",
+        "image": "shopify://shop_images/custom-design-jewelry.jpg",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "Get A Quick Quote",
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 56,
-        "padding_bottom": 56,
-        "image": "shopify://shop_images/custom-design-jewelry.jpg"
+        "padding_bottom": 56
       }
     },
     "process_2": {
@@ -311,14 +311,14 @@
         "top_button_style": "button",
         "body": "<p>Concepts are translated into workable jewelry designs through sketches, digital development and prototype review. The goal is to refine proportion, construction and visual details before the design moves into repeat production.</p><p>Sampling gives the project a tangible checkpoint where design intent can be compared against the real product.</p>",
         "body_preset": "h5",
+        "image": "shopify://shop_images/3d-render-1.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
         "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 56,
-        "padding_bottom": 56,
-        "image": "shopify://shop_images/3d-render-1.jpg"
+        "padding_bottom": 56
       }
     },
     "process_3": {
@@ -339,14 +339,14 @@
         "top_button_style": "button",
         "body": "<p>Material choices are reviewed against the intended design, positioning and finishing direction of the collection. Depending on the project, this may include sterling silver, brass, gold directions, stones, pearls and other decorative elements.</p><p>The focus is on selecting combinations that support both the visual result and the practical requirements of the finished piece.</p>",
         "body_preset": "h5",
+        "image": "shopify://shop_images/pearl-materials.jpg",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 56,
-        "padding_bottom": 56,
-        "image": "shopify://shop_images/pearl-materials.jpg"
+        "padding_bottom": 56
       }
     },
     "process_4": {
@@ -367,14 +367,14 @@
         "top_button_style": "button",
         "body": "<p>Once the design and sample direction are confirmed, production follows the agreed construction and finishing specifications. Attention is given to forming, setting, polishing, assembly and other process details that influence the final appearance of the jewelry.</p><p>Clear production specifications help keep repeat pieces aligned with the approved sample.</p>",
         "body_preset": "h5",
+        "image": "shopify://shop_images/cutting.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
         "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 56,
-        "padding_bottom": 56,
-        "image": "shopify://shop_images/cutting.jpg"
+        "padding_bottom": 56
       }
     },
     "process_5": {
@@ -395,14 +395,14 @@
         "top_button_style": "button",
         "body": "<p>Quality review is built around the specifications agreed during development. Materials, construction, surface finish and key visual details are checked against the approved direction before the project moves forward.</p><p>This stage helps maintain consistency between the design intention, sample standard and finished production.</p>",
         "body_preset": "h5",
+        "image": "shopify://shop_images/jewelry-checking.jpg",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 56,
-        "padding_bottom": 56,
-        "image": "shopify://shop_images/jewelry-checking.jpg"
+        "padding_bottom": 56
       }
     },
     "process_6": {
@@ -423,14 +423,14 @@
         "top_button_style": "button",
         "body": "<p>OEM development can incorporate brand-specific details such as logo treatments, custom forms, finish directions and other identity elements that help the final jewelry feel connected to your collection.</p><p>The aim is to carry the brand direction through the product itself rather than treating customization as a final decorative step.</p>",
         "body_preset": "h5",
+        "image": "shopify://shop_images/custom-letters-jewelry.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
         "cta_label": "Start Your Inquiry",
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 56,
-        "padding_bottom": 56,
-        "image": "shopify://shop_images/custom-letters-jewelry.jpg"
+        "padding_bottom": 56
       }
     },
     "contact": {
@@ -478,8 +478,7 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "follow_section_width": true
+            "padding-inline-end": 0
           },
           "blocks": {
             "submit-button": {

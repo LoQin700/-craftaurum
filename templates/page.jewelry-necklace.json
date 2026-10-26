@@ -70,6 +70,7 @@
         "eyebrow": "CUSTOM NECKLACE MANUFACTURING",
         "heading": "Custom Necklaces for Distinctive Brands.",
         "introduction": "<p>Develop fashion and personalized necklaces around your brand direction, with flexibility across logo details, color, metal, texture and finishing. Craftaurum supports pearl necklaces, chokers, pendant designs and other custom necklace concepts from development through production planning.</p><p>Each project can be shaped around the intended market, wearing experience and visual identity of your collection.</p>",
+        "hero_image": "shopify://shop_images/nameplate-necklace.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
         "quote_label": "Get B2B Quote",
@@ -80,8 +81,7 @@
         "eyebrow_preset": "h5",
         "body_preset": "h5",
         "padding_top": 40,
-        "padding_bottom": 40,
-        "hero_image": "shopify://shop_images/nameplate-necklace.jpg"
+        "padding_bottom": 40
       }
     },
     "horizontal_cta_Pwad7F": {
@@ -114,45 +114,45 @@
         "card_dADhNg": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/S1028-N.jpg",
             "title": "Pendant Necklaces",
             "description": "<p>Develop pendant-led designs with flexible shape, scale, stone and branding possibilities.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/S1028-N.jpg"
+            "link": ""
           }
         },
         "card_WtWhNM": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/pearl-necklace.jpg",
             "title": "Pearl Necklaces",
             "description": "<p>Explore pearl proportions, chain combinations and metal details for refined necklace collections.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/pearl-necklace.jpg"
+            "link": ""
           }
         },
         "card_CfDadY": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/butterfly-necklace.jpg",
             "title": "Choker Necklaces",
             "description": "<p>Create close-fitting necklace styles with different chain, metal and decorative directions.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/butterfly-necklace.jpg"
+            "link": ""
           }
         },
         "card_PcNzcH": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/custom-inital-necklace.jpg",
             "title": "Fashion & Logo Necklaces",
             "description": "<p>Translate brand symbols, textures and graphic references into recognizable necklace concepts.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/custom-inital-necklace.jpg"
+            "link": ""
           }
         }
       },
@@ -259,14 +259,14 @@
         "top_button_style": "button",
         "body": "<p>Craftaurum supports custom necklace projects for jewelry brands and wholesale partners, from early design communication to sampling and production coordination. We focus on the relationship between chain, pendant, material and finishing so the final piece supports both brand identity and wearability.</p><p>Use real development or production imagery here to show the manufacturing process behind custom necklace collections.</p>",
         "body_preset": "h5",
+        "image": "shopify://shop_images/custom-inital-necklace.jpg",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "Start Your Project",
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 32,
-        "padding_bottom": 32,
-        "image": "shopify://shop_images/custom-inital-necklace.jpg"
+        "padding_bottom": 32
       }
     },
     "icon_with_text_support": {
@@ -384,8 +384,7 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0,
-            "follow_section_width": true
+            "padding-inline-end": 0
           },
           "blocks": {
             "submit-button": {
