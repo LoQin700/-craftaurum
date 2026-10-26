@@ -1,0 +1,122 @@
+name: Validate Festival Galleries Layout
+
+on:
+  push:
+    branches:
+      - feature/festival-galleries
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate Festival layout and schema values
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          def load_template(path):
+              text=Path(path).read_text(encoding='utf-8')
+              return json.loads(text[text.index('{'):])
+
+          def load_schema(section_type):
+              text=Path(f'sections/{section_type}.liquid').read_text(encoding='utf-8')
+              return json.loads(text.split('{% schema %}',1)[1].split('{% endschema %}',1)[0].strip())
+
+          page=load_template('templates/page.festival-jewelry.json')
+
+          expected=[
+            'main',
+            'festival_intro',
+            'christmas',
+            'christmas_gallery',
+            'halloween_intro',
+            'halloween_gallery',
+            'thanksgiving',
+            'thanksgiving_gallery',
+            'black_friday',
+            'black_friday_gallery',
+            'why_choose',
+            'customization_guide',
+            'contact'
+          ]
+          assert page['order']==expected
+
+          # No content-card section remains on this page.
+          assert all(sec.get('type')!='content-cards' for sec in page['sections'].values())
+
+          # Each holiday is immediately followed by a gallery with the same background.
+          pairs=[
+            ('christmas','christmas_gallery'),
+            ('halloween_intro','halloween_gallery'),
+            ('thanksgiving','thanksgiving_gallery'),
+            ('black_friday','black_friday_gallery'),
+          ]
+          for holiday,gallery in pairs:
+              assert page['sections'][gallery]['type']=='image-gallery'
+              assert page['sections'][holiday]['settings']['background_color'].lower() == page['sections'][gallery]['settings']['background_color'].lower()
+              assert len(page['sections'][gallery]['block_order'])==4
+
+          assert page['sections']['customization_guide']['type']=='content-guide'
+          assert len(page['sections']['customization_guide']['block_order'])==6
+
+          # Validate template setting values against current section schema.
+          schema_cache={}
+          errors=[]
+          for sid,sec in page['sections'].items():
+              stype=sec.get('type')
+              if not stype or stype=='main-page':
+                  continue
+              schema=schema_cache.setdefault(stype, load_schema(stype))
+              defs={s.get('id'):s for s in schema.get('settings',[]) if s.get('id')}
+              for key,value in sec.get('settings',{}).items():
+                  spec=defs.get(key)
+                  if not spec:
+                      continue
+                  if spec.get('type')=='range':
+                      lo,hi,step=spec['min'],spec['max'],spec['step']
+                      if value < lo or value > hi:
+                          errors.append(f'{sid}.{key}={value} outside {lo}..{hi}')
+                      else:
+                          q=(value-lo)/step
+                          if abs(q-round(q)) > 1e-9:
+                              errors.append(f'{sid}.{key}={value} not aligned to step {step} from min {lo}')
+                  elif spec.get('type')=='select':
+                      allowed={o['value'] for o in spec.get('options',[])}
+                      if value not in allowed:
+                          errors.append(f'{sid}.{key}={value!r} not in {sorted(allowed)}')
+
+              block_defs={b['type']:{s.get('id'):s for s in b.get('settings',[]) if s.get('id')} for b in schema.get('blocks',[])}
+              for bid,block in sec.get('blocks',{}).items():
+                  defs_b=block_defs.get(block.get('type'),{})
+                  for key,value in block.get('settings',{}).items():
+                      spec=defs_b.get(key)
+                      if not spec:
+                          continue
+                      if spec.get('type')=='range':
+                          lo,hi,step=spec['min'],spec['max'],spec['step']
+                          if value < lo or value > hi:
+                              errors.append(f'{sid}.{bid}.{key}={value} outside {lo}..{hi}')
+                          else:
+                              q=(value-lo)/step
+                              if abs(q-round(q)) > 1e-9:
+                                  errors.append(f'{sid}.{bid}.{key}={value} not aligned to step {step} from min {lo}')
+
+          assert not errors, '\n'.join(errors)
+          print('Festival galleries layout/schema validation: PASS')
+          PY
+
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
