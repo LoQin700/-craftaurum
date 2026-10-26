@@ -1,18 +1,20 @@
 [data-ca-reveal] {
-  --ca-reveal-duration: 680ms;
+  --ca-reveal-duration: 780ms;
+  --ca-reveal-delay: 70ms;
   --ca-reveal-ease: cubic-bezier(.2,.7,.2,1);
+  transform-origin: center center;
 }
 
 html.js [data-ca-reveal]:not(.ca-reveal-visible) {
   opacity: 0;
   transition:
-    opacity var(--ca-reveal-duration) var(--ca-reveal-ease),
-    transform var(--ca-reveal-duration) var(--ca-reveal-ease);
+    opacity var(--ca-reveal-duration) var(--ca-reveal-ease) var(--ca-reveal-delay),
+    transform var(--ca-reveal-duration) var(--ca-reveal-ease) var(--ca-reveal-delay);
   will-change: opacity, transform;
 }
 
 html.js [data-ca-reveal="fade-up"]:not(.ca-reveal-visible) {
-  transform: translate3d(0, 22px, 0);
+  transform: translate3d(0, 28px, 0);
 }
 
 html.js [data-ca-reveal="fade-in"]:not(.ca-reveal-visible) {
@@ -20,12 +22,13 @@ html.js [data-ca-reveal="fade-in"]:not(.ca-reveal-visible) {
 }
 
 html.js [data-ca-reveal="soft-zoom"]:not(.ca-reveal-visible) {
-  transform: scale(.975);
+  transform: scale(.96);
 }
 
 html.js [data-ca-reveal].ca-reveal-visible {
   opacity: 1;
   transform: none;
+  will-change: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {
