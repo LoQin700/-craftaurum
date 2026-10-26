@@ -1,0 +1,41 @@
+name: Validate Content Cards Row Gap
+
+on:
+  push:
+    branches:
+      - tweak/content-cards-row-gap
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate row gap setting
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('sections/content-cards.liquid')
+          text=p.read_text(encoding='utf-8')
+          schema=json.loads(text.split('{% schema %}',1)[1].split('{% endschema %}',1)[0].strip())
+          settings={s.get('id'):s for s in schema.get('settings',[]) if isinstance(s,dict)}
+          assert settings['row_gap']['type']=='range'
+          assert settings['row_gap']['default']==36
+          assert '--ca-cards-row-gap:' in text
+          assert 'row-gap: var(--ca-cards-row-gap);' in text
+          print('Content cards row gap validation: PASS')
+          PY
+
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
