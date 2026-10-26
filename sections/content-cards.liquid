@@ -2,6 +2,13 @@
   assign content_width = section.settings.section_width
   assign desktop_columns = section.settings.desktop_columns
   assign mobile_columns = section.settings.mobile_columns
+  assign card_text_alignment = section.settings.card_text_alignment | default: 'left'
+  assign card_action_alignment = 'flex-start'
+  assign process_text_margin = '0'
+  if card_text_alignment == 'center'
+    assign card_action_alignment = 'center'
+    assign process_text_margin = 'auto'
+  endif
   assign ratio = '4 / 5'
 
   if section.settings.image_ratio == 'square'
@@ -23,6 +30,9 @@
     --ca-cards-gap: {{ section.settings.gap }}px;
     --ca-cards-ratio: {{ ratio }};
     --ca-cards-image-width: {{ section.settings.image_width | default: 100 }}%;
+    --ca-cards-card-align: {{ card_text_alignment }};
+    --ca-cards-card-action-align: {{ card_action_alignment }};
+    --ca-cards-process-text-margin: {{ process_text_margin }};
     --ca-cards-padding-top: {{ section.settings.padding_top }}px;
     --ca-cards-padding-bottom: {{ section.settings.padding_bottom }}px;
   "
@@ -205,6 +215,7 @@
 
   .ca-content-card__content {
     padding-top: 14px;
+    text-align: var(--ca-cards-card-align);
   }
 
   .ca-content-card__title {
@@ -213,6 +224,8 @@
   }
 
   .ca-content-card__action {
+    display: flex;
+    justify-content: var(--ca-cards-card-action-align);
     margin-top: 14px;
   }
 
@@ -272,7 +285,7 @@
 
   .ca-content-cards--process .ca-content-card__content {
     padding: 16px 8px 0;
-    text-align: center;
+    text-align: var(--ca-cards-card-align);
   }
 
   .ca-content-cards--process .ca-content-card__title {
@@ -281,13 +294,13 @@
 
   .ca-content-cards--process .ca-content-card__text {
     max-width: 32ch;
-    margin-inline: auto;
+    margin-inline: var(--ca-cards-process-text-margin);
     color: color-mix(in srgb, var(--ca-cards-text) 72%, transparent);
   }
 
   .ca-content-cards--process .ca-content-card__action {
     display: flex;
-    justify-content: center;
+    justify-content: var(--ca-cards-card-action-align);
   }
 
   .ca-content-cards--process .ca-content-card__image,
@@ -677,11 +690,27 @@
       "type": "range",
       "id": "image_width",
       "label": "图片宽度",
-      "min": 30,
+      "min": 10,
       "max": 100,
       "step": 5,
       "unit": "%",
       "default": 100
+    },
+    {
+      "type": "select",
+      "id": "card_text_alignment",
+      "label": "卡片文字对齐",
+      "options": [
+        {
+          "value": "left",
+          "label": "左对齐"
+        },
+        {
+          "value": "center",
+          "label": "居中"
+        }
+      ],
+      "default": "left"
     },
     {
       "type": "range",
