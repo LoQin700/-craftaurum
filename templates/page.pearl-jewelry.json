@@ -169,6 +169,7 @@
         "image_width": 20,
         "card_text_alignment": "center",
         "gap": 0,
+        "row_gap": 36,
         "padding_top": 64,
         "padding_bottom": 72
       }
@@ -333,9 +334,10 @@
         "mobile_layout": "carousel",
         "mobile_columns": "1",
         "image_ratio": "square",
-        "image_width": 75,
+        "image_width": 95,
         "card_text_alignment": "center",
         "gap": 0,
+        "row_gap": 36,
         "padding_top": 72,
         "padding_bottom": 76
       }
@@ -383,7 +385,7 @@
         "intro_style": "style_2",
         "heading": "Learn Our Process of Custom Pearl Jewelry Manufacture",
         "description": "<p>Three key stages help align the pearl, metal construction and final finish throughout development and production.</p>",
-        "heading_size": 44,
+        "heading_size": 36,
         "body_size": 16,
         "item_title_size": 20,
         "item_body_size": 15,
