@@ -90,45 +90,45 @@
         "freshwater": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/a8509173812c547063c6df216b4d3919.jpg",
             "title": "Freshwater Pearl",
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/pearl-materials.jpg"
+            "link": ""
           }
         },
         "akoya": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/f239cf2d780175c81147a326018ebaf6.jpg",
             "title": "Akoya Pearl",
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/pearl-earrings-2.jpg"
+            "link": ""
           }
         },
         "southsea": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/4f98aa08719b4977f14b6cf0b49c848a.jpg",
             "title": "South Sea Pearl",
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/pearls-necklace.jpg"
+            "link": ""
           }
         },
         "tahitian": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/62738a10a411c7ff9dc4d5298d5f92f5.jpg",
             "title": "Tahitian Pearl",
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/baroque-pearl-earrings.jpg"
+            "link": ""
           }
         }
       },
@@ -141,9 +141,9 @@
       "name": "图文卡片",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
         "card_style": "standard",
         "intro_button_label": "",
         "intro_button_link": "",
@@ -171,25 +171,25 @@
         "image_1": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/pearls-necklace.jpg",
             "image_ratio": "portrait",
             "width": 58,
             "x_offset": -72,
             "y_offset": 24,
             "rotation": -4,
-            "z_index": 1,
-            "image": "shopify://shop_images/pearls-necklace.jpg"
+            "z_index": 1
           }
         },
         "image_2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/pearl-materials.jpg",
             "image_ratio": "portrait",
             "width": 54,
             "x_offset": 80,
             "y_offset": -32,
             "rotation": 4,
-            "z_index": 2,
-            "image": "shopify://shop_images/pearl-materials.jpg"
+            "z_index": 2
           }
         }
       },
@@ -200,9 +200,9 @@
       "name": "叠层图文",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#F8F7F4",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
         "image_position": "left",
         "desktop_layout": "overlap",
         "mobile_layout": "slider",
@@ -229,67 +229,67 @@
         "silver_necklace": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/silver-pearl-necklace.jpg",
             "title": "Silver Pearl Necklace",
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/silver-pearl-necklace.jpg"
+            "link": ""
           }
         },
         "baroque_earrings": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/baroque-pearl-earrings.jpg",
             "title": "Baroque Pearl Earrings",
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/baroque-pearl-earrings.jpg"
+            "link": ""
           }
         },
         "plated_rings": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/plated-pearl-rings.jpg",
             "title": "Plated Pearl Rings",
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/plated-pearl-rings.jpg"
+            "link": ""
           }
         },
         "pearl_earrings": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/pearl-earrings-2.jpg",
             "title": "Pearl Earrings",
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/pearl-earrings-2.jpg"
+            "link": ""
           }
         },
         "pearl_necklace": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/pearl-necklace.jpg",
             "title": "Pearl Necklace",
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/pearl-necklace.jpg"
+            "link": ""
           }
         },
         "pearl_bracelets": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/pearl-bracelets.jpg",
             "title": "Pearl Bracelets",
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/pearl-bracelets.jpg"
+            "link": ""
           }
         }
       },
@@ -304,9 +304,9 @@
       "name": "图文卡片",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "accent_color": "#C7A85E",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
         "card_style": "standard",
         "intro_button_label": "",
         "intro_button_link": "",
@@ -392,7 +392,7 @@
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
-            "text_color": "#17191A",
+            "text_color": "#17191a",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -411,27 +411,70 @@
             "horizontal_alignment": "space-between",
             "vertical_alignment": "center",
             "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
             "gap": 16,
             "width": "fill",
-            "width_mobile": "fill"
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
           },
           "blocks": {
             "why_1": {
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 8,
                 "width": "fill",
+                "custom_width": 100,
                 "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
                 "background_media": "none",
-                "background_color": "#FFFFFF",
+                "background_color": "#ffffff",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
                 "border": "solid",
                 "border_width": 1,
                 "border_opacity": 100,
-                "border_color": "#D8D5CE",
+                "border_color": "#d8d5ce",
                 "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
                 "padding-block-start": 22,
                 "padding-block-end": 22,
                 "padding-inline-start": 22,
@@ -452,7 +495,7 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
-                    "text_color": "#17191A",
+                    "text_color": "#17191a",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -472,18 +515,35 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 8,
                 "width": "fill",
+                "custom_width": 100,
                 "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
                 "background_media": "none",
-                "background_color": "#FFFFFF",
+                "background_color": "#ffffff",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
                 "border": "solid",
                 "border_width": 1,
                 "border_opacity": 100,
-                "border_color": "#D8D5CE",
+                "border_color": "#d8d5ce",
                 "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
                 "padding-block-start": 22,
                 "padding-block-end": 22,
                 "padding-inline-start": 22,
@@ -504,7 +564,7 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
-                    "text_color": "#17191A",
+                    "text_color": "#17191a",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -524,18 +584,35 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 8,
                 "width": "fill",
+                "custom_width": 100,
                 "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
                 "background_media": "none",
-                "background_color": "#FFFFFF",
+                "background_color": "#ffffff",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
                 "border": "solid",
                 "border_width": 1,
                 "border_opacity": 100,
-                "border_color": "#D8D5CE",
+                "border_color": "#d8d5ce",
                 "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
                 "padding-block-start": 22,
                 "padding-block-end": 22,
                 "padding-inline-start": 22,
@@ -556,7 +633,7 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
-                    "text_color": "#17191A",
+                    "text_color": "#17191a",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -576,18 +653,35 @@
               "type": "group",
               "settings": {
                 "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
                 "horizontal_alignment_flex_direction_column": "flex-start",
                 "vertical_alignment_flex_direction_column": "flex-start",
                 "gap": 8,
                 "width": "fill",
+                "custom_width": 100,
                 "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
                 "background_media": "none",
-                "background_color": "#FFFFFF",
+                "background_color": "#ffffff",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
                 "border": "solid",
                 "border_width": 1,
                 "border_opacity": 100,
-                "border_color": "#D8D5CE",
+                "border_color": "#d8d5ce",
                 "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
                 "padding-block-start": 22,
                 "padding-block-end": 22,
                 "padding-inline-start": 22,
@@ -608,7 +702,7 @@
                     "letter_spacing": "normal",
                     "case": "none",
                     "wrap": "pretty",
-                    "text_color": "#17191A",
+                    "text_color": "#17191a",
                     "background": false,
                     "background_color": "#00000026",
                     "corner_radius": 0,
@@ -651,7 +745,7 @@
         "section_height": "",
         "section_height_custom": 50,
         "background_media": "none",
-        "background_color": "#F8F7F4",
+        "background_color": "#f8f7f4",
         "video_position": "cover",
         "background_image_position": "cover",
         "toggle_overlay": false,
@@ -753,7 +847,7 @@
         "section_height": "",
         "section_height_custom": 50,
         "background_media": "none",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "video_position": "cover",
         "background_image_position": "cover",
         "toggle_overlay": false,
