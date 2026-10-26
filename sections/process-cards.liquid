@@ -35,19 +35,24 @@
     --ca-process-text-margin: {{ text_margin }};
     --ca-process-padding-top: {{ section.settings.padding_top }}px;
     --ca-process-padding-bottom: {{ section.settings.padding_bottom }}px;
+    --ca-process-eyebrow-size: {{ section.settings.eyebrow_size | default: 12 }}px;
+    --ca-process-heading-size: {{ section.settings.heading_size | default: 42 }}px;
+    --ca-process-body-size: {{ section.settings.body_size | default: 16 }}px;
+    --ca-process-card-title-size: {{ section.settings.card_title_size | default: 20 }}px;
+    --ca-process-card-body-size: {{ section.settings.card_body_size | default: 15 }}px;
   "
 >
   <div class="ca-process-cards__surface">
-    <div class="ca-process-cards__inner">
+    <div class="ca-process-cards__inner" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
       <header class="ca-process-cards__intro">
         {% if section.settings.eyebrow != blank %}
-          <p class="ca-process-cards__eyebrow {{ section.settings.eyebrow_preset }}">{{ section.settings.eyebrow | escape }}</p>
+          <p class="ca-process-cards__eyebrow">{{ section.settings.eyebrow | escape }}</p>
         {% endif %}
         {% if section.settings.heading != blank %}
-          <h2 class="ca-process-cards__heading {{ section.settings.heading_preset }}">{{ section.settings.heading | escape }}</h2>
+          <h2 class="ca-process-cards__heading">{{ section.settings.heading | escape }}</h2>
         {% endif %}
         {% if section.settings.description != blank %}
-          <div class="ca-process-cards__description rte {{ section.settings.body_preset }}">{{ section.settings.description }}</div>
+          <div class="ca-process-cards__description rte">{{ section.settings.description }}</div>
         {% endif %}
       </header>
 
@@ -72,11 +77,11 @@
 
             <div class="ca-process-card__content">
               {% if block.settings.title != blank %}
-                <h3 class="ca-process-card__title {{ section.settings.card_title_preset }}">{{ block.settings.title | escape }}</h3>
+                <h3 class="ca-process-card__title">{{ block.settings.title | escape }}</h3>
               {% endif %}
 
               {% if block.settings.description != blank %}
-                <div class="ca-process-card__text rte {{ section.settings.body_preset }}">{{ block.settings.description }}</div>
+                <div class="ca-process-card__text rte">{{ block.settings.description }}</div>
               {% endif %}
 
               {% if block.settings.button_label != blank %}
@@ -133,12 +138,18 @@
     color: var(--ca-process-accent);
     letter-spacing: .14em;
     text-transform: uppercase;
+    font-size: var(--ca-process-eyebrow-size);
   }
 
   .ca-process-cards__heading {
     margin: 0 0 14px;
     color: inherit;
+    font-size: var(--ca-process-heading-size);
+    line-height: 1.08;
   }
+
+  .ca-process-cards__description { font-size: var(--ca-process-body-size); line-height: 1.6; }
+  .ca-process-card__text { font-size: var(--ca-process-card-body-size); line-height: 1.6; }
 
   .ca-process-cards__description :is(p, ul, ol),
   .ca-process-card__text :is(p, ul, ol) {
@@ -196,6 +207,8 @@
   .ca-process-card__title {
     margin: 0 0 7px;
     color: inherit;
+    font-size: var(--ca-process-card-title-size);
+    line-height: 1.25;
   }
 
   .ca-process-card__text {
@@ -279,60 +292,19 @@
     { "type": "color", "id": "text_color", "label": "文字颜色", "default": "#17191A" },
     { "type": "color", "id": "accent_color", "label": "重点颜色", "default": "#C7A85E" },
     { "type": "text", "id": "eyebrow", "label": "小标题" },
-    {
-      "type": "select",
-      "id": "eyebrow_preset",
-      "label": "小标题字号",
-      "options": [
-        { "value": "h3", "label": "H3" },
-        { "value": "h4", "label": "H4" },
-        { "value": "h5", "label": "H5" },
-        { "value": "h6", "label": "H6" }
-      ],
-      "default": "h5"
-    },
     { "type": "text", "id": "heading", "label": "标题", "default": "Jewelry Manufacturing Process" },
-    {
-      "type": "select",
-      "id": "heading_preset",
-      "label": "标题字号",
-      "options": [
-        { "value": "h1", "label": "H1" },
-        { "value": "h2", "label": "H2" },
-        { "value": "h3", "label": "H3" },
-        { "value": "h4", "label": "H4" }
-      ],
-      "default": "h2"
-    },
     {
       "type": "richtext",
       "id": "description",
       "label": "正文",
       "default": "<p>Show the main stages from development to finished production.</p>"
     },
-    {
-      "type": "select",
-      "id": "body_preset",
-      "label": "正文字号",
-      "options": [
-        { "value": "h4", "label": "H4" },
-        { "value": "h5", "label": "H5" },
-        { "value": "h6", "label": "H6" }
-      ],
-      "default": "h5"
-    },
-    {
-      "type": "select",
-      "id": "card_title_preset",
-      "label": "步骤标题字号",
-      "options": [
-        { "value": "h2", "label": "H2" },
-        { "value": "h3", "label": "H3" },
-        { "value": "h4", "label": "H4" },
-        { "value": "h5", "label": "H5" }
-      ],
-      "default": "h3"
-    },
+    {"type":"range","id":"eyebrow_size","label":"小标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":2,"unit":"px","default":42},
+    {"type":"range","id":"body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"range","id":"card_title_size","label":"步骤标题字号","min":14,"max":32,"step":1,"unit":"px","default":20},
+    {"type":"range","id":"card_body_size","label":"步骤正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
+    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
     {
       "type": "select",
       "id": "desktop_columns",
