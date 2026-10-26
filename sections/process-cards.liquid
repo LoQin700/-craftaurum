@@ -1,0 +1,473 @@
+{% liquid
+  assign content_width = section.settings.section_width | default: 'page-width'
+  assign desktop_columns = section.settings.desktop_columns | default: 3
+  assign mobile_columns = section.settings.mobile_columns | default: 1
+  assign text_alignment = section.settings.card_text_alignment | default: 'left'
+  assign action_alignment = 'flex-start'
+  assign text_margin = '0'
+  if text_alignment == 'center'
+    assign action_alignment = 'center'
+    assign text_margin = 'auto'
+  endif
+
+  assign ratio = '4 / 3'
+  if section.settings.image_ratio == 'portrait'
+    assign ratio = '4 / 5'
+  elsif section.settings.image_ratio == 'square'
+    assign ratio = '1 / 1'
+  endif
+%}
+
+<section
+  id="ProcessCards-{{ section.id }}"
+  class="ca-process-cards section section--{{ content_width }}"
+  style="
+    --ca-process-background: {{ section.settings.background_color }};
+    --ca-process-text: {{ section.settings.text_color }};
+    --ca-process-accent: {{ section.settings.accent_color }};
+    --ca-process-columns: {{ desktop_columns }};
+    --ca-process-mobile-columns: {{ mobile_columns }};
+    --ca-process-gap: {{ section.settings.gap }}px;
+    --ca-process-ratio: {{ ratio }};
+    --ca-process-image-width: {{ section.settings.image_width | default: 100 }}%;
+    --ca-process-align: {{ text_alignment }};
+    --ca-process-action-align: {{ action_alignment }};
+    --ca-process-text-margin: {{ text_margin }};
+    --ca-process-padding-top: {{ section.settings.padding_top }}px;
+    --ca-process-padding-bottom: {{ section.settings.padding_bottom }}px;
+  "
+>
+  <div class="ca-process-cards__surface">
+    <div class="ca-process-cards__inner">
+      <header class="ca-process-cards__intro">
+        {% if section.settings.eyebrow != blank %}
+          <p class="ca-process-cards__eyebrow {{ section.settings.eyebrow_preset }}">{{ section.settings.eyebrow | escape }}</p>
+        {% endif %}
+        {% if section.settings.heading != blank %}
+          <h2 class="ca-process-cards__heading {{ section.settings.heading_preset }}">{{ section.settings.heading | escape }}</h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <div class="ca-process-cards__description rte {{ section.settings.body_preset }}">{{ section.settings.description }}</div>
+        {% endif %}
+      </header>
+
+      <div class="ca-process-cards__grid{% if section.settings.mobile_layout == 'carousel' %} ca-process-cards__grid--mobile-carousel{% endif %}">
+        {% for block in section.blocks %}
+          <article class="ca-process-card" {{ block.shopify_attributes }}>
+            <div class="ca-process-card__media">
+              {% if block.settings.image != blank %}
+                {{
+                  block.settings.image
+                  | image_url: width: 1400
+                  | image_tag:
+                    loading: 'lazy',
+                    class: 'ca-process-card__image',
+                    widths: '240,360,520,720,960,1200,1400',
+                    sizes: '(min-width: 990px) 33vw, 88vw'
+                }}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'ca-process-card__placeholder' }}
+              {% endif %}
+            </div>
+
+            <div class="ca-process-card__content">
+              {% if block.settings.title != blank %}
+                <h3 class="ca-process-card__title {{ section.settings.card_title_preset }}">{{ block.settings.title | escape }}</h3>
+              {% endif %}
+
+              {% if block.settings.description != blank %}
+                <div class="ca-process-card__text rte {{ section.settings.body_preset }}">{{ block.settings.description }}</div>
+              {% endif %}
+
+              {% if block.settings.button_label != blank %}
+                <div class="ca-process-card__action">
+                  {% render 'craftaurum-cta',
+                    label: block.settings.button_label,
+                    link: block.settings.link,
+                    style_class: block.settings.button_style,
+                    static_label: true
+                  %}
+                </div>
+              {% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .ca-process-cards {
+    color: var(--ca-process-text);
+  }
+
+  .ca-process-cards::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: var(--ca-process-background);
+    pointer-events: none;
+  }
+
+  .ca-process-cards__surface {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .ca-process-cards__inner {
+    min-width: 0;
+    padding-block: var(--ca-process-padding-top) var(--ca-process-padding-bottom);
+  }
+
+  .ca-process-cards__intro {
+    max-width: 1120px;
+    margin: 0 auto 28px;
+    text-align: center;
+  }
+
+  .ca-process-cards__eyebrow {
+    margin: 0 0 10px;
+    color: var(--ca-process-accent);
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+
+  .ca-process-cards__heading {
+    margin: 0 0 14px;
+    color: inherit;
+  }
+
+  .ca-process-cards__description :is(p, ul, ol),
+  .ca-process-card__text :is(p, ul, ol) {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .ca-process-cards__description p,
+  .ca-process-card__text p {
+    margin: 0;
+  }
+
+  .ca-process-cards__grid {
+    display: grid;
+    grid-template-columns: repeat(var(--ca-process-columns), minmax(0, 1fr));
+    gap: var(--ca-process-gap);
+  }
+
+  .ca-process-card__media {
+    position: relative;
+    width: var(--ca-process-image-width);
+    max-width: 100%;
+    margin-inline: auto;
+    aspect-ratio: var(--ca-process-ratio);
+    overflow: hidden;
+    background: transparent;
+    isolation: isolate;
+  }
+
+  .ca-process-card__media::after {
+    content: '';
+    position: absolute;
+    inset: 10px;
+    z-index: 2;
+    border: 1px solid color-mix(in srgb, var(--ca-process-accent) 58%, transparent);
+    pointer-events: none;
+    opacity: .82;
+    transition: border-color .3s ease, opacity .3s ease;
+  }
+
+  .ca-process-card__image,
+  .ca-process-card__placeholder {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .45s cubic-bezier(.2,.7,.2,1);
+  }
+
+  .ca-process-card__content {
+    padding: 16px 8px 0;
+    text-align: var(--ca-process-align);
+  }
+
+  .ca-process-card__title {
+    margin: 0 0 7px;
+    color: inherit;
+  }
+
+  .ca-process-card__text {
+    max-width: 32ch;
+    margin-inline: var(--ca-process-text-margin);
+    color: color-mix(in srgb, var(--ca-process-text) 72%, transparent);
+  }
+
+  .ca-process-card__action {
+    display: flex;
+    justify-content: var(--ca-process-action-align);
+    margin-top: 14px;
+  }
+
+  @media (hover: hover) {
+    .ca-process-card:hover .ca-process-card__media::after {
+      border-color: var(--ca-process-accent);
+      opacity: 1;
+    }
+
+    .ca-process-card:hover .ca-process-card__image {
+      transform: scale(1.03);
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ca-process-cards__intro {
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    .ca-process-cards__grid {
+      grid-template-columns: repeat(var(--ca-process-mobile-columns), minmax(0, 1fr));
+    }
+
+    .ca-process-cards__grid--mobile-carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: var(--ca-process-gap);
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+
+    .ca-process-cards__grid--mobile-carousel .ca-process-card {
+      flex: 0 0 88%;
+      scroll-snap-align: start;
+    }
+
+    .ca-process-cards__grid--mobile-carousel::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ca-process-card__media::after,
+    .ca-process-card__image {
+      transition: none;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "流程卡片",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "内容宽度",
+      "options": [
+        { "value": "page-width", "label": "页面宽度" },
+        { "value": "full-width", "label": "全宽" }
+      ],
+      "default": "page-width"
+    },
+    { "type": "color", "id": "background_color", "label": "背景颜色", "default": "#F8F7F4" },
+    { "type": "color", "id": "text_color", "label": "文字颜色", "default": "#17191A" },
+    { "type": "color", "id": "accent_color", "label": "重点颜色", "default": "#C7A85E" },
+    { "type": "text", "id": "eyebrow", "label": "小标题" },
+    {
+      "type": "select",
+      "id": "eyebrow_preset",
+      "label": "小标题字号",
+      "options": [
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" }
+      ],
+      "default": "h5"
+    },
+    { "type": "text", "id": "heading", "label": "标题", "default": "Jewelry Manufacturing Process" },
+    {
+      "type": "select",
+      "id": "heading_preset",
+      "label": "标题字号",
+      "options": [
+        { "value": "h1", "label": "H1" },
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "正文",
+      "default": "<p>Show the main stages from development to finished production.</p>"
+    },
+    {
+      "type": "select",
+      "id": "body_preset",
+      "label": "正文字号",
+      "options": [
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" },
+        { "value": "h6", "label": "H6" }
+      ],
+      "default": "h5"
+    },
+    {
+      "type": "select",
+      "id": "card_title_preset",
+      "label": "步骤标题字号",
+      "options": [
+        { "value": "h2", "label": "H2" },
+        { "value": "h3", "label": "H3" },
+        { "value": "h4", "label": "H4" },
+        { "value": "h5", "label": "H5" }
+      ],
+      "default": "h3"
+    },
+    {
+      "type": "select",
+      "id": "desktop_columns",
+      "label": "桌面端每行数量",
+      "options": [
+        { "value": "2", "label": "2 列" },
+        { "value": "3", "label": "3 列" },
+        { "value": "4", "label": "4 列" }
+      ],
+      "default": "3"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "手机端布局",
+      "options": [
+        { "value": "grid", "label": "网格" },
+        { "value": "carousel", "label": "轮播" }
+      ],
+      "default": "carousel"
+    },
+    {
+      "type": "select",
+      "id": "mobile_columns",
+      "label": "手机端每行数量",
+      "options": [
+        { "value": "1", "label": "1 列" },
+        { "value": "2", "label": "2 列" }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "图片比例",
+      "options": [
+        { "value": "portrait", "label": "4:5" },
+        { "value": "square", "label": "1:1" },
+        { "value": "landscape", "label": "4:3" }
+      ],
+      "default": "landscape"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "图片宽度",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "select",
+      "id": "card_text_alignment",
+      "label": "卡片文字对齐",
+      "options": [
+        { "value": "left", "label": "左对齐" },
+        { "value": "center", "label": "居中" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "卡片间距",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "上边距",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 76
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "下边距",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 76
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "流程步骤",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "图片" },
+        { "type": "text", "id": "title", "label": "标题", "default": "Design" },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "正文",
+          "default": "<p>Describe this stage of the process.</p>"
+        },
+        { "type": "text", "id": "button_label", "label": "按钮文字" },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "按钮样式",
+          "options": [
+            { "value": "button", "label": "主按钮" },
+            { "value": "button-secondary", "label": "次级按钮" },
+            { "value": "button-unstyled", "label": "文字链接" }
+          ],
+          "default": "button-unstyled"
+        },
+        { "type": "url", "id": "link", "label": "按钮链接" }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "流程卡片",
+      "blocks": [
+        { "type": "step" },
+        { "type": "step" },
+        { "type": "step" },
+        { "type": "step" },
+        { "type": "step" },
+        { "type": "step" }
+      ]
+    }
+  ]
+}
+{% endschema %}
