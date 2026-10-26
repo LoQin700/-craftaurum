@@ -22,7 +22,7 @@
     --ca-compare-metric-text: {{ section.settings.metric_text_color }};
     --ca-compare-cell-padding: {{ section.settings.cell_padding }}px;
     --ca-compare-eyebrow-size: {{ section.settings.eyebrow_size | default: 12 }}px;
-    --ca-compare-heading-size: {{ section.settings.heading_size | default: 42 }}px;
+    --ca-compare-heading-size: {{ section.settings.heading_size | default: 35 }}px;
     --ca-compare-body-size: {{ section.settings.body_size | default: 15 }}px;
     --ca-compare-column-title-size: {{ section.settings.column_title_size | default: 18 }}px;
   "
@@ -424,7 +424,7 @@
     { "type": "richtext", "id": "description", "label": "介绍文字" },
 
     { "type": "range", "id": "eyebrow_size", "label": "小标题字号", "min": 10, "max": 20, "step": 1, "unit": "px", "default": 12 },
-    { "type": "range", "id": "heading_size", "label": "标题字号", "min": 24, "max": 72, "step": 2, "unit": "px", "default": 42 },
+    { "type": "range", "id": "heading_size", "label": "标题字号", "min": 24, "max": 72, "step": 1, "unit": "px", "default": 35 },
     { "type": "range", "id": "body_size", "label": "正文字号", "min": 12, "max": 22, "step": 1, "unit": "px", "default": 15 },
     { "type": "range", "id": "column_title_size", "label": "列标题字号", "min": 14, "max": 30, "step": 1, "unit": "px", "default": 18 },
     { "type": "select", "id": "animation_style", "label": "入场动画", "options": [
