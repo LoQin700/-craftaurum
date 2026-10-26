@@ -22,6 +22,7 @@
     --ca-cards-mobile-columns: {{ mobile_columns }};
     --ca-cards-gap: {{ section.settings.gap }}px;
     --ca-cards-ratio: {{ ratio }};
+    --ca-cards-image-width: {{ section.settings.image_width | default: 100 }}%;
     --ca-cards-padding-top: {{ section.settings.padding_top }}px;
     --ca-cards-padding-bottom: {{ section.settings.padding_bottom }}px;
   "
@@ -178,6 +179,9 @@
 
   .ca-content-card__media {
     position: relative;
+    width: var(--ca-cards-image-width);
+    max-width: 100%;
+    margin-inline: auto;
     aspect-ratio: var(--ca-cards-ratio);
     overflow: hidden;
     background: rgb(var(--color-foreground-rgb) / .04);
@@ -668,6 +672,16 @@
         }
       ],
       "default": "portrait"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "图片宽度",
+      "min": 30,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
     },
     {
       "type": "range",
