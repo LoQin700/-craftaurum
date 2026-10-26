@@ -72,7 +72,8 @@
         </div>
 
         {% for block in section.blocks %}
-          <div class="ca-compare__row{% if forloop.index | modulo: 2 == 0 %} ca-compare__row--alt{% endif %}" {{ block.shopify_attributes }}>
+          {% assign row_modulo = forloop.index | modulo: 2 %}
+          <div class="ca-compare__row{% if row_modulo == 0 %} ca-compare__row--alt{% endif %}" {{ block.shopify_attributes }}>
             <div class="ca-compare__metric">{{ block.settings.label | escape }}</div>
             <div class="ca-compare__value rte">{{ block.settings.value_1 }}</div>
             <div class="ca-compare__value rte">{{ block.settings.value_2 }}</div>
@@ -86,7 +87,8 @@
 
     <div class="ca-compare__mobile">
       {% for block in section.blocks %}
-        <article class="ca-compare__mobile-group{% if forloop.index | modulo: 2 == 0 %} ca-compare__mobile-group--alt{% endif %}" {{ block.shopify_attributes }}>
+        {% assign row_modulo = forloop.index | modulo: 2 %}
+        <article class="ca-compare__mobile-group{% if row_modulo == 0 %} ca-compare__mobile-group--alt{% endif %}" {{ block.shopify_attributes }}>
           <h3 class="ca-compare__mobile-metric">{{ block.settings.label | escape }}</h3>
 
           <div class="ca-compare__mobile-option">
