@@ -130,7 +130,7 @@
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-unstyled",
         "padding_top": 64,
-        "padding_bottom": 80
+        "padding_bottom": 24
       }
     },
     "halloween_intro": {
@@ -159,53 +159,7 @@
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 80,
-        "padding_bottom": 40
-      }
-    },
-    "image_gallery_EWetKA": {
-      "type": "image-gallery",
-      "blocks": {
-        "image_eKMMmf": {
-          "type": "image",
-          "settings": {}
-        },
-        "image_cAjtiY": {
-          "type": "image",
-          "settings": {}
-        },
-        "image_ddeFC4": {
-          "type": "image",
-          "settings": {}
-        },
-        "image_mCA8y8": {
-          "type": "image",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "image_eKMMmf",
-        "image_cAjtiY",
-        "image_ddeFC4",
-        "image_mCA8y8"
-      ],
-      "name": "图片画廊",
-      "settings": {
-        "heading": "",
-        "heading_preset": "h2",
-        "description": "",
-        "body_preset": "h5",
-        "button_label": "",
-        "button_style": "button-unstyled",
-        "collection": "",
-        "link": "",
-        "section_width": "page-width",
-        "desktop_layout": "carousel",
-        "desktop_columns": 3,
-        "mobile_layout": "grid",
-        "mobile_columns": 2,
-        "gap": 16,
-        "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 24
       }
     },
     "thanksgiving": {
@@ -234,7 +188,7 @@
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-unstyled",
         "padding_top": 88,
-        "padding_bottom": 88
+        "padding_bottom": 24
       }
     },
     "black_friday": {
@@ -263,107 +217,7 @@
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-secondary",
         "padding_top": 88,
-        "padding_bottom": 40
-      }
-    },
-    "black_friday_products": {
-      "type": "content-cards",
-      "blocks": {
-        "rings": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/rings.jpg",
-            "title": "Best-Selling Rings",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        },
-        "earrings": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/gold-earrings.jpg",
-            "title": "Giftable Earrings",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        },
-        "necklaces": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/nameplate-necklace.jpg",
-            "title": "Personalized Necklaces",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        },
-        "bracelets": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/chain-bracelets.jpg",
-            "title": "Layering Bracelets",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        },
-        "sets": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/custom-pearl-jewelry-set.jpg",
-            "title": "Jewelry Gift Sets",
-            "description": "",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "rings",
-        "earrings",
-        "necklaces",
-        "bracelets",
-        "sets"
-      ],
-      "name": "图文卡片",
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#17191a",
-        "text_color": "#f8f7f4",
-        "accent_color": "#c7a85e",
-        "intro_style": "style_1",
-        "show_divider": false,
-        "divider_color": "#555555",
-        "intro_button_label": "",
-        "intro_button_link": "",
-        "intro_button_style": "button-secondary",
-        "eyebrow": "",
-        "heading": "",
-        "description": "",
-        "eyebrow_size": 12,
-        "heading_size": 35,
-        "body_size": 16,
-        "card_title_size": 18,
-        "card_body_size": 15,
-        "animation_style": "soft-zoom",
-        "desktop_layout": "grid",
-        "desktop_columns": "5",
-        "mobile_layout": "carousel",
-        "mobile_columns": "1",
-        "image_ratio": "square",
-        "image_width": 100,
-        "card_text_alignment": "left",
-        "gap": 16,
-        "row_gap": 36,
-        "padding_top": 16,
-        "padding_bottom": 96
+        "padding_bottom": 24
       }
     },
     "why_choose": {
@@ -423,118 +277,6 @@
         "padding_bottom": 96
       }
     },
-    "custom_options": {
-      "type": "content-cards",
-      "blocks": {
-        "moq": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/OEM-JEWELLERY.jpg",
-            "title": "Flexible MOQ",
-            "description": "<p>Plan seasonal launches with quantities that fit your test order, launch scale and replenishment strategy.</p>",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        },
-        "gemstone": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/gemstone-setting.jpg",
-            "title": "Gemstone Options",
-            "description": "<p>Develop with zircon, moissanite, natural stones and other stone directions according to the design.</p>",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        },
-        "plating": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/plating-jewelry.jpg",
-            "title": "Plating Options",
-            "description": "<p>Choose gold, rose gold, rhodium and other finishing directions for different seasonal aesthetics.</p>",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        },
-        "materials": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/solid-gold-jewelry.jpg",
-            "title": "Material Choices",
-            "description": "<p>Work across sterling silver, solid gold and suitable plated constructions based on collection positioning.</p>",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        },
-        "delivery": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/delivery.jpg",
-            "title": "Delivery Planning",
-            "description": "<p>Coordinate sampling, production and shipping around the fixed launch window of your seasonal campaign.</p>",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        },
-        "budget": {
-          "type": "card",
-          "settings": {
-            "image": "shopify://shop_images/wholesale-jewelry-2.jpg",
-            "title": "Budget Planning",
-            "description": "<p>Balance design, material, finish and order quantity to build a collection around the target retail price.</p>",
-            "button_label": "",
-            "button_style": "button-unstyled",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "moq",
-        "gemstone",
-        "plating",
-        "materials",
-        "delivery",
-        "budget"
-      ],
-      "name": "图文卡片",
-      "settings": {
-        "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "intro_style": "style_2",
-        "show_divider": true,
-        "divider_color": "#d8d5ce",
-        "intro_button_label": "",
-        "intro_button_link": "",
-        "intro_button_style": "button",
-        "eyebrow": "",
-        "heading": "Seasonal Jewelry Customization Options",
-        "description": "<p>Build the collection around your launch plan with flexible choices in order quantity, stones, finishes, materials, delivery and target cost.</p>",
-        "eyebrow_size": 12,
-        "heading_size": 35,
-        "body_size": 16,
-        "card_title_size": 18,
-        "card_body_size": 15,
-        "animation_style": "fade-in",
-        "desktop_layout": "grid",
-        "desktop_columns": "3",
-        "mobile_layout": "carousel",
-        "mobile_columns": "1",
-        "image_ratio": "square",
-        "image_width": 100,
-        "card_text_alignment": "left",
-        "gap": 20,
-        "row_gap": 48,
-        "padding_top": 96,
-        "padding_bottom": 100
-      }
-    },
     "contact": {
       "type": "editorial-contact",
       "name": "联系表单 - Editorial",
@@ -553,19 +295,339 @@
         "padding_top": 104,
         "padding_bottom": 104
       }
+    },
+    "christmas_gallery": {
+      "type": "image-gallery",
+      "name": "图片画廊",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Christmas-brooch.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Christmas-earrings-set.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Christmas-necklace.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Christmas-necklace-gold.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "animation_style": "fade-in",
+        "desktop_layout": "grid",
+        "desktop_columns": 4,
+        "mobile_layout": "grid",
+        "mobile_columns": 2,
+        "image_ratio": "square",
+        "gap": 16,
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "halloween_gallery": {
+      "type": "image-gallery",
+      "name": "图片画廊",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/halloween-necklace.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/custom-zodiac-jewelry.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Aries-jewelry.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/number-jewelry-1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "animation_style": "soft-zoom",
+        "desktop_layout": "grid",
+        "desktop_columns": 4,
+        "mobile_layout": "grid",
+        "mobile_columns": 2,
+        "image_ratio": "square",
+        "gap": 16,
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "thanksgiving_gallery": {
+      "type": "image-gallery",
+      "name": "图片画廊",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/custom-inital-necklace.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/custom-birthstone-jewelry.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/nameplate-necklace.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/custom-pearl-jewelry-set.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "animation_style": "fade-in",
+        "desktop_layout": "grid",
+        "desktop_columns": 4,
+        "mobile_layout": "grid",
+        "mobile_columns": 2,
+        "image_ratio": "square",
+        "gap": 16,
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "black_friday_gallery": {
+      "type": "image-gallery",
+      "name": "图片画廊",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/rings.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gold-earrings.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/nameplate-necklace.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/chain-bracelets.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#17191a",
+        "animation_style": "soft-zoom",
+        "desktop_layout": "grid",
+        "desktop_columns": 4,
+        "mobile_layout": "grid",
+        "mobile_columns": 2,
+        "image_ratio": "square",
+        "gap": 16,
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "customization_guide": {
+      "type": "content-guide",
+      "name": "内容指南",
+      "blocks": {
+        "moq": {
+          "type": "item",
+          "settings": {
+            "image": "",
+            "value": "",
+            "heading": "Flexible MOQ",
+            "description": "<p>Plan seasonal launches with quantities that fit your test order, launch scale and replenishment strategy.</p>",
+            "meta_label": "",
+            "meta_value": ""
+          }
+        },
+        "gemstone": {
+          "type": "item",
+          "settings": {
+            "image": "",
+            "value": "",
+            "heading": "Gemstone Options",
+            "description": "<p>Develop with zircon, moissanite, natural stones and other stone directions according to the design.</p>",
+            "meta_label": "",
+            "meta_value": ""
+          }
+        },
+        "plating": {
+          "type": "item",
+          "settings": {
+            "image": "",
+            "value": "",
+            "heading": "Plating Options",
+            "description": "<p>Choose gold, rose gold, rhodium and other finishing directions for different seasonal aesthetics.</p>",
+            "meta_label": "",
+            "meta_value": ""
+          }
+        },
+        "materials": {
+          "type": "item",
+          "settings": {
+            "image": "",
+            "value": "",
+            "heading": "Material Choices",
+            "description": "<p>Work across sterling silver, solid gold and suitable plated constructions based on collection positioning.</p>",
+            "meta_label": "",
+            "meta_value": ""
+          }
+        },
+        "delivery": {
+          "type": "item",
+          "settings": {
+            "image": "",
+            "value": "",
+            "heading": "Delivery Planning",
+            "description": "<p>Coordinate sampling, production and shipping around the fixed launch window of your seasonal campaign.</p>",
+            "meta_label": "",
+            "meta_value": ""
+          }
+        },
+        "budget": {
+          "type": "item",
+          "settings": {
+            "image": "",
+            "value": "",
+            "heading": "Budget Planning",
+            "description": "<p>Balance design, material, finish and order quantity to build a collection around the target retail price.</p>",
+            "meta_label": "",
+            "meta_value": ""
+          }
+        }
+      },
+      "block_order": [
+        "moq",
+        "gemstone",
+        "plating",
+        "materials",
+        "delivery",
+        "budget"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "animation_style": "fade-up",
+        "background_color": "#ffffff",
+        "line_color": "#d8d5ce",
+        "hover_background_color": "#f8f7f4",
+        "item_padding_inline": 20,
+        "intro_alignment": "left",
+        "eyebrow": "SEASONAL DEVELOPMENT",
+        "eyebrow_size": 12,
+        "eyebrow_color": "#c7a85e",
+        "heading": "Seasonal Jewelry Customization Options",
+        "heading_size": 35,
+        "heading_color": "#17191a",
+        "description": "<p>Build the collection around your launch plan with flexible choices in order quantity, stones, finishes, materials, delivery and target cost.</p>",
+        "description_size": 16,
+        "description_color": "#5f615e",
+        "item_alignment": "left",
+        "item_title_size": 20,
+        "item_title_color": "#17191a",
+        "item_body_size": 15,
+        "item_body_color": "#4f514e",
+        "value_size": 12,
+        "value_color": "#c7a85e",
+        "meta_size": 12,
+        "meta_color": "#5f615e",
+        "item_image_shape": "square",
+        "item_image_size": 88,
+        "value_suffix": "",
+        "feature_image": "shopify://shop_images/OEM-JEWELLERY.jpg",
+        "feature_image_ratio": "landscape",
+        "feature_alignment": "left",
+        "feature_heading": "Built Around Your Seasonal Launch",
+        "feature_title_size": 24,
+        "feature_title_color": "#17191a",
+        "feature_body": "<p>Seasonal jewelry has a fixed selling window. We coordinate design development, sampling, production and delivery around the date your collection needs to be ready.</p>",
+        "feature_body_size": 16,
+        "feature_body_color": "#4f514e",
+        "column_gap": 56,
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
     }
   },
   "order": [
     "main",
     "festival_intro",
     "christmas",
+    "christmas_gallery",
     "halloween_intro",
-    "image_gallery_EWetKA",
+    "halloween_gallery",
     "thanksgiving",
+    "thanksgiving_gallery",
     "black_friday",
-    "black_friday_products",
+    "black_friday_gallery",
     "why_choose",
-    "custom_options",
+    "customization_guide",
     "contact"
   ]
 }
