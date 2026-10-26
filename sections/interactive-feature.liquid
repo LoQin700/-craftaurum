@@ -37,20 +37,26 @@
     --ca-cap-gap: {{ gap }}px;
     --ca-cap-padding-top: {{ padding_top }}px;
     --ca-cap-padding-bottom: {{ padding_bottom }}px;
+    --ca-cap-heading-size: {{ section.settings.heading_size | default: 42 }}px;
+    --ca-cap-body-size: {{ section.settings.body_size | default: 16 }}px;
+    --ca-cap-item-title-size: {{ section.settings.item_title_size | default: 20 }}px;
+    --ca-cap-item-body-size: {{ section.settings.item_body_size | default: 15 }}px;
+    --ca-cap-visual-height: {{ section.settings.visual_height | default: 520 }}px;
   "
 >
   <div class="ca-capability__surface">
-    <div class="ca-capability__inner ca-capability__inner--{{ content_width }}">
-      <header class="ca-capability__intro">
-        {% if section.settings.eyebrow != blank %}
-          <p class="ca-capability__eyebrow {{ section.settings.eyebrow_preset | default: 'h5' }}">{{ section.settings.eyebrow | escape }}</p>
-        {% endif %}
-        {% if section.settings.heading != blank %}
-          <h2 class="ca-capability__heading {{ section.settings.heading_preset | default: 'h2' }}">{{ section.settings.heading | escape }}</h2>
-        {% endif %}
-        {% if section.settings.description != blank %}
-          <div class="ca-capability__description rte {{ section.settings.body_preset | default: 'h5' }}">{{ section.settings.description }}</div>
-        {% endif %}
+    <div class="ca-capability__inner ca-capability__inner--{{ content_width }}" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
+      <header class="ca-capability__intro ca-capability__intro--{{ section.settings.intro_style | default: 'style_1' }}">
+        <div class="ca-capability__intro-title">
+          {% if section.settings.heading != blank %}
+            <h2 class="ca-capability__heading">{{ section.settings.heading | escape }}</h2>
+          {% endif %}
+        </div>
+        <div class="ca-capability__intro-copy">
+          {% if section.settings.description != blank %}
+            <div class="ca-capability__description rte">{{ section.settings.description }}</div>
+          {% endif %}
+        </div>
       </header>
 
       {% if layout_mode == 'icons' %}
@@ -65,17 +71,17 @@
                 {% endif %}
               </div>
               {% if block.settings.title != blank %}
-                <h3 class="ca-capability-icons__title {{ section.settings.item_title_preset | default: 'h4' }}">{{ block.settings.title | escape }}</h3>
+                <h3 class="ca-capability-icons__title">{{ block.settings.title | escape }}</h3>
               {% endif %}
               {% if block.settings.description != blank %}
-                <div class="ca-capability-icons__text rte {{ section.settings.body_preset | default: 'h5' }}">{{ block.settings.description }}</div>
+                <div class="ca-capability-icons__text rte">{{ block.settings.description }}</div>
               {% endif %}
             </article>
           {% endfor %}
         </div>
       {% else %}
         <craftaurum-interactive-feature class="ca-capability-interactive">
-          <div class="ca-capability-interactive__layout">
+          <div class="ca-capability-interactive__layout ca-capability-interactive__layout--{{ section.settings.visual_height_mode | default: 'match_text' }}">
             <div class="ca-capability-interactive__list" role="tablist" aria-label="{{ section.settings.heading | escape }}">
               {% for block in section.blocks %}
                 <button
@@ -90,10 +96,10 @@
                   <span class="ca-capability-interactive__number">{{ forloop.index | prepend: '0' }}</span>
                   <span class="ca-capability-interactive__copy">
                     {% if block.settings.title != blank %}
-                      <span class="ca-capability-interactive__title {{ section.settings.item_title_preset | default: 'h4' }}">{{ block.settings.title | escape }}</span>
+                      <span class="ca-capability-interactive__title">{{ block.settings.title | escape }}</span>
                     {% endif %}
                     {% if block.settings.description != blank %}
-                      <span class="ca-capability-interactive__text {{ section.settings.body_preset | default: 'h5' }}">{{ block.settings.description | strip_html }}</span>
+                      <span class="ca-capability-interactive__text">{{ block.settings.description | strip_html }}</span>
                     {% endif %}
                   </span>
                 </button>
@@ -150,9 +156,18 @@
     width:100%;
     padding-inline:max(var(--page-margin),24px);
   }
-  .ca-capability__intro { max-width:900px; margin:0 auto 34px; text-align:center; }
-  .ca-capability__eyebrow { margin:0 0 10px; color:var(--ca-cap-accent); letter-spacing:.14em; text-transform:uppercase; }
-  .ca-capability__heading { margin:0 0 14px; color:inherit; }
+  .ca-capability__intro { max-width:1120px; margin:0 auto 34px; }
+  .ca-capability__intro--style_1 { max-width:900px; text-align:center; }
+  .ca-capability__intro--style_1 .ca-capability__intro-copy { max-width:760px; margin-inline:auto; }
+  .ca-capability__intro--style_2 {
+    display:grid;
+    grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);
+    gap:clamp(32px,6vw,92px);
+    align-items:end;
+    text-align:left;
+  }
+  .ca-capability__heading { margin:0 0 14px; color:inherit; font-size:var(--ca-cap-heading-size); line-height:1.08; }
+  .ca-capability__description { font-size:var(--ca-cap-body-size); line-height:1.6; }
   .ca-capability__description :is(p,ul,ol),
   .ca-capability-icons__text :is(p,ul,ol) { font-size:inherit; line-height:inherit; }
   .ca-capability__description p,
@@ -162,8 +177,9 @@
     display:grid;
     grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
     gap:clamp(28px,5vw,76px);
-    align-items:stretch;
   }
+  .ca-capability-interactive__layout--match_text { align-items:stretch; }
+  .ca-capability-interactive__layout--fixed { align-items:center; }
   .ca-capability-interactive__list {
     display:flex;
     flex-direction:column;
@@ -186,17 +202,24 @@
   }
   .ca-capability-interactive__number { font-size:12px; line-height:1.5; letter-spacing:.08em; color:var(--ca-cap-accent); }
   .ca-capability-interactive__copy { display:grid; gap:7px; }
-  .ca-capability-interactive__title { display:block; }
-  .ca-capability-interactive__text { display:block; line-height:1.65; opacity:.68; }
+  .ca-capability-interactive__title { display:block; font-size:var(--ca-cap-item-title-size); line-height:1.25; }
+  .ca-capability-interactive__text { display:block; font-size:var(--ca-cap-item-body-size); line-height:1.65; opacity:.68; }
   .ca-capability-interactive__item:is(:hover,:focus-visible,.is-active) { color:var(--ca-cap-accent); padding-inline-start:8px; }
   .ca-capability-interactive__item.is-active .ca-capability-interactive__text { color:var(--ca-cap-text); opacity:.78; }
   .ca-capability-interactive__item:focus-visible { outline:2px solid var(--ca-cap-accent); outline-offset:3px; }
 
   .ca-capability-interactive__visual {
     position:relative;
-    min-height:520px;
     overflow:hidden;
     background:color-mix(in srgb,var(--ca-cap-text) 4%,transparent);
+  }
+  .ca-capability-interactive__layout--match_text .ca-capability-interactive__visual {
+    min-height:0;
+    height:100%;
+  }
+  .ca-capability-interactive__layout--fixed .ca-capability-interactive__visual {
+    width:100%;
+    height:var(--ca-cap-visual-height);
   }
   .ca-capability-interactive__panel {
     position:absolute;
@@ -236,16 +259,19 @@
     transform:rotate(45deg);
     display:block;
   }
-  .ca-capability-icons__title { margin:0 0 10px; color:inherit; }
-  .ca-capability-icons__text { opacity:.76; }
+  .ca-capability-icons__title { margin:0 0 10px; color:inherit; font-size:var(--ca-cap-item-title-size); line-height:1.25; }
+  .ca-capability-icons__text { opacity:.76; font-size:var(--ca-cap-item-body-size); line-height:1.6; }
 
   @media screen and (max-width:749px) {
     .ca-capability__inner--full-width { padding-inline:18px; }
     .ca-capability__intro { text-align:left; margin-bottom:24px; }
+    .ca-capability__intro--style_2 { display:block; }
+    .ca-capability__intro--style_2 .ca-capability__intro-title { margin-bottom:14px; }
+    .ca-capability__heading { font-size:min(var(--ca-cap-heading-size),44px); }
     .ca-capability-interactive__layout { grid-template-columns:minmax(0,1fr); gap:20px; }
     .ca-capability-interactive__item { grid-template-columns:34px minmax(0,1fr); padding:18px 0; }
     .ca-capability-interactive__item:is(:hover,:focus-visible,.is-active) { padding-inline-start:0; }
-    .ca-capability-interactive__visual { min-height:0; aspect-ratio:4 / 3; }
+    .ca-capability-interactive__visual { min-height:0; height:auto !important; aspect-ratio:4 / 3; }
     .ca-capability-icons__grid { grid-template-columns:repeat(var(--ca-cap-mobile-columns),minmax(0,1fr)); }
     .ca-capability-icons__item { padding-inline:0; }
   }
@@ -317,42 +343,14 @@
       "default": "#C7A85E"
     },
     {
-      "type": "text",
-      "id": "eyebrow",
-      "label": "小标题",
-      "default": "WHY CHOOSE OUR RINGS"
-    },
-    {
       "type": "select",
-      "id": "eyebrow_preset",
-      "label": "小标题字号",
+      "id": "intro_style",
+      "label": "标题布局",
       "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
+        { "value": "style_1", "label": "Style 1" },
+        { "value": "style_2", "label": "Style 2" }
       ],
-      "default": "h5"
+      "default": "style_1"
     },
     {
       "type": "text",
@@ -361,106 +359,83 @@
       "default": "Focused Capabilities for Custom Ring Development"
     },
     {
-      "type": "select",
-      "id": "heading_preset",
-      "label": "标题字号",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h2"
-    },
-    {
       "type": "richtext",
       "id": "description",
       "label": "正文",
       "default": "<p>Explore the details that shape a ring collection, from materials and setting choices to design development and production review.</p>"
     },
     {
-      "type": "select",
-      "id": "body_preset",
-      "label": "正文字号",
-      "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
-      ],
-      "default": "h5"
+      "type": "range",
+      "id": "heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 42
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "说明字号",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "item_title_size",
+      "label": "项目标题字号",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "item_body_size",
+      "label": "项目正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 15
     },
     {
       "type": "select",
-      "id": "item_title_preset",
-      "label": "项目标题字号",
+      "id": "visual_height_mode",
+      "label": "图片高度方式",
       "options": [
-        {
-          "value": "h1",
-          "label": "H1"
-        },
-        {
-          "value": "h2",
-          "label": "H2"
-        },
-        {
-          "value": "h3",
-          "label": "H3"
-        },
-        {
-          "value": "h4",
-          "label": "H4"
-        },
-        {
-          "value": "h5",
-          "label": "H5"
-        },
-        {
-          "value": "h6",
-          "label": "H6"
-        }
+        { "value": "match_text", "label": "图片跟随文字高度" },
+        { "value": "fixed", "label": "固定高度并与文字居中" }
       ],
-      "default": "h4"
+      "default": "match_text",
+      "visible_if": "{{ section.settings.layout_mode == 'interactive' }}"
+    },
+    {
+      "type": "range",
+      "id": "visual_height",
+      "label": "固定图片高度",
+      "min": 320,
+      "max": 760,
+      "step": 20,
+      "unit": "px",
+      "default": 520,
+      "visible_if": "{{ section.settings.visual_height_mode == 'fixed' and section.settings.layout_mode == 'interactive' }}"
+    },
+    {
+      "type": "select",
+      "id": "animation_style",
+      "label": "入场动画",
+      "options": [
+        { "value": "fade-up", "label": "Fade Up" },
+        { "value": "fade-in", "label": "Fade In" },
+        { "value": "soft-zoom", "label": "Soft Zoom" }
+      ],
+      "default": "fade-up"
     },
     {
       "type": "range",
