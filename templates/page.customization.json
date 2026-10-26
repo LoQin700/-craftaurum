@@ -357,72 +357,73 @@
       }
     },
     "process_cards": {
-      "type": "content-cards",
+      "type": "process-cards",
+      "name": "流程卡片",
       "blocks": {
         "communication": {
-          "type": "card",
+          "type": "step",
           "settings": {
+            "image": "shopify://shop_images/NDA-4.jpg",
             "title": "Communication",
             "description": "<p>Share references, requirements and product direction.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/NDA-4.jpg"
+            "link": ""
           }
         },
         "design": {
-          "type": "card",
+          "type": "step",
           "settings": {
+            "image": "shopify://shop_images/custom-design-jewelry.jpg",
             "title": "Design",
             "description": "<p>Refine shape, proportion, texture and key details.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/custom-design-jewelry.jpg"
+            "link": ""
           }
         },
         "rendering": {
-          "type": "card",
+          "type": "step",
           "settings": {
+            "image": "shopify://shop_images/3d-render-1.jpg",
             "title": "3D Rendering",
             "description": "<p>Review structure and proportion digitally before sampling.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/3d-render-1.jpg"
+            "link": ""
           }
         },
         "sampling": {
-          "type": "card",
+          "type": "step",
           "settings": {
+            "image": "shopify://shop_images/jewelry-design.jpg",
             "title": "Sampling",
             "description": "<p>Check the physical product, construction, fit and finish.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/jewelry-design.jpg"
+            "link": ""
           }
         },
         "production": {
-          "type": "card",
+          "type": "step",
           "settings": {
+            "image": "shopify://shop_images/jewelry-manufacturer.jpg",
             "title": "Production",
             "description": "<p>Move into production based on the approved sample.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/jewelry-manufacturer.jpg"
+            "link": ""
           }
         },
         "delivery": {
-          "type": "card",
+          "type": "step",
           "settings": {
+            "image": "shopify://shop_images/delivery.jpg",
             "title": "Delivery",
             "description": "<p>Complete final review, packing and shipment coordination.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/delivery.jpg"
+            "link": ""
           }
         }
       },
@@ -434,16 +435,11 @@
         "production",
         "delivery"
       ],
-      "name": "图文卡片",
       "settings": {
         "section_width": "page-width",
         "background_color": "{{ settings.color_palette.color3 }}",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
-        "card_style": "process",
-        "intro_button_label": "",
-        "intro_button_link": "",
-        "intro_button_style": "button",
         "eyebrow": "",
         "eyebrow_preset": "h5",
         "heading": "High End Jewelry Manufacturing Process",
@@ -451,11 +447,12 @@
         "description": "<p>Six clear stages from first discussion to finished production.</p>",
         "body_preset": "h5",
         "card_title_preset": "h3",
-        "desktop_layout": "grid",
         "desktop_columns": "3",
         "mobile_layout": "carousel",
         "mobile_columns": "1",
         "image_ratio": "landscape",
+        "image_width": 100,
+        "card_text_alignment": "left",
         "gap": 24,
         "padding_top": 76,
         "padding_bottom": 76
