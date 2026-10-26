@@ -37,7 +37,7 @@
     --ca-cap-gap: {{ gap }}px;
     --ca-cap-padding-top: {{ padding_top }}px;
     --ca-cap-padding-bottom: {{ padding_bottom }}px;
-    --ca-cap-heading-size: {{ section.settings.heading_size | default: 42 }}px;
+    --ca-cap-heading-size: {{ section.settings.heading_size | default: 35 }}px;
     --ca-cap-body-size: {{ section.settings.body_size | default: 16 }}px;
     --ca-cap-item-title-size: {{ section.settings.item_title_size | default: 20 }}px;
     --ca-cap-item-body-size: {{ section.settings.item_body_size | default: 15 }}px;
@@ -372,9 +372,9 @@
       "label": "标题字号",
       "min": 24,
       "max": 72,
-      "step": 2,
+      "step": 1,
       "unit": "px",
-      "default": 42
+      "default": 35
     },
     {
       "type": "range",
