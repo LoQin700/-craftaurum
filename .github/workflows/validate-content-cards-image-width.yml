@@ -1,0 +1,38 @@
+name: Validate Content Cards Image Width
+
+on:
+  push:
+    branches:
+      - feature/content-cards-image-width
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate image width setting
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('sections/content-cards.liquid')
+          text=p.read_text(encoding='utf-8')
+          assert '"id": "image_width"' in text
+          assert '--ca-cards-image-width:' in text
+          assert 'width: var(--ca-cards-image-width);' in text
+          assert 'aspect-ratio: var(--ca-cards-ratio);' in text
+          print('Content cards image width control: PASS')
+          PY
+
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
