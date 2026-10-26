@@ -72,11 +72,19 @@
   });
 
   document.addEventListener('shopify:section:select', (event) => {
-    const items = collectItems(event.target);
+    const items = [];
+    if (event.target instanceof Element && event.target.matches('[data-ca-reveal]')) {
+      items.push(event.target);
+    }
+    if (event.target.querySelectorAll) {
+      items.push(...event.target.querySelectorAll('[data-ca-reveal]'));
+    }
     items.forEach((element) => {
       element.classList.remove('ca-reveal-visible');
       element.removeAttribute('data-ca-reveal-ready');
     });
-    requestAnimationFrame(() => reveal(event.target));
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => reveal(event.target));
+    });
   });
 })();
