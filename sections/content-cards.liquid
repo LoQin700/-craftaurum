@@ -4,10 +4,8 @@
   assign mobile_columns = section.settings.mobile_columns
   assign card_text_alignment = section.settings.card_text_alignment | default: 'left'
   assign card_action_alignment = 'flex-start'
-  assign process_text_margin = '0'
   if card_text_alignment == 'center'
     assign card_action_alignment = 'center'
-    assign process_text_margin = 'auto'
   endif
   assign ratio = '4 / 5'
 
@@ -20,7 +18,7 @@
 
 <section
   id="ContentCards-{{ section.id }}"
-  class="ca-content-cards ca-content-cards--{{ section.settings.card_style | default: 'standard' }} section section--{{ content_width }}"
+  class="ca-content-cards section section--{{ content_width }}"
   style="
     --ca-cards-background: {{ section.settings.background_color }};
     --ca-cards-text: {{ section.settings.text_color }};
@@ -32,7 +30,6 @@
     --ca-cards-image-width: {{ section.settings.image_width | default: 100 }}%;
     --ca-cards-card-align: {{ card_text_alignment }};
     --ca-cards-card-action-align: {{ card_action_alignment }};
-    --ca-cards-process-text-margin: {{ process_text_margin }};
     --ca-cards-padding-top: {{ section.settings.padding_top }}px;
     --ca-cards-padding-bottom: {{ section.settings.padding_bottom }}px;
   "
@@ -258,74 +255,6 @@
     margin-top: 22px;
   }
 
-  .ca-content-cards--process .ca-content-cards__intro {
-    max-width: 1120px;
-    margin-bottom: 28px;
-    text-align: center;
-  }
-
-  .ca-content-cards--process .ca-content-card__media {
-    border: 0;
-    border-radius: 0;
-    background: transparent;
-    isolation: isolate;
-  }
-
-  .ca-content-cards--process .ca-content-card__media::after {
-    content: '';
-    position: absolute;
-    inset: 10px;
-    z-index: 3;
-    border: 1px solid color-mix(in srgb, var(--ca-cards-accent) 58%, transparent);
-    border-radius: 0;
-    pointer-events: none;
-    transition: border-color .3s ease, opacity .3s ease;
-    opacity: .82;
-  }
-
-  .ca-content-cards--process .ca-content-card__content {
-    padding: 16px 8px 0;
-    text-align: var(--ca-cards-card-align);
-  }
-
-  .ca-content-cards--process .ca-content-card__title {
-    margin-bottom: 7px;
-  }
-
-  .ca-content-cards--process .ca-content-card__text {
-    max-width: 32ch;
-    margin-inline: var(--ca-cards-process-text-margin);
-    color: color-mix(in srgb, var(--ca-cards-text) 72%, transparent);
-  }
-
-  .ca-content-cards--process .ca-content-card__action {
-    display: flex;
-    justify-content: var(--ca-cards-card-action-align);
-  }
-
-  .ca-content-cards--process .ca-content-card__image,
-  .ca-content-cards--process .ca-content-card__placeholder {
-    border-radius: 0;
-    transition: opacity .35s ease, transform .45s cubic-bezier(.2,.7,.2,1);
-  }
-
-  @media (hover: hover) {
-    .ca-content-cards--process .ca-content-card:hover .ca-content-card__media::after {
-      border-color: var(--ca-cards-accent);
-      opacity: 1;
-    }
-
-    .ca-content-cards--process .ca-content-card:hover .ca-content-card__image--primary {
-      opacity: 1;
-      transform: scale(1.03);
-    }
-
-    .ca-content-cards--process .ca-content-card:hover .ca-content-card__image--hover {
-      opacity: 1;
-      transform: scale(1.03);
-    }
-  }
-
   @media screen and (max-width: 749px) {
     .ca-content-cards__intro {
       text-align: left;
@@ -352,10 +281,6 @@
     .ca-content-cards__grid--mobile-carousel .ca-content-card {
       flex: 0 0 calc((100% - (var(--ca-cards-mobile-columns) - 1) * var(--ca-cards-gap)) / var(--ca-cards-mobile-columns));
       scroll-snap-align: start;
-    }
-
-    .ca-content-cards--process .ca-content-cards__grid--mobile-carousel .ca-content-card {
-      flex-basis: 88%;
     }
 
     .ca-content-cards__grid--mobile-carousel::-webkit-scrollbar {
@@ -401,22 +326,6 @@
       "id": "accent_color",
       "label": "重点颜色",
       "default": "#C7A85E"
-    },
-    {
-      "type": "select",
-      "id": "card_style",
-      "label": "卡片样式",
-      "options": [
-        {
-          "value": "standard",
-          "label": "标准"
-        },
-        {
-          "value": "process",
-          "label": "流程"
-        }
-      ],
-      "default": "standard"
     },
     {
       "type": "text",
