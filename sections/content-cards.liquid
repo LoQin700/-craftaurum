@@ -26,6 +26,7 @@
     --ca-cards-desktop-columns: {{ desktop_columns }};
     --ca-cards-mobile-columns: {{ mobile_columns }};
     --ca-cards-gap: {{ section.settings.gap }}px;
+    --ca-cards-row-gap: {{ section.settings.row_gap | default: 36 }}px;
     --ca-cards-ratio: {{ ratio }};
     --ca-cards-image-width: {{ section.settings.image_width | default: 100 }}%;
     --ca-cards-card-align: {{ card_text_alignment }};
@@ -225,7 +226,8 @@
   .ca-content-cards__grid {
     display: grid;
     grid-template-columns: repeat(var(--ca-cards-desktop-columns), minmax(0, 1fr));
-    gap: var(--ca-cards-gap);
+    column-gap: var(--ca-cards-gap);
+    row-gap: var(--ca-cards-row-gap);
   }
 
   .ca-content-card__media {
@@ -644,6 +646,16 @@
       "step": 4,
       "unit": "px",
       "default": 20
+    },
+    {
+      "type": "range",
+      "id": "row_gap",
+      "label": "上下行间距",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 36
     },
     {
       "type": "range",
