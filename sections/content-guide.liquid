@@ -39,7 +39,7 @@
 >
   <div class="ca-content-guide__inner" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
     {% if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.description != blank %}
-      <header class="ca-content-guide__intro ca-content-guide__intro--{{ section.settings.intro_style | default: 'style_1' }} ca-content-guide__intro-align--{{ section.settings.intro_alignment }}">
+      <header class="ca-content-guide__intro ca-content-guide__intro--{{ section.settings.intro_alignment }}">
         <div class="ca-content-guide__intro-title">
           {% if section.settings.eyebrow != blank %}
             <p class="ca-content-guide__eyebrow">{{ section.settings.eyebrow | escape }}</p>
@@ -59,7 +59,7 @@
     <div class="ca-content-guide__layout">
       <div class="ca-content-guide__list">
         {% for block in section.blocks %}
-          <article class="ca-content-guide__item ca-content-guide__item--{{ section.settings.item_alignment }} ca-content-guide__item-layout--{{ section.settings.item_layout | default: 'style_1' }}" {{ block.shopify_attributes }}>
+          <article class="ca-content-guide__item ca-content-guide__item--{{ section.settings.item_alignment }}" {{ block.shopify_attributes }}>
             {% if section.settings.show_index %}
               <div class="ca-content-guide__index">{{ forloop.index | prepend: '0' }}</div>
             {% endif %}
@@ -151,46 +151,27 @@
   }
 
   .ca-content-guide__intro {
+    max-width: 980px;
     margin-bottom: 46px;
   }
 
-  .ca-content-guide__intro--style_1 {
-    max-width: 980px;
-  }
-
-  .ca-content-guide__intro--style_1.ca-content-guide__intro-align--left {
+  .ca-content-guide__intro--left {
     margin-right: auto;
     text-align: left;
   }
 
-  .ca-content-guide__intro--style_1.ca-content-guide__intro-align--center {
+  .ca-content-guide__intro--center {
     margin-inline: auto;
     text-align: center;
   }
 
-  .ca-content-guide__intro--style_1.ca-content-guide__intro-align--right {
+  .ca-content-guide__intro--right {
     margin-left: auto;
     text-align: right;
   }
 
-  .ca-content-guide__intro--style_2 {
-    width: 100%;
-    max-width: none;
-    display: grid;
-    grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr);
-    gap: var(--ca-guide-gap);
-    align-items: end;
-    text-align: left;
-    padding-top: 22px;
-    border-top: 1px solid var(--ca-guide-line);
-  }
-
-  .ca-content-guide__intro--style_2 .ca-content-guide__heading {
-    max-width: 18ch;
-  }
-
-  .ca-content-guide__intro--style_2 .ca-content-guide__description {
-    max-width: 62ch;
+  .ca-content-guide__intro-copy {
+    margin-top: 0;
   }
 
   .ca-content-guide__eyebrow {
@@ -247,36 +228,36 @@
     min-width: 0;
   }
 
-  .ca-content-guide__item-layout--style_2 {
+  .ca-content-guide__item {
     display: grid;
     grid-template-columns: 42px minmax(0, 1fr);
     gap: 20px;
     align-items: start;
   }
 
-  .ca-content-guide__item-layout--style_2 .ca-content-guide__item-content {
+  .ca-content-guide__item .ca-content-guide__item-content {
     display: grid;
     grid-template-columns: minmax(150px, .72fr) minmax(0, 1.28fr);
     gap: 26px;
     align-items: start;
   }
 
-  .ca-content-guide__item-layout--style_2 .ca-content-guide__thumb {
+  .ca-content-guide__item .ca-content-guide__thumb {
     grid-column: 1 / -1;
     margin-bottom: 2px;
   }
 
-  .ca-content-guide__item-layout--style_2 .ca-content-guide__item-head {
+  .ca-content-guide__item .ca-content-guide__item-head {
     display: block;
     margin-bottom: 0;
   }
 
-  .ca-content-guide__item-layout--style_2 .ca-content-guide__value {
+  .ca-content-guide__item .ca-content-guide__value {
     display: inline-block;
     margin-top: 7px;
   }
 
-  .ca-content-guide__item-layout--style_2 .ca-content-guide__item-body {
+  .ca-content-guide__item .ca-content-guide__item-body {
     max-width: 58ch;
   }
 
@@ -285,7 +266,7 @@
       background: var(--ca-guide-hover-bg);
     }
 
-    .ca-content-guide__item-layout--style_2:hover {
+    .ca-content-guide__item:hover {
       box-shadow: inset 3px 0 0 var(--ca-guide-eyebrow-color);
     }
   }
@@ -479,14 +460,9 @@
   }
 
   @media screen and (max-width: 989px) {
-    .ca-content-guide__intro--style_2,
     .ca-content-guide__layout {
       grid-template-columns: 1fr;
       gap: 36px;
-    }
-
-    .ca-content-guide__intro--style_2 {
-      gap: 14px;
     }
 
     .ca-content-guide__aside-sticky {
@@ -507,16 +483,16 @@
       padding: 22px min(var(--ca-guide-item-padding-inline), 16px) 24px;
     }
 
-    .ca-content-guide__item-layout--style_2 {
+    .ca-content-guide__item {
       grid-template-columns: 34px minmax(0, 1fr);
       gap: 14px;
     }
 
-    .ca-content-guide__item-layout--style_2 .ca-content-guide__item-content {
+    .ca-content-guide__item .ca-content-guide__item-content {
       display: block;
     }
 
-    .ca-content-guide__item-layout--style_2 .ca-content-guide__item-heading-wrap {
+    .ca-content-guide__item .ca-content-guide__item-heading-wrap {
       margin-bottom: 8px;
     }
 
@@ -568,16 +544,6 @@
     { "type": "header", "content": "顶部标题区" },
     {
       "type": "select",
-      "id": "intro_style",
-      "label": "顶部布局",
-      "options": [
-        { "value": "style_1", "label": "Style 1" },
-        { "value": "style_2", "label": "Style 2" }
-      ],
-      "default": "style_1"
-    },
-    {
-      "type": "select",
       "id": "intro_alignment",
       "label": "标题区对齐",
       "options": [
@@ -585,8 +551,7 @@
         { "value": "center", "label": "居中" },
         { "value": "right", "label": "右对齐" }
       ],
-      "default": "left",
-      "visible_if": "{{ section.settings.intro_style == 'style_1' }}"
+      "default": "left"
     },
     { "type": "text", "id": "eyebrow", "label": "小标题", "default": "GUIDE" },
     { "type": "range", "id": "eyebrow_size", "label": "小标题字号", "min": 10, "max": 24, "step": 1, "unit": "px", "default": 12 },
@@ -602,16 +567,6 @@
 
     { "type": "header", "content": "项目文字" },
     {
-      "type": "select",
-      "id": "item_layout",
-      "label": "项目布局",
-      "options": [
-        { "value": "style_1", "label": "Style 1" },
-        { "value": "style_2", "label": "Style 2" }
-      ],
-      "default": "style_1"
-    },
-    {
       "type": "checkbox",
       "id": "show_index",
       "label": "显示 01 / 02 编号",
@@ -626,8 +581,7 @@
         { "value": "center", "label": "居中" },
         { "value": "right", "label": "右对齐" }
       ],
-      "default": "left",
-      "visible_if": "{{ section.settings.item_layout == 'style_1' }}"
+      "default": "left"
     },
     { "type": "range", "id": "item_title_size", "label": "项目标题字号", "min": 16, "max": 44, "step": 1, "unit": "px", "default": 24 },
     { "type": "color", "id": "item_title_color", "label": "项目标题颜色", "default": "#17191A" },
