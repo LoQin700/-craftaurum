@@ -1,0 +1,62 @@
+name: Validate Pearl Jewelry Final Design
+
+on:
+  push:
+    branches:
+      - design/pearl-jewelry-final
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate Pearl page design
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          text=Path('templates/page.pearl-jewelry.json').read_text(encoding='utf-8')
+          page=json.loads(text[text.index('{'):])
+
+          types=page['sections']['pearl_types']['settings']
+          assert types['intro_style']=='style_2'
+          assert types['show_divider'] is True
+          assert types['desktop_columns']=='4'
+          assert types['image_width']==100
+          assert types['card_text_alignment']=='left'
+          assert types['gap']==18
+
+          business=page['sections']['pearl_business']['settings']
+          assert business['desktop_layout']=='overlap'
+          assert business['overlap_amount']==34
+          assert business['visual_height']==620
+
+          products=page['sections']['pearl_products']['settings']
+          assert products['desktop_columns']=='3'
+          assert products['image_width']==100
+          assert products['card_text_alignment']=='left'
+          assert products['row_gap']==48
+
+          process=page['sections']['pearl_process']['settings']
+          assert process['intro_style']=='style_2'
+          assert process['visual_height_mode']=='match_text'
+
+          why=page['sections']['pearl_why']['settings']
+          assert why['desktop_columns']=='4'
+
+          print('Pearl final design validation: PASS')
+          PY
+
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
