@@ -81,7 +81,7 @@
         "eyebrow_size": 12,
         "heading_size": 60,
         "body_size": 16,
-        "animation_style": "fade-up",
+        "animation_style": "fade-in",
         "padding_top": 40,
         "padding_bottom": 52
       }
@@ -328,7 +328,7 @@
         "body_size": 16,
         "card_title_size": 18,
         "card_body_size": 14,
-        "animation_style": "fade-up",
+        "animation_style": "fade-in",
         "desktop_layout": "grid",
         "desktop_columns": "3",
         "mobile_layout": "carousel",
@@ -451,7 +451,7 @@
         "item_body_size": 15,
         "desktop_columns": "4",
         "mobile_columns": "1",
-        "animation_style": "fade-up",
+        "animation_style": "fade-in",
         "padding_top": 72,
         "padding_bottom": 76
       }
