@@ -28,7 +28,7 @@
     --ca-feature-padding-top: {{ padding_top }}px;
     --ca-feature-padding-bottom: {{ padding_bottom }}px;
     --ca-feature-gap: 5%;
-    --ca-feature-heading-size: {{ section.settings.heading_size | default: 42 }}px;
+    --ca-feature-heading-size: {{ section.settings.heading_size | default: 35 }}px;
     --ca-feature-subtitle-size: {{ section.settings.subtitle_size | default: 12 }}px;
     --ca-feature-body-size: {{ section.settings.body_size | default: 16 }}px;
   "
@@ -231,7 +231,7 @@
       "label": "标题",
       "default": "Custom Jewelry Manufacturing"
     },
-    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":2,"unit":"px","default":42},
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
     {"type":"range","id":"subtitle_size","label":"副标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
     {"type":"range","id":"body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
     {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
