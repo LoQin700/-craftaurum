@@ -22,7 +22,7 @@
   assign padding_bottom = section.settings.padding_bottom | default: 56
 %}
 {% if layout_mode != 'icons' %}
-  {{ 'craftaurum-interactive-feature.js' | asset_url | script_tag }}
+  <script src="{{ 'craftaurum-interactive-feature.js' | asset_url }}" defer></script>
 {% endif %}
 
 <section
