@@ -129,8 +129,6 @@
           "settings": {
             "image_ratio": "portrait",
             "width": 58,
-            "x_offset": -72,
-            "y_offset": 24,
             "rotation": -5,
             "z_index": 1,
             "image": "shopify://shop_images/gold-vermeil-earrings.jpg"
@@ -141,8 +139,6 @@
           "settings": {
             "image_ratio": "portrait",
             "width": 54,
-            "x_offset": 80,
-            "y_offset": -32,
             "rotation": 4,
             "z_index": 2,
             "image": "shopify://shop_images/gold-vermeil-necklace.jpg"
@@ -163,12 +159,11 @@
         "desktop_layout": "overlap",
         "mobile_layout": "slider",
         "visual_height": 560,
-        "hover_scale": 3,
         "visual_aria_label": "Gold vermeil jewelry imagery",
         "text_alignment": "left",
         "eyebrow": "GOLD VERMEIL FOR BRANDS",
         "heading": "Unlock Gold Vermeil Jewelry for Your Business",
-        "heading_size": 42,
+        "heading_size": 35,
         "body": "<p>Gold vermeil offers brands a refined balance between precious-metal positioning and accessible collection development. A sterling silver base supports a substantial gold-plated finish, making it suitable for premium rings, earrings, necklaces and bracelets.</p><p>We can support design development, sampling, plating specification and scalable production around your collection goals.</p>",
         "body_size": 16,
         "button_label": "Start Your Project",
@@ -176,7 +171,10 @@
         "button_style": "button",
         "column_gap": 64,
         "padding_top": 72,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "overlap_amount": 32,
+        "eyebrow_size": 12,
+        "animation_style": "soft-zoom"
       }
     },
     "vermeil_types": {
