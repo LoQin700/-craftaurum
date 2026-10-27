@@ -249,7 +249,7 @@
         "top_url": "",
         "top_button_style": "button",
         "cta_label": "Explore Gold Vermeil",
-        "cta_url": "shopify://pages/gold-vermeil-jewelry",
+        "cta_url": "",
         "cta_button_style": "button-unstyled",
         "image": "shopify://shop_images/gold-vermeil-earrings.jpg",
         "image_position": "right",
@@ -564,7 +564,7 @@
           "settings": {
             "title": "Custom Rings",
             "image": "shopify://shop_images/rings.jpg",
-            "link": "shopify://pages/custom-rings"
+            "link": ""
           }
         },
         "type_earrings": {
@@ -572,7 +572,7 @@
           "settings": {
             "title": "Custom Earrings",
             "image": "shopify://shop_images/gold-earrings.jpg",
-            "link": "shopify://pages/custom-earrings"
+            "link": ""
           }
         },
         "type_bracelets": {
@@ -580,7 +580,7 @@
           "settings": {
             "title": "Custom Bracelets",
             "image": "shopify://shop_images/chain-bracelets.jpg",
-            "link": "shopify://pages/custom-bracelets"
+            "link": ""
           }
         },
         "type_necklaces": {
@@ -588,7 +588,7 @@
           "settings": {
             "title": "Custom Necklaces",
             "image": "shopify://shop_images/butterfly-necklace.jpg",
-            "link": "shopify://pages/custom-necklaces"
+            "link": ""
           }
         },
         "type_pendants": {
@@ -596,7 +596,7 @@
           "settings": {
             "title": "Custom Pendants",
             "image": "shopify://shop_images/nameplate-necklace.jpg",
-            "link": "shopify://pages/custom-necklaces"
+            "link": ""
           }
         },
         "type_artisan": {
@@ -604,7 +604,7 @@
           "settings": {
             "title": "Artisan Jewelry",
             "image": "shopify://shop_images/OEM-JEWELLERY.jpg",
-            "link": "shopify://pages/artisanal-jewelry"
+            "link": ""
           }
         }
       },
