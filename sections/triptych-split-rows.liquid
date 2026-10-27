@@ -1,3 +1,22 @@
+{% liquid
+  assign ca_triptych_ratio = '1 / 1'
+  case section.settings.image_ratio
+    when 'portrait'
+      assign ca_triptych_ratio = '4 / 5'
+    when 'landscape'
+      assign ca_triptych_ratio = '4 / 3'
+    when 'wide'
+      assign ca_triptych_ratio = '16 / 9'
+  endcase
+  assign ca_triptych_copy_width = section.settings.copy_width | default: 48
+  assign ca_triptych_image_width = 100 | minus: ca_triptych_copy_width
+  assign ca_triptych_mobile_copy_order = 1
+  assign ca_triptych_mobile_image_order = 2
+  if section.settings.mobile_image_first
+    assign ca_triptych_mobile_copy_order = 2
+    assign ca_triptych_mobile_image_order = 1
+  endif
+%}
 {% if section.settings.background_color != blank %}
   {% render 'contrast-override', background_color: section.settings.background_color, section_id: section.id %}
 {% endif %}
@@ -13,7 +32,6 @@
     --ca-triptych-row-gap: {{ section.settings.row_gap }}px;
     --ca-triptych-panel-gap: {{ section.settings.panel_gap }}px;
     --ca-triptych-image-gap: {{ section.settings.image_gap }}px;
-    --ca-triptych-text-pad: {{ section.settings.text_padding }}px;
     --ca-triptych-image-pad: {{ section.settings.image_padding }}px;
     --ca-triptych-text-bg: {{ section.settings.text_background }};
     --ca-triptych-image-bg: {{ section.settings.image_background }};
@@ -22,17 +40,20 @@
     --ca-triptych-body-size: {{ section.settings.body_size | default: 16 }}px;
     --ca-triptych-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 25 }}px;
     --ca-triptych-body-size-mobile: {{ section.settings.mobile_body_size | default: 14 }}px;
-    --ca-triptych-copy-width: {{ section.settings.copy_width | default: 48 }}%;
-    --ca-triptych-image-ratio: {{ section.settings.image_ratio | default: "square" }};
-    --ca-triptych-mobile-image-cols: {{ section.settings.mobile_image_columns | default: "3" }};
+    --ca-triptych-copy-fr: {{ ca_triptych_copy_width }}fr;
+    --ca-triptych-image-fr: {{ ca_triptych_image_width }}fr;
+    --ca-triptych-image-ratio: {{ ca_triptych_ratio }};
+    --ca-triptych-mobile-image-cols: {{ section.settings.mobile_image_columns | default: '3' }};
+    --ca-triptych-mobile-copy-order: {{ ca_triptych_mobile_copy_order }};
+    --ca-triptych-mobile-image-order: {{ ca_triptych_mobile_image_order }};
   "
 >
   <div class="ca-triptych-split__rows" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
     {% for block in section.blocks %}
       {% liquid
-        assign row_image_position = section.settings.image_position
-        if block.settings.image_position != blank and block.settings.image_position != "inherit"
-          assign row_image_position = block.settings.image_position
+        assign row_image_position = block.settings.image_position | default: 'right'
+        if row_image_position == 'inherit'
+          assign row_image_position = 'right'
         endif
       %}
       <article
@@ -84,9 +105,13 @@
 
   .ca-triptych-split__row {
     display: grid;
-    grid-template-columns: minmax(0, var(--ca-triptych-copy-width)) minmax(0, 1fr);
+    grid-template-columns: minmax(0, var(--ca-triptych-copy-fr)) minmax(0, var(--ca-triptych-image-fr));
     gap: var(--ca-triptych-panel-gap);
     align-items: stretch;
+  }
+
+  .ca-triptych-split__row--image-left {
+    grid-template-columns: minmax(0, var(--ca-triptych-image-fr)) minmax(0, var(--ca-triptych-copy-fr));
   }
 
   .ca-triptych-split__row--image-left .ca-triptych-split__images {
@@ -107,7 +132,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: var(--ca-triptych-text-pad);
+    padding: 0;
     background: var(--ca-triptych-text-bg);
     color: var(--ca-triptych-text-color);
   }
@@ -140,7 +165,7 @@
 
   .ca-triptych-split__image-wrap {
     width: 100%;
-    aspect-ratio: {% if section.settings.image_ratio == "portrait" %}4 / 5{% elsif section.settings.image_ratio == "landscape" %}4 / 3{% else %}1 / 1{% endif %};
+    aspect-ratio: var(--ca-triptych-image-ratio);
     overflow: hidden;
   }
 
@@ -156,19 +181,20 @@
     .ca-triptych-split__title { font-size: var(--ca-triptych-heading-size-mobile); }
     .ca-triptych-split__body { font-size: var(--ca-triptych-body-size-mobile); }
     .ca-triptych-split__body :is(p, ul, ol) { font-size: inherit; }
-    .ca-triptych-split__row {
-      grid-template-columns: 1fr;
+    .ca-triptych-split__row,
+    .ca-triptych-split__row--image-left {
+      grid-template-columns: minmax(0, 1fr);
       gap: 0;
     }
 
     .ca-triptych-split__copy {
-      order: {% if section.settings.mobile_image_first %}2{% else %}1{% endif %} !important;
-      padding: min(var(--ca-triptych-text-pad), 24px);
+      order: var(--ca-triptych-mobile-copy-order) !important;
+      padding: 0;
     }
 
     .ca-triptych-split__images {
-      grid-template-columns: repeat({{ section.settings.mobile_image_columns | default: "3" }}, minmax(0, 1fr));
-      order: {% if section.settings.mobile_image_first %}1{% else %}2{% endif %} !important;
+      grid-template-columns: repeat(var(--ca-triptych-mobile-image-cols), minmax(0, 1fr));
+      order: var(--ca-triptych-mobile-image-order) !important;
       padding: min(var(--ca-triptych-image-pad), 14px);
       gap: min(var(--ca-triptych-image-gap), 10px);
     }
@@ -212,22 +238,6 @@
     },
     {
       "type": "select",
-      "id": "image_position",
-      "label": "图片位置",
-      "options": [
-        {
-          "value": "right",
-          "label": "左文右图"
-        },
-        {
-          "value": "left",
-          "label": "左图右文"
-        }
-      ],
-      "default": "right"
-    },
-    {
-      "type": "select",
       "id": "image_ratio",
       "label": "图片比例",
       "options": [
@@ -263,16 +273,6 @@
       "step": 2,
       "unit": "%",
       "default": 48
-    },
-    {
-      "type": "range",
-      "id": "text_padding",
-      "label": "文字区域内边距",
-      "min": 0,
-      "max": 72,
-      "step": 2,
-      "unit": "px",
-      "default": 32
     },
     {
       "type": "range",
@@ -484,12 +484,8 @@
         {
           "type": "select",
           "id": "image_position",
-          "label": "本行图片位置",
+          "label": "图文位置",
           "options": [
-            {
-              "value": "inherit",
-              "label": "跟随整体设置"
-            },
             {
               "value": "right",
               "label": "左文右图"
@@ -499,7 +495,7 @@
               "label": "左图右文"
             }
           ],
-          "default": "inherit"
+          "default": "right"
         },
         {
           "type": "text",
