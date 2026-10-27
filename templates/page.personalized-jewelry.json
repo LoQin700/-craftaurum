@@ -163,7 +163,7 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/Custom-birthstone-jewelry.jpg",
-            "link": "",
+            "link": "shopify://pages/contact",
             "title": "Birthstone Jewelry",
             "description": "<p>Jewelry inspired by birth months and meaningful gemstones.</p>",
             "horizontal_alignment": "left",
@@ -174,7 +174,7 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/custom-inital-necklace.jpg",
-            "link": "",
+            "link": "shopify://pages/contact",
             "title": "Initial Jewelry",
             "description": "<p>Monograms, nameplates, initials and letter-based design.</p>",
             "horizontal_alignment": "left",
@@ -185,7 +185,7 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/custom-zodiac-jewelry.jpg",
-            "link": "",
+            "link": "shopify://pages/contact",
             "title": "Zodiac Jewelry",
             "description": "<p>Celestial and astrological symbols for personalized series.</p>",
             "horizontal_alignment": "left",
@@ -196,7 +196,7 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/number-jewelry-1.jpg",
-            "link": "",
+            "link": "shopify://pages/contact",
             "title": "Number Jewelry",
             "description": "<p>Special dates, anniversaries and lucky number motifs.</p>",
             "horizontal_alignment": "left",
