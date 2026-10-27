@@ -80,13 +80,13 @@
           "type": "buttons",
           "settings": {
             "label_1": "Christmas Jewelry",
-            "link_1": "shopify://pages/contact",
+            "link_1": "",
             "style_1": "button-secondary",
             "label_2": "Halloween Jewelry",
-            "link_2": "shopify://pages/contact",
+            "link_2": "",
             "style_2": "button-secondary",
             "label_3": "Thanksgiving Gift",
-            "link_3": "shopify://pages/contact",
+            "link_3": "",
             "style_3": "button-secondary"
           }
         }
