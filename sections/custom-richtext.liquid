@@ -1,0 +1,498 @@
+{% liquid
+  assign has_actions = false
+  for block in section.blocks
+    if block.type == 'buttons'
+      for i in (1..4)
+        assign label_key = 'label_' | append: i
+        if block.settings[label_key] != blank
+          assign has_actions = true
+          break
+        endif
+      endfor
+    endif
+  endfor
+%}
+<section
+  id="{% if section.settings.anchor_id != blank %}{{ section.settings.anchor_id | handleize }}{% else %}CustomRichtext-{{ section.id }}{% endif %}"
+  class="section section--{{ section.settings.section_width }} ca-richtext ca-richtext--{{ section.settings.layout_style }} ca-richtext--{{ section.settings.alignment }}"
+  style="
+    --ca-richtext-bg: {{ section.settings.background_color }};
+    --ca-richtext-color: {{ section.settings.text_color }};
+    --ca-richtext-heading-size: {{ section.settings.heading_size }}px;
+    --ca-richtext-body-size: {{ section.settings.body_size }}px;
+    --ca-richtext-mobile-heading-size: {{ section.settings.mobile_heading_size }}px;
+    --ca-richtext-mobile-body-size: {{ section.settings.mobile_body_size }}px;
+    --ca-richtext-top: {{ section.settings.padding_top }}px;
+    --ca-richtext-bottom: {{ section.settings.padding_bottom }}px;
+    --ca-richtext-max: {{ section.settings.content_width }}px;
+  "
+>
+  <div class="ca-richtext__surface">
+    <div class="ca-richtext__inner" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
+      <div class="ca-richtext__copy">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'title' %}
+              {% if block.settings.heading != blank %}
+                <h2 class="ca-richtext__heading" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
+              {% endif %}
+            {% when 'body' %}
+              {% if block.settings.body != blank %}
+                <div class="ca-richtext__body rte" {{ block.shopify_attributes }}>{{ block.settings.body }}</div>
+              {% endif %}
+          {% endcase %}
+        {% endfor %}
+      </div>
+      {% if has_actions %}
+        {% for block in section.blocks %}
+          {% if block.type == 'buttons' %}
+            {% liquid
+              assign button_count = 0
+              for i in (1..4)
+                assign label_key = 'label_' | append: i
+                if block.settings[label_key] != blank
+                  assign button_count = button_count | plus: 1
+                endif
+              endfor
+            %}
+            {% if button_count > 0 %}
+              <div class="ca-richtext__actions ca-richtext__actions--{{ button_count }}" {{ block.shopify_attributes }}>
+                {% for i in (1..4) %}
+                  {% liquid
+                    assign label_key = 'label_' | append: i
+                    assign link_key = 'link_' | append: i
+                    assign style_key = 'style_' | append: i
+                    assign btn_label = block.settings[label_key]
+                    assign btn_link = block.settings[link_key]
+                    assign btn_style = block.settings[style_key] | default: 'button-secondary'
+                  %}
+                  {% if btn_label != blank %}
+                    {% render 'craftaurum-cta', label: btn_label, link: btn_link, style_class: btn_style, static_label: true, class: 'ca-richtext__button' %}
+                  {% endif %}
+                {% endfor %}
+              </div>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% stylesheet %}
+  .ca-richtext { position: relative; scroll-margin-top: 110px; }
+  .ca-richtext::before { content:''; position:absolute; inset:0; background:var(--ca-richtext-bg); pointer-events:none; }
+  .ca-richtext__surface { position:relative; z-index:1; width:100%; color:var(--ca-richtext-color); }
+  .ca-richtext__inner {
+    width:min(calc(100% - 48px),var(--ca-richtext-max));
+    margin-inline:auto;
+    padding-block:var(--ca-richtext-top) var(--ca-richtext-bottom);
+  }
+  .ca-richtext__copy { min-width:0; }
+  .ca-richtext--center .ca-richtext__copy { text-align:center; }
+  .ca-richtext--left .ca-richtext__copy { text-align:left; }
+  .ca-richtext__heading { margin:0 0 14px; color:inherit; font-size:var(--ca-richtext-heading-size); line-height:1.12; }
+  .ca-richtext__body { color:inherit; font-size:var(--ca-richtext-body-size); line-height:1.65; }
+  .ca-richtext__body :is(p,ul,ol) { font-size:inherit; line-height:inherit; }
+  .ca-richtext__body p { margin:0; }
+  .ca-richtext__actions { display:flex; flex-wrap:wrap; align-items:stretch; gap:12px; margin-top:26px; min-width:0; }
+  .ca-richtext--center .ca-richtext__actions { justify-content:center; }
+  .ca-richtext--left .ca-richtext__actions { justify-content:flex-start; }
+  .ca-richtext__actions .ca-richtext__button { min-width:0; max-width:100%; }
+  .ca-richtext--horizontal .ca-richtext__inner {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    align-items:center;
+    gap:40px;
+  }
+  .ca-richtext--horizontal .ca-richtext__actions { margin-top:0; }
+  @media screen and (max-width:749px) {
+    .ca-richtext__inner { width:calc(100% - 36px); }
+    .ca-richtext--horizontal .ca-richtext__inner { grid-template-columns:minmax(0,1fr); gap:18px; }
+    .ca-richtext__heading { font-size:var(--ca-richtext-mobile-heading-size); }
+    .ca-richtext__body { font-size:var(--ca-richtext-mobile-body-size); }
+    .ca-richtext__actions { display:grid; width:100%; gap:8px; }
+    .ca-richtext__actions--1 { grid-template-columns: minmax(0,1fr); }
+    .ca-richtext__actions--2 { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .ca-richtext__actions--3 { grid-template-columns: repeat(3,minmax(0,1fr)); }
+    .ca-richtext__actions--4 { grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .ca-richtext__actions .ca-richtext__button {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:100%;
+      min-width:0;
+      min-height:42px;
+      padding:10px 6px;
+      text-align:center;
+      white-space:normal;
+      overflow-wrap:anywhere;
+      font-size:12px;
+      line-height:1.35;
+    }
+  }
+{% endstylesheet %}
+{% schema %}
+{
+  "name": "自定义富文本",
+  "tag": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "基础设置"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "内容宽度",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "页面宽度"
+        },
+        {
+          "value": "full-width",
+          "label": "全宽"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "页面锚点"
+    },
+    {
+      "type": "header",
+      "content": "布局与交互"
+    },
+    {
+      "type": "select",
+      "id": "layout_style",
+      "label": "布局",
+      "options": [
+        {
+          "value": "stacked",
+          "label": "上下排列"
+        },
+        {
+          "value": "horizontal",
+          "label": "横向 CTA"
+        }
+      ],
+      "default": "stacked"
+    },
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "文字对齐",
+      "options": [
+        {
+          "value": "left",
+          "label": "左对齐"
+        },
+        {
+          "value": "center",
+          "label": "居中"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "label": "内容最大宽度",
+      "min": 600,
+      "max": 1600,
+      "step": 20,
+      "unit": "px",
+      "default": 1060
+    },
+    {
+      "type": "header",
+      "content": "电脑端字号"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "正文字号",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "移动端字号"
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "default": 25
+    },
+    {
+      "type": "range",
+      "id": "mobile_body_size",
+      "label": "正文字号",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "颜色设置"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文字颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "header",
+      "content": "其它设置"
+    },
+    {
+      "type": "select",
+      "id": "animation_style",
+      "label": "入场动画",
+      "options": [
+        {
+          "value": "fade-up",
+          "label": "Fade Up"
+        },
+        {
+          "value": "fade-in",
+          "label": "Fade In"
+        },
+        {
+          "value": "soft-zoom",
+          "label": "Soft Zoom"
+        }
+      ],
+      "default": "fade-up"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "上边距",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "下边距",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    }
+  ],
+  "blocks": [
+    {
+      "type": "title",
+      "name": "标题",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "标题",
+          "default": "Your Heading"
+        }
+      ]
+    },
+    {
+      "type": "body",
+      "name": "正文",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "正文",
+          "default": "<p>Introduce your brand, collection or service.</p>"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "按钮",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label_1",
+          "label": "按钮 1 文字"
+        },
+        {
+          "type": "url",
+          "id": "link_1",
+          "label": "按钮 1 链接"
+        },
+        {
+          "type": "select",
+          "id": "style_1",
+          "label": "按钮 1 样式",
+          "options": [
+            {
+              "value": "button",
+              "label": "主按钮"
+            },
+            {
+              "value": "button-secondary",
+              "label": "次级按钮"
+            },
+            {
+              "value": "button-unstyled",
+              "label": "文字链接"
+            }
+          ],
+          "default": "button-secondary"
+        },
+        {
+          "type": "text",
+          "id": "label_2",
+          "label": "按钮 2 文字"
+        },
+        {
+          "type": "url",
+          "id": "link_2",
+          "label": "按钮 2 链接"
+        },
+        {
+          "type": "select",
+          "id": "style_2",
+          "label": "按钮 2 样式",
+          "options": [
+            {
+              "value": "button",
+              "label": "主按钮"
+            },
+            {
+              "value": "button-secondary",
+              "label": "次级按钮"
+            },
+            {
+              "value": "button-unstyled",
+              "label": "文字链接"
+            }
+          ],
+          "default": "button-secondary"
+        },
+        {
+          "type": "text",
+          "id": "label_3",
+          "label": "按钮 3 文字"
+        },
+        {
+          "type": "url",
+          "id": "link_3",
+          "label": "按钮 3 链接"
+        },
+        {
+          "type": "select",
+          "id": "style_3",
+          "label": "按钮 3 样式",
+          "options": [
+            {
+              "value": "button",
+              "label": "主按钮"
+            },
+            {
+              "value": "button-secondary",
+              "label": "次级按钮"
+            },
+            {
+              "value": "button-unstyled",
+              "label": "文字链接"
+            }
+          ],
+          "default": "button-secondary"
+        },
+        {
+          "type": "text",
+          "id": "label_4",
+          "label": "按钮 4 文字"
+        },
+        {
+          "type": "url",
+          "id": "link_4",
+          "label": "按钮 4 链接"
+        },
+        {
+          "type": "select",
+          "id": "style_4",
+          "label": "按钮 4 样式",
+          "options": [
+            {
+              "value": "button",
+              "label": "主按钮"
+            },
+            {
+              "value": "button-secondary",
+              "label": "次级按钮"
+            },
+            {
+              "value": "button-unstyled",
+              "label": "文字链接"
+            }
+          ],
+          "default": "button-secondary"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "自定义富文本",
+      "blocks": [
+        {
+          "type": "title"
+        },
+        {
+          "type": "body"
+        },
+        {
+          "type": "buttons"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
