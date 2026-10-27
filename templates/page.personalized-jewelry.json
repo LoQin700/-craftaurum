@@ -567,7 +567,7 @@
     },
     "contact": {
       "type": "editorial-contact",
-      "name": "Editorial Contact · Personalized Jewelry",
+      "name": "分栏联系表单",
       "settings": {
         "section_width": "page-width",
         "eyebrow": "START A PERSONALIZED JEWELRY PROJECT",
