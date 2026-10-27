@@ -792,3 +792,15 @@
 - 已同步模板：`index.json`、`page.section-showcase.json`、`page.customization.json`、`page.oem-jewellery.json`、`page.jewelry-collections.json`、Rings / Necklace / Earrings / Bracelets / Fashion / Artisanal、`page.pearl-jewelry.json`、`page.personalized-jewelry.json`、`page.festival-jewelry.json`、`page.contact.json`，共 **15 个现有模板**。
 - 最终读回校验：15/15 模板通过，共 **120 个自建 Section 实例、403 个显式 mobile 字号字段**全部与新标准一致，0 个旧值残留。
 - Section Schema 的新默认值仍保留，用于以后新建的 Section；现有模板则以本次显式值为准。
+
+## 2026-10-27 · 补漏：4 个材质页面现有实例手机字号迁移
+- 用户继续反馈 Theme Editor 仍显示 `12 / 35 / 16`。重新列出 `templates/` 目录后确认此前迁移清单漏掉 4 个已存在的材质页面模板：
+  - `page.custom-silver-jewelry.json`
+  - `page.gold-plated.json`
+  - `page.gold-vermeil.json`
+  - `page.solid-gold.json`
+- 已直接修改这 4 个模板中的所有自建 Section 实例手机字号，写入显式值：主标题 25px、正文 14px、小标题/副标题/说明 12px、卡片/项目标题 18px、卡片/项目正文 14px。
+- 本轮共迁移 22 个自建 Section 实例，新增/替换 87 个 mobile 字号实例字段。
+- 读回校验：4/4 模板全部通过，所有自建 Section 的现有实例值均符合新标准，0 个旧 35/16 值残留。
+- 因此“现有模板实例字号迁移”的完整范围从此前误报的 15 个模板修正为 **19 个现有模板**。Section Schema 默认值也仍保留为相同标准。
+- 若 Shopify Theme Editor 在这些 19 个模板全部同步后仍显示旧值，则需进一步确认当前编辑的 Shopify Theme 是否连接到 GitHub main 最新提交；当前 GitHub main 中对应模板实例已是新值。
