@@ -4,7 +4,9 @@
 
   class CAScrollControls extends HTMLElement {
     connectedCallback() {
-      this.track = this.parentElement?.querySelector(this.getAttribute('data-track'));
+      this.stage = this.parentElement;
+      this.track = this.stage?.querySelector(this.getAttribute('data-track'));
+      this.mediaSelector = this.getAttribute('data-media');
       this.previous = this.querySelector('[data-direction="previous"]');
       this.next = this.querySelector('[data-direction="next"]');
       if (!this.track || !this.previous || !this.next) return;
@@ -25,6 +27,13 @@
         const rtl = getComputedStyle(this.track).direction === 'rtl';
         const current = rtl ? Math.abs(this.track.scrollLeft) : this.track.scrollLeft;
         const canScroll = max > 2 && this.track.clientWidth > 0;
+        const media = this.mediaSelector ? this.track.querySelector(this.mediaSelector) : this.track.firstElementChild;
+        if (media && this.stage) {
+          const stageRect = this.stage.getBoundingClientRect();
+          const mediaRect = media.getBoundingClientRect();
+          const centerY = mediaRect.top - stageRect.top + (mediaRect.height / 2);
+          if (Number.isFinite(centerY) && centerY >= 0) this.style.setProperty('--ca-controls-y', `${centerY}px`);
+        }
         this.classList.toggle('is-unscrollable', !canScroll);
         this.previous.disabled = !canScroll || current < 2;
         this.next.disabled = !canScroll || current >= max - 2;
