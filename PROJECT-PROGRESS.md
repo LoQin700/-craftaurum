@@ -498,3 +498,13 @@
 - 保留全局 V2/V3 标题 35px、主题颜色、共享入场动画及 Editorial Contact 的 Phone 默认非必填设置。
 - 已验证输出 JSON 基本解析及 Section 顺序；尚未独立执行 Shopify CLI Theme Check、Theme Editor 加载保存及三端实测。需在 Shopify 后台新建 Page 并选择 `personalized-jewelry` 模板、上传各区块素材后验收。
 - 对应 GitHub 提交：`be136793c5fa32df1a3dc4cbc8f6b3353d519b37`。
+
+## 2026-10-27 · 自建 Section 集中测试页 + Personalized Jewelry 配图
+- 新增 `templates/page.section-showcase.json`，集中放置当前已确认的 **17 类自建 Section**，每类保留独立、可在 Theme Editor 直接调整的实例，不改正式模板实例。
+- 17 类依次为：品牌图片轮播、图文介绍、分类图片展示、图文横幅、横向 CTA、图文卡片、交互图文、图标文字、图片卡片、流程卡片、图片画廊、叠层图文、Why Choose、内容指南、Festival Intro、标题说明、Editorial Contact。
+- 测试区块的文字、Block 顺序和图片采用现有首页、OEM、Customization、Pearl、Festival、Personalized 的当前真实模板实例作为初始样本；图片保持已有 Shopify `shopify://shop_images/...` 地址，未引入外部随机图。没有图片的文本功能 Section 按其设计不强行插图。
+- Personalized Jewelry 的 Hero / 四分类概览 / 四大产品章节和各画廊已补进对应品类的 Shopify 图片路径：Initial（custom-inital-necklace、nameplate、custom-letters）、Birthstone（Custom-birthstone、November-birthstone-rings）、Zodiac（custom-zodiac、Aries）、Number（number-jewelry-1）。由于仓库模板中未核实更多数字和星座不同实拍，目前个别画廊重复使用同品类图片，后续应换成新素材，不拿不相关的图片充数。
+- 与参考站的语义对应已进行文件名和现有页面用途匹配；尚未通过真实 Shopify 媒体库预览逐张核验图像视觉内容、图像是否仍有效。
+- 页面创建方式：Online Store → Pages 建立测试页，Theme template 选择 `section-showcase`；如模板尚未出现在后台，先核查 GitHub theme sync。
+- 每个 Section 在测试页修改后，只有确认定稿才回写公用源码或目标正式模板，避免误改原有页面素材。
+- 已检查新模板 JSON 可解析、实例块顺序引用有效；未独立执行 Shopify CLI Theme Check / Theme Editor 保存及真实三端 QA。
