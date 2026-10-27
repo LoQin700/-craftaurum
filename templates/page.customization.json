@@ -196,9 +196,9 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "heading": "Casting the Wax Model into Metal",
+        "heading": "Lost-Wax Casting: From Model to Metal",
         "subtitle": "",
-        "body": "<p>Approved wax models are prepared for casting so the design can move from prototype into metal with its key proportions and construction details intact.</p>",
+        "body": "<p>After the model is reviewed and approved, wax patterns can be prepared for investment casting. A mould is formed around the wax; the wax is removed, and molten metal takes its place.</p><p>The cast components are then released for cleaning and refinement. Checking dimensions, structure and important details at this point helps establish a dependable foundation for setting, polishing and final finishing.</p>",
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
@@ -220,7 +220,8 @@
         "accent_color": "#c7a85e",
         "animation_style": "fade-up",
         "padding_top": 52,
-        "padding_bottom": 52
+        "padding_bottom": 52,
+        "heading_tag": "h2"
       }
     },
     "craft_polishing": {
@@ -228,9 +229,9 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "heading": "Polishing Jewelry",
+        "heading": "Polishing, Finishing & Quality Review",
         "subtitle": "",
-        "body": "<p>Polishing refines the metal surface and small construction details before final finishing, helping the jewelry achieve a cleaner and more consistent appearance.</p>",
+        "body": "<p>Polishing refines edges, surfaces and small construction details after forming and assembly. The desired finish may range from a high shine to softer textures, depending on your design.</p><p>For plated pieces, surface preparation and documented finishing specifications also contribute to consistent color and appearance. Visible details and setting areas can be checked against the approved sample before the next production step.</p>",
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
@@ -252,7 +253,8 @@
         "accent_color": "#c7a85e",
         "animation_style": "fade-up",
         "padding_top": 52,
-        "padding_bottom": 52
+        "padding_bottom": 52,
+        "heading_tag": "h2"
       }
     },
     "craft_private_label": {
@@ -260,9 +262,9 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "heading": "Private Label Jewelry Manufacturing",
+        "heading": "Private Label Jewelry for Your Brand",
         "subtitle": "",
-        "body": "<p>Brand-led details can be carried through the product itself, from custom forms and logo direction to finishing choices that support a recognizable collection identity.</p>",
+        "body": "<p>Private-label development can include signature forms, engraving or marking, material specifications, surface finishes and presentation requirements—bringing those decisions together in a clear product brief.</p><p>Whether your team is refining existing designs or creating a new range, sample approval and agreed production specifications help preserve the intended look from the first prototype through manufacturing.</p>",
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
@@ -284,7 +286,8 @@
         "accent_color": "#c7a85e",
         "animation_style": "fade-up",
         "padding_top": 52,
-        "padding_bottom": 64
+        "padding_bottom": 64,
+        "heading_tag": "h2"
       }
     },
     "process_cards": {
@@ -295,7 +298,7 @@
           "settings": {
             "image": "shopify://shop_images/NDA-4.jpg",
             "title": "Communication",
-            "description": "<p>Share references, requirements and product direction.</p>",
+            "description": "<p>Share sketches, references, product categories, preferred materials, quantities and launch goals. We clarify priorities and outline the information needed for a workable development plan.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -306,7 +309,7 @@
           "settings": {
             "image": "shopify://shop_images/custom-design-jewelry.jpg",
             "title": "Design",
-            "description": "<p>Refine shape, proportion, texture and key details.</p>",
+            "description": "<p>Review shapes, dimensions, textures, stones, closures and finishes. Refine the chosen direction against appearance and construction requirements.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -317,7 +320,7 @@
           "settings": {
             "image": "shopify://shop_images/3d-render-1.jpg",
             "title": "3D Rendering",
-            "description": "<p>Review structure and proportion digitally before sampling.</p>",
+            "description": "<p>Use digital views or models to inspect proportions and structural details, and record any revisions before physical sampling where appropriate.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -328,7 +331,7 @@
           "settings": {
             "image": "shopify://shop_images/jewelry-design.jpg",
             "title": "Sampling",
-            "description": "<p>Check the physical product, construction, fit and finish.</p>",
+            "description": "<p>Assess the prototype for comfort, workmanship, visual appearance and construction details. Approve any adjustments before moving to bulk production.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -339,7 +342,7 @@
           "settings": {
             "image": "shopify://shop_images/jewelry-manufacturer.jpg",
             "title": "Production",
-            "description": "<p>Move into production based on the approved sample.</p>",
+            "description": "<p>Manufacture around the approved sample and specification, coordinating casting, setting, polishing, finishing and inspection as required by the design.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -350,7 +353,7 @@
           "settings": {
             "image": "shopify://shop_images/delivery.jpg",
             "title": "Delivery",
-            "description": "<p>Complete final review, packing and shipment coordination.</p>",
+            "description": "<p>Confirm packing, agreed documentation and shipping requirements. Coordinate dispatch against the project schedule and delivery destination.</p>",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -369,8 +372,8 @@
       "settings": {
         "section_width": "page-width",
         "eyebrow": "",
-        "heading": "High End Jewelry Manufacturing Process",
-        "description": "<p>Six clear stages from first discussion to finished production.</p>",
+        "heading": "Our Six-Step Custom Jewelry Manufacturing Process",
+        "description": "<p>Follow a practical development sequence, from the initial requirements discussion to sample approval, manufacturing and coordinated delivery.</p>",
         "image_ratio": "landscape",
         "image_width": 100,
         "card_text_alignment": "left",
@@ -403,7 +406,7 @@
         "section_width": "page-width",
         "eyebrow": "START A PROJECT",
         "heading": "Start Your Custom Jewelry Project",
-        "description": "<p>Share your ideas, references, materials, quantity and project requirements with our team.</p>",
+        "description": "<p>Share your concept, reference images, jewelry category, preferred materials, target quantity and expected launch date. We can use those details to discuss sampling, technical options and the next steps for a quotation.</p>",
         "phone_required": false,
         "background_color": "#f8f7f4",
         "text_color": "#17191a",
