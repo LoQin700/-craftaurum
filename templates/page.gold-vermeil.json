@@ -480,7 +480,7 @@
         "why_1": {
           "type": "item",
           "settings": {
-            "icon": "star",
+            "icon": "ruler",
             "title": "Custom Design",
             "description": "<p>Develop original pieces from sketches, references or an existing brand direction.</p>"
           }
@@ -488,7 +488,7 @@
         "why_2": {
           "type": "item",
           "settings": {
-            "icon": "check_box",
+            "icon": "eye",
             "title": "Premium Quality",
             "description": "<p>Refined manufacturing, polishing and finishing for collections positioned above standard fashion jewelry.</p>"
           }
@@ -496,7 +496,7 @@
         "why_3": {
           "type": "item",
           "settings": {
-            "icon": "leaf",
+            "icon": "check_box",
             "title": "Authentic Materials",
             "description": "<p>Clear sterling silver foundations and configurable gold plating specifications for a transparent material story.</p>"
           }
