@@ -482,89 +482,6 @@
     },
     {
       "type": "select",
-      "id": "animation_style",
-      "label": "入场动画",
-      "options": [
-        { "value": "fade-up", "label": "Fade Up" },
-        { "value": "fade-in", "label": "Fade In" },
-        { "value": "soft-zoom", "label": "Soft Zoom" }
-      ],
-      "default": "fade-up"
-    },
-    {
-      "type": "select",
-      "id": "desktop_layout",
-      "label": "桌面端布局",
-      "options": [
-        {
-          "value": "grid",
-          "label": "网格"
-        },
-        {
-          "value": "carousel",
-          "label": "轮播"
-        }
-      ],
-      "default": "grid"
-    },
-    {
-      "type": "select",
-      "id": "desktop_columns",
-      "label": "桌面端每行数量",
-      "options": [
-        {
-          "value": "2",
-          "label": "2 列"
-        },
-        {
-          "value": "3",
-          "label": "3 列"
-        },
-        {
-          "value": "4",
-          "label": "4 列"
-        },
-        {
-          "value": "5",
-          "label": "5 列"
-        }
-      ],
-      "default": "4"
-    },
-    {
-      "type": "select",
-      "id": "mobile_layout",
-      "label": "手机端布局",
-      "options": [
-        {
-          "value": "grid",
-          "label": "网格"
-        },
-        {
-          "value": "carousel",
-          "label": "轮播"
-        }
-      ],
-      "default": "carousel"
-    },
-    {
-      "type": "select",
-      "id": "mobile_columns",
-      "label": "手机端每行数量",
-      "options": [
-        {
-          "value": "1",
-          "label": "1 列"
-        },
-        {
-          "value": "2",
-          "label": "2 列"
-        }
-      ],
-      "default": "1"
-    },
-    {
-      "type": "select",
       "id": "image_ratio",
       "label": "图片比例",
       "options": [
@@ -628,6 +545,91 @@
       "step": 4,
       "unit": "px",
       "default": 36
+    },
+    {"type":"header","content":"电脑端布局"},
+    {
+      "type": "select",
+      "id": "desktop_columns",
+      "label": "每行显示数量",
+      "options": [
+        {
+          "value": "2",
+          "label": "2 列"
+        },
+        {
+          "value": "3",
+          "label": "3 列"
+        },
+        {
+          "value": "4",
+          "label": "4 列"
+        },
+        {
+          "value": "5",
+          "label": "5 列"
+        }
+      ],
+      "default": "4"
+    },
+    {
+      "type": "select",
+      "id": "desktop_layout",
+      "label": "展示方式",
+      "options": [
+        {
+          "value": "grid",
+          "label": "网格"
+        },
+        {
+          "value": "carousel",
+          "label": "轮播"
+        }
+      ],
+      "default": "grid"
+    },
+    {"type":"header","content":"移动端布局"},
+    {
+      "type": "select",
+      "id": "mobile_columns",
+      "label": "每行显示数量",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 列"
+        },
+        {
+          "value": "2",
+          "label": "2 列"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "展示方式",
+      "options": [
+        {
+          "value": "grid",
+          "label": "网格"
+        },
+        {
+          "value": "carousel",
+          "label": "轮播"
+        }
+      ],
+      "default": "carousel"
+    },
+    {
+      "type": "select",
+      "id": "animation_style",
+      "label": "入场动画",
+      "options": [
+        { "value": "fade-up", "label": "Fade Up" },
+        { "value": "fade-in", "label": "Fade In" },
+        { "value": "soft-zoom", "label": "Soft Zoom" }
+      ],
+      "default": "fade-up"
     },
     {
       "type": "range",
