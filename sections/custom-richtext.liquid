@@ -14,7 +14,7 @@
 %}
 <section
   id="{% if section.settings.anchor_id != blank %}{{ section.settings.anchor_id | handleize }}{% else %}CustomRichtext-{{ section.id }}{% endif %}"
-  class="section section--{{ section.settings.section_width }} ca-richtext ca-richtext--{{ section.settings.layout_style }} ca-richtext--{{ section.settings.alignment }}"
+  class="section section--full-width ca-richtext ca-richtext--width-{{ section.settings.section_width | default: 'page-width' }} ca-richtext--{{ section.settings.layout_style }} ca-richtext--{{ section.settings.alignment }}"
   style="
     --ca-richtext-bg: {{ section.settings.background_color }};
     --ca-richtext-color: {{ section.settings.text_color }};
@@ -87,9 +87,19 @@
   .ca-richtext::before { content:''; position:absolute; inset:0; background:var(--ca-richtext-bg); pointer-events:none; }
   .ca-richtext__surface { position:relative; z-index:1; width:100%; color:var(--ca-richtext-color); }
   .ca-richtext__inner {
-    width:min(calc(100% - 48px),var(--ca-richtext-max));
-    margin-inline:auto;
-    padding-block:var(--ca-richtext-top) var(--ca-richtext-bottom);
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-inline: auto;
+    padding-block: var(--ca-richtext-top) var(--ca-richtext-bottom);
+  }
+  .ca-richtext--width-page-width .ca-richtext__inner {
+    width: min(calc(100% - 48px), var(--ca-richtext-max));
+  }
+  .ca-richtext--width-full-width .ca-richtext__inner {
+    width: 100%;
+    max-width: none;
+    padding-inline: max(var(--page-margin, 24px), 24px);
   }
   .ca-richtext__copy { min-width:0; }
   .ca-richtext--center .ca-richtext__copy { text-align:center; }
@@ -110,7 +120,8 @@
   }
   .ca-richtext--horizontal .ca-richtext__actions { margin-top:0; }
   @media screen and (max-width:749px) {
-    .ca-richtext__inner { width:calc(100% - 36px); }
+    .ca-richtext--width-page-width .ca-richtext__inner { width:calc(100% - 36px); }
+    .ca-richtext--width-full-width .ca-richtext__inner { width:100%; padding-inline:18px; }
     .ca-richtext--horizontal .ca-richtext__inner { grid-template-columns:minmax(0,1fr); gap:18px; }
     .ca-richtext__heading { font-size:var(--ca-richtext-mobile-heading-size); }
     .ca-richtext__body { font-size:var(--ca-richtext-mobile-body-size); }
