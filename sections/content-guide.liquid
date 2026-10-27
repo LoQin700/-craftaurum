@@ -470,6 +470,12 @@
     .ca-content-guide__feature-title { font-size: var(--ca-guide-feature-title-size-mobile); }
     .ca-content-guide__feature-body { font-size: var(--ca-guide-feature-body-size-mobile); }
   }
+  /* Right-hand editorial image hover. Item thumbnails have been retired. */
+  .ca-content-guide__feature-image { transition: transform .48s cubic-bezier(.2,.7,.2,1); transform:scale(1); }
+  @media (hover:hover) and (pointer:fine) {
+    .ca-content-guide__feature-media:hover .ca-content-guide__feature-image { transform:scale(1.055); }
+  }
+  @media (prefers-reduced-motion:reduce) { .ca-content-guide__feature-image { transition:none; } }
 {% endstylesheet %}
 
 {% schema %}
