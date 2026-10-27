@@ -125,7 +125,7 @@
           "type": "buttons",
           "settings": {
             "label_1": "Start Your Artisanal Project",
-            "link_1": "",
+            "link_1": "shopify://pages/contact",
             "style_1": "button-secondary"
           }
         }
@@ -147,7 +147,7 @@
             "description": "<p>Explore bold pendant proportions, decorative textures and different chain or attachment options to match a specific design brief.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         },
         "card_WtWhNM": {
@@ -158,7 +158,7 @@
             "description": "<p>Discuss brooch shapes, brand emblems, metal finishes and pin construction for fashion accessories or event collections.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         },
         "card_CfDadY": {
@@ -169,7 +169,7 @@
             "description": "<p>Review chain lengths, connection details, decorative elements and finishes for custom waist-chain designs.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         },
         "card_PcNzcH": {
@@ -180,7 +180,7 @@
             "description": "<p>Develop jewelry-inspired gift concepts using engraved or branded motifs. Discuss packaging, quantity and feasibility before confirming production.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         }
       },
@@ -299,7 +299,7 @@
         "top_url": "",
         "top_button_style": "button",
         "cta_label": "Start Your Project",
-        "cta_url": "",
+        "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-secondary",
         "image": "shopify://shop_images/jewelry-manufacturer.jpg",
         "image_position": "left",
