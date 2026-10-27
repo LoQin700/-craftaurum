@@ -31,7 +31,7 @@
 
 <section
   id="OverlapImageText-{{ section.id }}"
-  class="section section--{{ section.settings.section_width }} spacing-style ca-overlap{% if section.settings.enable_overlap %} ca-overlap--cross{% endif %}{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  class="section section--{{ section.settings.section_width }} spacing-style ca-overlap{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
   style="
     --padding-block-start: {{ section.settings.padding_top }}px;
     --padding-block-end: {{ section.settings.padding_bottom }}px;
@@ -178,11 +178,11 @@
   .ca-overlap__image-item--square { aspect-ratio: 1 / 1; }
   .ca-overlap__image-item--landscape { aspect-ratio: 4 / 3; }
 
-  .ca-overlap--cross .ca-overlap__visual {
+  .ca-overlap__visual {
     gap: 0;
   }
 
-  .ca-overlap--cross .ca-overlap__image-item + .ca-overlap__image-item {
+  .ca-overlap__image-item + .ca-overlap__image-item {
     margin-left: calc(var(--ca-overlap-amount) * -1);
   }
 
@@ -298,8 +298,7 @@
     }
 
     /* Mobile slider: equal card widths, no negative margins, and room for rotation. */
-    .ca-overlap__visual--mobile-slider,
-    .ca-overlap--cross .ca-overlap__visual--mobile-slider {
+    .ca-overlap__visual--mobile-slider {
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -331,8 +330,7 @@
     }
 
     /* Mobile stack: vertically spaced cards, never overlapped. */
-    .ca-overlap__visual--mobile-stack,
-    .ca-overlap--cross .ca-overlap__visual--mobile-stack {
+    .ca-overlap__visual--mobile-stack {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -350,7 +348,7 @@
       margin: 0;
     }
 
-    /* Optional mobile crossover: same global checkbox and per-image rotations. */
+    /* Mobile crossover uses the section overlap range and per-image rotations. */
     .ca-overlap__visual--mobile-overlap {
       display: flex;
       align-items: center;
@@ -367,15 +365,15 @@
       max-height: 82%;
     }
 
-    .ca-overlap--cross .ca-overlap__visual--mobile-overlap {
+    .ca-overlap__visual--mobile-overlap {
       gap: 0;
     }
 
-    .ca-overlap--cross .ca-overlap__visual--mobile-overlap .ca-overlap__image-item + .ca-overlap__image-item {
+    .ca-overlap__visual--mobile-overlap .ca-overlap__image-item + .ca-overlap__image-item {
       margin-left: calc(var(--ca-overlap-amount) * -1);
     }
 
-    .ca-overlap--cross :is(.ca-overlap__visual--mobile-slider, .ca-overlap__visual--mobile-stack) .ca-overlap__image-item + .ca-overlap__image-item {
+    :is(.ca-overlap__visual--mobile-slider, .ca-overlap__visual--mobile-stack) .ca-overlap__image-item + .ca-overlap__image-item {
       margin-left: 0;
     }
   }
@@ -590,21 +588,14 @@
       "content": "电脑端布局"
     },
     {
-      "type": "checkbox",
-      "id": "enable_overlap",
-      "label": "图片是否交叉",
-      "default": true
-    },
-    {
       "type": "range",
       "id": "overlap_amount",
-      "label": "交叉程度（0 为不交叉）",
+      "label": "图片重叠程度",
       "min": 0,
       "max": 55,
       "step": 1,
       "unit": "%",
-      "default": 28,
-      "visible_if": "{{ section.settings.enable_overlap }}"
+      "default": 28
     },
     {
       "type": "header",
@@ -837,7 +828,7 @@
         {
           "type": "range",
           "id": "rotation",
-          "label": "该图片旋转角度",
+          "label": "图片旋转角度",
           "min": -12,
           "max": 12,
           "step": 1,
