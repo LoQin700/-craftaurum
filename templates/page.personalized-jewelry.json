@@ -82,7 +82,10 @@
         "accent_color": "#c7a85e",
         "animation_style": "fade-in",
         "padding_top": 56,
-        "padding_bottom": 64
+        "padding_bottom": 64,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "special": {
@@ -111,7 +114,10 @@
         "accent_color": "#c7a85e",
         "animation_style": "fade-up",
         "padding_top": 80,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "enamel": {
@@ -140,7 +146,10 @@
         "accent_color": "#c7a85e",
         "animation_style": "soft-zoom",
         "padding_top": 80,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "unlock": {
@@ -155,7 +164,9 @@
         "body_size": 16,
         "animation_style": "fade-in",
         "padding_top": 72,
-        "padding_bottom": 12
+        "padding_bottom": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "overview": {
@@ -234,7 +245,11 @@
         "card_body_size": 15,
         "animation_style": "fade-up",
         "padding_top": 32,
-        "padding_bottom": 88
+        "padding_bottom": 88,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_card_title_size": 18,
+        "mobile_card_body_size": 14
       }
     },
     "initial": {
@@ -263,7 +278,10 @@
         "accent_color": "#c7a85e",
         "animation_style": "fade-up",
         "padding_top": 80,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "birthstone": {
@@ -292,7 +310,10 @@
         "accent_color": "#c7a85e",
         "animation_style": "soft-zoom",
         "padding_top": 80,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "zodiac": {
@@ -321,7 +342,10 @@
         "accent_color": "#c7a85e",
         "animation_style": "fade-up",
         "padding_top": 80,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "initial_gallery": {
@@ -366,7 +390,9 @@
         "mobile_layout": "grid",
         "animation_style": "fade-in",
         "padding_top": 0,
-        "padding_bottom": 88
+        "padding_bottom": 88,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "birthstone_gallery": {
@@ -412,7 +438,9 @@
         "mobile_layout": "grid",
         "animation_style": "fade-in",
         "padding_top": 0,
-        "padding_bottom": 88
+        "padding_bottom": 88,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "zodiac_gallery": {
@@ -453,7 +481,9 @@
         "mobile_layout": "grid",
         "animation_style": "fade-in",
         "padding_top": 0,
-        "padding_bottom": 88
+        "padding_bottom": 88,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "services": {
@@ -526,7 +556,12 @@
         "divider_color": "#D8D5CE",
         "animation_style": "fade-up",
         "padding_top": 80,
-        "padding_bottom": 88
+        "padding_bottom": 88,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_card_title_size": 18,
+        "mobile_card_body_size": 14
       }
     },
     "contact": {
@@ -545,7 +580,10 @@
         "body_size": 16,
         "animation_style": "fade-up",
         "padding_top": 88,
-        "padding_bottom": 88
+        "padding_bottom": 88,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     }
   },
