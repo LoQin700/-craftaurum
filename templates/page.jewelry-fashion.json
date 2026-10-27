@@ -97,7 +97,7 @@
             "image": "shopify://shop_images/rings.jpg",
             "title": "Fashion & Custom Rings",
             "description": "<p>Explore classic, signet, gemstone and statement ring designs using construction and finishes suited to the proposed style.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact Us",
             "button_style": "button-unstyled",
             "link": "shopify://pages/contact"
           }
@@ -108,7 +108,7 @@
             "image": "shopify://shop_images/gold-earrings.jpg",
             "title": "Stud, Hoop & Pearl Earrings",
             "description": "<p>Plan earring designs across studs, hoops, pearls and drops, considering proportion, comfort and fastening details.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact Us",
             "button_style": "button-unstyled",
             "link": "shopify://pages/contact"
           }
@@ -119,7 +119,7 @@
             "image": "shopify://shop_images/chain-bracelets.jpg",
             "title": "Chain & Bangle Bracelets",
             "description": "<p>Compare chain, bead, bangle and fashion bracelet directions with matching colors and finish specifications.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact Us",
             "button_style": "button-unstyled",
             "link": "shopify://pages/contact"
           }
@@ -130,7 +130,7 @@
             "image": "shopify://shop_images/nameplate-necklace.jpg",
             "title": "Necklaces & Pendants",
             "description": "<p>Explore choker, pendant, pearl and personalized necklace concepts with suitable chains and decorative features.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact Us",
             "button_style": "button-unstyled",
             "link": "shopify://pages/contact"
           }
@@ -290,8 +290,8 @@
           "settings": {
             "icon": "ruler",
             "icon_color": "#c7a85e",
-            "title": "Design Development",
-            "description": "<p>Clarify product references, proportions and collection direction before sampling begins.</p>"
+            "title": "Design Support",
+            "description": "<p>Discuss style references, proportions and details with the team to refine the product concept before sampling.</p>"
           }
         },
         "iwt_material": {
@@ -299,26 +299,26 @@
           "settings": {
             "icon": "star",
             "icon_color": "#c7a85e",
-            "title": "Material Options",
-            "description": "<p>Review metals, stones, plating and finishing directions that can work across categories.</p>"
+            "title": "Jewelry Expertise",
+            "description": "<p>Review materials, settings, construction and finishes relevant to the intended category and market positioning.</p>"
           }
         },
         "iwt_sample": {
           "type": "item",
           "settings": {
-            "icon": "clipboard",
+            "icon": "chat_bubble",
             "icon_color": "#c7a85e",
-            "title": "Sample Review",
-            "description": "<p>Check proportion, construction and finish before moving a coordinated range into production.</p>"
+            "title": "Clear Communication",
+            "description": "<p>Share revisions and approvals at defined development stages so the project team can stay aligned.</p>"
           }
         },
         "iwt_quality": {
           "type": "item",
           "settings": {
-            "icon": "check_box",
+            "icon": "truck",
             "icon_color": "#c7a85e",
-            "title": "Production Coordination",
-            "description": "<p>Keep specifications and review points aligned across multiple jewelry categories.</p>"
+            "title": "Delivery Coordination",
+            "description": "<p>Confirm quantities, production readiness, packaging and shipping requirements to plan delivery after sample approval.</p>"
           }
         }
       },
@@ -332,7 +332,7 @@
       "settings": {
         "section_width": "page-width",
         "eyebrow": "MANUFACTURING SUPPORT",
-        "heading": "Support Across the Full Collection",
+        "heading": "Support for Your Jewelry Collection",
         "description": "<p>From early design communication to sample review and production coordination, the same core process supports every jewelry category in the collection.</p>",
         "icon_position": "top",
         "icon_size": 32,
