@@ -181,107 +181,6 @@
         "padding_bottom": 56
       }
     },
-    "interactive_feature_cFYGmj": {
-      "type": "interactive-feature",
-      "blocks": {
-        "item_QJarUi": {
-          "type": "item",
-          "settings": {
-            "title": "Creative Direction",
-            "description": "<p>Translate visual references and brand ideas into more distinctive jewelry or accessory forms.</p>",
-            "image": "shopify://shop_images/custom-design-jewelry.jpg"
-          }
-        },
-        "item_9zbQMA": {
-          "type": "item",
-          "settings": {
-            "title": "Material Versatility",
-            "description": "<p>Review metal, stone, texture and finish options based on the intended expression of the piece.</p>",
-            "image": "shopify://shop_images/pearl-materials.jpg"
-          }
-        },
-        "item_EFeVgi": {
-          "type": "item",
-          "settings": {
-            "title": "Hand-Finished Details",
-            "description": "<p>Pay attention to surface treatment, assembly and detail work that influence the character of the final piece.</p>",
-            "image": "shopify://shop_images/gemstone-setting-400x400.jpg"
-          }
-        },
-        "item_XTCWJt": {
-          "type": "item",
-          "settings": {
-            "title": "Project-Specific Production",
-            "description": "<p>Use sampling and clear specifications to organize production around unusual forms or special project requirements.</p>",
-            "image": "shopify://shop_images/jewelry-manufacturer.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "item_QJarUi",
-        "item_9zbQMA",
-        "item_EFeVgi",
-        "item_XTCWJt"
-      ],
-      "name": "交互图文",
-      "settings": {
-        "section_width": "page-width",
-        "heading": "Focused Capabilities for More Expressive Custom Projects",
-        "description": "<p>Artisanal projects often require more freedom in form, material and finishing. These are the areas we focus on when developing less conventional jewelry concepts.</p>",
-        "visual_height_mode": "match_text",
-        "visual_height": 520,
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "show_index": true,
-        "intro_style": "style_1",
-        "heading_size": 35,
-        "body_size": 16,
-        "item_title_size": 20,
-        "item_body_size": 15,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
-        "mobile_item_title_size": 18,
-        "mobile_item_body_size": 14,
-        "animation_style": "fade-up",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "image_text_feature_pyXify": {
-      "type": "image-text-feature",
-      "name": "图文介绍",
-      "settings": {
-        "section_width": "page-width",
-        "heading": "Artisanal Jewelry Beyond Standard Collections",
-        "subtitle": "CUSTOM JEWELRY DEVELOPMENT",
-        "body": "<p>Custom artisanal projects can include oversized pendants, brooches, waist chains and branded gift pieces. Each concept may need its own approach to scale, metal choice, assembly and surface finish.</p><p>Share drawings, example images and intended use so we can assess feasible details and outline the sample development process. Available materials, MOQ and production schedules are confirmed by quotation.</p>",
-        "show_buttons": true,
-        "top_label": "",
-        "top_url": "",
-        "top_button_style": "button",
-        "cta_label": "Start Your Project",
-        "cta_url": "shopify://pages/contact",
-        "cta_button_style": "button-secondary",
-        "image": "shopify://shop_images/jewelry-manufacturer.jpg",
-        "image_position": "left",
-        "image_ratio": "landscape",
-        "heading_position": "content",
-        "heading_tag": "h2",
-        "heading_size": 35,
-        "subtitle_size": 12,
-        "body_size": 16,
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14,
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "animation_style": "fade-up",
-        "padding_top": 32,
-        "padding_bottom": 32
-      }
-    },
     "icon_with_text_support": {
       "type": "icon-with-text",
       "blocks": {
@@ -387,8 +286,6 @@
     "main",
     "jewelry_collections_overview_tkTByC",
     "content_cards_xi8xGJ",
-    "interactive_feature_cFYGmj",
-    "image_text_feature_pyXify",
     "icon_with_text_support",
     "section_m4j6NK"
   ]
