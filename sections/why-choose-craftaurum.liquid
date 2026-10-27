@@ -8,9 +8,13 @@
     --ca-why-columns: {{ section.settings.desktop_columns }};
     --ca-why-mobile-columns: {{ section.settings.mobile_columns }};
     --ca-why-heading-size: {{ section.settings.heading_size }}px;
+    --ca-why-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 35 }}px;
     --ca-why-body-size: {{ section.settings.body_size }}px;
+    --ca-why-body-size-mobile: {{ section.settings.mobile_body_size | default: 16 }}px;
     --ca-why-item-title-size: {{ section.settings.item_title_size }}px;
+    --ca-why-item-title-size-mobile: {{ section.settings.mobile_item_title_size | default: 20 }}px;
     --ca-why-item-body-size: {{ section.settings.item_body_size }}px;
+    --ca-why-item-body-size-mobile: {{ section.settings.mobile_item_body_size | default: 15 }}px;
     --ca-why-padding-top: {{ section.settings.padding_top }}px;
     --ca-why-padding-bottom: {{ section.settings.padding_bottom }}px;
   "
@@ -116,6 +120,13 @@
     .ca-why__item:nth-child(2n) { border-right:0; }
     .ca-why__item:last-child { border-bottom:0; }
   }
+
+  @media screen and (max-width: 749px) {
+    .ca-why__heading { font-size: var(--ca-why-heading-size-mobile); }
+    .ca-why__description { font-size: var(--ca-why-body-size-mobile); }
+    .ca-why__item-title { font-size: var(--ca-why-item-title-size-mobile); }
+    .ca-why__item-body { font-size: var(--ca-why-item-body-size-mobile); }
+  }
 {% endstylesheet %}
 
 {% schema %}
@@ -129,15 +140,21 @@
     {"type":"color","id":"text_color","label":"文字颜色","default":"#17191A"},
     {"type":"color","id":"line_color","label":"分隔线颜色","default":"#D8D5CE"},
     {"type":"text","id":"heading","label":"标题","default":"Why Choose Craftaurum?"},
-    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
     {"type":"richtext","id":"description","label":"说明","default":"<p>Thoughtful development, reliable materials and clear production support for your collection.</p>"},
-    {"type":"range","id":"body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
-    {"type":"range","id":"item_title_size","label":"项目标题字号","min":14,"max":32,"step":1,"unit":"px","default":20},
-    {"type":"range","id":"item_body_size","label":"项目正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
     {"type":"header","content":"电脑端布局"},
     {"type":"select","id":"desktop_columns","label":"每行显示数量","options":[{"value":"2","label":"2 个"},{"value":"3","label":"3 个"},{"value":"4","label":"4 个"}],"default":"4"},
     {"type":"header","content":"移动端布局"},
     {"type":"select","id":"mobile_columns","label":"每行显示数量","options":[{"value":"1","label":"1 个"},{"value":"2","label":"2 个"}],"default":"1"},
+    {"type":"header","content":"电脑端字号"},
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"range","id":"item_title_size","label":"项目标题字号","min":14,"max":32,"step":1,"unit":"px","default":20},
+    {"type":"range","id":"item_body_size","label":"项目正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
+    {"type":"header","content":"移动端字号"},
+    {"type":"range","id":"mobile_heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"mobile_body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"range","id":"mobile_item_title_size","label":"项目标题字号","min":14,"max":32,"step":1,"unit":"px","default":20},
+    {"type":"range","id":"mobile_item_body_size","label":"项目正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
     {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
     {"type":"range","id":"padding_top","label":"上边距","min":0,"max":160,"step":4,"unit":"px","default":72},
     {"type":"range","id":"padding_bottom","label":"下边距","min":0,"max":160,"step":4,"unit":"px","default":76}
