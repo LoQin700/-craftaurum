@@ -723,3 +723,21 @@
 - 当对应端选择「网格」或内容不足以滚动时共用箭头不出现；选择轮播且存在实际溢出时才显示左右侧箭头。所有原 Section setting ID、Block、文字、商品图、滚动手势、手机和电脑端显示方式选项均保持不变。
 - **静态验证**：上述 7 个 Section Schema JSON 均可解析；共享 JS 可通过 JavaScript 语法编译；共享 CSS 大括号匹配、不包含边框样式；6 个使用共用箭头的 Section HTML wrapper 嵌套数匹配、共用箭头位于 wrapper 内；共 10 个受影响源码文件检查未发现静态错误。
 - **仍未实测**：Shopify Theme Editor 真正同步后的脚本加载、PC/Mobile 左右箭头点击、Touch scroll、多栏目与滑动边界视觉、Horizon 原生 slideshow 箭头行为。需要在主题同步后以宽度 375/390/768/1440px 的浏览器预览进一步验收；不得将源码核验称为视觉验收。
+
+## 2026-10-27 · 轮播箭头精准对齐图片中线（修复侧边位置偏移）
+- 用户通过 Pearl Jewelry PC/Mobile 截图确认：此前箭头虽然已移至左右侧，但纵向位置仍按完整卡片/轨道高度居中，导致带标题、正文的卡片轮播中箭头落在文字或分隔线附近，而非图片中线。
+- 已将共享轮播箭头定位逻辑从“轮播容器几何中心”改为“**指定媒体元素的实际中心**”：
+  - `snippets/craftaurum-scroll-controls.liquid` 新增 `media_selector` 参数并输出 `data-media`。
+  - `assets/craftaurum-scroll-controls.js` 在 resize/load/子项尺寸变化/Block 变化/scroll 更新时，读取第一张卡片对应媒体元素的 `getBoundingClientRect()`，计算其相对 `.ca-carousel-stage` 的纵向中心并写入 `--ca-controls-y`。
+  - `assets/craftaurum-scroll-controls.css` 改为 `top:var(--ca-controls-y,50%); transform:translateY(-50%)`；仍保持左右两端、无边框、无背景的大号 Chevron。
+- 六个共享轮播 Section 已分别绑定正确媒体定位元素：
+  - `content-cards` → `.ca-content-card__media`
+  - `image-gallery` → `.ca-gallery__media`
+  - `image-collection-grid` → `.ca-collection__card`
+  - `image-cards` → `.ca-image-card__media`
+  - `process-cards` → `.ca-process-card__media`
+  - `overlap-image-text` → `.ca-overlap__visual`
+- 同时补齐/确认 `.ca-carousel-stage` wrapper：上述六类 Section 中，轮播轨道与箭头均位于同一个定位容器内，因此标题、正文、按钮高度变化不会影响箭头 Y 坐标。
+- `brand-partners` 仍使用 Horizon 原生 slideshow，其箭头本身位于 slideshow media 两侧并已改为大号无框 Chevron，不使用共享定位 JS。
+- 静态校验：六个 Section Schema 可解析、DIV 数量匹配、stage → shared controls → stage closing 顺序正确、每个 Section 均传入唯一正确的媒体选择器；共享 JS 可通过语法编译，CSS 包含媒体中心变量定位。
+- **仍需 Shopify 真实预览**：PC/Mobile 不同标题/正文长度、1/2列手机宽度、4列电脑宽度及 Pearl Jewelry 当前截图场景，需在主题编辑器实际确认箭头与图片垂直中线完全重合。
