@@ -488,3 +488,13 @@
 - 仍需全局检查所有页面底部 Contact：部分旧模板可能仍保留 Horizon 原生 Contact Form，尚未全部替换为 `editorial-contact.liquid`。
 - 需要按页面逐一核对并迁移：Jewelry category pages、OEM、Customization、Gold / Material pages、Collections 等；替换时保留各页面自己的标题 / 说明文案。
 - “历史自定义 Section 全局审计”仍在继续：目标是进一步清理旧字号预设、旧 Hover 图像逻辑，并统一动画 / 35px 标题规则。
+
+## 2026-10-27 · Personalized Jewelry 页面新增
+- 新增 `templates/page.personalized-jewelry.json`，参照现有 Festival Jewelry V3 页面结构，但不复用节日引导或内容指南。
+- 页面顺序：简洁 Hero（图文介绍）→ Personalization Possibilities 四分类图片卡片 → Initial / Birthstone / Zodiac / Number 四组「图文介绍 + 图片画廊」→ Why Choose Craftaurum → Editorial Contact。
+- 四组图文和画廊均在同一章节内共享背景：白 / 米色 / 白 / 深黑；图片位置交替右 / 左 / 右 / 左，动画交替 Fade In / Fade Up / Soft Zoom。
+- 新页面全部使用已有 Section：`image-text-feature`、`image-cards`、`image-gallery`、`why-choose-craftaurum`、`editorial-contact`；未新增 Liquid Section 或改动 Festival 模板。
+- 文案为 Craftaurum 原创 B2B 英文内容；新页面图片字段保持空白供 Theme Editor 上传，不引用 Festival 现存的节日素材。
+- 保留全局 V2/V3 标题 35px、主题颜色、共享入场动画及 Editorial Contact 的 Phone 默认非必填设置。
+- 已验证输出 JSON 基本解析及 Section 顺序；尚未独立执行 Shopify CLI Theme Check、Theme Editor 加载保存及三端实测。需在 Shopify 后台新建 Page 并选择 `personalized-jewelry` 模板、上传各区块素材后验收。
+- 对应 GitHub 提交：`be136793c5fa32df1a3dc4cbc8f6b3353d519b37`。
