@@ -97,9 +97,9 @@
             "image": "shopify://shop_images/pearl-earrings-2.jpg",
             "title": "Custom Pearl Earrings",
             "description": "<p>Explore pearl proportions, stud or drop structures and metal finishes to create styles suited to your brand.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact Us",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         },
         "card_WtWhNM": {
@@ -108,9 +108,9 @@
             "image": "shopify://shop_images/S1180-E.jpg",
             "title": "Stud Earrings",
             "description": "<p>Consider compact metal, gemstone or decorative studs with appropriate earring backs and setting details.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact Us",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         },
         "card_CfDadY": {
@@ -119,9 +119,9 @@
             "image": "shopify://shop_images/gold-vermeil-earrings.jpg",
             "title": "Hoop Earrings",
             "description": "<p>Develop simple or embellished hoop concepts, reviewing diameters, closures, material and finished weight.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact Us",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         },
         "card_PcNzcH": {
@@ -130,9 +130,9 @@
             "image": "shopify://shop_images/baroque-pearl-earrings.jpg",
             "title": "Gemstone & Drop Earrings",
             "description": "<p>Discuss gemstone-led and hanging designs, including stone settings, movement, proportions and comfort.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact Us",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         }
       },
@@ -290,8 +290,8 @@
           "settings": {
             "icon": "ruler",
             "icon_color": "#c7a85e",
-            "title": "Design Development",
-            "description": "<p>Clarify silhouette, dimensions and key design references before sampling begins.</p>"
+            "title": "Design Support",
+            "description": "<p>Discuss style references, proportions and details with the team to refine the product concept before sampling.</p>"
           }
         },
         "iwt_material": {
@@ -299,26 +299,26 @@
           "settings": {
             "icon": "star",
             "icon_color": "#c7a85e",
-            "title": "Material Options",
-            "description": "<p>Review metals, stones, pearls and finishing directions for the intended collection.</p>"
+            "title": "Jewelry Expertise",
+            "description": "<p>Review materials, settings, construction and finishes relevant to the intended category and market positioning.</p>"
           }
         },
         "iwt_sample": {
           "type": "item",
           "settings": {
-            "icon": "clipboard",
+            "icon": "chat_bubble",
             "icon_color": "#c7a85e",
-            "title": "Sample Review",
-            "description": "<p>Check proportion, fastening details and overall finish before repeat production.</p>"
+            "title": "Clear Communication",
+            "description": "<p>Share revisions and approvals at defined development stages so the project team can stay aligned.</p>"
           }
         },
         "iwt_quality": {
           "type": "item",
           "settings": {
-            "icon": "check_box",
+            "icon": "truck",
             "icon_color": "#c7a85e",
-            "title": "Quality Review",
-            "description": "<p>Review visual consistency and construction details against agreed production specifications.</p>"
+            "title": "Delivery Coordination",
+            "description": "<p>Confirm quantities, production readiness, packaging and shipping requirements to plan delivery after sample approval.</p>"
           }
         }
       },
@@ -332,7 +332,7 @@
       "settings": {
         "section_width": "page-width",
         "eyebrow": "MANUFACTURING SUPPORT",
-        "heading": "Support for Earring Development",
+        "heading": "Support for Your Jewelry Collection",
         "description": "<p>A clear development process helps move earring concepts from reference and material selection through sampling and production review.</p>",
         "icon_position": "top",
         "icon_size": 32,
