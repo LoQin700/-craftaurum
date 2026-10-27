@@ -1,4 +1,4 @@
-/* Shared controls for custom scroll-snap carousels. One listener per instance; no library dependency. */
+/* Shared lightweight scroll-snap arrows for Craftaurum custom sections. */
 (() => {
   if (customElements.get('ca-scroll-controls')) return;
 
@@ -10,31 +10,43 @@
       if (!this.track || !this.previous || !this.next) return;
 
       this.move = (event) => {
-        const items = [...this.track.children].filter((item) => item.getBoundingClientRect().width > 0);
-        const step = items.length > 1
+        const items = [...this.track.children].filter(item => item.getBoundingClientRect().width > 0);
+        const distance = items.length > 1
           ? Math.abs(items[1].getBoundingClientRect().left - items[0].getBoundingClientRect().left)
           : (items[0]?.getBoundingClientRect().width || this.track.clientWidth);
         const direction = event.currentTarget.dataset.direction === 'next' ? 1 : -1;
         const rtl = getComputedStyle(this.track).direction === 'rtl' ? -1 : 1;
-        this.track.scrollBy({ left: direction * rtl * step, behavior: 'smooth' });
+        this.track.scrollBy({ left: direction * rtl * distance, behavior: 'smooth' });
       };
 
       this.update = () => {
-        if (!this.isConnected) return;
-        const rtl = getComputedStyle(this.track).direction === 'rtl';
+        if (!this.isConnected || !this.track) return;
         const max = Math.max(0, this.track.scrollWidth - this.track.clientWidth);
-        const current = rtl ? -this.track.scrollLeft : this.track.scrollLeft;
-        this.classList.toggle('is-unscrollable', max < 2);
-        this.previous.disabled = max < 2 || current <= 2;
-        this.next.disabled = max < 2 || current >= max - 2;
+        const rtl = getComputedStyle(this.track).direction === 'rtl';
+        const current = rtl ? Math.abs(this.track.scrollLeft) : this.track.scrollLeft;
+        const canScroll = max > 2 && this.track.clientWidth > 0;
+        this.classList.toggle('is-unscrollable', !canScroll);
+        this.previous.disabled = !canScroll || current < 2;
+        this.next.disabled = !canScroll || current >= max - 2;
       };
 
       this.previous.addEventListener('click', this.move);
       this.next.addEventListener('click', this.move);
       this.track.addEventListener('scroll', this.update, { passive: true });
+      window.addEventListener('resize', this.update, { passive: true });
+      window.addEventListener('load', this.update);
       this.resizeObserver = new ResizeObserver(this.update);
       this.resizeObserver.observe(this.track);
-      this.update();
+      this.observeItems = () => {
+        this.resizeObserver.disconnect();
+        this.resizeObserver.observe(this.track);
+        for (const item of this.track.children) this.resizeObserver.observe(item);
+        this.update();
+      };
+      this.mutationObserver = new MutationObserver(this.observeItems);
+      this.mutationObserver.observe(this.track, { childList: true });
+      this.observeItems();
+      requestAnimationFrame(this.update);
     }
 
     disconnectedCallback() {
@@ -42,7 +54,10 @@
       this.previous.removeEventListener('click', this.move);
       this.next.removeEventListener('click', this.move);
       this.track.removeEventListener('scroll', this.update);
+      window.removeEventListener('resize', this.update);
+      window.removeEventListener('load', this.update);
       this.resizeObserver?.disconnect();
+      this.mutationObserver?.disconnect();
     }
   }
 
