@@ -76,7 +76,7 @@
           controls: logo_controls,
           slide_count: section.blocks.size,
           show_arrows: true,
-          icon_style: 'chevron',
+          icon_style: 'chevron-large',
           icon_shape: 'none',
           infinite: true,
           autoplay: section.settings.autoplay,
@@ -143,8 +143,28 @@
   }
   .ca-logos__disclaimer { text-align: center; margin: 18px auto 0; font-size: var(--ca-logo-disclaimer-size); line-height: 1.5; opacity: .68; }
   .ca-logos__mobile-grid { display: none; }
-  .ca-logos__carousel slideshow-arrows { pointer-events: none; }
-  .ca-logos__carousel slideshow-arrows button { pointer-events: auto; }
+  .ca-logos__carousel slideshow-arrows {
+    pointer-events: none;
+    mix-blend-mode: normal;
+    align-items: center;
+  }
+  .ca-logos__carousel slideshow-arrows .slideshow-control {
+    opacity: 1;
+    pointer-events: auto;
+    min-width: 44px;
+    min-height: 54px;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: currentColor;
+  }
+  .ca-logos__carousel slideshow-arrows .slideshow-control .svg-wrapper,
+  .ca-logos__carousel slideshow-arrows .slideshow-control svg {
+    width: 38px;
+    height: 38px;
+  }
+
   @media screen and (max-width: 749px) {
     .ca-logos__intro { margin-bottom: 18px; }
     .ca-logos__slideshow slideshow-slide {
