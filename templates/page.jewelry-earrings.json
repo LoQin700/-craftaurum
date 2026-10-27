@@ -261,7 +261,7 @@
         "top_url": "",
         "top_button_style": "button",
         "cta_label": "Start Your Project",
-        "cta_url": "",
+        "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-secondary",
         "image": "shopify://shop_images/OEM-JEWELLERY.jpg",
         "image_position": "left",
