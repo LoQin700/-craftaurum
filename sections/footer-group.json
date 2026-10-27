@@ -40,9 +40,9 @@
           "name": "t:names.menu",
           "settings": {
             "menu": "main-menu",
-            "heading": "",
+            "heading": "SHOP",
             "menu_spacing": 12,
-            "show_as_accordion": false,
+            "show_as_accordion": true,
             "accordion_icon": "caret",
             "accordion_dividers": false,
             "background_color": "",
@@ -92,7 +92,7 @@
       "settings": {
         "section_width": "page-width",
         "gap": 20,
-        "background_color": "#E7DED0",
+        "background_color": "#e7ded0",
         "padding-block-start": 30,
         "padding-block-end": 30
       }
