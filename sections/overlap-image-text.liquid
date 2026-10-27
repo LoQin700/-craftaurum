@@ -411,6 +411,15 @@
     .ca-overlap__heading { font-size: var(--ca-overlap-heading-size-mobile); }
     .ca-overlap__body { font-size: var(--ca-overlap-body-size-mobile); }
   }
+
+  /* Subtle image hover without moving the image container. */
+  .ca-overlap__image { transition: transform .48s cubic-bezier(.2,.7,.2,1); transform: scale(1); }
+  @media (hover: hover) and (pointer: fine) {
+    .ca-overlap__image-wrap:hover .ca-overlap__image { transform: scale(1.055); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ca-overlap__image { transition: none; }
+  }
 {% endstylesheet %}
 
 {% schema %}
