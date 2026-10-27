@@ -769,3 +769,15 @@
   - `brand-partners`（图片轮播）继续使用已确认正确的 Horizon 原生 slideshow arrow，不改用共享 JS；保持 `show_arrows:true` + `chevron-large`。
 - 静态复核结果：6 个共享轮播 Section Schema 可解析、stage wrapper 与 controls 嵌套正确、各自 media selector 正确；共享 JS 可语法编译；叠层图文只剩“图片重叠程度” + Block “图片旋转角度”两个 Range，无旧 Checkbox/说明/条件 class 残留。
 - **仍需真实 Shopify 预览确认**：PC/Mobile 下箭头是否完全贴合图片区左右两端、不同卡片宽度/部分露出下一张时的位置、Touch 滑动与禁用态；静态检查不等同视觉验收。
+
+## 2026-10-27 · 17 类自建 Section 手机端字号默认值统一
+- 用户提供移动端字号参考截图，要求所有自建 Section 的手机端字号按更紧凑的移动端层级统一，不再默认继承桌面字号。
+- 已更新 Section Showcase 涵盖的 **17 类自建 Section**，共 **62 个 mobile 字号 Range**，统一默认值规则：
+  - 主标题 `mobile_heading_size`：**25px**
+  - 正文 / 简介 / 项目正文 / 卡片正文 / 右侧正文：**14px**
+  - 小标题 / 副标题 / 底部说明 / 附加信息 / 数值：**12px**
+  - 卡片标题 / 项目标题 / 右侧标题：**18px**
+- 仅修改手机端 Range 默认值；电脑端字号、Setting ID、CSS 绑定与页面内容不改。
+- 个别原手机标题 Range 最小值高于 25px（如 Editorial Contact 28px）时，只做最小必要调整以允许 25px 合法保存；如 step 与新默认值不兼容则改为 1。其他 Range 范围保持原值。
+- 已重新读取 17 个 Section Schema：**17/17 通过**，62 个手机字号设置全部符合目标默认值，且 default 均处于 min/max 范围内并符合 step。
+- 尚未在 Shopify Theme Editor 中验证旧页面实例是否已保存过显式字号值；已有实例如果显式保存了旧值，Theme Editor 可能继续保留该实例值，需要逐页确认。新建 Section 与未显式保存的设置会使用新的默认值。
