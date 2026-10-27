@@ -1,13 +1,4 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
-/* Craftaurum template. Image fields use Shopify image_picker; no external reference image URL inputs. */
+/* Existing page mobile typography standardized: 12 / 25 / 14 / 18. */
 {
   "sections": {
     "main": {
@@ -101,7 +92,9 @@
         "body_size": 16,
         "animation_style": "fade-in",
         "padding_top": 56,
-        "padding_bottom": 68
+        "padding_bottom": 68,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "christmas": {
@@ -130,7 +123,10 @@
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-unstyled",
         "padding_top": 64,
-        "padding_bottom": 24
+        "padding_bottom": 24,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "christmas_gallery": {
@@ -179,7 +175,9 @@
         "image_ratio": "square",
         "gap": 16,
         "padding_top": 0,
-        "padding_bottom": 80
+        "padding_bottom": 80,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "halloween_intro": {
@@ -208,7 +206,10 @@
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 80,
-        "padding_bottom": 24
+        "padding_bottom": 24,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "halloween_gallery": {
@@ -257,7 +258,9 @@
         "image_ratio": "square",
         "gap": 16,
         "padding_top": 0,
-        "padding_bottom": 80
+        "padding_bottom": 80,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "thanksgiving": {
@@ -286,7 +289,10 @@
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-unstyled",
         "padding_top": 88,
-        "padding_bottom": 24
+        "padding_bottom": 24,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "thanksgiving_gallery": {
@@ -335,7 +341,9 @@
         "image_ratio": "square",
         "gap": 16,
         "padding_top": 0,
-        "padding_bottom": 80
+        "padding_bottom": 80,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "black_friday": {
@@ -364,7 +372,10 @@
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-secondary",
         "padding_top": 88,
-        "padding_bottom": 24
+        "padding_bottom": 24,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "black_friday_gallery": {
@@ -413,7 +424,9 @@
         "image_ratio": "square",
         "gap": 16,
         "padding_top": 0,
-        "padding_bottom": 80
+        "padding_bottom": 80,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "why_choose": {
@@ -470,7 +483,11 @@
         "mobile_columns": "1",
         "animation_style": "fade-up",
         "padding_top": 88,
-        "padding_bottom": 96
+        "padding_bottom": 96,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_item_title_size": 18,
+        "mobile_item_body_size": 14
       }
     },
     "customization_guide": {
@@ -587,7 +604,16 @@
         "feature_body_color": "#4f514e",
         "column_gap": 64,
         "padding_top": 96,
-        "padding_bottom": 96
+        "padding_bottom": 96,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_description_size": 14,
+        "mobile_item_title_size": 18,
+        "mobile_item_body_size": 14,
+        "mobile_value_size": 12,
+        "mobile_meta_size": 12,
+        "mobile_feature_title_size": 18,
+        "mobile_feature_body_size": 14
       }
     },
     "contact": {
@@ -606,7 +632,10 @@
         "phone_required": false,
         "animation_style": "fade-up",
         "padding_top": 104,
-        "padding_bottom": 104
+        "padding_bottom": 104,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     }
   },
