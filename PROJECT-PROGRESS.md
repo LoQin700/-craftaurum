@@ -617,3 +617,31 @@
 - 对每份修改前后 Schema 逐项校验，除 Header 分组和字段排序外，其余设置的完整 JSON（ID、label、type、default、range min/max/step、select options、visible_if 等）字节级语义一致；原 Liquid/CSS/JS 页面渲染逻辑、Block Schema 与 Preset 未修改。
 - GitHub 读回检查：**17/17 自建 Section 分组顺序正确、颜色字段在「颜色设置」、图片选择字段在「图片设置」、61 对双端字号完整、「其它设置」底部顺序正确，0 错误**。
 - 本次未运行 Shopify CLI Theme Check、Shopify Theme Editor 加载/保存与真实 PC/Tablet/Mobile 前台视觉测试，需在主题同步后现场验收。未来新增自建 Section 沿用本条分组规范。
+
+## 2026-10-27 · 图文卡片 / 交互图文 / 图标文字细化 + 17 类 Section 字段命名核对
+用户反馈：图文卡片分隔线应在标题和正文下面、图片上面；Style 2 顶部标题/正文应平均分栏，而非正文较宽；后台使用“正文”时字号却叫“说明字号”会误导。交互图文项目 Block 不需自选图标、编号颜色应与交互高亮分开、编号可关闭且默认显示。图标文字标题字号未正确生效、颜色字段应准确指向图标、项目分隔线应可单独开关。
+
+### 已执行
+- `sections/content-cards.liquid`：
+  - `.ca-content-cards__intro--divider` 的 `border-top/padding-top` 改为 **`border-bottom/padding-bottom`**，分隔线在完整顶部标题+正文（及顶部按钮）之后、产品卡片图片之前。
+  - Style 2 双栏 `grid-template-columns` 从 `.78fr / 1.22fr` 调整为 **`1fr / 1fr`**（两个列占可用空间各 50%；列间 gap 继续由原响应式规则控制）。Style 1 单列居中保持原逻辑。
+  - Checkbox 标签从“显示顶部细分隔线”改为“显示图文下方分隔线”，原 setting id、开启状态及线条颜色不变；`body_size` / `mobile_body_size` 标签“说明字号”改为“正文字号”。
+- `sections/interactive-feature.liquid`：
+  - 删除项目 Block 的 `icon_image` 图片上传字段及图标渲染 / fallback，保留交互产品图片 `image`；模式 `icons` 的后台选项说明改为“卡片文字”，无需额外图标。
+  - 新增 `show_index` checkbox（“显示编号”，默认 **true**，只在交互模式显示）。关闭后不渲染编号并让标题内容自动填满当前项，不遗留空白编号列，PC/Mobile 都有效。
+  - `accent_color` 后台名称按用户要求改成 **“编号”**；颜色现在只影响编号本身，不再改变交互项标题 Hover/Active 颜色与焦点描边；关闭编号时颜色设置自动隐藏。交互激活项以加粗项目标题提示状态。
+  - 为 Section 顶部正文 `body_size` / `mobile_body_size` 同步更正“正文字号”，原交互图像联动 JS 不改。
+- `sections/icon-with-text.liquid`：
+  - 加强主标题 H2 CSS 选择器为 `.ca-icon-text .ca-icon-text__heading`，桌面和手机独立字号设置都实际映射到标题。
+  - `accent_color` 的后台显示改为 **“图标颜色”**，移除此前同一颜色对顶部小标题的染色；各 Block 自定义 `icon_color` 仍优先于 Section 默认色。
+  - 新增“显示项目分隔线”checkbox（`show_divider`，默认 **false** 以保留老页面外观），开启后每个图标文字项目顶部出现 1px 浅色线并增加适当上内边距。
+  - 明确顶部正文与项目正文的字号区别：顶部 `body_size` / `mobile_body_size` 名称为“顶部正文字号”，新增卡片项目 `item_body_size` / `mobile_item_body_size`（各默认 15px），用于真正控制各项目 Block 的正文。
+- 17 类自建 Section 字段审计：
+  - `brand-partners`、`image-collection-grid`、`jewelry-collections-overview`：Section 正文文本标签从“介绍文字”改为“正文”，和正文字号对应。
+  - `jewelry-collections-overview`：顶部小标题字段与双端字号名称统一“顶部小标题 / 顶部小标题字号”。
+  - `image-cards`、`process-cards`、`why-choose-craftaurum`、`festival-intro`、`editorial-contact`：混用“说明”“说明字号”的顶部正文统一命名为“正文”“正文字号”（分别包含桌面/手机端）。
+  - `image-gallery`：Section 顶部“简介”统一“正文”，对应正文字号。
+  - `content-guide`：右侧说明文字字段名改为“右侧正文”（其已有字号为“右侧正文字号”）；独立“简介 / 简介字号”仍保留，因为它们是另一位置的不同文字。
+  - 其余字段经检查已与真实作用匹配，保持原名称；**没有改动原 Setting ID、颜色数值、页面文字或产品图片**。
+- 已读回 GitHub 对 17/17 自建 Section 做 Schema/字号成对及底部设置检查：**17/17 通过**，现在共有 **62 对双端字号设置**（图标文字新增一对项目正文字号）。相关首页 / Showcase / Jewelry Rings / OEM / Pearl / Personalized 页面模板可解析，未发现旧 `icon_image` 项目值，无需删除模板素材。
+- 当前验证范围仅限 GitHub 源码与静态一致性。仍需 Shopify Theme Check CLI、Theme Editor 保存，以及真实桌面/手机浏览器视觉验收。后续 Section Showcase 应重点验收图文卡片 Style 2 的分隔线与 50/50 双栏、图标文字 H2 双端字号和分隔线状态、交互图文编号开关及无编号时的行对齐。
