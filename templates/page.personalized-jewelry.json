@@ -1,12 +1,4 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+/* Craftaurum template. Image fields use Shopify image_picker; no external reference image URL inputs. */
 {
   "sections": {
     "main": {
@@ -106,7 +98,6 @@
         "top_button_style": "button",
         "body": "<p>Personalized jewelry often marks the moments people remember most. Engagement rings, anniversary gifts, graduation pieces and keepsakes for a new child can all become lasting expressions of connection and personal style.</p><p>Craftaurum helps brands explore custom jewelry sets, meaningful motifs and design details suited to commemorative collections, from initial concepts and material options to samples and finished pieces.</p>",
         "image": "",
-        "external_image_url": "https://www.sunrise-jewel.com/wp-content/uploads/2024/10/custom-personalized-jewelry-set-600x300.webp",
         "image_position": "right",
         "image_ratio": "landscape",
         "cta_label": "",
@@ -136,7 +127,6 @@
         "top_button_style": "button",
         "body": "<p>Enamel adds expressive color to rings, pendants, earrings and other personalized jewelry. Whether your concept uses a subtle accent or vivid multicolor detailing, enamel can bring a distinctive visual identity to a collection.</p><p>We can discuss design feasibility, metal foundations, color placement and finishing considerations as part of a customized jewelry development project.</p>",
         "image": "",
-        "external_image_url": "https://www.sunrise-jewel.com/wp-content/uploads/2024/10/2024-10-25-600x450.webp",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "",
@@ -259,8 +249,7 @@
         "top_url": "",
         "top_button_style": "button",
         "body": "<p>Initial and name jewelry gives customers the ability to wear something distinctly their own. Craftaurum supports brand-led development of initial necklaces, monogram pendants, nameplate necklaces, bracelets and coordinating jewelry sets.</p><p>Discuss your preferred letterforms, metal finish, accent stones, sizing and collection scope with our team. We can help refine the design direction for sampling and planned wholesale quantities.</p>",
-        "image": "",
-        "external_image_url": "https://www.sunrise-jewel.com/wp-content/uploads/2024/09/2024-08-28-1-600x452.webp",
+        "image": "shopify://shop_images/custom-inital-necklace.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
         "cta_label": "",
@@ -290,7 +279,6 @@
         "top_button_style": "button",
         "body": "<p>Birthstone jewelry gives each piece an emotional connection to a birth month or a personal milestone. For jewelry brands, gemstones create possibilities for seasonal gifting as well as year-round necklaces, earrings, rings and bracelets.</p><p>Explore coordinated styles and gemstone color directions, then discuss practical setting details, available materials and sampling for your intended collection.</p>",
         "image": "shopify://shop_images/Custom-birthstone-jewelry.jpg",
-        "external_image_url": "",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "Start Your Project",
@@ -320,7 +308,6 @@
         "top_button_style": "button",
         "body": "<p>Offer customers a personal connection to their astrological sign through zodiac symbols, constellation details and celestial jewelry designs. Motifs can be translated into necklaces, pendants, charms, bracelets and earrings.</p><p>Craftaurum can work with your artwork to develop a consistent visual language across the twelve signs and explore additional customization through engraving, lettering or gemstone details.</p>",
         "image": "shopify://shop_images/custom-zodiac-jewelry.jpg",
-        "external_image_url": "",
         "image_position": "right",
         "image_ratio": "landscape",
         "cta_label": "Contact Us",
