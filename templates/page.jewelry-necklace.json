@@ -81,25 +81,52 @@
       }
     },
     "horizontal_cta_Pwad7F": {
-      "type": "horizontal-cta",
-      "name": "横向 CTA",
+      "type": "custom-richtext",
+      "name": "自定义富文本",
       "settings": {
         "section_width": "full-width",
-        "heading": "From necklace concept to brand-ready production.",
-        "description": "<p>Develop chain, pendant and finishing details around a clear design direction and production specification.</p>",
-        "button_label": "Start Your Necklace Project",
-        "button_link": "",
-        "button_style": "button-secondary",
-        "background_color": "#17191a",
-        "text_color": "#f8f7f4",
+        "anchor_id": "",
+        "layout_style": "horizontal",
+        "alignment": "left",
+        "content_width": 1200,
         "heading_size": 35,
         "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "background_color": "#17191a",
+        "text_color": "#f8f7f4",
         "animation_style": "fade-up",
         "padding_top": 36,
-        "padding_bottom": 36,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
-      }
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading": "From necklace concept to brand-ready production.",
+            "heading_tag": "h2"
+          }
+        },
+        "body": {
+          "type": "body",
+          "settings": {
+            "body": "<p>Develop chain, pendant and finishing details around a clear design direction and production specification.</p>"
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "label_1": "Start Your Necklace Project",
+            "link_1": "",
+            "style_1": "button-secondary"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "body",
+        "buttons"
+      ]
     },
     "content_cards_xi8xGJ": {
       "type": "content-cards",
@@ -362,7 +389,7 @@
     },
     "section_m4j6NK": {
       "type": "editorial-contact",
-      "name": "联系表单 - Editorial",
+      "name": "分栏联系表单",
       "settings": {
         "section_width": "page-width",
         "eyebrow": "START A NECKLACE PROJECT",
