@@ -66,12 +66,12 @@
       "settings": {
         "section_width": "page-width",
         "eyebrow": "CUSTOM FASHION JEWELRY",
-        "heading": "Custom Fashion Jewelry Manufacturing.",
-        "introduction": "<p>Develop multi-category jewelry collections for your brand across rings, earrings, bracelets and necklaces. Explore different metals, stones and finishing directions, then refine each design from early concept through sampling and production planning.</p><p>Craftaurum supports flexible collection development for brands, designers and wholesale partners looking for a consistent manufacturing partner across multiple jewelry categories.</p>",
+        "heading": "Custom Fashion Jewelry for Brand Collections",
+        "introduction": "<p>Plan a coordinated fashion jewelry range across custom rings, earrings, bracelets and necklaces. Explore suitable silver, brass, gold or plated designs depending on style direction, product specification and target price point.</p><p>Provide your preferred categories, reference images and approximate quantities to review design development, samples and an appropriate production quotation.</p>",
         "quote_label": "Get B2B Quote",
-        "quote_url": "",
+        "quote_url": "shopify://pages/contact",
         "catalog_label": "Request Catalog",
-        "catalog_url": "",
+        "catalog_url": "shopify://pages/contact",
         "hero_image": "shopify://shop_images/custom-fashion-jewelry.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
@@ -118,7 +118,7 @@
         "body": {
           "type": "body",
           "settings": {
-            "body": "<p>Develop multiple product categories around one clear brand direction, material plan and production process.</p>"
+            "body": "<p>Have a specific design in mind? Share sketches, materials, quantities and target requirements through our contact form so the next steps can be reviewed.</p>"
           }
         },
         "buttons": {
@@ -143,8 +143,8 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/rings.jpg",
-            "title": "Custom Rings",
-            "description": "<p>Develop fashion, statement and refined ring concepts with different metals, stones and finishing directions.</p>",
+            "title": "Fashion & Custom Rings",
+            "description": "<p>Explore classic, signet, gemstone and statement ring designs using construction and finishes suited to the proposed style.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -154,8 +154,8 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/gold-earrings.jpg",
-            "title": "Custom Earrings",
-            "description": "<p>Build hoop, stud, pearl and fashion earring collections around your target market and brand language.</p>",
+            "title": "Stud, Hoop & Pearl Earrings",
+            "description": "<p>Plan earring designs across studs, hoops, pearls and drops, considering proportion, comfort and fastening details.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -165,8 +165,8 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/chain-bracelets.jpg",
-            "title": "Custom Bracelets",
-            "description": "<p>Explore chain, bead, bangle and statement bracelet directions for coordinated collections.</p>",
+            "title": "Chain & Bangle Bracelets",
+            "description": "<p>Compare chain, bead, bangle and fashion bracelet directions with matching colors and finish specifications.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -176,8 +176,8 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/nameplate-necklace.jpg",
-            "title": "Custom Necklaces",
-            "description": "<p>Create pendant, pearl, choker and fashion necklace styles with flexible branding and finishing options.</p>",
+            "title": "Necklaces & Pendants",
+            "description": "<p>Explore choker, pendant, pearl and personalized necklace concepts with suitable chains and decorative features.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -195,7 +195,7 @@
         "section_width": "page-width",
         "eyebrow": "JEWELRY COLLECTION RANGE",
         "heading": "Explore Custom Jewelry Categories",
-        "description": "<p>Build a coordinated collection across rings, earrings, bracelets and necklaces while keeping materials, finishing and design language consistent.</p>",
+        "description": "<p>Explore the main styles shown in this category. Share your reference images and specifications to discuss materials, sampling and production feasibility.</p>",
         "image_ratio": "portrait",
         "image_width": 100,
         "intro_style": "style_1",
@@ -292,9 +292,9 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "heading": "Multi-Category Jewelry Manufacturing for Brand Collections",
-        "subtitle": "ABOUT CRAFTAURUM",
-        "body": "<p>Craftaurum supports jewelry brands and wholesale partners with coordinated development across rings, earrings, bracelets and necklaces. The goal is to keep design direction, material choices and finishing standards aligned from one category to the next.</p><p>Use this section for workshop, sampling or multi-category production photography that shows how a complete collection moves through development.</p>",
+        "heading": "Fashion Jewelry Development Across Four Categories",
+        "subtitle": "CUSTOM JEWELRY DEVELOPMENT",
+        "body": "<p>A multi-category line may include fashion rings, pearl or hoop earrings, chain bracelets, bangles and personalized necklaces. Consistent material and finish directions help the final assortment feel connected.</p><p>We can discuss how to organize design references, sample approvals, materials and packaging requests before confirming project feasibility and production terms.</p>",
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
@@ -402,7 +402,7 @@
         "section_width": "page-width",
         "eyebrow": "START A FASHION JEWELRY PROJECT",
         "heading": "Start Your Custom Fashion Jewelry Project",
-        "description": "<p>Share your collection direction, materials, target cost, quantity and launch requirements with our team.</p>",
+        "description": "<p>Share your design reference, preferred material and finish, target size, approximate quantity and delivery location. We can review feasibility and respond with the information needed for sampling and quotation.</p>",
         "phone_required": false,
         "background_color": "#F8F7F4",
         "text_color": "#17191A",
