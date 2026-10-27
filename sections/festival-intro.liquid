@@ -98,35 +98,198 @@
 {% schema %}
 {
   "name": "专题导航介绍",
-  "tag":"section",
-  "disabled_on":{"groups":["header","footer"]},
-  "settings":[
-    {"type":"header","content":"基础设置"},
-    {"type":"select","id":"section_width","label":"内容宽度","options":[{"value":"page-width","label":"页面宽度"},{"value":"full-width","label":"全宽"}],"default":"page-width"},
-    {"type":"header","content":"内容设置"},
-    {"type":"text","id":"heading","label":"标题","default":"Festival Jewelry Start Exploring"},
-    {"type":"richtext","id":"description","label":"正文","default":"<p>Build seasonal jewelry collections for key retail moments with flexible custom development and wholesale production.</p>"},
-    {"type":"header","content":"颜色设置"},
-    {"type":"color","id":"background_color","label":"背景颜色","default":"#FFFFFF"},
-    {"type":"color","id":"text_color","label":"文字颜色","default":"#17191A"},
-    {"type":"header","content":"电脑端字号"},
-    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
-    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":16},
-    {"type":"header","content":"移动端字号"},
-    {"type":"range","id":"mobile_heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
-    {"type":"range","id":"mobile_body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":16},
-    {"type":"header","content":"其它设置"},
-    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-in"},
-    {"type":"range","id":"padding_top","label":"上边距","min":0,"max":140,"step":4,"unit":"px","default":52},
-    {"type":"range","id":"padding_bottom","label":"下边距","min":0,"max":140,"step":4,"unit":"px","default":64}
+  "tag": "section",
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "基础设置"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "内容宽度",
+      "options": [
+        {
+          "value": "page-width",
+          "label": "页面宽度"
+        },
+        {
+          "value": "full-width",
+          "label": "全宽"
+        }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "header",
+      "content": "内容设置"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "标题",
+      "default": "Festival Jewelry Start Exploring"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "正文",
+      "default": "<p>Build seasonal jewelry collections for key retail moments with flexible custom development and wholesale production.</p>"
+    },
+    {
+      "type": "header",
+      "content": "电脑端字号"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "移动端字号"
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "mobile_body_size",
+      "label": "正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "颜色设置"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文字颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "header",
+      "content": "其它设置"
+    },
+    {
+      "type": "paragraph",
+      "content": "入场动画与区块上下间距"
+    },
+    {
+      "type": "select",
+      "id": "animation_style",
+      "label": "入场动画",
+      "options": [
+        {
+          "value": "fade-up",
+          "label": "Fade Up"
+        },
+        {
+          "value": "fade-in",
+          "label": "Fade In"
+        },
+        {
+          "value": "soft-zoom",
+          "label": "Soft Zoom"
+        }
+      ],
+      "default": "fade-in"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "上边距",
+      "min": 0,
+      "max": 140,
+      "step": 4,
+      "unit": "px",
+      "default": 52
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "下边距",
+      "min": 0,
+      "max": 140,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    }
   ],
-  "blocks":[
-    {"type":"button","name":"节日按钮","settings":[
-      {"type":"text","id":"label","label":"文字","default":"Christmas Jewelry"},
-      {"type":"url","id":"link","label":"链接"}
-    ]}
+  "blocks": [
+    {
+      "type": "button",
+      "name": "节日按钮",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "文字",
+          "default": "Christmas Jewelry"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "链接"
+        }
+      ]
+    }
   ],
-  "max_blocks":4,
-  "presets":[{"name":"Festival Intro","blocks":[{"type":"button"},{"type":"button"},{"type":"button"}]}]
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "Festival Intro",
+      "blocks": [
+        {
+          "type": "button"
+        },
+        {
+          "type": "button"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}
