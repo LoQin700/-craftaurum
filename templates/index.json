@@ -402,40 +402,6 @@
         "padding_bottom": 40
       }
     },
-    "home_customization_banner": {
-      "type": "image-text-feature",
-      "name": "图文介绍",
-      "settings": {
-        "section_width": "page-width",
-        "heading": "Flexible Jewelry Customization for Your Collection",
-        "subtitle": "DESIGN • MATERIALS • GEMSTONES • FINISHING",
-        "body": "<p>Custom jewelry development involves more than selecting a design. Metal choice, stone setting, surface finish and production planning should work together to meet your brand's expectations.</p><p>Tell us about your intended style, materials, quantity and target delivery destination. We can discuss sampling, possible options and the details needed for a tailored quotation.</p>",
-        "show_buttons": true,
-        "top_label": "Explore Customization",
-        "top_url": "shopify://pages/customization",
-        "top_button_style": "button-unstyled",
-        "cta_label": "Request a Catalog",
-        "cta_url": "shopify://pages/contact",
-        "cta_button_style": "button-secondary",
-        "image": "shopify://shop_images/custom-design-jewelry.jpg",
-        "image_position": "right",
-        "image_ratio": "landscape",
-        "heading_position": "content",
-        "heading_tag": "h2",
-        "heading_size": 40,
-        "subtitle_size": 12,
-        "body_size": 16,
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14,
-        "background_color": "#f8f7f4",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "animation_style": "fade-up",
-        "padding_top": 72,
-        "padding_bottom": 68
-      }
-    },
     "home_options": {
       "type": "content-cards",
       "blocks": {
@@ -709,6 +675,40 @@
         "padding_top": 60,
         "padding_bottom": 64
       }
+    },
+    "home_customization_banner": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "heading": "Flexible Jewelry Customization for Your Collection",
+        "subtitle": "DESIGN • MATERIALS • GEMSTONES • FINISHING",
+        "body": "<p>Custom jewelry development involves more than selecting a design. Metal choice, stone setting, surface finish and production planning should work together to meet your brand's expectations.</p><p>Tell us about your intended style, materials, quantity and target delivery destination. We can discuss sampling, possible options and the details needed for a tailored quotation.</p>",
+        "show_buttons": true,
+        "top_label": "Explore Customization",
+        "top_url": "shopify://pages/customization",
+        "top_button_style": "button-unstyled",
+        "cta_label": "Request a Catalog",
+        "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button-secondary",
+        "image": "shopify://shop_images/custom-design-jewelry.jpg",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "heading_position": "content",
+        "heading_tag": "h2",
+        "heading_size": 40,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14,
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
+        "padding_top": 72,
+        "padding_bottom": 68
+      }
     }
   },
   "order": [
@@ -719,9 +719,9 @@
     "image_text_feature_YzURpA",
     "image_collection_grid_home_2",
     "image_collection_grid_home_3",
-    "home_customization_banner",
     "home_options",
     "home_documentation",
-    "home_making_gallery"
+    "home_making_gallery",
+    "home_customization_banner"
   ]
 }
