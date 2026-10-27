@@ -358,29 +358,6 @@
     },
     {
       "type": "header",
-      "content": "颜色设置"
-    },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "背景颜色",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "文字颜色",
-      "default": "#17191A"
-    },
-    {
-      "type": "color",
-      "id": "accent_color",
-      "label": "编号",
-      "default": "#C7A85E",
-      "visible_if": "{{ section.settings.layout_mode == 'interactive' and section.settings.show_index }}"
-    },
-    {
-      "type": "header",
       "content": "布局与交互"
     },
     {
@@ -557,7 +534,34 @@
     },
     {
       "type": "header",
+      "content": "颜色设置"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文字颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "编号",
+      "default": "#C7A85E",
+      "visible_if": "{{ section.settings.layout_mode == 'interactive' and section.settings.show_index }}"
+    },
+    {
+      "type": "header",
       "content": "其它设置"
+    },
+    {
+      "type": "paragraph",
+      "content": "入场动画与区块上下间距"
     },
     {
       "type": "select",
