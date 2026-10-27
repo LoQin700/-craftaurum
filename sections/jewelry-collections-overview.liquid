@@ -2,9 +2,6 @@
 {% liquid
   assign content_width = section.settings.section_width | default: 'page-width'
   assign background_color = section.settings.background_color | default: '#FFFFFF'
-  unless section.settings.use_background
-    assign background_color = 'transparent'
-  endunless
   assign text_color = section.settings.text_color | default: '#17191A'
   assign accent_color = section.settings.accent_color | default: '#C7A85E'
   assign padding_top = section.settings.padding_top | default: 32
@@ -161,7 +158,10 @@
     ]
   },
   "settings": [
-    {"type":"header","content":"基础设置"},
+    {
+      "type": "header",
+      "content": "基础设置"
+    },
     {
       "type": "select",
       "id": "section_width",
@@ -178,7 +178,10 @@
       ],
       "default": "page-width"
     },
-    {"type":"header","content":"内容设置"},
+    {
+      "type": "header",
+      "content": "内容设置"
+    },
     {
       "type": "text",
       "id": "eyebrow",
@@ -197,7 +200,10 @@
       "label": "正文",
       "default": "<p>Discover custom jewelry created for brands, designers, and wholesale partners. Craftaurum supports the development of rings, earrings, bracelets, and necklaces with thoughtful detailing and flexible design possibilities.</p><p>From initial concepts to finished collections, our focus is on refined craftsmanship and clear collaboration throughout your project.</p>"
     },
-    {"type":"header","content":"按钮设置"},
+    {
+      "type": "header",
+      "content": "按钮设置"
+    },
     {
       "type": "text",
       "id": "quote_label",
@@ -220,7 +226,10 @@
       "id": "catalog_url",
       "label": "次级按钮链接"
     },
-    {"type":"header","content":"图片设置"},
+    {
+      "type": "header",
+      "content": "图片设置"
+    },
     {
       "type": "image_picker",
       "id": "hero_image",
@@ -262,19 +271,15 @@
       ],
       "default": "landscape"
     },
-    {"type":"header","content":"颜色设置"},
     {
-      "type": "checkbox",
-      "id": "use_background",
-      "label": "使用背景颜色",
-      "default": true
+      "type": "header",
+      "content": "颜色设置"
     },
     {
       "type": "color",
       "id": "background_color",
       "label": "背景颜色",
-      "default": "#F8F7F4",
-      "visible_if": "{{ section.settings.use_background }}"
+      "default": "#F8F7F4"
     },
     {
       "type": "color",
@@ -288,7 +293,10 @@
       "label": "顶部小标题颜色",
       "default": "#C7A85E"
     },
-    {"type":"header","content":"电脑端字号"},
+    {
+      "type": "header",
+      "content": "电脑端字号"
+    },
     {
       "type": "range",
       "id": "eyebrow_size",
@@ -319,19 +327,61 @@
       "unit": "px",
       "default": 16
     },
-    {"type":"header","content":"移动端字号"},
-    {"type":"range","id":"mobile_eyebrow_size","label":"顶部小标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
-    {"type":"range","id":"mobile_heading_size","label":"主标题字号","min":28,"max":88,"step":2,"unit":"px","default":48},
-    {"type":"range","id":"mobile_body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":16},
-    {"type":"header","content":"其它设置"},
+    {
+      "type": "header",
+      "content": "移动端字号"
+    },
+    {
+      "type": "range",
+      "id": "mobile_eyebrow_size",
+      "label": "顶部小标题字号",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_size",
+      "label": "主标题字号",
+      "min": 28,
+      "max": 88,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "mobile_body_size",
+      "label": "正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "其它设置"
+    },
     {
       "type": "select",
       "id": "animation_style",
       "label": "入场动画",
       "options": [
-        { "value": "fade-up", "label": "Fade Up" },
-        { "value": "fade-in", "label": "Fade In" },
-        { "value": "soft-zoom", "label": "Soft Zoom" }
+        {
+          "value": "fade-up",
+          "label": "Fade Up"
+        },
+        {
+          "value": "fade-in",
+          "label": "Fade In"
+        },
+        {
+          "value": "soft-zoom",
+          "label": "Soft Zoom"
+        }
       ],
       "default": "fade-up"
     },
