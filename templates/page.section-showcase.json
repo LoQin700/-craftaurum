@@ -1,4 +1,4 @@
-/* Craftaurum Section Showcase: layered images use crossover checkbox and per-image rotation. */
+/* Craftaurum page: Layered Image & Text uses independent desktop and mobile visual aspect ratios. */
 {
   "sections": {
     "main": {
@@ -763,7 +763,6 @@
         "accent_color": "#c7a85e",
         "image_position": "left",
         "mobile_layout": "slider",
-        "visual_height": 560,
         "overlap_amount": 28,
         "visual_aria_label": "Pearl jewelry and pearl material imagery",
         "text_alignment": "left",
@@ -780,7 +779,9 @@
         "column_gap": 64,
         "padding_top": 72,
         "padding_bottom": 76,
-        "enable_overlap": true
+        "enable_overlap": true,
+        "desktop_visual_ratio": "landscape",
+        "mobile_visual_ratio": "square"
       }
     },
     "why_choose": {
