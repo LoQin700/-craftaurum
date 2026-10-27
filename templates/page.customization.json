@@ -271,7 +271,11 @@
         "body_size": 16,
         "card_title_size": 22,
         "card_body_size": 15,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_card_title_size": 18,
+        "mobile_card_body_size": 14
       }
     },
     "craft_casting": {
@@ -300,7 +304,10 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "craft_polishing": {
@@ -329,7 +336,10 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "craft_private_label": {
@@ -358,7 +368,10 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "process_cards": {
@@ -462,7 +475,12 @@
         "body_size": 16,
         "card_title_size": 20,
         "card_body_size": 15,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_card_title_size": 18,
+        "mobile_card_body_size": 14
       }
     },
     "contact": {
@@ -481,7 +499,10 @@
         "phone_required": false,
         "animation_style": "fade-up",
         "padding_top": 96,
-        "padding_bottom": 96
+        "padding_bottom": 96,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     }
   },
