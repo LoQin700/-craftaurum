@@ -190,15 +190,15 @@
     padding-top: 22px;
   }
 
+  .ca-icon-text__intro { margin-inline: auto; text-align: center; }
+
   .ca-icon-text--left .ca-icon-text__intro,
   .ca-icon-text--left .ca-icon-text__item {
     text-align: left;
   }
 
-  .ca-icon-text--centered .ca-icon-text__intro {
-    margin-inline: auto;
-    text-align: center;
-  }
+  .ca-icon-text--centered .ca-icon-text__intro { margin-inline:auto; text-align:center; }
+  .ca-icon-text--centered .ca-icon-text__description { margin-inline:auto; }
 
   .ca-icon-text--centered .ca-icon-text__item {
     text-align: center;
@@ -388,7 +388,7 @@
           "label": "居中"
         }
       ],
-      "default": "left"
+      "default": "centered"
     },
     {
       "type": "checkbox",
@@ -921,7 +921,10 @@
             "description": "<p>Check visual and construction details against agreed production specifications.</p>"
           }
         }
-      ]
+      ],
+      "settings": {
+        "style_preset": "centered"
+      }
     }
   ]
 }
