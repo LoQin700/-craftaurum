@@ -4,7 +4,7 @@
   The shared JS discovers only the adjacent component's track.
 {% endcomment %}
 <ca-scroll-controls
-  class="ca-scroll-controls{% if desktop %} ca-scroll-controls--desktop{% endif %}{% if mobile %} ca-scroll-controls--mobile{% endif %}"
+  class="ca-scroll-controls{% if desktop %} ca-scroll-controls--desktop{% endif %}{% if mobile %} ca-scroll-controls--mobile{% endif %}{% if tablet %} ca-scroll-controls--tablet{% endif %}"
   data-track="{{ track_selector | escape }}"
   aria-label="Image carousel controls"
 >
