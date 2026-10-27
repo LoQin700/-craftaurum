@@ -19,6 +19,10 @@
       assign mobile_visual_ratio = '4 / 5'
   endcase
 %}
+{% if section.settings.mobile_layout == 'slider' and section.blocks.size > 1 %}
+  {{ 'craftaurum-scroll-controls.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'craftaurum-scroll-controls.js' | asset_url }}" defer></script>
+{% endif %}
 {% if section.settings.background_color != blank %}
   {% render 'contrast-override', background_color: section.settings.background_color, section_id: section.id %}
 {% endif %}
@@ -87,6 +91,9 @@
         </figure>
       {% endfor %}
     </div>
+    {% if section.settings.mobile_layout == 'slider' and section.blocks.size > 1 %}
+      {% render 'craftaurum-scroll-controls', track_selector: '.ca-overlap__visual', tablet: true, mobile: true %}
+    {% endif %}
 
     <div class="ca-overlap__content ca-overlap__content--{{ section.settings.text_alignment }}">
       {% if section.settings.eyebrow != blank %}
