@@ -90,25 +90,51 @@
       }
     },
     "horizontal_cta_Pwad7F": {
-      "type": "horizontal-cta",
-      "name": "横向 CTA",
+      "type": "custom-richtext",
+      "name": "自定义富文本",
       "settings": {
         "section_width": "full-width",
-        "heading": "From bracelet concept to production-ready collection.",
-        "description": "<p>Refine materials, bracelet structure, fit and finishing around the needs of your brand.</p>",
-        "button_label": "Start Your Bracelet Project",
-        "button_link": "",
-        "button_style": "button-secondary",
-        "background_color": "#17191a",
-        "text_color": "#f8f7f4",
+        "layout_style": "horizontal",
+        "alignment": "left",
+        "content_width": 1200,
         "heading_size": 35,
         "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "background_color": "#17191a",
+        "text_color": "#f8f7f4",
         "animation_style": "fade-up",
         "padding_top": 36,
-        "padding_bottom": 36,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
-      }
+        "padding_bottom": 36
+      },
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading": "From bracelet concept to production-ready collection.",
+            "heading_tag": "h2"
+          }
+        },
+        "body": {
+          "type": "body",
+          "settings": {
+            "body": "<p>Refine materials, bracelet structure, fit and finishing around the needs of your brand.</p>"
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "label_1": "Start Your Bracelet Project",
+            "link_1": "",
+            "style_1": "button-secondary"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "body",
+        "buttons"
+      ]
     },
     "content_cards_xi8xGJ": {
       "type": "content-cards",
