@@ -27,7 +27,7 @@
 
 <section
   id="CapabilitySection-{{ section.id }}"
-  class="section section--full-width ca-capability ca-capability--{{ layout_mode }}"
+  class="section section--full-width ca-capability ca-capability--{{ layout_mode }}{% unless section.settings.show_index %} ca-capability--no-index{% endunless %}"
   style="
     --ca-cap-background: {{ background_color }};
     --ca-cap-text: {{ text_color }};
@@ -67,13 +67,6 @@
         <div class="ca-capability-icons__grid">
           {% for block in section.blocks %}
             <article class="ca-capability-icons__item" {{ block.shopify_attributes }}>
-              <div class="ca-capability-icons__icon" aria-hidden="true">
-                {% if block.settings.icon_image != blank %}
-                  {{ block.settings.icon_image | image_url: width: 120 | image_tag: loading: 'lazy', class: 'ca-capability-icons__icon-image', widths: '48,72,96,120', sizes: '48px' }}
-                {% else %}
-                  <span class="ca-capability-icons__fallback"></span>
-                {% endif %}
-              </div>
               {% if block.settings.title != blank %}
                 <h3 class="ca-capability-icons__title">{{ block.settings.title | escape }}</h3>
               {% endif %}
@@ -97,7 +90,9 @@
                   aria-controls="CapabilityPanel-{{ section.id }}-{{ block.id }}"
                   {{ block.shopify_attributes }}
                 >
-                  <span class="ca-capability-interactive__number">{{ forloop.index | prepend: '0' }}</span>
+                  {% if section.settings.show_index %}
+                    <span class="ca-capability-interactive__number">{{ forloop.index | prepend: '0' }}</span>
+                  {% endif %}
                   <span class="ca-capability-interactive__copy">
                     {% if block.settings.title != blank %}
                       <span class="ca-capability-interactive__title">{{ block.settings.title | escape }}</span>
@@ -210,9 +205,11 @@
   .ca-capability-interactive__copy { display:grid; gap:7px; }
   .ca-capability-interactive__title { display:block; font-size:var(--ca-cap-item-title-size); line-height:1.25; }
   .ca-capability-interactive__text { display:block; font-size:var(--ca-cap-item-body-size); line-height:1.65; opacity:.68; }
-  .ca-capability-interactive__item:is(:hover,:focus-visible,.is-active) { color:var(--ca-cap-accent); padding-inline-start:8px; }
+  .ca-capability-interactive__item:is(:hover,:focus-visible,.is-active) { padding-inline-start:8px; }
+  .ca-capability-interactive__item.is-active .ca-capability-interactive__title { font-weight:600; }
+  .ca-capability--no-index .ca-capability-interactive__item { grid-template-columns:minmax(0,1fr); }
   .ca-capability-interactive__item.is-active .ca-capability-interactive__text { color:var(--ca-cap-text); opacity:.78; }
-  .ca-capability-interactive__item:focus-visible { outline:2px solid var(--ca-cap-accent); outline-offset:3px; }
+  .ca-capability-interactive__item:focus-visible { outline:2px solid currentColor; outline-offset:3px; }
 
   .ca-capability-interactive__visual {
     position:relative;
@@ -248,22 +245,6 @@
     padding:26px 20px;
     border-top:1px solid color-mix(in srgb,var(--ca-cap-text) 18%,transparent);
   }
-  .ca-capability-icons__icon {
-    width:42px;
-    height:42px;
-    display:grid;
-    place-items:center;
-    margin-bottom:18px;
-    color:var(--ca-cap-accent);
-  }
-  .ca-capability-icons__icon-image { width:100%; height:100%; object-fit:contain; }
-  .ca-capability-icons__fallback {
-    width:22px;
-    height:22px;
-    border:1.5px solid currentColor;
-    transform:rotate(45deg);
-    display:block;
-  }
   .ca-capability-icons__title { margin:0 0 10px; color:inherit; font-size:var(--ca-cap-item-title-size); line-height:1.25; }
   .ca-capability-icons__text { opacity:.76; font-size:var(--ca-cap-item-body-size); line-height:1.6; }
 
@@ -275,6 +256,7 @@
     .ca-capability__heading { font-size:min(var(--ca-cap-heading-size),44px); }
     .ca-capability-interactive__layout { grid-template-columns:minmax(0,1fr); gap:20px; }
     .ca-capability-interactive__item { grid-template-columns:34px minmax(0,1fr); padding:18px 0; }
+    .ca-capability--no-index .ca-capability-interactive__item { grid-template-columns:minmax(0,1fr); }
     .ca-capability-interactive__item:is(:hover,:focus-visible,.is-active) { padding-inline-start:0; }
     .ca-capability-interactive__visual { min-height:0; height:auto !important; aspect-ratio:4 / 3; }
     .ca-capability-icons__grid { grid-template-columns:repeat(var(--ca-cap-mobile-columns),minmax(0,1fr)); }
@@ -306,7 +288,10 @@
     ]
   },
   "settings": [
-    {"type":"header","content":"基础设置"},
+    {
+      "type": "header",
+      "content": "基础设置"
+    },
     {
       "type": "select",
       "id": "section_width",
@@ -323,7 +308,10 @@
       ],
       "default": "page-width"
     },
-    {"type":"header","content":"内容设置"},
+    {
+      "type": "header",
+      "content": "内容设置"
+    },
     {
       "type": "text",
       "id": "heading",
@@ -336,14 +324,23 @@
       "label": "正文",
       "default": "<p>Explore the details that shape a ring collection, from materials and setting choices to design development and production review.</p>"
     },
-    {"type":"header","content":"图片设置"},
+    {
+      "type": "header",
+      "content": "图片设置"
+    },
     {
       "type": "select",
       "id": "visual_height_mode",
       "label": "图片高度方式",
       "options": [
-        { "value": "match_text", "label": "图片跟随文字高度" },
-        { "value": "fixed", "label": "固定高度并与文字居中" }
+        {
+          "value": "match_text",
+          "label": "图片跟随文字高度"
+        },
+        {
+          "value": "fixed",
+          "label": "固定高度并与文字居中"
+        }
       ],
       "default": "match_text",
       "visible_if": "{{ section.settings.layout_mode == 'interactive' }}"
@@ -359,7 +356,10 @@
       "default": 520,
       "visible_if": "{{ section.settings.visual_height_mode == 'fixed' and section.settings.layout_mode == 'interactive' }}"
     },
-    {"type":"header","content":"颜色设置"},
+    {
+      "type": "header",
+      "content": "颜色设置"
+    },
     {
       "type": "color",
       "id": "background_color",
@@ -375,10 +375,13 @@
     {
       "type": "color",
       "id": "accent_color",
-      "label": "编号、图标及交互高亮颜色",
+      "label": "编号",
       "default": "#C7A85E"
     },
-    {"type":"header","content":"布局与交互"},
+    {
+      "type": "header",
+      "content": "布局与交互"
+    },
     {
       "type": "select",
       "id": "layout_mode",
@@ -390,46 +393,67 @@
         },
         {
           "value": "icons",
-          "label": "图标文字"
+          "label": "卡片文字"
         }
       ],
       "default": "interactive"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_index",
+      "label": "显示编号",
+      "default": true,
+      "visible_if": "{{ section.settings.layout_mode == 'interactive' }}"
     },
     {
       "type": "select",
       "id": "intro_style",
       "label": "标题布局",
       "options": [
-        { "value": "style_1", "label": "Style 1" },
-        { "value": "style_2", "label": "Style 2" }
+        {
+          "value": "style_1",
+          "label": "Style 1"
+        },
+        {
+          "value": "style_2",
+          "label": "Style 2"
+        }
       ],
       "default": "style_1"
     },
     {
       "type": "range",
       "id": "gap",
-      "label": "图标文字间距",
+      "label": "卡片间距",
       "min": 0,
       "max": 48,
       "step": 4,
       "unit": "px",
       "default": 24
     },
-    {"type":"header","content":"电脑端布局"},
+    {
+      "type": "header",
+      "content": "电脑端布局"
+    },
     {
       "type": "range",
       "id": "desktop_columns",
-      "label": "每行显示数量", "info":"仅在图标文字展示模式下生效",
+      "label": "每行显示数量",
+      "info": "仅在卡片文字展示模式下生效",
       "min": 2,
       "max": 6,
       "step": 1,
       "default": 4
     },
-    {"type":"header","content":"移动端布局"},
+    {
+      "type": "header",
+      "content": "移动端布局"
+    },
     {
       "type": "select",
       "id": "mobile_columns",
-      "label": "每行显示数量", "info":"仅在图标文字展示模式下生效",
+      "label": "每行显示数量",
+      "info": "仅在卡片文字展示模式下生效",
       "options": [
         {
           "value": "1",
@@ -442,7 +466,10 @@
       ],
       "default": "2"
     },
-    {"type":"header","content":"电脑端字号"},
+    {
+      "type": "header",
+      "content": "电脑端字号"
+    },
     {
       "type": "range",
       "id": "heading_size",
@@ -456,7 +483,7 @@
     {
       "type": "range",
       "id": "body_size",
-      "label": "说明字号",
+      "label": "正文字号",
       "min": 12,
       "max": 24,
       "step": 1,
@@ -483,20 +510,71 @@
       "unit": "px",
       "default": 15
     },
-    {"type":"header","content":"移动端字号"},
-    {"type":"range","id":"mobile_heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
-    {"type":"range","id":"mobile_body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
-    {"type":"range","id":"mobile_item_title_size","label":"项目标题字号","min":14,"max":32,"step":1,"unit":"px","default":20},
-    {"type":"range","id":"mobile_item_body_size","label":"项目正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
-    {"type":"header","content":"其它设置"},
+    {
+      "type": "header",
+      "content": "移动端字号"
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "mobile_body_size",
+      "label": "正文字号",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "mobile_item_title_size",
+      "label": "项目标题字号",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile_item_body_size",
+      "label": "项目正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "其它设置"
+    },
     {
       "type": "select",
       "id": "animation_style",
       "label": "入场动画",
       "options": [
-        { "value": "fade-up", "label": "Fade Up" },
-        { "value": "fade-in", "label": "Fade In" },
-        { "value": "soft-zoom", "label": "Soft Zoom" }
+        {
+          "value": "fade-up",
+          "label": "Fade Up"
+        },
+        {
+          "value": "fade-in",
+          "label": "Fade In"
+        },
+        {
+          "value": "soft-zoom",
+          "label": "Soft Zoom"
+        }
       ],
       "default": "fade-up"
     },
@@ -542,11 +620,6 @@
           "type": "image_picker",
           "id": "image",
           "label": "交互图片"
-        },
-        {
-          "type": "image_picker",
-          "id": "icon_image",
-          "label": "图标"
         }
       ]
     }
