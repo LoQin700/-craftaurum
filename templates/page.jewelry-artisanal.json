@@ -97,7 +97,7 @@
             "image": "shopify://shop_images/S1028-N.jpg",
             "title": "Large Pendant Necklaces",
             "description": "<p>Explore bold pendant proportions, decorative textures and different chain or attachment options to match a specific design brief.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact Us",
             "button_style": "button-unstyled",
             "link": "shopify://pages/contact"
           }
@@ -108,7 +108,7 @@
             "image": "shopify://shop_images/Christmas-brooch.jpg",
             "title": "Custom Brooch Jewelry",
             "description": "<p>Discuss brooch shapes, brand emblems, metal finishes and pin construction for fashion accessories or event collections.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact Us",
             "button_style": "button-unstyled",
             "link": "shopify://pages/contact"
           }
@@ -119,7 +119,7 @@
             "image": "shopify://shop_images/pearls-necklace.jpg",
             "title": "Custom Waist Chains",
             "description": "<p>Review chain lengths, connection details, decorative elements and finishes for custom waist-chain designs.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact Us",
             "button_style": "button-unstyled",
             "link": "shopify://pages/contact"
           }
@@ -130,7 +130,7 @@
             "image": "shopify://shop_images/custom-pearl-jewelry-set.jpg",
             "title": "Customized Corporate Gifts",
             "description": "<p>Develop jewelry-inspired gift concepts using engraved or branded motifs. Discuss packaging, quantity and feasibility before confirming production.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact Us",
             "button_style": "button-unstyled",
             "link": "shopify://pages/contact"
           }
@@ -189,8 +189,8 @@
           "settings": {
             "icon": "ruler",
             "icon_color": "#c7a85e",
-            "title": "Creative Development",
-            "description": "<p>Clarify references, scale, form and intended visual character before sampling begins.</p>"
+            "title": "Design Support",
+            "description": "<p>Discuss style references, proportions and details with the team to refine the product concept before sampling.</p>"
           }
         },
         "iwt_material": {
@@ -198,26 +198,26 @@
           "settings": {
             "icon": "star",
             "icon_color": "#c7a85e",
-            "title": "Material Choice",
-            "description": "<p>Review metals, stones, textures and finish directions suited to the project.</p>"
+            "title": "Jewelry Expertise",
+            "description": "<p>Review materials, settings, construction and finishes relevant to the intended category and market positioning.</p>"
           }
         },
         "iwt_sample": {
           "type": "item",
           "settings": {
-            "icon": "clipboard",
+            "icon": "chat_bubble",
             "icon_color": "#c7a85e",
-            "title": "Sample Review",
-            "description": "<p>Use prototypes to check construction, proportion, detail and overall character.</p>"
+            "title": "Clear Communication",
+            "description": "<p>Share revisions and approvals at defined development stages so the project team can stay aligned.</p>"
           }
         },
         "iwt_quality": {
           "type": "item",
           "settings": {
-            "icon": "check_box",
+            "icon": "truck",
             "icon_color": "#c7a85e",
-            "title": "Production Coordination",
-            "description": "<p>Keep special construction and finishing requirements clear before repeat production.</p>"
+            "title": "Delivery Coordination",
+            "description": "<p>Confirm quantities, production readiness, packaging and shipping requirements to plan delivery after sample approval.</p>"
           }
         }
       },
@@ -231,7 +231,7 @@
       "settings": {
         "section_width": "page-width",
         "eyebrow": "MANUFACTURING SUPPORT",
-        "heading": "Support for Artisanal Projects",
+        "heading": "Support for Your Jewelry Collection",
         "description": "<p>More unusual jewelry concepts still benefit from a clear workflow that connects creative direction, materials, sampling and production review.</p>",
         "icon_position": "top",
         "icon_size": 32,
