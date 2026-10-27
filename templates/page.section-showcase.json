@@ -1230,7 +1230,8 @@
             "image_2": "shopify://shop_images/20K.jpg",
             "image_3": "shopify://shop_images/22K.jpg",
             "heading": "Yellow Gold",
-            "body": "<p>Pure gold is naturally soft and malleable, so yellow gold jewelry is commonly alloyed with other metals to improve strength and wearability while preserving its classic warm color.</p>"
+            "body": "<p>Pure gold is naturally soft and malleable, so yellow gold jewelry is commonly alloyed with other metals to improve strength and wearability while preserving its classic warm color.</p>",
+            "image_position": "left"
           }
         },
         "rose_row": {
@@ -1240,7 +1241,8 @@
             "image_2": "shopify://shop_images/YE25928.jpg",
             "image_3": "shopify://shop_images/YB6747.jpg",
             "heading": "Rose Gold",
-            "body": "<p>Rose gold gets its pink tone from copper within the alloy. The exact composition varies by karat and target color, creating a warmer alternative to traditional yellow gold.</p>"
+            "body": "<p>Rose gold gets its pink tone from copper within the alloy. The exact composition varies by karat and target color, creating a warmer alternative to traditional yellow gold.</p>",
+            "image_position": "left"
           }
         },
         "white_row": {
@@ -1250,7 +1252,8 @@
             "image_2": "shopify://shop_images/custom-sterling-silver-jewelry-3.jpg",
             "image_3": "shopify://shop_images/plated-pearl-rings.jpg",
             "heading": "White Gold",
-            "body": "<p>White gold combines gold with light-colored alloy metals and is often rhodium finished for a bright reflective appearance. Composition varies according to karat and manufacturing specification.</p>"
+            "body": "<p>White gold combines gold with light-colored alloy metals and is often rhodium finished for a bright reflective appearance. Composition varies according to karat and manufacturing specification.</p>",
+            "image_position": "left"
           }
         }
       },
@@ -1262,11 +1265,9 @@
       "settings": {
         "section_width": "page-width",
         "background_color": "#FFFFFF",
-        "image_position": "left",
         "text_background": "#E7DED0",
         "image_background": "#F6F2EB",
         "text_color": "#17191A",
-        "text_padding": 32,
         "image_padding": 18,
         "image_gap": 14,
         "panel_gap": 16,
