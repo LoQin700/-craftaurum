@@ -1,12 +1,4 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+/* Craftaurum page template: editorial banner background uses its color picker directly. */
 {
   "sections": {
     "main": {
@@ -79,7 +71,6 @@
         "catalog_url": "",
         "padding_top": 40,
         "padding_bottom": 40,
-        "use_background": true,
         "eyebrow_size": 12,
         "heading_size": 58,
         "body_size": 16,
