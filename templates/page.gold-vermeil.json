@@ -174,7 +174,10 @@
         "padding_bottom": 76,
         "overlap_amount": 32,
         "eyebrow_size": 12,
-        "animation_style": "soft-zoom"
+        "animation_style": "soft-zoom",
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "vermeil_types": {
@@ -286,7 +289,12 @@
         "animation_style": "fade-up",
         "image_width": 100,
         "card_text_alignment": "left",
-        "row_gap": 36
+        "row_gap": 36,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_card_title_size": 18,
+        "mobile_card_body_size": 14
       }
     },
     "vermeil_compare": {
@@ -464,7 +472,16 @@
         "column_gap": 56,
         "padding_top": 76,
         "padding_bottom": 76,
-        "feature_image": "shopify://shop_images/gold-vermeil-necklace.jpg"
+        "feature_image": "shopify://shop_images/gold-vermeil-necklace.jpg",
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_description_size": 14,
+        "mobile_item_title_size": 18,
+        "mobile_item_body_size": 14,
+        "mobile_value_size": 12,
+        "mobile_meta_size": 12,
+        "mobile_feature_title_size": 18,
+        "mobile_feature_body_size": 14
       }
     },
     "why_choose": {
@@ -775,7 +792,10 @@
         "phone_required": false,
         "animation_style": "fade-up",
         "padding_top": 96,
-        "padding_bottom": 96
+        "padding_bottom": 96,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     }
   },
