@@ -362,64 +362,6 @@
     {"type":"range","id":"body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
     {"type":"range","id":"card_title_size","label":"卡片标题字号","min":14,"max":36,"step":1,"unit":"px","default":22},
     {"type":"range","id":"card_body_size","label":"卡片正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
-    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
-    {
-      "type": "select",
-      "id": "layout_style",
-      "label": "电脑端排列",
-      "options": [
-        {
-          "value": "uniform",
-          "label": "等宽网格"
-        },
-        {
-          "value": "showcase",
-          "label": "展示型 3+2"
-        }
-      ],
-      "default": "showcase"
-    },
-    {
-      "type": "range",
-      "id": "desktop_columns",
-      "label": "电脑端每行数量",
-      "min": 1,
-      "max": 6,
-      "step": 1,
-      "default": 3
-    },
-    {
-      "type": "select",
-      "id": "mobile_columns",
-      "label": "手机端每行数量",
-      "options": [
-        {
-          "value": "1",
-          "label": "1 列"
-        },
-        {
-          "value": "2",
-          "label": "2 列"
-        }
-      ],
-      "default": "1"
-    },
-    {
-      "type": "select",
-      "id": "mobile_layout",
-      "label": "手机端展示方式",
-      "options": [
-        {
-          "value": "grid",
-          "label": "网格"
-        },
-        {
-          "value": "carousel",
-          "label": "轮播"
-        }
-      ],
-      "default": "carousel"
-    },
     {
       "type": "select",
       "id": "image_ratio",
@@ -474,6 +416,66 @@
       "unit": "px",
       "default": 24
     },
+    {"type":"header","content":"电脑端布局"},
+    {
+      "type": "range",
+      "id": "desktop_columns",
+      "label": "每行显示数量", "info":"仅在常规网格模式下生效",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "select",
+      "id": "layout_style",
+      "label": "展示方式",
+      "options": [
+        {
+          "value": "uniform",
+          "label": "等宽网格"
+        },
+        {
+          "value": "showcase",
+          "label": "展示型 3+2"
+        }
+      ],
+      "default": "showcase"
+    },
+    {"type":"header","content":"移动端布局"},
+    {
+      "type": "select",
+      "id": "mobile_columns",
+      "label": "每行显示数量",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 列"
+        },
+        {
+          "value": "2",
+          "label": "2 列"
+        }
+      ],
+      "default": "1"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "展示方式",
+      "options": [
+        {
+          "value": "grid",
+          "label": "网格"
+        },
+        {
+          "value": "carousel",
+          "label": "轮播"
+        }
+      ],
+      "default": "carousel"
+    },
+    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
     {
       "type": "range",
       "id": "padding_top",
