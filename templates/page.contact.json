@@ -7,7 +7,6 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-/* Existing page mobile typography standardized: 12 / 25 / 14 / 18. */
 {
   "sections": {
     "main": {
@@ -23,10 +22,12 @@
             "alignment": "center",
             "type_preset": "h2",
             "font": "var(--font-body--family)",
+            "font_size": "1rem",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
+            "text_color": "",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -47,10 +48,12 @@
             "alignment": "center",
             "type_preset": "rte",
             "font": "var(--font-body--family)",
+            "font_size": "1rem",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
             "wrap": "pretty",
+            "text_color": "",
             "background": false,
             "background_color": "#00000026",
             "corner_radius": 0,
@@ -79,21 +82,21 @@
       "name": "分栏联系表单",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#F8F7F4",
-        "text_color": "#17191A",
         "eyebrow": "START A PROJECT",
-        "eyebrow_size": 12,
         "heading": "Tell Us About Your Jewelry Project",
-        "heading_size": 35,
         "description": "<p>Share your product category, materials, quantity, target market and development requirements with our team.</p>",
-        "body_size": 16,
         "phone_required": false,
-        "animation_style": "fade-up",
-        "padding_top": 96,
-        "padding_bottom": 96,
+        "background_color": "{{ settings.color_palette.background }}",
+        "text_color": "#17191a",
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 16,
         "mobile_eyebrow_size": 12,
         "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "mobile_body_size": 14,
+        "animation_style": "fade-up",
+        "padding_top": 96,
+        "padding_bottom": 96
       }
     }
   },

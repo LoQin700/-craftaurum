@@ -489,7 +489,7 @@
         "craft": {
           "type": "item",
           "settings": {
-            "icon": "eye",
+            "icon": "star",
             "icon_color": "#c7a85e",
             "title": "Unparalleled Craftsmanship",
             "description": "<p>Each piece is developed with attention to construction, finishing and the small details that shape the final result.</p>"
@@ -507,7 +507,7 @@
         "quality": {
           "type": "item",
           "settings": {
-            "icon": "eye",
+            "icon": "check_box",
             "icon_color": "#c7a85e",
             "title": "Strict Quality Standards",
             "description": "<p>Material, construction and finish details are reviewed against the agreed project specifications before production approval.</p>"
