@@ -100,7 +100,7 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/plated-jewelry-2.jpg",
-            "link": "",
+            "link": "shopify://pages/gold-plated-jewelry",
             "title": "Plated Jewelry",
             "description": "<p>Develop yellow, rose, white and alternative plating finishes on suitable base materials. Review color consistency and protective finishing according to the design and expected use.</p>",
             "horizontal_alignment": "left",
@@ -111,7 +111,7 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/3d-render-1.jpg",
-            "link": "",
+            "link": "shopify://pages/customization",
             "title": "3D Render",
             "description": "<p>Translate sketches into 3D views to review dimensions, proportions, settings and construction details before a physical sample is made.</p>",
             "horizontal_alignment": "left",
@@ -122,7 +122,7 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/gemstone-setting-400x400.jpg",
-            "link": "",
+            "link": "shopify://pages/customization",
             "title": "Stone Setting & Making",
             "description": "<p>Consider prong, bezel and other appropriate setting methods around the stone, the metal structure, comfort and the visual balance of the piece.</p>",
             "horizontal_alignment": "left",
@@ -133,7 +133,7 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/custom-sterling-silver-jewelry-3.jpg",
-            "link": "",
+            "link": "shopify://pages/sterling-silver-jewelry",
             "title": "Custom Sterling Silver Jewelry",
             "description": "<p>Develop sterling silver rings, earrings, necklaces and bracelets with configurable textures, stone choices, engraved details and surface finishes.</p>",
             "horizontal_alignment": "left",
@@ -144,7 +144,7 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/custom-gold-jewelry-2.jpg",
-            "link": "",
+            "link": "shopify://pages/solid-gold-jewelry",
             "title": "Custom Gold Jewelry",
             "description": "<p>Explore gold jewelry designs with attention to metal specifications, weight, proportions, stone settings and a finish that fits your brand.</p>",
             "horizontal_alignment": "left",
