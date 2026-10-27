@@ -145,6 +145,15 @@
     .ca-editorial-banner__title { font-size: var(--ca-banner-heading-size-mobile); }
     .ca-editorial-banner__body { font-size: var(--ca-banner-body-size-mobile); }
   }
+
+  /* Subtle image hover without moving the image container. */
+  .ca-editorial-banner__image { transition: transform .48s cubic-bezier(.2,.7,.2,1); transform: scale(1); }
+  @media (hover: hover) and (pointer: fine) {
+    .ca-editorial-banner__media:hover .ca-editorial-banner__image { transform: scale(1.045); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ca-editorial-banner__image { transition: none; }
+  }
 {% endstylesheet %}
 
 {% schema %}
