@@ -804,3 +804,16 @@
 - 读回校验：4/4 模板全部通过，所有自建 Section 的现有实例值均符合新标准，0 个旧 35/16 值残留。
 - 因此“现有模板实例字号迁移”的完整范围从此前误报的 15 个模板修正为 **19 个现有模板**。Section Schema 默认值也仍保留为相同标准。
 - 若 Shopify Theme Editor 在这些 19 个模板全部同步后仍显示旧值，则需进一步确认当前编辑的 Shopify Theme 是否连接到 GitHub main 最新提交；当前 GitHub main 中对应模板实例已是新值。
+
+## 2026-10-27 · 全 templates 目录手机字号全量核验（最终范围）
+- 用户补充要求：不是部分页面，而是**所有现有页面**的自建 Section 手机字号都必须同步。
+- 已直接读取 GitHub `main` 的 `templates/` 目录清单，逐个检查 **29 个 JSON 模板**，不再依赖人工维护页面名单。
+- 29 个模板中共有 **19 个模板实际使用 Craftaurum 17 类自建 Section**，合计 **142 个现有 Section 实例**；其余 10 个系统模板（404/article/blog/cart/collection/list-collections/page/password/product/search 等）不含这些自建 Section，因此无需迁移。
+- 已对 142 个现有实例统一写入/核对手机字号显式值，合计 **490 个 mobile 字号字段**：
+  - 主标题 25px
+  - 正文 / 简介 / 卡片正文 / 项目正文 / 右侧正文 14px
+  - 小标题 / 副标题 / 说明 / 数值 / Meta 12px
+  - 卡片标题 / 项目标题 / 右侧标题 18px
+- 此前漏掉的 4 个材质页（custom-silver / gold-plated / gold-vermeil / solid-gold）已补齐；本轮再次扫描其余 25 个模板，未发现任何仍需修改的自建 Section 实例。
+- 当前 GitHub `main` 中 `page.section-showcase.json` 的对应实例值明确为 `mobile_eyebrow_size:12`、`mobile_heading_size:25`、`mobile_body_size:14`；相关 Section Schema 默认值同样为 12/25/14。
+- 因此若 Shopify Theme Editor 此时仍显示 12/35/16，则该编辑器当前加载的主题/模板状态**不是 GitHub main 最新文件内容**（例如 Shopify 尚未同步到最新提交、正在编辑另一个主题副本/分支，或编辑器仍持有未同步的主题版本）。GitHub 端已不存在可继续修改的 35/16 实例值。
