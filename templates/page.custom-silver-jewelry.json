@@ -387,6 +387,8 @@
         "padding_bottom": 72,
         "heading_size": 35,
         "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
         "animation_style": "fade-up"
       }
     },
