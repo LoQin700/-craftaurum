@@ -428,29 +428,30 @@
       "visible_if": "{{ section.settings.visual_height_mode == 'fixed' and section.settings.layout_mode == 'interactive' }}"
     },
     {
-      "type": "select",
-      "id": "animation_style",
-      "label": "入场动画",
-      "options": [
-        { "value": "fade-up", "label": "Fade Up" },
-        { "value": "fade-in", "label": "Fade In" },
-        { "value": "soft-zoom", "label": "Soft Zoom" }
-      ],
-      "default": "fade-up"
+      "type": "range",
+      "id": "gap",
+      "label": "图标文字间距",
+      "min": 0,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "default": 24
     },
+    {"type":"header","content":"电脑端布局"},
     {
       "type": "range",
       "id": "desktop_columns",
-      "label": "图标文字桌面端每行数量",
+      "label": "每行显示数量", "info":"仅在图标文字展示模式下生效",
       "min": 2,
       "max": 6,
       "step": 1,
       "default": 4
     },
+    {"type":"header","content":"移动端布局"},
     {
       "type": "select",
       "id": "mobile_columns",
-      "label": "手机端每行数量",
+      "label": "每行显示数量", "info":"仅在图标文字展示模式下生效",
       "options": [
         {
           "value": "1",
@@ -464,14 +465,15 @@
       "default": "2"
     },
     {
-      "type": "range",
-      "id": "gap",
-      "label": "图标文字间距",
-      "min": 0,
-      "max": 48,
-      "step": 4,
-      "unit": "px",
-      "default": 24
+      "type": "select",
+      "id": "animation_style",
+      "label": "入场动画",
+      "options": [
+        { "value": "fade-up", "label": "Fade Up" },
+        { "value": "fade-in", "label": "Fade In" },
+        { "value": "soft-zoom", "label": "Soft Zoom" }
+      ],
+      "default": "fade-up"
     },
     {
       "type": "range",
