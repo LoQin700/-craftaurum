@@ -535,3 +535,23 @@
 - 已重新拉取当前 17 类 Section 的 Schema 与测试模板：**17/17 实例名 = 对应 schema.name**，而 Preset 可以与 Section 名称不同，这是有意设计。
 - 早前“测试页实例名应与 presets.name 完全一致”的记录已被本条规范覆盖；以后新增 Section 按此标准统一。
 - 本次只是命名，未改任何正式页面模板实例的已有业务命名；仍需 Shopify GitHub Sync / Theme Editor 现场确认显示是否刷新。
+
+## 2026-10-27 · 自建 Section 字段语义审计 + 取消临时图片 URL（最新规则）
+- 用户反馈：`图文介绍` 的“重点颜色”实际只控制副标题，应更名“副标题颜色”，同时核查其它自建 Section。
+- 已逐一检查 Section Showcase 的 **17 种自建 Section**，按 Liquid/CSS 的真实用途修订后台标签（**仅改 label，保留已有 setting ID `accent_color`、颜色值和渲染规则**）：
+  1. `image-text-feature`：重点颜色 → **副标题颜色**。
+  2. `jewelry-collections-overview`：重点颜色 → **顶部小标题颜色**。
+  3. `content-cards`：重点颜色 → **小标题颜色**。
+  4. `interactive-feature`：重点颜色 → **编号、图标及交互高亮颜色**。
+  5. `icon-with-text`：重点颜色 → **小标题及默认图标颜色**（单个 Block 独立图标色仍优先）。
+  6. `image-cards`：重点颜色 → **卡片键盘焦点描边颜色**。
+  7. `process-cards`：重点颜色 → **小标题及卡片内描边颜色**。
+  8. `overlap-image-text`：重点颜色 → **小标题颜色**。
+- `festival-intro` 的 `accent_color` 仅曾声明 CSS 变量、未有 CSS 使用，已移除无效后台控件和变量，并从 Festival / Showcase 模板删除遗留实例值。
+- `content-guide` 的 `feature_heading` 原标签“标题”含糊，已按实际位置改为 **右侧图片标题**；setting ID 不变。
+- 用户明确要求：**所有自建 Section 不要“临时参考图片 URL”字段。** 已从 `image-text-feature` / `image-gallery` 源码同时移除 `external_image_url` 后台字段及前端 HTML 图片回退分支；其余 15 种自建 Section 核查未发现该字段。
+- 已从 `page.personalized-jewelry.json` 和 `page.section-showcase.json` 清除旧 `external_image_url` 设置值，其他已检查模板无残留。全部只保留 Shopify `image_picker` 上传/绑定方式。
+- Personalized Jewelry 的 Initial 介绍主图改用本仓库已有的 `shopify://shop_images/custom-inital-necklace.jpg`；Special、Enamel 及 Birthstone/Zodiac 部分对标专属图片目前没有已确认的 Shopify 媒体绑定，保持空图片槽位，需上传真实匹配图片，不使用随机/不匹配图与外链。
+- 已改写 `PERSONALIZED-JEWELRY-REFERENCE-MAP.md`，逐图标明当前 Shopify 绑定和待上传文件名，不再建议在 Section 输入参考图片 URL。
+- 代码检查：17/17 自建 Section Schema 可解析、均无 `external_image_url`；三个相关页面 JSON 可解析、无临时 URL 字段；未发现仍使用笼统“重点颜色”的 `accent_color` 标签。
+- **仍需** Shopify GitHub Sync、Theme Check CLI、Theme Editor 字段显示/保存及 PC/Tablet/Mobile 实际浏览器检查。此前文档中的“临时外链图片回退”方案已被本条正式废止。
