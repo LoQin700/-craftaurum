@@ -338,6 +338,7 @@
 {
   "name": "图文卡片",
   "settings": [
+    {"type":"header","content":"基础设置"},
     {
       "type": "select",
       "id": "section_width",
@@ -354,47 +355,26 @@
       ],
       "default": "page-width"
     },
+    {"type":"header","content":"内容设置"},
     {
-      "type": "color",
-      "id": "background_color",
-      "label": "背景颜色",
-      "default": "#FFFFFF"
+      "type": "text",
+      "id": "eyebrow",
+      "label": "小标题",
+      "default": "JEWELRY DESIGN RANGE"
     },
     {
-      "type": "color",
-      "id": "text_color",
-      "label": "文字颜色",
-      "default": "#17191A"
+      "type": "text",
+      "id": "heading",
+      "label": "标题",
+      "default": "Explore Custom Ring Styles"
     },
     {
-      "type": "color",
-      "id": "accent_color",
-      "label": "小标题颜色",
-      "default": "#C7A85E"
+      "type": "richtext",
+      "id": "description",
+      "label": "正文",
+      "default": "<p>Build a collection of distinctive rings with considered materials, stone settings and finishing options.</p>"
     },
-    {
-      "type": "select",
-      "id": "intro_style",
-      "label": "顶部布局",
-      "options": [
-        { "value": "style_1", "label": "Style 1" },
-        { "value": "style_2", "label": "Style 2" }
-      ],
-      "default": "style_1"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_divider",
-      "label": "显示顶部细分隔线",
-      "default": false
-    },
-    {
-      "type": "color",
-      "id": "divider_color",
-      "label": "分隔线颜色",
-      "default": "#D8D5CE",
-      "visible_if": "{{ section.settings.show_divider }}"
-    },
+    {"type":"header","content":"按钮设置"},
     {
       "type": "text",
       "id": "intro_button_label",
@@ -425,24 +405,7 @@
       ],
       "default": "button"
     },
-    {
-      "type": "text",
-      "id": "eyebrow",
-      "label": "小标题",
-      "default": "JEWELRY DESIGN RANGE"
-    },
-    {
-      "type": "text",
-      "id": "heading",
-      "label": "标题",
-      "default": "Explore Custom Ring Styles"
-    },
-    {
-      "type": "richtext",
-      "id": "description",
-      "label": "正文",
-      "default": "<p>Build a collection of distinctive rings with considered materials, stone settings and finishing options.</p>"
-    },
+    {"type":"header","content":"图片设置"},
     {
       "type": "select",
       "id": "image_ratio",
@@ -472,6 +435,49 @@
       "step": 5,
       "unit": "%",
       "default": 100
+    },
+    {"type":"header","content":"颜色设置"},
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文字颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "小标题颜色",
+      "default": "#C7A85E"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_divider",
+      "label": "显示顶部细分隔线",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "分隔线颜色",
+      "default": "#D8D5CE",
+      "visible_if": "{{ section.settings.show_divider }}"
+    },
+    {"type":"header","content":"布局与交互"},
+    {
+      "type": "select",
+      "id": "intro_style",
+      "label": "顶部布局",
+      "options": [
+        { "value": "style_1", "label": "Style 1" },
+        { "value": "style_2", "label": "Style 2" }
+      ],
+      "default": "style_1"
     },
     {
       "type": "select",
@@ -640,6 +646,7 @@
     {"type":"range","id":"mobile_body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
     {"type":"range","id":"mobile_card_title_size","label":"卡片标题字号","min":14,"max":32,"step":1,"unit":"px","default":18},
     {"type":"range","id":"mobile_card_body_size","label":"卡片正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
+    {"type":"header","content":"其它设置"},
     {
       "type": "select",
       "id": "animation_style",
