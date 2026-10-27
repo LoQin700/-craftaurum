@@ -410,10 +410,10 @@
           "settings": {
             "image": "shopify://shop_images/jewelry-design.jpg",
             "title": "Order Quantity & Sampling",
-            "description": "<p>Discuss prototype needs, intended order volumes and design complexity. Minimum quantities and sample costs are assessed per project.</p>",
-            "button_label": "Learn More",
+            "description": "<p>Discuss your design, sample needs and expected quantity. Minimum order requirements are confirmed for each project.</p>",
+            "button_label": "",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/contact"
+            "link": ""
           }
         },
         "gemstones": {
@@ -421,10 +421,10 @@
           "settings": {
             "image": "shopify://shop_images/gemstone-setting-400x400.jpg",
             "title": "Gemstone & Setting Options",
-            "description": "<p>Review suitable gemstones, pearls, simulated stones and setting methods based on the style, structure and target budget.</p>",
-            "button_label": "Learn More",
+            "description": "<p>Explore gemstone, pearl and setting options suited to your jewelry design and preferred materials.</p>",
+            "button_label": "",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/customization"
+            "link": ""
           }
         },
         "plating": {
@@ -432,10 +432,10 @@
           "settings": {
             "image": "shopify://shop_images/plating-jewelry.jpg",
             "title": "Plating & Surface Finishes",
-            "description": "<p>Explore gold-tone, rose-tone, rhodium or other applicable surface treatments, with specifications confirmed for the selected base metal.</p>",
-            "button_label": "Learn More",
+            "description": "<p>Compare gold-tone, rose-tone and other suitable finishes, with specifications reviewed before production.</p>",
+            "button_label": "",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/gold-plated-jewelry"
+            "link": ""
           }
         },
         "materials": {
@@ -443,10 +443,10 @@
           "settings": {
             "image": "shopify://shop_images/pearl-materials.jpg",
             "title": "Materials & Metal Choices",
-            "description": "<p>Compare sterling silver, gold and suitable alternative metal constructions with an emphasis on design feasibility and finish.</p>",
-            "button_label": "Learn More",
+            "description": "<p>Choose from suitable silver, gold and other metal constructions based on your design and requirements.</p>",
+            "button_label": "",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/sterling-silver-jewelry"
+            "link": ""
           }
         },
         "delivery": {
@@ -454,10 +454,10 @@
           "settings": {
             "image": "shopify://shop_images/delivery.jpg",
             "title": "Production & Delivery Planning",
-            "description": "<p>Align sampling approvals, production milestones, packaging and destination requirements before discussing the delivery schedule.</p>",
-            "button_label": "Learn More",
+            "description": "<p>Plan sampling, production, packaging and shipping details according to your order and destination.</p>",
+            "button_label": "",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/contact"
+            "link": ""
           }
         },
         "budget": {
@@ -465,10 +465,10 @@
           "settings": {
             "image": "shopify://shop_images/custom-design-jewelry.jpg",
             "title": "Budget & Specification Review",
-            "description": "<p>Share target positioning, materials and quantities so design details and quotation options can be evaluated together.</p>",
-            "button_label": "Learn More",
+            "description": "<p>Share your target budget, materials and quantities to discuss practical design and quotation options.</p>",
+            "button_label": "",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/contact"
+            "link": ""
           }
         }
       },
@@ -494,7 +494,7 @@
         "intro_style": "style_1",
         "card_text_alignment": "left",
         "gap": 20,
-        "row_gap": 36,
+        "row_gap": 32,
         "desktop_columns": "3",
         "desktop_layout": "grid",
         "mobile_columns": "1",
@@ -503,7 +503,7 @@
         "heading_size": 35,
         "body_size": 16,
         "card_title_size": 18,
-        "card_body_size": 15,
+        "card_body_size": 14,
         "mobile_eyebrow_size": 12,
         "mobile_heading_size": 25,
         "mobile_body_size": 14,
