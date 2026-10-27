@@ -1,13 +1,4 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
-/* Craftaurum page template: editorial banner background uses its color picker directly. */
+/* Mobile typography standardized across existing page instances: 12 / 25 / 14 / 18. */
 {
   "sections": {
     "jewelry_overview": {
