@@ -7,12 +7,7 @@
     --padding-block-end: {{ section.settings.padding_bottom }}px;
     --ca-cta-background: {{ section.settings.background_color }};
     --ca-cta-text: {{ section.settings.text_color }};
-    --ca-cta-button-background: {{ section.settings.button_background_color }};
-    --ca-cta-button-text: {{ section.settings.button_text_color }};
-    --ca-cta-button-border: {{ section.settings.button_border_color }};
-    --ca-cta-button-hover-background: {{ section.settings.button_hover_background_color }};
-    --ca-cta-button-hover-text: {{ section.settings.button_hover_text_color }};
-    --ca-cta-button-hover-border: {{ section.settings.button_hover_border_color }};
+
     --ca-cta-heading-size: {{ section.settings.heading_size | default: 35 }}px;
     --ca-cta-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 35 }}px;
     --ca-cta-body-size: {{ section.settings.body_size | default: 16 }}px;
@@ -62,19 +57,6 @@
   .ca-horizontal-cta__description { color: inherit; opacity: .78; font-size: var(--ca-cta-body-size); line-height: 1.6; }
   .ca-horizontal-cta__description :is(p,ul,ol) { font-size: inherit; line-height: inherit; }
   .ca-horizontal-cta__description p { margin: 0; }
-
-  .ca-horizontal-cta :is(.button,.button-secondary,.button-custom) {
-    --button-color: var(--ca-cta-button-text, #F8F7F4);
-    --button-background-color: var(--ca-cta-button-background, transparent);
-    --button-border-color: var(--ca-cta-button-border, #F8F7F4);
-  }
-  .ca-horizontal-cta :is(.button,.button-secondary,.button-custom):hover {
-    --button-color: var(--ca-cta-button-hover-text, #17191A);
-    --button-background-color: var(--ca-cta-button-hover-background, #C7A85E);
-    --button-border-color: var(--ca-cta-button-hover-border, #C7A85E);
-  }
-  .ca-horizontal-cta .button-unstyled { color: var(--ca-cta-button-text, #F8F7F4); }
-  .ca-horizontal-cta .button-unstyled:hover { color: var(--ca-cta-button-hover-background, #C7A85E); }
 
   @media screen and (max-width: 749px) {
     .ca-horizontal-cta__inner {
@@ -178,48 +160,73 @@
       "default": "#F8F7F4"
     },
     {
-      "type": "color",
-      "id": "button_background_color",
-      "label": "按钮背景颜色",
-      "default": "#17191A"
+      "type": "header",
+      "content": "电脑端字号"
     },
     {
-      "type": "color",
-      "id": "button_text_color",
-      "label": "按钮文字颜色",
-      "default": "#F8F7F4"
+      "type": "range",
+      "id": "heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 64,
+      "step": 1,
+      "unit": "px",
+      "default": 35
     },
     {
-      "type": "color",
-      "id": "button_border_color",
-      "label": "按钮边框颜色",
-      "default": "#F8F7F4"
+      "type": "range",
+      "id": "body_size",
+      "label": "正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 16
     },
     {
-      "type": "color",
-      "id": "button_hover_background_color",
-      "label": "按钮 Hover 背景颜色",
-      "default": "#C7A85E"
+      "type": "header",
+      "content": "移动端字号"
     },
     {
-      "type": "color",
-      "id": "button_hover_text_color",
-      "label": "按钮 Hover 文字颜色",
-      "default": "#17191A"
+      "type": "range",
+      "id": "mobile_heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 64,
+      "step": 1,
+      "unit": "px",
+      "default": 35
     },
     {
-      "type": "color",
-      "id": "button_hover_border_color",
-      "label": "按钮 Hover 边框颜色",
-      "default": "#C7A85E"
+      "type": "range",
+      "id": "mobile_body_size",
+      "label": "正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 16
     },
-    {"type":"header","content":"电脑端字号"},
-    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":64,"step":1,"unit":"px","default":35},
-    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":16},
-    {"type":"header","content":"移动端字号"},
-    {"type":"range","id":"mobile_heading_size","label":"标题字号","min":24,"max":64,"step":1,"unit":"px","default":35},
-    {"type":"range","id":"mobile_body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":16},
-    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
+    {
+      "type": "select",
+      "id": "animation_style",
+      "label": "入场动画",
+      "options": [
+        {
+          "value": "fade-up",
+          "label": "Fade Up"
+        },
+        {
+          "value": "fade-in",
+          "label": "Fade In"
+        },
+        {
+          "value": "soft-zoom",
+          "label": "Soft Zoom"
+        }
+      ],
+      "default": "fade-up"
+    },
     {
       "type": "range",
       "id": "padding_top",
