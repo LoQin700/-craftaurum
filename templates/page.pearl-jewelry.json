@@ -1,4 +1,4 @@
-/* Craftaurum page template: editorial banner background uses its color picker directly. */
+/* Craftaurum Pearl Jewelry template: image crossover uses one checkbox and per-image angles. */
 {
   "sections": {
     "main": {
@@ -200,7 +200,6 @@
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "image_position": "left",
-        "desktop_layout": "overlap",
         "mobile_layout": "slider",
         "visual_height": 560,
         "overlap_amount": 28,
@@ -218,7 +217,8 @@
         "animation_style": "soft-zoom",
         "column_gap": 64,
         "padding_top": 72,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "enable_overlap": true
       }
     },
     "pearl_products": {
