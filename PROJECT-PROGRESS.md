@@ -817,3 +817,21 @@
 - 此前漏掉的 4 个材质页（custom-silver / gold-plated / gold-vermeil / solid-gold）已补齐；本轮再次扫描其余 25 个模板，未发现任何仍需修改的自建 Section 实例。
 - 当前 GitHub `main` 中 `page.section-showcase.json` 的对应实例值明确为 `mobile_eyebrow_size:12`、`mobile_heading_size:25`、`mobile_body_size:14`；相关 Section Schema 默认值同样为 12/25/14。
 - 因此若 Shopify Theme Editor 此时仍显示 12/35/16，则该编辑器当前加载的主题/模板状态**不是 GitHub main 最新文件内容**（例如 Shopify 尚未同步到最新提交、正在编辑另一个主题副本/分支，或编辑器仍持有未同步的主题版本）。GitHub 端已不存在可继续修改的 35/16 实例值。
+
+## 2026-10-27 · 再修正：除首页外的所有现有页面模板手机字号强制写入
+- 用户明确反馈：实际 Shopify 后台只有首页手机字号正确，其它页面模板仍显示旧的 35/16 等值。此前“已迁移全部模板”的判断不可靠，因此本轮不再依赖 Schema default，也不再按旧值是否相同决定是否跳过。
+- 以 `templates/` 目录为准，对**除首页 index.json 外全部 18 个实际使用自建 Section 的页面模板**重新强制序列化并写入手机字号显式值：
+  - 小标题 / 副标题 / 辅助信息：12px
+  - 主标题：25px
+  - 正文 / 简介 / 卡片正文 / 项目正文：14px
+  - 卡片标题 / 项目标题 / 右侧标题：18px
+- 本轮重新写入的模板包括：Section Showcase、Customization、OEM Jewellery、Jewelry Collections、Rings、Necklace、Earrings、Bracelets、Fashion、Artisanal、Pearl Jewelry、Personalized Jewelry、Festival Jewelry、Contact、Custom Silver Jewelry、Gold Plated、Gold Vermeil、Solid Gold。
+- 为确保 GitHub/Shopify 识别为真实文件变更，即便原 JSON 某些字段已经是目标值，也重新写入完整模板文件并统一头部说明，而不是只在值不同的时候更新。
+- 写入后逐个从 GitHub main **重新读取并验证**这 18 个模板：
+  - 共 137 个自建 Section 实例；
+  - 共 475 个显式 mobile 字号字段；
+  - 18/18 模板验证通过；
+  - 475/475 字号字段与目标标准一致；
+  - 0 个 35/16 等旧手机字号值残留在这些自建 Section 实例中。
+- 首页 index.json 本轮未重写，因为用户已确认首页显示正确；Section Schema 的默认值也仍保持相同移动端标准。
+- 如果 Shopify 编辑器在这批新提交同步后仍有某个具体页面显示旧值，应以该页面模板文件名 + Section 名称现场定位，不再假设是全局同步问题。
