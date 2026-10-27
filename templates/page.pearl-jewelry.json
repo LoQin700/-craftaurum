@@ -393,7 +393,6 @@
       ],
       "name": "交互图文",
       "settings": {
-        "layout_mode": "interactive",
         "section_width": "page-width",
         "background_color": "#f8f7f4",
         "text_color": "#17191a",
@@ -408,9 +407,6 @@
         "visual_height_mode": "match_text",
         "visual_height": 520,
         "animation_style": "fade-up",
-        "desktop_columns": 4,
-        "mobile_columns": "2",
-        "gap": 24,
         "padding_top": 72,
         "padding_bottom": 72,
         "mobile_heading_size": 25,
