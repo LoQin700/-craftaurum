@@ -1,12 +1,4 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+/* Existing page mobile typography standardized: 12 / 25 / 14 / 18. */
 {
   "sections": {
     "main": {
@@ -267,9 +259,9 @@
         "card_title_size": 22,
         "card_body_size": 15,
         "mobile_heading_size": 25,
-        "mobile_body_size": 16,
-        "mobile_card_title_size": 22,
-        "mobile_card_body_size": 15,
+        "mobile_body_size": 14,
+        "mobile_card_title_size": 18,
+        "mobile_card_body_size": 14,
         "background_color": "#f8f7f4",
         "heading_color": "#17191a",
         "body_color": "#17191a",
@@ -302,9 +294,9 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "mobile_heading_size": 35,
+        "mobile_heading_size": 25,
         "mobile_subtitle_size": 12,
-        "mobile_body_size": 16,
+        "mobile_body_size": 14,
         "background_color": "#ffffff",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
@@ -334,9 +326,9 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "mobile_heading_size": 35,
+        "mobile_heading_size": 25,
         "mobile_subtitle_size": 12,
-        "mobile_body_size": 16,
+        "mobile_body_size": 14,
         "background_color": "#f8f7f4",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
@@ -366,9 +358,9 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "mobile_heading_size": 35,
+        "mobile_heading_size": 25,
         "mobile_subtitle_size": 12,
-        "mobile_body_size": 16,
+        "mobile_body_size": 14,
         "background_color": "#ffffff",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
@@ -474,10 +466,10 @@
         "card_title_size": 20,
         "card_body_size": 15,
         "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 35,
-        "mobile_body_size": 16,
-        "mobile_card_title_size": 20,
-        "mobile_card_body_size": 15,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_card_title_size": 18,
+        "mobile_card_body_size": 14,
         "background_color": "{{ settings.color_palette.color3 }}",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
@@ -501,8 +493,8 @@
         "heading_size": 35,
         "body_size": 16,
         "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 35,
-        "mobile_body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
         "animation_style": "fade-up",
         "padding_top": 96,
         "padding_bottom": 96
