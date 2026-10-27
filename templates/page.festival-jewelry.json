@@ -139,7 +139,8 @@
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 64,
-        "padding_bottom": 24
+        "padding_bottom": 24,
+        "show_buttons": false
       }
     },
     "christmas_gallery": {
@@ -217,7 +218,8 @@
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 80,
-        "padding_bottom": 24
+        "padding_bottom": 24,
+        "show_buttons": false
       }
     },
     "halloween_gallery": {
@@ -295,7 +297,8 @@
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 88,
-        "padding_bottom": 24
+        "padding_bottom": 24,
+        "show_buttons": false
       }
     },
     "thanksgiving_gallery": {
@@ -373,7 +376,8 @@
         "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 88,
-        "padding_bottom": 24
+        "padding_bottom": 24,
+        "show_buttons": false
       }
     },
     "black_friday_gallery": {
