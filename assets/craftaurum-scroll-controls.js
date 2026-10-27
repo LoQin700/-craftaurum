@@ -22,18 +22,46 @@
       };
 
       this.update = () => {
-        if (!this.isConnected || !this.track) return;
+        if (!this.isConnected || !this.track || !this.stage) return;
+
         const max = Math.max(0, this.track.scrollWidth - this.track.clientWidth);
         const rtl = getComputedStyle(this.track).direction === 'rtl';
         const current = rtl ? Math.abs(this.track.scrollLeft) : this.track.scrollLeft;
         const canScroll = max > 2 && this.track.clientWidth > 0;
-        const media = this.mediaSelector ? this.track.querySelector(this.mediaSelector) : this.track.firstElementChild;
-        if (media && this.stage) {
-          const stageRect = this.stage.getBoundingClientRect();
-          const mediaRect = media.getBoundingClientRect();
-          const centerY = mediaRect.top - stageRect.top + (mediaRect.height / 2);
-          if (Number.isFinite(centerY) && centerY >= 0) this.style.setProperty('--ca-controls-y', `${centerY}px`);
+
+        const stageRect = this.stage.getBoundingClientRect();
+        const trackRect = this.track.getBoundingClientRect();
+        const mediaNodes = this.mediaSelector
+          ? [...this.track.querySelectorAll(this.mediaSelector)]
+          : [...this.track.children];
+
+        const visibleMedia = mediaNodes
+          .map(node => ({ node, rect: node.getBoundingClientRect() }))
+          .filter(({ rect }) =>
+            rect.width > 0 &&
+            rect.height > 0 &&
+            rect.right > trackRect.left + 1 &&
+            rect.left < trackRect.right - 1
+          );
+
+        if (visibleMedia.length) {
+          const first = visibleMedia[0].rect;
+          const last = visibleMedia[visibleMedia.length - 1].rect;
+
+          const mediaLeft = Math.max(trackRect.left, first.left);
+          const mediaRight = Math.min(trackRect.right, last.right);
+          const centerY = first.top - stageRect.top + (first.height / 2);
+
+          // Match the native image carousel: arrows live just inside the media viewport edges.
+          const inset = window.matchMedia('(max-width: 749px)').matches ? 12 : 14;
+          const prevX = Math.max(inset, mediaLeft - stageRect.left + inset);
+          const nextX = Math.min(stageRect.width - inset, mediaRight - stageRect.left - inset);
+
+          if (Number.isFinite(centerY)) this.style.setProperty('--ca-controls-y', `${centerY}px`);
+          if (Number.isFinite(prevX)) this.style.setProperty('--ca-controls-prev-x', `${prevX}px`);
+          if (Number.isFinite(nextX)) this.style.setProperty('--ca-controls-next-x', `${nextX}px`);
         }
+
         this.classList.toggle('is-unscrollable', !canScroll);
         this.previous.disabled = !canScroll || current < 2;
         this.next.disabled = !canScroll || current >= max - 2;
@@ -44,16 +72,21 @@
       this.track.addEventListener('scroll', this.update, { passive: true });
       window.addEventListener('resize', this.update, { passive: true });
       window.addEventListener('load', this.update);
+
       this.resizeObserver = new ResizeObserver(this.update);
-      this.resizeObserver.observe(this.track);
       this.observeItems = () => {
         this.resizeObserver.disconnect();
+        this.resizeObserver.observe(this.stage);
         this.resizeObserver.observe(this.track);
         for (const item of this.track.children) this.resizeObserver.observe(item);
+        if (this.mediaSelector) {
+          for (const media of this.track.querySelectorAll(this.mediaSelector)) this.resizeObserver.observe(media);
+        }
         this.update();
       };
+
       this.mutationObserver = new MutationObserver(this.observeItems);
-      this.mutationObserver.observe(this.track, { childList: true });
+      this.mutationObserver.observe(this.track, { childList: true, subtree: true });
       this.observeItems();
       requestAnimationFrame(this.update);
     }
