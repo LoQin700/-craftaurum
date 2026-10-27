@@ -1,13 +1,4 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
-/* Craftaurum page template. Hero background is controlled directly by background_color. */
+/* Existing page mobile typography standardized: 12 / 25 / 14 / 18. */
 {
   "sections": {
     "main": {
@@ -83,7 +74,10 @@
         "eyebrow_size": 12,
         "heading_size": 58,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "horizontal_cta_Pwad7F": {
@@ -102,7 +96,9 @@
         "padding_bottom": 36,
         "heading_size": 35,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "content_cards_xi8xGJ": {
@@ -187,7 +183,12 @@
         "animation_style": "fade-up",
         "image_width": 100,
         "card_text_alignment": "left",
-        "row_gap": 36
+        "row_gap": 36,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_card_title_size": 18,
+        "mobile_card_body_size": 14
       }
     },
     "interactive_feature_cFYGmj": {
@@ -244,7 +245,11 @@
         "body_size": 16,
         "item_title_size": 20,
         "item_body_size": 15,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_item_title_size": 18,
+        "mobile_item_body_size": 14
       }
     },
     "image_text_feature_pyXify": {
@@ -273,7 +278,10 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "icon_with_text_support": {
@@ -344,7 +352,12 @@
         "heading_size": 35,
         "body_size": 15,
         "item_title_size": 18,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_item_title_size": 18,
+        "mobile_item_body_size": 14
       }
     },
     "section_m4j6NK": {
@@ -363,7 +376,10 @@
         "phone_required": false,
         "animation_style": "fade-up",
         "padding_top": 96,
-        "padding_bottom": 96
+        "padding_bottom": 96,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     }
   },
