@@ -480,17 +480,6 @@
       "default": 560
     },
     {
-      "type": "range",
-      "id": "overlap_amount",
-      "label": "交叉程度（0 为不交叉）",
-      "min": 0,
-      "max": 55,
-      "step": 1,
-      "unit": "%",
-      "default": 28,
-      "visible_if": "{{ section.settings.enable_overlap }}"
-    },
-    {
       "type": "text",
       "id": "visual_aria_label",
       "label": "图片区域辅助文字",
@@ -537,8 +526,19 @@
     {
       "type": "checkbox",
       "id": "enable_overlap",
-      "label": "图片交叉叠放",
+      "label": "图片是否交叉",
       "default": true
+    },
+    {
+      "type": "range",
+      "id": "overlap_amount",
+      "label": "交叉程度（0 为不交叉）",
+      "min": 0,
+      "max": 55,
+      "step": 1,
+      "unit": "%",
+      "default": 28,
+      "visible_if": "{{ section.settings.enable_overlap }}"
     },
     {
       "type": "header",
