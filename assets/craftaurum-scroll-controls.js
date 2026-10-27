@@ -24,6 +24,7 @@
         const rtl = getComputedStyle(this.track).direction === 'rtl';
         const max = Math.max(0, this.track.scrollWidth - this.track.clientWidth);
         const current = rtl ? -this.track.scrollLeft : this.track.scrollLeft;
+        this.classList.toggle('is-unscrollable', max < 2);
         this.previous.disabled = max < 2 || current <= 2;
         this.next.disabled = max < 2 || current >= max - 2;
       };
