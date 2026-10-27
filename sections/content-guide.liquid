@@ -6,12 +6,11 @@
 
 <section
   id="ContentGuide-{{ section.id }}"
-  class="section section--{{ section.settings.section_width }} spacing-style ca-content-guide{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
+  class="section section--{{ section.settings.section_width }} spacing-style ca-content-guide{% if section.settings.show_index %} ca-content-guide--show-index{% endif %}{% if section.settings.background_color != blank %} color-custom-{{ section.id }}{% endif %}"
   style="
     --padding-block-start: {{ section.settings.padding_top }}px;
     --padding-block-end: {{ section.settings.padding_bottom }}px;
     --ca-guide-gap: {{ section.settings.column_gap }}px;
-    --ca-guide-image-size: {{ section.settings.item_image_size }}px;
     
     --ca-guide-line: {{ section.settings.line_color }};
     --ca-guide-eyebrow-color: {{ section.settings.eyebrow_color }};
@@ -73,20 +72,6 @@
             {% endif %}
 
             <div class="ca-content-guide__item-content">
-              {% if block.settings.image != blank %}
-                <div class="ca-content-guide__thumb ca-content-guide__thumb--{{ section.settings.item_image_shape }}">
-                  {{
-                    block.settings.image
-                    | image_url: width: 500
-                    | image_tag:
-                      loading: 'lazy',
-                      class: 'ca-content-guide__thumb-image',
-                      widths: '96,144,192,240,320,420,500',
-                      sizes: section.settings.item_image_size | append: 'px'
-                  }}
-                </div>
-              {% endif %}
-
               <div class="ca-content-guide__item-heading-wrap">
                 <div class="ca-content-guide__item-head">
                   {% if block.settings.heading != blank %}
@@ -236,24 +221,18 @@
     min-width: 0;
   }
 
-  .ca-content-guide__item {
+  .ca-content-guide__item { display: block; }
+  .ca-content-guide--show-index .ca-content-guide__item {
     display: grid;
     grid-template-columns: 42px minmax(0, 1fr);
     gap: 20px;
     align-items: start;
   }
-
   .ca-content-guide__item .ca-content-guide__item-content {
-    display: grid;
-    grid-template-columns: minmax(150px, .72fr) minmax(0, 1.28fr);
-    gap: 26px;
-    align-items: start;
+    display: block;
+    min-width: 0;
   }
-
-  .ca-content-guide__item .ca-content-guide__thumb {
-    grid-column: 1 / -1;
-    margin-bottom: 2px;
-  }
+  .ca-content-guide__item-heading-wrap { margin-bottom: 10px; }
 
   .ca-content-guide__item .ca-content-guide__item-head {
     display: block;
@@ -289,44 +268,6 @@
 
   .ca-content-guide__item--right {
     text-align: right;
-  }
-
-  .ca-content-guide__item--center .ca-content-guide__thumb {
-    margin-inline: auto;
-  }
-
-  .ca-content-guide__item--right .ca-content-guide__thumb {
-    margin-left: auto;
-  }
-
-  .ca-content-guide__thumb {
-    width: var(--ca-guide-image-size);
-    margin-bottom: 16px;
-    overflow: hidden;
-  }
-
-  .ca-content-guide__thumb--circle {
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-  }
-
-  .ca-content-guide__thumb--square {
-    aspect-ratio: 1 / 1;
-  }
-
-  .ca-content-guide__thumb--landscape {
-    aspect-ratio: 4 / 3;
-  }
-
-  .ca-content-guide__thumb--wide {
-    aspect-ratio: 16 / 9;
-  }
-
-  .ca-content-guide__thumb-image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 
   .ca-content-guide__item-head {
@@ -491,7 +432,7 @@
       padding: 22px 0 24px;
     }
 
-    .ca-content-guide__item {
+    .ca-content-guide--show-index .ca-content-guide__item {
       grid-template-columns: 34px minmax(0, 1fr);
       gap: 14px;
     }
@@ -514,9 +455,7 @@
       margin-top: 6px;
     }
 
-    .ca-content-guide__thumb {
-      width: min(var(--ca-guide-image-size), 96px);
-    }
+
   }
 
   @media screen and (max-width: 749px) {
@@ -610,40 +549,6 @@
     {
       "type": "header",
       "content": "图片设置"
-    },
-    {
-      "type": "select",
-      "id": "item_image_shape",
-      "label": "图片形状",
-      "options": [
-        {
-          "value": "circle",
-          "label": "圆形"
-        },
-        {
-          "value": "square",
-          "label": "正方形"
-        },
-        {
-          "value": "landscape",
-          "label": "长方形 4:3"
-        },
-        {
-          "value": "wide",
-          "label": "横图 16:9"
-        }
-      ],
-      "default": "square"
-    },
-    {
-      "type": "range",
-      "id": "item_image_size",
-      "label": "图片固定宽度",
-      "min": 48,
-      "max": 180,
-      "step": 4,
-      "unit": "px",
-      "default": 88
     },
     {
       "type": "image_picker",
@@ -972,11 +877,6 @@
       "type": "item",
       "name": "指南项目",
       "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "小图"
-        },
         {
           "type": "text",
           "id": "value",
