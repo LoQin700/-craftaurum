@@ -835,3 +835,22 @@
   - 0 个 35/16 等旧手机字号值残留在这些自建 Section 实例中。
 - 首页 index.json 本轮未重写，因为用户已确认首页显示正确；Section Schema 的默认值也仍保持相同移动端标准。
 - 如果 Shopify 编辑器在这批新提交同步后仍有某个具体页面显示旧值，应以该页面模板文件名 + Section 名称现场定位，不再假设是全局同步问题。
+
+## 2026-10-27 · 手机字号问题最终定位：3 个卡片型 Section 源码默认值未改
+- 用户在 Shopify Customization 页面现场截图确认：`image-cards` 手机端仍显示 25 / 16 / 22 / 15，其中 25 是用户手动改的，说明之前并非“同步问题”，而是 Section 源码及部分实例值仍未真正统一。
+- 重新逐一读取 17 个自建 Section 当前 GitHub main Schema 后确认，真正仍保留旧 mobile 默认值的只有：
+  - `content-cards`
+  - `image-cards`
+  - `process-cards`
+- 已将这 3 个 Section 源码 mobile 默认值统一为：
+  - 标题 25
+  - 正文 14
+  - 卡片/步骤标题 18
+  - 卡片/步骤正文 14
+  - 对带小标题的 Section，小标题保持 12
+- 随后再次强制重写除首页外全部现有页面模板实例手机字号，避免已保存实例值继续覆盖 Schema default。
+- 现场重点页 `page.customization.json` 已重新读回确认：
+  - `capabilities` / `image-cards` = 25 / 14 / 18 / 14
+  - `process_cards` / `process-cards` = 12 / 25 / 14 / 18 / 14
+- 同时重新读取 `image-cards.liquid`、`content-cards.liquid`、`process-cards.liquid`，三者 mobile Schema default 均已改为上述新标准。
+- 此前关于“只是 Shopify 同步状态导致”的判断不准确，本条为修正后的根因记录。
