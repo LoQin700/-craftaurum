@@ -1,0 +1,43 @@
+name: Validate Editorial Contact Update
+
+on:
+  push:
+    branches:
+      - fix/editorial-contact-width-required
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate contact requirements
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          text=Path('sections/editorial-contact.liquid').read_text(encoding='utf-8')
+          assert 'max-width:13ch' not in text
+          assert 'autocomplete="organization" required' in text
+          assert 'Name <small class="ca-editorial-contact__required"' in text
+          assert 'Email <small class="ca-editorial-contact__required"' in text
+          assert 'Company <small class="ca-editorial-contact__required"' in text
+          assert 'Tell us about your project <small class="ca-editorial-contact__required"' in text
+          assert "section.settings.phone_required" in text
+          assert 'font-size:9px' in text
+          md=Path('PROJECT-PROGRESS.md').read_text(encoding='utf-8')
+          assert '2026-10-27 · Craftaurum V2 视觉系统' in md
+          print('Editorial Contact + MD validation: PASS')
+          PY
+
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
