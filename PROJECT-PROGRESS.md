@@ -408,3 +408,83 @@
   - text/button child blocks
   - image-cards section settings and blocks
 - This correction is specifically to remove code/parser issues before further visual tuning.
+
+
+## 2026-10-27 · Craftaurum V2 视觉系统 / Pearl / Festival / Contact 最新状态
+
+### 全局自定义 Section 规范
+- Craftaurum 自定义 Section 已统一向 V2 规范收口：主标题默认 **35px**（Banner / Hero 除外），字号统一使用 Range，不再以 H1/H2/H3 预设作为主要控制方式。
+- 共用入场动画体系已建立：`Fade Up` / `Fade In` / `Soft Zoom`，默认使用轻量动画；兼容 `prefers-reduced-motion`。
+- Horizon 全局动态已开启：`page_transition_enabled=true`、`transition_to_main_product=true`。
+- 自定义 Section 动画使用独立 reveal 脚本，支持首次刷新、滚动进入视口、Theme Editor section reload / select 时播放。
+- 动画默认不再全部使用同一种，Pearl 页面已按区块穿插 Fade In / Fade Up / Soft Zoom。
+- 图片展示规则更新：**除“图片画廊”外，其它展示型 Section 不再做 Hover 图片切换 / Hover 放大**；图文卡片已删除 Hover 图片字段与切换逻辑。
+
+### 图文横幅 / 图文卡片 / 叠层图文 / 交互图文
+- 图文横幅支持背景颜色开启 / 关闭；Banner 主标题保持大字号，不受 35px 全局 Section 标题标准限制。
+- 图文卡片支持 `Style 1 / Style 2`：
+  - Style 1：原居中标题 + 居中说明。
+  - Style 2：左标题 / 右说明。
+  - 可开启顶部 1px 细分隔线。
+- 图文卡片新增独立“上下行间距” Range，默认 36px；左右间距与上下行距分开控制。
+- 叠层图文桌面布局精简为：**重叠 / 不重叠**；重叠时提供“图片交叉程度” Range；每张图片保留独立 Rotation Range；删除 Hover 放大与 X/Y 工程化偏移设置。
+- 交互图文：
+  - 去掉小标题。
+  - 标题区支持 `Style 1 / Style 2`。
+  - Style 2 已修正为与下方文字列表 / 图片区使用同一套列比例与 gap，保证上下垂直对齐。
+  - 图片支持“跟随文字高度”或“固定高度并与文字居中”。
+
+### Pearl Jewelry Manufacturer 页面
+- 独立模板：`templates/page.pearl-jewelry.json`。
+- 内容顺序保持 Sunrise Pearl 页信息结构：Hero → Pearl Types → Business / Editorial Visual → Product Showcase → Manufacturing Process → Why Choose → Editorial Contact。
+- Pearl Types 默认 Style 2：左标题 / 右说明，顶部细线，桌面 4 列。
+- Product Showcase 使用 3 列大图 Grid，文字左对齐，不做 Hover 图片切换。
+- Process 使用 Style 2 + 图片跟随文字高度。
+- Why Choose 使用独立 `why-choose-craftaurum.liquid`，桌面默认 4 列细线结构，不再使用卡片盒子。
+- Contact 使用独立 `editorial-contact.liquid`。
+
+### Festival Jewelry Wholesale 页面
+- 独立模板：`templates/page.festival-jewelry.json`。
+- 页面按 Sunrise Festival Jewelry Wholesale 结构重做；曾因 Shopify GitHub 集成 schema 校验失败而无法保存，已修正：
+  - `gap` 值必须符合 Range step。
+  - `padding_bottom` 不得超过 Section schema 最大值。
+- 当前最终结构：
+  1. Festival Intro
+  2. Christmas 图文介绍
+  3. Christmas 图片画廊（同白色背景）
+  4. Halloween 图文介绍
+  5. Halloween 图片画廊（同 `#F8F7F4`）
+  6. Thanksgiving 图文介绍
+  7. Thanksgiving 图片画廊（同白色背景）
+  8. Black Friday 图文介绍
+  9. Black Friday 图片画廊（同 `#17191A`）
+  10. Why Choose Craftaurum
+  11. Seasonal Jewelry Customization / 内容指南
+  12. Editorial Contact
+- Festival 页已经移除全部图文卡片，改成“每个节日一个完整章节 + 同背景图片画廊”的连续结构。
+- Customization Options 已从卡片改为内容指南，避免页面重复出现卡片结构。
+
+### 内容指南
+- `sections/content-guide.liquid` 已收口为**单一最终结构**，不再保留 Style 1 / Style 2。
+- 顶部固定为纵向：小标题 → 主标题 → 简介。
+- 下方使用连续 Editorial 行：编号 + 标题 + 正文；可开启 / 关闭 01 / 02 / 03 编号。
+- 右侧保持大图 + 标题 + 说明；不做 Hover 图片放大。
+- Festival 页面默认使用编号 01–06。
+
+### Editorial Contact
+- 新增 / 统一使用 `sections/editorial-contact.liquid`，视觉为左侧项目说明 + 右侧下划线表单。
+- 后台只开放必要设置：背景色、文字色、左侧文字字号、上下边距、入场动画、Phone 是否必填。
+- 表单字段固定：Name / Email / Company / Phone / Message。
+- 当前必填规则：
+  - Name：必填
+  - Email：必填
+  - Company：必填
+  - Message：必填
+  - Phone：默认非必填；仅在后台开启 `Phone 必填` 后才变为必填。
+- 所有必填字段标签后显示一个很小的 `※`；非必填字段不显示。
+- Contact 左侧标题原有 `max-width:13ch` 会导致长标题被压成多行，已改为使用完整左侧列宽，标题与说明的阅读宽度更自然。
+
+### 当前待继续核查
+- 仍需全局检查所有页面底部 Contact：部分旧模板可能仍保留 Horizon 原生 Contact Form，尚未全部替换为 `editorial-contact.liquid`。
+- 需要按页面逐一核对并迁移：Jewelry category pages、OEM、Customization、Gold / Material pages、Collections 等；替换时保留各页面自己的标题 / 说明文案。
+- “历史自定义 Section 全局审计”仍在继续：目标是进一步清理旧字号预设、旧 Hover 图像逻辑，并统一动画 / 35px 标题规则。
