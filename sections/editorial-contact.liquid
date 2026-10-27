@@ -14,6 +14,7 @@
     --ca-contact-padding-bottom: {{ section.settings.padding_bottom }}px;
   "
 >
+  <span id="craftaurum-jewelry-inquiry" class="ca-contact-anchor" aria-hidden="true"></span>
   <div class="ca-editorial-contact__surface">
     <div class="ca-editorial-contact__inner" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
       <div class="ca-editorial-contact__copy">
@@ -169,6 +170,7 @@
     .ca-editorial-contact__heading { font-size: var(--ca-contact-heading-size-mobile); }
     .ca-editorial-contact__body { font-size: var(--ca-contact-body-size-mobile); }
   }
+  .ca-contact-anchor { display:block; position:relative; height:0; scroll-margin-top:110px; }
 {% endstylesheet %}
 
 {% schema %}
