@@ -161,7 +161,7 @@
         "top_url": "shopify://pages/solid-gold-jewelry",
         "top_button_style": "button",
         "cta_label": "",
-        "cta_url": "shopify://collections/all",
+        "cta_url": "shopify://pages/all-jewelry-collections",
         "cta_button_style": "button",
         "image": "shopify://shop_images/solid-gold-jewelry.jpg",
         "image_position": "left",
