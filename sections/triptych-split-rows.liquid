@@ -20,6 +20,8 @@
     --ca-triptych-text-color: {{ section.settings.text_color }};
     --ca-triptych-heading-size: {{ section.settings.heading_size | default: 35 }}px;
     --ca-triptych-body-size: {{ section.settings.body_size | default: 16 }}px;
+    --ca-triptych-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 25 }}px;
+    --ca-triptych-body-size-mobile: {{ section.settings.mobile_body_size | default: 14 }}px;
   "
 >
   <div class="ca-triptych-split__rows" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
@@ -142,6 +144,9 @@
   }
 
   @media screen and (max-width: 749px) {
+    .ca-triptych-split__title { font-size: var(--ca-triptych-heading-size-mobile); }
+    .ca-triptych-split__body { font-size: var(--ca-triptych-body-size-mobile); }
+    .ca-triptych-split__body :is(p, ul, ol) { font-size: inherit; }
     .ca-triptych-split__row {
       grid-template-columns: 1fr;
       gap: 0;
@@ -192,6 +197,8 @@
     { "type": "color", "id": "text_color", "label": "文字颜色", "default": "#17191A" },
     { "type": "range", "id": "heading_size", "label": "标题字号", "min": 18, "max": 56, "step": 1, "unit": "px", "default": 35 },
     { "type": "range", "id": "body_size", "label": "正文字号", "min": 12, "max": 22, "step": 1, "unit": "px", "default": 16 },
+    { "type": "range", "id": "mobile_heading_size", "label": "手机端标题字号", "min": 16, "max": 48, "step": 1, "unit": "px", "default": 25 },
+    { "type": "range", "id": "mobile_body_size", "label": "手机端正文字号", "min": 12, "max": 22, "step": 1, "unit": "px", "default": 14 },
     { "type": "select", "id": "animation_style", "label": "入场动画", "options": [
       { "value": "fade-up", "label": "Fade Up" },
       { "value": "fade-in", "label": "Fade In" },
