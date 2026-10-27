@@ -1,4 +1,4 @@
-/* Shopify template: custom category cards use manual title/image/link only. */
+/* Craftaurum page template. Hero background is controlled directly by background_color. */
 {
   "sections": {
     "main": {
@@ -71,7 +71,6 @@
         "catalog_url": "",
         "padding_top": 40,
         "padding_bottom": 40,
-        "use_background": true,
         "eyebrow_size": 12,
         "heading_size": 58,
         "body_size": 16,
@@ -178,7 +177,6 @@
         "catalog_url": "",
         "padding_top": 48,
         "padding_bottom": 48,
-        "use_background": true,
         "eyebrow_size": 12,
         "heading_size": 58,
         "body_size": 16,
