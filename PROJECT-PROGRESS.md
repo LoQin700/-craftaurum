@@ -704,3 +704,22 @@
   - 两个叠层图文模板已读回，旧高度字段全部清除，两个图片 Block 原角度完整；
   - 叠层图文的双端 `aspect-ratio` 变量、三种手机布局规则及保留的旋转控制都已静态检查。
 - **待实测事项**：Shopify 主题同步 / Theme Editor 真正保存、Theme Check CLI、手机 375/390px 与平板 768px 的横滑箭头触控、PC 轮播按钮和左右边界、三图叠层在不同长宽比/较大旋转角下的裁切与高度；静态检查不代替真实浏览器视觉测试。
+
+## 2026-10-27 · 轮播箭头再修复：全部改为左右侧悬浮大号无框 Chevron
+- 用户提供 Shopify 编辑器截图：手机端 `process-cards`（流程卡片）、`image-cards`（图片卡片）等轮播没有可见箭头；`content-cards`（图文卡片）的切换箭头被显示在卡片底部（PC 与 Mobile）。要求 **所有带轮播的 Section 切换箭头改在内容左右两侧、去掉圆圈边框和背景，仅保留大的 < / > Chevron**。
+- 根因：之前共用的 `ca-scroll-controls` 被渲染为轨道下方的普通 flex 控件，并且 JS 仅观察轨道自身尺寸，媒体查询切换后卡片溢出宽度变化不一定被检测，因此箭头可能被错误标记为不可滚动。
+- 已更新共用组件：
+  - `assets/craftaurum-scroll-controls.css`：新增 `.ca-carousel-stage` 相对定位容器；箭头宿主改为 `position:absolute; inset:0` 和 `justify-content:space-between`，两个按钮悬浮左右边缘，高度居中；移除所有圆形边框、背景、阴影；SVG 箭头为 38px（手机 34px），保持可点击 40–44px 热区、禁用态降低透明度，支持 PC/Mobile/Tablet 显示条件。
+  - `snippets/craftaurum-scroll-controls.liquid`：换为更加清晰的大号纯线条 Chevron，继续保留上/下一张 ARIA 文本，不渲染圆框。
+  - `assets/craftaurum-scroll-controls.js`：保留按实际卡片间距 `scrollBy`、边界禁用和无滚动时隐藏；增加监听窗口 resize/load、轨道各子卡片尺寸变化与动态 Block 插入/移除（ResizeObserver + MutationObserver），解决切换编辑器预览宽度后箭头可能误隐藏的问题。
+- 将**五个 scroll-snap Section** 的卡片轨道与共用箭头一起包进 `.ca-carousel-stage`，确保箭头是相对图片/卡片区域绝对定位，不再显示在正文/图片下方：
+  1. `image-gallery.liquid`（图片画廊）
+  2. `image-collection-grid.liquid`（分类图片展示）
+  3. `content-cards.liquid`（图文卡片）
+  4. `image-cards.liquid`（图片卡片）
+  5. `process-cards.liquid`（流程卡片）
+- `overlap-image-text.liquid`（叠层图文）的横滑箭头也移动到包裹图片区的 `.ca-carousel-stage.ca-overlap__stage` 内；因本 Section 是左右图文 Grid，额外修正了桌面右图排列和手机顺序选择器，避免箭头被渲染成第 3 列把正文挤错位。
+- `brand-partners.liquid`（图片轮播）保留 Horizon 原生 Slideshow（不重复加载共用控件），将原生箭头改为可见的大号无框侧边 Chevron，`icon_style: 'chevron-large'`，独立局部 CSS 取消边框背景。
+- 当对应端选择「网格」或内容不足以滚动时共用箭头不出现；选择轮播且存在实际溢出时才显示左右侧箭头。所有原 Section setting ID、Block、文字、商品图、滚动手势、手机和电脑端显示方式选项均保持不变。
+- **静态验证**：上述 7 个 Section Schema JSON 均可解析；共享 JS 可通过 JavaScript 语法编译；共享 CSS 大括号匹配、不包含边框样式；6 个使用共用箭头的 Section HTML wrapper 嵌套数匹配、共用箭头位于 wrapper 内；共 10 个受影响源码文件检查未发现静态错误。
+- **仍未实测**：Shopify Theme Editor 真正同步后的脚本加载、PC/Mobile 左右箭头点击、Touch scroll、多栏目与滑动边界视觉、Horizon 原生 slideshow 箭头行为。需要在主题同步后以宽度 375/390/768/1440px 的浏览器预览进一步验收；不得将源码核验称为视觉验收。
