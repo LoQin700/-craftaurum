@@ -25,6 +25,11 @@
     --ca-compare-heading-size: {{ section.settings.heading_size | default: 35 }}px;
     --ca-compare-body-size: {{ section.settings.body_size | default: 15 }}px;
     --ca-compare-column-title-size: {{ section.settings.column_title_size | default: 18 }}px;
+    --ca-compare-mobile-cols: {{ section.settings.mobile_visible_columns | default: 2.3 }};
+    --ca-compare-mobile-label-width: {{ section.settings.mobile_label_width | default: 96 }}px;
+    --ca-compare-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 25 }}px;
+    --ca-compare-body-size-mobile: {{ section.settings.mobile_body_size | default: 14 }}px;
+    --ca-compare-column-title-size-mobile: {{ section.settings.mobile_column_title_size | default: 14 }}px;
   "
 >
   <div class="ca-compare__inner" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
@@ -42,7 +47,7 @@
       </header>
     {% endif %}
 
-    <div class="ca-compare__desktop">
+    <div class="ca-compare__desktop" tabindex="0" role="region" aria-label="Comparison table, scroll horizontally to see more columns">
       <div class="ca-compare__table ca-compare__table--{{ section.settings.column_count }}">
         <div class="ca-compare__row ca-compare__row--head">
           <div class="ca-compare__metric ca-compare__metric--head">{{ section.settings.comparison_label | escape }}</div>
@@ -282,95 +287,31 @@
   }
 
   @media screen and (max-width: 749px) {
-    .ca-compare__intro {
-      margin-bottom: 28px;
-    }
-
+    .ca-compare__intro { margin-bottom: 24px; }
+    .ca-compare__heading { font-size: var(--ca-compare-heading-size-mobile); }
+    .ca-compare__description, .ca-compare__description :is(p,ul,ol) { font-size: var(--ca-compare-body-size-mobile); }
     .ca-compare__desktop {
-      display: none;
-    }
-
-    .ca-compare__mobile {
       display: block;
-      border-top: 1px solid var(--ca-compare-line);
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-inline: contain;
+      scrollbar-width: thin;
     }
-
-    .ca-compare__mobile-group {
-      border-bottom: 1px solid var(--ca-compare-line);
-      background: var(--ca-compare-cell-bg);
+    .ca-compare__mobile { display: none; }
+    .ca-compare__table {
+      --ca-compare-option-width: max(118px, calc((100vw - 40px - var(--ca-compare-mobile-label-width)) / var(--ca-compare-mobile-cols)));
+      width: max-content;
+      min-width: 100%;
     }
-
-    .ca-compare__mobile-group--alt {
-      background: var(--ca-compare-alt-bg);
-    }
-
-    .ca-compare__mobile-metric {
-      margin: 0;
-      padding: 14px 16px;
-      background: var(--ca-compare-label-bg);
-      color: var(--ca-compare-metric-text);
-      font-family: var(--font-heading--family);
-      border-bottom: 1px solid var(--ca-compare-line);
-      font-size: 12px;
-      line-height: 1.4;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .ca-compare__mobile-option {
-      display: grid;
-      grid-template-columns: minmax(112px, .42fr) minmax(0, 1fr);
-      gap: 16px;
-      align-items: start;
-      padding: 16px;
-    }
-
-    .ca-compare__mobile-option + .ca-compare__mobile-option {
-      border-top: 1px solid var(--ca-compare-line);
-    }
-
-    .ca-compare__mobile-name {
-      color: var(--ca-compare-header-text);
-      font-size: 13px;
-      line-height: 1.35;
-    }
-
-    .ca-compare__mobile-name strong {
-      display: block;
-      font-family: var(--font-heading--family);
-    }
-
-    .ca-compare__mobile-kicker {
-      display: block;
-      margin-bottom: 4px;
-      color: var(--ca-compare-accent);
-      font-size: 9px;
-      line-height: 1.25;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .ca-compare__mobile-value {
-      color: var(--ca-compare-body-text);
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    .ca-compare__mobile-value p {
-      margin: 0;
-    }
-
-    .ca-compare__mobile-value strong {
-      color: var(--ca-compare-header-text);
-    }
-  }
-
-  @media screen and (max-width: 420px) {
-    .ca-compare__mobile-option {
-      grid-template-columns: 1fr;
-      gap: 8px;
-    }
+    .ca-compare__table--2 .ca-compare__row { grid-template-columns: var(--ca-compare-mobile-label-width) repeat(2, var(--ca-compare-option-width)); }
+    .ca-compare__table--3 .ca-compare__row { grid-template-columns: var(--ca-compare-mobile-label-width) repeat(3, var(--ca-compare-option-width)); }
+    .ca-compare__row > * { padding: 12px 9px; overflow-wrap: anywhere; }
+    .ca-compare__metric { font-size: 11px; letter-spacing: .025em; }
+    .ca-compare__product-title { font-size: var(--ca-compare-column-title-size-mobile); }
+    .ca-compare__value { font-size: var(--ca-compare-body-size-mobile); }
+    .ca-compare__kicker { font-size: 9px; }
   }
 {% endstylesheet %}
 
@@ -427,6 +368,12 @@
     { "type": "range", "id": "heading_size", "label": "标题字号", "min": 24, "max": 72, "step": 1, "unit": "px", "default": 35 },
     { "type": "range", "id": "body_size", "label": "正文字号", "min": 12, "max": 22, "step": 1, "unit": "px", "default": 15 },
     { "type": "range", "id": "column_title_size", "label": "列标题字号", "min": 14, "max": 30, "step": 1, "unit": "px", "default": 18 },
+    { "type": "header", "content": "手机端表格" },
+    { "type": "select", "id": "mobile_visible_columns", "label": "手机端可见对比列", "options": [{ "value": "2", "label": "约 2 列" },{ "value": "2.3", "label": "约 2.3 列" },{ "value": "2.7", "label": "约 2.7 列" },{ "value": "3", "label": "约 3 列" }], "default": "2.3" },
+    { "type": "range", "id": "mobile_label_width", "label": "手机端左侧对比项宽度", "min": 72, "max": 144, "step": 4, "unit": "px", "default": 96 },
+    { "type": "range", "id": "mobile_heading_size", "label": "手机端标题字号", "min": 16, "max": 48, "step": 1, "unit": "px", "default": 25 },
+    { "type": "range", "id": "mobile_body_size", "label": "手机端正文字号", "min": 12, "max": 22, "step": 1, "unit": "px", "default": 14 },
+    { "type": "range", "id": "mobile_column_title_size", "label": "手机端列标题字号", "min": 12, "max": 24, "step": 1, "unit": "px", "default": 14 },
     { "type": "select", "id": "animation_style", "label": "入场动画", "options": [
       { "value": "fade-up", "label": "Fade Up" },
       { "value": "fade-in", "label": "Fade In" },
