@@ -27,7 +27,7 @@
     --ca-banner-padding-bottom: {{ padding_bottom }}px;
     --ca-banner-eyebrow-size: {{ section.settings.eyebrow_size | default: 12 }}px;
     --ca-banner-eyebrow-size-mobile: {{ section.settings.mobile_eyebrow_size | default: 12 }}px;
-    --ca-banner-heading-size: {{ section.settings.heading_size | default: 58 }}px;
+    --ca-banner-heading-size: {{ section.settings.heading_size | default: 40 }}px;
     --ca-banner-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 48 }}px;
     --ca-banner-body-size: {{ section.settings.body_size | default: 16 }}px;
     --ca-banner-body-size-mobile: {{ section.settings.mobile_body_size | default: 16 }}px;
@@ -97,7 +97,7 @@
   }
   .ca-editorial-banner__layout {
     display: grid;
-    grid-template-columns: minmax(0,.82fr) minmax(0,1.18fr);
+    grid-template-columns: minmax(0,1.18fr) minmax(0,.82fr);
     gap: clamp(28px,5vw,76px);
     align-items: center;
   }
@@ -107,6 +107,7 @@
     aspect-ratio: var(--ca-banner-ratio);
     overflow: hidden;
   }
+  .ca-editorial-banner__layout--image-right { grid-template-columns: minmax(0,.82fr) minmax(0,1.18fr); }
   .ca-editorial-banner__layout--image-right .ca-editorial-banner__media { grid-column: 2; grid-row: 1; }
   .ca-editorial-banner__layout--image-right .ca-editorial-banner__content { grid-column: 1; grid-row: 1; }
   .ca-editorial-banner__image,
@@ -132,7 +133,8 @@
 
   @media screen and (max-width: 749px) {
     .ca-editorial-banner__inner--full-width { padding-inline: 18px; }
-    .ca-editorial-banner__layout { grid-template-columns:minmax(0,1fr); gap:22px; }
+    .ca-editorial-banner__layout,
+    .ca-editorial-banner__layout--image-right { grid-template-columns:minmax(0,1fr); gap:22px; }
     .ca-editorial-banner__layout--image-right .ca-editorial-banner__media,
     .ca-editorial-banner__layout--image-right .ca-editorial-banner__content { grid-column:1; grid-row:auto; }
     .ca-editorial-banner__layout--image-right .ca-editorial-banner__content { order:0; }
@@ -293,7 +295,7 @@
       "max": 88,
       "step": 2,
       "unit": "px",
-      "default": 58
+      "default": 40
     },
     {
       "type": "range",
