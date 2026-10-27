@@ -279,7 +279,7 @@
         "why_1": {
           "type": "item",
           "settings": {
-            "icon": "star",
+            "icon": "ruler",
             "title": "Custom Plating Development",
             "description": "<p>Build plating color and finish around your design direction, target market and product positioning.</p>"
           }
@@ -287,7 +287,7 @@
         "why_2": {
           "type": "item",
           "settings": {
-            "icon": "check_box",
+            "icon": "eye",
             "title": "Consistent Color & Finish",
             "description": "<p>Coordinate surface preparation, plating and final QC for more consistent collection-level results.</p>"
           }
@@ -295,7 +295,7 @@
         "why_3": {
           "type": "item",
           "settings": {
-            "icon": "leaf",
+            "icon": "check_box",
             "title": "Flexible Base Materials",
             "description": "<p>Develop plated jewelry across suitable silver, brass and other compatible material directions.</p>"
           }
