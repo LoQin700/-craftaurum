@@ -1,0 +1,17 @@
+{% comment %}
+  Shared arrows for scroll-snap tracks. Render as the track's next sibling.
+  Params: track_selector, desktop, mobile.
+  The shared JS discovers only the adjacent component's track.
+{% endcomment %}
+<ca-scroll-controls
+  class="ca-scroll-controls{% if desktop %} ca-scroll-controls--desktop{% endif %}{% if mobile %} ca-scroll-controls--mobile{% endif %}"
+  data-track="{{ track_selector | escape }}"
+  aria-label="Image carousel controls"
+>
+  <button type="button" class="ca-scroll-controls__button" data-direction="previous" aria-label="Previous slide">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m15 5-7 7 7 7"/></svg>
+  </button>
+  <button type="button" class="ca-scroll-controls__button" data-direction="next" aria-label="Next slide">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 5 7 7-7 7"/></svg>
+  </button>
+</ca-scroll-controls>
