@@ -182,6 +182,7 @@
         "desktop_columns": 4,
         "image_ratio": "square",
         "image_size": 100,
+        "image_fit": "cover",
         "mobile_columns": 1,
         "mobile_layout": "carousel",
         "heading_size": 35,
@@ -192,8 +193,7 @@
         "mobile_disclaimer_size": 12,
         "animation_style": "fade-in",
         "padding_top": 40,
-        "padding_bottom": 20,
-        "image_fit": "cover"
+        "padding_bottom": 20
       }
     },
     "home_manufacturer_intro": {
@@ -593,9 +593,10 @@
         "disclaimer": "",
         "autoplay": true,
         "autoplay_speed": 3,
-        "desktop_columns": 4,
+        "desktop_columns": 5,
         "image_ratio": "square",
-        "image_size": 100,
+        "image_size": 60,
+        "image_fit": "cover",
         "mobile_columns": 2,
         "mobile_layout": "carousel",
         "heading_size": 35,
@@ -606,8 +607,7 @@
         "mobile_disclaimer_size": 12,
         "animation_style": "fade-in",
         "padding_top": 40,
-        "padding_bottom": 20,
-        "image_fit": "cover"
+        "padding_bottom": 20
       }
     },
     "home_customization_banner": {
