@@ -7,7 +7,6 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-/* Existing page mobile typography standardized: 12 / 25 / 14 / 18. */
 {
   "sections": {
     "main": {
@@ -65,77 +64,29 @@
       "name": "图文横幅",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
         "eyebrow": "JEWELRY MANUFACTURING",
         "heading": "Custom Rings for Jewelry Brands",
         "introduction": "<p>Explore ring designs that can be developed around your brand, from gemstone and pearl rings to classic metal bands and personalized signet styles. Share your references, preferred materials and setting details to discuss suitable construction and finishing options.</p><p>For custom ring projects, design feasibility, samples, minimum order quantity and production timing should be confirmed against your specifications before quotation.</p>",
+        "quote_label": "Get B2B Quote",
+        "quote_url": "",
+        "catalog_label": "Request Catalog",
+        "catalog_url": "",
+        "hero_image": "shopify://shop_images/rings.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
-        "quote_label": "Get B2B Quote",
-        "quote_url": "shopify://pages/contact",
-        "catalog_label": "Request Catalog",
-        "catalog_url": "shopify://pages/contact",
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "hero_image": "shopify://shop_images/rings.jpg",
         "eyebrow_size": 12,
         "heading_size": 58,
         "body_size": 16,
-        "animation_style": "fade-up",
         "mobile_eyebrow_size": 12,
         "mobile_heading_size": 25,
-        "mobile_body_size": 14
-      }
-    },
-    "horizontal_cta_Pwad7F": {
-      "type": "custom-richtext",
-      "name": "自定义富文本",
-      "settings": {
-        "section_width": "full-width",
-        "anchor_id": "",
-        "layout_style": "horizontal",
-        "alignment": "left",
-        "content_width": 1200,
-        "heading_size": 35,
-        "body_size": 16,
-        "mobile_heading_size": 25,
         "mobile_body_size": 14,
-        "background_color": "#17191a",
-        "text_color": "#f8f7f4",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
         "animation_style": "fade-up",
-        "padding_top": 36,
-        "padding_bottom": 36
-      },
-      "blocks": {
-        "title": {
-          "type": "title",
-          "settings": {
-            "heading": "Personalized Ring Design, Sampling & Production",
-            "heading_tag": "h2"
-          }
-        },
-        "body": {
-          "type": "body",
-          "settings": {
-            "body": "<p>Discuss your ring ideas, stone choices, engraving, sizes and finishes with our team. A clear brief helps guide sample development and an accurate project quotation.</p>"
-          }
-        },
-        "buttons": {
-          "type": "buttons",
-          "settings": {
-            "label_1": "Discover Our Process",
-            "link_1": "shopify://pages/contact",
-            "style_1": "button-secondary"
-          }
-        }
-      },
-      "block_order": [
-        "title",
-        "body",
-        "buttons"
-      ]
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     },
     "content_cards_xi8xGJ": {
       "type": "content-cards",
@@ -143,45 +94,45 @@
         "card_dADhNg": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/November-birthstone-rings-1.jpg",
             "title": "Gemstone Rings",
             "description": "<p>Consider color, cut and prong or bezel settings for gemstone-led ring designs. Share stone preferences and sizing details for a feasibility review.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact us",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/contact",
-            "image": "shopify://shop_images/November-birthstone-rings-1.jpg"
+            "link": "shopify://pages/contact"
           }
         },
         "card_WtWhNM": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/S1158-R.jpg",
             "title": "Pearl Rings",
             "description": "<p>Explore pearl ring concepts with different pearl sizes, bands and metal finishes, balancing visual detail and practical setting requirements.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact us",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/contact",
-            "image": "shopify://shop_images/S1158-R.jpg"
+            "link": "shopify://pages/contact"
           }
         },
         "card_CfDadY": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/plated-pearl-rings.jpg",
             "title": "Signet Rings",
             "description": "<p>Develop a flat-face signet ring around initials, a logo, engraved motifs or a distinctive brand symbol. Engraving and finishing depend on the chosen material.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact us",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/contact",
-            "image": "shopify://shop_images/plated-pearl-rings.jpg"
+            "link": "shopify://pages/contact"
           }
         },
         "card_PcNzcH": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/Aries-jewelry.jpg",
             "title": "Metal Rings",
             "description": "<p>Review understated bands, sculptural metal rings, textured finishes and suitable material options for the intended price point and market.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact us",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/contact",
-            "image": "shopify://shop_images/Aries-jewelry.jpg"
+            "link": "shopify://pages/contact"
           }
         }
       },
@@ -194,37 +145,40 @@
       "name": "图文卡片",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
         "eyebrow": "JEWELRY DESIGN RANGE",
         "heading": "Explore Custom Ring Styles",
         "description": "<p>Explore gemstone, pearl, signet and metal ring directions inspired by the key categories on the reference collection page. Material and setting availability is reviewed for each design.</p>",
-        "desktop_layout": "grid",
-        "desktop_columns": "4",
-        "mobile_layout": "carousel",
-        "mobile_columns": "1",
+        "intro_button_label": "",
+        "intro_button_link": "",
+        "intro_button_style": "button",
         "image_ratio": "portrait",
-        "gap": 20,
-        "padding_top": 56,
-        "padding_bottom": 56,
+        "image_width": 100,
         "intro_style": "style_1",
-        "show_divider": false,
-        "divider_color": "#D8D5CE",
+        "card_text_alignment": "left",
+        "gap": 20,
+        "row_gap": 36,
+        "desktop_columns": "4",
+        "desktop_layout": "grid",
+        "mobile_columns": "1",
+        "mobile_layout": "carousel",
         "eyebrow_size": 12,
         "heading_size": 35,
         "body_size": 16,
         "card_title_size": 18,
         "card_body_size": 15,
-        "animation_style": "fade-up",
-        "image_width": 100,
-        "card_text_alignment": "left",
-        "row_gap": 36,
         "mobile_eyebrow_size": 12,
         "mobile_heading_size": 25,
         "mobile_body_size": 14,
         "mobile_card_title_size": 18,
-        "mobile_card_body_size": 14
+        "mobile_card_body_size": 14,
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "show_divider": false,
+        "divider_color": "#d8d5ce",
+        "animation_style": "fade-up",
+        "padding_top": 56,
+        "padding_bottom": 56
       }
     },
     "interactive_feature_cFYGmj": {
@@ -274,18 +228,24 @@
         "section_width": "page-width",
         "heading": "Custom Ring Design & Manufacturing Considerations",
         "description": "<p>Different ring styles require different decisions in materials, stone setting, engraving and fit. Discuss the details below when preparing a custom ring enquiry.</p>",
-        "padding_top": 56,
-        "padding_bottom": 56,
+        "visual_height_mode": "match_text",
+        "visual_height": 520,
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "show_index": true,
         "intro_style": "style_1",
         "heading_size": 35,
         "body_size": 16,
         "item_title_size": 20,
         "item_body_size": 15,
-        "animation_style": "fade-up",
         "mobile_heading_size": 25,
         "mobile_body_size": 14,
         "mobile_item_title_size": 18,
-        "mobile_item_body_size": 14
+        "mobile_item_body_size": 14,
+        "animation_style": "fade-up",
+        "padding_top": 56,
+        "padding_bottom": 56
       }
     },
     "image_text_feature_pyXify": {
@@ -293,31 +253,33 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
         "heading": "Custom Ring Manufacturing From Your Design Brief",
-        "heading_position": "top",
         "subtitle": "CUSTOM GEMSTONE, PEARL, SIGNET & METAL RINGS",
+        "body": "<p>Whether you are planning a gemstone statement ring, a pearl ring, a personalized signet or a minimal metal band, the design starts with your reference, preferred material and target market.</p><p>Provide dimensions, sizes, stone or engraving requirements and the approximate quantity. We can discuss feasible construction, sampling, finishing options and next steps through the enquiry form.</p>",
+        "show_buttons": true,
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
-        "body": "<p>Whether you are planning a gemstone statement ring, a pearl ring, a personalized signet or a minimal metal band, the design starts with your reference, preferred material and target market.</p><p>Provide dimensions, sizes, stone or engraving requirements and the approximate quantity. We can discuss feasible construction, sampling, finishing options and next steps through the enquiry form.</p>",
+        "cta_label": "Start Your Project",
+        "cta_url": "",
+        "cta_button_style": "button-secondary",
+        "image": "shopify://shop_images/jewelry-manufacturer.jpg",
         "image_position": "left",
         "image_ratio": "landscape",
-        "cta_label": "Start Your Project",
-        "cta_url": "shopify://pages/contact",
-        "cta_button_style": "button-secondary",
-        "padding_top": 32,
-        "padding_bottom": 32,
-        "image": "shopify://shop_images/jewelry-manufacturer.jpg",
+        "heading_position": "top",
+        "heading_tag": "h2",
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up",
         "mobile_heading_size": 25,
         "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "mobile_body_size": 14,
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "icon_with_text_support": {
@@ -369,31 +331,33 @@
       "name": "图标文字",
       "settings": {
         "section_width": "page-width",
+        "eyebrow": "MANUFACTURING SUPPORT",
+        "heading": "Support for Your Custom Ring Project",
+        "description": "<p>Plan the important decisions before requesting a sample or production quotation.</p>",
+        "icon_position": "top",
+        "icon_size": 32,
+        "icon_gap": 16,
         "background_color": "#f8f7f4",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "style_preset": "centered",
-        "icon_position": "top",
-        "icon_size": 32,
-        "icon_gap": 16,
+        "show_divider": false,
         "column_gap": 32,
-        "eyebrow": "MANUFACTURING SUPPORT",
-        "heading": "Support for Your Custom Ring Project",
-        "description": "<p>Plan the important decisions before requesting a sample or production quotation.</p>",
         "desktop_columns": "4",
         "mobile_columns": "1",
-        "padding_top": 72,
-        "padding_bottom": 72,
         "eyebrow_size": 12,
         "heading_size": 35,
         "body_size": 15,
         "item_title_size": 18,
-        "animation_style": "fade-up",
+        "item_body_size": 15,
         "mobile_eyebrow_size": 12,
         "mobile_heading_size": 25,
         "mobile_body_size": 14,
         "mobile_item_title_size": 18,
-        "mobile_item_body_size": 14
+        "mobile_item_body_size": 14,
+        "animation_style": "fade-up",
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "section_m4j6NK": {
@@ -401,28 +365,27 @@
       "name": "分栏联系表单",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#F8F7F4",
-        "text_color": "#17191A",
         "eyebrow": "START A RING PROJECT",
-        "eyebrow_size": 12,
         "heading": "Start Your Custom Ring Project",
-        "heading_size": 35,
         "description": "<p>Share your ring design, materials, stones, finish, quantity and development requirements with our team.</p>",
-        "body_size": 16,
         "phone_required": false,
-        "animation_style": "fade-up",
-        "padding_top": 96,
-        "padding_bottom": 96,
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 16,
         "mobile_eyebrow_size": 12,
         "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "mobile_body_size": 14,
+        "animation_style": "fade-up",
+        "padding_top": 96,
+        "padding_bottom": 96
       }
     }
   },
   "order": [
     "main",
     "jewelry_collections_overview_tkTByC",
-    "horizontal_cta_Pwad7F",
     "content_cards_xi8xGJ",
     "interactive_feature_cFYGmj",
     "image_text_feature_pyXify",

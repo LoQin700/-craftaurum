@@ -471,7 +471,7 @@
     },
     "contact": {
       "type": "editorial-contact",
-      "name": "分栏联系表单",
+      "name": "联系表单 - Editorial",
       "settings": {
         "section_width": "page-width",
         "background_color": "#F8F7F4",
