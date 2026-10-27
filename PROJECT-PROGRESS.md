@@ -555,3 +555,23 @@
 - 已改写 `PERSONALIZED-JEWELRY-REFERENCE-MAP.md`，逐图标明当前 Shopify 绑定和待上传文件名，不再建议在 Section 输入参考图片 URL。
 - 代码检查：17/17 自建 Section Schema 可解析、均无 `external_image_url`；三个相关页面 JSON 可解析、无临时 URL 字段；未发现仍使用笼统“重点颜色”的 `accent_color` 标签。
 - **仍需** Shopify GitHub Sync、Theme Check CLI、Theme Editor 字段显示/保存及 PC/Tablet/Mobile 实际浏览器检查。此前文档中的“临时外链图片回退”方案已被本条正式废止。
+
+## 2026-10-27 · 自建 Section PC/Mobile 布局分组 + 入场动画位置统一
+- 用户提供 Shopify 设置截图，要求电脑端和移动端布局参数以各自独立的 Header 分区，顺序优先「每行显示数量」→「展示方式」，后台中文标签统一；又补充要求 **所有自建 Section 的「入场动画」统一放在设置列表底部，位于「上边距」「下边距」之前**。
+- 已直接修改 Showcase 当前包含的 **17 个自建 `sections/*.liquid` 的 Schema**，没有修改模板实例 `settings` 或任何 Liquid、CSS、JS 前端布局逻辑。
+- 其中 **9 个**有双端专属布局参数，已统一为「电脑端布局」 / 「移动端布局」：
+  - `image-collection-grid.liquid`（分类图片展示）
+  - `content-cards.liquid`（图文卡片）
+  - `interactive-feature.liquid`（交互图文，仅图标文字模式使用列数）
+  - `icon-with-text.liquid`（图标文字）
+  - `image-cards.liquid`（图片卡片，电脑端可选常规/展示型排列；常规模式才由列数控制）
+  - `process-cards.liquid`（流程卡片）
+  - `image-gallery.liquid`（图片画廊）
+  - `overlap-image-text.liquid`（叠层图文，双端独立图片展示模式）
+  - `why-choose-craftaurum.liquid`（优势展示）
+- `brand-partners.liquid`（图片轮播）原本只提供移动端列数和网格/轮播设置，因此**只新增「移动端布局」分组**，不伪造电脑端设置。
+- 另外 7 个没有双端专属布局的 Section，不新增无效 PC/Mobile 设置，但同样调整入场动画的后台顺序。
+- 后台列数字段统一显示「每行显示数量」；已有显示模式统一显示「展示方式」，并保留各组件自己的选项值与真实行为；没有对应展示方式的组件不新增该设置。
+- 对修改前后逐项比对，原有 Setting ID、Schema type、select 选项、range min/max/step、默认值与 `visible_if` 条件不变；为交互图文、图片卡片的条件生效列数增加简短提示。
+- 提交后重新拉取仓库 17 个 Schema 检查：**17/17 通过 JSON 解析、后台动画尾部顺序以及有设备参数的分组顺序检查**。原有模板 JSON 未修改。
+- **尚未独立完成** Shopify CLI Theme Check、Shopify GitHub 同步核验、Theme Editor 实际显示/保存与 PC/Tablet/Mobile 浏览器验收。
