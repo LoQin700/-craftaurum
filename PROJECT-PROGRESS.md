@@ -580,3 +580,13 @@
 - 用户要求删除 Theme Settings → Buttons 里「不设置则继承 Horizon 智能 Hover 配色」这句多余的 `info`。
 - 已在 `config/settings_schema.json` 的一级/二级按钮 Hover 背景、文字、边框这 6 项设置中删除对应 `info` 字段，保留所有 Setting ID、默认颜色和 Hover 实际逻辑。
 - 已读回 GitHub 文件，核实六项均无对应说明且 JSON 解析通过。Shopify Theme Editor 实际显示待同步确认。
+
+## 2026-10-27 · 自建 Section 字号全局分组及移动端字号独立控制
+- 用户决定将自建 Section 的字号设置**统一集中在后台设置列表底部**，采用两个分组「电脑端字号」与「移动端字号」，后面依次为「入场动画 → 上边距 → 下边距」；相比在每个文案设置旁散落字号，这种结构更适合在 Section Showcase 中逐项验收。
+- 已修改 Section Showcase 当前涉及的 **17 个自建 Section Liquid 源文件**。将所有已有的 61 个桌面字号 Range 项移动至「电脑端字号」，并新增 **61 个对应移动端 Range**，ID 以 `mobile_` + 原 `id` 组成，原 desktop ID、默认值、range、CSS 绑定保留不变。新增移动端 CSS 自定义变量和 `max-width:749px` 下的实际文字字号覆盖，确保不是只新增后台空设置。
+- 手机端新字号默认通常与原桌面默认字号保持一致，避免无故改变既有基础视觉；图文横幅原 58px 大标题依据旧手机端 48px 上限将移动端默认设为 48px。用户可以在各 Section 中独立修改手机字号。
+- 发现 `icon-with-text.liquid` 的原有 `heading_size` 没有给标题前端 CSS 使用：现已给 `.ca-icon-text__heading` 接上原字号变量和移动端变量。
+- `image-collection-grid.liquid`（分类图片展示）的卡片 Block 已删除「产品系列」collection picker，并同步修改 `snippets/craftaurum-collection-card.liquid`，取消根据 Collection 自动取图、取标题及链接的逻辑，只保留卡片自己的**标题 / 图片 / 手动链接**。已清理 `templates/index.json`、`templates/page.oem-jewellery.json` 和 `templates/page.section-showcase.json` 中共 17 个空的旧 `collection` Block 配置值。无需修改已有卡片图片或标题。
+- 已逐个重新读取并检查：17/17 自建 Section Schema 可解析、**61/61** 移动字号设置 ID 对应原桌面字号、具有绑定的移动端 CSS 变量、两组字号位于后台底部且在动画/Padding 之前；相关模板 JSON 可解析。
+- 设置分组只针对已有 Typography 字号参数，不额外新增移动端字体家族或字重设置。桌面端现有数字/颜色/链接/区块顺序不变。
+- 此次尚未运行 Shopify CLI Theme Check；Shopify GitHub Sync、Theme Editor 实际保存与 Desktop/Mobile 前台预览仍需检查。
