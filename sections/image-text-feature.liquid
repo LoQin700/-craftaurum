@@ -41,7 +41,11 @@
       {% if section.settings.heading_position != 'content' %}
         <header class="ca-feature__header">
           {% if section.settings.heading != blank %}
-            <h2 class="ca-feature__heading">{{ section.settings.heading | escape }}</h2>
+            {% if section.settings.heading_tag == 'h1' %}
+              <h1 class="ca-feature__heading">{{ section.settings.heading | escape }}</h1>
+            {% else %}
+              <h2 class="ca-feature__heading">{{ section.settings.heading | escape }}</h2>
+            {% endif %}
           {% endif %}
           {% if section.settings.subtitle != blank %}
             <p class="ca-feature__subtitle">{{ section.settings.subtitle | escape }}</p>
@@ -67,7 +71,11 @@
               <p class="ca-feature__subtitle">{{ section.settings.subtitle | escape }}</p>
             {% endif %}
             {% if section.settings.heading != blank %}
+              {% if section.settings.heading_tag == 'h1' %}
+              <h1 class="ca-feature__heading">{{ section.settings.heading | escape }}</h1>
+            {% else %}
               <h2 class="ca-feature__heading">{{ section.settings.heading | escape }}</h2>
+            {% endif %}
             {% endif %}
           {% endif %}
           {% if section.settings.body != blank %}
@@ -380,6 +388,22 @@
         }
       ],
       "default": "top"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "标题标签",
+      "options": [
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h1",
+          "label": "H1"
+        }
+      ],
+      "default": "h2"
     },
     {
       "type": "header",
