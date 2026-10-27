@@ -168,7 +168,7 @@
           "settings": {
             "title": "Custom Fashion Jewelry",
             "image": "shopify://shop_images/custom-fashion-jewelry.jpg",
-            "link": ""
+            "link": "shopify://pages/fashion-jewelry"
           }
         },
         "cat_rings": {
@@ -176,7 +176,7 @@
           "settings": {
             "title": "Custom Rings",
             "image": "shopify://shop_images/rings.jpg",
-            "link": ""
+            "link": "shopify://pages/custom-rings"
           }
         },
         "cat_earrings": {
@@ -184,7 +184,7 @@
           "settings": {
             "title": "Custom Earrings",
             "image": "shopify://shop_images/gold-earrings.jpg",
-            "link": ""
+            "link": "shopify://pages/custom-earrings"
           }
         },
         "cat_necklace": {
@@ -192,7 +192,7 @@
           "settings": {
             "title": "Custom Necklace",
             "image": "shopify://shop_images/nameplate-necklace.jpg",
-            "link": ""
+            "link": "shopify://pages/custom-necklaces"
           }
         },
         "cat_bracelets": {
@@ -200,7 +200,7 @@
           "settings": {
             "title": "Custom Bracelets",
             "image": "shopify://shop_images/chain-bracelets.jpg",
-            "link": ""
+            "link": "shopify://pages/custom-bracelets"
           }
         },
         "cat_artisanal": {
@@ -208,7 +208,7 @@
           "settings": {
             "title": "Artisanal Jewelry",
             "image": "shopify://shop_images/French-jewelry-700x441.jpg",
-            "link": ""
+            "link": "shopify://pages/artisanal-jewelry"
           }
         }
       },
@@ -292,7 +292,7 @@
           "type": "buttons",
           "settings": {
             "label_1": "Discover Our Process",
-            "link_1": "",
+            "link_1": "shopify://pages/customization",
             "style_1": "button-secondary"
           }
         }
@@ -568,7 +568,7 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/plated-jewelry-2.jpg",
-            "link": "",
+            "link": "shopify://pages/gold-plated-jewelry",
             "title": "Plated Jewelry",
             "description": "<p>Plating colors and surface finishes tailored to the look of your collection.</p>",
             "horizontal_alignment": "left",
@@ -579,7 +579,7 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/3d-render-1.jpg",
-            "link": "",
+            "link": "shopify://pages/customization",
             "title": "3D Render",
             "description": "<p>Refine proportion, structure and key details before physical sampling.</p>",
             "horizontal_alignment": "left",
@@ -590,7 +590,7 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/gemstone-setting-400x400.jpg",
-            "link": "",
+            "link": "shopify://pages/customization",
             "title": "Stone Setting & Making",
             "description": "<p>Develop setting directions around the structure and visual balance of the piece.</p>",
             "horizontal_alignment": "left",
@@ -601,7 +601,7 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/custom-sterling-silver-jewelry-3.jpg",
-            "link": "",
+            "link": "shopify://pages/sterling-silver-jewelry",
             "title": "Custom Sterling Silver Jewelry",
             "description": "<p>Develop silver-led collections around your own design, finish and brand direction.</p>",
             "horizontal_alignment": "left",
@@ -612,7 +612,7 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/custom-gold-jewelry-2.jpg",
-            "link": "",
+            "link": "shopify://pages/solid-gold-jewelry",
             "title": "Custom Gold Jewelry",
             "description": "<p>Build refined gold jewelry concepts around proportion, craftsmanship and finishing.</p>",
             "horizontal_alignment": "left",
@@ -1077,13 +1077,13 @@
           "type": "buttons",
           "settings": {
             "label_1": "Christmas Jewelry",
-            "link_1": "",
+            "link_1": "shopify://pages/contact",
             "style_1": "button-secondary",
             "label_2": "Halloween Jewelry",
-            "link_2": "",
+            "link_2": "shopify://pages/contact",
             "style_2": "button-secondary",
             "label_3": "Thanksgiving Gift",
-            "link_3": "",
+            "link_3": "shopify://pages/contact",
             "style_3": "button-secondary"
           }
         }
