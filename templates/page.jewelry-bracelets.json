@@ -125,7 +125,7 @@
           "type": "buttons",
           "settings": {
             "label_1": "Start Your Bracelet Project",
-            "link_1": "",
+            "link_1": "shopify://pages/contact",
             "style_1": "button-secondary"
           }
         }
@@ -147,7 +147,7 @@
             "description": "<p>Develop chain bracelet concepts with suitable link styles, lengths, clasps and surface finishes for your collection.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         },
         "card_WtWhNM": {
@@ -158,7 +158,7 @@
             "description": "<p>Explore bead sizes, decorative combinations and fastening options, taking comfort and wearability into account.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         },
         "card_CfDadY": {
@@ -169,7 +169,7 @@
             "description": "<p>Consider smooth, textured or embellished bangle designs with practical dimensions, opening details and finish choices.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         },
         "card_PcNzcH": {
@@ -180,7 +180,7 @@
             "description": "<p>Discuss expressive bracelet concepts with decorative forms, plated finishes and construction tailored to your design brief.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         }
       },
@@ -299,7 +299,7 @@
         "top_url": "",
         "top_button_style": "button",
         "cta_label": "Start Your Project",
-        "cta_url": "",
+        "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-secondary",
         "image": "shopify://shop_images/custom-fashion-jewelry.jpg",
         "image_position": "left",
