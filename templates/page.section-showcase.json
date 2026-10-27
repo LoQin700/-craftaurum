@@ -1,12 +1,4 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+/* Craftaurum visual QA showroom: independently editable custom sections using real category imagery. */
 {
   "sections": {
     "main": {
@@ -127,32 +119,32 @@
     },
     "image_text": {
       "type": "image-text-feature",
-      "name": "02 · Custom Initial & Name Jewelry",
+      "name": "02 · 图文介绍（Initial Jewelry）",
       "settings": {
         "section_width": "page-width",
         "background_color": "#ffffff",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
-        "heading": "02 | Custom Initial & Name Jewelry",
+        "heading": "Initial Jewelry Wholesale Manufacturer",
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-in",
-        "heading_position": "top",
+        "animation_style": "fade-up",
+        "heading_position": "content",
         "subtitle": "",
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
-        "body": "<p>Initials and names give customers a simple way to make everyday jewelry their own. Explore letter pendants, nameplate necklaces, monogram charms and coordinated bracelet or earring designs for your next collection.</p><p>We can discuss letterform direction, size, metal choices, surface finishes and stone accents, then develop samples to evaluate proportions and wearability before production.</p>",
-        "image": "shopify://shop_images/custom-inital-necklace.jpg",
-        "external_image_url": "",
+        "body": "<p>Initial and name jewelry gives customers the ability to wear something distinctly their own. Craftaurum supports brand-led development of initial necklaces, monogram pendants, nameplate necklaces, bracelets and coordinating jewelry sets.</p><p>Discuss your preferred letterforms, metal finish, accent stones, sizing and collection scope with our team. We can help refine the design direction for sampling and planned wholesale quantities.</p>",
+        "image": "",
+        "external_image_url": "https://www.sunrise-jewel.com/wp-content/uploads/2024/09/2024-08-28-1-600x452.webp",
         "image_position": "right",
         "image_ratio": "landscape",
-        "cta_label": "Explore Initial Jewelry Development",
-        "cta_url": "shopify://pages/contact",
+        "cta_label": "",
+        "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 80,
-        "padding_bottom": 24
+        "padding_bottom": 40
       }
     },
     "collection_grid": {
@@ -724,41 +716,29 @@
           "settings": {
             "image": "shopify://shop_images/custom-letters-jewelry.jpg"
           }
-        },
-        "image_4": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/nameplate-necklace.jpg"
-          }
         }
       },
       "block_order": [
         "image_1",
         "image_2",
-        "image_3",
-        "image_4"
+        "image_3"
       ],
-      "name": "11 · Custom Initial & Name Jewelry Gallery",
+      "name": "11 · 图片画廊（Initial Jewelry）",
       "settings": {
         "section_width": "page-width",
         "background_color": "#ffffff",
-        "intro_alignment": "left",
         "heading": "",
-        "heading_size": 35,
         "description": "",
-        "body_size": 16,
         "button_label": "",
-        "button_style": "button-unstyled",
-        "link": "",
         "animation_style": "fade-in",
         "desktop_layout": "grid",
-        "desktop_columns": 4,
+        "desktop_columns": 3,
         "mobile_layout": "grid",
         "mobile_columns": 2,
-        "image_ratio": "square",
+        "image_ratio": "landscape",
         "gap": 16,
         "padding_top": 0,
-        "padding_bottom": 80
+        "padding_bottom": 88
       }
     },
     "overlap_image_text": {
