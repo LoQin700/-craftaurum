@@ -199,6 +199,15 @@
       gap: min(var(--ca-triptych-image-gap), 10px);
     }
   }
+
+  /* Subtle image hover without moving the image container. */
+  .ca-triptych-split__image { transition: transform .48s cubic-bezier(.2,.7,.2,1); transform: scale(1); }
+  @media (hover: hover) and (pointer: fine) {
+    .ca-triptych-split__image-wrap:hover .ca-triptych-split__image { transform: scale(1.055); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ca-triptych-split__image { transition: none; }
+  }
 {% endstylesheet %}
 
 {% schema %}
