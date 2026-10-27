@@ -781,3 +781,14 @@
 - 个别原手机标题 Range 最小值高于 25px（如 Editorial Contact 28px）时，只做最小必要调整以允许 25px 合法保存；如 step 与新默认值不兼容则改为 1。其他 Range 范围保持原值。
 - 已重新读取 17 个 Section Schema：**17/17 通过**，62 个手机字号设置全部符合目标默认值，且 default 均处于 min/max 范围内并符合 step。
 - 尚未在 Shopify Theme Editor 中验证旧页面实例是否已保存过显式字号值；已有实例如果显式保存了旧值，Theme Editor 可能继续保留该实例值，需要逐页确认。新建 Section 与未显式保存的设置会使用新的默认值。
+
+## 2026-10-27 · 修正：手机字号不仅改默认值，也已同步所有现有模板实例
+- 用户指出此前只修改 Section Schema 的手机字号 `default` 不够；Shopify 已存在页面模板中已经保存了旧实例值（例如 `mobile_heading_size: 35`、`mobile_body_size: 16`），因此 Theme Editor 仍显示旧值。
+- 本次已直接修改现有模板 JSON 中所有自建 Section 实例的手机字号，统一写入显式值：
+  - 主标题：25px
+  - 正文 / 简介 / 卡片正文 / 项目正文 / 右侧正文：14px
+  - 小标题 / 副标题 / 底部说明 / 数值 / 附加信息：12px
+  - 卡片标题 / 项目标题 / 右侧标题：18px
+- 已同步模板：`index.json`、`page.section-showcase.json`、`page.customization.json`、`page.oem-jewellery.json`、`page.jewelry-collections.json`、Rings / Necklace / Earrings / Bracelets / Fashion / Artisanal、`page.pearl-jewelry.json`、`page.personalized-jewelry.json`、`page.festival-jewelry.json`、`page.contact.json`，共 **15 个现有模板**。
+- 最终读回校验：15/15 模板通过，共 **120 个自建 Section 实例、403 个显式 mobile 字号字段**全部与新标准一致，0 个旧值残留。
+- Section Schema 的新默认值仍保留，用于以后新建的 Section；现有模板则以本次显式值为准。
