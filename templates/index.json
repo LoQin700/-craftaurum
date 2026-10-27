@@ -7,69 +7,19 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-/* Shopify template: custom category cards use manual title/image/link only. */
 {
   "sections": {
     "hero_jVaWmY": {
       "type": "hero",
-      "blocks": {
-        "text_YLPk4p": {
-          "type": "text",
-          "name": "t:names.heading",
-          "settings": {
-            "text": "<p>Browse our latest products</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
-            "type_preset": "h2",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "text_color": "{{ settings.color_palette.background }}",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
-        },
-        "button_H9gpTf": {
-          "type": "button",
-          "name": "t:names.button",
-          "settings": {
-            "label": "Shop all",
-            "link": "shopify://pages/all-jewelry-collections",
-            "open_in_new_tab": false,
-            "style_class": "button-custom",
-            "custom_button_background": "rgba(0,0,0,0)",
-            "custom_button_text": "{{ settings.color_palette.background }}",
-            "custom_button_border": "{{ settings.color_palette.background }}",
-            "link_text_color": "",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "text_YLPk4p",
-        "button_H9gpTf"
-      ],
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
+        "image_1": "shopify://shop_images/custom-fashion-jewelry.jpg",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
         "media_type_1_mobile": "image",
+        "image_1_mobile": "shopify://shop_images/custom-fashion-jewelry.jpg",
         "media_type_2_mobile": "image",
         "link": "",
         "open_in_new_tab": false,
@@ -82,19 +32,17 @@
         "vertical_alignment_flex_direction_column": "flex-end",
         "gap": 24,
         "section_width": "page-width",
-        "section_height": "medium",
+        "section_height": "large",
         "section_height_custom": 50,
         "background_color": "rgba(0,0,0,0)",
         "toggle_overlay": true,
-        "overlay_color": "#12121266",
+        "overlay_color": "#1212121F",
         "overlay_style": "solid",
         "gradient_direction": "to bottom",
         "blurred_reflection": false,
         "reflection_opacity": 75,
         "padding-block-start": 100,
-        "padding-block-end": 72,
-        "image_1": "shopify://shop_images/custom-fashion-jewelry.jpg",
-        "image_1_mobile": "shopify://shop_images/custom-fashion-jewelry.jpg"
+        "padding-block-end": 72
       }
     },
     "brand_partners_BGpjWX": {
@@ -147,22 +95,23 @@
       ],
       "name": "图片轮播",
       "settings": {
+        "section_width": "page-width",
         "heading": "Trusted by Jewelry Partners Worldwide",
         "description": "<p>At Craftaurum, we work with jewelry brands and industry partners to bring thoughtful designs and reliable craftsmanship to life. We value long-term collaboration, consistent quality, and solutions tailored to each partner.</p>",
         "disclaimer": "Selected partnerships are shown. Additional collaborations remain confidential under NDA.",
         "autoplay": true,
         "autoplay_speed": 3,
-        "padding_top": 40,
-        "padding_bottom": 20,
         "mobile_columns": 1,
         "mobile_layout": "carousel",
         "heading_size": 35,
         "body_size": 16,
         "disclaimer_size": 13,
-        "animation_style": "fade-in",
         "mobile_heading_size": 25,
         "mobile_body_size": 14,
-        "mobile_disclaimer_size": 12
+        "mobile_disclaimer_size": 12,
+        "animation_style": "fade-in",
+        "padding_top": 40,
+        "padding_bottom": 20
       }
     },
     "image_text_feature_NWRYeQ": {
@@ -172,24 +121,31 @@
         "section_width": "page-width",
         "heading": "Custom Sterling Silver Jewelry Manufacturing",
         "subtitle": "",
+        "body": "<p>Discover the art of custom sterling silver jewelry with Craftaurum. From early design concepts to casting, polishing and plating, our team supports each step of the manufacturing process with care and attention to detail.</p><p>Whether you are developing a signature piece or a complete collection, we help bring your vision to life with thoughtful craftsmanship, flexible customization and consistent finishing.</p><p>Connect with Craftaurum to explore the possibilities for your next jewelry project.</p>",
+        "show_buttons": true,
         "top_label": "S925 Jewelry Custom",
         "top_url": "shopify://pages/sterling-silver-jewelry",
         "top_button_style": "button",
-        "body": "<p>Discover the art of custom sterling silver jewelry with Craftaurum. From early design concepts to casting, polishing and plating, our team supports each step of the manufacturing process with care and attention to detail.</p><p>Whether you are developing a signature piece or a complete collection, we help bring your vision to life with thoughtful craftsmanship, flexible customization and consistent finishing.</p><p>Connect with Craftaurum to explore the possibilities for your next jewelry project.</p>",
-        "image_position": "right",
         "cta_label": "Start Your Project",
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-unstyled",
-        "padding_top": 32,
-        "padding_bottom": 32,
         "image": "shopify://shop_images/custom-sterling-silver-jewelry-3.jpg",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "heading_position": "top",
+        "heading_tag": "h2",
         "heading_size": 40,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up",
         "mobile_heading_size": 25,
         "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "mobile_body_size": 14,
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "image_text_feature_YzURpA": {
@@ -199,44 +155,50 @@
         "section_width": "page-width",
         "heading": "Custom Solid Gold Jewelry at Craftaurum",
         "subtitle": "",
+        "body": "<p>Craftaurum creates custom gold jewelry designed to reflect each brand’s distinctive style. From individual pieces to complete collections, we combine thoughtful design, precise production and a commitment to material quality.</p><p>Our customization options span precious-metal choices, detailed finishing and gold plating in a range of tones and specifications, helping brands develop pieces tailored to their market.</p><p>Speak with our team to explore your ideas and create a collection that feels uniquely yours.</p>",
+        "show_buttons": true,
         "top_label": "Gold Jewelry Custom",
         "top_url": "shopify://pages/solid-gold-jewelry",
         "top_button_style": "button",
-        "body": "<p>Craftaurum creates custom gold jewelry designed to reflect each brand’s distinctive style. From individual pieces to complete collections, we combine thoughtful design, precise production and a commitment to material quality.</p><p>Our customization options span precious-metal choices, detailed finishing and gold plating in a range of tones and specifications, helping brands develop pieces tailored to their market.</p><p>Speak with our team to explore your ideas and create a collection that feels uniquely yours.</p>",
-        "image_position": "left",
         "cta_label": "",
         "cta_url": "shopify://collections/all",
         "cta_button_style": "button",
-        "padding_top": 32,
-        "padding_bottom": 32,
         "image": "shopify://shop_images/solid-gold-jewelry.jpg",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "heading_position": "top",
+        "heading_tag": "h2",
         "heading_size": 40,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up",
         "mobile_heading_size": 25,
         "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "mobile_body_size": 14,
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "image_collection_grid_home_2": {
       "type": "image-collection-grid",
-      "name": "分类图片展示",
       "blocks": {
         "card_1": {
           "type": "card",
           "settings": {
             "title": "Custom Rings",
-            "link": "shopify://pages/custom-rings",
-            "image": "shopify://shop_images/rings.jpg"
+            "image": "shopify://shop_images/rings.jpg",
+            "link": "shopify://pages/custom-rings"
           }
         },
         "card_2": {
           "type": "card",
           "settings": {
             "title": "Custom Earrings",
-            "link": "shopify://pages/custom-earrings",
-            "image": "shopify://shop_images/gold-earrings.jpg"
+            "image": "shopify://shop_images/gold-earrings.jpg",
+            "link": "shopify://pages/custom-rings"
           }
         }
       },
@@ -244,54 +206,54 @@
         "card_1",
         "card_2"
       ],
+      "name": "分类图片展示",
       "settings": {
         "section_width": "page-width",
         "heading": "Explore Our Custom Jewelry Collections",
         "description": "<p>Discover Craftaurum’s custom jewelry collections, from signature rings and earrings to refined bracelets, necklaces, and artisanal designs created for your brand.</p>",
-        "background_color": "{{ settings.color_palette.color3 }}",
-        "mobile_columns": 2,
-        "mobile_layout": "grid",
         "overlay_opacity": 25,
         "gap": 16,
-        "padding_top": 40,
-        "padding_bottom": 12,
         "desktop_columns": 2,
         "desktop_layout": "grid",
+        "mobile_columns": 2,
+        "mobile_layout": "grid",
         "heading_size": 35,
         "body_size": 16,
         "card_title_size": 18,
-        "animation_style": "fade-up",
         "mobile_heading_size": 25,
         "mobile_body_size": 14,
-        "mobile_card_title_size": 18
+        "mobile_card_title_size": 18,
+        "background_color": "{{ settings.color_palette.color3 }}",
+        "animation_style": "fade-up",
+        "padding_top": 40,
+        "padding_bottom": 12
       }
     },
     "image_collection_grid_home_3": {
       "type": "image-collection-grid",
-      "name": "分类图片展示",
       "blocks": {
         "card_3": {
           "type": "card",
           "settings": {
             "title": "Custom Bracelets",
-            "link": "shopify://pages/custom-bracelets",
-            "image": "shopify://shop_images/chain-bracelets.jpg"
+            "image": "shopify://shop_images/chain-bracelets.jpg",
+            "link": "shopify://pages/custom-bracelets"
           }
         },
         "card_4": {
           "type": "card",
           "settings": {
             "title": "Custom Necklaces",
-            "link": "shopify://pages/custom-necklaces",
-            "image": "shopify://shop_images/nameplate-necklace.jpg"
+            "image": "shopify://shop_images/nameplate-necklace.jpg",
+            "link": "shopify://pages/custom-necklaces"
           }
         },
         "card_5": {
           "type": "card",
           "settings": {
             "title": "Artisan Jewelry",
-            "link": "shopify://pages/artisanal-jewelry",
-            "image": "shopify://shop_images/OEM-JEWELLERY.jpg"
+            "image": "shopify://shop_images/OEM-JEWELLERY.jpg",
+            "link": "shopify://pages/artisanal-jewelry"
           }
         }
       },
@@ -300,26 +262,27 @@
         "card_4",
         "card_5"
       ],
+      "name": "分类图片展示",
       "settings": {
         "section_width": "page-width",
         "heading": "",
         "description": "",
-        "background_color": "{{ settings.color_palette.color3 }}",
-        "mobile_columns": 2,
-        "mobile_layout": "grid",
         "overlay_opacity": 25,
         "gap": 16,
-        "padding_top": 0,
-        "padding_bottom": 40,
         "desktop_columns": 3,
         "desktop_layout": "grid",
+        "mobile_columns": 2,
+        "mobile_layout": "grid",
         "heading_size": 35,
         "body_size": 16,
         "card_title_size": 18,
-        "animation_style": "fade-up",
         "mobile_heading_size": 25,
         "mobile_body_size": 14,
-        "mobile_card_title_size": 18
+        "mobile_card_title_size": 18,
+        "background_color": "{{ settings.color_palette.color3 }}",
+        "animation_style": "fade-up",
+        "padding_top": 0,
+        "padding_bottom": 40
       }
     }
   },
