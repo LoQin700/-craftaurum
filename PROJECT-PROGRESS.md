@@ -523,3 +523,15 @@
 - 例如 `brand-partners` → `品牌合作`、`image-text-feature` → `图文介绍`、`image-gallery` → `图片画廊`、`editorial-contact` → `联系表单 - Editorial`。
 - 已重新读取 GitHub 文件，逐项验证全部 17 个实例名称与 Preset 完全一致；Section type/blocks/settings/排序均未改变，正式页面未修改。
 - 尚未实测 Shopify Theme Editor 的左侧名称显示和同步状态。
+
+## 2026-10-27 · Showcase 自建 Section 专业命名规范（最新）
+- 用户澄清：**后台 Section 的 schema.name 用专业、通用的组件功能名称**；**Preset name 可以代表具体用途或预设内容**；Section Showcase 中的实例 name 应与 schema.name 一致，便于准确定位对应源码。
+- 本次修正四个 Section 后台名称（均仅改 schema.name，不修改 Preset、设置 ID、Block、Liquid 渲染或媒体绑定）：
+  - `brand-partners.liquid`：Section **图片轮播**，Preset 仍为 **品牌合作**。
+  - `why-choose-craftaurum.liquid`：Section **优势展示**，Preset 仍为 **Why Choose Craftaurum**。
+  - `festival-intro.liquid`：Section **专题导航介绍**，Preset 仍为 **Festival Intro**。
+  - `editorial-contact.liquid`：Section **分栏联系表单**，Preset 仍为 **联系表单 - Editorial**。
+- `templates/page.section-showcase.json` 同步使用通用后台名称，取消“强行与 Preset 相同”的旧规则。
+- 已重新拉取当前 17 类 Section 的 Schema 与测试模板：**17/17 实例名 = 对应 schema.name**，而 Preset 可以与 Section 名称不同，这是有意设计。
+- 早前“测试页实例名应与 presets.name 完全一致”的记录已被本条规范覆盖；以后新增 Section 按此标准统一。
+- 本次只是命名，未改任何正式页面模板实例的已有业务命名；仍需 Shopify GitHub Sync / Theme Editor 现场确认显示是否刷新。
