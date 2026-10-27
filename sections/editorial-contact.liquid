@@ -34,27 +34,27 @@
           {% endif %}
 
           <label class="ca-editorial-contact__field">
-            <span>Name</span>
+            <span class="ca-editorial-contact__label">Name <small class="ca-editorial-contact__required" aria-hidden="true">※</small></span>
             <input type="text" name="contact[name]" value="{{ form.name }}" autocomplete="name" required>
           </label>
 
           <label class="ca-editorial-contact__field">
-            <span>Email</span>
+            <span class="ca-editorial-contact__label">Email <small class="ca-editorial-contact__required" aria-hidden="true">※</small></span>
             <input type="email" name="contact[email]" value="{{ form.email }}" autocomplete="email" required>
           </label>
 
           <label class="ca-editorial-contact__field">
-            <span>Company</span>
-            <input type="text" name="contact[company]" autocomplete="organization">
+            <span class="ca-editorial-contact__label">Company <small class="ca-editorial-contact__required" aria-hidden="true">※</small></span>
+            <input type="text" name="contact[company]" autocomplete="organization" required>
           </label>
 
           <label class="ca-editorial-contact__field">
-            <span>Phone</span>
+            <span class="ca-editorial-contact__label">Phone{% if section.settings.phone_required %} <small class="ca-editorial-contact__required" aria-hidden="true">※</small>{% endif %}</span>
             <input type="tel" name="contact[phone]" value="{{ form.phone }}" autocomplete="tel"{% if section.settings.phone_required %} required{% endif %}>
           </label>
 
           <label class="ca-editorial-contact__field ca-editorial-contact__field--message">
-            <span>Tell us about your project</span>
+            <span class="ca-editorial-contact__label">Tell us about your project <small class="ca-editorial-contact__required" aria-hidden="true">※</small></span>
             <textarea name="contact[body]" required>{{ form.body }}</textarea>
           </label>
 
@@ -80,7 +80,11 @@
     gap:clamp(48px,7vw,110px);
     padding-block:var(--ca-contact-padding-top) var(--ca-contact-padding-bottom);
   }
-  .ca-editorial-contact__copy { align-self:start; padding-top:6px; }
+  .ca-editorial-contact__copy {
+    align-self:start;
+    min-width:0;
+    padding-top:6px;
+  }
   .ca-editorial-contact__eyebrow {
     margin:0 0 22px;
     color:color-mix(in srgb,var(--ca-contact-text) 58%,transparent);
@@ -89,11 +93,12 @@
     text-transform:uppercase;
   }
   .ca-editorial-contact__heading {
-    margin:0 0 56px;
-    max-width:13ch;
+    margin:0 0 34px;
+    width:100%;
+    max-width:none;
     color:inherit;
     font-size:var(--ca-contact-heading-size);
-    line-height:1.02;
+    line-height:1.08;
   }
   .ca-editorial-contact__body {
     max-width:62ch;
@@ -109,9 +114,23 @@
     margin-bottom:26px;
     border-bottom:1px solid color-mix(in srgb,var(--ca-contact-text) 30%,transparent);
   }
-  .ca-editorial-contact__field span {
+  .ca-editorial-contact__label {
+    display:inline-flex;
+    align-items:flex-start;
+    gap:3px;
+    width:max-content;
+    max-width:100%;
     font-size:14px;
     color:color-mix(in srgb,var(--ca-contact-text) 62%,transparent);
+  }
+
+  .ca-editorial-contact__required {
+    position:relative;
+    top:-1px;
+    font-size:9px;
+    line-height:1;
+    font-weight:400;
+    color:color-mix(in srgb,var(--ca-contact-text) 52%,transparent);
   }
   .ca-editorial-contact__field input,
   .ca-editorial-contact__field textarea {
