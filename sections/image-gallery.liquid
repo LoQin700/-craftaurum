@@ -35,8 +35,8 @@
 %}
 <section id="ImageGallery-{{ section.id }}" class="section section--full-width ca-gallery"
   style="--ca-gallery-bg:{{ background_color }};--ca-gallery-gap:{{ gap }}px;--ca-gallery-desktop:{{ desktop_columns }};--ca-gallery-mobile:{{ mobile_columns }};--ca-gallery-ratio:{{ ratio }};--ca-gallery-pt:{{ padding_top }}px;--ca-gallery-pb:{{ padding_bottom }}px;--ca-gallery-heading-size:{{ section.settings.heading_size | default: 35 }}px;
-    --ca-gallery-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 35 }}px;--ca-gallery-body-size:{{ section.settings.body_size | default: 16 }}px;
-    --ca-gallery-body-size-mobile: {{ section.settings.mobile_body_size | default: 16 }}px;">
+    --ca-gallery-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 25 }}px;--ca-gallery-body-size:{{ section.settings.body_size | default: 16 }}px;
+    --ca-gallery-body-size-mobile: {{ section.settings.mobile_body_size | default: 14 }}px;">
   <div class="ca-gallery__surface">
     <div class="ca-gallery__inner ca-gallery__inner--{{ content_width }}{% if section.settings.desktop_layout == 'carousel' %} is-desktop-carousel{% endif %}{% if section.settings.mobile_layout == 'carousel' %} is-mobile-carousel{% endif %}" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-in' }}">
       {% if section.settings.heading != blank or section.settings.description != blank or section.settings.button_label != blank %}
