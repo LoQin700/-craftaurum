@@ -389,7 +389,7 @@
         "desktop_columns": 3,
         "desktop_layout": "grid",
         "mobile_columns": 2,
-        "mobile_layout": "grid",
+        "mobile_layout": "carousel",
         "heading_size": 35,
         "body_size": 16,
         "card_title_size": 18,
