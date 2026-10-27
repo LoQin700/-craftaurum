@@ -236,6 +236,15 @@
     .ca-collection__description { font-size: var(--ca-collection-body-size-mobile); }
     .ca-collection__card-title { font-size: var(--ca-card-type-size-mobile); }
   }
+
+  /* Image-only hover: no layout shifts or added scripts. */
+  .ca-collection__image { transition: transform .48s cubic-bezier(.2,.7,.2,1); transform: scale(1); }
+  @media (hover: hover) and (pointer: fine) {
+    .ca-collection__card:hover .ca-collection__image { transform: scale(1.055); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ca-collection__image { transition: none; }
+  }
 {% endstylesheet %}
 
 {% schema %}
