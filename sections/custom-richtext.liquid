@@ -34,7 +34,11 @@
           {% case block.type %}
             {% when 'title' %}
               {% if block.settings.heading != blank %}
-                <h2 class="ca-richtext__heading" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
+                {% if block.settings.heading_tag == 'h1' %}
+                  <h1 class="ca-richtext__heading" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h1>
+                {% else %}
+                  <h2 class="ca-richtext__heading" {{ block.shopify_attributes }}>{{ block.settings.heading | escape }}</h2>
+                {% endif %}
               {% endif %}
             {% when 'body' %}
               {% if block.settings.body != blank %}
@@ -333,6 +337,22 @@
           "id": "heading",
           "label": "标题",
           "default": "Your Heading"
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "标题标签",
+          "options": [
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h1",
+              "label": "H1"
+            }
+          ],
+          "default": "h2"
         }
       ]
     },
