@@ -66,12 +66,12 @@
       "settings": {
         "section_width": "page-width",
         "eyebrow": "CUSTOM EARRINGS MANUFACTURING",
-        "heading": "Tailor-Made Custom Earrings.",
-        "introduction": "<p>Develop custom earrings for your brand across hoop, stud, pearl and gemstone directions. From initial references and material selection to sampling and finishing, each design can be refined around the style and market of your collection.</p><p>Craftaurum supports earring development for brands and wholesale partners seeking clear communication, flexible customization and consistent production review.</p>",
+        "heading": "Custom Earrings: Studs, Hoops, Pearls & Gemstone Styles",
+        "introduction": "<p>Explore tailor-made earrings for a jewelry brand, including studs, hoops, pearl earrings and gemstone-led designs. Each category offers options in metal construction, dimensions, surface finish and decorative details.</p><p>Share reference images, intended materials, earring backs, quantity and target market so design feasibility and sampling requirements can be discussed before quotation.</p>",
         "quote_label": "Get B2B Quote",
-        "quote_url": "",
+        "quote_url": "shopify://pages/contact",
         "catalog_label": "Request Catalog",
-        "catalog_url": "",
+        "catalog_url": "shopify://pages/contact",
         "hero_image": "shopify://shop_images/gold-earrings.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
@@ -118,7 +118,7 @@
         "body": {
           "type": "body",
           "settings": {
-            "body": "<p>Refine materials, construction, proportions and finishing around the needs of your earring line.</p>"
+            "body": "<p>Have a specific design in mind? Share sketches, materials, quantities and target requirements through our contact form so the next steps can be reviewed.</p>"
           }
         },
         "buttons": {
@@ -143,8 +143,8 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/pearl-earrings-2.jpg",
-            "title": "Pearl Earrings",
-            "description": "<p>Develop refined pearl earring styles using different pearl proportions, metal structures and finishing choices.</p>",
+            "title": "Custom Pearl Earrings",
+            "description": "<p>Explore pearl proportions, stud or drop structures and metal finishes to create styles suited to your brand.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -155,7 +155,7 @@
           "settings": {
             "image": "shopify://shop_images/S1180-E.jpg",
             "title": "Stud Earrings",
-            "description": "<p>Create compact everyday or statement studs with flexible stone, shape and surface-detail options.</p>",
+            "description": "<p>Consider compact metal, gemstone or decorative studs with appropriate earring backs and setting details.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -166,7 +166,7 @@
           "settings": {
             "image": "shopify://shop_images/gold-vermeil-earrings.jpg",
             "title": "Hoop Earrings",
-            "description": "<p>Explore classic, sculptural and embellished hoop directions for different brand aesthetics.</p>",
+            "description": "<p>Develop simple or embellished hoop concepts, reviewing diameters, closures, material and finished weight.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -176,8 +176,8 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/baroque-pearl-earrings.jpg",
-            "title": "Gemstone Earrings",
-            "description": "<p>Build stone-led earring designs around setting style, color direction and overall proportion.</p>",
+            "title": "Gemstone & Drop Earrings",
+            "description": "<p>Discuss gemstone-led and hanging designs, including stone settings, movement, proportions and comfort.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -195,7 +195,7 @@
         "section_width": "page-width",
         "eyebrow": "EARRING DESIGN RANGE",
         "heading": "Explore Custom Earring Styles",
-        "description": "<p>Develop an earring collection through different silhouettes, materials, settings and finishing directions.</p>",
+        "description": "<p>Explore the main styles shown in this category. Share your reference images and specifications to discuss materials, sampling and production feasibility.</p>",
         "image_ratio": "portrait",
         "image_width": 100,
         "intro_style": "style_1",
@@ -292,9 +292,9 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "heading": "Custom Earring Manufacturing for Brand Collections",
-        "subtitle": "ABOUT CRAFTAURUM",
-        "body": "<p>Craftaurum works with jewelry brands and wholesale partners on custom earring development, sampling and production coordination. We focus on the details that affect the finished result, including proportion, fastening structure, setting style and surface finish.</p><p>Use real workshop, polishing, setting or inspection photography here to show how earring designs move from concept to finished product.</p>",
+        "heading": "Tailor-Made Earrings for Brand Collections",
+        "subtitle": "CUSTOM JEWELRY DEVELOPMENT",
+        "body": "<p>From everyday studs and hoop earrings to pearl and gemstone pieces, earring design combines aesthetics with structure and comfort. Key details include post and back styles, overall weight, setting methods and surface finish.</p><p>Send your preferred silhouettes, size references and material requirements. We can review suitable options and discuss a sample-based path to production.</p>",
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
@@ -402,7 +402,7 @@
         "section_width": "page-width",
         "eyebrow": "START AN EARRING PROJECT",
         "heading": "Start Your Custom Earring Project",
-        "description": "<p>Share your earring styles, materials, finishes, quantity and development requirements with our team.</p>",
+        "description": "<p>Share your design reference, preferred material and finish, target size, approximate quantity and delivery location. We can review feasibility and respond with the information needed for sampling and quotation.</p>",
         "phone_required": false,
         "background_color": "#F8F7F4",
         "text_color": "#17191A",
