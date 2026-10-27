@@ -324,7 +324,6 @@
     { "type": "color", "id": "background_color", "label": "背景颜色", "default": "#F8F7F4" },
     { "type": "color", "id": "text_color", "label": "文字颜色", "default": "#17191A" },
     { "type": "color", "id": "accent_color", "label": "小标题颜色", "default": "#C7A85E" },
-
     { "type": "header", "content": "图片布局" },
     {
       "type": "select",
@@ -336,31 +335,9 @@
       ],
       "default": "left"
     },
-    {
-      "type": "select",
-      "id": "desktop_layout",
-      "label": "电脑端图片模式",
-      "options": [
-        { "value": "overlap", "label": "重叠" },
-        { "value": "split", "label": "不重叠" }
-      ],
-      "default": "overlap"
-    },
-    {
-      "type": "select",
-      "id": "mobile_layout",
-      "label": "手机端图片模式",
-      "options": [
-        { "value": "slider", "label": "横向滑动" },
-        { "value": "stack", "label": "上下排列" },
-        { "value": "overlap", "label": "保留重叠" }
-      ],
-      "default": "slider"
-    },
     { "type": "range", "id": "visual_height", "label": "视觉区高度", "min": 320, "max": 760, "step": 20, "unit": "px", "default": 560 },
     { "type": "range", "id": "overlap_amount", "label": "图片交叉程度", "min": 0, "max": 55, "step": 1, "unit": "%", "default": 28, "visible_if": "{{ section.settings.desktop_layout == 'overlap' }}" },
     { "type": "text", "id": "visual_aria_label", "label": "图片区域辅助文字", "default": "Product imagery" },
-
     { "type": "header", "content": "文字" },
     {
       "type": "select",
@@ -392,7 +369,31 @@
       ],
       "default": "button"
     },
-
+    { "type": "header", "content": "间距" },
+    { "type": "range", "id": "column_gap", "label": "图文间距", "min": 20, "max": 100, "step": 4, "unit": "px", "default": 64 },
+    {"type":"header","content":"电脑端布局"},
+    {
+      "type": "select",
+      "id": "desktop_layout",
+      "label": "展示方式",
+      "options": [
+        { "value": "overlap", "label": "重叠" },
+        { "value": "split", "label": "不重叠" }
+      ],
+      "default": "overlap"
+    },
+    {"type":"header","content":"移动端布局"},
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "展示方式",
+      "options": [
+        { "value": "slider", "label": "横向滑动" },
+        { "value": "stack", "label": "上下排列" },
+        { "value": "overlap", "label": "保留重叠" }
+      ],
+      "default": "slider"
+    },
     {
       "type": "select",
       "id": "animation_style",
@@ -404,9 +405,6 @@
       ],
       "default": "fade-up"
     },
-
-    { "type": "header", "content": "间距" },
-    { "type": "range", "id": "column_gap", "label": "图文间距", "min": 20, "max": 100, "step": 4, "unit": "px", "default": 64 },
     { "type": "range", "id": "padding_top", "label": "上边距", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 72 },
     { "type": "range", "id": "padding_bottom", "label": "下边距", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 72 }
   ],
