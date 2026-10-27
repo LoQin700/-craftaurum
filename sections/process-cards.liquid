@@ -36,10 +36,15 @@
     --ca-process-padding-top: {{ section.settings.padding_top }}px;
     --ca-process-padding-bottom: {{ section.settings.padding_bottom }}px;
     --ca-process-eyebrow-size: {{ section.settings.eyebrow_size | default: 12 }}px;
+    --ca-process-eyebrow-size-mobile: {{ section.settings.mobile_eyebrow_size | default: 12 }}px;
     --ca-process-heading-size: {{ section.settings.heading_size | default: 35 }}px;
+    --ca-process-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 35 }}px;
     --ca-process-body-size: {{ section.settings.body_size | default: 16 }}px;
+    --ca-process-body-size-mobile: {{ section.settings.mobile_body_size | default: 16 }}px;
     --ca-process-card-title-size: {{ section.settings.card_title_size | default: 20 }}px;
+    --ca-process-card-title-size-mobile: {{ section.settings.mobile_card_title_size | default: 20 }}px;
     --ca-process-card-body-size: {{ section.settings.card_body_size | default: 15 }}px;
+    --ca-process-card-body-size-mobile: {{ section.settings.mobile_card_body_size | default: 15 }}px;
   "
 >
   <div class="ca-process-cards__surface">
@@ -256,6 +261,14 @@
       transition: none;
     }
   }
+
+  @media screen and (max-width: 749px) {
+    .ca-process-cards__eyebrow { font-size: var(--ca-process-eyebrow-size-mobile); }
+    .ca-process-cards__heading { font-size: var(--ca-process-heading-size-mobile); }
+    .ca-process-cards__description { font-size: var(--ca-process-body-size-mobile); }
+    .ca-process-card__title { font-size: var(--ca-process-card-title-size-mobile); }
+    .ca-process-card__text { font-size: var(--ca-process-card-body-size-mobile); }
+  }
 {% endstylesheet %}
 
 {% schema %}
@@ -287,11 +300,6 @@
       "label": "正文",
       "default": "<p>Show the main stages from development to finished production.</p>"
     },
-    {"type":"range","id":"eyebrow_size","label":"小标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
-    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
-    {"type":"range","id":"body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
-    {"type":"range","id":"card_title_size","label":"步骤标题字号","min":14,"max":32,"step":1,"unit":"px","default":20},
-    {"type":"range","id":"card_body_size","label":"步骤正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
     {
       "type": "select",
       "id": "image_ratio",
@@ -366,6 +374,18 @@
       ],
       "default": "carousel"
     },
+    {"type":"header","content":"电脑端字号"},
+    {"type":"range","id":"eyebrow_size","label":"小标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"range","id":"card_title_size","label":"步骤标题字号","min":14,"max":32,"step":1,"unit":"px","default":20},
+    {"type":"range","id":"card_body_size","label":"步骤正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
+    {"type":"header","content":"移动端字号"},
+    {"type":"range","id":"mobile_eyebrow_size","label":"小标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
+    {"type":"range","id":"mobile_heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"mobile_body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"range","id":"mobile_card_title_size","label":"步骤标题字号","min":14,"max":32,"step":1,"unit":"px","default":20},
+    {"type":"range","id":"mobile_card_body_size","label":"步骤正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
     {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
     {
       "type": "range",
