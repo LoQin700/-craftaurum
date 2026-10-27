@@ -43,7 +43,7 @@
             "heading": "SHOP",
             "menu_spacing": 12,
             "show_as_accordion": true,
-            "accordion_icon": "caret",
+            "accordion_icon": "plus",
             "accordion_dividers": false,
             "background_color": "",
             "text_color": "",
