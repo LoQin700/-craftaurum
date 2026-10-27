@@ -413,29 +413,29 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/jewelry-design.jpg",
-            "title": "Order Quantity & Sampling",
+            "title": "MOQ",
             "description": "<p>Discuss prototype needs, intended order volumes and design complexity. Minimum quantities and sample costs are assessed per project.</p>",
             "button_label": "Learn More",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/jewelry-moq"
+            "link": "shopify://pages/moq"
           }
         },
         "gemstones": {
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/gemstone-setting-400x400.jpg",
-            "title": "Gemstone & Setting Options",
+            "title": "Gemstone",
             "description": "<p>Review suitable gemstones, pearls, simulated stones and setting methods based on the style, structure and target budget.</p>",
             "button_label": "Learn More",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/gemstone-options"
+            "link": "shopify://pages/gemstone"
           }
         },
         "plating": {
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/plating-jewelry.jpg",
-            "title": "Plating & Surface Finishes",
+            "title": "Plating Option",
             "description": "<p>Explore gold-tone, rose-tone, rhodium or other applicable surface treatments, with specifications confirmed for the selected base metal.</p>",
             "button_label": "Learn More",
             "button_style": "button-unstyled",
@@ -450,18 +450,18 @@
             "description": "<p>Compare sterling silver, gold and suitable alternative metal constructions with an emphasis on design feasibility and finish.</p>",
             "button_label": "Learn More",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/jewelry-materials"
+            "link": "shopify://pages/materials"
           }
         },
         "delivery": {
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/delivery.jpg",
-            "title": "Production & Delivery Planning",
+            "title": "Delivery Planning",
             "description": "<p>Align sampling approvals, production milestones, packaging and destination requirements before discussing the delivery schedule.</p>",
             "button_label": "Learn More",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/delivery-lead-times"
+            "link": "shopify://pages/delivery"
           }
         },
         "budget": {
