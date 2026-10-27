@@ -1,4 +1,13 @@
-/* Mobile typography standardized across existing page instances: 12 / 25 / 14 / 18. */
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+/* Craftaurum page template: editorial banner background uses its color picker directly. */
 {
   "sections": {
     "jewelry_overview": {
@@ -18,10 +27,7 @@
         "eyebrow_size": 12,
         "heading_size": 58,
         "body_size": 16,
-        "animation_style": "fade-up",
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "animation_style": "fade-up"
       }
     },
     "gallery_rings": {
@@ -70,9 +76,7 @@
         "body_size": 16,
         "animation_style": "fade-in",
         "background_color": "#ffffff",
-        "image_ratio": "square",
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "image_ratio": "square"
       }
     },
     "gallery_earrings": {
@@ -121,9 +125,7 @@
         "body_size": 16,
         "animation_style": "fade-in",
         "background_color": "#ffffff",
-        "image_ratio": "square",
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "image_ratio": "square"
       }
     },
     "gallery_bracelets": {
@@ -172,9 +174,7 @@
         "body_size": 16,
         "animation_style": "fade-in",
         "background_color": "#ffffff",
-        "image_ratio": "square",
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "image_ratio": "square"
       }
     },
     "gallery_necklaces": {
@@ -223,9 +223,7 @@
         "body_size": 16,
         "animation_style": "fade-in",
         "background_color": "#ffffff",
-        "image_ratio": "square",
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "image_ratio": "square"
       }
     },
     "contact": {
@@ -244,10 +242,7 @@
         "phone_required": false,
         "animation_style": "fade-up",
         "padding_top": 96,
-        "padding_bottom": 96,
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "padding_bottom": 96
       }
     }
   },

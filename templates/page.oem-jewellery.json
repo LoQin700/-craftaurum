@@ -1,4 +1,13 @@
-/* Mobile typography standardized across existing page instances: 12 / 25 / 14 / 18. */
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+/* Craftaurum page template. Hero background is controlled directly by background_color. */
 {
   "sections": {
     "main": {
@@ -74,10 +83,7 @@
         "eyebrow_size": 12,
         "heading_size": 58,
         "body_size": 16,
-        "animation_style": "fade-up",
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "animation_style": "fade-up"
       }
     },
     "oem_categories": {
@@ -157,10 +163,7 @@
         "heading_size": 35,
         "body_size": 16,
         "card_title_size": 18,
-        "animation_style": "fade-up",
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
-        "mobile_card_title_size": 18
+        "animation_style": "fade-up"
       }
     },
     "oem_why": {
@@ -186,10 +189,7 @@
         "eyebrow_size": 12,
         "heading_size": 58,
         "body_size": 16,
-        "animation_style": "fade-up",
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "animation_style": "fade-up"
       }
     },
     "oem_advantages": {
@@ -260,12 +260,7 @@
         "heading_size": 35,
         "body_size": 15,
         "item_title_size": 18,
-        "animation_style": "fade-up",
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
-        "mobile_item_title_size": 18,
-        "mobile_item_body_size": 14
+        "animation_style": "fade-up"
       }
     },
     "process_1": {
@@ -294,10 +289,7 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up",
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "animation_style": "fade-up"
       }
     },
     "process_2": {
@@ -326,10 +318,7 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up",
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "animation_style": "fade-up"
       }
     },
     "process_3": {
@@ -358,10 +347,7 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up",
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "animation_style": "fade-up"
       }
     },
     "process_4": {
@@ -390,10 +376,7 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up",
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "animation_style": "fade-up"
       }
     },
     "process_5": {
@@ -422,10 +405,7 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up",
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "animation_style": "fade-up"
       }
     },
     "process_6": {
@@ -454,10 +434,7 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up",
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "animation_style": "fade-up"
       }
     },
     "contact": {
@@ -476,10 +453,7 @@
         "phone_required": false,
         "animation_style": "fade-up",
         "padding_top": 96,
-        "padding_bottom": 96,
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "padding_bottom": 96
       }
     }
   },

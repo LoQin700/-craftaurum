@@ -1,4 +1,12 @@
-/* Mobile typography standardized across existing page instances: 12 / 25 / 14 / 18. */
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -74,10 +82,7 @@
         "accent_color": "#c7a85e",
         "animation_style": "fade-up",
         "padding_top": 40,
-        "padding_bottom": 40,
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "padding_bottom": 40
       }
     },
     "horizontal_cta_Pwad7F": {
@@ -96,9 +101,7 @@
         "body_size": 16,
         "animation_style": "fade-up",
         "padding_top": 36,
-        "padding_bottom": 36,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "padding_bottom": 36
       }
     },
     "content_cards_xi8xGJ": {
@@ -183,12 +186,7 @@
         "divider_color": "#D8D5CE",
         "animation_style": "fade-up",
         "padding_top": 56,
-        "padding_bottom": 56,
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
-        "mobile_card_title_size": 18,
-        "mobile_card_body_size": 14
+        "padding_bottom": 56
       }
     },
     "interactive_feature_cFYGmj": {
@@ -245,11 +243,7 @@
         "item_body_size": 15,
         "animation_style": "fade-up",
         "padding_top": 56,
-        "padding_bottom": 56,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
-        "mobile_item_title_size": 18,
-        "mobile_item_body_size": 14
+        "padding_bottom": 56
       }
     },
     "image_text_feature_pyXify": {
@@ -278,10 +272,7 @@
         "accent_color": "#c7a85e",
         "animation_style": "fade-up",
         "padding_top": 32,
-        "padding_bottom": 32,
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "padding_bottom": 32
       }
     },
     "icon_with_text_support": {
@@ -352,12 +343,7 @@
         "item_title_size": 18,
         "animation_style": "fade-up",
         "padding_top": 72,
-        "padding_bottom": 72,
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
-        "mobile_item_title_size": 18,
-        "mobile_item_body_size": 14
+        "padding_bottom": 72
       }
     },
     "section_m4j6NK": {
@@ -376,10 +362,7 @@
         "body_size": 16,
         "animation_style": "fade-up",
         "padding_top": 96,
-        "padding_bottom": 96,
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "padding_bottom": 96
       }
     }
   },

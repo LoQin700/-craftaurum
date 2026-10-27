@@ -1,4 +1,13 @@
-/* Mobile typography standardized across existing page instances: 12 / 25 / 14 / 18. */
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+/* Craftaurum page: Layered Image & Text uses independent desktop and mobile visual aspect ratios. */
 {
   "sections": {
     "main": {
@@ -74,10 +83,7 @@
         "body_size": 16,
         "animation_style": "fade-in",
         "padding_top": 40,
-        "padding_bottom": 52,
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "padding_bottom": 52
       }
     },
     "pearl_types": {
@@ -165,12 +171,7 @@
         "gap": 0,
         "row_gap": 36,
         "padding_top": 64,
-        "padding_bottom": 72,
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
-        "mobile_card_title_size": 18,
-        "mobile_card_body_size": 14
+        "padding_bottom": 72
       }
     },
     "pearl_business": {
@@ -226,10 +227,7 @@
         "padding_top": 72,
         "padding_bottom": 76,
         "desktop_visual_ratio": "landscape",
-        "mobile_visual_ratio": "square",
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "mobile_visual_ratio": "square"
       }
     },
     "pearl_products": {
@@ -341,12 +339,7 @@
         "gap": 0,
         "row_gap": 36,
         "padding_top": 72,
-        "padding_bottom": 76,
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
-        "mobile_card_title_size": 18,
-        "mobile_card_body_size": 14
+        "padding_bottom": 76
       }
     },
     "pearl_process": {
@@ -403,11 +396,7 @@
         "mobile_columns": "2",
         "gap": 24,
         "padding_top": 72,
-        "padding_bottom": 72,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
-        "mobile_item_title_size": 18,
-        "mobile_item_body_size": 14
+        "padding_bottom": 72
       }
     },
     "pearl_why": {
@@ -464,11 +453,7 @@
         "mobile_columns": "1",
         "animation_style": "fade-in",
         "padding_top": 72,
-        "padding_bottom": 76,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
-        "mobile_item_title_size": 18,
-        "mobile_item_body_size": 14
+        "padding_bottom": 76
       }
     },
     "contact": {
@@ -487,10 +472,7 @@
         "phone_required": false,
         "animation_style": "fade-up",
         "padding_top": 88,
-        "padding_bottom": 88,
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "padding_bottom": 88
       }
     }
   },

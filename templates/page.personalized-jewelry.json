@@ -1,4 +1,12 @@
-/* Mobile typography standardized across existing page instances: 12 / 25 / 14 / 18. */
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -74,10 +82,7 @@
         "accent_color": "#c7a85e",
         "animation_style": "fade-in",
         "padding_top": 56,
-        "padding_bottom": 64,
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "padding_bottom": 64
       }
     },
     "special": {
@@ -106,10 +111,7 @@
         "accent_color": "#c7a85e",
         "animation_style": "fade-up",
         "padding_top": 80,
-        "padding_bottom": 40,
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "padding_bottom": 40
       }
     },
     "enamel": {
@@ -138,10 +140,7 @@
         "accent_color": "#c7a85e",
         "animation_style": "soft-zoom",
         "padding_top": 80,
-        "padding_bottom": 40,
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "padding_bottom": 40
       }
     },
     "unlock": {
@@ -156,9 +155,7 @@
         "body_size": 16,
         "animation_style": "fade-in",
         "padding_top": 72,
-        "padding_bottom": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "padding_bottom": 12
       }
     },
     "overview": {
@@ -237,11 +234,7 @@
         "card_body_size": 15,
         "animation_style": "fade-up",
         "padding_top": 32,
-        "padding_bottom": 88,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
-        "mobile_card_title_size": 18,
-        "mobile_card_body_size": 14
+        "padding_bottom": 88
       }
     },
     "initial": {
@@ -270,10 +263,7 @@
         "accent_color": "#c7a85e",
         "animation_style": "fade-up",
         "padding_top": 80,
-        "padding_bottom": 40,
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "padding_bottom": 40
       }
     },
     "birthstone": {
@@ -302,10 +292,7 @@
         "accent_color": "#c7a85e",
         "animation_style": "soft-zoom",
         "padding_top": 80,
-        "padding_bottom": 40,
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "padding_bottom": 40
       }
     },
     "zodiac": {
@@ -334,10 +321,7 @@
         "accent_color": "#c7a85e",
         "animation_style": "fade-up",
         "padding_top": 80,
-        "padding_bottom": 40,
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "padding_bottom": 40
       }
     },
     "initial_gallery": {
@@ -382,9 +366,7 @@
         "mobile_layout": "grid",
         "animation_style": "fade-in",
         "padding_top": 0,
-        "padding_bottom": 88,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "padding_bottom": 88
       }
     },
     "birthstone_gallery": {
@@ -430,9 +412,7 @@
         "mobile_layout": "grid",
         "animation_style": "fade-in",
         "padding_top": 0,
-        "padding_bottom": 88,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "padding_bottom": 88
       }
     },
     "zodiac_gallery": {
@@ -473,9 +453,7 @@
         "mobile_layout": "grid",
         "animation_style": "fade-in",
         "padding_top": 0,
-        "padding_bottom": 88,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "padding_bottom": 88
       }
     },
     "services": {
@@ -548,12 +526,7 @@
         "divider_color": "#D8D5CE",
         "animation_style": "fade-up",
         "padding_top": 80,
-        "padding_bottom": 88,
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
-        "mobile_card_title_size": 18,
-        "mobile_card_body_size": 14
+        "padding_bottom": 88
       }
     },
     "contact": {
@@ -572,10 +545,7 @@
         "body_size": 16,
         "animation_style": "fade-up",
         "padding_top": 88,
-        "padding_bottom": 88,
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "padding_bottom": 88
       }
     }
   },
