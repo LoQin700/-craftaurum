@@ -1,12 +1,4 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
+/* Shopify template: custom category cards use manual title/image/link only. */
 {
   "sections": {
     "hero_jVaWmY": {
@@ -217,7 +209,6 @@
           "type": "card",
           "settings": {
             "title": "Custom Rings",
-            "collection": "",
             "link": "",
             "image": "shopify://shop_images/rings.jpg"
           }
@@ -226,7 +217,6 @@
           "type": "card",
           "settings": {
             "title": "Custom Earrings",
-            "collection": "",
             "link": "",
             "image": "shopify://shop_images/gold-earrings.jpg"
           }
@@ -263,7 +253,6 @@
           "type": "card",
           "settings": {
             "title": "Custom Bracelets",
-            "collection": "",
             "link": "",
             "image": "shopify://shop_images/chain-bracelets.jpg"
           }
@@ -272,7 +261,6 @@
           "type": "card",
           "settings": {
             "title": "Custom Necklaces",
-            "collection": "",
             "link": "",
             "image": "shopify://shop_images/nameplate-necklace.jpg"
           }
@@ -281,7 +269,6 @@
           "type": "card",
           "settings": {
             "title": "Artisan Jewelry",
-            "collection": "",
             "link": "",
             "image": "shopify://shop_images/OEM-JEWELLERY.jpg"
           }
