@@ -457,7 +457,7 @@
         "background_color": "#F8F7F4",
         "text_color": "#17191A",
         "accent_color": "#C7A85E",
-        "style_preset": "left",
+        "style_preset": "centered",
         "show_divider": true,
         "column_gap": 32,
         "desktop_columns": "4",
