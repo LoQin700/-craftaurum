@@ -69,8 +69,8 @@
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "eyebrow": "JEWELRY MANUFACTURING",
-        "heading": "Custom Fashion Jewelry",
-        "introduction": "<p>Discover custom jewelry created for brands, designers, and wholesale partners. Craftaurum supports the development of rings, earrings, bracelets, and necklaces with thoughtful detailing and flexible design possibilities.</p><p>From initial concepts to finished collections, our focus is on refined craftsmanship and clear collaboration throughout your project.</p>",
+        "heading": "Custom Rings for Jewelry Brands",
+        "introduction": "<p>Explore ring designs that can be developed around your brand, from gemstone and pearl rings to classic metal bands and personalized signet styles. Share your references, preferred materials and setting details to discuss suitable construction and finishing options.</p><p>For custom ring projects, design feasibility, samples, minimum order quantity and production timing should be confirmed against your specifications before quotation.</p>",
         "image_position": "right",
         "image_ratio": "landscape",
         "quote_label": "Get B2B Quote",
@@ -112,14 +112,14 @@
         "title": {
           "type": "title",
           "settings": {
-            "heading": "From design concept to custom jewelry production.",
+            "heading": "Personalized Ring Design, Sampling & Production",
             "heading_tag": "h2"
           }
         },
         "body": {
           "type": "body",
           "settings": {
-            "body": "<p>One clear process, developed around the needs of your collection.</p>"
+            "body": "<p>Discuss your ring ideas, stone choices, engraving, sizes and finishes with our team. A clear brief helps guide sample development and an accurate project quotation.</p>"
           }
         },
         "buttons": {
@@ -144,7 +144,7 @@
           "type": "card",
           "settings": {
             "title": "Gemstone Rings",
-            "description": "<p>Explore shapes, finishes and design possibilities for your brand.</p>",
+            "description": "<p>Consider color, cut and prong or bezel settings for gemstone-led ring designs. Share stone preferences and sizing details for a feasibility review.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": "",
@@ -154,8 +154,8 @@
         "card_WtWhNM": {
           "type": "card",
           "settings": {
-            "title": "Metal & Minimal Rings",
-            "description": "<p>Explore shapes, finishes and design possibilities for your brand.</p>",
+            "title": "Pearl Rings",
+            "description": "<p>Explore pearl ring concepts with different pearl sizes, bands and metal finishes, balancing visual detail and practical setting requirements.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": "",
@@ -165,8 +165,8 @@
         "card_CfDadY": {
           "type": "card",
           "settings": {
-            "title": "Pearl Rings",
-            "description": "<p>Explore shapes, finishes and design possibilities for your brand.</p>",
+            "title": "Signet Rings",
+            "description": "<p>Develop a flat-face signet ring around initials, a logo, engraved motifs or a distinctive brand symbol. Engraving and finishing depend on the chosen material.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": "",
@@ -176,8 +176,8 @@
         "card_PcNzcH": {
           "type": "card",
           "settings": {
-            "title": "Signature Designs",
-            "description": "<p>Explore shapes, finishes and design possibilities for your brand.</p>",
+            "title": "Metal Rings",
+            "description": "<p>Review understated bands, sculptural metal rings, textured finishes and suitable material options for the intended price point and market.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": "",
@@ -199,7 +199,7 @@
         "accent_color": "#c7a85e",
         "eyebrow": "JEWELRY DESIGN RANGE",
         "heading": "Explore Custom Ring Styles",
-        "description": "<p>Build a collection of distinctive rings with considered materials, stone settings and finishing options.</p>",
+        "description": "<p>Explore gemstone, pearl, signet and metal ring directions inspired by the key categories on the reference collection page. Material and setting availability is reviewed for each design.</p>",
         "desktop_layout": "grid",
         "desktop_columns": "4",
         "mobile_layout": "carousel",
@@ -233,32 +233,32 @@
         "item_QJarUi": {
           "type": "item",
           "settings": {
-            "title": "Materials & Finishing",
-            "description": "<p>Review metal choices, surface finishes and stone-setting directions for your design.</p>",
+            "title": "Metal & Finish Choices",
+            "description": "<p>Compare suitable silver, gold or plated constructions, surface textures and finish colors for your proposed ring design.</p>",
             "image": "shopify://shop_images/custom-design-jewelry.jpg"
           }
         },
         "item_9zbQMA": {
           "type": "item",
           "settings": {
-            "title": "Materials & Finishing",
-            "description": "<p>Review metal choices, surface finishes and stone-setting directions for your design.</p>",
+            "title": "Gemstone & Pearl Setting",
+            "description": "<p>Check stone dimensions, prong or bezel settings and metal support for the selected gemstone or pearl style.</p>",
             "image": "shopify://shop_images/gemstone-setting.jpg"
           }
         },
         "item_EFeVgi": {
           "type": "item",
           "settings": {
-            "title": "Materials & Finishing",
-            "description": "<p>Review metal choices, surface finishes and stone-setting directions for your design.</p>",
+            "title": "Engraving & Signet Details",
+            "description": "<p>Discuss initials, logos, signet faces and decorative engravings, then confirm what is feasible for the ring material and size.</p>",
             "image": "shopify://shop_images/polishing.jpg"
           }
         },
         "item_XTCWJt": {
           "type": "item",
           "settings": {
-            "title": "Materials & Finishing",
-            "description": "<p>Review metal choices, surface finishes and stone-setting directions for your design.</p>",
+            "title": "Sizing, Samples & QC",
+            "description": "<p>Define target ring sizes, proportions and finish expectations. Sample review can clarify fit and construction before production.</p>",
             "image": "shopify://shop_images/checking.jpg"
           }
         }
@@ -272,8 +272,8 @@
       "name": "交互图文",
       "settings": {
         "section_width": "page-width",
-        "heading": "Focused Capabilities for Custom Ring Development",
-        "description": "<p>Explore the details that shape a ring collection, from materials and setting choices to design development and production review.</p>",
+        "heading": "Custom Ring Design & Manufacturing Considerations",
+        "description": "<p>Different ring styles require different decisions in materials, stone setting, engraving and fit. Discuss the details below when preparing a custom ring enquiry.</p>",
         "padding_top": 56,
         "padding_bottom": 56,
         "intro_style": "style_1",
@@ -296,13 +296,13 @@
         "background_color": "#ffffff",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
-        "heading": "Custom Jewelry Manufacturing",
+        "heading": "Custom Ring Manufacturing From Your Design Brief",
         "heading_position": "top",
-        "subtitle": "",
+        "subtitle": "CUSTOM GEMSTONE, PEARL, SIGNET & METAL RINGS",
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
-        "body": "<p>Discover thoughtful jewelry craftsmanship and flexible custom design services at Craftaurum.</p>",
+        "body": "<p>Whether you are planning a gemstone statement ring, a pearl ring, a personalized signet or a minimal metal band, the design starts with your reference, preferred material and target market.</p><p>Provide dimensions, sizes, stone or engraving requirements and the approximate quantity. We can discuss feasible construction, sampling, finishing options and next steps through the enquiry form.</p>",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "Start Your Project",
@@ -378,8 +378,8 @@
         "icon_gap": 16,
         "column_gap": 32,
         "eyebrow": "MANUFACTURING SUPPORT",
-        "heading": "Capabilities That Support Every Collection",
-        "description": "<p>From design development to production review, each stage is supported by a clear and practical manufacturing process.</p>",
+        "heading": "Support for Your Custom Ring Project",
+        "description": "<p>Plan the important decisions before requesting a sample or production quotation.</p>",
         "desktop_columns": "4",
         "mobile_columns": "1",
         "padding_top": 72,
