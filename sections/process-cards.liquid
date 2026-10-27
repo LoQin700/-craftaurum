@@ -211,9 +211,10 @@
     position: absolute;
     inset: 10px;
     z-index: 2;
-    border: 1px solid color-mix(in srgb, var(--ca-process-accent) 58%, transparent);
+    border: 1.5px solid color-mix(in srgb, var(--ca-process-accent) 72%, transparent);
     pointer-events: none;
-    opacity: .82;
+    opacity: .95;
+    transition: border-width .3s ease, border-color .3s ease, opacity .3s ease;
   }
 
   .ca-process-card__image,
@@ -290,6 +291,19 @@
     .ca-process-cards__description { font-size: var(--ca-process-body-size-mobile); }
     .ca-process-card__title { font-size: var(--ca-process-card-title-size-mobile); }
     .ca-process-card__text { font-size: var(--ca-process-card-body-size-mobile); }
+  }
+
+  .ca-process-card__image {
+    transition: transform .5s cubic-bezier(.2,.7,.2,1);
+    transform: scale(1);
+  }
+  @media (hover: hover) and (pointer: fine) {
+    .ca-process-card:hover .ca-process-card__image { transform: scale(1.055); }
+    .ca-process-card:hover .ca-process-card__media::after {
+      border-width: 2.5px;
+      border-color: var(--ca-process-accent);
+      opacity: 1;
+    }
   }
 {% endstylesheet %}
 
