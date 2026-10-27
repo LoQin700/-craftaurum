@@ -306,22 +306,7 @@
     ]
   },
   "settings": [
-    {
-      "type": "select",
-      "id": "layout_mode",
-      "label": "展示样式",
-      "options": [
-        {
-          "value": "interactive",
-          "label": "交互图文"
-        },
-        {
-          "value": "icons",
-          "label": "图标文字"
-        }
-      ],
-      "default": "interactive"
-    },
+    {"type":"header","content":"基础设置"},
     {
       "type": "select",
       "id": "section_width",
@@ -338,34 +323,7 @@
       ],
       "default": "page-width"
     },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "背景颜色",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "文字颜色",
-      "default": "#17191A"
-    },
-    {
-      "type": "color",
-      "id": "accent_color",
-      "label": "编号、图标及交互高亮颜色",
-      "default": "#C7A85E"
-    },
-    {
-      "type": "select",
-      "id": "intro_style",
-      "label": "标题布局",
-      "options": [
-        { "value": "style_1", "label": "Style 1" },
-        { "value": "style_2", "label": "Style 2" }
-      ],
-      "default": "style_1"
-    },
+    {"type":"header","content":"内容设置"},
     {
       "type": "text",
       "id": "heading",
@@ -378,6 +336,7 @@
       "label": "正文",
       "default": "<p>Explore the details that shape a ring collection, from materials and setting choices to design development and production review.</p>"
     },
+    {"type":"header","content":"图片设置"},
     {
       "type": "select",
       "id": "visual_height_mode",
@@ -399,6 +358,52 @@
       "unit": "px",
       "default": 520,
       "visible_if": "{{ section.settings.visual_height_mode == 'fixed' and section.settings.layout_mode == 'interactive' }}"
+    },
+    {"type":"header","content":"颜色设置"},
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文字颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "编号、图标及交互高亮颜色",
+      "default": "#C7A85E"
+    },
+    {"type":"header","content":"布局与交互"},
+    {
+      "type": "select",
+      "id": "layout_mode",
+      "label": "展示样式",
+      "options": [
+        {
+          "value": "interactive",
+          "label": "交互图文"
+        },
+        {
+          "value": "icons",
+          "label": "图标文字"
+        }
+      ],
+      "default": "interactive"
+    },
+    {
+      "type": "select",
+      "id": "intro_style",
+      "label": "标题布局",
+      "options": [
+        { "value": "style_1", "label": "Style 1" },
+        { "value": "style_2", "label": "Style 2" }
+      ],
+      "default": "style_1"
     },
     {
       "type": "range",
@@ -483,6 +488,7 @@
     {"type":"range","id":"mobile_body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
     {"type":"range","id":"mobile_item_title_size","label":"项目标题字号","min":14,"max":32,"step":1,"unit":"px","default":20},
     {"type":"range","id":"mobile_item_body_size","label":"项目正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
+    {"type":"header","content":"其它设置"},
     {
       "type": "select",
       "id": "animation_style",
