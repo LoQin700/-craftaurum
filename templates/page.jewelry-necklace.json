@@ -65,12 +65,12 @@
       "settings": {
         "section_width": "page-width",
         "eyebrow": "CUSTOM NECKLACE MANUFACTURING",
-        "heading": "Custom Necklaces for Distinctive Brands.",
-        "introduction": "<p>Develop fashion and personalized necklaces around your brand direction, with flexibility across logo details, color, metal, texture and finishing. Craftaurum supports pearl necklaces, chokers, pendant designs and other custom necklace concepts from development through production planning.</p><p>Each project can be shaped around the intended market, wearing experience and visual identity of your collection.</p>",
+        "heading": "Custom Necklaces for Your Brand & Wholesale Collection",
+        "introduction": "<p>Explore custom necklaces including pendant, pearl, choker and fashion styles. Depending on the design, necklace development may include personalized logos, metal choices, chain styles, stone details and textured finishes.</p><p>Send your ideas, sizes, preferred materials and target quantity so we can discuss feasibility, sample details and a project-specific quotation.</p>",
         "quote_label": "Get B2B Quote",
-        "quote_url": "",
+        "quote_url": "shopify://pages/contact",
         "catalog_label": "Request Catalog",
-        "catalog_url": "",
+        "catalog_url": "shopify://pages/contact",
         "hero_image": "shopify://shop_images/nameplate-necklace.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
@@ -100,7 +100,7 @@
         "body": {
           "type": "body",
           "settings": {
-            "body": "<p>Develop chain, pendant and finishing details around a clear design direction and production specification.</p>"
+            "body": "<p>Have a specific design in mind? Share sketches, materials, quantities and target requirements through our contact form so the next steps can be reviewed.</p>"
           }
         },
         "buttons": {
@@ -143,7 +143,7 @@
           "settings": {
             "image": "shopify://shop_images/S1028-N.jpg",
             "title": "Pendant Necklaces",
-            "description": "<p>Develop pendant-led designs with flexible shape, scale, stone and branding possibilities.</p>",
+            "description": "<p>Explore pendant size, profile, attachment, engraving and stone options alongside suitable chains and finishes.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -154,7 +154,7 @@
           "settings": {
             "image": "shopify://shop_images/pearl-necklace.jpg",
             "title": "Pearl Necklaces",
-            "description": "<p>Explore pearl proportions, chain combinations and metal details for refined necklace collections.</p>",
+            "description": "<p>Consider pearl type, size, spacing, chain or strand construction and clasp details for your target aesthetic.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -164,8 +164,8 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/butterfly-necklace.jpg",
-            "title": "Choker Necklaces",
-            "description": "<p>Create close-fitting necklace styles with different chain, metal and decorative directions.</p>",
+            "title": "Custom Choker Necklaces",
+            "description": "<p>Review close-fitting dimensions, chain styles, comfort and decorative details for contemporary choker designs.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -175,8 +175,8 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/custom-inital-necklace.jpg",
-            "title": "Fashion & Logo Necklaces",
-            "description": "<p>Translate brand symbols, textures and graphic references into recognizable necklace concepts.</p>",
+            "title": "Personalized & Logo Necklaces",
+            "description": "<p>Discuss initials, nameplates, logos or branded motifs, with suitable metal thickness and finishing requirements.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -194,7 +194,7 @@
         "section_width": "page-width",
         "eyebrow": "NECKLACE DESIGN RANGE",
         "heading": "Explore Custom Necklace Styles",
-        "description": "<p>Create a distinctive necklace collection through different chain structures, pendants, materials, textures and finishing directions.</p>",
+        "description": "<p>Explore the main styles shown in this category. Share your reference images and specifications to discuss materials, sampling and production feasibility.</p>",
         "image_ratio": "portrait",
         "image_width": 100,
         "intro_style": "style_1",
@@ -291,9 +291,9 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "heading": "B2B Necklace Development Built Around Your Brand",
-        "subtitle": "ABOUT CRAFTAURUM",
-        "body": "<p>Craftaurum supports custom necklace projects for jewelry brands and wholesale partners, from early design communication to sampling and production coordination. We focus on the relationship between chain, pendant, material and finishing so the final piece supports both brand identity and wearability.</p><p>Use real development or production imagery here to show the manufacturing process behind custom necklace collections.</p>",
+        "heading": "B2B Custom Necklace Development",
+        "subtitle": "CUSTOM JEWELRY DEVELOPMENT",
+        "body": "<p>Necklace design brings together the chain, pendant or decorative element, fastening and overall fit. Personalized logos, engraved details, pearls or colored stones can help create a recognisable collection style.</p><p>Discuss your reference designs, desired dimensions, materials, finishes and packaging requirements. Final options and timing depend on the specifications confirmed for sampling and production.</p>",
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
@@ -401,7 +401,7 @@
         "section_width": "page-width",
         "eyebrow": "START A NECKLACE PROJECT",
         "heading": "Start Your Custom Necklace Project",
-        "description": "<p>Share your necklace style, materials, finish, quantity and personalization requirements with our team.</p>",
+        "description": "<p>Share your design reference, preferred material and finish, target size, approximate quantity and delivery location. We can review feasibility and respond with the information needed for sampling and quotation.</p>",
         "phone_required": false,
         "background_color": "#F8F7F4",
         "text_color": "#17191A",
