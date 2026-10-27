@@ -50,7 +50,7 @@
           {% if section.settings.subtitle != blank %}
             <p class="ca-feature__subtitle">{{ section.settings.subtitle | escape }}</p>
           {% endif %}
-          {% if section.settings.top_label != blank %}
+          {% if section.settings.show_buttons != false and section.settings.top_label != blank %}
             <div class="ca-feature__tag">
               {% render 'craftaurum-cta',
                 label: section.settings.top_label,
@@ -81,7 +81,7 @@
           {% if section.settings.body != blank %}
             <div class="ca-feature__body rte">{{ section.settings.body }}</div>
           {% endif %}
-          {% if section.settings.cta_label != blank %}
+          {% if section.settings.show_buttons != false and section.settings.cta_label != blank %}
             <div class="ca-feature__bottom-cta">
               {% render 'craftaurum-cta',
                 label: section.settings.cta_label,
@@ -261,6 +261,12 @@
     {
       "type": "header",
       "content": "按钮设置"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_buttons",
+      "label": "显示按钮",
+      "default": true
     },
     {
       "type": "text",
