@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 /* Existing page mobile typography standardized: 12 / 25 / 14 / 18. */
 {
   "sections": {
@@ -52,42 +61,65 @@
       }
     },
     "intro_rich_text": {
-      "type": "custom-richtext",
+      "type": "section",
       "blocks": {
-        "title": {
-          "type": "title",
+        "intro_text": {
+          "type": "text",
           "settings": {
-            "heading": "Gold Plated Jewelry Manufacturer",
-            "heading_tag": "h1"
-          }
-        },
-        "body": {
-          "type": "body",
-          "settings": {
-            "body": "<p>Craftaurum develops custom gold plated jewelry for brands that need flexible color, finish and pricing options across rings, earrings, necklaces, bracelets and other collection categories. Plating direction can be developed around your target look, base material, wear expectations and market position.</p>"
-          }
+            "text": "<h1>Gold Plated Jewelry Manufacturer</h1><p>Craftaurum develops custom gold plated jewelry for brands that need flexible color, finish and pricing options across rings, earrings, necklaces, bracelets and other collection categories. Plating direction can be developed around your target look, base material, wear expectations and market position.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "#17191a",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "title",
-        "body"
+        "intro_text"
       ],
-      "name": "自定义富文本",
+      "name": "富文本开场",
       "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
         "section_width": "page-width",
-        "anchor_id": "",
-        "layout_style": "stacked",
-        "alignment": "center",
-        "content_width": 800,
-        "heading_size": 35,
-        "body_size": 16,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
         "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "animation_style": "fade-up",
-        "padding_top": 64,
-        "padding_bottom": 56
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 64,
+        "padding-block-end": 56
       }
     },
     "plating_colors": {
@@ -1003,7 +1035,7 @@
     },
     "contact": {
       "type": "editorial-contact",
-      "name": "分栏联系表单",
+      "name": "联系表单 - Editorial",
       "settings": {
         "section_width": "page-width",
         "background_color": "#F8F7F4",

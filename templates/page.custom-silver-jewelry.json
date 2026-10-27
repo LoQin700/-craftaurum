@@ -89,51 +89,84 @@
       }
     },
     "tarnish_intro": {
-      "type": "custom-richtext",
+      "type": "section",
       "blocks": {
-        "title": {
-          "type": "title",
+        "heading": {
+          "type": "text",
           "settings": {
-            "heading": "How to Keep Your Jewelry from Tarnish?",
-            "heading_tag": "h2"
-          }
+            "text": "<h2>How to Keep Your Jewelry from Tarnish?</h2><p>Plating and protective finishing are two common directions for improving the surface appearance and wear performance of sterling silver jewelry.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "#17191a",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         },
-        "body": {
-          "type": "body",
+        "button": {
+          "type": "button",
           "settings": {
-            "body": "<p>Plating and protective finishing are two common directions for improving the surface appearance and wear performance of sterling silver jewelry.</p>"
-          }
-        },
-        "buttons": {
-          "type": "buttons",
-          "settings": {
-            "label_1": "Get A Quote",
-            "link_1": "shopify://pages/contact",
-            "style_1": "button"
-          }
+            "label": "Get A Quote",
+            "link": "shopify://pages/contact",
+            "open_in_new_tab": false,
+            "style_class": "button",
+            "custom_button_background": "{{ settings.color_palette.foreground }}",
+            "custom_button_text": "{{ settings.color_palette.background }}",
+            "custom_button_border": "{{ settings.color_palette.background }}",
+            "link_text_color": "",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "title",
-        "body",
-        "buttons"
+        "heading",
+        "button"
       ],
-      "name": "自定义富文本",
+      "name": "抗氧化介绍",
       "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 18,
         "section_width": "page-width",
-        "anchor_id": "",
-        "layout_style": "stacked",
-        "alignment": "center",
-        "content_width": 1060,
-        "heading_size": 35,
-        "body_size": 16,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
         "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "animation_style": "fade-up",
-        "padding_top": 48,
-        "padding_bottom": 32
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 48,
+        "padding-block-end": 32
       }
     },
     "gold_plated_tarnish": {
@@ -233,42 +266,65 @@
       }
     },
     "showcase_intro": {
-      "type": "custom-richtext",
+      "type": "section",
       "blocks": {
-        "title": {
-          "type": "title",
+        "heading": {
+          "type": "text",
           "settings": {
-            "heading": "Showcase of Custom Silver Jewelry",
-            "heading_tag": "h2"
-          }
-        },
-        "body": {
-          "type": "body",
-          "settings": {
-            "body": "<p>Explore sterling silver jewelry across rings, earrings, necklaces, pendants and bracelets.</p>"
-          }
+            "text": "<h2>Showcase of Custom Silver Jewelry</h2><p>Explore sterling silver jewelry across rings, earrings, necklaces, pendants and bracelets.</p>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "#17191a",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
-        "title",
-        "body"
+        "heading"
       ],
-      "name": "自定义富文本",
+      "name": "银饰展示标题",
       "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 18,
         "section_width": "page-width",
-        "anchor_id": "",
-        "layout_style": "stacked",
-        "alignment": "center",
-        "content_width": 1060,
-        "heading_size": 35,
-        "body_size": 16,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
+        "section_height": "",
+        "section_height_custom": 50,
+        "background_media": "none",
         "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "animation_style": "fade-up",
-        "padding_top": 48,
-        "padding_bottom": 32
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_color": "",
+        "border_radius": 0,
+        "padding-block-start": 48,
+        "padding-block-end": 32
       }
     },
     "silver_showcase_rows": {
@@ -280,6 +336,7 @@
             "image_1": "shopify://shop_images/November-birthstone-rings-1.jpg",
             "image_2": "shopify://shop_images/S1158-R.jpg",
             "image_3": "shopify://shop_images/plated-pearl-rings.jpg",
+            "image_position": "inherit",
             "heading": "Sterling Silver Rings",
             "body": "<p>Custom silver rings can be developed around gemstone setting, plated finishes and clean metal-led designs, including stone rings, diamond-set styles and gold plated silver directions.</p>"
           }
@@ -290,6 +347,7 @@
             "image_1": "shopify://shop_images/Christmas-earrings-set.jpg",
             "image_2": "shopify://shop_images/YE25928.jpg",
             "image_3": "shopify://shop_images/YE26053.jpg",
+            "image_position": "inherit",
             "heading": "Sterling Silver Earrings",
             "body": "<p>Develop silver earrings across seasonal, plated, gemstone and pearl-led directions for both everyday and statement collections.</p>"
           }
@@ -300,6 +358,7 @@
             "image_1": "shopify://shop_images/S1028-N.jpg",
             "image_2": "shopify://shop_images/nameplate-necklace.jpg",
             "image_3": "shopify://shop_images/pearl-necklace.jpg",
+            "image_position": "inherit",
             "heading": "Sterling Silver Necklace & Pendants",
             "body": "<p>From delicate chains to personalized and pearl-led pendants, sterling silver offers a flexible base for custom necklace collections.</p>"
           }
@@ -310,6 +369,7 @@
             "image_1": "shopify://shop_images/chain-bracelets.jpg",
             "image_2": "shopify://shop_images/pearl-bracelets.jpg",
             "image_3": "shopify://shop_images/YB7671.jpg",
+            "image_position": "inherit",
             "heading": "Sterling Silver Bracelets",
             "body": "<p>Build bracelet collections with link chains, pearl details, stones and plated finishes to suit different design directions and price points.</p>"
           }
@@ -324,21 +384,25 @@
       "name": "三联图文",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#ffffff",
         "image_position": "right",
-        "text_background": "#e7ded0",
-        "image_background": "#f6f2eb",
-        "text_color": "#17191a",
-        "heading_size": 35,
-        "body_size": 16,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
-        "animation_style": "fade-up",
+        "image_ratio": "square",
+        "copy_width": 48,
         "text_padding": 32,
         "image_padding": 18,
         "image_gap": 14,
         "panel_gap": 0,
         "row_gap": 28,
+        "mobile_image_first": false,
+        "mobile_image_columns": "3",
+        "heading_size": 35,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "background_color": "#ffffff",
+        "text_background": "#e7ded0",
+        "image_background": "#f6f2eb",
+        "text_color": "#17191a",
+        "animation_style": "fade-up",
         "padding_top": 24,
         "padding_bottom": 72
       }
@@ -390,7 +454,17 @@
         "section_width": "page-width",
         "heading": "High-end Custom Silver Jewelry Factory",
         "description": "<p>Follow the main manufacturing stages from design development through casting, polishing and quality checking.</p>",
+        "visual_height_mode": "match_text",
+        "visual_height": 520,
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "layout_mode": "interactive",
+        "show_index": true,
         "intro_style": "style_1",
+        "gap": 24,
+        "desktop_columns": 4,
+        "mobile_columns": "2",
         "heading_size": 35,
         "body_size": 16,
         "item_title_size": 20,
@@ -487,11 +561,11 @@
         "mobile_body_size": 14,
         "mobile_card_title_size": 18,
         "mobile_card_body_size": 14,
-        "background_color": "#f8f7f4",
+        "background_color": "{{ settings.color_palette.background }}",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "show_divider": false,
-        "divider_color": "#D8D5CE",
+        "divider_color": "#d8d5ce",
         "animation_style": "fade-up",
         "padding_top": 72,
         "padding_bottom": 72
@@ -499,15 +573,15 @@
     },
     "contact": {
       "type": "editorial-contact",
-      "name": "分栏联系表单",
+      "name": "联系表单 - Editorial",
       "settings": {
         "section_width": "page-width",
         "eyebrow": "START A SILVER PROJECT",
         "heading": "Contact Us for Custom Silver Jewelry Manufacturing",
         "description": "<p>Share your product type, material, finish, quantity and development requirements with our team.</p>",
         "phone_required": false,
-        "background_color": "#F8F7F4",
-        "text_color": "#17191A",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
         "eyebrow_size": 12,
         "heading_size": 35,
         "body_size": 16,

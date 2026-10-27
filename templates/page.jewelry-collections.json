@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 /* Existing page mobile typography standardized: 12 / 25 / 14 / 18. */
 {
   "sections": {
@@ -230,7 +239,7 @@
     },
     "contact": {
       "type": "editorial-contact",
-      "name": "分栏联系表单",
+      "name": "联系表单 - Editorial",
       "settings": {
         "section_width": "page-width",
         "background_color": "#F8F7F4",

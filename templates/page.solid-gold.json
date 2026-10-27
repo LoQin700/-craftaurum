@@ -1,4 +1,12 @@
-/* Existing page mobile typography standardized: 12 / 25 / 14 / 18. */
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -56,29 +64,28 @@
       "name": "图文横幅",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
         "eyebrow": "SOLID GOLD JEWELRY MANUFACTURING",
         "heading": "Custom Solid Gold Jewelry",
         "introduction": "<p>Develop custom solid gold jewelry for your brand across 10K, 14K, 18K, 20K and 24K options. Craftaurum supports design refinement, sampling and production with clear communication throughout the project.</p><p>From signature pieces to complete collections, each project can be developed around your design direction, target market and material requirements.</p>",
-        "image_position": "left",
-        "image_ratio": "landscape",
         "quote_label": "Contact Factory",
         "quote_url": "shopify://pages/contact",
         "catalog_label": "",
         "catalog_url": "",
-        "padding_top": 40,
-        "padding_bottom": 48,
         "hero_image": "shopify://shop_images/solid-gold-jewelry.jpg",
-        "use_background": true,
+        "image_position": "left",
+        "image_ratio": "landscape",
         "eyebrow_size": 12,
         "heading_size": 58,
         "body_size": 16,
-        "animation_style": "fade-up",
         "mobile_eyebrow_size": 12,
         "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "mobile_body_size": 14,
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
+        "padding_top": 40,
+        "padding_bottom": 48
       }
     },
     "gold_showcase": {
@@ -87,67 +94,67 @@
         "rings": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/diamond-gold-rings.jpg",
             "title": "Diamond Gold Rings",
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/diamond-gold-rings.jpg"
+            "link": ""
           }
         },
         "chains": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/S1028-N.jpg",
             "title": "Gold Chains",
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/S1028-N.jpg"
+            "link": ""
           }
         },
         "bangles": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/YB7671.jpg",
             "title": "Gold Bangles",
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/YB7671.jpg"
+            "link": ""
           }
         },
         "earrings": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/gold-earrings.jpg",
             "title": "Gold Earrings",
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/gold-earrings.jpg"
+            "link": ""
           }
         },
         "pearl_earrings": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/pearl-earrings-2.jpg",
             "title": "Custom Pearl Earrings",
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/pearl-earrings-2.jpg"
+            "link": ""
           }
         },
         "pendants": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/nameplate-necklace.jpg",
             "title": "Gold Pendants Necklace",
             "description": "",
             "button_label": "",
             "button_style": "button-unstyled",
-            "link": "",
-            "image": "shopify://shop_images/nameplate-necklace.jpg"
+            "link": ""
           }
         }
       },
@@ -162,40 +169,40 @@
       "name": "图文卡片",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#f8f7f4",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "intro_button_label": "",
-        "intro_button_link": "",
-        "intro_button_style": "button",
         "eyebrow": "",
         "heading": "Gold Jewelry Collection",
         "description": "<p>Explore core solid gold jewelry categories available for custom development.</p>",
-        "desktop_layout": "grid",
-        "desktop_columns": "3",
-        "mobile_layout": "carousel",
-        "mobile_columns": "1",
+        "intro_button_label": "",
+        "intro_button_link": "",
+        "intro_button_style": "button",
         "image_ratio": "square",
-        "gap": 20,
-        "padding_top": 64,
-        "padding_bottom": 72,
+        "image_width": 100,
         "intro_style": "style_1",
-        "show_divider": false,
-        "divider_color": "#D8D5CE",
+        "card_text_alignment": "left",
+        "gap": 20,
+        "row_gap": 36,
+        "desktop_columns": "3",
+        "desktop_layout": "grid",
+        "mobile_columns": "1",
+        "mobile_layout": "carousel",
         "eyebrow_size": 12,
         "heading_size": 35,
         "body_size": 16,
         "card_title_size": 18,
         "card_body_size": 15,
-        "animation_style": "fade-up",
-        "image_width": 100,
-        "card_text_alignment": "left",
-        "row_gap": 36,
         "mobile_eyebrow_size": 12,
         "mobile_heading_size": 25,
         "mobile_body_size": 14,
         "mobile_card_title_size": 18,
-        "mobile_card_body_size": 14
+        "mobile_card_body_size": 14,
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "show_divider": false,
+        "divider_color": "#D8D5CE",
+        "animation_style": "fade-up",
+        "padding_top": 64,
+        "padding_bottom": 72
       }
     },
     "custom_gold": {
@@ -203,31 +210,31 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
         "heading": "Custom Gold Jewelry",
-        "heading_position": "content",
         "subtitle": "",
+        "body": "<p>Turn design direction into manufacturable gold jewelry through CAD refinement, sampling, casting, stone setting and final finishing. Each stage can be reviewed around the proportions, construction and finish expected for your collection.</p>",
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
-        "body": "<p>Turn design direction into manufacturable gold jewelry through CAD refinement, sampling, casting, stone setting and final finishing. Each stage can be reviewed around the proportions, construction and finish expected for your collection.</p>",
-        "image_position": "left",
-        "image_ratio": "landscape",
         "cta_label": "Start Your Project",
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-unstyled",
-        "padding_top": 52,
-        "padding_bottom": 52,
         "image": "shopify://shop_images/custom-design-jewelry.jpg",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "heading_position": "content",
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up",
         "mobile_heading_size": 25,
         "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "mobile_body_size": 14,
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "gold_vermeil": {
@@ -235,31 +242,31 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#f8f7f4",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
         "heading": "Gold Vermeil Jewelry",
-        "heading_position": "content",
         "subtitle": "",
+        "body": "<p>Gold vermeil combines a sterling silver base with a thicker gold-plated surface, creating a premium alternative for brands seeking the look of gold with a different material structure and price position.</p>",
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
-        "body": "<p>Gold vermeil combines a sterling silver base with a thicker gold-plated surface, creating a premium alternative for brands seeking the look of gold with a different material structure and price position.</p>",
-        "image_position": "right",
-        "image_ratio": "landscape",
         "cta_label": "Explore Gold Vermeil",
         "cta_url": "",
         "cta_button_style": "button-unstyled",
-        "padding_top": 52,
-        "padding_bottom": 52,
         "image": "shopify://shop_images/gold-vermeil-earrings.jpg",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "heading_position": "content",
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up",
         "mobile_heading_size": 25,
         "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "mobile_body_size": 14,
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
+        "padding_top": 52,
+        "padding_bottom": 52
       }
     },
     "low_moq_gold": {
@@ -267,31 +274,31 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
         "heading": "Custom-made Real Gold Jewelry",
-        "heading_position": "content",
         "subtitle": "",
+        "body": "<p>For solid gold projects, early design and cost decisions are especially important. CAD review, sampling and material planning can help control development risk before moving into production, including lower-volume collection launches.</p>",
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
-        "body": "<p>For solid gold projects, early design and cost decisions are especially important. CAD review, sampling and material planning can help control development risk before moving into production, including lower-volume collection launches.</p>",
-        "image_position": "left",
-        "image_ratio": "landscape",
         "cta_label": "Get A Quick Quote",
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button",
-        "padding_top": 52,
-        "padding_bottom": 64,
         "image": "shopify://shop_images/custom_real_gold_jewelry.jpg",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "heading_position": "content",
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up",
         "mobile_heading_size": 25,
         "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "mobile_body_size": 14,
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
+        "padding_top": 52,
+        "padding_bottom": 64
       }
     },
     "comparison_table": {
@@ -370,6 +377,11 @@
         "eyebrow": "",
         "heading": "Solid Gold VS Gold Vermeil VS Gold Plated Jewelry",
         "description": "",
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 15,
+        "column_title_size": 18,
+        "animation_style": "fade-up",
         "column_count": "3",
         "comparison_label": "Comparison",
         "column_1_kicker": "FINE JEWELRY",
@@ -379,17 +391,11 @@
         "column_3_kicker": "FASHION JEWELRY",
         "column_3_title": "Gold Plated Jewelry",
         "padding_top": 76,
-        "padding_bottom": 76,
-        "eyebrow_size": 12,
-        "heading_size": 35,
-        "body_size": 15,
-        "column_title_size": 18,
-        "animation_style": "fade-up"
+        "padding_bottom": 76
       }
     },
     "gold_colors": {
       "type": "triptych-split-rows",
-      "name": "三联图文",
       "blocks": {
         "yellow_row": {
           "type": "row",
@@ -427,23 +433,24 @@
         "rose_row",
         "white_row"
       ],
+      "name": "三联图文",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#FFFFFF",
         "image_position": "left",
-        "text_background": "#E7DED0",
-        "image_background": "#F6F2EB",
-        "text_color": "#17191A",
         "text_padding": 32,
         "image_padding": 18,
         "image_gap": 14,
         "panel_gap": 16,
         "row_gap": 28,
-        "padding_top": 72,
-        "padding_bottom": 72,
         "heading_size": 35,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "background_color": "#FFFFFF",
+        "text_background": "#E7DED0",
+        "image_background": "#F6F2EB",
+        "text_color": "#17191A",
+        "animation_style": "fade-up",
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "indexed_guide": {
@@ -452,56 +459,56 @@
         "k10": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/solid-gold-jewelry.jpg",
             "value": "41.7%",
             "heading": "10K Gold Jewelry",
             "description": "<p>With the lowest gold content in this guide, 10K offers greater hardness and durability. It is well suited to frequent wear and more cost-conscious fine-jewelry programs.</p>",
             "meta_label": "Best For",
-            "meta_value": "Everyday Wear",
-            "image": "shopify://shop_images/solid-gold-jewelry.jpg"
+            "meta_value": "Everyday Wear"
           }
         },
         "k14": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/rings.jpg",
             "value": "58.5%",
             "heading": "14K Gold Jewelry",
             "description": "<p>A popular middle ground that balances recognizable gold value with practical durability, making it versatile across rings, earrings and necklaces.</p>",
             "meta_label": "Best For",
-            "meta_value": "Daily Fine Jewelry",
-            "image": "shopify://shop_images/rings.jpg"
+            "meta_value": "Daily Fine Jewelry"
           }
         },
         "k18": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/diamond-gold-rings.jpg",
             "value": "75%",
             "heading": "18K Gold Jewelry",
             "description": "<p>A premium fine-jewelry standard with richer gold color and higher gold content while retaining practical alloy strength for many jewelry applications.</p>",
             "meta_label": "Best For",
-            "meta_value": "Premium Collections",
-            "image": "shopify://shop_images/diamond-gold-rings.jpg"
+            "meta_value": "Premium Collections"
           }
         },
         "k20": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/gold-earrings.jpg",
             "value": "83.3%",
             "heading": "20K Gold Jewelry",
             "description": "<p>A higher-purity option with deeper gold character, positioned between 18K and 24K while requiring more consideration around softness and construction.</p>",
             "meta_label": "Best For",
-            "meta_value": "High-Purity Pieces",
-            "image": "shopify://shop_images/gold-earrings.jpg"
+            "meta_value": "High-Purity Pieces"
           }
         },
         "k24": {
           "type": "item",
           "settings": {
+            "image": "shopify://shop_images/custom_real_gold_jewelry.jpg",
             "value": "99.9%",
             "heading": "24K Gold Jewelry",
             "description": "<p>Nearly pure gold with the richest natural gold color and highest gold content, but also the greatest softness and malleability.</p>",
             "meta_label": "Best For",
-            "meta_value": "Pure Gold Positioning",
-            "image": "shopify://shop_images/custom_real_gold_jewelry.jpg"
+            "meta_value": "Pure Gold Positioning"
           }
         }
       },
@@ -515,43 +522,43 @@
       "name": "内容指南",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#ffffff",
-        "line_color": "#d8d5ce",
-        "hover_background_color": "#F8F7F4",
-        "intro_alignment": "center",
         "eyebrow": "GOLD KARAT GUIDE",
-        "eyebrow_size": 12,
-        "eyebrow_color": "#C7A85E",
         "heading": "Gold Karat Guide",
-        "heading_size": 35,
-        "heading_color": "#17191A",
         "description": "<p>Compare common karat levels by gold content, durability and how each option is positioned for jewelry development.</p>",
-        "description_size": 16,
-        "description_color": "#5F615E",
-        "item_alignment": "center",
-        "item_title_size": 24,
-        "item_title_color": "#17191A",
-        "item_body_size": 16,
-        "item_body_color": "#4F514E",
-        "meta_size": 12,
-        "meta_color": "#5F615E",
-        "item_image_shape": "square",
-        "item_image_size": 88,
         "value_suffix": "GOLD",
-        "feature_image": "shopify://shop_images/Custom_Gold_Jewelry.jpg",
-        "feature_image_ratio": "landscape",
-        "feature_alignment": "left",
         "feature_heading": "What Does Karat Mean?",
         "feature_body": "<p>Karat refers to the proportion of pure gold within an alloy. The right choice is not simply “higher is better”; it depends on design, wear expectations, target price and market positioning.</p>",
+        "item_image_shape": "square",
+        "item_image_size": 88,
+        "feature_image": "shopify://shop_images/Custom_Gold_Jewelry.jpg",
+        "feature_image_ratio": "landscape",
+        "intro_alignment": "center",
+        "item_alignment": "center",
+        "feature_alignment": "left",
         "column_gap": 56,
-        "padding_top": 76,
-        "padding_bottom": 76,
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "description_size": 16,
+        "item_title_size": 24,
+        "item_body_size": 16,
+        "meta_size": 12,
         "mobile_eyebrow_size": 12,
         "mobile_heading_size": 25,
         "mobile_description_size": 14,
         "mobile_item_title_size": 18,
         "mobile_item_body_size": 14,
-        "mobile_meta_size": 12
+        "mobile_meta_size": 12,
+        "background_color": "#ffffff",
+        "line_color": "#d8d5ce",
+        "hover_background_color": "#F8F7F4",
+        "eyebrow_color": "#C7A85E",
+        "heading_color": "#17191A",
+        "description_color": "#5F615E",
+        "item_title_color": "#17191A",
+        "item_body_color": "#4F514E",
+        "meta_color": "#5F615E",
+        "padding_top": 76,
+        "padding_bottom": 76
       }
     },
     "jewelry_types": {
@@ -561,54 +568,48 @@
           "type": "card",
           "settings": {
             "title": "Custom Rings",
-            "collection": "",
-            "link": "",
-            "image": "shopify://shop_images/rings.jpg"
+            "image": "shopify://shop_images/rings.jpg",
+            "link": ""
           }
         },
         "type_earrings": {
           "type": "card",
           "settings": {
             "title": "Custom Earrings",
-            "collection": "",
-            "link": "",
-            "image": "shopify://shop_images/gold-earrings.jpg"
+            "image": "shopify://shop_images/gold-earrings.jpg",
+            "link": ""
           }
         },
         "type_bracelets": {
           "type": "card",
           "settings": {
             "title": "Custom Bracelets",
-            "collection": "",
-            "link": "",
-            "image": "shopify://shop_images/chain-bracelets.jpg"
+            "image": "shopify://shop_images/chain-bracelets.jpg",
+            "link": ""
           }
         },
         "type_necklaces": {
           "type": "card",
           "settings": {
             "title": "Custom Necklaces",
-            "collection": "",
-            "link": "",
-            "image": "shopify://shop_images/butterfly-necklace.jpg"
+            "image": "shopify://shop_images/butterfly-necklace.jpg",
+            "link": ""
           }
         },
         "type_pendants": {
           "type": "card",
           "settings": {
             "title": "Custom Pendants",
-            "collection": "",
-            "link": "",
-            "image": "shopify://shop_images/nameplate-necklace.jpg"
+            "image": "shopify://shop_images/nameplate-necklace.jpg",
+            "link": ""
           }
         },
         "type_artisan": {
           "type": "card",
           "settings": {
             "title": "Artisan Jewelry",
-            "collection": "",
-            "link": "",
-            "image": "shopify://shop_images/OEM-JEWELLERY.jpg"
+            "image": "shopify://shop_images/OEM-JEWELLERY.jpg",
+            "link": ""
           }
         }
       },
@@ -625,44 +626,44 @@
         "section_width": "page-width",
         "heading": "Explore Our Custom Jewelry Types",
         "description": "<p>Continue exploring Craftaurum's custom jewelry categories for your next collection.</p>",
-        "background_color": "#ffffff",
+        "overlay_opacity": 25,
+        "gap": 16,
         "desktop_columns": 3,
         "desktop_layout": "grid",
         "mobile_columns": 2,
         "mobile_layout": "grid",
-        "overlay_opacity": 25,
-        "gap": 16,
-        "padding_top": 72,
-        "padding_bottom": 72,
         "heading_size": 35,
         "body_size": 16,
         "card_title_size": 18,
-        "animation_style": "fade-up",
         "mobile_heading_size": 25,
         "mobile_body_size": 14,
-        "mobile_card_title_size": 18
+        "mobile_card_title_size": 18,
+        "background_color": "#ffffff",
+        "animation_style": "fade-up",
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "contact": {
       "type": "editorial-contact",
-      "name": "分栏联系表单",
+      "name": "联系表单 - Editorial",
       "settings": {
         "section_width": "page-width",
+        "eyebrow": "START A SOLID GOLD PROJECT",
+        "heading": "Start Your Solid Gold Jewelry Project",
+        "description": "<p>Share your design direction, target karat, quantity and project requirements with our team.</p>",
+        "phone_required": false,
         "background_color": "#F8F7F4",
         "text_color": "#17191A",
-        "eyebrow": "START A SOLID GOLD PROJECT",
         "eyebrow_size": 12,
-        "heading": "Start Your Solid Gold Jewelry Project",
         "heading_size": 35,
-        "description": "<p>Share your design direction, target karat, quantity and project requirements with our team.</p>",
         "body_size": 16,
-        "phone_required": false,
-        "animation_style": "fade-up",
-        "padding_top": 96,
-        "padding_bottom": 96,
         "mobile_eyebrow_size": 12,
         "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "mobile_body_size": 14,
+        "animation_style": "fade-up",
+        "padding_top": 96,
+        "padding_bottom": 96
       }
     }
   },
