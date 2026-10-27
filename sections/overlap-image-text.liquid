@@ -51,6 +51,7 @@
   "
 >
   <div class="ca-overlap__layout ca-overlap__layout--image-{{ section.settings.image_position }}" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
+    <div class="ca-carousel-stage ca-overlap__stage">
     <div
       class="ca-overlap__visual ca-overlap__visual--mobile-{{ section.settings.mobile_layout | default: 'slider' }}"
       aria-label="{{ section.settings.visual_aria_label | escape }}"
@@ -94,6 +95,7 @@
     {% if section.settings.mobile_layout == 'slider' and section.blocks.size > 1 %}
       {% render 'craftaurum-scroll-controls', track_selector: '.ca-overlap__visual', tablet: true, mobile: true %}
     {% endif %}
+    </div> <!-- /ca-carousel-stage -->
 
     <div class="ca-overlap__content ca-overlap__content--{{ section.settings.text_alignment }}">
       {% if section.settings.eyebrow != blank %}
@@ -135,12 +137,17 @@
     min-width: 0;
   }
 
-  .ca-overlap__layout--image-right .ca-overlap__visual {
+  .ca-overlap__layout--image-right .ca-overlap__stage {
     order: 2;
   }
 
   .ca-overlap__layout--image-right .ca-overlap__content {
     order: 1;
+  }
+
+  .ca-overlap__stage {
+    min-width: 0;
+    width: 100%;
   }
 
   .ca-overlap__visual {
@@ -272,7 +279,7 @@
     }
 
     /* Image stays above the content on tablet and mobile, even with right-image desktop layout. */
-    .ca-overlap__layout--image-right .ca-overlap__visual,
+    .ca-overlap__layout--image-right .ca-overlap__stage,
     .ca-overlap__layout--image-right .ca-overlap__content {
       order: initial;
     }
