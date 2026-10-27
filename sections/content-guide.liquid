@@ -538,42 +538,101 @@
 {
   "name": "内容指南",
   "tag": "section",
-  "disabled_on": { "groups": ["header", "footer"] },
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
   "settings": [
-    {"type":"header","content":"基础设置"},
+    {
+      "type": "header",
+      "content": "基础设置"
+    },
     {
       "type": "select",
       "id": "section_width",
       "label": "内容宽度",
       "options": [
-        { "value": "page-width", "label": "页面宽度" },
-        { "value": "full-width", "label": "全宽" }
+        {
+          "value": "page-width",
+          "label": "页面宽度"
+        },
+        {
+          "value": "full-width",
+          "label": "全宽"
+        }
       ],
       "default": "page-width"
     },
-    {"type":"header","content":"内容设置"},
-    { "type": "text", "id": "eyebrow", "label": "小标题", "default": "GUIDE" },
-    { "type": "text", "id": "heading", "label": "主标题", "default": "Content Guide" },
-    { "type": "richtext", "id": "description", "label": "简介" },
+    {
+      "type": "header",
+      "content": "内容设置"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "小标题",
+      "default": "GUIDE"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "主标题",
+      "default": "Content Guide"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "简介"
+    },
     {
       "type": "checkbox",
       "id": "show_index",
       "label": "显示 01 / 02 编号",
       "default": false
     },
-    { "type": "text", "id": "value_suffix", "label": "数值后缀", "info": "例如 GOLD、mm、kg；留空则只显示数值" },
-    { "type": "text", "id": "feature_heading", "label": "右侧图片标题" },
-    { "type": "richtext", "id": "feature_body", "label": "右侧正文" },
-    {"type":"header","content":"图片设置"},
+    {
+      "type": "text",
+      "id": "value_suffix",
+      "label": "数值后缀",
+      "info": "例如 GOLD、mm、kg；留空则只显示数值"
+    },
+    {
+      "type": "text",
+      "id": "feature_heading",
+      "label": "右侧图片标题"
+    },
+    {
+      "type": "richtext",
+      "id": "feature_body",
+      "label": "右侧正文"
+    },
+    {
+      "type": "header",
+      "content": "图片设置"
+    },
     {
       "type": "select",
       "id": "item_image_shape",
       "label": "图片形状",
       "options": [
-        { "value": "circle", "label": "圆形" },
-        { "value": "square", "label": "正方形" },
-        { "value": "landscape", "label": "长方形 4:3" },
-        { "value": "wide", "label": "横图 16:9" }
+        {
+          "value": "circle",
+          "label": "圆形"
+        },
+        {
+          "value": "square",
+          "label": "正方形"
+        },
+        {
+          "value": "landscape",
+          "label": "长方形 4:3"
+        },
+        {
+          "value": "wide",
+          "label": "横图 16:9"
+        }
       ],
       "default": "square"
     },
@@ -587,41 +646,62 @@
       "unit": "px",
       "default": 88
     },
-    { "type": "image_picker", "id": "feature_image", "label": "大图" },
+    {
+      "type": "image_picker",
+      "id": "feature_image",
+      "label": "大图"
+    },
     {
       "type": "select",
       "id": "feature_image_ratio",
       "label": "大图比例",
       "options": [
-        { "value": "square", "label": "正方形" },
-        { "value": "landscape", "label": "4:3" },
-        { "value": "wide", "label": "16:9" }
+        {
+          "value": "square",
+          "label": "正方形"
+        },
+        {
+          "value": "landscape",
+          "label": "4:3"
+        },
+        {
+          "value": "wide",
+          "label": "16:9"
+        }
       ],
       "default": "landscape"
     },
-    {"type":"header","content":"颜色设置"},
-    { "type": "color", "id": "background_color", "label": "背景颜色", "default": "#FFFFFF" },
-    { "type": "color", "id": "line_color", "label": "分隔线颜色", "default": "#D8D5CE" },
-    { "type": "color", "id": "hover_background_color", "label": "项目 Hover 底色", "default": "#F8F7F4" },
-    { "type": "color", "id": "eyebrow_color", "label": "小标题颜色", "default": "#C7A85E" },
-    { "type": "color", "id": "heading_color", "label": "主标题颜色", "default": "#17191A" },
-    { "type": "color", "id": "description_color", "label": "简介颜色", "default": "#5F615E" },
-    { "type": "color", "id": "item_title_color", "label": "项目标题颜色", "default": "#17191A" },
-    { "type": "color", "id": "item_body_color", "label": "项目正文颜色", "default": "#4F514E" },
-    { "type": "color", "id": "value_color", "label": "数值颜色", "default": "#C7A85E" },
-    { "type": "color", "id": "meta_color", "label": "附加信息颜色", "default": "#5F615E" },
-    { "type": "color", "id": "feature_title_color", "label": "右侧标题颜色", "default": "#17191A" },
-    { "type": "color", "id": "feature_body_color", "label": "右侧正文颜色", "default": "#4F514E" },
-    {"type":"header","content":"布局与交互"},
-    { "type": "range", "id": "item_padding_inline", "label": "项目左右内边距", "min": 0, "max": 40, "step": 2, "unit": "px", "default": 20 },
+    {
+      "type": "header",
+      "content": "布局与交互"
+    },
+    {
+      "type": "range",
+      "id": "item_padding_inline",
+      "label": "项目左右内边距",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
     {
       "type": "select",
       "id": "intro_alignment",
       "label": "标题区对齐",
       "options": [
-        { "value": "left", "label": "左对齐" },
-        { "value": "center", "label": "居中" },
-        { "value": "right", "label": "右对齐" }
+        {
+          "value": "left",
+          "label": "左对齐"
+        },
+        {
+          "value": "center",
+          "label": "居中"
+        },
+        {
+          "value": "right",
+          "label": "右对齐"
+        }
       ],
       "default": "left"
     },
@@ -630,9 +710,18 @@
       "id": "item_alignment",
       "label": "项目文字对齐",
       "options": [
-        { "value": "left", "label": "左对齐" },
-        { "value": "center", "label": "居中" },
-        { "value": "right", "label": "右对齐" }
+        {
+          "value": "left",
+          "label": "左对齐"
+        },
+        {
+          "value": "center",
+          "label": "居中"
+        },
+        {
+          "value": "right",
+          "label": "右对齐"
+        }
       ],
       "default": "left"
     },
@@ -641,53 +730,382 @@
       "id": "feature_alignment",
       "label": "右侧文字对齐",
       "options": [
-        { "value": "left", "label": "左对齐" },
-        { "value": "center", "label": "居中" },
-        { "value": "right", "label": "右对齐" }
+        {
+          "value": "left",
+          "label": "左对齐"
+        },
+        {
+          "value": "center",
+          "label": "居中"
+        },
+        {
+          "value": "right",
+          "label": "右对齐"
+        }
       ],
       "default": "left"
     },
-    { "type": "range", "id": "column_gap", "label": "左右间距", "min": 24, "max": 96, "step": 4, "unit": "px", "default": 56 },
-    {"type":"header","content":"电脑端字号"},
-    { "type": "range", "id": "eyebrow_size", "label": "小标题字号", "min": 10, "max": 24, "step": 1, "unit": "px", "default": 12 },
-    { "type": "range", "id": "heading_size", "label": "主标题字号", "min": 24, "max": 80, "step": 1, "unit": "px", "default": 35 },
-    { "type": "range", "id": "description_size", "label": "简介字号", "min": 12, "max": 28, "step": 1, "unit": "px", "default": 16 },
-    { "type": "range", "id": "item_title_size", "label": "项目标题字号", "min": 16, "max": 44, "step": 1, "unit": "px", "default": 24 },
-    { "type": "range", "id": "item_body_size", "label": "项目正文字号", "min": 12, "max": 26, "step": 1, "unit": "px", "default": 16 },
-    { "type": "range", "id": "value_size", "label": "数值字号", "min": 10, "max": 26, "step": 1, "unit": "px", "default": 12 },
-    { "type": "range", "id": "meta_size", "label": "附加信息字号", "min": 10, "max": 22, "step": 1, "unit": "px", "default": 12 },
-    { "type": "range", "id": "feature_title_size", "label": "右侧标题字号", "min": 16, "max": 44, "step": 1, "unit": "px", "default": 24 },
-    { "type": "range", "id": "feature_body_size", "label": "右侧正文字号", "min": 12, "max": 26, "step": 1, "unit": "px", "default": 16 },
-    {"type":"header","content":"移动端字号"},
-    {"type":"range","id":"mobile_eyebrow_size","label":"小标题字号","min":10,"max":24,"step":1,"unit":"px","default":12},
-    {"type":"range","id":"mobile_heading_size","label":"主标题字号","min":24,"max":80,"step":1,"unit":"px","default":35},
-    {"type":"range","id":"mobile_description_size","label":"简介字号","min":12,"max":28,"step":1,"unit":"px","default":16},
-    {"type":"range","id":"mobile_item_title_size","label":"项目标题字号","min":16,"max":44,"step":1,"unit":"px","default":24},
-    {"type":"range","id":"mobile_item_body_size","label":"项目正文字号","min":12,"max":26,"step":1,"unit":"px","default":16},
-    {"type":"range","id":"mobile_value_size","label":"数值字号","min":10,"max":26,"step":1,"unit":"px","default":12},
-    {"type":"range","id":"mobile_meta_size","label":"附加信息字号","min":10,"max":22,"step":1,"unit":"px","default":12},
-    {"type":"range","id":"mobile_feature_title_size","label":"右侧标题字号","min":16,"max":44,"step":1,"unit":"px","default":24},
-    {"type":"range","id":"mobile_feature_body_size","label":"右侧正文字号","min":12,"max":26,"step":1,"unit":"px","default":16},
-    {"type":"header","content":"其它设置"},
-    { "type": "select", "id": "animation_style", "label": "入场动画", "options": [
-      { "value": "fade-up", "label": "Fade Up" },
-      { "value": "fade-in", "label": "Fade In" },
-      { "value": "soft-zoom", "label": "Soft Zoom" }
-    ], "default": "fade-up" },
-    { "type": "range", "id": "padding_top", "label": "上边距", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 72 },
-    { "type": "range", "id": "padding_bottom", "label": "下边距", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 72 }
+    {
+      "type": "range",
+      "id": "column_gap",
+      "label": "左右间距",
+      "min": 24,
+      "max": 96,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "header",
+      "content": "电脑端字号"
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_size",
+      "label": "小标题字号",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "主标题字号",
+      "min": 24,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "简介字号",
+      "min": 12,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "item_title_size",
+      "label": "项目标题字号",
+      "min": 16,
+      "max": 44,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "item_body_size",
+      "label": "项目正文字号",
+      "min": 12,
+      "max": 26,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "value_size",
+      "label": "数值字号",
+      "min": 10,
+      "max": 26,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "meta_size",
+      "label": "附加信息字号",
+      "min": 10,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "feature_title_size",
+      "label": "右侧标题字号",
+      "min": 16,
+      "max": 44,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "feature_body_size",
+      "label": "右侧正文字号",
+      "min": 12,
+      "max": 26,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "移动端字号"
+    },
+    {
+      "type": "range",
+      "id": "mobile_eyebrow_size",
+      "label": "小标题字号",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_size",
+      "label": "主标题字号",
+      "min": 24,
+      "max": 80,
+      "step": 1,
+      "unit": "px",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "mobile_description_size",
+      "label": "简介字号",
+      "min": 12,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "mobile_item_title_size",
+      "label": "项目标题字号",
+      "min": 16,
+      "max": 44,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "mobile_item_body_size",
+      "label": "项目正文字号",
+      "min": 12,
+      "max": 26,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "mobile_value_size",
+      "label": "数值字号",
+      "min": 10,
+      "max": 26,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_meta_size",
+      "label": "附加信息字号",
+      "min": 10,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_feature_title_size",
+      "label": "右侧标题字号",
+      "min": 16,
+      "max": 44,
+      "step": 1,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "mobile_feature_body_size",
+      "label": "右侧正文字号",
+      "min": 12,
+      "max": 26,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "颜色设置"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "line_color",
+      "label": "分隔线颜色",
+      "default": "#D8D5CE"
+    },
+    {
+      "type": "color",
+      "id": "hover_background_color",
+      "label": "项目 Hover 底色",
+      "default": "#F8F7F4"
+    },
+    {
+      "type": "color",
+      "id": "eyebrow_color",
+      "label": "小标题颜色",
+      "default": "#C7A85E"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "主标题颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "简介颜色",
+      "default": "#5F615E"
+    },
+    {
+      "type": "color",
+      "id": "item_title_color",
+      "label": "项目标题颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "color",
+      "id": "item_body_color",
+      "label": "项目正文颜色",
+      "default": "#4F514E"
+    },
+    {
+      "type": "color",
+      "id": "value_color",
+      "label": "数值颜色",
+      "default": "#C7A85E"
+    },
+    {
+      "type": "color",
+      "id": "meta_color",
+      "label": "附加信息颜色",
+      "default": "#5F615E"
+    },
+    {
+      "type": "color",
+      "id": "feature_title_color",
+      "label": "右侧标题颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "color",
+      "id": "feature_body_color",
+      "label": "右侧正文颜色",
+      "default": "#4F514E"
+    },
+    {
+      "type": "header",
+      "content": "其它设置"
+    },
+    {
+      "type": "paragraph",
+      "content": "入场动画与区块上下间距"
+    },
+    {
+      "type": "select",
+      "id": "animation_style",
+      "label": "入场动画",
+      "options": [
+        {
+          "value": "fade-up",
+          "label": "Fade Up"
+        },
+        {
+          "value": "fade-in",
+          "label": "Fade In"
+        },
+        {
+          "value": "soft-zoom",
+          "label": "Soft Zoom"
+        }
+      ],
+      "default": "fade-up"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "上边距",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 72
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "下边距",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 72
+    }
   ],
   "blocks": [
     {
       "type": "item",
       "name": "指南项目",
       "settings": [
-        { "type": "image_picker", "id": "image", "label": "小图" },
-        { "type": "text", "id": "value", "label": "数值", "default": "100%" },
-        { "type": "text", "id": "heading", "label": "项目标题", "default": "Item Title" },
-        { "type": "richtext", "id": "description", "label": "正文", "default": "<p>Add the detailed explanation for this item here.</p>" },
-        { "type": "text", "id": "meta_label", "label": "附加信息标签" },
-        { "type": "text", "id": "meta_value", "label": "附加信息内容" }
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "小图"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "数值",
+          "default": "100%"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "项目标题",
+          "default": "Item Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "正文",
+          "default": "<p>Add the detailed explanation for this item here.</p>"
+        },
+        {
+          "type": "text",
+          "id": "meta_label",
+          "label": "附加信息标签"
+        },
+        {
+          "type": "text",
+          "id": "meta_value",
+          "label": "附加信息内容"
+        }
       ]
     }
   ],
@@ -696,9 +1114,27 @@
     {
       "name": "内容指南",
       "blocks": [
-        { "type": "item", "settings": { "value": "25%", "heading": "Option A" } },
-        { "type": "item", "settings": { "value": "50%", "heading": "Option B" } },
-        { "type": "item", "settings": { "value": "75%", "heading": "Option C" } }
+        {
+          "type": "item",
+          "settings": {
+            "value": "25%",
+            "heading": "Option A"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "value": "50%",
+            "heading": "Option B"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "value": "75%",
+            "heading": "Option C"
+          }
+        }
       ]
     }
   ]
