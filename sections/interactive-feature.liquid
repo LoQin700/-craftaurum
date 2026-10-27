@@ -38,9 +38,13 @@
     --ca-cap-padding-top: {{ padding_top }}px;
     --ca-cap-padding-bottom: {{ padding_bottom }}px;
     --ca-cap-heading-size: {{ section.settings.heading_size | default: 35 }}px;
+    --ca-cap-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 35 }}px;
     --ca-cap-body-size: {{ section.settings.body_size | default: 16 }}px;
+    --ca-cap-body-size-mobile: {{ section.settings.mobile_body_size | default: 16 }}px;
     --ca-cap-item-title-size: {{ section.settings.item_title_size | default: 20 }}px;
+    --ca-cap-item-title-size-mobile: {{ section.settings.mobile_item_title_size | default: 20 }}px;
     --ca-cap-item-body-size: {{ section.settings.item_body_size | default: 15 }}px;
+    --ca-cap-item-body-size-mobile: {{ section.settings.mobile_item_body_size | default: 15 }}px;
     --ca-cap-visual-height: {{ section.settings.visual_height | default: 520 }}px;
   "
 >
@@ -280,6 +284,15 @@
     .ca-capability-interactive__item,
     .ca-capability-interactive__panel { transition:none; }
   }
+
+  @media screen and (max-width: 749px) {
+    .ca-capability__heading { font-size: var(--ca-cap-heading-size-mobile); }
+    .ca-capability__description { font-size: var(--ca-cap-body-size-mobile); }
+    .ca-capability-interactive__title { font-size: var(--ca-cap-item-title-size-mobile); }
+    .ca-capability-icons__title { font-size: var(--ca-cap-item-title-size-mobile); }
+    .ca-capability-interactive__text { font-size: var(--ca-cap-item-body-size-mobile); }
+    .ca-capability-icons__text { font-size: var(--ca-cap-item-body-size-mobile); }
+  }
 {% endstylesheet %}
 
 {% schema %}
@@ -366,46 +379,6 @@
       "default": "<p>Explore the details that shape a ring collection, from materials and setting choices to design development and production review.</p>"
     },
     {
-      "type": "range",
-      "id": "heading_size",
-      "label": "标题字号",
-      "min": 24,
-      "max": 72,
-      "step": 1,
-      "unit": "px",
-      "default": 35
-    },
-    {
-      "type": "range",
-      "id": "body_size",
-      "label": "说明字号",
-      "min": 12,
-      "max": 24,
-      "step": 1,
-      "unit": "px",
-      "default": 16
-    },
-    {
-      "type": "range",
-      "id": "item_title_size",
-      "label": "项目标题字号",
-      "min": 14,
-      "max": 32,
-      "step": 1,
-      "unit": "px",
-      "default": 20
-    },
-    {
-      "type": "range",
-      "id": "item_body_size",
-      "label": "项目正文字号",
-      "min": 12,
-      "max": 22,
-      "step": 1,
-      "unit": "px",
-      "default": 15
-    },
-    {
       "type": "select",
       "id": "visual_height_mode",
       "label": "图片高度方式",
@@ -464,6 +437,52 @@
       ],
       "default": "2"
     },
+    {"type":"header","content":"电脑端字号"},
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "说明字号",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "item_title_size",
+      "label": "项目标题字号",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "item_body_size",
+      "label": "项目正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {"type":"header","content":"移动端字号"},
+    {"type":"range","id":"mobile_heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"mobile_body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"range","id":"mobile_item_title_size","label":"项目标题字号","min":14,"max":32,"step":1,"unit":"px","default":20},
+    {"type":"range","id":"mobile_item_body_size","label":"项目正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
     {
       "type": "select",
       "id": "animation_style",
