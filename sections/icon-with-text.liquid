@@ -255,6 +255,11 @@
     .ca-icon-text__title { font-size: var(--ca-item-title-size-mobile); }
     .ca-icon-text__body { font-size: var(--ca-item-body-size-mobile); }
   }
+  .ca-icon-text__media { transition: transform .4s ease; transform:scale(1); }
+  @media (hover:hover) and (pointer:fine) {
+    .ca-icon-text__item:hover .ca-icon-text__media { transform:scale(1.045); }
+  }
+  @media (prefers-reduced-motion:reduce) { .ca-icon-text__media { transition:none; } }
 {% endstylesheet %}
 
 {% schema %}
