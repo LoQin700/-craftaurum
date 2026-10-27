@@ -1,0 +1,43 @@
+name: Validate Editorial Contact Asterisk
+
+on:
+  push:
+    branches:
+      - fix/editorial-contact-required-asterisk
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate required markers
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          contact=Path('sections/editorial-contact.liquid').read_text(encoding='utf-8')
+          progress=Path('PROJECT-PROGRESS.md').read_text(encoding='utf-8')
+
+          assert '※' not in contact
+          assert '>Name <small class="ca-editorial-contact__required" aria-hidden="true">*</small>' in contact
+          assert '>Email <small class="ca-editorial-contact__required" aria-hidden="true">*</small>' in contact
+          assert '>Company <small class="ca-editorial-contact__required" aria-hidden="true">*</small>' in contact
+          assert 'Tell us about your project <small class="ca-editorial-contact__required" aria-hidden="true">*</small>' in contact
+          assert "Phone{% if section.settings.phone_required %} <small class="ca-editorial-contact__required" aria-hidden="true">*</small>{% endif %}" in contact
+          assert 'autocomplete="organization" required' in contact
+          assert '标准星号 `*`' in progress
+          print('Editorial Contact asterisk validation: PASS')
+          PY
+
+      - name: Shopify Theme Check
+        uses: shopify/theme-check-action@v2
+        with:
+          theme_root: '.'
+          flags: '--fail-level error'
+          token: ${{ github.token }}
+          base: main
