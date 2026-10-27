@@ -2872,21 +2872,18 @@
         "type": "color",
         "id": "palette_primary_button_hover_background",
         "label": "一级按钮 Hover 背景",
-        "info": "不设置则继承 Horizon 智能 Hover 配色",
         "default": "#C7A85E"
       },
       {
         "type": "color",
         "id": "palette_primary_button_hover_text",
         "label": "一级按钮 Hover 文字",
-        "info": "不设置则继承 Horizon 智能 Hover 配色",
         "default": "#17191A"
       },
       {
         "type": "color",
         "id": "palette_primary_button_hover_border",
         "label": "一级按钮 Hover 边框",
-        "info": "不设置则继承 Horizon 智能 Hover 配色",
         "default": "#C7A85E"
       },
       {
@@ -3062,21 +3059,18 @@
         "type": "color",
         "id": "palette_secondary_button_hover_background",
         "label": "二级按钮 Hover 背景",
-        "info": "不设置则继承 Horizon 智能 Hover 配色",
         "default": "#C7A85E"
       },
       {
         "type": "color",
         "id": "palette_secondary_button_hover_text",
         "label": "二级按钮 Hover 文字",
-        "info": "不设置则继承 Horizon 智能 Hover 配色",
         "default": "#17191A"
       },
       {
         "type": "color",
         "id": "palette_secondary_button_hover_border",
         "label": "二级按钮 Hover 边框",
-        "info": "不设置则继承 Horizon 智能 Hover 配色",
         "default": "#C7A85E"
       }
     ]
