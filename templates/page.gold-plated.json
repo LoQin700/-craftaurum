@@ -233,7 +233,7 @@
         "padding_top": 64,
         "padding_bottom": 64,
         "image": "shopify://shop_images/gold-plated-factory.jpg",
-        "heading_size": 35,
+        "heading_size": 40,
         "subtitle_size": 12,
         "body_size": 16,
         "animation_style": "fade-up",
