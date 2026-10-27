@@ -98,6 +98,7 @@
         </div>
       </div>
 
+      <div class="ca-carousel-stage">
       <div class="ca-content-cards__grid{% if section.settings.desktop_layout == 'carousel' %} ca-content-cards__grid--desktop-carousel{% endif %}{% if section.settings.mobile_layout == 'carousel' %} ca-content-cards__grid--mobile-carousel{% endif %}">
         {% for block in section.blocks %}
           <article class="ca-content-card" {{ block.shopify_attributes }}>
@@ -143,8 +144,9 @@
         {% endfor %}
       </div>
       {% if has_scroll_controls %}
-        {% render 'craftaurum-scroll-controls', track_selector: '.ca-content-cards__grid', desktop: carousel_desktop, mobile: carousel_mobile %}
+        {% render 'craftaurum-scroll-controls', track_selector: '.ca-content-cards__grid', desktop: carousel_desktop, mobile: carousel_mobile , media_selector: '.ca-content-card__media' %}
       {% endif %}
+      </div> <!-- /ca-carousel-stage -->
     </div>
   </div>
 </section>
