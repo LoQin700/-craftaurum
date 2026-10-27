@@ -22,12 +22,21 @@
     --ca-triptych-body-size: {{ section.settings.body_size | default: 16 }}px;
     --ca-triptych-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 25 }}px;
     --ca-triptych-body-size-mobile: {{ section.settings.mobile_body_size | default: 14 }}px;
+    --ca-triptych-copy-width: {{ section.settings.copy_width | default: 48 }}%;
+    --ca-triptych-image-ratio: {{ section.settings.image_ratio | default: "square" }};
+    --ca-triptych-mobile-image-cols: {{ section.settings.mobile_image_columns | default: "3" }};
   "
 >
   <div class="ca-triptych-split__rows" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
     {% for block in section.blocks %}
+      {% liquid
+        assign row_image_position = section.settings.image_position
+        if block.settings.image_position != blank and block.settings.image_position != "inherit"
+          assign row_image_position = block.settings.image_position
+        endif
+      %}
       <article
-        class="ca-triptych-split__row ca-triptych-split__row--image-{{ section.settings.image_position }}"
+        class="ca-triptych-split__row ca-triptych-split__row--image-{{ row_image_position }}"
         {{ block.shopify_attributes }}
       >
         <div class="ca-triptych-split__copy">
@@ -75,7 +84,7 @@
 
   .ca-triptych-split__row {
     display: grid;
-    grid-template-columns: minmax(0, 48fr) minmax(0, 52fr);
+    grid-template-columns: minmax(0, var(--ca-triptych-copy-width)) minmax(0, 1fr);
     gap: var(--ca-triptych-panel-gap);
     align-items: stretch;
   }
@@ -131,7 +140,7 @@
 
   .ca-triptych-split__image-wrap {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: {% if section.settings.image_ratio == "portrait" %}4 / 5{% elsif section.settings.image_ratio == "landscape" %}4 / 3{% else %}1 / 1{% endif %};
     overflow: hidden;
   }
 
@@ -153,12 +162,13 @@
     }
 
     .ca-triptych-split__copy {
-      order: 1 !important;
+      order: {% if section.settings.mobile_image_first %}2{% else %}1{% endif %} !important;
       padding: min(var(--ca-triptych-text-pad), 24px);
     }
 
     .ca-triptych-split__images {
-      order: 2 !important;
+      grid-template-columns: repeat({{ section.settings.mobile_image_columns | default: "3" }}, minmax(0, 1fr));
+      order: {% if section.settings.mobile_image_first %}1{% else %}2{% endif %} !important;
       padding: min(var(--ca-triptych-image-pad), 14px);
       gap: min(var(--ca-triptych-image-gap), 10px);
     }
@@ -192,6 +202,11 @@
       ],
       "default": "right"
     },
+    { "type": "range", "id": "copy_width", "label": "电脑端文字区域占比", "min": 30, "max": 70, "step": 2, "unit": "%", "default": 48 },
+    { "type": "select", "id": "image_ratio", "label": "图片比例", "options": [{ "value": "square", "label": "正方形 1:1" }, { "value": "portrait", "label": "竖图 4:5" }, { "value": "landscape", "label": "横图 4:3" }], "default": "square" },
+    { "type": "header", "content": "手机端布局" },
+    { "type": "checkbox", "id": "mobile_image_first", "label": "手机端图片放在文字上方", "default": false },
+    { "type": "select", "id": "mobile_image_columns", "label": "手机端每行图片列数", "options": [{ "value": "2", "label": "2 列" }, { "value": "3", "label": "3 列" }], "default": "3" },
     { "type": "color", "id": "text_background", "label": "文字区域背景", "default": "#E7DED0" },
     { "type": "color", "id": "image_background", "label": "图片区背景", "default": "#F6F2EB" },
     { "type": "color", "id": "text_color", "label": "文字颜色", "default": "#17191A" },
@@ -220,6 +235,7 @@
         { "type": "image_picker", "id": "image_1", "label": "图片 1" },
         { "type": "image_picker", "id": "image_2", "label": "图片 2" },
         { "type": "image_picker", "id": "image_3", "label": "图片 3" },
+        { "type": "select", "id": "image_position", "label": "本行图片位置", "options": [{ "value": "inherit", "label": "跟随整体设置" },{ "value": "right", "label": "左文右图" },{ "value": "left", "label": "左图右文" }], "default": "inherit" },
         { "type": "text", "id": "heading", "label": "标题", "default": "Collection Title" },
         { "type": "richtext", "id": "body", "label": "正文", "default": "<p>Add a short description for this collection.</p>" }
       ]
