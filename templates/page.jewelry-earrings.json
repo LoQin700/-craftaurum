@@ -1,4 +1,12 @@
-/* Craftaurum page template: editorial banner background uses its color picker directly. */
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -56,25 +64,25 @@
       "name": "图文横幅",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
         "eyebrow": "CUSTOM EARRINGS MANUFACTURING",
         "heading": "Tailor-Made Custom Earrings.",
         "introduction": "<p>Develop custom earrings for your brand across hoop, stud, pearl and gemstone directions. From initial references and material selection to sampling and finishing, each design can be refined around the style and market of your collection.</p><p>Craftaurum supports earring development for brands and wholesale partners seeking clear communication, flexible customization and consistent production review.</p>",
-        "hero_image": "shopify://shop_images/gold-earrings.jpg",
-        "image_position": "right",
-        "image_ratio": "landscape",
         "quote_label": "Get B2B Quote",
         "quote_url": "",
         "catalog_label": "Request Catalog",
         "catalog_url": "",
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "hero_image": "shopify://shop_images/gold-earrings.jpg",
+        "image_position": "right",
+        "image_ratio": "landscape",
         "eyebrow_size": 12,
         "heading_size": 58,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "horizontal_cta_Pwad7F": {
@@ -89,17 +97,11 @@
         "button_style": "button-secondary",
         "background_color": "#17191a",
         "text_color": "#f8f7f4",
-        "button_background_color": "#17191a",
-        "button_text_color": "#f8f7f4",
-        "button_border_color": "#f8f7f4",
-        "button_hover_background_color": "#c7a85e",
-        "button_hover_text_color": "#17191a",
-        "button_hover_border_color": "#c7a85e",
-        "padding_top": 36,
-        "padding_bottom": 36,
         "heading_size": 35,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "content_cards_xi8xGJ": {
@@ -159,32 +161,32 @@
       "name": "图文卡片",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
         "eyebrow": "EARRING DESIGN RANGE",
         "heading": "Explore Custom Earring Styles",
         "description": "<p>Develop an earring collection through different silhouettes, materials, settings and finishing directions.</p>",
-        "desktop_layout": "grid",
-        "desktop_columns": "4",
-        "mobile_layout": "carousel",
-        "mobile_columns": "1",
         "image_ratio": "portrait",
-        "gap": 20,
-        "padding_top": 56,
-        "padding_bottom": 56,
+        "image_width": 100,
         "intro_style": "style_1",
-        "show_divider": false,
-        "divider_color": "#D8D5CE",
+        "card_text_alignment": "left",
+        "gap": 20,
+        "row_gap": 36,
+        "desktop_columns": "4",
+        "desktop_layout": "grid",
+        "mobile_columns": "1",
+        "mobile_layout": "carousel",
         "eyebrow_size": 12,
         "heading_size": 35,
         "body_size": 16,
         "card_title_size": 18,
         "card_body_size": 15,
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "show_divider": false,
+        "divider_color": "#D8D5CE",
         "animation_style": "fade-up",
-        "image_width": 100,
-        "card_text_alignment": "left",
-        "row_gap": 36
+        "padding_top": 56,
+        "padding_bottom": 56
       }
     },
     "interactive_feature_cFYGmj": {
@@ -234,14 +236,14 @@
         "section_width": "page-width",
         "heading": "Focused Capabilities for Custom Earring Development",
         "description": "<p>Earring development depends on material choice, construction, balance and finishing. These are the product-specific areas we focus on during development.</p>",
-        "padding_top": 56,
-        "padding_bottom": 56,
         "intro_style": "style_1",
         "heading_size": 35,
         "body_size": 16,
         "item_title_size": 20,
         "item_body_size": 15,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "padding_top": 56,
+        "padding_bottom": 56
       }
     },
     "image_text_feature_pyXify": {
@@ -249,28 +251,28 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
         "heading": "Custom Earring Manufacturing for Brand Collections",
-        "heading_position": "content",
         "subtitle": "ABOUT CRAFTAURUM",
+        "body": "<p>Craftaurum works with jewelry brands and wholesale partners on custom earring development, sampling and production coordination. We focus on the details that affect the finished result, including proportion, fastening structure, setting style and surface finish.</p><p>Use real workshop, polishing, setting or inspection photography here to show how earring designs move from concept to finished product.</p>",
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
-        "body": "<p>Craftaurum works with jewelry brands and wholesale partners on custom earring development, sampling and production coordination. We focus on the details that affect the finished result, including proportion, fastening structure, setting style and surface finish.</p><p>Use real workshop, polishing, setting or inspection photography here to show how earring designs move from concept to finished product.</p>",
-        "image": "shopify://shop_images/OEM-JEWELLERY.jpg",
-        "image_position": "left",
-        "image_ratio": "landscape",
         "cta_label": "Start Your Project",
         "cta_url": "",
         "cta_button_style": "button-secondary",
-        "padding_top": 32,
-        "padding_bottom": 32,
+        "image": "shopify://shop_images/OEM-JEWELLERY.jpg",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "heading_position": "content",
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "icon_with_text_support": {
@@ -322,26 +324,26 @@
       "name": "图标文字",
       "settings": {
         "section_width": "page-width",
+        "eyebrow": "MANUFACTURING SUPPORT",
+        "heading": "Support for Earring Development",
+        "description": "<p>A clear development process helps move earring concepts from reference and material selection through sampling and production review.</p>",
+        "icon_position": "top",
+        "icon_size": 32,
+        "icon_gap": 16,
         "background_color": "#f8f7f4",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "style_preset": "left",
-        "icon_position": "top",
-        "icon_size": 32,
-        "icon_gap": 16,
         "column_gap": 32,
-        "eyebrow": "MANUFACTURING SUPPORT",
-        "heading": "Support for Earring Development",
-        "description": "<p>A clear development process helps move earring concepts from reference and material selection through sampling and production review.</p>",
         "desktop_columns": "4",
         "mobile_columns": "1",
-        "padding_top": 72,
-        "padding_bottom": 72,
         "eyebrow_size": 12,
         "heading_size": 35,
         "body_size": 15,
         "item_title_size": 18,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "padding_top": 72,
+        "padding_bottom": 72
       }
     },
     "section_m4j6NK": {
@@ -349,15 +351,15 @@
       "name": "联系表单 - Editorial",
       "settings": {
         "section_width": "page-width",
+        "eyebrow": "START AN EARRING PROJECT",
+        "heading": "Start Your Custom Earring Project",
+        "description": "<p>Share your earring styles, materials, finishes, quantity and development requirements with our team.</p>",
+        "phone_required": false,
         "background_color": "#F8F7F4",
         "text_color": "#17191A",
-        "eyebrow": "START AN EARRING PROJECT",
         "eyebrow_size": 12,
-        "heading": "Start Your Custom Earring Project",
         "heading_size": 35,
-        "description": "<p>Share your earring styles, materials, finishes, quantity and development requirements with our team.</p>",
         "body_size": 16,
-        "phone_required": false,
         "animation_style": "fade-up",
         "padding_top": 96,
         "padding_bottom": 96

@@ -78,7 +78,6 @@
         {% endif %}
       </header>
 
-      <div class="ca-carousel-stage">
       <div class="ca-process-cards__grid{% if section.settings.mobile_layout == 'carousel' %} ca-process-cards__grid--mobile-carousel{% endif %}">
         {% for block in section.blocks %}
           <article class="ca-process-card" {{ block.shopify_attributes }}>
@@ -124,7 +123,6 @@
       {% if has_scroll_controls %}
         {% render 'craftaurum-scroll-controls', track_selector: '.ca-process-cards__grid', desktop: carousel_desktop, mobile: carousel_mobile %}
       {% endif %}
-      </div> <!-- /ca-carousel-stage -->
     </div>
   </div>
 </section>
