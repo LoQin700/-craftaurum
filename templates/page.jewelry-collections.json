@@ -27,7 +27,10 @@
         "eyebrow_size": 12,
         "heading_size": 58,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "gallery_rings": {
@@ -76,7 +79,9 @@
         "body_size": 16,
         "animation_style": "fade-in",
         "background_color": "#ffffff",
-        "image_ratio": "square"
+        "image_ratio": "square",
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "gallery_earrings": {
@@ -125,7 +130,9 @@
         "body_size": 16,
         "animation_style": "fade-in",
         "background_color": "#ffffff",
-        "image_ratio": "square"
+        "image_ratio": "square",
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "gallery_bracelets": {
@@ -174,7 +181,9 @@
         "body_size": 16,
         "animation_style": "fade-in",
         "background_color": "#ffffff",
-        "image_ratio": "square"
+        "image_ratio": "square",
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "gallery_necklaces": {
@@ -223,7 +232,9 @@
         "body_size": 16,
         "animation_style": "fade-in",
         "background_color": "#ffffff",
-        "image_ratio": "square"
+        "image_ratio": "square",
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "contact": {
@@ -242,7 +253,10 @@
         "phone_required": false,
         "animation_style": "fade-up",
         "padding_top": 96,
-        "padding_bottom": 96
+        "padding_bottom": 96,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     }
   },
