@@ -1,4 +1,4 @@
-/* Craftaurum visual QA showroom. Instance names match current Section schema preset names exactly. */
+/* Craftaurum custom Section QA showroom: instance names follow reusable Section functional names. Presets may describe application-specific examples. */
 {
   "sections": {
     "main": {
@@ -99,7 +99,7 @@
         "partner_RidH9m",
         "partner_zmpKU4"
       ],
-      "name": "品牌合作",
+      "name": "图片轮播",
       "settings": {
         "section_width": "page-width",
         "heading": "01 | Trusted by Jewelry Partners Worldwide",
@@ -835,7 +835,7 @@
         "quality",
         "collaboration"
       ],
-      "name": "Why Choose Craftaurum",
+      "name": "优势展示",
       "settings": {
         "section_width": "page-width",
         "background_color": "#f8f7f4",
@@ -1001,7 +1001,7 @@
         "halloween",
         "thanksgiving"
       ],
-      "name": "Festival Intro",
+      "name": "专题导航介绍",
       "settings": {
         "section_width": "page-width",
         "background_color": "#ffffff",
@@ -1033,7 +1033,7 @@
     },
     "editorial_contact": {
       "type": "editorial-contact",
-      "name": "联系表单 - Editorial",
+      "name": "分栏联系表单",
       "settings": {
         "section_width": "page-width",
         "background_color": "#f8f7f4",
