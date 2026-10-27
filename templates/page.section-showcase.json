@@ -1,4 +1,4 @@
-/* Craftaurum page template. Hero background is controlled directly by background_color. */
+/* Craftaurum Section Showcase: layered images use crossover checkbox and per-image rotation. */
 {
   "sections": {
     "main": {
@@ -762,7 +762,6 @@
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "image_position": "left",
-        "desktop_layout": "overlap",
         "mobile_layout": "slider",
         "visual_height": 560,
         "overlap_amount": 28,
@@ -780,7 +779,8 @@
         "animation_style": "soft-zoom",
         "column_gap": 64,
         "padding_top": 72,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "enable_overlap": true
       }
     },
     "why_choose": {
