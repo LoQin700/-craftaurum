@@ -256,7 +256,7 @@
         "background_color": "#f8f7f4",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
-        "style_preset": "left",
+        "style_preset": "centered",
         "show_divider": true,
         "column_gap": 32,
         "desktop_columns": "4",
