@@ -660,3 +660,19 @@
 - 执行前后核对相同设置 ID 和其所有配置内容，只重排 Header/Paragraph，不重置列数、字号、动画、间距、图片/按钮设置；没有修改其它 Section 前端逻辑。
 - GitHub 静态检查 **17/17 Section Schema 可解析**，颜色组位置正确，末尾 Header+Paragraph+3项设置正确；图文横幅不再引用已移除的开关；图片卡片四项文字颜色有独立设置和前端 CSS 变量。
 - **仍待验证：** Shopify GitHub 同步、Theme Editor 中「其它设置」实际可见性及颜色选择器生效、Theme Check CLI、PC/Mobile 渲染。特别注意：截图中的无 Header 现象可能与主题编辑器正在显示的主题版本不同有关；目前未在用户的 Shopify 后台现场打开，不宣称已解决后台可见性。
+
+## 2026-10-27 · 叠层图文交叉开关恢复与手机端布局修复（最新）
+- 用户明确纠正“叠层图文”逻辑：不应以电脑端「重叠 / 不重叠」的 Select 选择，之前约定的是**图片是否交叉的 Checkbox**，以及每个图片 Block 独立旋转角度；同时反馈手机端布局适应不正确。
+- 已修改 `sections/overlap-image-text.liquid`：
+  - 移除 `desktop_layout` 下拉设置，增加 `enable_overlap` Checkbox「图片是否交叉」（默认 **true**）。原 `overlap_amount`「交叉程度（0 为不交叉）」保留范围 **0–55%**、默认 **28%**，现在仅在开关打开时显示，紧挨开关放在「电脑端布局」。
+  - 图片 Block 原有的 `width`（35–86%）、`rotation`（−12° 至 +12°）、`z_index`（1–5）、`image_ratio` 和 `image_picker` 均保留；旋转设置名称明确为「该图片旋转角度」，两张图可分别设置正负旋转，Block 序列不被更改。
+  - 重写 PC flex 交叉 CSS：开启开关才使用负 margin 交叉，关闭时正常分列留空隙；交叉程度 **0** 时也不产生图片覆盖。图片可 shrink，降低多图组合超出视觉容器的风险。
+  - 统一 Tablet/Mobile（≤989px）为**图片先于文字**的单栏布局，不受 PC「图片在左/右」位置影响；视觉区域取消 PC 的固定最小高度，避免手机过大留白。
+  - 移动端 `mobile_layout` 保留 **横向滑动 / 上下排列 / 交叉叠放**：
+    - 横向滑动：固定可读卡片宽度、scroll snap、隐藏滚动条、足够的旋转留白；无论电脑交叉开关如何都不会强行负边距。
+    - 上下排列：弹性宽度/间距，图片竖排且不交叉。
+    - 交叉叠放：手机使用交叉开关及交叉程度，关闭时变为不重叠的平排展示，沿用每图独立旋转、宽度、图层。
+  - 手机更窄断点（≤749px）为横滑图片设置 82% 宽度，只有 1 张图时可充满内容宽度；保留原 749px 独立字号控制。
+- 已将两个已有引用该 Section 的页面 `templates/page.section-showcase.json`（`overlap_image_text`）与 `templates/page.pearl-jewelry.json`（`pearl_business`）中旧 `desktop_layout: overlap` 转为 `enable_overlap: true`。分别保留两张图片原本 −4°/4° 旋转角及层级设置，不改变图片绑定、文案和 Mobile slider 默认选项。
+- 静态检查已核实：Schema JSON 可解析；原 Select 已移除、新 Checkbox 默认开启、交叉程度可见性绑定正确、Block Rotation/Layer 控制仍存在；扫描已知模板后没有残留旧 `desktop_layout` 的叠层实例。
+- **仍未做** Shopify Theme Check、Theme Editor 实际保存、在真实前台 PC/Tablet/Mobile 的交叉比例与滑动触控验收；不得将静态检查说成视觉已测。后续重点验收 1/2/3 张图片、0%/28%/55% 重叠量、−12°/+12° 旋转，屏宽 375/749/750/989/990px，背景及图片优先级。
