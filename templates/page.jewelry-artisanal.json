@@ -66,12 +66,12 @@
       "settings": {
         "section_width": "page-width",
         "eyebrow": "ARTISANAL JEWELRY MANUFACTURING",
-        "heading": "High-End Artisanal Jewelry.",
-        "introduction": "<p>Develop distinctive artisanal jewelry and accessory concepts where craftsmanship and creative form are central to the design. Craftaurum can support projects across large pendants, brooches, waist chains and jewelry-led corporate gifts using a range of metal and finishing directions.</p><p>These projects are suited to brands looking for more expressive, object-like or limited-feel designs beyond standard jewelry categories.</p>",
+        "heading": "Artisanal Jewelry & Custom Accessories",
+        "introduction": "<p>Explore distinctive jewelry and accessory ideas, including large pendant necklaces, decorative brooches, waist chains and jewelry-inspired corporate gifts. These categories place emphasis on individual design, proportions and finishing details.</p><p>Send your sketches, preferred material, references and quantity to discuss a practical route for sampling and production.</p>",
         "quote_label": "Get B2B Quote",
-        "quote_url": "",
+        "quote_url": "shopify://pages/contact",
         "catalog_label": "Request Catalog",
-        "catalog_url": "",
+        "catalog_url": "shopify://pages/contact",
         "hero_image": "shopify://shop_images/French-jewelry-700x441.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
@@ -118,7 +118,7 @@
         "body": {
           "type": "body",
           "settings": {
-            "body": "<p>Develop unusual forms, materials and finishing details around a clear project or brand direction.</p>"
+            "body": "<p>Have a specific design in mind? Share sketches, materials, quantities and target requirements through our contact form so the next steps can be reviewed.</p>"
           }
         },
         "buttons": {
@@ -144,7 +144,7 @@
           "settings": {
             "image": "shopify://shop_images/S1028-N.jpg",
             "title": "Large Pendant Necklaces",
-            "description": "<p>Develop oversized pendant concepts with distinctive proportions, surfaces and handcrafted details.</p>",
+            "description": "<p>Explore bold pendant proportions, decorative textures and different chain or attachment options to match a specific design brief.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -154,8 +154,8 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/Christmas-brooch.jpg",
-            "title": "Custom Brooches",
-            "description": "<p>Create brooch designs around brand motifs, decorative forms and flexible metal or finish choices.</p>",
+            "title": "Custom Brooch Jewelry",
+            "description": "<p>Discuss brooch shapes, brand emblems, metal finishes and pin construction for fashion accessories or event collections.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -165,8 +165,8 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/pearls-necklace.jpg",
-            "title": "Waist Chains",
-            "description": "<p>Explore custom waist-chain concepts with attention to proportion, movement and distinctive visual details.</p>",
+            "title": "Custom Waist Chains",
+            "description": "<p>Review chain lengths, connection details, decorative elements and finishes for custom waist-chain designs.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -176,8 +176,8 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/custom-pearl-jewelry-set.jpg",
-            "title": "Corporate Jewelry Gifts",
-            "description": "<p>Develop jewelry-led gift pieces that reflect a brand, event or partnership through custom design details.</p>",
+            "title": "Customized Corporate Gifts",
+            "description": "<p>Develop jewelry-inspired gift concepts using engraved or branded motifs. Discuss packaging, quantity and feasibility before confirming production.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -195,7 +195,7 @@
         "section_width": "page-width",
         "eyebrow": "ARTISANAL DESIGN RANGE",
         "heading": "Explore Artisanal Jewelry Directions",
-        "description": "<p>Build more expressive product concepts across statement pendants, brooches, waist chains and custom gift pieces.</p>",
+        "description": "<p>Explore the main styles shown in this category. Share your reference images and specifications to discuss materials, sampling and production feasibility.</p>",
         "image_ratio": "portrait",
         "image_width": 100,
         "intro_style": "style_1",
@@ -292,9 +292,9 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "heading": "Artisanal Jewelry Built Around Distinctive Forms",
-        "subtitle": "ABOUT CRAFTAURUM",
-        "body": "<p>Craftaurum supports custom artisanal projects that sit beyond standard ring, earring, bracelet and necklace categories. From brooches and large pendants to waist chains and jewelry-led gift pieces, development can be shaped around a more specific creative brief.</p><p>Use close-up workshop or hand-finishing photography here to emphasize the craft and material character behind these projects.</p>",
+        "heading": "Artisanal Jewelry Beyond Standard Collections",
+        "subtitle": "CUSTOM JEWELRY DEVELOPMENT",
+        "body": "<p>Custom artisanal projects can include oversized pendants, brooches, waist chains and branded gift pieces. Each concept may need its own approach to scale, metal choice, assembly and surface finish.</p><p>Share drawings, example images and intended use so we can assess feasible details and outline the sample development process. Available materials, MOQ and production schedules are confirmed by quotation.</p>",
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
@@ -402,7 +402,7 @@
         "section_width": "page-width",
         "eyebrow": "START A PROJECT",
         "heading": "Start Your Artisanal Jewelry Project",
-        "description": "<p>Share your design direction, materials, craftsmanship requirements and target quantity with our team.</p>",
+        "description": "<p>Share your design reference, preferred material and finish, target size, approximate quantity and delivery location. We can review feasibility and respond with the information needed for sampling and quotation.</p>",
         "phone_required": false,
         "background_color": "#F8F7F4",
         "text_color": "#17191A",
