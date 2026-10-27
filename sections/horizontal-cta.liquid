@@ -14,7 +14,9 @@
     --ca-cta-button-hover-text: {{ section.settings.button_hover_text_color }};
     --ca-cta-button-hover-border: {{ section.settings.button_hover_border_color }};
     --ca-cta-heading-size: {{ section.settings.heading_size | default: 35 }}px;
+    --ca-cta-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 35 }}px;
     --ca-cta-body-size: {{ section.settings.body_size | default: 16 }}px;
+    --ca-cta-body-size-mobile: {{ section.settings.mobile_body_size | default: 16 }}px;
   "
 >
   <div class="ca-horizontal-cta__surface">
@@ -82,6 +84,11 @@
     }
     .ca-horizontal-cta__action { justify-self: start; }
   }
+
+  @media screen and (max-width: 749px) {
+    .ca-horizontal-cta__heading { font-size: var(--ca-cta-heading-size-mobile); }
+    .ca-horizontal-cta__description { font-size: var(--ca-cta-body-size-mobile); }
+  }
 {% endstylesheet %}
 
 {% schema %}
@@ -117,14 +124,12 @@
       "label": "标题",
       "default": "From design concept to custom jewelry production."
     },
-    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":64,"step":1,"unit":"px","default":35},
     {
       "type": "richtext",
       "id": "description",
       "label": "正文",
       "default": "<p>One clear process, developed around the needs of your collection.</p>"
     },
-    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":16},
     {
       "type": "text",
       "id": "button_label",
@@ -208,6 +213,12 @@
       "label": "按钮 Hover 边框颜色",
       "default": "#C7A85E"
     },
+    {"type":"header","content":"电脑端字号"},
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":64,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":16},
+    {"type":"header","content":"移动端字号"},
+    {"type":"range","id":"mobile_heading_size","label":"标题字号","min":24,"max":64,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"mobile_body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":16},
     {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
     {
       "type": "range",
