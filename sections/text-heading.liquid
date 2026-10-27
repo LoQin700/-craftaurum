@@ -1,6 +1,8 @@
 <section {% if section.settings.anchor_id != blank %}id="{{ section.settings.anchor_id | handleize }}"{% endif %}
   class="section section--{{ section.settings.section_width | default: 'page-width' }} spacing-style ca-text-heading"
-  style="--padding-block-start: {{ section.settings.padding_top }}px; --padding-block-end: {{ section.settings.padding_bottom }}px; --ca-text-heading-size: {{ section.settings.heading_size | default: 35 }}px; --ca-text-body-size: {{ section.settings.body_size | default: 16 }}px;">
+  style="--padding-block-start: {{ section.settings.padding_top }}px; --padding-block-end: {{ section.settings.padding_bottom }}px; --ca-text-heading-size: {{ section.settings.heading_size | default: 35 }}px;
+    --ca-text-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 35 }}px; --ca-text-body-size: {{ section.settings.body_size | default: 16 }}px;
+    --ca-text-body-size-mobile: {{ section.settings.mobile_body_size | default: 16 }}px;">
   <div class="ca-text-heading__inner" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
     {% if section.settings.heading != blank %}
       <h2 class="ca-text-heading__title">{{ section.settings.heading | escape }}</h2>
@@ -17,6 +19,11 @@
   .ca-text-heading__body { font-size: var(--ca-text-body-size); line-height: 1.6; }
   .ca-text-heading__body :is(p,ul,ol) { font-size: inherit; line-height: inherit; }
   .ca-text-heading__body p { margin: 0; }
+
+  @media screen and (max-width: 749px) {
+    .ca-text-heading__title { font-size: var(--ca-text-heading-size-mobile); }
+    .ca-text-heading__body { font-size: var(--ca-text-body-size-mobile); }
+  }
 {% endstylesheet %}
 {% schema %}
 {
@@ -51,19 +58,23 @@
       "label": "标题",
       "default": "Let's Create Something Together"
     },
-    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
     {
       "type": "richtext",
       "id": "description",
       "label": "正文",
       "default": "<p>Tell us about your project and our team will get in touch.</p>"
     },
-    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
     {
       "type": "text",
       "id": "anchor_id",
       "label": "页面锚点"
     },
+    {"type":"header","content":"电脑端字号"},
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"header","content":"移动端字号"},
+    {"type":"range","id":"mobile_heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"mobile_body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
     {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
     {
       "type": "range",
