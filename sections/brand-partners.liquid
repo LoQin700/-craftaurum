@@ -9,6 +9,9 @@
     --padding-block-start: {{ section.settings.padding_top }}px;
     --padding-block-end: {{ section.settings.padding_bottom }}px;
     --ca-logo-gap: 10px;
+    --ca-logo-desktop-columns: {{ section.settings.desktop_columns | default: 4 }};
+    --ca-logo-image-size: {{ section.settings.image_size | default: 90 }}%;
+    --ca-logo-ratio: {% case section.settings.image_ratio %}{% when 'portrait' %}4 / 5{% when 'landscape' %}4 / 3{% when 'wide' %}16 / 9{% else %}1 / 1{% endcase %};
     --ca-logo-mobile-columns: {{ section.settings.mobile_columns | default: 1 }};
     --ca-logo-heading-size: {{ section.settings.heading_size | default: 35 }}px;
     --ca-logo-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 35 }}px;
@@ -121,13 +124,13 @@
   .ca-logos__description p { margin: 0; }
   .ca-logos__slideshow slideshow-slides { gap: var(--ca-logo-gap, 10px); }
   .ca-logos__slideshow slideshow-slide {
-    flex: 0 0 calc((100% - 2 * var(--ca-logo-gap, 10px)) / 3);
-    width: calc((100% - 2 * var(--ca-logo-gap, 10px)) / 3);
+    flex: 0 0 calc((100% - (var(--ca-logo-desktop-columns) - 1) * var(--ca-logo-gap, 10px)) / var(--ca-logo-desktop-columns));
+    width: calc((100% - (var(--ca-logo-desktop-columns) - 1) * var(--ca-logo-gap, 10px)) / var(--ca-logo-desktop-columns));
     min-width: 0;
     scroll-snap-align: start;
   }
   .ca-logos__tile {
-    aspect-ratio: 1;
+    aspect-ratio: var(--ca-logo-ratio);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,9 +138,9 @@
     border: 1px solid rgb(var(--color-foreground-rgb) / 0.13);
     background: var(--color-background);
   }
-  .ca-logos__image { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .ca-logos__image { display: block; width: var(--ca-logo-image-size); height: var(--ca-logo-image-size); max-width:100%; max-height:100%; object-fit: contain; }
   .ca-logos__placeholder {
-    display: block; height: 100%; width: 100%;
+    display: block; height: var(--ca-logo-image-size); width: var(--ca-logo-image-size);
     color: rgb(var(--color-foreground-rgb) / 0.2);
     background: rgb(var(--color-foreground-rgb) / 0.04);
   }
@@ -261,6 +264,49 @@
     {
       "type": "header",
       "content": "移动端布局"
+    },
+    {
+      "type": "range",
+      "id": "desktop_columns",
+      "label": "电脑端每行显示数量",
+      "min": 2,
+      "max": 8,
+      "step": 1,
+      "default": 4
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "图片比例",
+      "options": [
+        {
+          "value": "square",
+          "label": "1:1 正方形"
+        },
+        {
+          "value": "portrait",
+          "label": "4:5 竖图"
+        },
+        {
+          "value": "landscape",
+          "label": "4:3 横图"
+        },
+        {
+          "value": "wide",
+          "label": "16:9 宽图"
+        }
+      ],
+      "default": "square"
+    },
+    {
+      "type": "range",
+      "id": "image_size",
+      "label": "图片大小",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 90
     },
     {
       "type": "range",
@@ -436,7 +482,12 @@
         {
           "type": "partner"
         }
-      ]
+      ],
+      "settings": {
+        "desktop_columns": 4,
+        "image_ratio": "square",
+        "image_size": 90
+      }
     }
   ]
 }
