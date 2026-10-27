@@ -47,14 +47,13 @@
     --ca-overlap-body-size-mobile: {{ section.settings.mobile_body_size | default: 14 }}px;
     --ca-overlap-eyebrow-size: {{ section.settings.eyebrow_size | default: 12 }}px;
     --ca-overlap-eyebrow-size-mobile: {{ section.settings.mobile_eyebrow_size | default: 12 }}px;
-    --ca-overlap-amount: {{ section.settings.overlap_amount | default: 28 }}%;
+    --ca-overlap-amount: {{ section.settings.overlap_amount | default: 15 }}%;
   "
 >
   <div class="ca-overlap__layout ca-overlap__layout--image-{{ section.settings.image_position }}" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
     <div class="ca-carousel-stage ca-overlap__stage">
     <div
-      class="ca-overlap__visual ca-overlap__visual--mobile-{{ section.settings.mobile_layout | default: 'slider' }}"
-      aria-label="{{ section.settings.visual_aria_label | escape }}"
+      class="ca-overlap__visual ca-overlap__visual--mobile-{{ section.settings.mobile_layout | default: 'overlap' }}"
     >
       {% for block in section.blocks %}
         {% liquid
@@ -553,12 +552,6 @@
       "default": "landscape"
     },
     {
-      "type": "text",
-      "id": "visual_aria_label",
-      "label": "图片区域辅助文字",
-      "default": "Product imagery"
-    },
-    {
       "type": "header",
       "content": "布局与交互"
     },
@@ -604,7 +597,7 @@
       "max": 55,
       "step": 1,
       "unit": "%",
-      "default": 28
+      "default": 15
     },
     {
       "type": "header",
@@ -628,7 +621,7 @@
           "label": "交叉叠放"
         }
       ],
-      "default": "slider"
+      "default": "overlap"
     },
     {
       "type": "select",
