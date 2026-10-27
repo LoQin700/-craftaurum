@@ -32,3 +32,8 @@ ca-scroll-controls.ca-scroll-controls {
 @media (max-width: 749px) {
   ca-scroll-controls.ca-scroll-controls--mobile { display: flex; }
 }
+
+ca-scroll-controls.ca-scroll-controls.is-unscrollable { display: none !important; }
+@media (min-width: 750px) and (max-width: 989px) {
+  ca-scroll-controls.ca-scroll-controls--tablet { display: flex; }
+}
