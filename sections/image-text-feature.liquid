@@ -200,7 +200,10 @@
     ]
   },
   "settings": [
-    {"type":"header","content":"基础设置"},
+    {
+      "type": "header",
+      "content": "基础设置"
+    },
     {
       "type": "select",
       "id": "section_width",
@@ -217,7 +220,10 @@
       ],
       "default": "page-width"
     },
-    {"type":"header","content":"内容设置"},
+    {
+      "type": "header",
+      "content": "内容设置"
+    },
     {
       "type": "text",
       "id": "heading",
@@ -235,7 +241,10 @@
       "label": "正文",
       "default": "<p>Discover thoughtful jewelry craftsmanship and flexible custom design services at Craftaurum.</p>"
     },
-    {"type":"header","content":"按钮设置"},
+    {
+      "type": "header",
+      "content": "按钮设置"
+    },
     {
       "type": "text",
       "id": "top_label",
@@ -298,7 +307,10 @@
       ],
       "default": "button"
     },
-    {"type":"header","content":"图片设置"},
+    {
+      "type": "header",
+      "content": "图片设置"
+    },
     {
       "type": "image_picker",
       "id": "image",
@@ -340,7 +352,98 @@
       ],
       "default": "landscape"
     },
-    {"type":"header","content":"颜色设置"},
+    {
+      "type": "header",
+      "content": "布局与交互"
+    },
+    {
+      "type": "select",
+      "id": "heading_position",
+      "label": "标题位置",
+      "options": [
+        {
+          "value": "top",
+          "label": "顶部居中"
+        },
+        {
+          "value": "content",
+          "label": "正文区域"
+        }
+      ],
+      "default": "top"
+    },
+    {
+      "type": "header",
+      "content": "电脑端字号"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "subtitle_size",
+      "label": "副标题字号",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "正文字号",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "移动端字号"
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "mobile_subtitle_size",
+      "label": "副标题字号",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_body_size",
+      "label": "正文字号",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "颜色设置"
+    },
     {
       "type": "color",
       "id": "background_color",
@@ -359,33 +462,34 @@
       "label": "副标题颜色",
       "default": "#C7A85E"
     },
-    {"type":"header","content":"布局与交互"},
+    {
+      "type": "header",
+      "content": "其它设置"
+    },
+    {
+      "type": "paragraph",
+      "content": "入场动画与区块上下间距"
+    },
     {
       "type": "select",
-      "id": "heading_position",
-      "label": "标题位置",
+      "id": "animation_style",
+      "label": "入场动画",
       "options": [
         {
-          "value": "top",
-          "label": "顶部居中"
+          "value": "fade-up",
+          "label": "Fade Up"
         },
         {
-          "value": "content",
-          "label": "正文区域"
+          "value": "fade-in",
+          "label": "Fade In"
+        },
+        {
+          "value": "soft-zoom",
+          "label": "Soft Zoom"
         }
       ],
-      "default": "top"
+      "default": "fade-up"
     },
-    {"type":"header","content":"电脑端字号"},
-    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
-    {"type":"range","id":"subtitle_size","label":"副标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
-    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
-    {"type":"header","content":"移动端字号"},
-    {"type":"range","id":"mobile_heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
-    {"type":"range","id":"mobile_subtitle_size","label":"副标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
-    {"type":"range","id":"mobile_body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
-    {"type":"header","content":"其它设置"},
-    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
     {
       "type": "range",
       "id": "padding_top",
