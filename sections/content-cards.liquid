@@ -158,8 +158,8 @@
   }
 
   .ca-content-cards__intro--divider {
-    border-top: 1px solid var(--ca-cards-divider);
-    padding-top: 24px;
+    border-bottom: 1px solid var(--ca-cards-divider);
+    padding-bottom: 24px;
   }
 
   .ca-content-cards__intro--style_1 {
@@ -176,7 +176,7 @@
     width: 100%;
     max-width: none;
     display: grid;
-    grid-template-columns: minmax(0, .78fr) minmax(0, 1.22fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: clamp(32px, 6vw, 92px);
     align-items: end;
     text-align: left;
@@ -338,7 +338,10 @@
 {
   "name": "图文卡片",
   "settings": [
-    {"type":"header","content":"基础设置"},
+    {
+      "type": "header",
+      "content": "基础设置"
+    },
     {
       "type": "select",
       "id": "section_width",
@@ -355,7 +358,10 @@
       ],
       "default": "page-width"
     },
-    {"type":"header","content":"内容设置"},
+    {
+      "type": "header",
+      "content": "内容设置"
+    },
     {
       "type": "text",
       "id": "eyebrow",
@@ -374,7 +380,10 @@
       "label": "正文",
       "default": "<p>Build a collection of distinctive rings with considered materials, stone settings and finishing options.</p>"
     },
-    {"type":"header","content":"按钮设置"},
+    {
+      "type": "header",
+      "content": "按钮设置"
+    },
     {
       "type": "text",
       "id": "intro_button_label",
@@ -405,7 +414,10 @@
       ],
       "default": "button"
     },
-    {"type":"header","content":"图片设置"},
+    {
+      "type": "header",
+      "content": "图片设置"
+    },
     {
       "type": "select",
       "id": "image_ratio",
@@ -436,7 +448,10 @@
       "unit": "%",
       "default": 100
     },
-    {"type":"header","content":"颜色设置"},
+    {
+      "type": "header",
+      "content": "颜色设置"
+    },
     {
       "type": "color",
       "id": "background_color",
@@ -458,7 +473,7 @@
     {
       "type": "checkbox",
       "id": "show_divider",
-      "label": "显示顶部细分隔线",
+      "label": "显示图文下方分隔线",
       "default": false
     },
     {
@@ -468,14 +483,23 @@
       "default": "#D8D5CE",
       "visible_if": "{{ section.settings.show_divider }}"
     },
-    {"type":"header","content":"布局与交互"},
+    {
+      "type": "header",
+      "content": "布局与交互"
+    },
     {
       "type": "select",
       "id": "intro_style",
       "label": "顶部布局",
       "options": [
-        { "value": "style_1", "label": "Style 1" },
-        { "value": "style_2", "label": "Style 2" }
+        {
+          "value": "style_1",
+          "label": "Style 1"
+        },
+        {
+          "value": "style_2",
+          "label": "Style 2"
+        }
       ],
       "default": "style_1"
     },
@@ -515,7 +539,10 @@
       "unit": "px",
       "default": 36
     },
-    {"type":"header","content":"电脑端布局"},
+    {
+      "type": "header",
+      "content": "电脑端布局"
+    },
     {
       "type": "select",
       "id": "desktop_columns",
@@ -556,7 +583,10 @@
       ],
       "default": "grid"
     },
-    {"type":"header","content":"移动端布局"},
+    {
+      "type": "header",
+      "content": "移动端布局"
+    },
     {
       "type": "select",
       "id": "mobile_columns",
@@ -589,7 +619,10 @@
       ],
       "default": "carousel"
     },
-    {"type":"header","content":"电脑端字号"},
+    {
+      "type": "header",
+      "content": "电脑端字号"
+    },
     {
       "type": "range",
       "id": "eyebrow_size",
@@ -613,7 +646,7 @@
     {
       "type": "range",
       "id": "body_size",
-      "label": "说明字号",
+      "label": "正文字号",
       "min": 12,
       "max": 24,
       "step": 1,
@@ -640,21 +673,81 @@
       "unit": "px",
       "default": 15
     },
-    {"type":"header","content":"移动端字号"},
-    {"type":"range","id":"mobile_eyebrow_size","label":"小标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
-    {"type":"range","id":"mobile_heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
-    {"type":"range","id":"mobile_body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
-    {"type":"range","id":"mobile_card_title_size","label":"卡片标题字号","min":14,"max":32,"step":1,"unit":"px","default":18},
-    {"type":"range","id":"mobile_card_body_size","label":"卡片正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
-    {"type":"header","content":"其它设置"},
+    {
+      "type": "header",
+      "content": "移动端字号"
+    },
+    {
+      "type": "range",
+      "id": "mobile_eyebrow_size",
+      "label": "小标题字号",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "mobile_body_size",
+      "label": "正文字号",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "mobile_card_title_size",
+      "label": "卡片标题字号",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "mobile_card_body_size",
+      "label": "卡片正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "其它设置"
+    },
     {
       "type": "select",
       "id": "animation_style",
       "label": "入场动画",
       "options": [
-        { "value": "fade-up", "label": "Fade Up" },
-        { "value": "fade-in", "label": "Fade In" },
-        { "value": "soft-zoom", "label": "Soft Zoom" }
+        {
+          "value": "fade-up",
+          "label": "Fade Up"
+        },
+        {
+          "value": "fade-in",
+          "label": "Fade In"
+        },
+        {
+          "value": "soft-zoom",
+          "label": "Soft Zoom"
+        }
       ],
       "default": "fade-up"
     },
