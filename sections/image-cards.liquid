@@ -25,9 +25,13 @@
     --ca-image-cards-padding-top: {{ section.settings.padding_top }}px;
     --ca-image-cards-padding-bottom: {{ section.settings.padding_bottom }}px;
     --ca-image-cards-heading-size: {{ section.settings.heading_size | default: 35 }}px;
+    --ca-image-cards-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 35 }}px;
     --ca-image-cards-body-size: {{ section.settings.body_size | default: 16 }}px;
+    --ca-image-cards-body-size-mobile: {{ section.settings.mobile_body_size | default: 16 }}px;
     --ca-image-cards-card-title-size: {{ section.settings.card_title_size | default: 22 }}px;
+    --ca-image-cards-card-title-size-mobile: {{ section.settings.mobile_card_title_size | default: 22 }}px;
     --ca-image-cards-card-body-size: {{ section.settings.card_body_size | default: 15 }}px;
+    --ca-image-cards-card-body-size-mobile: {{ section.settings.mobile_card_body_size | default: 15 }}px;
   "
 >
   <div class="ca-image-cards__surface">
@@ -306,6 +310,13 @@
       transition: none;
     }
   }
+
+  @media screen and (max-width: 749px) {
+    .ca-image-cards__heading { font-size: var(--ca-image-cards-heading-size-mobile); }
+    .ca-image-cards__description { font-size: var(--ca-image-cards-body-size-mobile); }
+    .ca-image-card__title { font-size: var(--ca-image-cards-card-title-size-mobile); }
+    .ca-image-card__text { font-size: var(--ca-image-cards-card-body-size-mobile); }
+  }
 {% endstylesheet %}
 
 {% schema %}
@@ -358,10 +369,6 @@
       "label": "正文",
       "default": "<p>Explore the development capabilities behind a custom jewelry collection.</p>"
     },
-    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
-    {"type":"range","id":"body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
-    {"type":"range","id":"card_title_size","label":"卡片标题字号","min":14,"max":36,"step":1,"unit":"px","default":22},
-    {"type":"range","id":"card_body_size","label":"卡片正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
     {
       "type": "select",
       "id": "image_ratio",
@@ -475,6 +482,16 @@
       ],
       "default": "carousel"
     },
+    {"type":"header","content":"电脑端字号"},
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"range","id":"card_title_size","label":"卡片标题字号","min":14,"max":36,"step":1,"unit":"px","default":22},
+    {"type":"range","id":"card_body_size","label":"卡片正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
+    {"type":"header","content":"移动端字号"},
+    {"type":"range","id":"mobile_heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"mobile_body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"range","id":"mobile_card_title_size","label":"卡片标题字号","min":14,"max":36,"step":1,"unit":"px","default":22},
+    {"type":"range","id":"mobile_card_body_size","label":"卡片正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
     {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
     {
       "type": "range",
