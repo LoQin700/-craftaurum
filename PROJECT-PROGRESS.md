@@ -516,3 +516,10 @@
 - `sections/image-text-feature.liquid` 与 `sections/image-gallery.liquid` 分别增加可选的 external_image_url 回退，不会覆盖用户 image_picker；图片画廊另外增加可选独立图片标题与 alt。测试页对应图文介绍和图片画廊实例已经同步。
 - 新增精确对应清单 `PERSONALIZED-JEWELRY-REFERENCE-MAP.md`，提供章节、文件名、图片来源与状态，后续不再按主观猜测更换类别。
 - 新模板已完成类型与 schema/range/select/blocks 静态检查（零未知字段），但还未完成 Shopify Theme Check、Theme Editor 实际保存与三端在线视觉验收。
+
+## 2026-10-27 · Section Showcase 实例命名对齐 Preset
+- 用户要求测试页 Section 标题与 Shopify Add Section 面板的 Preset 名称完全一致，以便准确定位。
+- 已读取当前 17 个自建 Section 的 `{% schema %}.presets[0].name`，逐一更新 `templates/page.section-showcase.json` 对应实例的 `name`，移除自定义数字前缀和括号说明。
+- 例如 `brand-partners` → `品牌合作`、`image-text-feature` → `图文介绍`、`image-gallery` → `图片画廊`、`editorial-contact` → `联系表单 - Editorial`。
+- 已重新读取 GitHub 文件，逐项验证全部 17 个实例名称与 Preset 完全一致；Section type/blocks/settings/排序均未改变，正式页面未修改。
+- 尚未实测 Shopify Theme Editor 的左侧名称显示和同步状态。
