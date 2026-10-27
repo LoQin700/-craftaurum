@@ -1,0 +1,537 @@
+/*
+ * Craftaurum personalized jewelry page. Images are intentionally unset for Theme Editor upload.
+ * Built from reusable Horizon sections; festival page remains unchanged.
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "t:names.title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {
+            "text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "hero": {
+      "type": "image-text-feature",
+      "name": "Personalized Jewelry Hero",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "Custom Personalized Jewelry Manufacturer",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "animation_style": "fade-in",
+        "heading_position": "content",
+        "subtitle": "PERSONALIZED JEWELRY DEVELOPMENT",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Create jewelry that carries a personal story. Craftaurum works with jewelry brands, designers and wholesale partners to develop initials, birthstones, zodiac motifs and meaningful numbers into distinctive collections.</p><p>From early concepts and sampling to production coordination, our team helps translate your ideas into jewelry designed for your market, materials and brand identity.</p>",
+        "image": "",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "cta_label": "Discuss Your Collection",
+        "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
+    },
+    "overview": {
+      "type": "image-cards",
+      "name": "Personalization Possibilities",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#ffffff",
+        "accent_color": "#c7a85e",
+        "heading": "Personalization Possibilities",
+        "description": "<p>Explore meaningful design directions for a collection that customers can make their own.</p>",
+        "heading_size": 35,
+        "body_size": 16,
+        "card_title_size": 22,
+        "card_body_size": 15,
+        "animation_style": "fade-up",
+        "layout_style": "uniform",
+        "desktop_columns": 4,
+        "mobile_columns": "2",
+        "mobile_layout": "grid",
+        "image_ratio": "portrait",
+        "gap": 16,
+        "overlay_opacity": 60,
+        "content_padding": 20,
+        "padding_top": 88,
+        "padding_bottom": 88
+      },
+      "blocks": {
+        "initial": {
+          "type": "card",
+          "settings": {
+            "title": "Initial & Name",
+            "description": "<p>Letters, monograms and personal names.</p>",
+            "image": "",
+            "link": "",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
+          }
+        },
+        "birthstone": {
+          "type": "card",
+          "settings": {
+            "title": "Birthstone",
+            "description": "<p>Gemstones chosen for a personal connection.</p>",
+            "image": "",
+            "link": "",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
+          }
+        },
+        "zodiac": {
+          "type": "card",
+          "settings": {
+            "title": "Zodiac",
+            "description": "<p>Celestial symbols with individual meaning.</p>",
+            "image": "",
+            "link": "",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
+          }
+        },
+        "number": {
+          "type": "card",
+          "settings": {
+            "title": "Meaningful Numbers",
+            "description": "<p>Dates, milestones and lucky numbers.</p>",
+            "image": "",
+            "link": "",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
+          }
+        }
+      },
+      "block_order": [
+        "initial",
+        "birthstone",
+        "zodiac",
+        "number"
+      ]
+    },
+    "initial": {
+      "type": "image-text-feature",
+      "name": "Custom Initial & Name Jewelry",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "Custom Initial & Name Jewelry",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "animation_style": "fade-up",
+        "heading_position": "top",
+        "subtitle": "",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Initials and names give customers a simple way to make everyday jewelry their own. Explore letter pendants, nameplate necklaces, monogram charms and coordinated bracelet or earring designs for your next collection.</p><p>We can discuss letterform direction, size, metal choices, surface finishes and stone accents, then develop samples to evaluate proportions and wearability before production.</p>",
+        "image": "",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "cta_label": "Explore Initial Jewelry Development",
+        "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 80,
+        "padding_bottom": 24
+      }
+    },
+    "initial_gallery": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "name": "Custom Initial & Name Jewelry Gallery",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "animation_style": "fade-up",
+        "desktop_layout": "grid",
+        "desktop_columns": 4,
+        "mobile_layout": "grid",
+        "mobile_columns": 2,
+        "image_ratio": "square",
+        "gap": 16,
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "birthstone": {
+      "type": "image-text-feature",
+      "name": "Custom Birthstone Jewelry",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "Custom Birthstone Jewelry",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "animation_style": "soft-zoom",
+        "heading_position": "top",
+        "subtitle": "",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Birthstone jewelry connects color and personal meaning with timeless gift appeal. Create gemstone-focused pendants, stacking rings, earrings and charms around birth months or your brand’s own color story.</p><p>Choose shapes, settings and material directions that suit your collection. Final stone availability and specifications can be confirmed during development and sampling.</p>",
+        "image": "",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "cta_label": "Discuss Birthstone Designs",
+        "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 80,
+        "padding_bottom": 24
+      }
+    },
+    "birthstone_gallery": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "name": "Custom Birthstone Jewelry Gallery",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "animation_style": "soft-zoom",
+        "desktop_layout": "grid",
+        "desktop_columns": 4,
+        "mobile_layout": "grid",
+        "mobile_columns": 2,
+        "image_ratio": "square",
+        "gap": 16,
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "zodiac": {
+      "type": "image-text-feature",
+      "name": "Personalized Zodiac Jewelry",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "Personalized Zodiac Jewelry",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "animation_style": "fade-up",
+        "heading_position": "top",
+        "subtitle": "",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Zodiac jewelry offers a recognizable design language that works across signs, constellations and celestial motifs. Develop necklaces, rings, bracelets and charms with symbols, engraving or subtle stone details.</p><p>We help adapt your artwork into a cohesive series with consistent dimensions, finishes and presentation across all twelve signs.</p>",
+        "image": "",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "cta_label": "Develop a Zodiac Collection",
+        "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 80,
+        "padding_bottom": 24
+      }
+    },
+    "zodiac_gallery": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "name": "Personalized Zodiac Jewelry Gallery",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "animation_style": "fade-up",
+        "desktop_layout": "grid",
+        "desktop_columns": 4,
+        "mobile_layout": "grid",
+        "mobile_columns": 2,
+        "image_ratio": "square",
+        "gap": 16,
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "number": {
+      "type": "image-text-feature",
+      "name": "Custom Number & Date Jewelry",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#17191a",
+        "text_color": "#f8f7f4",
+        "accent_color": "#c7a85e",
+        "heading": "Custom Number & Date Jewelry",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "animation_style": "fade-in",
+        "heading_position": "top",
+        "subtitle": "",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button-secondary",
+        "body": "<p>Numbers can celebrate birthdays, anniversaries, lucky figures and personal milestones. Build a customizable range around number pendants, meaningful dates, engraved charms and gift-ready matching pieces.</p><p>Consider typography, engraving area, material construction and available combinations when planning an assortment. Share your target quantities and reference designs to begin sampling.</p>",
+        "image": "",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "cta_label": "Start a Number Jewelry Project",
+        "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button-secondary",
+        "padding_top": 80,
+        "padding_bottom": 24
+      }
+    },
+    "number_gallery": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "name": "Custom Number & Date Jewelry Gallery",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#17191a",
+        "animation_style": "fade-in",
+        "desktop_layout": "grid",
+        "desktop_columns": 4,
+        "mobile_layout": "grid",
+        "mobile_columns": 2,
+        "image_ratio": "square",
+        "gap": 16,
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "why_choose": {
+      "type": "why-choose-craftaurum",
+      "blocks": {
+        "craftsmanship": {
+          "type": "item",
+          "settings": {
+            "title": "Refined Craftsmanship",
+            "description": "<p>Thoughtful detailing across initials, settings, engraving and jewelry finishes.</p>"
+          }
+        },
+        "solutions": {
+          "type": "item",
+          "settings": {
+            "title": "Tailored Solutions",
+            "description": "<p>Adapt motifs, metals, stones and design variations to your brand’s direction.</p>"
+          }
+        },
+        "quality": {
+          "type": "item",
+          "settings": {
+            "title": "Quality Control",
+            "description": "<p>Review proportions, finishes and final appearance through sample approval and production coordination.</p>"
+          }
+        },
+        "collaboration": {
+          "type": "item",
+          "settings": {
+            "title": "Clear Collaboration",
+            "description": "<p>Bring sketches, inspiration or technical references and develop next steps together.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "craftsmanship",
+        "solutions",
+        "quality",
+        "collaboration"
+      ],
+      "name": "Why Choose Craftaurum",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "line_color": "#d8d5ce",
+        "heading": "Why Choose Craftaurum for Personalized Jewelry?",
+        "heading_size": 35,
+        "description": "<p>Personalized collections call for considered design, consistent production and clear collaboration as you develop multiple variations for your customers.</p>",
+        "body_size": 16,
+        "item_title_size": 20,
+        "item_body_size": 15,
+        "desktop_columns": "4",
+        "mobile_columns": "1",
+        "animation_style": "fade-up",
+        "padding_top": 88,
+        "padding_bottom": 96
+      }
+    },
+    "contact": {
+      "type": "editorial-contact",
+      "name": "联系表单 - Editorial",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "eyebrow": "START A PERSONALIZED COLLECTION",
+        "eyebrow_size": 12,
+        "heading": "Bring Your Personalized Jewelry Ideas to Life",
+        "heading_size": 35,
+        "description": "<p>Tell us about the personalization styles, materials, reference designs and quantities you have in mind. We’ll discuss the next steps for your collection.</p>",
+        "body_size": 16,
+        "phone_required": false,
+        "animation_style": "fade-up",
+        "padding_top": 104,
+        "padding_bottom": 104
+      }
+    }
+  },
+  "order": [
+    "main",
+    "hero",
+    "overview",
+    "initial",
+    "initial_gallery",
+    "birthstone",
+    "birthstone_gallery",
+    "zodiac",
+    "zodiac_gallery",
+    "number",
+    "number_gallery",
+    "why_choose",
+    "contact"
+  ]
+}
