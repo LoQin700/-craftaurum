@@ -844,7 +844,7 @@
         "column_gap": 64,
         "enable_overlap": true,
         "overlap_amount": 28,
-        "mobile_layout": "slider",
+        "mobile_layout": "overlap",
         "mobile_visual_ratio": "square",
         "eyebrow_size": 12,
         "heading_size": 35,
