@@ -842,7 +842,6 @@
         "visual_aria_label": "Pearl jewelry and pearl material imagery",
         "text_alignment": "left",
         "column_gap": 64,
-        "enable_overlap": true,
         "overlap_amount": 28,
         "mobile_layout": "overlap",
         "mobile_visual_ratio": "square",
