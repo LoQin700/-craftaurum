@@ -226,7 +226,6 @@
         "column_gap": 64,
         "padding_top": 72,
         "padding_bottom": 76,
-        "enable_overlap": true,
         "desktop_visual_ratio": "landscape",
         "mobile_visual_ratio": "square"
       }
