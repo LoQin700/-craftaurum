@@ -741,3 +741,31 @@
 - `brand-partners` 仍使用 Horizon 原生 slideshow，其箭头本身位于 slideshow media 两侧并已改为大号无框 Chevron，不使用共享定位 JS。
 - 静态校验：六个 Section Schema 可解析、DIV 数量匹配、stage → shared controls → stage closing 顺序正确、每个 Section 均传入唯一正确的媒体选择器；共享 JS 可通过语法编译，CSS 包含媒体中心变量定位。
 - **仍需 Shopify 真实预览**：PC/Mobile 不同标题/正文长度、1/2列手机宽度、4列电脑宽度及 Pearl Jewelry 当前截图场景，需在主题编辑器实际确认箭头与图片垂直中线完全重合。
+
+## 2026-10-27 · 叠层图文控制简化 + 所有自建轮播箭头按图片区边界统一
+- 用户进一步确认：叠层图文不需要“是否重叠”Checkbox 和“重叠程度”Range 同时存在，最终采用 **纯 Range** 方案；同时要求每张图片独立保留旋转 Range，且不要“0 表示不重叠”等说明文字。
+- `sections/overlap-image-text.liquid` 已更新：
+  - 删除 `enable_overlap` Checkbox、所有 `ca-overlap--cross` 条件 class/CSS 和相关模板值。
+  - Section 级仅保留 `overlap_amount` Range，后台名称改为 **“图片重叠程度”**，范围 0–55%、默认 28%，无 `info`、无 `visible_if`。
+  - 每个 Image Block 的 `rotation` 保留为独立 Range，后台名称改为 **“图片旋转角度”**，范围 -12° 至 +12°、默认 0°，无说明文字；仍直接绑定 `--ca-img-rotate`。
+  - PC 视觉区直接按重叠 Range 计算负 margin；手机选择“交叉叠放”时沿用同一重叠 Range；手机“横向滑动 / 上下排列”继续不强制重叠。
+  - `templates/page.section-showcase.json` 与 `templates/page.pearl-jewelry.json` 中旧 `enable_overlap: true` 已清理。
+- 用户同时补充：**只有「图片轮播」Horizon 原生左右切换按钮位置正确，其它自建轮播都要同步按该定位原则修正**。
+- 共用自建轮播箭头再次调整：
+  - `snippets/craftaurum-scroll-controls.liquid` 使用 `media_selector` 明确指定真实图片/媒体区域。
+  - `assets/craftaurum-scroll-controls.js` 不再仅按整个卡片/Section 定位；实时读取当前可见媒体元素的实际边界，计算：
+    - Y：第一张可见图片的垂直中心；
+    - 左箭头 X：当前可见媒体区域左边界内缩；
+    - 右箭头 X：当前可见媒体区域右边界内缩。
+    标题、正文、按钮高度变化不再影响箭头位置。
+  - `assets/craftaurum-scroll-controls.css` 用 `--ca-controls-y / --ca-controls-prev-x / --ca-controls-next-x` 将两个大号无框 Chevron 固定到实际图片区左右两端。
+  - 六个共享轮播 Section 已分别绑定真实媒体选择器：
+    - `content-cards` → `.ca-content-card__media`
+    - `image-gallery` → `.ca-gallery__media`
+    - `image-collection-grid` → `.ca-collection__card`
+    - `image-cards` → `.ca-image-card__media`
+    - `process-cards` → `.ca-process-card__media`
+    - `overlap-image-text` → `.ca-overlap__visual`
+  - `brand-partners`（图片轮播）继续使用已确认正确的 Horizon 原生 slideshow arrow，不改用共享 JS；保持 `show_arrows:true` + `chevron-large`。
+- 静态复核结果：6 个共享轮播 Section Schema 可解析、stage wrapper 与 controls 嵌套正确、各自 media selector 正确；共享 JS 可语法编译；叠层图文只剩“图片重叠程度” + Block “图片旋转角度”两个 Range，无旧 Checkbox/说明/条件 class 残留。
+- **仍需真实 Shopify 预览确认**：PC/Mobile 下箭头是否完全贴合图片区左右两端、不同卡片宽度/部分露出下一张时的位置、Touch 滑动与禁用态；静态检查不等同视觉验收。
