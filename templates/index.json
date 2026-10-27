@@ -181,7 +181,7 @@
         "autoplay_speed": 3,
         "desktop_columns": 4,
         "image_ratio": "square",
-        "image_size": 90,
+        "image_size": 100,
         "mobile_columns": 1,
         "mobile_layout": "carousel",
         "heading_size": 35,
@@ -192,7 +192,8 @@
         "mobile_disclaimer_size": 12,
         "animation_style": "fade-in",
         "padding_top": 40,
-        "padding_bottom": 20
+        "padding_bottom": 20,
+        "image_fit": "cover"
       }
     },
     "home_manufacturer_intro": {
@@ -416,7 +417,7 @@
             "description": "<p>Discuss prototype needs, intended order volumes and design complexity. Minimum quantities and sample costs are assessed per project.</p>",
             "button_label": "Learn More",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/contact"
+            "link": "shopify://pages/jewelry-moq"
           }
         },
         "gemstones": {
@@ -427,7 +428,7 @@
             "description": "<p>Review suitable gemstones, pearls, simulated stones and setting methods based on the style, structure and target budget.</p>",
             "button_label": "Learn More",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/customization"
+            "link": "shopify://pages/gemstone-options"
           }
         },
         "plating": {
@@ -438,7 +439,7 @@
             "description": "<p>Explore gold-tone, rose-tone, rhodium or other applicable surface treatments, with specifications confirmed for the selected base metal.</p>",
             "button_label": "Learn More",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/gold-plated-jewelry"
+            "link": "shopify://pages/plating-options"
           }
         },
         "materials": {
@@ -449,7 +450,7 @@
             "description": "<p>Compare sterling silver, gold and suitable alternative metal constructions with an emphasis on design feasibility and finish.</p>",
             "button_label": "Learn More",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/sterling-silver-jewelry"
+            "link": "shopify://pages/jewelry-materials"
           }
         },
         "delivery": {
@@ -460,7 +461,7 @@
             "description": "<p>Align sampling approvals, production milestones, packaging and destination requirements before discussing the delivery schedule.</p>",
             "button_label": "Learn More",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/contact"
+            "link": "shopify://pages/delivery-lead-times"
           }
         },
         "budget": {
@@ -471,7 +472,7 @@
             "description": "<p>Share target positioning, materials and quantities so design details and quotation options can be evaluated together.</p>",
             "button_label": "Learn More",
             "button_style": "button-unstyled",
-            "link": "shopify://pages/contact"
+            "link": "shopify://pages/cost-savings"
           }
         }
       },
@@ -592,9 +593,9 @@
         "disclaimer": "",
         "autoplay": true,
         "autoplay_speed": 3,
-        "desktop_columns": 5,
+        "desktop_columns": 4,
         "image_ratio": "square",
-        "image_size": 50,
+        "image_size": 100,
         "mobile_columns": 2,
         "mobile_layout": "carousel",
         "heading_size": 35,
@@ -605,7 +606,8 @@
         "mobile_disclaimer_size": 12,
         "animation_style": "fade-in",
         "padding_top": 40,
-        "padding_bottom": 20
+        "padding_bottom": 20,
+        "image_fit": "cover"
       }
     },
     "home_customization_banner": {
