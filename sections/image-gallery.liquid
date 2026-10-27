@@ -59,6 +59,7 @@
           {% endif %}
         </header>
       {% endif %}
+      <div class="ca-carousel-stage">
       <div class="ca-gallery__grid">
         {% for block in section.blocks %}
           <div class="ca-gallery__item" {{ block.shopify_attributes }}>
@@ -78,6 +79,7 @@
       {% if has_scroll_controls %}
         {% render 'craftaurum-scroll-controls', track_selector: '.ca-gallery__grid', desktop: carousel_desktop, mobile: carousel_mobile %}
       {% endif %}
+      </div> <!-- /ca-carousel-stage -->
     </div>
   </div>
 </section>
