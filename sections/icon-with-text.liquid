@@ -6,7 +6,7 @@
 
 <section
   id="IconWithText-{{ section.id }}"
-  class="ca-icon-text ca-icon-text--{{ section.settings.style_preset }} ca-icon-text--icon-{{ section.settings.icon_position }} section section--full-width"
+  class="ca-icon-text ca-icon-text--{{ section.settings.style_preset }} ca-icon-text--icon-{{ section.settings.icon_position }}{% if section.settings.show_divider %} ca-icon-text--show-divider{% endif %} section section--full-width"
   style="
     --ca-icon-background: {{ section.settings.background_color }};
     --ca-icon-text: {{ section.settings.text_color }};
@@ -26,6 +26,8 @@
     --ca-body-size-mobile: {{ section.settings.mobile_body_size | default: 15 }}px;
     --ca-item-title-size: {{ section.settings.item_title_size | default: 18 }}px;
     --ca-item-title-size-mobile: {{ section.settings.mobile_item_title_size | default: 18 }}px;
+    --ca-item-body-size: {{ section.settings.item_body_size | default: 15 }}px;
+    --ca-item-body-size-mobile: {{ section.settings.mobile_item_body_size | default: 15 }}px;
   "
 >
   <div class="ca-icon-text__surface">
@@ -116,16 +118,17 @@
 
   .ca-icon-text__eyebrow {
     margin: 0 0 12px;
-    color: var(--ca-icon-accent);
+    color: inherit;
     letter-spacing: .12em;
     text-transform: uppercase;
     font-size: var(--ca-eyebrow-size);
   }
 
-  .ca-icon-text__heading {
+  .ca-icon-text .ca-icon-text__heading {
     margin: 0 0 16px;
     color: inherit;
     font-size: var(--ca-heading-size);
+    line-height: 1.08;
   }
 
   .ca-icon-text__description {
@@ -178,6 +181,13 @@
 
   .ca-icon-text__body {
     color: color-mix(in srgb, var(--ca-icon-text) 68%, transparent);
+    font-size: var(--ca-item-body-size);
+    line-height: 1.6;
+  }
+
+  .ca-icon-text--show-divider .ca-icon-text__item {
+    border-top: 1px solid color-mix(in srgb, var(--ca-icon-text) 18%, transparent);
+    padding-top: 22px;
   }
 
   .ca-icon-text--left .ca-icon-text__intro,
@@ -240,9 +250,10 @@
 
   @media screen and (max-width: 749px) {
     .ca-icon-text__eyebrow { font-size: var(--ca-eyebrow-size-mobile); }
-    .ca-icon-text__heading { font-size: var(--ca-heading-size-mobile); }
+    .ca-icon-text .ca-icon-text__heading { font-size: var(--ca-heading-size-mobile); }
     .ca-icon-text__description { font-size: var(--ca-body-size-mobile); }
     .ca-icon-text__title { font-size: var(--ca-item-title-size-mobile); }
+    .ca-icon-text__body { font-size: var(--ca-item-body-size-mobile); }
   }
 {% endstylesheet %}
 
@@ -250,7 +261,10 @@
 {
   "name": "图标文字",
   "settings": [
-    {"type":"header","content":"基础设置"},
+    {
+      "type": "header",
+      "content": "基础设置"
+    },
     {
       "type": "select",
       "id": "section_width",
@@ -267,7 +281,10 @@
       ],
       "default": "page-width"
     },
-    {"type":"header","content":"内容设置"},
+    {
+      "type": "header",
+      "content": "内容设置"
+    },
     {
       "type": "text",
       "id": "eyebrow",
@@ -283,10 +300,13 @@
     {
       "type": "richtext",
       "id": "description",
-      "label": "正文",
+      "label": "顶部正文",
       "default": "<p>From design development to production review, each stage is supported by a clear and practical manufacturing process.</p>"
     },
-    {"type":"header","content":"图片设置"},
+    {
+      "type": "header",
+      "content": "图片设置"
+    },
     {
       "type": "select",
       "id": "icon_position",
@@ -323,7 +343,10 @@
       "unit": "px",
       "default": 16
     },
-    {"type":"header","content":"颜色设置"},
+    {
+      "type": "header",
+      "content": "颜色设置"
+    },
     {
       "type": "color",
       "id": "background_color",
@@ -339,10 +362,13 @@
     {
       "type": "color",
       "id": "accent_color",
-      "label": "小标题及默认图标颜色",
+      "label": "图标颜色",
       "default": "#C7A85E"
     },
-    {"type":"header","content":"布局与交互"},
+    {
+      "type": "header",
+      "content": "布局与交互"
+    },
     {
       "type": "select",
       "id": "style_preset",
@@ -360,6 +386,12 @@
       "default": "left"
     },
     {
+      "type": "checkbox",
+      "id": "show_divider",
+      "label": "显示项目分隔线",
+      "default": false
+    },
+    {
       "type": "range",
       "id": "column_gap",
       "label": "列间距",
@@ -369,7 +401,10 @@
       "unit": "px",
       "default": 32
     },
-    {"type":"header","content":"电脑端布局"},
+    {
+      "type": "header",
+      "content": "电脑端布局"
+    },
     {
       "type": "select",
       "id": "desktop_columns",
@@ -398,7 +433,10 @@
       ],
       "default": "4"
     },
-    {"type":"header","content":"移动端布局"},
+    {
+      "type": "header",
+      "content": "移动端布局"
+    },
     {
       "type": "select",
       "id": "mobile_columns",
@@ -415,18 +453,138 @@
       ],
       "default": "1"
     },
-    {"type":"header","content":"电脑端字号"},
-    {"type":"range","id":"eyebrow_size","label":"小标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
-    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
-    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
-    {"type":"range","id":"item_title_size","label":"项目标题字号","min":14,"max":30,"step":1,"unit":"px","default":18},
-    {"type":"header","content":"移动端字号"},
-    {"type":"range","id":"mobile_eyebrow_size","label":"小标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
-    {"type":"range","id":"mobile_heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
-    {"type":"range","id":"mobile_body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
-    {"type":"range","id":"mobile_item_title_size","label":"项目标题字号","min":14,"max":30,"step":1,"unit":"px","default":18},
-    {"type":"header","content":"其它设置"},
-    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
+    {
+      "type": "header",
+      "content": "电脑端字号"
+    },
+    {
+      "type": "range",
+      "id": "eyebrow_size",
+      "label": "小标题字号",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "顶部正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "item_title_size",
+      "label": "项目标题字号",
+      "min": 14,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "item_body_size",
+      "label": "项目正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "移动端字号"
+    },
+    {
+      "type": "range",
+      "id": "mobile_eyebrow_size",
+      "label": "小标题字号",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "mobile_body_size",
+      "label": "顶部正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "mobile_item_title_size",
+      "label": "项目标题字号",
+      "min": 14,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "mobile_item_body_size",
+      "label": "项目正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "其它设置"
+    },
+    {
+      "type": "select",
+      "id": "animation_style",
+      "label": "入场动画",
+      "options": [
+        {
+          "value": "fade-up",
+          "label": "Fade Up"
+        },
+        {
+          "value": "fade-in",
+          "label": "Fade In"
+        },
+        {
+          "value": "soft-zoom",
+          "label": "Soft Zoom"
+        }
+      ],
+      "default": "fade-up"
+    },
     {
       "type": "range",
       "id": "padding_top",
