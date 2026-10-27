@@ -410,10 +410,10 @@
           "settings": {
             "image": "shopify://shop_images/jewelry-design.jpg",
             "title": "Order Quantity & Sampling",
-            "description": "<p>Discuss your design, sample needs and expected quantity. Minimum order requirements are confirmed for each project.</p>",
-            "button_label": "",
+            "description": "<p>Discuss prototype needs, intended order volumes and design complexity. Minimum quantities and sample costs are assessed per project.</p>",
+            "button_label": "Learn More",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         },
         "gemstones": {
@@ -421,10 +421,10 @@
           "settings": {
             "image": "shopify://shop_images/gemstone-setting-400x400.jpg",
             "title": "Gemstone & Setting Options",
-            "description": "<p>Explore gemstone, pearl and setting options suited to your jewelry design and preferred materials.</p>",
-            "button_label": "",
+            "description": "<p>Review suitable gemstones, pearls, simulated stones and setting methods based on the style, structure and target budget.</p>",
+            "button_label": "Learn More",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/customization"
           }
         },
         "plating": {
@@ -432,10 +432,10 @@
           "settings": {
             "image": "shopify://shop_images/plating-jewelry.jpg",
             "title": "Plating & Surface Finishes",
-            "description": "<p>Compare gold-tone, rose-tone and other suitable finishes, with specifications reviewed before production.</p>",
-            "button_label": "",
+            "description": "<p>Explore gold-tone, rose-tone, rhodium or other applicable surface treatments, with specifications confirmed for the selected base metal.</p>",
+            "button_label": "Learn More",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/gold-plated-jewelry"
           }
         },
         "materials": {
@@ -443,10 +443,10 @@
           "settings": {
             "image": "shopify://shop_images/pearl-materials.jpg",
             "title": "Materials & Metal Choices",
-            "description": "<p>Choose from suitable silver, gold and other metal constructions based on your design and requirements.</p>",
-            "button_label": "",
+            "description": "<p>Compare sterling silver, gold and suitable alternative metal constructions with an emphasis on design feasibility and finish.</p>",
+            "button_label": "Learn More",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/sterling-silver-jewelry"
           }
         },
         "delivery": {
@@ -454,10 +454,10 @@
           "settings": {
             "image": "shopify://shop_images/delivery.jpg",
             "title": "Production & Delivery Planning",
-            "description": "<p>Plan sampling, production, packaging and shipping details according to your order and destination.</p>",
-            "button_label": "",
+            "description": "<p>Align sampling approvals, production milestones, packaging and destination requirements before discussing the delivery schedule.</p>",
+            "button_label": "Learn More",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         },
         "budget": {
@@ -465,10 +465,10 @@
           "settings": {
             "image": "shopify://shop_images/custom-design-jewelry.jpg",
             "title": "Budget & Specification Review",
-            "description": "<p>Share your target budget, materials and quantities to discuss practical design and quotation options.</p>",
-            "button_label": "",
+            "description": "<p>Share target positioning, materials and quantities so design details and quotation options can be evaluated together.</p>",
+            "button_label": "Learn More",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         }
       },
@@ -494,7 +494,7 @@
         "intro_style": "style_1",
         "card_text_alignment": "left",
         "gap": 20,
-        "row_gap": 32,
+        "row_gap": 36,
         "desktop_columns": "3",
         "desktop_layout": "grid",
         "mobile_columns": "1",
@@ -503,7 +503,7 @@
         "heading_size": 35,
         "body_size": 16,
         "card_title_size": 18,
-        "card_body_size": 14,
+        "card_body_size": 15,
         "mobile_eyebrow_size": 12,
         "mobile_heading_size": 25,
         "mobile_body_size": 14,
@@ -517,6 +517,82 @@
         "animation_style": "fade-up",
         "padding_top": 64,
         "padding_bottom": 68
+      }
+    },
+    "brand_partners_CXdty6": {
+      "type": "brand-partners",
+      "blocks": {
+        "partner_yzDdyW": {
+          "type": "partner",
+          "settings": {
+            "image": "shopify://shop_images/BSCI.png"
+          }
+        },
+        "partner_cVNDi6": {
+          "type": "partner",
+          "settings": {
+            "image": "shopify://shop_images/CE_REACH_aa3c7db4-19b0-4579-b3fa-6f938eb619fb.png"
+          }
+        },
+        "partner_DiDQzT": {
+          "type": "partner",
+          "settings": {
+            "image": "shopify://shop_images/certificates_d0623868-46f5-4e48-a34f-26179a1d469c.png"
+          }
+        },
+        "partner_Ee6bTW": {
+          "type": "partner",
+          "settings": {
+            "image": "shopify://shop_images/BSCI-200x200.png"
+          }
+        },
+        "partner_UMdq3k": {
+          "type": "partner",
+          "settings": {
+            "image": "shopify://shop_images/higg_index.png"
+          }
+        },
+        "partner_WyJYNy": {
+          "type": "partner",
+          "settings": {
+            "image": "shopify://shop_images/iso14001.png"
+          }
+        },
+        "partner_jEUDi9": {
+          "type": "partner",
+          "settings": {
+            "image": "shopify://shop_images/iso9001.png"
+          }
+        }
+      },
+      "block_order": [
+        "partner_yzDdyW",
+        "partner_cVNDi6",
+        "partner_DiDQzT",
+        "partner_Ee6bTW",
+        "partner_UMdq3k",
+        "partner_WyJYNy",
+        "partner_jEUDi9"
+      ],
+      "name": "图片轮播",
+      "settings": {
+        "section_width": "page-width",
+        "heading": "Trusted by Jewelry Partners Worldwide",
+        "description": "<p>At Craftaurum, we work with jewelry brands and industry partners to bring thoughtful designs and reliable craftsmanship to life. We value long-term collaboration, consistent quality, and solutions tailored to each partner.</p>",
+        "disclaimer": "Selected partnerships are shown. Additional collaborations remain confidential under NDA.",
+        "autoplay": true,
+        "autoplay_speed": 3,
+        "mobile_columns": 1,
+        "mobile_layout": "carousel",
+        "heading_size": 35,
+        "body_size": 16,
+        "disclaimer_size": 13,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_disclaimer_size": 12,
+        "animation_style": "fade-in",
+        "padding_top": 40,
+        "padding_bottom": 20
       }
     },
     "home_customization_banner": {
@@ -563,6 +639,7 @@
     "image_collection_grid_home_2",
     "image_collection_grid_home_3",
     "home_options",
+    "brand_partners_CXdty6",
     "home_customization_banner"
   ]
 }
