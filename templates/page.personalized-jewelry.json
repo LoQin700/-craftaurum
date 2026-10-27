@@ -62,7 +62,7 @@
     },
     "hero": {
       "type": "jewelry-collections-overview",
-      "name": "Personalized Jewelry · Hero",
+      "name": "图文横幅",
       "settings": {
         "section_width": "page-width",
         "eyebrow": "CUSTOM / PERSONALIZED JEWELRY",
@@ -91,7 +91,7 @@
     },
     "special": {
       "type": "image-text-feature",
-      "name": "Custom Special Jewelry",
+      "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
         "heading": "Custom Special Jewelry",
@@ -103,7 +103,7 @@
         "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button-unstyled",
-        "image": "",
+        "image": "shopify://shop_images/French-jewelry-700x441.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
         "heading_position": "content",
@@ -123,7 +123,7 @@
     },
     "enamel": {
       "type": "image-text-feature",
-      "name": "Custom Enamel Jewelry",
+      "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
         "heading": "Custom Enamel Jewelry",
@@ -135,7 +135,7 @@
         "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button-unstyled",
-        "image": "",
+        "image": "shopify://shop_images/custom-design-jewelry.jpg",
         "image_position": "left",
         "image_ratio": "landscape",
         "heading_position": "content",
@@ -246,7 +246,7 @@
         "zodiac",
         "number"
       ],
-      "name": "Meaningful Jewelry Elements",
+      "name": "图片卡片",
       "settings": {
         "section_width": "page-width",
         "heading": "Unlock Custom Meaningful Jewelry Elements for Your Brand",
@@ -277,7 +277,7 @@
     },
     "initial": {
       "type": "image-text-feature",
-      "name": "Initial Jewelry Wholesale Manufacturer",
+      "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
         "heading": "Initial Jewelry Wholesale Manufacturer",
@@ -309,7 +309,7 @@
     },
     "birthstone": {
       "type": "image-text-feature",
-      "name": "Custom Birthstone Jewelry Manufacturer",
+      "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
         "heading": "Custom Birthstone Jewelry Manufacturer",
@@ -341,7 +341,7 @@
     },
     "zodiac": {
       "type": "image-text-feature",
-      "name": "Zodiac Jewelry Custom",
+      "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
         "heading": "Zodiac Jewelry Custom",
@@ -398,7 +398,7 @@
         "image_2",
         "image_3"
       ],
-      "name": "initial · Product Gallery",
+      "name": "图片画廊",
       "settings": {
         "section_width": "page-width",
         "heading": "",
@@ -423,15 +423,21 @@
       "blocks": {
         "image_1": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Custom-birthstone-jewelry.jpg"
+          }
         },
         "image_2": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/gemstone-setting.jpg"
+          }
         },
         "image_3": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/gemstone-setting-400x400.jpg"
+          }
         },
         "image_4": {
           "type": "image",
@@ -446,7 +452,7 @@
         "image_3",
         "image_4"
       ],
-      "name": "birthstone · Product Gallery",
+      "name": "图片画廊",
       "settings": {
         "section_width": "page-width",
         "heading": "",
@@ -477,19 +483,16 @@
         },
         "image_2": {
           "type": "image",
-          "settings": {}
-        },
-        "image_3": {
-          "type": "image",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/custom-zodiac-jewelry.jpg"
+          }
         }
       },
       "block_order": [
         "image_1",
-        "image_2",
-        "image_3"
+        "image_2"
       ],
-      "name": "zodiac · Product Gallery",
+      "name": "图片画廊",
       "settings": {
         "section_width": "page-width",
         "heading": "",
@@ -551,7 +554,7 @@
         "materials",
         "casting"
       ],
-      "name": "Personalized Jewelry Manufacturing Services",
+      "name": "图文卡片",
       "settings": {
         "section_width": "page-width",
         "eyebrow": "OUR MANUFACTURING SERVICES",
