@@ -7,7 +7,6 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-/* Existing page mobile typography standardized: 12 / 25 / 14 / 18. */
 {
   "sections": {
     "main": {
@@ -78,15 +77,15 @@
         "eyebrow_size": 12,
         "heading_size": 40,
         "body_size": 16,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
         "background_color": "#f8f7f4",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "animation_style": "fade-in",
         "padding_top": 56,
-        "padding_bottom": 64,
-        "mobile_eyebrow_size": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "padding_bottom": 64
       }
     },
     "special": {
@@ -97,6 +96,7 @@
         "heading": "Custom Special Jewelry",
         "subtitle": "",
         "body": "<p>Personalized jewelry often marks the moments people remember most. Engagement rings, anniversary gifts, graduation pieces and keepsakes for a new child can all become lasting expressions of connection and personal style.</p><p>Craftaurum helps brands explore custom jewelry sets, meaningful motifs and design details suited to commemorative collections, from initial concepts and material options to samples and finished pieces.</p>",
+        "show_buttons": true,
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
@@ -107,18 +107,19 @@
         "image_position": "right",
         "image_ratio": "landscape",
         "heading_position": "content",
+        "heading_tag": "h2",
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14,
         "background_color": "#ffffff",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "animation_style": "fade-up",
         "padding_top": 80,
-        "padding_bottom": 40,
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "padding_bottom": 40
       }
     },
     "enamel": {
@@ -129,6 +130,7 @@
         "heading": "Custom Enamel Jewelry",
         "subtitle": "",
         "body": "<p>Enamel adds expressive color to rings, pendants, earrings and other personalized jewelry. Whether your concept uses a subtle accent or vivid multicolor detailing, enamel can bring a distinctive visual identity to a collection.</p><p>We can discuss design feasibility, metal foundations, color placement and finishing considerations as part of a customized jewelry development project.</p>",
+        "show_buttons": true,
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
@@ -139,58 +141,20 @@
         "image_position": "left",
         "image_ratio": "landscape",
         "heading_position": "content",
+        "heading_tag": "h2",
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14,
         "background_color": "#f8f7f4",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "animation_style": "soft-zoom",
         "padding_top": 80,
-        "padding_bottom": 40,
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "padding_bottom": 40
       }
-    },
-    "unlock": {
-      "type": "custom-richtext",
-      "name": "自定义富文本",
-      "settings": {
-        "section_width": "page-width",
-        "anchor_id": "personalized-possibilities",
-        "layout_style": "stacked",
-        "alignment": "center",
-        "content_width": 1060,
-        "heading_size": 35,
-        "body_size": 16,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14,
-        "background_color": "#FFFFFF",
-        "text_color": "#17191A",
-        "animation_style": "fade-in",
-        "padding_top": 72,
-        "padding_bottom": 12
-      },
-      "blocks": {
-        "title": {
-          "type": "title",
-          "settings": {
-            "heading": "Unlock Custom Personalized Jewelry",
-            "heading_tag": "h2"
-          }
-        },
-        "body": {
-          "type": "body",
-          "settings": {
-            "body": "<p>Turn personal symbols, meaningful dates and individual stories into memorable jewelry collections for your customers.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "title",
-        "body"
-      ]
     },
     "overview": {
       "type": "image-cards",
@@ -253,9 +217,6 @@
         "description": "<p>Explore four core directions for meaningful collections: gemstones, initials, zodiac motifs and important numbers. Each can be tailored through design, materials and finishes.</p>",
         "image_ratio": "portrait",
         "overlay_opacity": 60,
-        "background_color": "#ffffff",
-        "text_color": "#ffffff",
-        "accent_color": "#c7a85e",
         "gap": 16,
         "content_padding": 20,
         "desktop_columns": 4,
@@ -266,13 +227,19 @@
         "body_size": 16,
         "card_title_size": 22,
         "card_body_size": 15,
-        "animation_style": "fade-up",
-        "padding_top": 32,
-        "padding_bottom": 88,
         "mobile_heading_size": 25,
         "mobile_body_size": 14,
         "mobile_card_title_size": 18,
-        "mobile_card_body_size": 14
+        "mobile_card_body_size": 14,
+        "background_color": "#ffffff",
+        "heading_color": "#17191a",
+        "body_color": "#17191a",
+        "text_color": "#ffffff",
+        "card_body_color": "#ffffff",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
+        "padding_top": 32,
+        "padding_bottom": 88
       }
     },
     "initial": {
@@ -283,6 +250,7 @@
         "heading": "Initial Jewelry Wholesale Manufacturer",
         "subtitle": "",
         "body": "<p>Initial and name jewelry gives customers the ability to wear something distinctly their own. Craftaurum supports brand-led development of initial necklaces, monogram pendants, nameplate necklaces, bracelets and coordinating jewelry sets.</p><p>Discuss your preferred letterforms, metal finish, accent stones, sizing and collection scope with our team. We can help refine the design direction for sampling and planned wholesale quantities.</p>",
+        "show_buttons": true,
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
@@ -293,82 +261,19 @@
         "image_position": "right",
         "image_ratio": "landscape",
         "heading_position": "content",
+        "heading_tag": "h2",
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14,
         "background_color": "#ffffff",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
         "animation_style": "fade-up",
         "padding_top": 80,
-        "padding_bottom": 40,
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
-      }
-    },
-    "birthstone": {
-      "type": "image-text-feature",
-      "name": "图文介绍",
-      "settings": {
-        "section_width": "page-width",
-        "heading": "Custom Birthstone Jewelry Manufacturer",
-        "subtitle": "",
-        "body": "<p>Birthstone jewelry gives each piece an emotional connection to a birth month or a personal milestone. For jewelry brands, gemstones create possibilities for seasonal gifting as well as year-round necklaces, earrings, rings and bracelets.</p><p>Explore coordinated styles and gemstone color directions, then discuss practical setting details, available materials and sampling for your intended collection.</p>",
-        "top_label": "",
-        "top_url": "",
-        "top_button_style": "button",
-        "cta_label": "Start Your Project",
-        "cta_url": "shopify://pages/contact",
-        "cta_button_style": "button-unstyled",
-        "image": "shopify://shop_images/Custom-birthstone-jewelry.jpg",
-        "image_position": "left",
-        "image_ratio": "landscape",
-        "heading_position": "content",
-        "heading_size": 35,
-        "subtitle_size": 12,
-        "body_size": 16,
-        "background_color": "#f8f7f4",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "animation_style": "soft-zoom",
-        "padding_top": 80,
-        "padding_bottom": 40,
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
-      }
-    },
-    "zodiac": {
-      "type": "image-text-feature",
-      "name": "图文介绍",
-      "settings": {
-        "section_width": "page-width",
-        "heading": "Zodiac Jewelry Custom",
-        "subtitle": "",
-        "body": "<p>Offer customers a personal connection to their astrological sign through zodiac symbols, constellation details and celestial jewelry designs. Motifs can be translated into necklaces, pendants, charms, bracelets and earrings.</p><p>Craftaurum can work with your artwork to develop a consistent visual language across the twelve signs and explore additional customization through engraving, lettering or gemstone details.</p>",
-        "top_label": "",
-        "top_url": "",
-        "top_button_style": "button",
-        "cta_label": "Contact Us",
-        "cta_url": "shopify://pages/contact",
-        "cta_button_style": "button-unstyled",
-        "image": "shopify://shop_images/custom-zodiac-jewelry.jpg",
-        "image_position": "right",
-        "image_ratio": "landscape",
-        "heading_position": "content",
-        "heading_size": 35,
-        "subtitle_size": 12,
-        "body_size": 16,
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "animation_style": "fade-up",
-        "padding_top": 80,
-        "padding_bottom": 40,
-        "mobile_heading_size": 25,
-        "mobile_subtitle_size": 12,
-        "mobile_body_size": 14
+        "padding_bottom": 40
       }
     },
     "initial_gallery": {
@@ -377,19 +282,22 @@
         "image_1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/custom-inital-necklace.jpg"
+            "image": "shopify://shop_images/custom-inital-necklace.jpg",
+            "caption": ""
           }
         },
         "image_2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/nameplate-necklace.jpg"
+            "image": "shopify://shop_images/nameplate-necklace.jpg",
+            "caption": ""
           }
         },
         "image_3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/custom-letters-jewelry.jpg"
+            "image": "shopify://shop_images/custom-letters-jewelry.jpg",
+            "caption": ""
           }
         }
       },
@@ -404,18 +312,57 @@
         "heading": "",
         "description": "",
         "button_label": "",
+        "button_style": "button-unstyled",
+        "link": "",
         "image_ratio": "landscape",
-        "background_color": "#ffffff",
+        "intro_alignment": "left",
         "gap": 16,
         "desktop_columns": 3,
         "desktop_layout": "grid",
         "mobile_columns": 2,
         "mobile_layout": "carousel",
+        "heading_size": 35,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "background_color": "#ffffff",
         "animation_style": "fade-in",
         "padding_top": 0,
-        "padding_bottom": 88,
+        "padding_bottom": 88
+      }
+    },
+    "birthstone": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "heading": "Custom Birthstone Jewelry Manufacturer",
+        "subtitle": "",
+        "body": "<p>Birthstone jewelry gives each piece an emotional connection to a birth month or a personal milestone. For jewelry brands, gemstones create possibilities for seasonal gifting as well as year-round necklaces, earrings, rings and bracelets.</p><p>Explore coordinated styles and gemstone color directions, then discuss practical setting details, available materials and sampling for your intended collection.</p>",
+        "show_buttons": true,
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "cta_label": "Start Your Project",
+        "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button-unstyled",
+        "image": "shopify://shop_images/Custom-birthstone-jewelry.jpg",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "heading_position": "content",
+        "heading_tag": "h2",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
         "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14,
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "soft-zoom",
+        "padding_top": 80,
+        "padding_bottom": 40
       }
     },
     "birthstone_gallery": {
@@ -424,25 +371,29 @@
         "image_1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Custom-birthstone-jewelry.jpg"
+            "image": "shopify://shop_images/Custom-birthstone-jewelry.jpg",
+            "caption": ""
           }
         },
         "image_2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/gemstone-setting.jpg"
+            "image": "shopify://shop_images/gemstone-setting.jpg",
+            "caption": ""
           }
         },
         "image_3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/gemstone-setting-400x400.jpg"
+            "image": "shopify://shop_images/gemstone-setting-400x400.jpg",
+            "caption": ""
           }
         },
         "image_4": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/November-birthstone-rings-1.jpg"
+            "image": "shopify://shop_images/November-birthstone-rings-1.jpg",
+            "caption": ""
           }
         }
       },
@@ -458,18 +409,57 @@
         "heading": "",
         "description": "",
         "button_label": "",
+        "button_style": "button-unstyled",
+        "link": "",
         "image_ratio": "landscape",
-        "background_color": "#f8f7f4",
+        "intro_alignment": "left",
         "gap": 16,
         "desktop_columns": 4,
         "desktop_layout": "grid",
         "mobile_columns": 2,
         "mobile_layout": "carousel",
+        "heading_size": 35,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "background_color": "#f8f7f4",
         "animation_style": "fade-in",
         "padding_top": 0,
-        "padding_bottom": 88,
+        "padding_bottom": 88
+      }
+    },
+    "zodiac": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "heading": "Zodiac Jewelry Custom",
+        "subtitle": "",
+        "body": "<p>Offer customers a personal connection to their astrological sign through zodiac symbols, constellation details and celestial jewelry designs. Motifs can be translated into necklaces, pendants, charms, bracelets and earrings.</p><p>Craftaurum can work with your artwork to develop a consistent visual language across the twelve signs and explore additional customization through engraving, lettering or gemstone details.</p>",
+        "show_buttons": true,
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "cta_label": "Contact Us",
+        "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button-unstyled",
+        "image": "shopify://shop_images/custom-zodiac-jewelry.jpg",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "heading_position": "content",
+        "heading_tag": "h2",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
         "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14,
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
+        "padding_top": 80,
+        "padding_bottom": 40
       }
     },
     "zodiac_gallery": {
@@ -478,18 +468,28 @@
         "image_1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Aries-jewelry.jpg"
+            "image": "shopify://shop_images/Aries-jewelry.jpg",
+            "caption": ""
+          }
+        },
+        "image_rGMKqL": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Christmas-necklace-gold.jpg",
+            "caption": ""
           }
         },
         "image_2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/custom-zodiac-jewelry.jpg"
+            "image": "shopify://shop_images/custom-zodiac-jewelry.jpg",
+            "caption": ""
           }
         }
       },
       "block_order": [
         "image_1",
+        "image_rGMKqL",
         "image_2"
       ],
       "name": "图片画廊",
@@ -498,18 +498,23 @@
         "heading": "",
         "description": "",
         "button_label": "",
+        "button_style": "button-unstyled",
+        "link": "",
         "image_ratio": "landscape",
-        "background_color": "#ffffff",
+        "intro_alignment": "left",
         "gap": 16,
         "desktop_columns": 3,
         "desktop_layout": "grid",
         "mobile_columns": 2,
         "mobile_layout": "carousel",
+        "heading_size": 35,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "background_color": "#ffffff",
         "animation_style": "fade-in",
         "padding_top": 0,
-        "padding_bottom": 88,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "padding_bottom": 88
       }
     },
     "services": {
@@ -560,6 +565,9 @@
         "eyebrow": "OUR MANUFACTURING SERVICES",
         "heading": "Support for Your Personalized Jewelry Collection",
         "description": "<p>Explore custom development, material options and practical production support for meaningful jewelry ranges.</p>",
+        "intro_button_label": "",
+        "intro_button_link": "",
+        "intro_button_style": "button",
         "image_ratio": "landscape",
         "image_width": 100,
         "intro_style": "style_1",
@@ -575,19 +583,19 @@
         "body_size": 16,
         "card_title_size": 18,
         "card_body_size": 15,
-        "background_color": "#f8f7f4",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
-        "show_divider": false,
-        "divider_color": "#D8D5CE",
-        "animation_style": "fade-up",
-        "padding_top": 80,
-        "padding_bottom": 88,
         "mobile_eyebrow_size": 12,
         "mobile_heading_size": 25,
         "mobile_body_size": 14,
         "mobile_card_title_size": 18,
-        "mobile_card_body_size": 14
+        "mobile_card_body_size": 14,
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "show_divider": false,
+        "divider_color": "#d8d5ce",
+        "animation_style": "fade-up",
+        "padding_top": 80,
+        "padding_bottom": 88
       }
     },
     "contact": {
@@ -604,12 +612,12 @@
         "eyebrow_size": 12,
         "heading_size": 35,
         "body_size": 16,
-        "animation_style": "fade-up",
-        "padding_top": 88,
-        "padding_bottom": 88,
         "mobile_eyebrow_size": 12,
         "mobile_heading_size": 25,
-        "mobile_body_size": 14
+        "mobile_body_size": 14,
+        "animation_style": "fade-up",
+        "padding_top": 88,
+        "padding_bottom": 88
       }
     }
   },
@@ -618,7 +626,6 @@
     "hero",
     "special",
     "enamel",
-    "unlock",
     "overview",
     "initial",
     "initial_gallery",
