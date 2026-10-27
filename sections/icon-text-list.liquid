@@ -107,6 +107,11 @@
     .ca-icon-text__grid { grid-template-columns: repeat(var(--ca-icon-mobile-columns), minmax(0,1fr)); }
     .ca-icon-text__item { padding: 22px 12px 22px 0; }
   }
+  .ca-icon-text__icon-image { transition: transform .4s ease; transform:scale(1); }
+  @media (hover:hover) and (pointer:fine) {
+    .ca-icon-text__item:hover .ca-icon-text__icon-image { transform:scale(1.045); }
+  }
+  @media (prefers-reduced-motion:reduce) { .ca-icon-text__icon-image { transition:none; } }
 {% endstylesheet %}
 {% schema %}
 {
