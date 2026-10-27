@@ -154,21 +154,43 @@
       }
     },
     "unlock": {
-      "type": "text-heading",
-      "name": "Unlock Custom Personalized Jewelry",
+      "type": "custom-richtext",
+      "name": "自定义富文本",
       "settings": {
         "section_width": "page-width",
-        "heading": "Unlock Custom Personalized Jewelry",
-        "description": "<p>Turn personal symbols, meaningful dates and individual stories into memorable jewelry collections for your customers.</p>",
         "anchor_id": "personalized-possibilities",
+        "layout_style": "stacked",
+        "alignment": "center",
+        "content_width": 1060,
         "heading_size": 35,
         "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "background_color": "#FFFFFF",
+        "text_color": "#17191A",
         "animation_style": "fade-in",
         "padding_top": 72,
-        "padding_bottom": 12,
-        "mobile_heading_size": 25,
-        "mobile_body_size": 14
-      }
+        "padding_bottom": 12
+      },
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading": "Unlock Custom Personalized Jewelry",
+            "heading_tag": "h2"
+          }
+        },
+        "body": {
+          "type": "body",
+          "settings": {
+            "body": "<p>Turn personal symbols, meaningful dates and individual stories into memorable jewelry collections for your customers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "body"
+      ]
     },
     "overview": {
       "type": "image-cards",
