@@ -376,7 +376,8 @@
       "type": "color",
       "id": "accent_color",
       "label": "编号",
-      "default": "#C7A85E"
+      "default": "#C7A85E",
+      "visible_if": "{{ section.settings.layout_mode == 'interactive' and section.settings.show_index }}"
     },
     {
       "type": "header",
