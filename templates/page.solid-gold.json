@@ -460,7 +460,6 @@
         "k10": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/solid-gold-jewelry.jpg",
             "value": "41.7%",
             "heading": "10K Gold Jewelry",
             "description": "<p>With the lowest gold content in this guide, 10K offers greater hardness and durability. It is well suited to frequent wear and more cost-conscious fine-jewelry programs.</p>",
@@ -471,7 +470,6 @@
         "k14": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/rings.jpg",
             "value": "58.5%",
             "heading": "14K Gold Jewelry",
             "description": "<p>A popular middle ground that balances recognizable gold value with practical durability, making it versatile across rings, earrings and necklaces.</p>",
@@ -482,7 +480,6 @@
         "k18": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/diamond-gold-rings.jpg",
             "value": "75%",
             "heading": "18K Gold Jewelry",
             "description": "<p>A premium fine-jewelry standard with richer gold color and higher gold content while retaining practical alloy strength for many jewelry applications.</p>",
@@ -493,7 +490,6 @@
         "k20": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/gold-earrings.jpg",
             "value": "83.3%",
             "heading": "20K Gold Jewelry",
             "description": "<p>A higher-purity option with deeper gold character, positioned between 18K and 24K while requiring more consideration around softness and construction.</p>",
@@ -504,7 +500,6 @@
         "k24": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/custom_real_gold_jewelry.jpg",
             "value": "99.9%",
             "heading": "24K Gold Jewelry",
             "description": "<p>Nearly pure gold with the richest natural gold color and highest gold content, but also the greatest softness and malleability.</p>",
@@ -529,8 +524,6 @@
         "value_suffix": "GOLD",
         "feature_heading": "What Does Karat Mean?",
         "feature_body": "<p>Karat refers to the proportion of pure gold within an alloy. The right choice is not simply “higher is better”; it depends on design, wear expectations, target price and market positioning.</p>",
-        "item_image_shape": "square",
-        "item_image_size": 88,
         "feature_image": "shopify://shop_images/Custom_Gold_Jewelry.jpg",
         "feature_image_ratio": "landscape",
         "intro_alignment": "center",
@@ -559,7 +552,8 @@
         "item_body_color": "#4F514E",
         "meta_color": "#5F615E",
         "padding_top": 76,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "show_index": false
       }
     },
     "jewelry_types": {
