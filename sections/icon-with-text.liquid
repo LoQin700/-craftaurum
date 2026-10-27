@@ -19,9 +19,13 @@
     --ca-padding-top: {{ section.settings.padding_top }}px;
     --ca-padding-bottom: {{ section.settings.padding_bottom }}px;
     --ca-eyebrow-size: {{ section.settings.eyebrow_size | default: 12 }}px;
+    --ca-eyebrow-size-mobile: {{ section.settings.mobile_eyebrow_size | default: 12 }}px;
     --ca-heading-size: {{ section.settings.heading_size | default: 35 }}px;
+    --ca-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 35 }}px;
     --ca-body-size: {{ section.settings.body_size | default: 15 }}px;
+    --ca-body-size-mobile: {{ section.settings.mobile_body_size | default: 15 }}px;
     --ca-item-title-size: {{ section.settings.item_title_size | default: 18 }}px;
+    --ca-item-title-size-mobile: {{ section.settings.mobile_item_title_size | default: 18 }}px;
   "
 >
   <div class="ca-icon-text__surface">
@@ -121,6 +125,7 @@
   .ca-icon-text__heading {
     margin: 0 0 16px;
     color: inherit;
+    font-size: var(--ca-heading-size);
   }
 
   .ca-icon-text__description {
@@ -231,6 +236,13 @@
     .ca-icon-text--centered .ca-icon-text__intro {
       text-align: center;
     }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ca-icon-text__eyebrow { font-size: var(--ca-eyebrow-size-mobile); }
+    .ca-icon-text__heading { font-size: var(--ca-heading-size-mobile); }
+    .ca-icon-text__description { font-size: var(--ca-body-size-mobile); }
+    .ca-icon-text__title { font-size: var(--ca-item-title-size-mobile); }
   }
 {% endstylesheet %}
 
@@ -348,22 +360,18 @@
       "label": "小标题",
       "default": "MANUFACTURING SUPPORT"
     },
-    {"type":"range","id":"eyebrow_size","label":"小标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
     {
       "type": "text",
       "id": "heading",
       "label": "标题",
       "default": "Capabilities That Support Every Collection"
     },
-    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
     {
       "type": "richtext",
       "id": "description",
       "label": "正文",
       "default": "<p>From design development to production review, each stage is supported by a clear and practical manufacturing process.</p>"
     },
-    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
-    {"type":"range","id":"item_title_size","label":"项目标题字号","min":14,"max":30,"step":1,"unit":"px","default":18},
     {"type":"header","content":"电脑端布局"},
     {
       "type": "select",
@@ -410,6 +418,16 @@
       ],
       "default": "1"
     },
+    {"type":"header","content":"电脑端字号"},
+    {"type":"range","id":"eyebrow_size","label":"小标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
+    {"type":"range","id":"item_title_size","label":"项目标题字号","min":14,"max":30,"step":1,"unit":"px","default":18},
+    {"type":"header","content":"移动端字号"},
+    {"type":"range","id":"mobile_eyebrow_size","label":"小标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
+    {"type":"range","id":"mobile_heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"mobile_body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
+    {"type":"range","id":"mobile_item_title_size","label":"项目标题字号","min":14,"max":30,"step":1,"unit":"px","default":18},
     {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
     {
       "type": "range",
