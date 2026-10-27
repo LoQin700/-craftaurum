@@ -1,4 +1,4 @@
-/* Horizon theme template: Horizontal CTA colors inherit shared global button styles. */
+/* Craftaurum page template. Hero background is controlled directly by background_color. */
 {
   "sections": {
     "main": {
@@ -231,7 +231,6 @@
       "name": "图文横幅",
       "settings": {
         "section_width": "page-width",
-        "use_background": true,
         "background_color": "#f8f7f4",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
