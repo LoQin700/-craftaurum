@@ -97,9 +97,9 @@
             "image": "shopify://shop_images/S1028-N.jpg",
             "title": "Pendant Necklaces",
             "description": "<p>Explore pendant size, profile, attachment, engraving and stone options alongside suitable chains and finishes.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact Us",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         },
         "card_WtWhNM": {
@@ -108,9 +108,9 @@
             "image": "shopify://shop_images/pearl-necklace.jpg",
             "title": "Pearl Necklaces",
             "description": "<p>Consider pearl type, size, spacing, chain or strand construction and clasp details for your target aesthetic.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact Us",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         },
         "card_CfDadY": {
@@ -119,9 +119,9 @@
             "image": "shopify://shop_images/butterfly-necklace.jpg",
             "title": "Custom Choker Necklaces",
             "description": "<p>Review close-fitting dimensions, chain styles, comfort and decorative details for contemporary choker designs.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact Us",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         },
         "card_PcNzcH": {
@@ -130,9 +130,9 @@
             "image": "shopify://shop_images/custom-inital-necklace.jpg",
             "title": "Personalized & Logo Necklaces",
             "description": "<p>Discuss initials, nameplates, logos or branded motifs, with suitable metal thickness and finishing requirements.</p>",
-            "button_label": "Explore Details",
+            "button_label": "Contact Us",
             "button_style": "button-unstyled",
-            "link": ""
+            "link": "shopify://pages/contact"
           }
         }
       },
@@ -290,8 +290,8 @@
           "settings": {
             "icon": "ruler",
             "icon_color": "#c7a85e",
-            "title": "Design Development",
-            "description": "<p>Clarify chain style, pendant scale, references and intended brand direction before sampling.</p>"
+            "title": "Design Support",
+            "description": "<p>Discuss style references, proportions and details with the team to refine the product concept before sampling.</p>"
           }
         },
         "iwt_material": {
@@ -299,26 +299,26 @@
           "settings": {
             "icon": "star",
             "icon_color": "#c7a85e",
-            "title": "Material Options",
-            "description": "<p>Review metals, pearls, stones, textures and finishing directions for the collection.</p>"
+            "title": "Jewelry Expertise",
+            "description": "<p>Review materials, settings, construction and finishes relevant to the intended category and market positioning.</p>"
           }
         },
         "iwt_sample": {
           "type": "item",
           "settings": {
-            "icon": "clipboard",
+            "icon": "chat_bubble",
             "icon_color": "#c7a85e",
-            "title": "Sample Review",
-            "description": "<p>Check pendant balance, chain proportion, fastening details and overall finish.</p>"
+            "title": "Clear Communication",
+            "description": "<p>Share revisions and approvals at defined development stages so the project team can stay aligned.</p>"
           }
         },
         "iwt_quality": {
           "type": "item",
           "settings": {
-            "icon": "check_box",
+            "icon": "truck",
             "icon_color": "#c7a85e",
-            "title": "Production Coordination",
-            "description": "<p>Keep specifications and review points clear before repeat production and delivery planning.</p>"
+            "title": "Delivery Coordination",
+            "description": "<p>Confirm quantities, production readiness, packaging and shipping requirements to plan delivery after sample approval.</p>"
           }
         }
       },
@@ -332,7 +332,7 @@
       "settings": {
         "section_width": "page-width",
         "eyebrow": "MANUFACTURING SUPPORT",
-        "heading": "Support for Necklace Collections",
+        "heading": "Support for Your Jewelry Collection",
         "description": "<p>Each necklace project is supported by a practical workflow from design review through sample confirmation and production planning.</p>",
         "icon_position": "top",
         "icon_size": 32,
