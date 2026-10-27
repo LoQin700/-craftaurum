@@ -61,39 +61,33 @@
       }
     },
     "intro_rich_text": {
-      "type": "custom-richtext",
-      "blocks": {
-        "title": {
-          "type": "title",
-          "settings": {
-            "heading": "Gold Plated Jewelry Manufacturer",
-            "heading_tag": "h1"
-          }
-        },
-        "body": {
-          "type": "body",
-          "settings": {
-            "body": "<p>Craftaurum develops custom gold plated jewelry for brands that need flexible color, finish and pricing options across rings, earrings, necklaces, bracelets and other collection categories. Plating direction can be developed around your target look, base material, wear expectations and market position.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "title",
-        "body"
-      ],
-      "name": "自定义富文本",
+      "type": "image-text-feature",
+      "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "anchor_id": "",
-        "layout_style": "stacked",
-        "alignment": "center",
-        "content_width": 800,
+        "heading": "Gold Plated Jewelry Manufacturer",
+        "heading_tag": "h1",
+        "heading_position": "content",
+        "subtitle": "CUSTOM GOLD PLATED JEWELRY",
+        "body": "<p>Craftaurum develops custom gold plated jewelry for brands that need flexible color, finish and pricing options across rings, earrings, necklaces, bracelets and other collection categories. Plating direction can be developed around your target look, base material, wear expectations and market position.</p><p>Choose from coordinated yellow, rose, white and darker plating directions, with material selection and finishing requirements considered alongside product design and target positioning. From early samples to production planning, our team helps turn a clear collection brief into workable specifications.</p>",
+        "image": "shopify://shop_images/plated-jewelry-2.jpg",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "cta_label": "Start Your Plated Jewelry Project",
+        "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button",
         "heading_size": 35,
+        "subtitle_size": 12,
         "body_size": 16,
         "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
         "mobile_body_size": 14,
         "background_color": "#ffffff",
         "text_color": "#17191a",
+        "accent_color": "#c7a85e",
         "animation_style": "fade-up",
         "padding_top": 64,
         "padding_bottom": 56
@@ -249,390 +243,78 @@
       }
     },
     "why_choose": {
-      "type": "section",
+      "type": "icon-with-text",
+      "name": "图标文字",
+      "settings": {
+        "section_width": "page-width",
+        "eyebrow": "OUR ADVANTAGES",
+        "heading": "Why Choose Craftaurum for Custom Plated Jewelry?",
+        "description": "<p>We support plating development as part of the complete jewelry manufacturing process, helping brands control color, finish, material direction and production consistency from sample to bulk order.</p>",
+        "icon_position": "top",
+        "icon_size": 32,
+        "icon_gap": 16,
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "style_preset": "left",
+        "show_divider": true,
+        "column_gap": 32,
+        "desktop_columns": "4",
+        "mobile_columns": "1",
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 16,
+        "item_title_size": 20,
+        "item_body_size": 15,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_item_title_size": 18,
+        "mobile_item_body_size": 14,
+        "animation_style": "fade-up",
+        "padding_top": 72,
+        "padding_bottom": 76
+      },
       "blocks": {
-        "why_heading": {
-          "type": "text",
+        "why_1": {
+          "type": "item",
           "settings": {
-            "text": "<h2>Why Choose Craftaurum for Custom Plated Jewelry?</h2><p>We support plating development as part of the complete jewelry manufacturing process, helping brands control color, finish, material direction and production consistency from sample to bulk order.</p>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "text_color": "#17191a",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "icon": "star",
+            "title": "Custom Plating Development",
+            "description": "<p>Build plating color and finish around your design direction, target market and product positioning.</p>"
+          }
         },
-        "why_grid": {
-          "type": "group",
+        "why_2": {
+          "type": "item",
           "settings": {
-            "content_direction": "row",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "space-between",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 16,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "background_media": "none",
-            "background_color": "",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_color": "",
-            "border_radius": 0,
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "why_1": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "background_media": "none",
-                "background_color": "#ffffff",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "border": "solid",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_color": "#d8d5ce",
-                "border_radius": 0,
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 22,
-                "padding-block-end": 22,
-                "padding-inline-start": 22,
-                "padding-inline-end": 22
-              },
-              "blocks": {
-                "text": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Custom Plating Development</h3><p>Build plating color and finish around your design direction, target market and product positioning.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "#17191a",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text"
-              ]
-            },
-            "why_2": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "background_media": "none",
-                "background_color": "#ffffff",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "border": "solid",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_color": "#d8d5ce",
-                "border_radius": 0,
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 22,
-                "padding-block-end": 22,
-                "padding-inline-start": 22,
-                "padding-inline-end": 22
-              },
-              "blocks": {
-                "text": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Consistent Color & Finish</h3><p>Coordinate surface preparation, plating and final QC for more consistent collection-level results.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "#17191a",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text"
-              ]
-            },
-            "why_3": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "background_media": "none",
-                "background_color": "#ffffff",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "border": "solid",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_color": "#d8d5ce",
-                "border_radius": 0,
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 22,
-                "padding-block-end": 22,
-                "padding-inline-start": 22,
-                "padding-inline-end": 22
-              },
-              "blocks": {
-                "text": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Flexible Base Materials</h3><p>Develop plated jewelry across suitable silver, brass and other compatible material directions.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "#17191a",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text"
-              ]
-            },
-            "why_4": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "vertical_on_mobile": true,
-                "horizontal_alignment": "flex-start",
-                "vertical_alignment": "center",
-                "align_baseline": false,
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8,
-                "width": "fill",
-                "custom_width": 100,
-                "width_mobile": "fill",
-                "custom_width_mobile": 100,
-                "height": "fit",
-                "custom_height": 100,
-                "background_media": "none",
-                "background_color": "#ffffff",
-                "video_position": "cover",
-                "background_image_position": "cover",
-                "toggle_overlay": false,
-                "overlay_color": "#00000026",
-                "overlay_style": "solid",
-                "gradient_direction": "to top",
-                "border": "solid",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_color": "#d8d5ce",
-                "border_radius": 0,
-                "link": "",
-                "open_in_new_tab": false,
-                "placeholder": "",
-                "padding-block-start": 22,
-                "padding-block-end": 22,
-                "padding-inline-start": 22,
-                "padding-inline-end": 22
-              },
-              "blocks": {
-                "text": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Scalable Production</h3><p>Support sampling, lower-volume launches and repeat production as your collection grows.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "#17191a",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text"
-              ]
-            }
-          },
-          "block_order": [
-            "why_1",
-            "why_2",
-            "why_3",
-            "why_4"
-          ]
+            "icon": "check_box",
+            "title": "Consistent Color & Finish",
+            "description": "<p>Coordinate surface preparation, plating and final QC for more consistent collection-level results.</p>"
+          }
+        },
+        "why_3": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Flexible Base Materials",
+            "description": "<p>Develop plated jewelry across suitable silver, brass and other compatible material directions.</p>"
+          }
+        },
+        "why_4": {
+          "type": "item",
+          "settings": {
+            "icon": "box",
+            "title": "Scalable Production",
+            "description": "<p>Support sampling, lower-volume launches and repeat production as your collection grows.</p>"
+          }
         }
       },
       "block_order": [
-        "why_heading",
-        "why_grid"
-      ],
-      "name": "Why Choose Craftaurum",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 36,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "background_media": "none",
-        "background_color": "#f8f7f4",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_color": "",
-        "border_radius": 0,
-        "padding-block-start": 72,
-        "padding-block-end": 76
-      }
+        "why_1",
+        "why_2",
+        "why_3",
+        "why_4"
+      ]
     },
     "plating_durability_story": {
       "type": "section",
@@ -779,7 +461,6 @@
         "story_copy",
         "story_image"
       ],
-      "name": "镀层耐久图文",
       "settings": {
         "content_direction": "row",
         "vertical_on_mobile": true,
