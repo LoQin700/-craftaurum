@@ -14,7 +14,9 @@
   endif
 %}
 <section id="ImageGallery-{{ section.id }}" class="section section--full-width ca-gallery"
-  style="--ca-gallery-bg:{{ background_color }};--ca-gallery-gap:{{ gap }}px;--ca-gallery-desktop:{{ desktop_columns }};--ca-gallery-mobile:{{ mobile_columns }};--ca-gallery-ratio:{{ ratio }};--ca-gallery-pt:{{ padding_top }}px;--ca-gallery-pb:{{ padding_bottom }}px;--ca-gallery-heading-size:{{ section.settings.heading_size | default: 35 }}px;--ca-gallery-body-size:{{ section.settings.body_size | default: 16 }}px;">
+  style="--ca-gallery-bg:{{ background_color }};--ca-gallery-gap:{{ gap }}px;--ca-gallery-desktop:{{ desktop_columns }};--ca-gallery-mobile:{{ mobile_columns }};--ca-gallery-ratio:{{ ratio }};--ca-gallery-pt:{{ padding_top }}px;--ca-gallery-pb:{{ padding_bottom }}px;--ca-gallery-heading-size:{{ section.settings.heading_size | default: 35 }}px;
+    --ca-gallery-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 35 }}px;--ca-gallery-body-size:{{ section.settings.body_size | default: 16 }}px;
+    --ca-gallery-body-size-mobile: {{ section.settings.mobile_body_size | default: 16 }}px;">
   <div class="ca-gallery__surface">
     <div class="ca-gallery__inner ca-gallery__inner--{{ content_width }}{% if section.settings.desktop_layout == 'carousel' %} is-desktop-carousel{% endif %}{% if section.settings.mobile_layout == 'carousel' %} is-mobile-carousel{% endif %}" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-in' }}">
       {% if section.settings.heading != blank or section.settings.description != blank or section.settings.button_label != blank %}
@@ -90,6 +92,11 @@
     .ca-gallery__inner.is-mobile-carousel .ca-gallery__grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
     .ca-gallery__inner.is-mobile-carousel .ca-gallery__item{flex:0 0 calc((100% - (var(--ca-gallery-mobile) - 1)*var(--ca-gallery-gap))/var(--ca-gallery-mobile));scroll-snap-align:start}
   }
+
+  @media screen and (max-width: 749px) {
+    .ca-gallery__heading { font-size: var(--ca-gallery-heading-size-mobile); }
+    .ca-gallery__description { font-size: var(--ca-gallery-body-size-mobile); }
+  }
 {% endstylesheet %}
 {% schema %}
 {
@@ -126,9 +133,7 @@
     },
     {"type":"select","id":"intro_alignment","label":"标题区对齐","options":[{"value":"left","label":"左对齐"},{"value":"center","label":"居中"},{"value":"right","label":"右对齐"}],"default":"left"},
     {"type":"text","id":"heading","label":"标题"},
-    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
     {"type":"richtext","id":"description","label":"简介"},
-    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
     {"type":"text","id":"button_label","label":"按钮文字"},
     {"type":"select","id":"button_style","label":"按钮样式","options":[{"value":"button","label":"主按钮"},{"value":"button-secondary","label":"次级按钮"},{"value":"button-unstyled","label":"文字链接"}],"default":"button-unstyled"},
     {"type":"url","id":"link","label":"按钮链接"},
@@ -214,6 +219,12 @@
       ],
       "default": "grid"
     },
+    {"type":"header","content":"电脑端字号"},
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"header","content":"移动端字号"},
+    {"type":"range","id":"mobile_heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"mobile_body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
     {
       "type": "select",
       "id": "animation_style",
