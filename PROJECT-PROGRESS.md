@@ -598,3 +598,22 @@
 - 已同步清理 `templates/page.jewelry-rings.json` 与 `templates/page.section-showcase.json` 中 12 个过时的局部按钮颜色配置值，不改页面其余内容。
 - 额外读取 Showcase 所列 17 类自建 Section：**17/17 均不再含有局部按钮 `--button-*` 配色覆盖，也没有 Section 专属的按钮色配置字段**。全局按钮实际来源可见 `assets/base.css` 的一级/二级按钮颜色与 Hover 样式。
 - 当前已验证 JSON Schema 可解析、Section 实例旧字段已清理、GitHub 提交成功；尚未运行 Shopify CLI Theme Check 或 Shopify 真实前台的不同背景/正常/Hover/文字链接视觉验收。
+
+## 2026-10-27 · 自建 Section 后台设置分组统一（最新规范）
+- 用户反馈全站自建 Section 的颜色、图片、文字、布局字段散落在不同位置，不易找到；要求统一分组、图片设置独立、颜色设置独立，并明确「入场动画 + 上下 padding」单列为最后的「其它设置」。
+- 已直接调整 **Section Showcase 现有 17 类自建 `sections/*.liquid` 的 `{% schema %}.settings`**，采用统一的显示顺序（每个 Section 仅显示其真实拥有的设置组，不添加无效字段）：
+  1. **基础设置**：内容宽度等 Section 基本属性。
+  2. **内容设置**：标题、副标题、正文、说明、内容字段与必填选项等。
+  3. **按钮设置**：按钮文字、链接、主/次/文字链接样式；不涉及局部颜色，按钮仍沿用全局配色。
+  4. **图片设置**：图片选择、比例、左右位置、显示高度、蒙层、图标尺寸等相关控制。
+  5. **颜色设置**：各类 Color Picker（背景色、文字色、强调色、描边色、Hover 颜色等）及直接控制其显示的 Checkbox。
+  6. **布局与交互**：标题/正文对齐、内容排列、间距、自动轮播等自带的非设备独立选项。
+  7. **电脑端布局**：原 `desktop_*` 布局及 `layout_style` 设置。
+  8. **移动端布局**：原 `mobile_columns`、`mobile_layout`。
+  9. **电脑端字号**：原有 61 个电脑端字号 Range 字段。
+  10. **移动端字号**：此前新增的 61 个 `mobile_*` 字号 Range 字段。
+  11. **其它设置**：固定 `animation_style` → `padding_top` → `padding_bottom`，独立位于后台最后。
+- 此次移除了 Schema 中零散的旧 Header（如「颜色」「图片效果」「顶部标题区」「图片布局」「文字」「间距」），统一由上述固定分组标题代替；只是 UI 组织，**不删除设置项**。
+- 对每份修改前后 Schema 逐项校验，除 Header 分组和字段排序外，其余设置的完整 JSON（ID、label、type、default、range min/max/step、select options、visible_if 等）字节级语义一致；原 Liquid/CSS/JS 页面渲染逻辑、Block Schema 与 Preset 未修改。
+- GitHub 读回检查：**17/17 自建 Section 分组顺序正确、颜色字段在「颜色设置」、图片选择字段在「图片设置」、61 对双端字号完整、「其它设置」底部顺序正确，0 错误**。
+- 本次未运行 Shopify CLI Theme Check、Shopify Theme Editor 加载/保存与真实 PC/Tablet/Mobile 前台视觉测试，需在主题同步后现场验收。未来新增自建 Section 沿用本条分组规范。
