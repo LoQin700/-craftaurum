@@ -205,7 +205,6 @@
       "default": "Selected partnerships are shown. Additional collaborations remain confidential under NDA."
     },
     {"type":"range","id":"disclaimer_size","label":"底部说明字号","min":10,"max":18,"step":1,"unit":"px","default":13},
-    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-in"},
     {
       "type": "checkbox",
       "id": "autoplay",
@@ -221,6 +220,33 @@
       "step": 1,
       "default": 3
     },
+    {"type":"header","content":"移动端布局"},
+    {
+      "type": "range",
+      "id": "mobile_columns",
+      "label": "每行显示数量",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 1
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "展示方式",
+      "options": [
+        {
+          "value": "grid",
+          "label": "网格"
+        },
+        {
+          "value": "carousel",
+          "label": "轮播"
+        }
+      ],
+      "default": "carousel"
+    },
+    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-in"},
     {
       "type": "range",
       "id": "padding_top",
@@ -240,31 +266,6 @@
       "step": 4,
       "unit": "px",
       "default": 20
-    },
-    {
-      "type": "range",
-      "id": "mobile_columns",
-      "label": "手机每行数量",
-      "min": 1,
-      "max": 4,
-      "step": 1,
-      "default": 1
-    },
-    {
-      "type": "select",
-      "id": "mobile_layout",
-      "label": "手机显示方式",
-      "options": [
-        {
-          "value": "grid",
-          "label": "网格"
-        },
-        {
-          "value": "carousel",
-          "label": "轮播"
-        }
-      ],
-      "default": "carousel"
     }
   ],
   "blocks": [
