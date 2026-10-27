@@ -7,7 +7,6 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-/* Craftaurum template. Image fields use Shopify image_picker; no external reference image URL inputs. */
 {
   "sections": {
     "main": {
@@ -80,14 +79,17 @@
           "type": "buttons",
           "settings": {
             "label_1": "Christmas Jewelry",
-            "link_1": "shopify://pages/contact",
+            "link_1": "",
             "style_1": "button-secondary",
             "label_2": "Halloween Jewelry",
-            "link_2": "shopify://pages/contact",
+            "link_2": "",
             "style_2": "button-secondary",
             "label_3": "Thanksgiving Gift",
-            "link_3": "shopify://pages/contact",
-            "style_3": "button-secondary"
+            "link_3": "",
+            "style_3": "button-secondary",
+            "label_4": "",
+            "link_4": "",
+            "style_4": "button-secondary"
           }
         }
       },
@@ -99,6 +101,7 @@
       "name": "自定义富文本",
       "settings": {
         "section_width": "page-width",
+        "anchor_id": "",
         "layout_style": "stacked",
         "alignment": "center",
         "content_width": 1060,
@@ -118,29 +121,33 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
         "heading": "Wholesale Christmas Jewelry",
-        "heading_size": 40,
-        "subtitle_size": 12,
-        "body_size": 16,
-        "animation_style": "fade-up",
-        "heading_position": "top",
         "subtitle": "",
+        "body": "<p>Christmas is one of the strongest retail periods for gifting and seasonal accessories. Developing a dedicated holiday jewelry range gives brands more room to offer limited collections, personalized gift ideas and recognizable festive motifs without relying only on evergreen products.</p><p>Craftaurum can support Christmas jewelry development from concept and sample through repeat production, including earrings, necklaces, rings, charms and gift-led sets. Collections can be adapted around your target metal, plating color, stone direction and packaging plan.</p><p>For wholesale programs, planning early helps secure enough time for sampling, revisions, production and delivery before the holiday sales window.</p>",
+        "show_buttons": false,
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
-        "body": "<p>Christmas is one of the strongest retail periods for gifting and seasonal accessories. Developing a dedicated holiday jewelry range gives brands more room to offer limited collections, personalized gift ideas and recognizable festive motifs without relying only on evergreen products.</p><p>Craftaurum can support Christmas jewelry development from concept and sample through repeat production, including earrings, necklaces, rings, charms and gift-led sets. Collections can be adapted around your target metal, plating color, stone direction and packaging plan.</p><p>For wholesale programs, planning early helps secure enough time for sampling, revisions, production and delivery before the holiday sales window.</p>",
-        "image": "shopify://shop_images/Christmas-necklace-gold.jpg",
-        "image_position": "right",
-        "image_ratio": "landscape",
         "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button-unstyled",
+        "image": "shopify://shop_images/Christmas-necklace-gold.jpg",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "heading_position": "top",
+        "heading_tag": "h2",
+        "heading_size": 40,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14,
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
         "padding_top": 64,
-        "padding_bottom": 24,
-        "show_buttons": false
+        "padding_bottom": 24
       }
     },
     "christmas_gallery": {
@@ -149,25 +156,29 @@
         "image_1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Christmas-brooch.jpg"
+            "image": "shopify://shop_images/Christmas-brooch.jpg",
+            "caption": ""
           }
         },
         "image_2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Christmas-earrings-set.jpg"
+            "image": "shopify://shop_images/Christmas-earrings-set.jpg",
+            "caption": ""
           }
         },
         "image_3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Christmas-necklace.jpg"
+            "image": "shopify://shop_images/Christmas-necklace.jpg",
+            "caption": ""
           }
         },
         "image_4": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Christmas-necklace-gold.jpg"
+            "image": "shopify://shop_images/Christmas-necklace-gold.jpg",
+            "caption": ""
           }
         }
       },
@@ -180,14 +191,24 @@
       "name": "图片画廊",
       "settings": {
         "section_width": "page-width",
+        "heading": "",
+        "description": "",
+        "button_label": "",
+        "button_style": "button-unstyled",
+        "link": "",
+        "image_ratio": "square",
+        "intro_alignment": "left",
+        "gap": 16,
+        "desktop_columns": 4,
+        "desktop_layout": "grid",
+        "mobile_columns": 2,
+        "mobile_layout": "grid",
+        "heading_size": 35,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
         "background_color": "#ffffff",
         "animation_style": "fade-in",
-        "desktop_layout": "grid",
-        "desktop_columns": 4,
-        "mobile_layout": "grid",
-        "mobile_columns": 2,
-        "image_ratio": "square",
-        "gap": 16,
         "padding_top": 0,
         "padding_bottom": 80
       }
@@ -197,29 +218,33 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#f8f7f4",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
         "heading": "Halloween Jewelry Wholesale",
-        "heading_size": 40,
-        "subtitle_size": 12,
-        "body_size": 16,
-        "animation_style": "soft-zoom",
-        "heading_position": "top",
         "subtitle": "",
+        "body": "<p>Halloween collections work best when the jewelry feels immediately seasonal while still fitting the style language of the brand. We can develop themed earrings, rings, necklaces and bracelets around motifs such as moons, stars, pumpkins, ghosts, charms and darker plated finishes.</p><p>Projects can range from lightweight fashion pieces to more refined sterling silver or gold-plated styles. Existing concepts can also be adapted into seasonal colorways, charms or gift sets to reduce development time.</p><ul><li>Halloween earrings</li><li>Halloween rings</li><li>Halloween necklaces</li><li>Halloween bracelets</li></ul>",
+        "show_buttons": false,
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
-        "body": "<p>Halloween collections work best when the jewelry feels immediately seasonal while still fitting the style language of the brand. We can develop themed earrings, rings, necklaces and bracelets around motifs such as moons, stars, pumpkins, ghosts, charms and darker plated finishes.</p><p>Projects can range from lightweight fashion pieces to more refined sterling silver or gold-plated styles. Existing concepts can also be adapted into seasonal colorways, charms or gift sets to reduce development time.</p><ul><li>Halloween earrings</li><li>Halloween rings</li><li>Halloween necklaces</li><li>Halloween bracelets</li></ul>",
-        "image": "shopify://shop_images/halloween-necklace.jpg",
-        "image_position": "left",
-        "image_ratio": "landscape",
         "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button-unstyled",
+        "image": "shopify://shop_images/halloween-necklace.jpg",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "heading_position": "top",
+        "heading_tag": "h2",
+        "heading_size": 40,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14,
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "soft-zoom",
         "padding_top": 80,
-        "padding_bottom": 24,
-        "show_buttons": false
+        "padding_bottom": 24
       }
     },
     "halloween_gallery": {
@@ -228,25 +253,29 @@
         "image_1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/halloween-necklace.jpg"
+            "image": "shopify://shop_images/halloween-necklace.jpg",
+            "caption": ""
           }
         },
         "image_2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/custom-zodiac-jewelry.jpg"
+            "image": "shopify://shop_images/custom-zodiac-jewelry.jpg",
+            "caption": ""
           }
         },
         "image_3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Aries-jewelry.jpg"
+            "image": "shopify://shop_images/Aries-jewelry.jpg",
+            "caption": ""
           }
         },
         "image_4": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/number-jewelry-1.jpg"
+            "image": "shopify://shop_images/number-jewelry-1.jpg",
+            "caption": ""
           }
         }
       },
@@ -259,14 +288,24 @@
       "name": "图片画廊",
       "settings": {
         "section_width": "page-width",
+        "heading": "",
+        "description": "",
+        "button_label": "",
+        "button_style": "button-unstyled",
+        "link": "",
+        "image_ratio": "square",
+        "intro_alignment": "left",
+        "gap": 16,
+        "desktop_columns": 4,
+        "desktop_layout": "grid",
+        "mobile_columns": 2,
+        "mobile_layout": "grid",
+        "heading_size": 35,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
         "background_color": "#f8f7f4",
         "animation_style": "soft-zoom",
-        "desktop_layout": "grid",
-        "desktop_columns": 4,
-        "mobile_layout": "grid",
-        "mobile_columns": 2,
-        "image_ratio": "square",
-        "gap": 16,
         "padding_top": 0,
         "padding_bottom": 80
       }
@@ -276,29 +315,33 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
-        "accent_color": "#c7a85e",
         "heading": "Supply Thanksgiving Jewelry",
-        "heading_size": 40,
-        "subtitle_size": 12,
-        "body_size": 16,
-        "animation_style": "fade-up",
-        "heading_position": "top",
         "subtitle": "",
+        "body": "<p>Thanksgiving jewelry can be positioned around gratitude, gifting and personalized meaning rather than relying only on literal holiday motifs. Custom initials, birthstones, engraved details, warm gold finishes and small giftable pieces are strong directions for this period.</p><p><strong>Custom development:</strong> Translate gifting themes into jewelry that feels personal to the customer or recipient.</p><p><strong>Wholesale production:</strong> Plan quantities and target costs around your campaign without overbuilding inventory.</p><p><strong>Material flexibility:</strong> Develop in sterling silver, solid gold or plated constructions according to the positioning of the collection.</p><p><strong>Production planning:</strong> Starting early leaves enough time for sampling, approval, bulk production and delivery before the retail window.</p>",
+        "show_buttons": false,
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
-        "body": "<p>Thanksgiving jewelry can be positioned around gratitude, gifting and personalized meaning rather than relying only on literal holiday motifs. Custom initials, birthstones, engraved details, warm gold finishes and small giftable pieces are strong directions for this period.</p><p><strong>Custom development:</strong> Translate gifting themes into jewelry that feels personal to the customer or recipient.</p><p><strong>Wholesale production:</strong> Plan quantities and target costs around your campaign without overbuilding inventory.</p><p><strong>Material flexibility:</strong> Develop in sterling silver, solid gold or plated constructions according to the positioning of the collection.</p><p><strong>Production planning:</strong> Starting early leaves enough time for sampling, approval, bulk production and delivery before the retail window.</p>",
-        "image": "shopify://shop_images/custom-fashion-jewelry.jpg",
-        "image_position": "right",
-        "image_ratio": "landscape",
         "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button-unstyled",
+        "image": "shopify://shop_images/custom-fashion-jewelry.jpg",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "heading_position": "top",
+        "heading_tag": "h2",
+        "heading_size": 40,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14,
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
         "padding_top": 88,
-        "padding_bottom": 24,
-        "show_buttons": false
+        "padding_bottom": 24
       }
     },
     "thanksgiving_gallery": {
@@ -307,25 +350,29 @@
         "image_1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/custom-inital-necklace.jpg"
+            "image": "shopify://shop_images/custom-inital-necklace.jpg",
+            "caption": ""
           }
         },
         "image_2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Custom-birthstone-jewelry.jpg"
+            "image": "shopify://shop_images/Custom-birthstone-jewelry.jpg",
+            "caption": ""
           }
         },
         "image_3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/nameplate-necklace.jpg"
+            "image": "shopify://shop_images/nameplate-necklace.jpg",
+            "caption": ""
           }
         },
         "image_4": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/custom-pearl-jewelry-set.jpg"
+            "image": "shopify://shop_images/custom-pearl-jewelry-set.jpg",
+            "caption": ""
           }
         }
       },
@@ -338,14 +385,24 @@
       "name": "图片画廊",
       "settings": {
         "section_width": "page-width",
+        "heading": "",
+        "description": "",
+        "button_label": "",
+        "button_style": "button-unstyled",
+        "link": "",
+        "image_ratio": "square",
+        "intro_alignment": "left",
+        "gap": 16,
+        "desktop_columns": 4,
+        "desktop_layout": "grid",
+        "mobile_columns": 2,
+        "mobile_layout": "grid",
+        "heading_size": 35,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
         "background_color": "#ffffff",
         "animation_style": "fade-in",
-        "desktop_layout": "grid",
-        "desktop_columns": 4,
-        "mobile_layout": "grid",
-        "mobile_columns": 2,
-        "image_ratio": "square",
-        "gap": 16,
         "padding_top": 0,
         "padding_bottom": 80
       }
@@ -355,29 +412,33 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#17191a",
-        "text_color": "#f8f7f4",
-        "accent_color": "#c7a85e",
         "heading": "Black Friday Jewelry",
-        "heading_size": 40,
-        "subtitle_size": 12,
-        "body_size": 16,
-        "animation_style": "fade-in",
-        "heading_position": "top",
         "subtitle": "",
+        "body": "<p>Black Friday puts strong pressure on launch timing, inventory readiness and fast replenishment. For jewelry brands, the most effective seasonal programs often combine proven best sellers with selected new designs so the campaign has both familiarity and freshness.</p><p>Craftaurum can support custom development or bulk production around your campaign calendar, with attention to sampling, approval, production pacing and delivery requirements. Early planning gives more room to prepare stock and reduce the risk of missing the promotion window.</p>",
+        "show_buttons": false,
         "top_label": "",
         "top_url": "",
         "top_button_style": "button-secondary",
-        "body": "<p>Black Friday puts strong pressure on launch timing, inventory readiness and fast replenishment. For jewelry brands, the most effective seasonal programs often combine proven best sellers with selected new designs so the campaign has both familiarity and freshness.</p><p>Craftaurum can support custom development or bulk production around your campaign calendar, with attention to sampling, approval, production pacing and delivery requirements. Early planning gives more room to prepare stock and reduce the risk of missing the promotion window.</p>",
-        "image": "shopify://shop_images/wholesale-jewelry-2.jpg",
-        "image_position": "left",
-        "image_ratio": "landscape",
         "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button-secondary",
+        "image": "shopify://shop_images/wholesale-jewelry-2.jpg",
+        "image_position": "left",
+        "image_ratio": "landscape",
+        "heading_position": "top",
+        "heading_tag": "h2",
+        "heading_size": 40,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14,
+        "background_color": "#17191a",
+        "text_color": "#f8f7f4",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-in",
         "padding_top": 88,
-        "padding_bottom": 24,
-        "show_buttons": false
+        "padding_bottom": 24
       }
     },
     "black_friday_gallery": {
@@ -386,25 +447,29 @@
         "image_1": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/rings.jpg"
+            "image": "shopify://shop_images/rings.jpg",
+            "caption": ""
           }
         },
         "image_2": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/gold-earrings.jpg"
+            "image": "shopify://shop_images/gold-earrings.jpg",
+            "caption": ""
           }
         },
         "image_3": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/nameplate-necklace.jpg"
+            "image": "shopify://shop_images/nameplate-necklace.jpg",
+            "caption": ""
           }
         },
         "image_4": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/chain-bracelets.jpg"
+            "image": "shopify://shop_images/chain-bracelets.jpg",
+            "caption": ""
           }
         }
       },
@@ -417,14 +482,24 @@
       "name": "图片画廊",
       "settings": {
         "section_width": "page-width",
+        "heading": "",
+        "description": "",
+        "button_label": "",
+        "button_style": "button-unstyled",
+        "link": "",
+        "image_ratio": "square",
+        "intro_alignment": "left",
+        "gap": 16,
+        "desktop_columns": 4,
+        "desktop_layout": "grid",
+        "mobile_columns": 2,
+        "mobile_layout": "grid",
+        "heading_size": 35,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
         "background_color": "#17191a",
         "animation_style": "soft-zoom",
-        "desktop_layout": "grid",
-        "desktop_columns": 4,
-        "mobile_layout": "grid",
-        "mobile_columns": 2,
-        "image_ratio": "square",
-        "gap": 16,
         "padding_top": 0,
         "padding_bottom": 80
       }
@@ -470,17 +545,21 @@
       "name": "优势展示",
       "settings": {
         "section_width": "page-width",
-        "background_color": "#f8f7f4",
-        "text_color": "#17191a",
-        "line_color": "#d8d5ce",
         "heading": "Why Choose Craftaurum for Seasonal Jewelry?",
-        "heading_size": 35,
         "description": "<p>Seasonal programs require more than attractive designs. Timing, consistency, flexibility and clear coordination all matter when a collection has a fixed selling window.</p>",
+        "desktop_columns": "4",
+        "mobile_columns": "1",
+        "heading_size": 35,
         "body_size": 16,
         "item_title_size": 20,
         "item_body_size": 15,
-        "desktop_columns": "4",
-        "mobile_columns": "1",
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_item_title_size": 18,
+        "mobile_item_body_size": 14,
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "line_color": "#d8d5ce",
         "animation_style": "fade-up",
         "padding_top": 88,
         "padding_bottom": 96
@@ -561,35 +640,41 @@
       "name": "内容指南",
       "settings": {
         "section_width": "page-width",
-        "animation_style": "fade-up",
+        "eyebrow": "SEASONAL DEVELOPMENT",
+        "heading": "Seasonal Jewelry Customization Options",
+        "description": "",
+        "show_index": false,
+        "value_suffix": "",
+        "feature_heading": "Built Around Your Seasonal Launch",
+        "feature_body": "<p>Seasonal jewelry has a fixed selling window. We coordinate design development, sampling, production and delivery around the date your collection needs to be ready.</p>",
+        "feature_image": "shopify://shop_images/OEM-JEWELLERY.jpg",
+        "feature_image_ratio": "landscape",
+        "intro_alignment": "center",
+        "item_alignment": "left",
+        "feature_alignment": "left",
+        "column_gap": 64,
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "description_size": 16,
+        "item_title_size": 19,
+        "item_body_size": 15,
+        "meta_size": 12,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_description_size": 14,
+        "mobile_item_title_size": 18,
+        "mobile_item_body_size": 14,
+        "mobile_meta_size": 12,
         "background_color": "#ffffff",
         "line_color": "#d8d5ce",
         "hover_background_color": "#f8f7f4",
-        "intro_alignment": "center",
-        "eyebrow": "SEASONAL DEVELOPMENT",
-        "eyebrow_size": 12,
         "eyebrow_color": "#c7a85e",
-        "heading": "Seasonal Jewelry Customization Options",
-        "heading_size": 35,
         "heading_color": "#17191a",
-        "description": "",
-        "description_size": 16,
         "description_color": "#5f615e",
-        "show_index": false,
-        "item_alignment": "left",
-        "item_title_size": 19,
         "item_title_color": "#17191a",
-        "item_body_size": 15,
         "item_body_color": "#4f514e",
-        "meta_size": 12,
         "meta_color": "#5f615e",
-        "value_suffix": "",
-        "feature_image": "shopify://shop_images/OEM-JEWELLERY.jpg",
-        "feature_image_ratio": "landscape",
-        "feature_alignment": "left",
-        "feature_heading": "Built Around Your Seasonal Launch",
-        "feature_body": "<p>Seasonal jewelry has a fixed selling window. We coordinate design development, sampling, production and delivery around the date your collection needs to be ready.</p>",
-        "column_gap": 64,
+        "animation_style": "fade-up",
         "padding_top": 96,
         "padding_bottom": 96
       }
@@ -599,15 +684,18 @@
       "name": "分栏联系表单",
       "settings": {
         "section_width": "page-width",
+        "eyebrow": "START A SEASONAL PROJECT",
+        "heading": "Start Your Festival Jewelry Project",
+        "description": "<p>Share the holiday, product category, material direction, target quantity and launch date with our team.</p>",
+        "phone_required": false,
         "background_color": "#f8f7f4",
         "text_color": "#17191a",
-        "eyebrow": "START A SEASONAL PROJECT",
         "eyebrow_size": 12,
-        "heading": "Start Your Festival Jewelry Project",
         "heading_size": 35,
-        "description": "<p>Share the holiday, product category, material direction, target quantity and launch date with our team.</p>",
         "body_size": 16,
-        "phone_required": false,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
         "animation_style": "fade-up",
         "padding_top": 104,
         "padding_bottom": 104
