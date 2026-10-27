@@ -159,7 +159,10 @@
         "heading_size": 35,
         "body_size": 16,
         "disclaimer_size": 13,
-        "animation_style": "fade-in"
+        "animation_style": "fade-in",
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_disclaimer_size": 12
       }
     },
     "image_text_feature_NWRYeQ": {
@@ -183,7 +186,10 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "image_text_feature_YzURpA": {
@@ -207,7 +213,10 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "image_collection_grid_home_2": {
@@ -251,7 +260,10 @@
         "heading_size": 35,
         "body_size": 16,
         "card_title_size": 18,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_card_title_size": 18
       }
     },
     "image_collection_grid_home_3": {
@@ -304,7 +316,10 @@
         "heading_size": 35,
         "body_size": 16,
         "card_title_size": 18,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_card_title_size": 18
       }
     }
   },
