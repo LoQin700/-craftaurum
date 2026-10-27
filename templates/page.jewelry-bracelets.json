@@ -187,32 +187,32 @@
         "item_QJarUi": {
           "type": "item",
           "settings": {
-            "title": "Material & Plating",
-            "description": "<p>Review suitable metals, plating colors and surface finishes based on the intended look and use.</p>",
+            "title": "High-Quality Materials",
+            "description": "<p>Material selection is essential to bracelets designed for a specific collection. We review metal grades, stone or decorative components, plating finishes and relevant supplier information against your brief before confirming suitable materials for sampling.</p>",
             "image": "shopify://shop_images/plating-jewelry.jpg"
           }
         },
         "item_9zbQMA": {
           "type": "item",
           "settings": {
-            "title": "Bracelet Construction",
-            "description": "<p>Consider chain links, beads, bangles, clasps and connection points during product development.</p>",
+            "title": "Exquisite Craftsmanship",
+            "description": "<p>Careful assembly, proportion, setting and surface finishing all contribute to the character of custom bracelets. We review workmanship against the approved sample and agreed specifications rather than claiming an unverified number of years of artisan experience.</p>",
             "image": "shopify://shop_images/jewelry-manufacturer.jpg"
           }
         },
         "item_EFeVgi": {
           "type": "item",
           "settings": {
-            "title": "Fit & Wearability",
-            "description": "<p>Refine proportions, sizing and movement so the bracelet feels balanced and practical to wear.</p>",
+            "title": "Stylish Design",
+            "description": "<p>Develop bracelets that balance current design preferences with enduring proportions and practical wearability. Share your market, reference styles and brand aesthetic to refine details that fit your collection.</p>",
             "image": "shopify://shop_images/checking.jpg"
           }
         },
         "item_XTCWJt": {
           "type": "item",
           "settings": {
-            "title": "Production Review",
-            "description": "<p>Use samples and agreed specifications to check construction, finish and key details before repeat production.</p>",
+            "title": "Safety & Export Requirements",
+            "description": "<p>Requirements such as California Proposition 65 and EU REACH depend on material composition and the destination market. Tell us where your bracelets will be sold so relevant declarations or testing needs can be reviewed; compliance is confirmed only with applicable documentation.</p>",
             "image": "shopify://shop_images/polishing.jpg"
           }
         }
@@ -226,8 +226,8 @@
       "name": "交互图文",
       "settings": {
         "section_width": "page-width",
-        "heading": "Focused Capabilities for Custom Bracelet Development",
-        "description": "<p>Bracelet development depends on material choice, construction, fit and finishing. These are the product-specific areas we focus on during development.</p>",
+        "heading": "Why Choose Custom Bracelets?",
+        "description": "<p>Quality-focused materials, detailed craftsmanship, considered design and destination-specific safety requirements are important when developing bracelets for a brand.</p>",
         "visual_height_mode": "match_text",
         "visual_height": 520,
         "background_color": "#ffffff",
