@@ -575,3 +575,8 @@
 - 对修改前后逐项比对，原有 Setting ID、Schema type、select 选项、range min/max/step、默认值与 `visible_if` 条件不变；为交互图文、图片卡片的条件生效列数增加简短提示。
 - 提交后重新拉取仓库 17 个 Schema 检查：**17/17 通过 JSON 解析、后台动画尾部顺序以及有设备参数的分组顺序检查**。原有模板 JSON 未修改。
 - **尚未独立完成** Shopify CLI Theme Check、Shopify GitHub 同步核验、Theme Editor 实际显示/保存与 PC/Tablet/Mobile 浏览器验收。
+
+## 2026-10-27 · 全局按钮 Hover 配色说明精简
+- 用户要求删除 Theme Settings → Buttons 里「不设置则继承 Horizon 智能 Hover 配色」这句多余的 `info`。
+- 已在 `config/settings_schema.json` 的一级/二级按钮 Hover 背景、文字、边框这 6 项设置中删除对应 `info` 字段，保留所有 Setting ID、默认颜色和 Hover 实际逻辑。
+- 已读回 GitHub 文件，核实六项均无对应说明且 JSON 解析通过。Shopify Theme Editor 实际显示待同步确认。
