@@ -290,8 +290,8 @@
           "settings": {
             "icon": "ruler",
             "icon_color": "#c7a85e",
-            "title": "Design Development",
-            "description": "<p>Clarify references, proportions and design intent before sampling begins.</p>"
+            "title": "Design Support",
+            "description": "<p>Discuss style references, proportions and details with the team to refine the product concept before sampling.</p>"
           }
         },
         "iwt_material": {
@@ -299,26 +299,26 @@
           "settings": {
             "icon": "star",
             "icon_color": "#c7a85e",
-            "title": "Material Options",
-            "description": "<p>Review suitable metals, stones and finishing directions for the collection.</p>"
+            "title": "Jewelry Expertise",
+            "description": "<p>Review materials, settings, construction and finishes relevant to the intended category and market positioning.</p>"
           }
         },
         "iwt_sample": {
           "type": "item",
           "settings": {
-            "icon": "clipboard",
+            "icon": "chat_bubble",
             "icon_color": "#c7a85e",
-            "title": "Sample Support",
-            "description": "<p>Use samples to review construction, proportion and finish before production.</p>"
+            "title": "Clear Communication",
+            "description": "<p>Share revisions and approvals at defined development stages so the project team can stay aligned.</p>"
           }
         },
         "iwt_quality": {
           "type": "item",
           "settings": {
-            "icon": "check_box",
+            "icon": "truck",
             "icon_color": "#c7a85e",
-            "title": "Quality Review",
-            "description": "<p>Check visual and construction details against agreed production specifications.</p>"
+            "title": "Delivery Coordination",
+            "description": "<p>Confirm quantities, production readiness, packaging and shipping requirements to plan delivery after sample approval.</p>"
           }
         }
       },
@@ -332,7 +332,7 @@
       "settings": {
         "section_width": "page-width",
         "eyebrow": "MANUFACTURING SUPPORT",
-        "heading": "Support for Your Custom Ring Project",
+        "heading": "Support for Your Jewelry Collection",
         "description": "<p>Plan the important decisions before requesting a sample or production quotation.</p>",
         "icon_position": "top",
         "icon_size": 32,
