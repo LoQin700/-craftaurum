@@ -187,6 +187,15 @@
     .ca-feature__subtitle { font-size: var(--ca-feature-subtitle-size-mobile); }
     .ca-feature__body { font-size: var(--ca-feature-body-size-mobile); }
   }
+
+  /* Image-only hover: no layout shifts or added scripts. */
+  .ca-feature__image { transition: transform .48s cubic-bezier(.2,.7,.2,1); transform: scale(1); }
+  @media (hover: hover) and (pointer: fine) {
+    .ca-feature__media:hover .ca-feature__image { transform: scale(1.045); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ca-feature__image { transition: none; }
+  }
 {% endstylesheet %}
 
 {% schema %}
