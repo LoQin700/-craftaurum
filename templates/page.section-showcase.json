@@ -1,6 +1,6 @@
 /*
- * Craftaurum custom section visual QA showroom. All sections are independent Theme Editor instances.
- * Uses existing media bindings from live templates; do not edit the source page instances.
+ * Craftaurum self-built section QA showroom. Each type has its own editable instance.
+ * Existing Shopify media paths are intentionally retained from source templates.
  */
 {
   "sections": {
@@ -1039,6 +1039,21 @@
         "padding_top": 104,
         "padding_bottom": 104
       }
+    },
+    "text_heading": {
+      "type": "text-heading",
+      "name": "17 · 标题说明",
+      "settings": {
+        "section_width": "page-width",
+        "heading": "17 | Editorial Heading & Introduction",
+        "heading_size": 35,
+        "description": "<p>Use this compact heading section to introduce a new jewelry manufacturing topic, product range or inquiry area.</p>",
+        "body_size": 16,
+        "animation_style": "fade-up",
+        "anchor_id": "section-heading-demo",
+        "padding_top": 48,
+        "padding_bottom": 24
+      }
     }
   },
   "order": [
@@ -1058,6 +1073,7 @@
     "why_choose",
     "content_guide",
     "festival_intro",
+    "text_heading",
     "editorial_contact"
   ]
 }
