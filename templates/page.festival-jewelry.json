@@ -1,4 +1,4 @@
-/* Craftaurum template. Image fields use Shopify image_picker; no external reference image URL inputs. */
+/* Mobile typography standardized across existing page instances: 12 / 25 / 14 / 18. */
 {
   "sections": {
     "main": {
