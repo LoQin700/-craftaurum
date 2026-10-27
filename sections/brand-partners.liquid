@@ -11,8 +11,11 @@
     --ca-logo-gap: 10px;
     --ca-logo-mobile-columns: {{ section.settings.mobile_columns | default: 1 }};
     --ca-logo-heading-size: {{ section.settings.heading_size | default: 35 }}px;
+    --ca-logo-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 35 }}px;
     --ca-logo-body-size: {{ section.settings.body_size | default: 16 }}px;
+    --ca-logo-body-size-mobile: {{ section.settings.mobile_body_size | default: 16 }}px;
     --ca-logo-disclaimer-size: {{ section.settings.disclaimer_size | default: 13 }}px;
+    --ca-logo-disclaimer-size-mobile: {{ section.settings.mobile_disclaimer_size | default: 13 }}px;
   "
 >
   <div class="ca-logos__inner" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-in' }}">
@@ -156,6 +159,12 @@
     }
     .ca-logos__mobile-grid .ca-logos__tile { min-width: 0; }
   }
+
+  @media screen and (max-width: 749px) {
+    .ca-logos__heading { font-size: var(--ca-logo-heading-size-mobile); }
+    .ca-logos__description { font-size: var(--ca-logo-body-size-mobile); }
+    .ca-logos__disclaimer { font-size: var(--ca-logo-disclaimer-size-mobile); }
+  }
 {% endstylesheet %}
 {% schema %}
 {
@@ -190,21 +199,18 @@
       "label": "标题",
       "default": "Trusted by Jewelry Partners Worldwide"
     },
-    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
     {
       "type": "richtext",
       "id": "description",
       "label": "介绍文字",
       "default": "<p>At Craftaurum, we work with jewelry brands and industry partners to bring thoughtful designs and reliable craftsmanship to life. We value long-term collaboration, consistent quality, and solutions tailored to each partner.</p>"
     },
-    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
     {
       "type": "text",
       "id": "disclaimer",
       "label": "底部说明",
       "default": "Selected partnerships are shown. Additional collaborations remain confidential under NDA."
     },
-    {"type":"range","id":"disclaimer_size","label":"底部说明字号","min":10,"max":18,"step":1,"unit":"px","default":13},
     {
       "type": "checkbox",
       "id": "autoplay",
@@ -246,6 +252,14 @@
       ],
       "default": "carousel"
     },
+    {"type":"header","content":"电脑端字号"},
+    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"range","id":"disclaimer_size","label":"底部说明字号","min":10,"max":18,"step":1,"unit":"px","default":13},
+    {"type":"header","content":"移动端字号"},
+    {"type":"range","id":"mobile_heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
+    {"type":"range","id":"mobile_body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
+    {"type":"range","id":"mobile_disclaimer_size","label":"底部说明字号","min":10,"max":18,"step":1,"unit":"px","default":13},
     {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-in"},
     {
       "type": "range",
