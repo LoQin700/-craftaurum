@@ -1,26 +1,16 @@
 {%- doc -%}
   Shared card for the Craftaurum image collection section.
-  Uses the collection's native image and title as fallback, preserving block controls.
+  Uses only the card's manually configured image, title, and optional link.
   Params: block, attributes (boolean).
 {%- enddoc -%}
 {% liquid
-  assign selected_collection = block.settings.collection
   assign card_title = block.settings.title
-  if card_title == blank and selected_collection != blank
-    assign card_title = selected_collection.title
-  endif
   assign card_image = block.settings.image
-  if card_image == blank and selected_collection != blank
-    assign card_image = selected_collection.image
-  endif
   assign card_link = block.settings.link
-  if card_link == blank and selected_collection != blank
-    assign card_link = selected_collection.url
-  endif
 %}
 <div class="ca-collection__item"{% if attributes %} {{ block.shopify_attributes }}{% endif %}>
   {% if card_link != blank %}
-    <a class="ca-collection__card" href="{{ card_link }}" aria-label="{{ card_title | default: selected_collection.title | escape }}">
+    <a class="ca-collection__card" href="{{ card_link }}" aria-label="{{ card_title | default: 'Jewelry category' | escape }}">
   {% else %}
     <div class="ca-collection__card">
   {% endif %}
