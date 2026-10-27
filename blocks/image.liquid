@@ -110,6 +110,19 @@
     object-fit: cover;
     aspect-ratio: var(--ratio);
   }
+
+  /* Native Horizon Image blocks used in editorial page sections. */
+  .section-wrapper .image-block { overflow: hidden; }
+  .section-wrapper .image-block__image {
+    transition: transform .48s cubic-bezier(.2,.7,.2,1);
+    transform: scale(1);
+  }
+  @media (hover:hover) and (pointer:fine) {
+    .section-wrapper .image-block:hover .image-block__image { transform: scale(1.045); }
+  }
+  @media (prefers-reduced-motion:reduce) {
+    .section-wrapper .image-block__image { transition: none; }
+  }
 {% endstylesheet %}
 
 {% schema %}
