@@ -83,7 +83,10 @@
         "eyebrow_size": 12,
         "heading_size": 58,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     },
     "tarnish_intro": {
@@ -193,7 +196,10 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "gold_vermeil_tarnish": {
@@ -222,7 +228,10 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "lost_wax_casting": {
@@ -251,7 +260,10 @@
         "heading_size": 35,
         "subtitle_size": 12,
         "body_size": 16,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14
       }
     },
     "showcase_intro": {
@@ -440,7 +452,11 @@
         "body_size": 16,
         "item_title_size": 20,
         "item_body_size": 15,
-        "animation_style": "fade-up"
+        "animation_style": "fade-up",
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_item_title_size": 18,
+        "mobile_item_body_size": 14
       }
     },
     "custom_options": {
@@ -528,7 +544,12 @@
         "animation_style": "fade-up",
         "image_width": 100,
         "card_text_alignment": "left",
-        "row_gap": 36
+        "row_gap": 36,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_card_title_size": 18,
+        "mobile_card_body_size": 14
       }
     },
     "contact": {
@@ -547,7 +568,10 @@
         "phone_required": false,
         "animation_style": "fade-up",
         "padding_top": 96,
-        "padding_bottom": 96
+        "padding_bottom": 96,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14
       }
     }
   },
