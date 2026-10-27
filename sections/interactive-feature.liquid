@@ -228,6 +228,15 @@
     .ca-capability-interactive__title { font-size: var(--ca-cap-item-title-size-mobile); }
     .ca-capability-interactive__text { font-size: var(--ca-cap-item-body-size-mobile); }
   }
+
+  /* Subtle image hover without moving the image container. */
+  .ca-capability-interactive__image { transition: transform .48s cubic-bezier(.2,.7,.2,1); transform: scale(1); }
+  @media (hover: hover) and (pointer: fine) {
+    .ca-capability-interactive__visual:hover .ca-capability-interactive__panel.is-active .ca-capability-interactive__image { transform: scale(1.045); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ca-capability-interactive__image { transition: none; }
+  }
 {% endstylesheet %}
 
 {% schema %}
