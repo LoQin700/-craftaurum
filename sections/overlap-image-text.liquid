@@ -93,7 +93,7 @@
       {% endfor %}
     </div>
     {% if section.settings.mobile_layout == 'slider' and section.blocks.size > 1 %}
-      {% render 'craftaurum-scroll-controls', track_selector: '.ca-overlap__visual', tablet: true, mobile: true %}
+      {% render 'craftaurum-scroll-controls', track_selector: '.ca-overlap__visual', tablet: true, mobile: true , media_selector: '.ca-overlap__visual' %}
     {% endif %}
     </div> <!-- /ca-carousel-stage -->
 
