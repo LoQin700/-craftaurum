@@ -75,9 +75,9 @@
         "image_position": "right",
         "image_ratio": "landscape",
         "quote_label": "Customize Your Brand",
-        "quote_url": "",
+        "quote_url": "shopify://pages/customization",
         "catalog_label": "Get B2B Quote",
-        "catalog_url": "",
+        "catalog_url": "shopify://pages/contact",
         "padding_top": 40,
         "padding_bottom": 40,
         "eyebrow_size": 12,
@@ -97,7 +97,7 @@
           "settings": {
             "title": "Custom Fashion Jewelry",
             "image": "shopify://shop_images/custom-fashion-jewelry.jpg",
-            "link": ""
+            "link": "shopify://pages/fashion-jewelry"
           }
         },
         "cat_rings": {
@@ -105,7 +105,7 @@
           "settings": {
             "title": "Custom Rings",
             "image": "shopify://shop_images/rings.jpg",
-            "link": ""
+            "link": "shopify://pages/custom-rings"
           }
         },
         "cat_earrings": {
@@ -113,7 +113,7 @@
           "settings": {
             "title": "Custom Earrings",
             "image": "shopify://shop_images/gold-earrings.jpg",
-            "link": ""
+            "link": "shopify://pages/custom-earrings"
           }
         },
         "cat_necklace": {
@@ -121,7 +121,7 @@
           "settings": {
             "title": "Custom Necklace",
             "image": "shopify://shop_images/nameplate-necklace.jpg",
-            "link": ""
+            "link": "shopify://pages/custom-necklaces"
           }
         },
         "cat_bracelets": {
@@ -129,7 +129,7 @@
           "settings": {
             "title": "Custom Bracelets",
             "image": "shopify://shop_images/chain-bracelets.jpg",
-            "link": ""
+            "link": "shopify://pages/custom-bracelets"
           }
         },
         "cat_artisanal": {
@@ -137,7 +137,7 @@
           "settings": {
             "title": "Artisanal Jewelry",
             "image": "shopify://shop_images/French-jewelry-700x441.jpg",
-            "link": ""
+            "link": "shopify://pages/artisanal-jewelry"
           }
         }
       },
@@ -187,7 +187,7 @@
         "image_position": "left",
         "image_ratio": "landscape",
         "quote_label": "Start Your OEM Project",
-        "quote_url": "",
+        "quote_url": "shopify://pages/contact",
         "catalog_label": "",
         "catalog_url": "",
         "padding_top": 48,
@@ -296,7 +296,7 @@
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "Get A Quick Quote",
-        "cta_url": "",
+        "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-unstyled",
         "padding_top": 56,
         "padding_bottom": 56,
@@ -456,7 +456,7 @@
         "image_position": "right",
         "image_ratio": "landscape",
         "cta_label": "Start Your Inquiry",
-        "cta_url": "",
+        "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-secondary",
         "padding_top": 56,
         "padding_bottom": 56,
