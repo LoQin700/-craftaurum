@@ -367,7 +367,7 @@
         "heading": "Craftaurum Jewelry Design & Craft Techniques",
         "description": "<p>Explore key design and manufacturing considerations, from early models and stone setting to metalworking and finishing. Each project is reviewed against its own requirements.</p>",
         "image_ratio": "landscape",
-        "overlay_opacity": 48,
+        "overlay_opacity": 50,
         "gap": 16,
         "content_padding": 20,
         "desktop_columns": 4,
@@ -461,7 +461,7 @@
         "background_color": "#FFFFFF",
         "text_color": "#17191a",
         "animation_style": "fade-up",
-        "padding_top": 46,
+        "padding_top": 48,
         "padding_bottom": 24
       },
       "blocks": {
@@ -514,8 +514,8 @@
         "text_color": "#17191A",
         "accent_color": "#C7A85E",
         "animation_style": "fade-up",
-        "padding_top": 70,
-        "padding_bottom": 66
+        "padding_top": 72,
+        "padding_bottom": 68
       }
     },
     "home_options": {
@@ -534,7 +534,7 @@
         "intro_style": "style_1",
         "card_text_alignment": "left",
         "gap": 20,
-        "row_gap": 34,
+        "row_gap": 36,
         "desktop_columns": "3",
         "desktop_layout": "grid",
         "mobile_columns": "1",
