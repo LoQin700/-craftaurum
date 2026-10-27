@@ -1,4 +1,24 @@
 {% liquid
+  assign carousel_desktop = false
+  if section.settings.desktop_layout == 'carousel'
+    assign carousel_desktop = true
+  endif
+  assign carousel_mobile = false
+  if section.settings.mobile_layout == 'carousel'
+    assign carousel_mobile = true
+  endif
+  assign has_scroll_controls = false
+  if section.blocks.size > 1
+    if carousel_desktop or carousel_mobile
+      assign has_scroll_controls = true
+    endif
+  endif
+%}
+{% if has_scroll_controls %}
+  {{ 'craftaurum-scroll-controls.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'craftaurum-scroll-controls.js' | asset_url }}" defer></script>
+{% endif %}
+{% liquid
   assign content_width = section.settings.section_width
   assign desktop_columns = section.settings.desktop_columns
   assign mobile_columns = section.settings.mobile_columns
@@ -122,6 +142,9 @@
           </article>
         {% endfor %}
       </div>
+      {% if has_scroll_controls %}
+        {% render 'craftaurum-scroll-controls', track_selector: '.ca-content-cards__grid', desktop: carousel_desktop, mobile: carousel_mobile %}
+      {% endif %}
     </div>
   </div>
 </section>
