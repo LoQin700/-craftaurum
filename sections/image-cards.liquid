@@ -323,6 +323,7 @@
 {
   "name": "图片卡片",
   "settings": [
+    {"type":"header","content":"基础设置"},
     {
       "type": "select",
       "id": "section_width",
@@ -339,24 +340,7 @@
       ],
       "default": "page-width"
     },
-    {
-      "type": "color",
-      "id": "background_color",
-      "label": "背景颜色",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "文字颜色",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "color",
-      "id": "accent_color",
-      "label": "卡片键盘焦点描边颜色",
-      "default": "#C7A85E"
-    },
+    {"type":"header","content":"内容设置"},
     {
       "type": "text",
       "id": "heading",
@@ -369,6 +353,7 @@
       "label": "正文",
       "default": "<p>Explore the development capabilities behind a custom jewelry collection.</p>"
     },
+    {"type":"header","content":"图片设置"},
     {
       "type": "select",
       "id": "image_ratio",
@@ -395,16 +380,6 @@
     },
     {
       "type": "range",
-      "id": "gap",
-      "label": "卡片间距",
-      "min": 0,
-      "max": 48,
-      "step": 4,
-      "unit": "px",
-      "default": 20
-    },
-    {
-      "type": "range",
       "id": "overlay_opacity",
       "label": "蒙层透明度",
       "min": 0,
@@ -412,6 +387,36 @@
       "step": 5,
       "unit": "%",
       "default": 40
+    },
+    {"type":"header","content":"颜色设置"},
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "背景颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "文字颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "卡片键盘焦点描边颜色",
+      "default": "#C7A85E"
+    },
+    {"type":"header","content":"布局与交互"},
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "卡片间距",
+      "min": 0,
+      "max": 48,
+      "step": 4,
+      "unit": "px",
+      "default": 20
     },
     {
       "type": "range",
@@ -492,6 +497,7 @@
     {"type":"range","id":"mobile_body_size","label":"说明字号","min":12,"max":24,"step":1,"unit":"px","default":16},
     {"type":"range","id":"mobile_card_title_size","label":"卡片标题字号","min":14,"max":36,"step":1,"unit":"px","default":22},
     {"type":"range","id":"mobile_card_body_size","label":"卡片正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
+    {"type":"header","content":"其它设置"},
     {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
     {
       "type": "range",
