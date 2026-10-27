@@ -336,7 +336,7 @@
             "image_1": "shopify://shop_images/November-birthstone-rings-1.jpg",
             "image_2": "shopify://shop_images/S1158-R.jpg",
             "image_3": "shopify://shop_images/plated-pearl-rings.jpg",
-            "image_position": "inherit",
+            "image_position": "right",
             "heading": "Sterling Silver Rings",
             "body": "<p>Custom silver rings can be developed around gemstone setting, plated finishes and clean metal-led designs, including stone rings, diamond-set styles and gold plated silver directions.</p>"
           }
@@ -347,7 +347,7 @@
             "image_1": "shopify://shop_images/Christmas-earrings-set.jpg",
             "image_2": "shopify://shop_images/YE25928.jpg",
             "image_3": "shopify://shop_images/YE26053.jpg",
-            "image_position": "inherit",
+            "image_position": "right",
             "heading": "Sterling Silver Earrings",
             "body": "<p>Develop silver earrings across seasonal, plated, gemstone and pearl-led directions for both everyday and statement collections.</p>"
           }
@@ -358,7 +358,7 @@
             "image_1": "shopify://shop_images/S1028-N.jpg",
             "image_2": "shopify://shop_images/nameplate-necklace.jpg",
             "image_3": "shopify://shop_images/pearl-necklace.jpg",
-            "image_position": "inherit",
+            "image_position": "right",
             "heading": "Sterling Silver Necklace & Pendants",
             "body": "<p>From delicate chains to personalized and pearl-led pendants, sterling silver offers a flexible base for custom necklace collections.</p>"
           }
@@ -369,7 +369,7 @@
             "image_1": "shopify://shop_images/chain-bracelets.jpg",
             "image_2": "shopify://shop_images/pearl-bracelets.jpg",
             "image_3": "shopify://shop_images/YB7671.jpg",
-            "image_position": "inherit",
+            "image_position": "right",
             "heading": "Sterling Silver Bracelets",
             "body": "<p>Build bracelet collections with link chains, pearl details, stones and plated finishes to suit different design directions and price points.</p>"
           }
@@ -384,10 +384,8 @@
       "name": "三联图文",
       "settings": {
         "section_width": "page-width",
-        "image_position": "right",
         "image_ratio": "square",
         "copy_width": 48,
-        "text_padding": 32,
         "image_padding": 18,
         "image_gap": 14,
         "panel_gap": 0,
