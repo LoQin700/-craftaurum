@@ -90,7 +90,7 @@
         "halloween",
         "thanksgiving"
       ],
-      "name": "Festival Intro",
+      "name": "专题导航介绍",
       "settings": {
         "section_width": "page-width",
         "background_color": "#ffffff",
@@ -454,7 +454,7 @@
         "quality",
         "collaboration"
       ],
-      "name": "Why Choose Craftaurum",
+      "name": "优势展示",
       "settings": {
         "section_width": "page-width",
         "background_color": "#f8f7f4",
@@ -552,7 +552,6 @@
         "background_color": "#ffffff",
         "line_color": "#d8d5ce",
         "hover_background_color": "#f8f7f4",
-        "item_padding_inline": 12,
         "intro_alignment": "center",
         "eyebrow": "SEASONAL DEVELOPMENT",
         "eyebrow_size": 12,
@@ -564,13 +563,11 @@
         "description_size": 16,
         "description_color": "#5f615e",
         "show_index": true,
-        "item_alignment": "left",
+        "item_alignment": "center",
         "item_title_size": 19,
         "item_title_color": "#17191a",
         "item_body_size": 15,
         "item_body_color": "#4f514e",
-        "value_size": 12,
-        "value_color": "#c7a85e",
         "meta_size": 12,
         "meta_color": "#5f615e",
         "item_image_shape": "square",
@@ -580,11 +577,7 @@
         "feature_image_ratio": "landscape",
         "feature_alignment": "left",
         "feature_heading": "Built Around Your Seasonal Launch",
-        "feature_title_size": 22,
-        "feature_title_color": "#17191a",
         "feature_body": "<p>Seasonal jewelry has a fixed selling window. We coordinate design development, sampling, production and delivery around the date your collection needs to be ready.</p>",
-        "feature_body_size": 15,
-        "feature_body_color": "#4f514e",
         "column_gap": 64,
         "padding_top": 96,
         "padding_bottom": 96
