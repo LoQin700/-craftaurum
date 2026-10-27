@@ -525,6 +525,12 @@
     "brand_partners_CXdty6": {
       "type": "brand-partners",
       "blocks": {
+        "partner_MHAhqM": {
+          "type": "partner",
+          "settings": {
+            "image": "shopify://shop_images/sedex.png"
+          }
+        },
         "partner_yzDdyW": {
           "type": "partner",
           "settings": {
@@ -569,6 +575,7 @@
         }
       },
       "block_order": [
+        "partner_MHAhqM",
         "partner_yzDdyW",
         "partner_cVNDi6",
         "partner_DiDQzT",
