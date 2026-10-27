@@ -676,3 +676,31 @@
 - 已将两个已有引用该 Section 的页面 `templates/page.section-showcase.json`（`overlap_image_text`）与 `templates/page.pearl-jewelry.json`（`pearl_business`）中旧 `desktop_layout: overlap` 转为 `enable_overlap: true`。分别保留两张图片原本 −4°/4° 旋转角及层级设置，不改变图片绑定、文案和 Mobile slider 默认选项。
 - 静态检查已核实：Schema JSON 可解析；原 Select 已移除、新 Checkbox 默认开启、交叉程度可见性绑定正确、Block Rotation/Layer 控制仍存在；扫描已知模板后没有残留旧 `desktop_layout` 的叠层实例。
 - **仍未做** Shopify Theme Check、Theme Editor 实际保存、在真实前台 PC/Tablet/Mobile 的交叉比例与滑动触控验收；不得将静态检查说成视觉已测。后续重点验收 1/2/3 张图片、0%/28%/55% 重叠量、−12°/+12° 旋转，屏宽 375/749/750/989/990px，背景及图片优先级。
+
+## 2026-10-27 · 自建轮播统一箭头 + 叠层图文 PC/手机视觉比例（最新）
+- 用户反馈「图片画廊」手机选择轮播没有左右箭头，并要求「叠层图文」删除固定视觉区高度，改为电脑端和移动端独立固定比例。
+- 为避免每个 Section 重复 JS/CSS，新增三份可重用组件文件：
+  - `assets/craftaurum-scroll-controls.js`：注册 `ca-scroll-controls` Web Component；控制相邻的 scroll-snap 容器，上下一个按钮按卡片实际间距滚动，随滚动和 ResizeObserver 更新边界禁用状态；无滚动空间时隐藏控件。
+  - `assets/craftaurum-scroll-controls.css`：简洁细描边圆形箭头样式、键盘聚焦提示，按对应设备启用 `--desktop`（≥750px）、`--mobile`（≤749px）、`--tablet`（750–989px）。
+  - `snippets/craftaurum-scroll-controls.liquid`：共用无文本图标箭头、英文 aria-label，渲染在对应 scroll-snap 轨道后面，不覆盖商品/图片点击。
+- 已直接接入 6 个自建 Section：
+  1. `image-gallery`：手机轮播和电脑轮播
+  2. `image-collection-grid`：手机轮播和电脑轮播
+  3. `content-cards`：手机轮播和电脑轮播
+  4. `image-cards`：手机轮播
+  5. `process-cards`：手机轮播
+  6. `overlap-image-text`：手机/平板“横向滑动”模式（≤989px）
+  - 仅 Section 具备 2 个以上 Block 且至少一种设备启用了轮播时才加载 CSS/JS；各设备网格模式不显示箭头。原有手势滑动、scroll snap 和图片内容不变。
+  - `brand-partners`（图片轮播）原本使用 Horizon 原生 slideshow（已有 arrows），保持原逻辑，未叠加第二套控件。
+- `sections/overlap-image-text.liquid`：
+  - 完全移除 `visual_height`（旧 320–760px）及对应像素固定最小高度 CSS。
+  - 在「图片设置」新增 `desktop_visual_ratio`（「电脑端视觉区比例」，默认 **4:3**）；在「移动端布局」新增 `mobile_visual_ratio`（「移动端视觉区比例」，默认 **1:1**），两端选项均为 16:9 / 4:3 / 1:1 / 4:5。
+  - PC 的 `.ca-overlap__visual` 使用 `aspect-ratio:var(--ca-overlap-desktop-ratio)`；≤989px 使用 `aspect-ratio:var(--ca-overlap-mobile-ratio)`，容器宽度自适应、高度按比例计算。
+  - 手机横滑图卡、上下排列的图卡尺寸现在受固定视觉区约束，避免竖排和滑动模式里按图片自然尺寸撑高容器；交叉布局保留每图旋转、宽度、层级与负边距开关控制。桌面与手机不同的图片卡内容会按区域裁切到合适边界。
+  - 已迁移 `templates/page.section-showcase.json` 的 `overlap_image_text` 及 `templates/page.pearl-jewelry.json` 的 `pearl_business`：删除旧 `visual_height:560`，显式设置桌面 `landscape`（4:3）、手机 `square`（1:1）；原图片绑定、-4°/+4°旋转、内容和按钮不变。
+- 校验：
+  - 6 个自建轮播 Section 的 Schema JSON 可解析，均引用共享 JS/CSS 与箭头 Snippet；
+  - 共享 JavaScript 已经 V8 语法编译检查，无语法错误；
+  - 两个叠层图文模板已读回，旧高度字段全部清除，两个图片 Block 原角度完整；
+  - 叠层图文的双端 `aspect-ratio` 变量、三种手机布局规则及保留的旋转控制都已静态检查。
+- **待实测事项**：Shopify 主题同步 / Theme Editor 真正保存、Theme Check CLI、手机 375/390px 与平板 768px 的横滑箭头触控、PC 轮播按钮和左右边界、三图叠层在不同长宽比/较大旋转角下的裁切与高度；静态检查不代替真实浏览器视觉测试。
