@@ -235,7 +235,7 @@
           "type": "card",
           "settings": {
             "title": "Custom Earrings",
-            "link": "shopify://pages/custom-rings",
+            "link": "shopify://pages/custom-earrings",
             "image": "shopify://shop_images/gold-earrings.jpg"
           }
         }
