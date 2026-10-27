@@ -61,127 +61,36 @@
       }
     },
     "custom_hero": {
-      "type": "slideshow",
-      "blocks": {
-        "slide_1": {
-          "type": "_slide",
-          "settings": {
-            "media_type_1": "image",
-            "image_1": "shopify://shop_images/custom-design-jewelry.jpg",
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 14,
-            "background_color": "#17191a",
-            "toggle_overlay": true,
-            "overlay_color": "#00000070",
-            "overlay_style": "gradient",
-            "gradient_direction": "to top",
-            "padding-block-start": 48,
-            "padding-block-end": 48,
-            "padding-inline-start": 48,
-            "padding-inline-end": 48
-          },
-          "blocks": {
-            "heading": {
-              "type": "text",
-              "settings": {
-                "text": "<h1>Customization with an atelier mindset.</h1>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h1",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "text_color": "#ffffff",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text": {
-              "type": "text",
-              "settings": {
-                "text": "<p>Develop custom jewelry from design direction and 3D development through sampling, finishing and production.</p>",
-                "width": "100%",
-                "max_width": "narrow",
-                "alignment": "left",
-                "type_preset": "h5",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "text_color": "#f8f7f4",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 20,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "button": {
-              "type": "button",
-              "settings": {
-                "label": "Start a project",
-                "link": "shopify://pages/contact",
-                "open_in_new_tab": false,
-                "style_class": "button-custom",
-                "custom_button_background": "#c7a85e",
-                "custom_button_text": "#17191a",
-                "custom_button_border": "#c7a85e",
-                "link_text_color": "",
-                "width": "fit-content",
-                "custom_width": 100,
-                "width_mobile": "fit-content",
-                "custom_width_mobile": 100
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "heading",
-            "text",
-            "button"
-          ]
-        }
-      },
-      "block_order": [
-        "slide_1"
-      ],
+      "type": "image-text-feature",
+      "name": "图文介绍",
       "settings": {
-        "display_mode": "full_frame",
-        "section_width": "full-width",
-        "full_frame_on_mobile": false,
-        "slideshow_gap": 12,
-        "corner_radius": 0,
-        "slide_height": "large",
-        "content_position": "on-media",
-        "background_color": "#17191a",
-        "icons_style": "none",
-        "icons_shape": "none",
-        "slideshow_controls_style": "none",
-        "autoplay": false,
-        "autoplay_speed": 4,
-        "padding-block-start": 0,
-        "padding-block-end": 0
+        "section_width": "page-width",
+        "heading_position": "content",
+        "heading_tag": "h1",
+        "subtitle": "FROM CONCEPT TO FINISHED COLLECTION",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "cta_label": "Start a project",
+        "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button",
+        "image_ratio": "landscape",
+        "heading_size": 40,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14,
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
+        "padding_top": 64,
+        "padding_bottom": 68,
+        "heading": "ODM/OEM Custom Jewelry Manufacturing",
+        "body": "<p>Bring your brand’s ideas to life with coordinated custom jewelry development. Craftaurum supports design refinement, material and stone selection, 3D visualization, sampling, finishing and production planning across sterling silver, gold and suitable plated jewelry constructions.</p><p>Whether you are developing a signature piece or a wholesale range, we work from your references, product requirements and target market to define the details that matter before manufacturing begins.</p>",
+        "image": "shopify://shop_images/custom-design-jewelry.jpg",
+        "image_position": "right",
+        "background_color": "#f8f7f4"
       }
     },
     "capabilities": {
@@ -193,7 +102,7 @@
             "image": "shopify://shop_images/plated-jewelry-2.jpg",
             "link": "",
             "title": "Plated Jewelry",
-            "description": "<p>Plating colors and surface finishes tailored to the look of your collection.</p>",
+            "description": "<p>Develop yellow, rose, white and alternative plating finishes on suitable base materials. Review color consistency and protective finishing according to the design and expected use.</p>",
             "horizontal_alignment": "left",
             "vertical_position": "bottom"
           }
@@ -204,7 +113,7 @@
             "image": "shopify://shop_images/3d-render-1.jpg",
             "link": "",
             "title": "3D Render",
-            "description": "<p>Refine proportion, structure and key details before physical sampling.</p>",
+            "description": "<p>Translate sketches into 3D views to review dimensions, proportions, settings and construction details before a physical sample is made.</p>",
             "horizontal_alignment": "left",
             "vertical_position": "bottom"
           }
@@ -215,7 +124,7 @@
             "image": "shopify://shop_images/gemstone-setting-400x400.jpg",
             "link": "",
             "title": "Stone Setting & Making",
-            "description": "<p>Develop setting directions around the structure and visual balance of the piece.</p>",
+            "description": "<p>Consider prong, bezel and other appropriate setting methods around the stone, the metal structure, comfort and the visual balance of the piece.</p>",
             "horizontal_alignment": "left",
             "vertical_position": "bottom"
           }
@@ -226,7 +135,7 @@
             "image": "shopify://shop_images/custom-sterling-silver-jewelry-3.jpg",
             "link": "",
             "title": "Custom Sterling Silver Jewelry",
-            "description": "<p>Develop silver-led collections around your own design, finish and brand direction.</p>",
+            "description": "<p>Develop sterling silver rings, earrings, necklaces and bracelets with configurable textures, stone choices, engraved details and surface finishes.</p>",
             "horizontal_alignment": "left",
             "vertical_position": "bottom"
           }
@@ -237,7 +146,7 @@
             "image": "shopify://shop_images/custom-gold-jewelry-2.jpg",
             "link": "",
             "title": "Custom Gold Jewelry",
-            "description": "<p>Build refined gold jewelry concepts around proportion, craftsmanship and finishing.</p>",
+            "description": "<p>Explore gold jewelry designs with attention to metal specifications, weight, proportions, stone settings and a finish that fits your brand.</p>",
             "horizontal_alignment": "left",
             "vertical_position": "bottom"
           }
@@ -253,8 +162,8 @@
       "name": "图片卡片",
       "settings": {
         "section_width": "page-width",
-        "heading": "Custom Jewelry Capabilities",
-        "description": "<p>Focused development capabilities for custom collections, from digital refinement to finishing and production.</p>",
+        "heading": "Custom Jewelry Capabilities From Design to Production",
+        "description": "<p>Explore the techniques and material directions behind a well-developed jewelry collection. Each capability can be planned around your references, technical needs, budget and desired appearance.</p>",
         "image_ratio": "landscape",
         "overlay_opacity": 45,
         "gap": 20,
@@ -508,12 +417,114 @@
         "padding_top": 96,
         "padding_bottom": 96
       }
+    },
+    "craft_rendering": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "heading_position": "content",
+        "heading_tag": "h2",
+        "subtitle": "DESIGN DEVELOPMENT",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "cta_label": "",
+        "cta_url": "",
+        "cta_button_style": "button",
+        "image_ratio": "landscape",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14,
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "heading": "3D Jewelry Rendering & Design Review",
+        "body": "<p>Digital visualization helps connect your initial idea to a production-ready model. Review shape, stone placement, dimensions, fastening details and overall appearance before committing to physical sampling.</p><p>Sharing feedback on a 3D preview can help align the design direction early and reduce avoidable revisions at later stages.</p>",
+        "image": "shopify://shop_images/3d-render-1.jpg",
+        "image_position": "right",
+        "background_color": "#ffffff"
+      }
+    },
+    "craft_setting": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "heading_position": "content",
+        "heading_tag": "h2",
+        "subtitle": "STONE SETTING",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "cta_label": "",
+        "cta_url": "",
+        "cta_button_style": "button",
+        "image_ratio": "landscape",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14,
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "heading": "Stone Setting & Jewelry Assembly",
+        "body": "<p>Gemstone selection and the setting method should be planned together. Prong, bezel and other appropriate settings influence the final appearance, comfort and security of the piece.</p><p>We consider stone dimensions, the surrounding metal structure and finishing requirements before sampling, then review the resulting piece for visual balance and practical construction.</p>",
+        "image": "shopify://shop_images/gemstone-setting-400x400.jpg",
+        "image_position": "left",
+        "background_color": "#f8f7f4"
+      }
+    },
+    "craft_materials": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "heading_position": "content",
+        "heading_tag": "h2",
+        "subtitle": "MATERIAL CHOICES",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "cta_label": "",
+        "cta_url": "",
+        "cta_button_style": "button",
+        "image_ratio": "landscape",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14,
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "animation_style": "fade-up",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "heading": "Custom Silver, Gold & Plated Jewelry Options",
+        "body": "<p>Different collections require different material strategies. Sterling silver provides flexibility for detailed designs; gold jewelry may suit fine-jewelry positioning; and plated constructions offer a broad choice of colors and price directions.</p><p>Consider base metal, finish, stone choice and target costs together so material decisions support both your design and production requirements.</p>",
+        "image": "shopify://shop_images/custom-sterling-silver-jewelry-3.jpg",
+        "image_position": "right",
+        "background_color": "#ffffff"
+      }
     }
   },
   "order": [
     "main",
     "custom_hero",
     "capabilities",
+    "craft_rendering",
+    "craft_setting",
+    "craft_materials",
     "craft_casting",
     "craft_polishing",
     "craft_private_label",
