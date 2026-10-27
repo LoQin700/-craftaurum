@@ -135,11 +135,10 @@
         "button_link": "shopify://pages/contact",
         "button_style": "button",
         "image_position": "left",
-        "visual_aria_label": "Gold vermeil jewelry imagery",
         "text_alignment": "left",
         "column_gap": 64,
-        "overlap_amount": 32,
-        "mobile_layout": "slider",
+        "overlap_amount": 15,
+        "mobile_layout": "overlap",
         "eyebrow_size": 12,
         "heading_size": 35,
         "body_size": 16,
@@ -370,7 +369,6 @@
         "definition": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/gold-vermeil-earrings.jpg",
             "value": "",
             "heading": "Gold Vermeil Jewelry",
             "description": "<p>Gold vermeil is a premium plated-jewelry construction that uses sterling silver as the base and a more substantial gold layer than conventional gold plating.</p>",
@@ -381,7 +379,6 @@
         "base_material": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/custom-sterling-silver-jewelry-3.jpg",
             "value": "925",
             "heading": "Base Material",
             "description": "<p>Sterling silver provides the precious-metal foundation of vermeil jewelry. It supports a premium feel, reliable manufacturing and a clear material story for the finished collection.</p>",
@@ -392,7 +389,6 @@
         "thickness": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/plating-jewelry-400x400.jpg",
             "value": "2.5 μm+",
             "heading": "Plating Thickness",
             "description": "<p>Vermeil is distinguished from ordinary gold-plated jewelry by its sterling silver base and a substantially thicker gold layer. Plating specifications can be developed around color, karat and wear expectations.</p>",
@@ -415,8 +411,6 @@
         "value_suffix": "",
         "feature_heading": "What Makes Jewelry “Vermeil”?",
         "feature_body": "<p>Vermeil is not simply a color or finish. Its identity comes from the combination of a sterling silver foundation and a substantial gold-plated surface. The exact gold karat, color and plating specification can then be tailored to the collection.</p>",
-        "item_image_shape": "square",
-        "item_image_size": 88,
         "feature_image": "shopify://shop_images/gold-vermeil-necklace.jpg",
         "feature_image_ratio": "landscape",
         "intro_alignment": "center",
@@ -445,300 +439,83 @@
         "item_body_color": "#4F514E",
         "meta_color": "#5F615E",
         "padding_top": 76,
-        "padding_bottom": 76
+        "padding_bottom": 76,
+        "show_index": false
       }
     },
     "why_choose": {
-      "type": "section",
+      "type": "icon-with-text",
+      "name": "图标文字",
+      "settings": {
+        "section_width": "page-width",
+        "eyebrow": "OUR ADVANTAGES",
+        "heading": "Why Choose Craftaurum for Custom Gold Vermeil Jewelry?",
+        "description": "<p>From design development to plating and final finishing, we support brands with a practical manufacturing process built around quality, flexibility and clear material specifications.</p>",
+        "icon_position": "top",
+        "icon_size": 32,
+        "icon_gap": 16,
+        "background_color": "#F8F7F4",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "style_preset": "left",
+        "show_divider": true,
+        "column_gap": 32,
+        "desktop_columns": "4",
+        "mobile_columns": "1",
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 16,
+        "item_title_size": 20,
+        "item_body_size": 15,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_item_title_size": 18,
+        "mobile_item_body_size": 14,
+        "animation_style": "fade-up",
+        "padding_top": 72,
+        "padding_bottom": 76
+      },
       "blocks": {
-        "why_heading": {
-          "type": "text",
+        "why_1": {
+          "type": "item",
           "settings": {
-            "text": "<h2>Why Choose Craftaurum for Custom Gold Vermeil Jewelry?</h2><p>From design development to plating and final finishing, we support brands with a practical manufacturing process built around quality, flexibility and clear material specifications.</p>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "text_color": "#17191A",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "icon": "star",
+            "title": "Custom Design",
+            "description": "<p>Develop original pieces from sketches, references or an existing brand direction.</p>"
+          }
         },
-        "why_grid": {
-          "type": "group",
+        "why_2": {
+          "type": "item",
           "settings": {
-            "content_direction": "row",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "space-between",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "gap": 16,
-            "width": "fill",
-            "width_mobile": "fill"
-          },
-          "blocks": {
-            "why_1": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8,
-                "width": "fill",
-                "width_mobile": "fill",
-                "background_media": "none",
-                "background_color": "#FFFFFF",
-                "border": "solid",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_color": "#D8D5CE",
-                "border_radius": 0,
-                "padding-block-start": 22,
-                "padding-block-end": 22,
-                "padding-inline-start": 22,
-                "padding-inline-end": 22
-              },
-              "blocks": {
-                "text": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Custom Design</h3><p>Develop original pieces from sketches, references or an existing brand direction.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "#17191A",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text"
-              ]
-            },
-            "why_2": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8,
-                "width": "fill",
-                "width_mobile": "fill",
-                "background_media": "none",
-                "background_color": "#FFFFFF",
-                "border": "solid",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_color": "#D8D5CE",
-                "border_radius": 0,
-                "padding-block-start": 22,
-                "padding-block-end": 22,
-                "padding-inline-start": 22,
-                "padding-inline-end": 22
-              },
-              "blocks": {
-                "text": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Premium Quality</h3><p>Refined manufacturing, polishing and finishing for collections positioned above standard fashion jewelry.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "#17191A",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text"
-              ]
-            },
-            "why_3": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8,
-                "width": "fill",
-                "width_mobile": "fill",
-                "background_media": "none",
-                "background_color": "#FFFFFF",
-                "border": "solid",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_color": "#D8D5CE",
-                "border_radius": 0,
-                "padding-block-start": 22,
-                "padding-block-end": 22,
-                "padding-inline-start": 22,
-                "padding-inline-end": 22
-              },
-              "blocks": {
-                "text": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Authentic Materials</h3><p>Clear sterling silver foundations and configurable gold plating specifications for a transparent material story.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "#17191A",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text"
-              ]
-            },
-            "why_4": {
-              "type": "group",
-              "settings": {
-                "content_direction": "column",
-                "horizontal_alignment_flex_direction_column": "flex-start",
-                "vertical_alignment_flex_direction_column": "flex-start",
-                "gap": 8,
-                "width": "fill",
-                "width_mobile": "fill",
-                "background_media": "none",
-                "background_color": "#FFFFFF",
-                "border": "solid",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_color": "#D8D5CE",
-                "border_radius": 0,
-                "padding-block-start": 22,
-                "padding-block-end": 22,
-                "padding-inline-start": 22,
-                "padding-inline-end": 22
-              },
-              "blocks": {
-                "text": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Flexible Production</h3><p>Sampling, lower-volume development and scalable production for both new launches and established collections.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "#17191A",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text"
-              ]
-            }
-          },
-          "block_order": [
-            "why_1",
-            "why_2",
-            "why_3",
-            "why_4"
-          ]
+            "icon": "check_box",
+            "title": "Premium Quality",
+            "description": "<p>Refined manufacturing, polishing and finishing for collections positioned above standard fashion jewelry.</p>"
+          }
+        },
+        "why_3": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "Authentic Materials",
+            "description": "<p>Clear sterling silver foundations and configurable gold plating specifications for a transparent material story.</p>"
+          }
+        },
+        "why_4": {
+          "type": "item",
+          "settings": {
+            "icon": "box",
+            "title": "Flexible Production",
+            "description": "<p>Sampling, lower-volume development and scalable production for both new launches and established collections.</p>"
+          }
         }
       },
       "block_order": [
-        "why_heading",
-        "why_grid"
-      ],
-      "name": "Why Choose Craftaurum",
-      "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 36,
-        "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "background_media": "none",
-        "background_color": "#F8F7F4",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_color": "",
-        "border_radius": 0,
-        "padding-block-start": 72,
-        "padding-block-end": 76
-      }
+        "why_1",
+        "why_2",
+        "why_3",
+        "why_4"
+      ]
     },
     "contact": {
       "type": "editorial-contact",
