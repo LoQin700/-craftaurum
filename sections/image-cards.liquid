@@ -344,6 +344,15 @@
     .ca-image-card__title { font-size: var(--ca-image-cards-card-title-size-mobile); }
     .ca-image-card__text { font-size: var(--ca-image-cards-card-body-size-mobile); }
   }
+
+  /* Image-only hover: no layout shifts or added scripts. */
+  .ca-image-card__image { transition: transform .48s cubic-bezier(.2,.7,.2,1); transform: scale(1); }
+  @media (hover: hover) and (pointer: fine) {
+    .ca-image-card:hover .ca-image-card__image { transform: scale(1.055); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ca-image-card__image { transition: none; }
+  }
 {% endstylesheet %}
 
 {% schema %}
