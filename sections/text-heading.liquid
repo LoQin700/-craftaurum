@@ -1,8 +1,8 @@
 <section {% if section.settings.anchor_id != blank %}id="{{ section.settings.anchor_id | handleize }}"{% endif %}
   class="section section--{{ section.settings.section_width | default: 'page-width' }} spacing-style ca-text-heading"
   style="--padding-block-start: {{ section.settings.padding_top }}px; --padding-block-end: {{ section.settings.padding_bottom }}px; --ca-text-heading-size: {{ section.settings.heading_size | default: 35 }}px;
-    --ca-text-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 25 }}px; --ca-text-body-size: {{ section.settings.body_size | default: 16 }}px;
-    --ca-text-body-size-mobile: {{ section.settings.mobile_body_size | default: 14 }}px;">
+    --ca-text-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 35 }}px; --ca-text-body-size: {{ section.settings.body_size | default: 16 }}px;
+    --ca-text-body-size-mobile: {{ section.settings.mobile_body_size | default: 16 }}px;">
   <div class="ca-text-heading__inner" data-ca-reveal="{{ section.settings.animation_style | default: 'fade-up' }}">
     {% if section.settings.heading != blank %}
       <h2 class="ca-text-heading__title">{{ section.settings.heading | escape }}</h2>
