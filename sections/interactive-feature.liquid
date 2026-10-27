@@ -1,40 +1,27 @@
 {% comment %}
-  能力展示：交互图文 / 图标文字。
+  交互图文：左侧标签切换右侧图片。
   背景始终铺满；内容宽度由设置控制；所有新增设置有 Liquid 安全默认值。
 {% endcomment %}
 {% liquid
-  assign layout_mode = section.settings.layout_mode | default: 'interactive'
   assign content_width = section.settings.section_width | default: 'page-width'
   assign background_color = section.settings.background_color
   if background_color == blank
-    if layout_mode == 'icons'
-      assign background_color = '#F8F7F4'
-    else
-      assign background_color = '#FFFFFF'
-    endif
+    assign background_color = '#FFFFFF'
   endif
   assign text_color = section.settings.text_color | default: '#17191A'
   assign accent_color = section.settings.accent_color | default: '#C7A85E'
-  assign desktop_columns = section.settings.desktop_columns | default: 4
-  assign mobile_columns = section.settings.mobile_columns | default: 2
-  assign gap = section.settings.gap | default: 24
   assign padding_top = section.settings.padding_top | default: 56
   assign padding_bottom = section.settings.padding_bottom | default: 56
 %}
-{% if layout_mode != 'icons' %}
-  <script src="{{ 'craftaurum-interactive-feature.js' | asset_url }}" defer></script>
-{% endif %}
+<script src="{{ 'craftaurum-interactive-feature.js' | asset_url }}" defer></script>
 
 <section
   id="CapabilitySection-{{ section.id }}"
-  class="section section--full-width ca-capability ca-capability--{{ layout_mode }}{% unless section.settings.show_index %} ca-capability--no-index{% endunless %}"
+  class="section section--full-width ca-capability ca-capability--interactive{% unless section.settings.show_index %} ca-capability--no-index{% endunless %}"
   style="
     --ca-cap-background: {{ background_color }};
     --ca-cap-text: {{ text_color }};
     --ca-cap-accent: {{ accent_color }};
-    --ca-cap-columns: {{ desktop_columns }};
-    --ca-cap-mobile-columns: {{ mobile_columns }};
-    --ca-cap-gap: {{ gap }}px;
     --ca-cap-padding-top: {{ padding_top }}px;
     --ca-cap-padding-bottom: {{ padding_bottom }}px;
     --ca-cap-heading-size: {{ section.settings.heading_size | default: 35 }}px;
@@ -63,20 +50,6 @@
         </div>
       </header>
 
-      {% if layout_mode == 'icons' %}
-        <div class="ca-capability-icons__grid">
-          {% for block in section.blocks %}
-            <article class="ca-capability-icons__item" {{ block.shopify_attributes }}>
-              {% if block.settings.title != blank %}
-                <h3 class="ca-capability-icons__title">{{ block.settings.title | escape }}</h3>
-              {% endif %}
-              {% if block.settings.description != blank %}
-                <div class="ca-capability-icons__text rte">{{ block.settings.description }}</div>
-              {% endif %}
-            </article>
-          {% endfor %}
-        </div>
-      {% else %}
         <craftaurum-interactive-feature class="ca-capability-interactive">
           <div class="ca-capability-interactive__layout ca-capability-interactive__layout--{{ section.settings.visual_height_mode | default: 'match_text' }}">
             <div class="ca-capability-interactive__list" role="tablist" aria-label="{{ section.settings.heading | escape }}">
@@ -132,7 +105,6 @@
             </div>
           </div>
         </craftaurum-interactive-feature>
-      {% endif %}
     </div>
   </div>
 </section>
@@ -169,10 +141,8 @@
   }
   .ca-capability__heading { margin:0 0 14px; color:inherit; font-size:var(--ca-cap-heading-size); line-height:1.08; }
   .ca-capability__description { font-size:var(--ca-cap-body-size); line-height:1.6; }
-  .ca-capability__description :is(p,ul,ol),
-  .ca-capability-icons__text :is(p,ul,ol) { font-size:inherit; line-height:inherit; }
-  .ca-capability__description p,
-  .ca-capability-icons__text p { margin:0; }
+  .ca-capability__description :is(p,ul,ol) { font-size:inherit; line-height:inherit; }
+  .ca-capability__description p { margin:0; }
 
   .ca-capability-interactive__layout {
     display:grid;
@@ -235,19 +205,6 @@
   .ca-capability-interactive__image,
   .ca-capability-interactive__placeholder { display:block; width:100%; height:100%; object-fit:cover; }
 
-  .ca-capability-icons__grid {
-    display:grid;
-    grid-template-columns:repeat(var(--ca-cap-columns),minmax(0,1fr));
-    gap:var(--ca-cap-gap);
-  }
-  .ca-capability-icons__item {
-    min-width:0;
-    padding:26px 20px;
-    border-top:1px solid color-mix(in srgb,var(--ca-cap-text) 18%,transparent);
-  }
-  .ca-capability-icons__title { margin:0 0 10px; color:inherit; font-size:var(--ca-cap-item-title-size); line-height:1.25; }
-  .ca-capability-icons__text { opacity:.76; font-size:var(--ca-cap-item-body-size); line-height:1.6; }
-
   @media screen and (max-width:749px) {
     .ca-capability__inner--full-width { padding-inline:18px; }
     .ca-capability__intro { text-align:left; margin-bottom:24px; }
@@ -259,8 +216,6 @@
     .ca-capability--no-index .ca-capability-interactive__item { grid-template-columns:minmax(0,1fr); }
     .ca-capability-interactive__item:is(:hover,:focus-visible,.is-active) { padding-inline-start:0; }
     .ca-capability-interactive__visual { min-height:0; height:auto !important; aspect-ratio:4 / 3; }
-    .ca-capability-icons__grid { grid-template-columns:repeat(var(--ca-cap-mobile-columns),minmax(0,1fr)); }
-    .ca-capability-icons__item { padding-inline:0; }
   }
   @media (prefers-reduced-motion:reduce) {
     .ca-capability-interactive__item,
@@ -271,9 +226,7 @@
     .ca-capability__heading { font-size: var(--ca-cap-heading-size-mobile); }
     .ca-capability__description { font-size: var(--ca-cap-body-size-mobile); }
     .ca-capability-interactive__title { font-size: var(--ca-cap-item-title-size-mobile); }
-    .ca-capability-icons__title { font-size: var(--ca-cap-item-title-size-mobile); }
     .ca-capability-interactive__text { font-size: var(--ca-cap-item-body-size-mobile); }
-    .ca-capability-icons__text { font-size: var(--ca-cap-item-body-size-mobile); }
   }
 {% endstylesheet %}
 
@@ -342,8 +295,7 @@
           "label": "固定高度并与文字居中"
         }
       ],
-      "default": "match_text",
-      "visible_if": "{{ section.settings.layout_mode == 'interactive' }}"
+      "default": "match_text"
     },
     {
       "type": "range",
@@ -354,7 +306,7 @@
       "step": 20,
       "unit": "px",
       "default": 520,
-      "visible_if": "{{ section.settings.visual_height_mode == 'fixed' and section.settings.layout_mode == 'interactive' }}"
+      "visible_if": "{{ section.settings.visual_height_mode == 'fixed' }}"
     },
     {
       "type": "header",
@@ -376,35 +328,17 @@
       "type": "color",
       "id": "accent_color",
       "label": "编号",
-      "default": "#C7A85E",
-      "visible_if": "{{ section.settings.layout_mode == 'interactive' and section.settings.show_index }}"
+      "default": "#C7A85E"
     },
     {
       "type": "header",
       "content": "布局与交互"
     },
     {
-      "type": "select",
-      "id": "layout_mode",
-      "label": "展示样式",
-      "options": [
-        {
-          "value": "interactive",
-          "label": "交互图文"
-        },
-        {
-          "value": "icons",
-          "label": "卡片文字"
-        }
-      ],
-      "default": "interactive"
-    },
-    {
       "type": "checkbox",
       "id": "show_index",
       "label": "显示编号",
-      "default": true,
-      "visible_if": "{{ section.settings.layout_mode == 'interactive' }}"
+      "default": true
     },
     {
       "type": "select",
@@ -423,49 +357,12 @@
       "default": "style_1"
     },
     {
-      "type": "range",
-      "id": "gap",
-      "label": "卡片间距",
-      "min": 0,
-      "max": 48,
-      "step": 4,
-      "unit": "px",
-      "default": 24
-    },
-    {
       "type": "header",
       "content": "电脑端布局"
     },
     {
-      "type": "range",
-      "id": "desktop_columns",
-      "label": "每行显示数量",
-      "info": "仅在卡片文字展示模式下生效",
-      "min": 2,
-      "max": 6,
-      "step": 1,
-      "default": 4
-    },
-    {
       "type": "header",
       "content": "移动端布局"
-    },
-    {
-      "type": "select",
-      "id": "mobile_columns",
-      "label": "每行显示数量",
-      "info": "仅在卡片文字展示模式下生效",
-      "options": [
-        {
-          "value": "1",
-          "label": "1 列"
-        },
-        {
-          "value": "2",
-          "label": "2 列"
-        }
-      ],
-      "default": "2"
     },
     {
       "type": "header",
@@ -628,9 +525,7 @@
   "presets": [
     {
       "name": "交互图文",
-      "settings": {
-        "layout_mode": "interactive"
-      },
+      "settings": {},
       "blocks": [
         {
           "type": "item"
