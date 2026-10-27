@@ -414,7 +414,7 @@
         "feature_image": "shopify://shop_images/gold-vermeil-necklace.jpg",
         "feature_image_ratio": "landscape",
         "intro_alignment": "center",
-        "item_alignment": "center",
+        "item_alignment": "left",
         "feature_alignment": "left",
         "column_gap": 56,
         "eyebrow_size": 12,
