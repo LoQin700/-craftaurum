@@ -249,7 +249,7 @@
         "top_url": "",
         "top_button_style": "button",
         "cta_label": "Explore Gold Vermeil",
-        "cta_url": "shopify://pages/all-jewelry-collections",
+        "cta_url": "shopify://pages/gold-vermeil-jewelry",
         "cta_button_style": "button-unstyled",
         "image": "shopify://shop_images/gold-vermeil-earrings.jpg",
         "image_position": "right",
@@ -572,7 +572,7 @@
           "settings": {
             "title": "Custom Earrings",
             "image": "shopify://shop_images/gold-earrings.jpg",
-            "link": "shopify://pages/custom-rings"
+            "link": "shopify://pages/custom-earrings"
           }
         },
         "type_bracelets": {
