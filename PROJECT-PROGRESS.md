@@ -508,3 +508,11 @@
 - 页面创建方式：Online Store → Pages 建立测试页，Theme template 选择 `section-showcase`；如模板尚未出现在后台，先核查 GitHub theme sync。
 - 每个 Section 在测试页修改后，只有确认定稿才回写公用源码或目标正式模板，避免误改原有页面素材。
 - 已检查新模板 JSON 可解析、实例块顺序引用有效；未独立执行 Shopify CLI Theme Check / Theme Editor 保存及真实三端 QA。
+
+## 2026-10-27 · Personalized Jewelry 对标纠偏（以最新为准）
+- 用户指出页面内容与参考站不符，重新逐段核对原始页面，发现早期版本误删 Special/Enamel、误加 Number 独立章节、漏掉 Birthstone/Zodiac 差异化图，以及将三项服务泛化为 Why Choose。
+- 已更新 `templates/page.personalized-jewelry.json`：Hero → Special Jewelry → Enamel Jewelry → Unlock 两段导入与四大元素 → Initial（3 图）→ Birthstone（4 图）→ Zodiac（3 图）→ 三项制造服务 → Editorial Contact。Number 仅保留四分类概览，符合对标站。
+- 部分已有图片采用仓库其他模板所用的 `shopify://shop_images/*.jpg` 绑定；未能确认的 8 个匹配图片采用对标站精确图片 URL 临时回退，正式上线前改为经授权的 Shopify 图片。
+- `sections/image-text-feature.liquid` 与 `sections/image-gallery.liquid` 分别增加可选的 external_image_url 回退，不会覆盖用户 image_picker；图片画廊另外增加可选独立图片标题与 alt。测试页对应图文介绍和图片画廊实例已经同步。
+- 新增精确对应清单 `PERSONALIZED-JEWELRY-REFERENCE-MAP.md`，提供章节、文件名、图片来源与状态，后续不再按主观猜测更换类别。
+- 新模板已完成类型与 schema/range/select/blocks 静态检查（零未知字段），但还未完成 Shopify Theme Check、Theme Editor 实际保存与三端在线视觉验收。
