@@ -645,3 +645,18 @@
   - 其余字段经检查已与真实作用匹配，保持原名称；**没有改动原 Setting ID、颜色数值、页面文字或产品图片**。
 - 已读回 GitHub 对 17/17 自建 Section 做 Schema/字号成对及底部设置检查：**17/17 通过**，现在共有 **62 对双端字号设置**（图标文字新增一对项目正文字号）。相关首页 / Showcase / Jewelry Rings / OEM / Pearl / Personalized 页面模板可解析，未发现旧 `icon_image` 项目值，无需删除模板素材。
 - 当前验证范围仅限 GitHub 源码与静态一致性。仍需 Shopify Theme Check CLI、Theme Editor 保存，以及真实桌面/手机浏览器视觉验收。后续 Section Showcase 应重点验收图文卡片 Style 2 的分隔线与 50/50 双栏、图标文字 H2 双端字号和分隔线状态、交互图文编号开关及无编号时的行对齐。
+
+## 2026-10-27 · 17 类 Section 颜色置底、其它设置显式分组、图文横幅及图片卡片颜色修正（最新）
+- 用户现场截图显示「移动端字号」之后直接跟随「入场动画、上边距、下边距」，后台「其它设置」分组边界未清楚呈现；并要求**所有颜色设置统一下放在末端**，不应在前面或各模块位置不一。
+- 已整理 Section Showcase 的 **17 种自建 `sections/*.liquid`**，统一顺序：基础设置 → 内容设置 → 按钮设置 → 图片设置 → 布局与交互 → 电脑端布局 → 移动端布局 → 电脑端字号 → 移动端字号 → **颜色设置** → **其它设置**。缺少对应控制的 Section 继续不显示空组。颜色组现在统一位于两组字号之后、其它设置之前。
+- 为避免后台分隔不明显，所有 17 个 Section 在最后的 `{"type":"header","content":"其它设置"}` 下新增支持的说明项 `{"type":"paragraph","content":"入场动画与区块上下间距"}`，下面固定三项 `animation_style / padding_top / padding_bottom`。仅为后台显示标注，没有设置 ID、不触发 Liquid/CSS，也不改变原值。
+- `sections/jewelry-collections-overview.liquid`（图文横幅）删除无必要的 `use_background` Checkbox、依赖的 `visible_if` 和 Liquid 的透明背景切换条件；现在始终直接使用 `background_color` 选择器。同步清理 Section Showcase、Jewelry Rings、OEM、Personalized Jewelry、Jewelry Collections、Pearl Jewelry、Necklace、Earrings、Bracelets、Fashion、Artisanal 等模板中 **12 个旧 `use_background: true`** 配置值。现有背景色实际配置不变。
+- `sections/image-cards.liquid`（图片卡片）原 `text_color` 同时作用于介绍区域和图片覆盖文字，现拆分颜色：
+  - `heading_color` **顶部标题颜色**（新；默认 #17191A）
+  - `body_color` **顶部正文颜色**（新；默认 #17191A）
+  - 继续使用原 `text_color`，标签改为 **卡片标题颜色**（默认 #FFFFFF，保留旧卡片标题配色的绑定）
+  - `card_body_color` **卡片正文颜色**（新；默认 #FFFFFF）
+  - 原 `background_color`、`accent_color` 保留，卡片蒙层、尺寸、图片等其余行为不动。四种文字颜色分别绑定至相应 CSS 选择器；顶栏新默认深色，卡片覆盖文字默认白色。
+- 执行前后核对相同设置 ID 和其所有配置内容，只重排 Header/Paragraph，不重置列数、字号、动画、间距、图片/按钮设置；没有修改其它 Section 前端逻辑。
+- GitHub 静态检查 **17/17 Section Schema 可解析**，颜色组位置正确，末尾 Header+Paragraph+3项设置正确；图文横幅不再引用已移除的开关；图片卡片四项文字颜色有独立设置和前端 CSS 变量。
+- **仍待验证：** Shopify GitHub 同步、Theme Editor 中「其它设置」实际可见性及颜色选择器生效、Theme Check CLI、PC/Mobile 渲染。特别注意：截图中的无 Header 现象可能与主题编辑器正在显示的主题版本不同有关；目前未在用户的 Shopify 后台现场打开，不宣称已解决后台可见性。
