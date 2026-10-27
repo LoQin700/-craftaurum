@@ -15,6 +15,9 @@
   style="
     --ca-image-cards-bg: {{ section.settings.background_color }};
     --ca-image-cards-text: {{ section.settings.text_color }};
+    --ca-image-cards-heading-color: {{ section.settings.heading_color | default: '#17191A' }};
+    --ca-image-cards-body-color: {{ section.settings.body_color | default: '#17191A' }};
+    --ca-image-cards-card-body-color: {{ section.settings.card_body_color | default: '#FFFFFF' }};
     --ca-image-cards-accent: {{ section.settings.accent_color }};
     --ca-image-cards-gap: {{ section.settings.gap }}px;
     --ca-image-cards-cols: {{ section.settings.desktop_columns }};
@@ -130,12 +133,14 @@
   }
 
   .ca-image-cards__heading {
+    color: var(--ca-image-cards-heading-color);
     margin: 0 0 12px;
     font-size: var(--ca-image-cards-heading-size);
     line-height: 1.08;
   }
 
-  .ca-image-cards__description { font-size:var(--ca-image-cards-body-size); line-height:1.6; }
+  .ca-image-cards__description { color: var(--ca-image-cards-body-color); font-size:var(--ca-image-cards-body-size); line-height:1.6; }
+  .ca-image-cards__description :is(p,ul,ol) { color:inherit; font-size:inherit; line-height:inherit; }
 
   .ca-image-cards__description p,
   .ca-image-card__text p {
@@ -235,14 +240,14 @@
 
   .ca-image-card__title {
     margin: 0 0 8px;
-    color: inherit;
+    color: var(--ca-image-cards-text);
     font-size:var(--ca-image-cards-card-title-size);
     line-height:1.2;
   }
 
   .ca-image-card__text {
     max-width: 42ch;
-    color: inherit;
+    color: var(--ca-image-cards-card-body-color);
     font-size:var(--ca-image-cards-card-body-size);
     line-height:1.6;
   }
@@ -323,7 +328,10 @@
 {
   "name": "图片卡片",
   "settings": [
-    {"type":"header","content":"基础设置"},
+    {
+      "type": "header",
+      "content": "基础设置"
+    },
     {
       "type": "select",
       "id": "section_width",
@@ -340,7 +348,10 @@
       ],
       "default": "page-width"
     },
-    {"type":"header","content":"内容设置"},
+    {
+      "type": "header",
+      "content": "内容设置"
+    },
     {
       "type": "text",
       "id": "heading",
@@ -353,7 +364,10 @@
       "label": "正文",
       "default": "<p>Explore the development capabilities behind a custom jewelry collection.</p>"
     },
-    {"type":"header","content":"图片设置"},
+    {
+      "type": "header",
+      "content": "图片设置"
+    },
     {
       "type": "select",
       "id": "image_ratio",
@@ -388,7 +402,10 @@
       "unit": "%",
       "default": 40
     },
-    {"type":"header","content":"颜色设置"},
+    {
+      "type": "header",
+      "content": "颜色设置"
+    },
     {
       "type": "color",
       "id": "background_color",
@@ -397,8 +414,26 @@
     },
     {
       "type": "color",
+      "id": "heading_color",
+      "label": "顶部标题颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "color",
+      "id": "body_color",
+      "label": "顶部正文颜色",
+      "default": "#17191A"
+    },
+    {
+      "type": "color",
       "id": "text_color",
-      "label": "文字颜色",
+      "label": "卡片标题颜色",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "card_body_color",
+      "label": "卡片正文颜色",
       "default": "#FFFFFF"
     },
     {
@@ -407,7 +442,10 @@
       "label": "卡片键盘焦点描边颜色",
       "default": "#C7A85E"
     },
-    {"type":"header","content":"布局与交互"},
+    {
+      "type": "header",
+      "content": "布局与交互"
+    },
     {
       "type": "range",
       "id": "gap",
@@ -428,11 +466,15 @@
       "unit": "px",
       "default": 24
     },
-    {"type":"header","content":"电脑端布局"},
+    {
+      "type": "header",
+      "content": "电脑端布局"
+    },
     {
       "type": "range",
       "id": "desktop_columns",
-      "label": "每行显示数量", "info":"仅在常规网格模式下生效",
+      "label": "每行显示数量",
+      "info": "仅在常规网格模式下生效",
       "min": 1,
       "max": 6,
       "step": 1,
@@ -454,7 +496,10 @@
       ],
       "default": "showcase"
     },
-    {"type":"header","content":"移动端布局"},
+    {
+      "type": "header",
+      "content": "移动端布局"
+    },
     {
       "type": "select",
       "id": "mobile_columns",
@@ -487,18 +532,118 @@
       ],
       "default": "carousel"
     },
-    {"type":"header","content":"电脑端字号"},
-    {"type":"range","id":"heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
-    {"type":"range","id":"body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
-    {"type":"range","id":"card_title_size","label":"卡片标题字号","min":14,"max":36,"step":1,"unit":"px","default":22},
-    {"type":"range","id":"card_body_size","label":"卡片正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
-    {"type":"header","content":"移动端字号"},
-    {"type":"range","id":"mobile_heading_size","label":"标题字号","min":24,"max":72,"step":1,"unit":"px","default":35},
-    {"type":"range","id":"mobile_body_size","label":"正文字号","min":12,"max":24,"step":1,"unit":"px","default":16},
-    {"type":"range","id":"mobile_card_title_size","label":"卡片标题字号","min":14,"max":36,"step":1,"unit":"px","default":22},
-    {"type":"range","id":"mobile_card_body_size","label":"卡片正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
-    {"type":"header","content":"其它设置"},
-    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
+    {
+      "type": "header",
+      "content": "电脑端字号"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "body_size",
+      "label": "正文字号",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "card_title_size",
+      "label": "卡片标题字号",
+      "min": 14,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "default": 22
+    },
+    {
+      "type": "range",
+      "id": "card_body_size",
+      "label": "卡片正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "移动端字号"
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_size",
+      "label": "标题字号",
+      "min": 24,
+      "max": 72,
+      "step": 1,
+      "unit": "px",
+      "default": 35
+    },
+    {
+      "type": "range",
+      "id": "mobile_body_size",
+      "label": "正文字号",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "mobile_card_title_size",
+      "label": "卡片标题字号",
+      "min": 14,
+      "max": 36,
+      "step": 1,
+      "unit": "px",
+      "default": 22
+    },
+    {
+      "type": "range",
+      "id": "mobile_card_body_size",
+      "label": "卡片正文字号",
+      "min": 12,
+      "max": 22,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "其它设置"
+    },
+    {
+      "type": "select",
+      "id": "animation_style",
+      "label": "入场动画",
+      "options": [
+        {
+          "value": "fade-up",
+          "label": "Fade Up"
+        },
+        {
+          "value": "fade-in",
+          "label": "Fade In"
+        },
+        {
+          "value": "soft-zoom",
+          "label": "Soft Zoom"
+        }
+      ],
+      "default": "fade-up"
+    },
     {
       "type": "range",
       "id": "padding_top",
