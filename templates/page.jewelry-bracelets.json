@@ -66,12 +66,12 @@
       "settings": {
         "section_width": "page-width",
         "eyebrow": "CUSTOM BRACELET MANUFACTURING",
-        "heading": "High-End Custom Bracelet Production.",
-        "introduction": "<p>Develop custom bracelets across chain, bead, bangle and fashion-led directions using materials such as sterling silver and brass, with flexible plating and finishing options. Each design can be refined around the intended look, wearing experience and market of your collection.</p><p>Craftaurum supports brands and wholesale partners from early design review through sampling and production coordination.</p>",
+        "heading": "Custom Bracelets for Fashion & Fine Jewelry Collections",
+        "introduction": "<p>Custom bracelet design can range from sterling silver chain bracelets to beaded pieces, bangles and fashion-led styles. Explore suitable base materials and finishes, including gold-tone, rose gold or rhodium options where appropriate to the design.</p><p>Send bracelet references, sizing, clasp preferences and approximate order quantity to review available construction choices, sampling and quotation details.</p>",
         "quote_label": "Get B2B Quote",
-        "quote_url": "",
+        "quote_url": "shopify://pages/contact",
         "catalog_label": "Request Catalog",
-        "catalog_url": "",
+        "catalog_url": "shopify://pages/contact",
         "hero_image": "shopify://shop_images/chain-bracelets.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
@@ -118,7 +118,7 @@
         "body": {
           "type": "body",
           "settings": {
-            "body": "<p>Refine materials, bracelet structure, fit and finishing around the needs of your brand.</p>"
+            "body": "<p>Have a specific design in mind? Share sketches, materials, quantities and target requirements through our contact form so the next steps can be reviewed.</p>"
           }
         },
         "buttons": {
@@ -143,8 +143,8 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/chain-bracelets.jpg",
-            "title": "Chain Bracelets",
-            "description": "<p>Develop refined or statement chain bracelet concepts with flexible link, clasp and finish directions.</p>",
+            "title": "Sterling Silver Chain Bracelets",
+            "description": "<p>Develop chain bracelet concepts with suitable link styles, lengths, clasps and surface finishes for your collection.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -155,7 +155,7 @@
           "settings": {
             "image": "shopify://shop_images/pearl-bracelets.jpg",
             "title": "Beaded Bracelets",
-            "description": "<p>Create bead-led bracelet styles using different materials, proportions and decorative details.</p>",
+            "description": "<p>Explore bead sizes, decorative combinations and fastening options, taking comfort and wearability into account.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -165,8 +165,8 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/YB7671.jpg",
-            "title": "Bangles",
-            "description": "<p>Explore clean, sculptural or embellished bangle designs for modern jewelry collections.</p>",
+            "title": "Custom Bangles",
+            "description": "<p>Consider smooth, textured or embellished bangle designs with practical dimensions, opening details and finish choices.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -176,8 +176,8 @@
           "type": "card",
           "settings": {
             "image": "shopify://shop_images/butterfly-bracelets.jpg",
-            "title": "Statement Bracelets",
-            "description": "<p>Develop bold fashion bracelet concepts with distinctive forms, textures and finishing choices.</p>",
+            "title": "Fashion & Statement Bracelets",
+            "description": "<p>Discuss expressive bracelet concepts with decorative forms, plated finishes and construction tailored to your design brief.</p>",
             "button_label": "Explore Details",
             "button_style": "button-unstyled",
             "link": ""
@@ -195,7 +195,7 @@
         "section_width": "page-width",
         "eyebrow": "BRACELET DESIGN RANGE",
         "heading": "Explore Custom Bracelet Styles",
-        "description": "<p>Build a bracelet collection across different structures, materials and finishing directions.</p>",
+        "description": "<p>Explore the main styles shown in this category. Share your reference images and specifications to discuss materials, sampling and production feasibility.</p>",
         "image_ratio": "portrait",
         "image_width": 100,
         "intro_style": "style_1",
@@ -292,9 +292,9 @@
       "name": "图文介绍",
       "settings": {
         "section_width": "page-width",
-        "heading": "Custom Bracelet Manufacturing from Design to Production",
-        "subtitle": "ABOUT CRAFTAURUM",
-        "body": "<p>Craftaurum supports bracelet development for jewelry brands and wholesale partners across chain, bead, bangle and fashion-led styles. We focus on material choices, structure, fit, surface finish and the details that influence how the finished bracelet looks and wears.</p><p>Use workshop, assembly, polishing or inspection photography here to show the manufacturing process behind custom bracelets.</p>",
+        "heading": "Custom Bracelet Manufacturing & Style Development",
+        "subtitle": "CUSTOM JEWELRY DEVELOPMENT",
+        "body": "<p>Bracelet projects may combine chain links, beads, bangles, clasps and decorative components. The construction should be considered together with the bracelet’s intended fit, weight and appearance.</p><p>Share design references, intended material and finish, target sizes and quantity. We can discuss sample review points and confirm the production specification before providing a project quotation.</p>",
         "top_label": "",
         "top_url": "",
         "top_button_style": "button",
@@ -402,7 +402,7 @@
         "section_width": "page-width",
         "eyebrow": "START A BRACELET PROJECT",
         "heading": "Start Your Custom Bracelet Project",
-        "description": "<p>Share your bracelet style, materials, finish, quantity and customization requirements with our team.</p>",
+        "description": "<p>Share your design reference, preferred material and finish, target size, approximate quantity and delivery location. We can review feasibility and respond with the information needed for sampling and quotation.</p>",
         "phone_required": false,
         "background_color": "#F8F7F4",
         "text_color": "#17191A",
