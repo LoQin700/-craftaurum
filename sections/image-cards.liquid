@@ -69,6 +69,7 @@
         </header>
       {% endif %}
 
+      <div class="ca-carousel-stage">
       <div class="ca-image-cards__grid ca-image-cards__grid--{{ section.settings.layout_style }} ca-image-cards__grid--mobile-cols-{{ section.settings.mobile_columns }}{% if section.settings.mobile_layout == 'carousel' %} ca-image-cards__grid--mobile-carousel{% endif %}">
         {% for block in section.blocks %}
           <article
@@ -117,6 +118,7 @@
       {% if has_scroll_controls %}
         {% render 'craftaurum-scroll-controls', track_selector: '.ca-image-cards__grid', desktop: carousel_desktop, mobile: carousel_mobile %}
       {% endif %}
+      </div> <!-- /ca-carousel-stage -->
     </div>
   </div>
 </section>
