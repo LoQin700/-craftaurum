@@ -29,8 +29,11 @@
     --ca-banner-padding-top: {{ padding_top }}px;
     --ca-banner-padding-bottom: {{ padding_bottom }}px;
     --ca-banner-eyebrow-size: {{ section.settings.eyebrow_size | default: 12 }}px;
+    --ca-banner-eyebrow-size-mobile: {{ section.settings.mobile_eyebrow_size | default: 12 }}px;
     --ca-banner-heading-size: {{ section.settings.heading_size | default: 58 }}px;
+    --ca-banner-heading-size-mobile: {{ section.settings.mobile_heading_size | default: 48 }}px;
     --ca-banner-body-size: {{ section.settings.body_size | default: 16 }}px;
+    --ca-banner-body-size-mobile: {{ section.settings.mobile_body_size | default: 16 }}px;
   "
 >
   <div class="ca-editorial-banner__surface">
@@ -138,6 +141,12 @@
     .ca-editorial-banner__layout--image-right .ca-editorial-banner__content { order:0; }
     .ca-editorial-banner__layout--image-right .ca-editorial-banner__media { order:1; }
     .ca-editorial-banner__title { font-size: min(var(--ca-banner-heading-size), 48px); }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ca-editorial-banner__eyebrow { font-size: var(--ca-banner-eyebrow-size-mobile); }
+    .ca-editorial-banner__title { font-size: var(--ca-banner-heading-size-mobile); }
+    .ca-editorial-banner__body { font-size: var(--ca-banner-body-size-mobile); }
   }
 {% endstylesheet %}
 
@@ -278,6 +287,7 @@
       "id": "catalog_url",
       "label": "次级按钮链接"
     },
+    {"type":"header","content":"电脑端字号"},
     {
       "type": "range",
       "id": "eyebrow_size",
@@ -308,6 +318,10 @@
       "unit": "px",
       "default": 16
     },
+    {"type":"header","content":"移动端字号"},
+    {"type":"range","id":"mobile_eyebrow_size","label":"小标题字号","min":10,"max":20,"step":1,"unit":"px","default":12},
+    {"type":"range","id":"mobile_heading_size","label":"主标题字号","min":28,"max":88,"step":2,"unit":"px","default":48},
+    {"type":"range","id":"mobile_body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":16},
     {
       "type": "select",
       "id": "animation_style",
