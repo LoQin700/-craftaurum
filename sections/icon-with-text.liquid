@@ -364,15 +364,11 @@
     },
     {"type":"range","id":"body_size","label":"正文字号","min":12,"max":22,"step":1,"unit":"px","default":15},
     {"type":"range","id":"item_title_size","label":"项目标题字号","min":14,"max":30,"step":1,"unit":"px","default":18},
-    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
-    {
-      "type": "header",
-      "content": "布局"
-    },
+    {"type":"header","content":"电脑端布局"},
     {
       "type": "select",
       "id": "desktop_columns",
-      "label": "桌面端每行数量",
+      "label": "每行显示数量",
       "options": [
         {
           "value": "2",
@@ -397,10 +393,11 @@
       ],
       "default": "4"
     },
+    {"type":"header","content":"移动端布局"},
     {
       "type": "select",
       "id": "mobile_columns",
-      "label": "手机端每行数量",
+      "label": "每行显示数量",
       "options": [
         {
           "value": "1",
@@ -413,6 +410,7 @@
       ],
       "default": "1"
     },
+    {"type":"select","id":"animation_style","label":"入场动画","options":[{"value":"fade-up","label":"Fade Up"},{"value":"fade-in","label":"Fade In"},{"value":"soft-zoom","label":"Soft Zoom"}],"default":"fade-up"},
     {
       "type": "range",
       "id": "padding_top",
