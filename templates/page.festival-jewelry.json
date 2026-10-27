@@ -61,44 +61,54 @@
       }
     },
     "festival_intro": {
-      "type": "festival-intro",
+      "type": "custom-richtext",
       "blocks": {
-        "christmas": {
-          "type": "button",
+        "title": {
+          "type": "title",
           "settings": {
-            "label": "Christmas Jewelry",
-            "link": ""
+            "heading": "Festival Jewelry Start Exploring",
+            "heading_tag": "h2"
           }
         },
-        "halloween": {
-          "type": "button",
+        "body": {
+          "type": "body",
           "settings": {
-            "label": "Halloween Jewelry",
-            "link": ""
+            "body": "<p>Seasonal jewelry gives brands and retailers a timely way to refresh collections around key shopping moments. Craftaurum supports custom and wholesale development for Christmas, Halloween, Thanksgiving and Black Friday programs, helping you prepare distinctive pieces around your audience, price point and launch schedule.</p>"
           }
         },
-        "thanksgiving": {
-          "type": "button",
+        "buttons": {
+          "type": "buttons",
           "settings": {
-            "label": "Thanksgiving Gift",
-            "link": ""
+            "label_1": "Christmas Jewelry",
+            "link_1": "",
+            "style_1": "button-secondary",
+            "label_2": "Halloween Jewelry",
+            "link_2": "",
+            "style_2": "button-secondary",
+            "label_3": "Thanksgiving Gift",
+            "link_3": "",
+            "style_3": "button-secondary"
           }
         }
       },
       "block_order": [
-        "christmas",
-        "halloween",
-        "thanksgiving"
+        "title",
+        "body",
+        "buttons"
       ],
-      "name": "专题导航介绍",
+      "name": "自定义富文本",
       "settings": {
         "section_width": "page-width",
+        "anchor_id": "",
+        "layout_style": "stacked",
+        "alignment": "center",
+        "content_width": 1060,
+        "heading_size": 35,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
         "background_color": "#ffffff",
         "text_color": "#17191a",
-        "heading": "Festival Jewelry Start Exploring",
-        "heading_size": 35,
-        "description": "<p>Seasonal jewelry gives brands and retailers a timely way to refresh collections around key shopping moments. Craftaurum supports custom and wholesale development for Christmas, Halloween, Thanksgiving and Black Friday programs, helping you prepare distinctive pieces around your audience, price point and launch schedule.</p>",
-        "body_size": 16,
         "animation_style": "fade-in",
         "padding_top": 56,
         "padding_bottom": 68
@@ -585,7 +595,7 @@
     },
     "contact": {
       "type": "editorial-contact",
-      "name": "联系表单 - Editorial",
+      "name": "分栏联系表单",
       "settings": {
         "section_width": "page-width",
         "background_color": "#f8f7f4",
