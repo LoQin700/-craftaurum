@@ -135,8 +135,8 @@
         "image": "shopify://shop_images/Christmas-necklace-gold.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
-        "cta_label": "Start A Christmas Project",
-        "cta_url": "shopify://pages/contact",
+        "cta_label": "",
+        "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 64,
         "padding_bottom": 24
@@ -291,8 +291,8 @@
         "image": "shopify://shop_images/custom-fashion-jewelry.jpg",
         "image_position": "right",
         "image_ratio": "landscape",
-        "cta_label": "Discuss Thanksgiving Jewelry",
-        "cta_url": "shopify://pages/contact",
+        "cta_label": "",
+        "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 88,
         "padding_bottom": 24
@@ -369,8 +369,8 @@
         "image": "shopify://shop_images/wholesale-jewelry-2.jpg",
         "image_position": "left",
         "image_ratio": "landscape",
-        "cta_label": "Plan Your Black Friday Range",
-        "cta_url": "shopify://pages/contact",
+        "cta_label": "",
+        "cta_url": "",
         "cta_button_style": "button-secondary",
         "padding_top": 88,
         "padding_bottom": 24
