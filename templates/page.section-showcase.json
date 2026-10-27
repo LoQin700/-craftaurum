@@ -273,25 +273,52 @@
       }
     },
     "horizontal_cta": {
-      "type": "horizontal-cta",
-      "name": "横向 CTA",
+      "type": "custom-richtext",
+      "name": "自定义富文本",
       "settings": {
         "section_width": "full-width",
-        "heading": "05 | From design concept to custom jewelry production.",
-        "description": "<p>One clear process, developed around the needs of your collection.</p>",
-        "button_label": "Discover Our Process",
-        "button_link": "",
-        "button_style": "button-secondary",
-        "background_color": "#17191a",
-        "text_color": "#f8f7f4",
+        "anchor_id": "",
+        "layout_style": "horizontal",
+        "alignment": "left",
+        "content_width": 1200,
         "heading_size": 35,
         "body_size": 16,
         "mobile_heading_size": 25,
         "mobile_body_size": 14,
+        "background_color": "#17191a",
+        "text_color": "#f8f7f4",
         "animation_style": "fade-in",
         "padding_top": 36,
         "padding_bottom": 36
-      }
+      },
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading": "05 | From design concept to custom jewelry production.",
+            "heading_tag": "h2"
+          }
+        },
+        "body": {
+          "type": "body",
+          "settings": {
+            "body": "<p>One clear process, developed around the needs of your collection.</p>"
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "label_1": "Discover Our Process",
+            "link_1": "",
+            "style_1": "button-secondary"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "body",
+        "buttons"
+      ]
     },
     "content_cards": {
       "type": "content-cards",
@@ -1037,67 +1064,97 @@
       }
     },
     "festival_intro": {
-      "type": "festival-intro",
+      "type": "custom-richtext",
       "blocks": {
-        "christmas": {
-          "type": "button",
+        "title": {
+          "type": "title",
           "settings": {
-            "label": "Christmas Jewelry",
-            "link": ""
+            "heading": "15 | Festival Jewelry Start Exploring",
+            "heading_tag": "h2"
           }
         },
-        "halloween": {
-          "type": "button",
+        "body": {
+          "type": "body",
           "settings": {
-            "label": "Halloween Jewelry",
-            "link": ""
+            "body": "<p>Seasonal jewelry gives brands and retailers a timely way to refresh collections around key shopping moments. Craftaurum supports custom and wholesale development for Christmas, Halloween, Thanksgiving and Black Friday programs, helping you prepare distinctive pieces around your audience, price point and launch schedule.</p>"
           }
         },
-        "thanksgiving": {
-          "type": "button",
+        "buttons": {
+          "type": "buttons",
           "settings": {
-            "label": "Thanksgiving Gift",
-            "link": ""
+            "label_1": "Christmas Jewelry",
+            "link_1": "",
+            "style_1": "button-secondary",
+            "label_2": "Halloween Jewelry",
+            "link_2": "",
+            "style_2": "button-secondary",
+            "label_3": "Thanksgiving Gift",
+            "link_3": "",
+            "style_3": "button-secondary"
           }
         }
       },
       "block_order": [
-        "christmas",
-        "halloween",
-        "thanksgiving"
+        "title",
+        "body",
+        "buttons"
       ],
-      "name": "专题导航介绍",
+      "name": "自定义富文本",
       "settings": {
         "section_width": "page-width",
-        "heading": "15 | Festival Jewelry Start Exploring",
-        "description": "<p>Seasonal jewelry gives brands and retailers a timely way to refresh collections around key shopping moments. Craftaurum supports custom and wholesale development for Christmas, Halloween, Thanksgiving and Black Friday programs, helping you prepare distinctive pieces around your audience, price point and launch schedule.</p>",
-        "background_color": "#ffffff",
-        "text_color": "#17191a",
+        "anchor_id": "",
+        "layout_style": "stacked",
+        "alignment": "center",
+        "content_width": 1060,
         "heading_size": 35,
         "body_size": 16,
         "mobile_heading_size": 25,
         "mobile_body_size": 14,
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
         "animation_style": "soft-zoom",
         "padding_top": 56,
         "padding_bottom": 68
       }
     },
     "text_heading": {
-      "type": "text-heading",
-      "name": "标题说明",
+      "type": "custom-richtext",
+      "name": "自定义富文本",
       "settings": {
         "section_width": "page-width",
-        "heading": "17 | Editorial Heading & Introduction",
-        "description": "<p>Use this compact heading section to introduce a new jewelry manufacturing topic, product range or inquiry area.</p>",
         "anchor_id": "section-heading-demo",
+        "layout_style": "stacked",
+        "alignment": "center",
+        "content_width": 1060,
         "heading_size": 35,
         "body_size": 16,
         "mobile_heading_size": 25,
         "mobile_body_size": 14,
+        "background_color": "#FFFFFF",
+        "text_color": "#17191A",
         "animation_style": "fade-up",
         "padding_top": 48,
         "padding_bottom": 24
-      }
+      },
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading": "17 | Editorial Heading & Introduction",
+            "heading_tag": "h2"
+          }
+        },
+        "body": {
+          "type": "body",
+          "settings": {
+            "body": "<p>Use this compact heading section to introduce a new jewelry manufacturing topic, product range or inquiry area.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "body"
+      ]
     },
     "editorial_contact": {
       "type": "editorial-contact",
