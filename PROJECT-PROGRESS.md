@@ -590,3 +590,11 @@
 - 已逐个重新读取并检查：17/17 自建 Section Schema 可解析、**61/61** 移动字号设置 ID 对应原桌面字号、具有绑定的移动端 CSS 变量、两组字号位于后台底部且在动画/Padding 之前；相关模板 JSON 可解析。
 - 设置分组只针对已有 Typography 字号参数，不额外新增移动端字体家族或字重设置。桌面端现有数字/颜色/链接/区块顺序不变。
 - 此次尚未运行 Shopify CLI Theme Check；Shopify GitHub Sync、Theme Editor 实际保存与 Desktop/Mobile 前台预览仍需检查。
+
+## 2026-10-27 · 横向 CTA 按钮颜色统一继承全局
+- 用户发现“横向 CTA”按钮颜色和全局不一致，要求移除该 Section 独立按钮颜色体系，与其他自建 Section 一样继承 Horizon 的一级/二级按钮及对应 Hover 配色。
+- 根因：`sections/horizontal-cta.liquid` 虽然使用共享 `craftaurum-cta` snippet 和全局 `.button/.button-secondary/.button-unstyled` 样式，却在自身 Section CSS 中覆盖 `--button-color`、`--button-background-color`、`--button-border-color` 的正常态、Hover 态，还为文字链接写了局部颜色，屏蔽了全局配色。
+- 已从 `sections/horizontal-cta.liquid` 移除六个按钮颜色设置 ID：`button_background_color`、`button_text_color`、`button_border_color`、`button_hover_background_color`、`button_hover_text_color`、`button_hover_border_color`；同时移除六个对应 inline CSS 变量及局部 CSS override。保留 Section `background_color` 与 `text_color`、按钮类型 `button_style`、文案和链接；共享 `craftaurum-cta` 不改。
+- 已同步清理 `templates/page.jewelry-rings.json` 与 `templates/page.section-showcase.json` 中 12 个过时的局部按钮颜色配置值，不改页面其余内容。
+- 额外读取 Showcase 所列 17 类自建 Section：**17/17 均不再含有局部按钮 `--button-*` 配色覆盖，也没有 Section 专属的按钮色配置字段**。全局按钮实际来源可见 `assets/base.css` 的一级/二级按钮颜色与 Hover 样式。
+- 当前已验证 JSON Schema 可解析、Section 实例旧字段已清理、GitHub 提交成功；尚未运行 Shopify CLI Theme Check 或 Shopify 真实前台的不同背景/正常/Hover/文字链接视觉验收。
