@@ -21,7 +21,7 @@
         "quote_label": "Get B2B Quote",
         "quote_url": "shopify://pages/contact",
         "catalog_label": "Request Catalog",
-        "catalog_url": "shopify://pages/all-jewelry-collections",
+        "catalog_url": "shopify://pages/contact",
         "padding_top": 40,
         "padding_bottom": 24,
         "eyebrow_size": 12,
