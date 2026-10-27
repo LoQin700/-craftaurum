@@ -1,0 +1,1063 @@
+/*
+ * Craftaurum custom section visual QA showroom. All sections are independent Theme Editor instances.
+ * Uses existing media bindings from live templates; do not edit the source page instances.
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "blocks": {
+        "heading": {
+          "type": "text",
+          "name": "t:names.title",
+          "settings": {
+            "text": "<h1>{{ closest.page.title }}</h1>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h2",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "page-content": {
+          "type": "page-content",
+          "settings": {
+            "text_color": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "page-content"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 40,
+        "padding-block-end": 80
+      }
+    },
+    "brand_partners": {
+      "type": "brand-partners",
+      "blocks": {
+        "partner_yMQpe9": {
+          "type": "partner",
+          "settings": {
+            "image": "shopify://shop_images/Wholesale_Jewelry_Partner.jpg"
+          }
+        },
+        "partner_T9B8aG": {
+          "type": "partner",
+          "settings": {
+            "image": "shopify://shop_images/Wholesale_Jewelry_Partner-001.jpg"
+          }
+        },
+        "partner_bnyXfW": {
+          "type": "partner",
+          "settings": {
+            "image": "shopify://shop_images/Wholesale_Jewelry_Partner-002.jpg"
+          }
+        },
+        "partner_iED7tj": {
+          "type": "partner",
+          "settings": {
+            "image": "shopify://shop_images/Wholesale_Jewelry_Partner-003.jpg"
+          }
+        },
+        "partner_RidH9m": {
+          "type": "partner",
+          "settings": {
+            "image": "shopify://shop_images/Wholesale_Jewelry_Partner-004.jpg"
+          }
+        },
+        "partner_zmpKU4": {
+          "type": "partner",
+          "settings": {
+            "image": "shopify://shop_images/Wholesale_Jewelry_Partner-005.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "partner_yMQpe9",
+        "partner_T9B8aG",
+        "partner_bnyXfW",
+        "partner_iED7tj",
+        "partner_RidH9m",
+        "partner_zmpKU4"
+      ],
+      "name": "01 · 图片轮播",
+      "settings": {
+        "heading": "01 | Trusted by Jewelry Partners Worldwide",
+        "description": "<p>At Craftaurum, we work with jewelry brands and industry partners to bring thoughtful designs and reliable craftsmanship to life. We value long-term collaboration, consistent quality, and solutions tailored to each partner.</p>",
+        "disclaimer": "Selected partnerships are shown. Additional collaborations remain confidential under NDA.",
+        "autoplay": true,
+        "autoplay_speed": 3,
+        "padding_top": 40,
+        "padding_bottom": 20,
+        "mobile_columns": 1,
+        "mobile_layout": "carousel",
+        "heading_size": 35,
+        "body_size": 16,
+        "disclaimer_size": 13,
+        "animation_style": "fade-up"
+      }
+    },
+    "image_text": {
+      "type": "image-text-feature",
+      "name": "02 · Custom Initial & Name Jewelry",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "02 | Custom Initial & Name Jewelry",
+        "heading_size": 35,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "animation_style": "fade-in",
+        "heading_position": "top",
+        "subtitle": "",
+        "top_label": "",
+        "top_url": "",
+        "top_button_style": "button",
+        "body": "<p>Initials and names give customers a simple way to make everyday jewelry their own. Explore letter pendants, nameplate necklaces, monogram charms and coordinated bracelet or earring designs for your next collection.</p><p>We can discuss letterform direction, size, metal choices, surface finishes and stone accents, then develop samples to evaluate proportions and wearability before production.</p>",
+        "image": "shopify://shop_images/custom-inital-necklace.jpg",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "cta_label": "Explore Initial Jewelry Development",
+        "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button-unstyled",
+        "padding_top": 80,
+        "padding_bottom": 24
+      }
+    },
+    "collection_grid": {
+      "type": "image-collection-grid",
+      "blocks": {
+        "cat_fashion": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Fashion Jewelry",
+            "image": "shopify://shop_images/custom-fashion-jewelry.jpg",
+            "collection": "",
+            "link": ""
+          }
+        },
+        "cat_rings": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Rings",
+            "image": "shopify://shop_images/rings.jpg",
+            "collection": "",
+            "link": ""
+          }
+        },
+        "cat_earrings": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Earrings",
+            "image": "shopify://shop_images/gold-earrings.jpg",
+            "collection": "",
+            "link": ""
+          }
+        },
+        "cat_necklace": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Necklace",
+            "image": "shopify://shop_images/nameplate-necklace.jpg",
+            "collection": "",
+            "link": ""
+          }
+        },
+        "cat_bracelets": {
+          "type": "card",
+          "settings": {
+            "title": "Custom Bracelets",
+            "image": "shopify://shop_images/chain-bracelets.jpg",
+            "collection": "",
+            "link": ""
+          }
+        },
+        "cat_artisanal": {
+          "type": "card",
+          "settings": {
+            "title": "Artisanal Jewelry",
+            "image": "shopify://shop_images/French-jewelry-700x441.jpg",
+            "collection": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "cat_fashion",
+        "cat_rings",
+        "cat_earrings",
+        "cat_necklace",
+        "cat_bracelets",
+        "cat_artisanal"
+      ],
+      "name": "03 · 分类图片展示",
+      "settings": {
+        "section_width": "page-width",
+        "heading": "03 | What We Can Produce",
+        "description": "<p>Explore the jewelry categories we can develop for brand and wholesale projects, from core commercial styles to more expressive artisanal concepts.</p>",
+        "background_color": "{{ settings.color_palette.background }}",
+        "desktop_columns": 3,
+        "desktop_layout": "grid",
+        "mobile_columns": 2,
+        "mobile_layout": "grid",
+        "overlay_opacity": 20,
+        "gap": 16,
+        "padding_top": 48,
+        "padding_bottom": 48,
+        "heading_size": 35,
+        "body_size": 16,
+        "card_title_size": 18,
+        "animation_style": "soft-zoom"
+      }
+    },
+    "jewelry_banner": {
+      "type": "jewelry-collections-overview",
+      "name": "04 · 图文横幅",
+      "settings": {
+        "section_width": "page-width",
+        "use_background": true,
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "eyebrow": "CUSTOM PEARL JEWELRY",
+        "heading": "04 | Pearl Jewelry Manufacturer",
+        "introduction": "<p>Craftaurum develops custom pearl jewelry for brands seeking refined combinations of pearls, precious-metal components and polished finishing. From pearl earrings and necklaces to rings, bracelets and complete jewelry sets, each project can be developed around your collection direction and target market.</p><p>We support design refinement, material matching, sampling and production for custom pearl jewelry programs.</p>",
+        "hero_image": "shopify://shop_images/custom-pearl-jewelry-set.jpg",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "quote_label": "Contact Jewelry Factory",
+        "quote_url": "shopify://pages/contact",
+        "catalog_label": "",
+        "catalog_url": "",
+        "eyebrow_size": 12,
+        "heading_size": 60,
+        "body_size": 16,
+        "animation_style": "fade-up",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "horizontal_cta": {
+      "type": "horizontal-cta",
+      "name": "05 · 横向 CTA",
+      "settings": {
+        "section_width": "full-width",
+        "heading": "05 | From design concept to custom jewelry production.",
+        "description": "<p>One clear process, developed around the needs of your collection.</p>",
+        "button_label": "Discover Our Process",
+        "button_link": "",
+        "button_style": "button-secondary",
+        "background_color": "#17191a",
+        "text_color": "#f8f7f4",
+        "button_background_color": "#17191a",
+        "button_text_color": "#f8f7f4",
+        "button_border_color": "#f8f7f4",
+        "button_hover_background_color": "#c7a85e",
+        "button_hover_text_color": "#17191a",
+        "button_hover_border_color": "#c7a85e",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "heading_size": 35,
+        "body_size": 16,
+        "animation_style": "fade-in"
+      }
+    },
+    "content_cards": {
+      "type": "content-cards",
+      "blocks": {
+        "freshwater": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/a8509173812c547063c6df216b4d3919.jpg",
+            "title": "Freshwater Pearl",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "akoya": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/f239cf2d780175c81147a326018ebaf6.jpg",
+            "title": "Akoya Pearl",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "southsea": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/4f98aa08719b4977f14b6cf0b49c848a.jpg",
+            "title": "South Sea Pearl",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "tahitian": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/62738a10a411c7ff9dc4d5298d5f92f5.jpg",
+            "title": "Tahitian Pearl",
+            "description": "",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "freshwater",
+        "akoya",
+        "southsea",
+        "tahitian"
+      ],
+      "name": "06 · 图文卡片",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "intro_style": "style_2",
+        "show_divider": true,
+        "divider_color": "#d8d5ce",
+        "intro_button_label": "",
+        "intro_button_link": "",
+        "intro_button_style": "button",
+        "eyebrow": "",
+        "heading": "06 | Different Types of Pearl We Use",
+        "description": "<p>Pearl type, size, shape, luster and color can all influence the final design direction. We match pearl selection to the intended product, metal finish and collection positioning.</p>",
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 16,
+        "card_title_size": 18,
+        "card_body_size": 14,
+        "animation_style": "soft-zoom",
+        "desktop_layout": "grid",
+        "desktop_columns": "4",
+        "mobile_layout": "carousel",
+        "mobile_columns": "1",
+        "image_ratio": "square",
+        "image_width": 20,
+        "card_text_alignment": "center",
+        "gap": 0,
+        "row_gap": 36,
+        "padding_top": 64,
+        "padding_bottom": 72
+      }
+    },
+    "interactive_feature": {
+      "type": "interactive-feature",
+      "blocks": {
+        "matching": {
+          "type": "item",
+          "settings": {
+            "title": "Jewelry Design Matching",
+            "description": "<p>Match pearl size, shape, color and luster with the metal structure, finish and overall design so the two materials work together as one piece.</p>",
+            "image": "shopify://shop_images/custom-design-jewelry.jpg"
+          }
+        },
+        "processing": {
+          "type": "item",
+          "settings": {
+            "title": "Metal Jewelry Processing",
+            "description": "<p>Prepare and finish the metal components through forming, setting, polishing and plating so pearls can be securely integrated into the approved design.</p>",
+            "image": "shopify://shop_images/jewelry-manufacturer.jpg"
+          }
+        },
+        "inspection": {
+          "type": "item",
+          "settings": {
+            "title": "Quality Inspection and Finishing",
+            "description": "<p>Review pearl condition, attachment security, metal surface, setting quality and overall consistency before the finished jewelry is approved.</p>",
+            "image": "shopify://shop_images/jewelry-checking.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "matching",
+        "processing",
+        "inspection"
+      ],
+      "name": "07 · 交互图文",
+      "settings": {
+        "layout_mode": "interactive",
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "intro_style": "style_2",
+        "heading": "07 | Learn Our Process of Custom Pearl Jewelry Manufacture",
+        "description": "<p>Three key stages help align the pearl, metal construction and final finish throughout development and production.</p>",
+        "heading_size": 35,
+        "body_size": 16,
+        "item_title_size": 20,
+        "item_body_size": 15,
+        "visual_height_mode": "match_text",
+        "visual_height": 520,
+        "animation_style": "fade-up",
+        "desktop_columns": 4,
+        "mobile_columns": "2",
+        "gap": 24,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "icon_with_text": {
+      "type": "icon-with-text",
+      "blocks": {
+        "craft": {
+          "type": "item",
+          "settings": {
+            "icon": "star",
+            "icon_color": "#c7a85e",
+            "title": "Unparalleled Craftsmanship",
+            "description": "<p>Each piece is developed with attention to construction, finishing and the small details that shape the final result.</p>"
+          }
+        },
+        "tailored": {
+          "type": "item",
+          "settings": {
+            "icon": "ruler",
+            "icon_color": "#c7a85e",
+            "title": "Tailored Solutions",
+            "description": "<p>From concept through production planning, development is shaped around the design direction and practical needs of your brand.</p>"
+          }
+        },
+        "quality": {
+          "type": "item",
+          "settings": {
+            "icon": "check_box",
+            "icon_color": "#c7a85e",
+            "title": "Strict Quality Standards",
+            "description": "<p>Material, construction and finish details are reviewed against the agreed project specifications before production approval.</p>"
+          }
+        },
+        "collaboration": {
+          "type": "item",
+          "settings": {
+            "icon": "chat_bubble",
+            "icon_color": "#c7a85e",
+            "title": "Clear Collaboration",
+            "description": "<p>Clear communication and review points keep both sides aligned throughout development, sampling and production.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "craft",
+        "tailored",
+        "quality",
+        "collaboration"
+      ],
+      "name": "08 · 图标文字",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "style_preset": "centered",
+        "icon_position": "top",
+        "icon_size": 32,
+        "icon_gap": 16,
+        "column_gap": 32,
+        "eyebrow": "WHY WORK WITH CRAFTAURUM",
+        "heading": "08 | OEM Jewellery Manufacturing Support",
+        "description": "<p>A practical OEM partnership depends on craftsmanship, customization, clear standards and open communication throughout the project.</p>",
+        "desktop_columns": "4",
+        "mobile_columns": "1",
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 15,
+        "item_title_size": 18,
+        "animation_style": "fade-in"
+      }
+    },
+    "image_cards": {
+      "type": "image-cards",
+      "blocks": {
+        "plated": {
+          "type": "card",
+          "settings": {
+            "link": "",
+            "title": "Plated Jewelry",
+            "description": "<p>Plating colors and surface finishes tailored to the look of your collection.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom",
+            "image": "shopify://shop_images/plated-jewelry-2.jpg"
+          }
+        },
+        "render3d": {
+          "type": "card",
+          "settings": {
+            "link": "",
+            "title": "3D Render",
+            "description": "<p>Refine proportion, structure and key details before physical sampling.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom",
+            "image": "shopify://shop_images/3d-render-1.jpg"
+          }
+        },
+        "stone": {
+          "type": "card",
+          "settings": {
+            "link": "",
+            "title": "Stone Setting & Making",
+            "description": "<p>Develop setting directions around the structure and visual balance of the piece.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom",
+            "image": "shopify://shop_images/gemstone-setting-400x400.jpg"
+          }
+        },
+        "silver": {
+          "type": "card",
+          "settings": {
+            "link": "",
+            "title": "Custom Sterling Silver Jewelry",
+            "description": "<p>Develop silver-led collections around your own design, finish and brand direction.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom",
+            "image": "shopify://shop_images/custom-sterling-silver-jewelry-3.jpg"
+          }
+        },
+        "gold": {
+          "type": "card",
+          "settings": {
+            "link": "",
+            "title": "Custom Gold Jewelry",
+            "description": "<p>Build refined gold jewelry concepts around proportion, craftsmanship and finishing.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom",
+            "image": "shopify://shop_images/custom-gold-jewelry-2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "plated",
+        "render3d",
+        "stone",
+        "silver",
+        "gold"
+      ],
+      "name": "09 · 图片卡片",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#ffffff",
+        "accent_color": "#c7a85e",
+        "heading": "09 | Custom Jewelry Capabilities",
+        "description": "<p>Focused development capabilities for custom collections, from digital refinement to finishing and production.</p>",
+        "layout_style": "showcase",
+        "desktop_columns": 3,
+        "mobile_columns": "1",
+        "mobile_layout": "carousel",
+        "image_ratio": "landscape",
+        "gap": 20,
+        "overlay_opacity": 45,
+        "content_padding": 24,
+        "padding_top": 72,
+        "padding_bottom": 72,
+        "heading_size": 35,
+        "body_size": 16,
+        "card_title_size": 22,
+        "card_body_size": 15,
+        "animation_style": "soft-zoom"
+      }
+    },
+    "process_cards": {
+      "type": "process-cards",
+      "name": "10 · 流程卡片",
+      "blocks": {
+        "communication": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/NDA-4.jpg",
+            "title": "Communication",
+            "description": "<p>Share references, requirements and product direction.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "design": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/custom-design-jewelry.jpg",
+            "title": "Design",
+            "description": "<p>Refine shape, proportion, texture and key details.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "rendering": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/3d-render-1.jpg",
+            "title": "3D Rendering",
+            "description": "<p>Review structure and proportion digitally before sampling.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "sampling": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/jewelry-design.jpg",
+            "title": "Sampling",
+            "description": "<p>Check the physical product, construction, fit and finish.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "production": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/jewelry-manufacturer.jpg",
+            "title": "Production",
+            "description": "<p>Move into production based on the approved sample.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        },
+        "delivery": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/delivery.jpg",
+            "title": "Delivery",
+            "description": "<p>Complete final review, packing and shipment coordination.</p>",
+            "button_label": "",
+            "button_style": "button-unstyled",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "communication",
+        "design",
+        "rendering",
+        "sampling",
+        "production",
+        "delivery"
+      ],
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "{{ settings.color_palette.color3 }}",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "eyebrow": "",
+        "heading": "10 | High End Jewelry Manufacturing Process",
+        "description": "<p>Six clear stages from first discussion to finished production.</p>",
+        "desktop_columns": "3",
+        "mobile_layout": "carousel",
+        "mobile_columns": "1",
+        "image_ratio": "landscape",
+        "image_width": 100,
+        "card_text_alignment": "left",
+        "gap": 24,
+        "padding_top": 76,
+        "padding_bottom": 76,
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 16,
+        "card_title_size": 20,
+        "card_body_size": 15,
+        "animation_style": "fade-up"
+      }
+    },
+    "image_gallery": {
+      "type": "image-gallery",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/custom-inital-necklace.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/nameplate-necklace.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/custom-letters-jewelry.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/nameplate-necklace.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "name": "11 · Custom Initial & Name Jewelry Gallery",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "animation_style": "fade-in",
+        "desktop_layout": "grid",
+        "desktop_columns": 4,
+        "mobile_layout": "grid",
+        "mobile_columns": 2,
+        "image_ratio": "square",
+        "gap": 16,
+        "padding_top": 0,
+        "padding_bottom": 80
+      }
+    },
+    "overlap_image_text": {
+      "type": "overlap-image-text",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pearls-necklace.jpg",
+            "image_ratio": "portrait",
+            "width": 58,
+            "rotation": -4,
+            "z_index": 1
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pearl-materials.jpg",
+            "image_ratio": "portrait",
+            "width": 54,
+            "rotation": 4,
+            "z_index": 2
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2"
+      ],
+      "name": "12 · 叠层图文",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "image_position": "left",
+        "desktop_layout": "overlap",
+        "mobile_layout": "slider",
+        "visual_height": 560,
+        "overlap_amount": 28,
+        "visual_aria_label": "Pearl jewelry and pearl material imagery",
+        "text_alignment": "left",
+        "eyebrow": "PEARL JEWELRY FOR BRANDS",
+        "eyebrow_size": 12,
+        "heading": "12 | Expand Your Business with Pearl Jewelry",
+        "heading_size": 35,
+        "body": "<p>Pearl jewelry continues to hold a strong position across premium, bridal, gifting and fashion-led collections. By combining pearl selection with custom metal components, plating and stone-setting details, brands can develop pearl jewelry with a distinct visual identity.</p><p>Craftaurum supports sampling and scalable production for custom pearl jewelry collections.</p>",
+        "body_size": 16,
+        "button_label": "Start Your Pearl Jewelry Business",
+        "button_link": "shopify://pages/contact",
+        "button_style": "button-unstyled",
+        "animation_style": "soft-zoom",
+        "column_gap": 64,
+        "padding_top": 72,
+        "padding_bottom": 76
+      }
+    },
+    "why_choose": {
+      "type": "why-choose-craftaurum",
+      "blocks": {
+        "craftsmanship": {
+          "type": "item",
+          "settings": {
+            "title": "Refined Craftsmanship",
+            "description": "<p>Thoughtful detailing across initials, settings, engraving and jewelry finishes.</p>"
+          }
+        },
+        "solutions": {
+          "type": "item",
+          "settings": {
+            "title": "Tailored Solutions",
+            "description": "<p>Adapt motifs, metals, stones and design variations to your brand’s direction.</p>"
+          }
+        },
+        "quality": {
+          "type": "item",
+          "settings": {
+            "title": "Quality Control",
+            "description": "<p>Review proportions, finishes and final appearance through sample approval and production coordination.</p>"
+          }
+        },
+        "collaboration": {
+          "type": "item",
+          "settings": {
+            "title": "Clear Collaboration",
+            "description": "<p>Bring sketches, inspiration or technical references and develop next steps together.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "craftsmanship",
+        "solutions",
+        "quality",
+        "collaboration"
+      ],
+      "name": "13 · Why Choose Craftaurum",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "line_color": "#d8d5ce",
+        "heading": "13 | Why Choose Craftaurum for Personalized Jewelry?",
+        "heading_size": 35,
+        "description": "<p>Personalized collections call for considered design, consistent production and clear collaboration as you develop multiple variations for your customers.</p>",
+        "body_size": 16,
+        "item_title_size": 20,
+        "item_body_size": 15,
+        "desktop_columns": "4",
+        "mobile_columns": "1",
+        "animation_style": "fade-up",
+        "padding_top": 88,
+        "padding_bottom": 96
+      }
+    },
+    "content_guide": {
+      "type": "content-guide",
+      "blocks": {
+        "moq": {
+          "type": "item",
+          "settings": {
+            "value": "",
+            "heading": "Flexible MOQ",
+            "description": "<p>Plan seasonal launches with quantities that fit your test order, launch scale and replenishment strategy.</p>",
+            "meta_label": "",
+            "meta_value": ""
+          }
+        },
+        "gemstone": {
+          "type": "item",
+          "settings": {
+            "value": "",
+            "heading": "Gemstone Options",
+            "description": "<p>Develop with zircon, moissanite, natural stones and other stone directions according to the design.</p>",
+            "meta_label": "",
+            "meta_value": ""
+          }
+        },
+        "plating": {
+          "type": "item",
+          "settings": {
+            "value": "",
+            "heading": "Plating Options",
+            "description": "<p>Choose gold, rose gold, rhodium and other finishing directions for different seasonal aesthetics.</p>",
+            "meta_label": "",
+            "meta_value": ""
+          }
+        },
+        "materials": {
+          "type": "item",
+          "settings": {
+            "value": "",
+            "heading": "Material Choices",
+            "description": "<p>Work across sterling silver, solid gold and suitable plated constructions based on collection positioning.</p>",
+            "meta_label": "",
+            "meta_value": ""
+          }
+        },
+        "delivery": {
+          "type": "item",
+          "settings": {
+            "value": "",
+            "heading": "Delivery Planning",
+            "description": "<p>Coordinate sampling, production and shipping around the fixed launch window of your seasonal campaign.</p>",
+            "meta_label": "",
+            "meta_value": ""
+          }
+        },
+        "budget": {
+          "type": "item",
+          "settings": {
+            "value": "",
+            "heading": "Budget Planning",
+            "description": "<p>Balance design, material, finish and order quantity to build a collection around the target retail price.</p>",
+            "meta_label": "",
+            "meta_value": ""
+          }
+        }
+      },
+      "block_order": [
+        "moq",
+        "gemstone",
+        "plating",
+        "materials",
+        "delivery",
+        "budget"
+      ],
+      "name": "14 · 内容指南",
+      "settings": {
+        "section_width": "page-width",
+        "animation_style": "fade-in",
+        "background_color": "#ffffff",
+        "line_color": "#d8d5ce",
+        "hover_background_color": "#f8f7f4",
+        "item_padding_inline": 12,
+        "intro_alignment": "center",
+        "eyebrow": "SEASONAL DEVELOPMENT",
+        "eyebrow_size": 12,
+        "eyebrow_color": "#c7a85e",
+        "heading": "14 | Seasonal Jewelry Customization Options",
+        "heading_size": 35,
+        "heading_color": "#17191a",
+        "description": "",
+        "description_size": 16,
+        "description_color": "#5f615e",
+        "show_index": true,
+        "item_alignment": "left",
+        "item_title_size": 19,
+        "item_title_color": "#17191a",
+        "item_body_size": 15,
+        "item_body_color": "#4f514e",
+        "value_size": 12,
+        "value_color": "#c7a85e",
+        "meta_size": 12,
+        "meta_color": "#5f615e",
+        "item_image_shape": "square",
+        "item_image_size": 88,
+        "value_suffix": "",
+        "feature_image": "shopify://shop_images/OEM-JEWELLERY.jpg",
+        "feature_image_ratio": "landscape",
+        "feature_alignment": "left",
+        "feature_heading": "Built Around Your Seasonal Launch",
+        "feature_title_size": 22,
+        "feature_title_color": "#17191a",
+        "feature_body": "<p>Seasonal jewelry has a fixed selling window. We coordinate design development, sampling, production and delivery around the date your collection needs to be ready.</p>",
+        "feature_body_size": 15,
+        "feature_body_color": "#4f514e",
+        "column_gap": 64,
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "festival_intro": {
+      "type": "festival-intro",
+      "blocks": {
+        "christmas": {
+          "type": "button",
+          "settings": {
+            "label": "Christmas Jewelry",
+            "link": ""
+          }
+        },
+        "halloween": {
+          "type": "button",
+          "settings": {
+            "label": "Halloween Jewelry",
+            "link": ""
+          }
+        },
+        "thanksgiving": {
+          "type": "button",
+          "settings": {
+            "label": "Thanksgiving Gift",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "christmas",
+        "halloween",
+        "thanksgiving"
+      ],
+      "name": "15 · Festival Intro",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#ffffff",
+        "text_color": "#17191a",
+        "accent_color": "#c7a85e",
+        "heading": "15 | Festival Jewelry Start Exploring",
+        "heading_size": 35,
+        "description": "<p>Seasonal jewelry gives brands and retailers a timely way to refresh collections around key shopping moments. Craftaurum supports custom and wholesale development for Christmas, Halloween, Thanksgiving and Black Friday programs, helping you prepare distinctive pieces around your audience, price point and launch schedule.</p>",
+        "body_size": 16,
+        "animation_style": "soft-zoom",
+        "padding_top": 56,
+        "padding_bottom": 68
+      }
+    },
+    "editorial_contact": {
+      "type": "editorial-contact",
+      "name": "16 · 联系表单 - Editorial",
+      "settings": {
+        "section_width": "page-width",
+        "background_color": "#f8f7f4",
+        "text_color": "#17191a",
+        "eyebrow": "START A PERSONALIZED COLLECTION",
+        "eyebrow_size": 12,
+        "heading": "16 | Bring Your Personalized Jewelry Ideas to Life",
+        "heading_size": 35,
+        "description": "<p>Tell us about the personalization styles, materials, reference designs and quantities you have in mind. We’ll discuss the next steps for your collection.</p>",
+        "body_size": 16,
+        "phone_required": false,
+        "animation_style": "fade-up",
+        "padding_top": 104,
+        "padding_bottom": 104
+      }
+    }
+  },
+  "order": [
+    "main",
+    "brand_partners",
+    "image_text",
+    "collection_grid",
+    "jewelry_banner",
+    "horizontal_cta",
+    "content_cards",
+    "interactive_feature",
+    "icon_with_text",
+    "image_cards",
+    "process_cards",
+    "image_gallery",
+    "overlap_image_text",
+    "why_choose",
+    "content_guide",
+    "festival_intro",
+    "editorial_contact"
+  ]
+}
