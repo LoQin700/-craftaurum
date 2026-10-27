@@ -89,84 +89,50 @@
       }
     },
     "tarnish_intro": {
-      "type": "section",
+      "type": "custom-richtext",
       "blocks": {
-        "heading": {
-          "type": "text",
+        "title": {
+          "type": "title",
           "settings": {
-            "text": "<h2>How to Keep Your Jewelry from Tarnish?</h2><p>Plating and protective finishing are two common directions for improving the surface appearance and wear performance of sterling silver jewelry.</p>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "text_color": "#17191a",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "heading": "How to Keep Your Jewelry from Tarnish?",
+            "heading_tag": "h2"
+          }
         },
-        "button": {
-          "type": "button",
+        "body": {
+          "type": "body",
           "settings": {
-            "label": "Get A Quote",
-            "link": "shopify://pages/contact",
-            "open_in_new_tab": false,
-            "style_class": "button",
-            "custom_button_background": "{{ settings.color_palette.foreground }}",
-            "custom_button_text": "{{ settings.color_palette.background }}",
-            "custom_button_border": "{{ settings.color_palette.background }}",
-            "link_text_color": "",
-            "width": "fit-content",
-            "custom_width": 100,
-            "width_mobile": "fit-content",
-            "custom_width_mobile": 100
-          },
-          "blocks": {}
+            "body": "<p>Plating and protective finishing are two common directions for improving the surface appearance and wear performance of sterling silver jewelry.</p>"
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "label_1": "Get A Quote",
+            "link_1": "shopify://pages/contact",
+            "style_1": "button"
+          }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "title",
+        "body",
+        "buttons"
       ],
-      "name": "抗氧化介绍",
+      "name": "自定义富文本",
       "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 18,
         "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "background_media": "none",
+        "layout_style": "stacked",
+        "alignment": "center",
+        "content_width": 1060,
+        "heading_size": 35,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
         "background_color": "#ffffff",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_color": "",
-        "border_radius": 0,
-        "padding-block-start": 48,
-        "padding-block-end": 32
+        "text_color": "#17191a",
+        "animation_style": "fade-up",
+        "padding_top": 48,
+        "padding_bottom": 32
       }
     },
     "gold_plated_tarnish": {
@@ -266,65 +232,41 @@
       }
     },
     "showcase_intro": {
-      "type": "section",
+      "type": "custom-richtext",
       "blocks": {
-        "heading": {
-          "type": "text",
+        "title": {
+          "type": "title",
           "settings": {
-            "text": "<h2>Showcase of Custom Silver Jewelry</h2><p>Explore sterling silver jewelry across rings, earrings, necklaces, pendants and bracelets.</p>",
-            "width": "100%",
-            "max_width": "normal",
-            "alignment": "center",
-            "type_preset": "rte",
-            "font": "var(--font-body--family)",
-            "font_size": "1rem",
-            "line_height": "normal",
-            "letter_spacing": "normal",
-            "case": "none",
-            "wrap": "pretty",
-            "text_color": "#17191a",
-            "background": false,
-            "background_color": "#00000026",
-            "corner_radius": 0,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {}
+            "heading": "Showcase of Custom Silver Jewelry",
+            "heading_tag": "h2"
+          }
+        },
+        "body": {
+          "type": "body",
+          "settings": {
+            "body": "<p>Explore sterling silver jewelry across rings, earrings, necklaces, pendants and bracelets.</p>"
+          }
         }
       },
       "block_order": [
-        "heading"
+        "title",
+        "body"
       ],
-      "name": "银饰展示标题",
+      "name": "自定义富文本",
       "settings": {
-        "content_direction": "column",
-        "vertical_on_mobile": true,
-        "horizontal_alignment": "flex-start",
-        "vertical_alignment": "center",
-        "align_baseline": false,
-        "horizontal_alignment_flex_direction_column": "center",
-        "vertical_alignment_flex_direction_column": "center",
-        "gap": 18,
         "section_width": "page-width",
-        "section_height": "",
-        "section_height_custom": 50,
-        "background_media": "none",
+        "layout_style": "stacked",
+        "alignment": "center",
+        "content_width": 1060,
+        "heading_size": 35,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
         "background_color": "#ffffff",
-        "video_position": "cover",
-        "background_image_position": "cover",
-        "toggle_overlay": false,
-        "overlay_color": "#00000026",
-        "overlay_style": "solid",
-        "gradient_direction": "to top",
-        "border": "none",
-        "border_width": 1,
-        "border_opacity": 100,
-        "border_color": "",
-        "border_radius": 0,
-        "padding-block-start": 48,
-        "padding-block-end": 32
+        "text_color": "#17191a",
+        "animation_style": "fade-up",
+        "padding_top": 48,
+        "padding_bottom": 32
       }
     },
     "silver_showcase_rows": {
@@ -571,7 +513,7 @@
     },
     "contact": {
       "type": "editorial-contact",
-      "name": "联系表单 - Editorial",
+      "name": "分栏联系表单",
       "settings": {
         "section_width": "page-width",
         "eyebrow": "START A SILVER PROJECT",
