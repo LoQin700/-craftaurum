@@ -43,7 +43,81 @@
         "reflection_opacity": 75,
         "padding-block-start": 100,
         "padding-block-end": 72
-      }
+      },
+      "blocks": {
+        "home_title": {
+          "type": "text",
+          "name": "t:names.heading",
+          "settings": {
+            "text": "<p>OEM / ODM Custom Jewelry Manufacturing</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "font": "var(--font-heading--family)",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "#FFFFFF",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "type_preset": "h1",
+            "font_size": "3.5rem"
+          },
+          "blocks": {}
+        },
+        "home_lead": {
+          "type": "text",
+          "name": "t:names.text",
+          "settings": {
+            "text": "<p>Develop sterling silver, gold and customized jewelry for your brand, from design planning and samples to production coordination.</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "font": "var(--font-body--family)",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "#FFFFFF",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "type_preset": "paragraph",
+            "font_size": "1rem"
+          },
+          "blocks": {}
+        },
+        "home_quote": {
+          "type": "button",
+          "name": "t:names.button",
+          "settings": {
+            "label": "Request a Quote",
+            "link": "shopify://pages/contact",
+            "open_in_new_tab": false,
+            "style_class": "button-secondary",
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fit-content",
+            "custom_width_mobile": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "home_title",
+        "home_lead",
+        "home_quote"
+      ]
     },
     "brand_partners_BGpjWX": {
       "type": "brand-partners",
@@ -284,14 +358,525 @@
         "padding_top": 0,
         "padding_bottom": 40
       }
+    },
+    "home_techniques": {
+      "type": "image-cards",
+      "name": "图片卡片",
+      "settings": {
+        "section_width": "page-width",
+        "heading": "Craftaurum Jewelry Design & Craft Techniques",
+        "description": "<p>Explore key design and manufacturing considerations, from early models and stone setting to metalworking and finishing. Each project is reviewed against its own requirements.</p>",
+        "image_ratio": "landscape",
+        "overlay_opacity": 48,
+        "gap": 16,
+        "content_padding": 20,
+        "desktop_columns": 4,
+        "layout_style": "uniform",
+        "mobile_columns": "1",
+        "mobile_layout": "carousel",
+        "heading_size": 35,
+        "body_size": 16,
+        "card_title_size": 20,
+        "card_body_size": 14,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_card_title_size": 18,
+        "mobile_card_body_size": 14,
+        "background_color": "#F8F7F4",
+        "heading_color": "#17191A",
+        "body_color": "#17191A",
+        "text_color": "#FFFFFF",
+        "card_body_color": "#FFFFFF",
+        "accent_color": "#C7A85E",
+        "animation_style": "fade-up",
+        "padding_top": 44,
+        "padding_bottom": 52
+      },
+      "blocks": {
+        "finishing": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/polishing.jpg",
+            "link": "shopify://pages/customization",
+            "title": "Surface Finishing",
+            "description": "<p>Discuss polished, satin and textured surface directions to match the look and feel of your collection.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
+          }
+        },
+        "rendering": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/3d-render-1.jpg",
+            "link": "shopify://pages/customization",
+            "title": "Digital Jewelry Design",
+            "description": "<p>Review proportions, stone placement and construction details through design references and suitable digital models.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
+          }
+        },
+        "setting": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/gemstone-setting.jpg",
+            "link": "shopify://pages/customization",
+            "title": "Gemstone Setting",
+            "description": "<p>Explore stone choice and suitable prong, bezel or other setting approaches based on your design.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
+          }
+        },
+        "casting": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/jewelry-manufacturer.jpg",
+            "link": "shopify://pages/customization",
+            "title": "Casting & Assembly",
+            "description": "<p>Consider the forming, casting and assembly stages required for the approved jewelry specification.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
+          }
+        }
+      },
+      "block_order": [
+        "finishing",
+        "rendering",
+        "setting",
+        "casting"
+      ]
+    },
+    "home_manufacturer_intro": {
+      "type": "custom-richtext",
+      "name": "自定义富文本",
+      "settings": {
+        "section_width": "page-width",
+        "anchor_id": "",
+        "layout_style": "stacked",
+        "alignment": "center",
+        "content_width": 1100,
+        "heading_size": 35,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "background_color": "#FFFFFF",
+        "text_color": "#17191a",
+        "animation_style": "fade-up",
+        "padding_top": 46,
+        "padding_bottom": 24
+      },
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading": "Custom Fine Jewelry Manufacturing for Your Brand",
+            "heading_tag": "h2"
+          }
+        },
+        "body": {
+          "type": "body",
+          "settings": {
+            "body": "<p>Craftaurum supports brands and wholesale partners as they develop jewelry collections with thoughtful material choices, design refinements and clear sample specifications. From individual statement pieces to coordinated ranges, each enquiry starts with your style references, target market and project requirements.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "body"
+      ]
+    },
+    "home_customization_banner": {
+      "type": "image-text-feature",
+      "name": "图文介绍",
+      "settings": {
+        "section_width": "page-width",
+        "heading": "Flexible Jewelry Customization for Your Collection",
+        "subtitle": "DESIGN • MATERIALS • GEMSTONES • FINISHING",
+        "body": "<p>Custom jewelry development involves more than selecting a design. Metal choice, stone setting, surface finish and production planning should work together to meet your brand's expectations.</p><p>Tell us about your intended style, materials, quantity and target delivery destination. We can discuss sampling, possible options and the details needed for a tailored quotation.</p>",
+        "show_buttons": true,
+        "top_label": "Explore Customization",
+        "top_url": "shopify://pages/customization",
+        "top_button_style": "button-unstyled",
+        "cta_label": "Request a Catalog",
+        "cta_url": "shopify://pages/contact",
+        "cta_button_style": "button-secondary",
+        "image": "shopify://shop_images/custom-design-jewelry.jpg",
+        "image_position": "right",
+        "image_ratio": "landscape",
+        "heading_position": "content",
+        "heading_tag": "h2",
+        "heading_size": 40,
+        "subtitle_size": 12,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_subtitle_size": 12,
+        "mobile_body_size": 14,
+        "background_color": "#F8F7F4",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "animation_style": "fade-up",
+        "padding_top": 70,
+        "padding_bottom": 66
+      }
+    },
+    "home_options": {
+      "type": "content-cards",
+      "name": "图文卡片",
+      "settings": {
+        "section_width": "page-width",
+        "eyebrow": "CUSTOMIZATION & PRODUCTION",
+        "heading": "Jewelry Customization Options for Your Brand",
+        "description": "<p>From order planning and gemstones to materials, plating and shipping arrangements, we help organize the decisions behind your custom jewelry collection without assuming fixed quantities or lead times.</p>",
+        "intro_button_label": "Discuss Your Requirements",
+        "intro_button_link": "shopify://pages/contact",
+        "intro_button_style": "button-secondary",
+        "image_ratio": "landscape",
+        "image_width": 100,
+        "intro_style": "style_1",
+        "card_text_alignment": "left",
+        "gap": 20,
+        "row_gap": 34,
+        "desktop_columns": "3",
+        "desktop_layout": "grid",
+        "mobile_columns": "1",
+        "mobile_layout": "carousel",
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 16,
+        "card_title_size": 18,
+        "card_body_size": 15,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_card_title_size": 18,
+        "mobile_card_body_size": 14,
+        "background_color": "#FFFFFF",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "show_divider": false,
+        "divider_color": "#D8D5CE",
+        "animation_style": "fade-up",
+        "padding_top": 64,
+        "padding_bottom": 68
+      },
+      "blocks": {
+        "orders": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/jewelry-design.jpg",
+            "title": "Order Quantity & Sampling",
+            "description": "<p>Discuss prototype needs, intended order volumes and design complexity. Minimum quantities and sample costs are assessed per project.</p>",
+            "button_label": "Learn More",
+            "button_style": "button-unstyled",
+            "link": "shopify://pages/contact"
+          }
+        },
+        "gemstones": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/gemstone-setting-400x400.jpg",
+            "title": "Gemstone & Setting Options",
+            "description": "<p>Review suitable gemstones, pearls, simulated stones and setting methods based on the style, structure and target budget.</p>",
+            "button_label": "Learn More",
+            "button_style": "button-unstyled",
+            "link": "shopify://pages/customization"
+          }
+        },
+        "plating": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/plating-jewelry.jpg",
+            "title": "Plating & Surface Finishes",
+            "description": "<p>Explore gold-tone, rose-tone, rhodium or other applicable surface treatments, with specifications confirmed for the selected base metal.</p>",
+            "button_label": "Learn More",
+            "button_style": "button-unstyled",
+            "link": "shopify://pages/gold-plated-jewelry"
+          }
+        },
+        "materials": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/pearl-materials.jpg",
+            "title": "Materials & Metal Choices",
+            "description": "<p>Compare sterling silver, gold and suitable alternative metal constructions with an emphasis on design feasibility and finish.</p>",
+            "button_label": "Learn More",
+            "button_style": "button-unstyled",
+            "link": "shopify://pages/sterling-silver-jewelry"
+          }
+        },
+        "delivery": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/delivery.jpg",
+            "title": "Production & Delivery Planning",
+            "description": "<p>Align sampling approvals, production milestones, packaging and destination requirements before discussing the delivery schedule.</p>",
+            "button_label": "Learn More",
+            "button_style": "button-unstyled",
+            "link": "shopify://pages/contact"
+          }
+        },
+        "budget": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/custom-design-jewelry.jpg",
+            "title": "Budget & Specification Review",
+            "description": "<p>Share target positioning, materials and quantities so design details and quotation options can be evaluated together.</p>",
+            "button_label": "Learn More",
+            "button_style": "button-unstyled",
+            "link": "shopify://pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "orders",
+        "gemstones",
+        "plating",
+        "materials",
+        "delivery",
+        "budget"
+      ]
+    },
+    "home_documentation": {
+      "type": "icon-with-text",
+      "name": "图标文字",
+      "settings": {
+        "section_width": "page-width",
+        "eyebrow": "QUALITY & DOCUMENTATION",
+        "heading": "Material Review, Quality Details & Documentation",
+        "description": "<p>We take a project-specific approach to specifications and quality review. Any certifications or test reports should be verified for the applicable material, product and destination market.</p>",
+        "icon_position": "top",
+        "icon_size": 32,
+        "icon_gap": 16,
+        "background_color": "#F8F7F4",
+        "text_color": "#17191A",
+        "accent_color": "#C7A85E",
+        "style_preset": "centered",
+        "show_divider": true,
+        "column_gap": 28,
+        "desktop_columns": "4",
+        "mobile_columns": "1",
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 16,
+        "item_title_size": 18,
+        "item_body_size": 15,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "mobile_item_title_size": 18,
+        "mobile_item_body_size": 14,
+        "animation_style": "fade-up",
+        "padding_top": 72,
+        "padding_bottom": 72
+      },
+      "blocks": {
+        "specs": {
+          "type": "item",
+          "settings": {
+            "icon": "clipboard",
+            "icon_color": "#C7A85E",
+            "title": "Material Specifications",
+            "description": "<p>Discuss material grade, decorative components and finishes, and agree on the specifications required for your project.</p>"
+          }
+        },
+        "sample": {
+          "type": "item",
+          "settings": {
+            "icon": "eye",
+            "icon_color": "#C7A85E",
+            "title": "Sample & Finish Review",
+            "description": "<p>Review dimensions, settings, workmanship and final appearance against the approved sample before production decisions.</p>"
+          }
+        },
+        "compliance": {
+          "type": "item",
+          "settings": {
+            "icon": "check_box",
+            "icon_color": "#C7A85E",
+            "title": "Market-Specific Requirements",
+            "description": "<p>Regulatory requirements vary by product and sales destination. Request relevant compliance or testing information before making claims.</p>"
+          }
+        },
+        "files": {
+          "type": "item",
+          "settings": {
+            "icon": "chat_bubble",
+            "icon_color": "#C7A85E",
+            "title": "Documentation on Request",
+            "description": "<p>Ask which declarations, reports or supporting documents can be provided for the particular materials and order.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "specs",
+        "sample",
+        "compliance",
+        "files"
+      ]
+    },
+    "home_making_gallery": {
+      "type": "image-gallery",
+      "name": "图片画廊",
+      "settings": {
+        "section_width": "page-width",
+        "heading": "Jewelry Design & Production Highlights",
+        "description": "<p>Explore visual references for design development, jewelry making, setting, finishing and production review. For verified Craftaurum exhibition photos or certificates, request original approved assets before publication.</p>",
+        "button_label": "Explore Customization",
+        "button_style": "button-unstyled",
+        "link": "shopify://pages/customization",
+        "image_ratio": "landscape",
+        "intro_alignment": "center",
+        "gap": 16,
+        "desktop_columns": 3,
+        "desktop_layout": "grid",
+        "mobile_columns": 2,
+        "mobile_layout": "carousel",
+        "heading_size": 35,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "background_color": "#FFFFFF",
+        "animation_style": "fade-in",
+        "padding_top": 60,
+        "padding_bottom": 64
+      },
+      "blocks": {
+        "design": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/jewelry-design.jpg",
+            "caption": "Jewelry design"
+          }
+        },
+        "digital": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3d-render-1.jpg",
+            "caption": "Digital model"
+          }
+        },
+        "stones": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gemstone-setting.jpg",
+            "caption": "Gemstone setting"
+          }
+        },
+        "making": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/jewelry-manufacturer.jpg",
+            "caption": "Jewelry making"
+          }
+        },
+        "finishing": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/polishing.jpg",
+            "caption": "Finishing process"
+          }
+        },
+        "review": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/jewelry-checking.jpg",
+            "caption": "Production review"
+          }
+        }
+      },
+      "block_order": [
+        "design",
+        "digital",
+        "stones",
+        "making",
+        "finishing",
+        "review"
+      ]
+    },
+    "home_inquiry_cta": {
+      "type": "custom-richtext",
+      "name": "自定义富文本",
+      "settings": {
+        "section_width": "full-width",
+        "anchor_id": "",
+        "layout_style": "horizontal",
+        "alignment": "left",
+        "content_width": 1100,
+        "heading_size": 35,
+        "body_size": 16,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "background_color": "#17191A",
+        "text_color": "#F8F7F4",
+        "animation_style": "fade-up",
+        "padding_top": 40,
+        "padding_bottom": 40
+      },
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading": "Build Your Next Jewelry Collection with Craftaurum",
+            "heading_tag": "h2"
+          }
+        },
+        "body": {
+          "type": "body",
+          "settings": {
+            "body": "<p>Share your concepts, reference images, preferred materials and approximate quantities. Our team can review the project brief and discuss the next steps for design, sampling and quotation.</p>"
+          }
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {
+            "label_1": "Start Your Inquiry",
+            "link_1": "#craftaurum-jewelry-inquiry",
+            "style_1": "button-secondary"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "body",
+        "buttons"
+      ]
+    },
+    "home_contact": {
+      "type": "editorial-contact",
+      "name": "分栏联系表单",
+      "settings": {
+        "section_width": "page-width",
+        "eyebrow": "START YOUR CUSTOM JEWELRY PROJECT",
+        "heading": "Tell Us About Your Jewelry Collection",
+        "description": "<p>Describe your jewelry categories, reference designs, preferred materials, approximate quantities and market. We can follow up about design feasibility, sampling and quotation requirements.</p>",
+        "phone_required": false,
+        "background_color": "#F8F7F4",
+        "text_color": "#17191A",
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 16,
+        "mobile_eyebrow_size": 12,
+        "mobile_heading_size": 25,
+        "mobile_body_size": 14,
+        "animation_style": "fade-up",
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
     }
   },
   "order": [
     "hero_jVaWmY",
     "brand_partners_BGpjWX",
+    "home_techniques",
+    "home_manufacturer_intro",
     "image_text_feature_NWRYeQ",
     "image_text_feature_YzURpA",
     "image_collection_grid_home_2",
-    "image_collection_grid_home_3"
+    "image_collection_grid_home_3",
+    "home_customization_banner",
+    "home_options",
+    "home_documentation",
+    "home_making_gallery",
+    "home_inquiry_cta",
+    "home_contact"
   ]
 }
