@@ -1,4 +1,4 @@
-/* Craftaurum template. Image fields use Shopify image_picker; no external reference image URL inputs. */
+/* Shopify template: custom category cards use manual title/image/link only. */
 {
   "sections": {
     "main": {
@@ -154,7 +154,6 @@
           "settings": {
             "title": "Custom Fashion Jewelry",
             "image": "shopify://shop_images/custom-fashion-jewelry.jpg",
-            "collection": "",
             "link": ""
           }
         },
@@ -163,7 +162,6 @@
           "settings": {
             "title": "Custom Rings",
             "image": "shopify://shop_images/rings.jpg",
-            "collection": "",
             "link": ""
           }
         },
@@ -172,7 +170,6 @@
           "settings": {
             "title": "Custom Earrings",
             "image": "shopify://shop_images/gold-earrings.jpg",
-            "collection": "",
             "link": ""
           }
         },
@@ -181,7 +178,6 @@
           "settings": {
             "title": "Custom Necklace",
             "image": "shopify://shop_images/nameplate-necklace.jpg",
-            "collection": "",
             "link": ""
           }
         },
@@ -190,7 +186,6 @@
           "settings": {
             "title": "Custom Bracelets",
             "image": "shopify://shop_images/chain-bracelets.jpg",
-            "collection": "",
             "link": ""
           }
         },
@@ -199,7 +194,6 @@
           "settings": {
             "title": "Artisanal Jewelry",
             "image": "shopify://shop_images/French-jewelry-700x441.jpg",
-            "collection": "",
             "link": ""
           }
         }
