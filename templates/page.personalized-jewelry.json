@@ -1,7 +1,11 @@
 /*
- * Craftaurum Personalized Jewelry. Reference-aligned content structure, original brand copy.
- * Reference images are temporary external URLs only where matching Shopify media is not yet identified.
- * Replace these with licensed Shopify-hosted images in the editor before launch.
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
  */
 {
   "sections": {
@@ -102,14 +106,14 @@
         "top_button_style": "button",
         "body": "<p>Personalized jewelry often marks the moments people remember most. Engagement rings, anniversary gifts, graduation pieces and keepsakes for a new child can all become lasting expressions of connection and personal style.</p><p>Craftaurum helps brands explore custom jewelry sets, meaningful motifs and design details suited to commemorative collections, from initial concepts and material options to samples and finished pieces.</p>",
         "image": "",
+        "external_image_url": "https://www.sunrise-jewel.com/wp-content/uploads/2024/10/custom-personalized-jewelry-set-600x300.webp",
         "image_position": "right",
         "image_ratio": "landscape",
         "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 80,
-        "padding_bottom": 40,
-        "external_image_url": "https://www.sunrise-jewel.com/wp-content/uploads/2024/10/custom-personalized-jewelry-set-600x300.webp"
+        "padding_bottom": 40
       }
     },
     "enamel": {
@@ -132,14 +136,14 @@
         "top_button_style": "button",
         "body": "<p>Enamel adds expressive color to rings, pendants, earrings and other personalized jewelry. Whether your concept uses a subtle accent or vivid multicolor detailing, enamel can bring a distinctive visual identity to a collection.</p><p>We can discuss design feasibility, metal foundations, color placement and finishing considerations as part of a customized jewelry development project.</p>",
         "image": "",
+        "external_image_url": "https://www.sunrise-jewel.com/wp-content/uploads/2024/10/2024-10-25-600x450.webp",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 80,
-        "padding_bottom": 40,
-        "external_image_url": "https://www.sunrise-jewel.com/wp-content/uploads/2024/10/2024-10-25-600x450.webp"
+        "padding_bottom": 40
       }
     },
     "unlock": {
@@ -159,6 +163,58 @@
     },
     "overview": {
       "type": "image-cards",
+      "blocks": {
+        "birthstone": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/Custom-birthstone-jewelry.jpg",
+            "link": "",
+            "title": "Birthstone Jewelry",
+            "description": "<p>Jewelry inspired by birth months and meaningful gemstones.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
+          }
+        },
+        "initial": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/custom-inital-necklace.jpg",
+            "link": "",
+            "title": "Initial Jewelry",
+            "description": "<p>Monograms, nameplates, initials and letter-based design.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
+          }
+        },
+        "zodiac": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/custom-zodiac-jewelry.jpg",
+            "link": "",
+            "title": "Zodiac Jewelry",
+            "description": "<p>Celestial and astrological symbols for personalized series.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
+          }
+        },
+        "number": {
+          "type": "card",
+          "settings": {
+            "image": "shopify://shop_images/number-jewelry-1.jpg",
+            "link": "",
+            "title": "Number Jewelry",
+            "description": "<p>Special dates, anniversaries and lucky number motifs.</p>",
+            "horizontal_alignment": "left",
+            "vertical_position": "bottom"
+          }
+        }
+      },
+      "block_order": [
+        "birthstone",
+        "initial",
+        "zodiac",
+        "number"
+      ],
       "name": "Meaningful Jewelry Elements",
       "settings": {
         "section_width": "page-width",
@@ -182,59 +238,7 @@
         "content_padding": 20,
         "padding_top": 32,
         "padding_bottom": 88
-      },
-      "blocks": {
-        "birthstone": {
-          "type": "card",
-          "settings": {
-            "title": "Birthstone Jewelry",
-            "description": "<p>Jewelry inspired by birth months and meaningful gemstones.</p>",
-            "image": "shopify://shop_images/Custom-birthstone-jewelry.jpg",
-            "link": "",
-            "horizontal_alignment": "left",
-            "vertical_position": "bottom"
-          }
-        },
-        "initial": {
-          "type": "card",
-          "settings": {
-            "title": "Initial Jewelry",
-            "description": "<p>Monograms, nameplates, initials and letter-based design.</p>",
-            "image": "shopify://shop_images/custom-inital-necklace.jpg",
-            "link": "",
-            "horizontal_alignment": "left",
-            "vertical_position": "bottom"
-          }
-        },
-        "zodiac": {
-          "type": "card",
-          "settings": {
-            "title": "Zodiac Jewelry",
-            "description": "<p>Celestial and astrological symbols for personalized series.</p>",
-            "image": "shopify://shop_images/custom-zodiac-jewelry.jpg",
-            "link": "",
-            "horizontal_alignment": "left",
-            "vertical_position": "bottom"
-          }
-        },
-        "number": {
-          "type": "card",
-          "settings": {
-            "title": "Number Jewelry",
-            "description": "<p>Special dates, anniversaries and lucky number motifs.</p>",
-            "image": "shopify://shop_images/number-jewelry-1.jpg",
-            "link": "",
-            "horizontal_alignment": "left",
-            "vertical_position": "bottom"
-          }
-        }
-      },
-      "block_order": [
-        "birthstone",
-        "initial",
-        "zodiac",
-        "number"
-      ]
+      }
     },
     "initial": {
       "type": "image-text-feature",
@@ -256,14 +260,14 @@
         "top_button_style": "button",
         "body": "<p>Initial and name jewelry gives customers the ability to wear something distinctly their own. Craftaurum supports brand-led development of initial necklaces, monogram pendants, nameplate necklaces, bracelets and coordinating jewelry sets.</p><p>Discuss your preferred letterforms, metal finish, accent stones, sizing and collection scope with our team. We can help refine the design direction for sampling and planned wholesale quantities.</p>",
         "image": "",
+        "external_image_url": "https://www.sunrise-jewel.com/wp-content/uploads/2024/09/2024-08-28-1-600x452.webp",
         "image_position": "right",
         "image_ratio": "landscape",
         "cta_label": "",
         "cta_url": "",
         "cta_button_style": "button-unstyled",
         "padding_top": 80,
-        "padding_bottom": 40,
-        "external_image_url": "https://www.sunrise-jewel.com/wp-content/uploads/2024/09/2024-08-28-1-600x452.webp"
+        "padding_bottom": 40
       }
     },
     "birthstone": {
@@ -286,14 +290,14 @@
         "top_button_style": "button",
         "body": "<p>Birthstone jewelry gives each piece an emotional connection to a birth month or a personal milestone. For jewelry brands, gemstones create possibilities for seasonal gifting as well as year-round necklaces, earrings, rings and bracelets.</p><p>Explore coordinated styles and gemstone color directions, then discuss practical setting details, available materials and sampling for your intended collection.</p>",
         "image": "shopify://shop_images/Custom-birthstone-jewelry.jpg",
+        "external_image_url": "",
         "image_position": "left",
         "image_ratio": "landscape",
         "cta_label": "Start Your Project",
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-unstyled",
         "padding_top": 80,
-        "padding_bottom": 40,
-        "external_image_url": ""
+        "padding_bottom": 40
       }
     },
     "zodiac": {
@@ -316,14 +320,14 @@
         "top_button_style": "button",
         "body": "<p>Offer customers a personal connection to their astrological sign through zodiac symbols, constellation details and celestial jewelry designs. Motifs can be translated into necklaces, pendants, charms, bracelets and earrings.</p><p>Craftaurum can work with your artwork to develop a consistent visual language across the twelve signs and explore additional customization through engraving, lettering or gemstone details.</p>",
         "image": "shopify://shop_images/custom-zodiac-jewelry.jpg",
+        "external_image_url": "",
         "image_position": "right",
         "image_ratio": "landscape",
         "cta_label": "Contact Us",
         "cta_url": "shopify://pages/contact",
         "cta_button_style": "button-unstyled",
         "padding_top": 80,
-        "padding_bottom": 40,
-        "external_image_url": ""
+        "padding_bottom": 40
       }
     },
     "initial_gallery": {
@@ -332,24 +336,18 @@
         "image_1": {
           "type": "image",
           "settings": {
-            "caption": "Custom Initial Necklace",
-            "image_alt": "Custom Initial Necklace",
             "image": "shopify://shop_images/custom-inital-necklace.jpg"
           }
         },
         "image_2": {
           "type": "image",
           "settings": {
-            "caption": "Nameplate Necklace",
-            "image_alt": "Nameplate Necklace",
             "image": "shopify://shop_images/nameplate-necklace.jpg"
           }
         },
         "image_3": {
           "type": "image",
           "settings": {
-            "caption": "Custom Letters Jewelry",
-            "image_alt": "Custom Letters Jewelry",
             "image": "shopify://shop_images/custom-letters-jewelry.jpg"
           }
         }
@@ -363,6 +361,9 @@
       "settings": {
         "section_width": "page-width",
         "background_color": "#ffffff",
+        "heading": "",
+        "description": "",
+        "button_label": "",
         "animation_style": "fade-in",
         "desktop_layout": "grid",
         "desktop_columns": 3,
@@ -371,10 +372,7 @@
         "image_ratio": "landscape",
         "gap": 16,
         "padding_top": 0,
-        "padding_bottom": 88,
-        "heading": "",
-        "description": "",
-        "button_label": ""
+        "padding_bottom": 88
       }
     },
     "birthstone_gallery": {
@@ -382,33 +380,19 @@
       "blocks": {
         "image_1": {
           "type": "image",
-          "settings": {
-            "caption": "April Birthstone Earrings",
-            "image_alt": "April Birthstone Earrings",
-            "external_image_url": "https://www.sunrise-jewel.com/wp-content/uploads/2024/08/April-birthstone-pendants-1.webp"
-          }
+          "settings": {}
         },
         "image_2": {
           "type": "image",
-          "settings": {
-            "caption": "August Birthstone Necklace",
-            "image_alt": "August Birthstone Necklace",
-            "external_image_url": "https://www.sunrise-jewel.com/wp-content/uploads/2024/08/August-birthstone-rings.webp"
-          }
+          "settings": {}
         },
         "image_3": {
           "type": "image",
-          "settings": {
-            "caption": "September Birthstone Bracelet",
-            "image_alt": "September Birthstone Bracelet",
-            "external_image_url": "https://www.sunrise-jewel.com/wp-content/uploads/2024/08/September-birthstone-rings-1.webp"
-          }
+          "settings": {}
         },
         "image_4": {
           "type": "image",
           "settings": {
-            "caption": "November Birthstone Necklace",
-            "image_alt": "November Birthstone Necklace",
             "image": "shopify://shop_images/November-birthstone-rings-1.jpg"
           }
         }
@@ -423,6 +407,9 @@
       "settings": {
         "section_width": "page-width",
         "background_color": "#f8f7f4",
+        "heading": "",
+        "description": "",
+        "button_label": "",
         "animation_style": "fade-in",
         "desktop_layout": "grid",
         "desktop_columns": 4,
@@ -431,10 +418,7 @@
         "image_ratio": "landscape",
         "gap": 16,
         "padding_top": 0,
-        "padding_bottom": 88,
-        "heading": "",
-        "description": "",
-        "button_label": ""
+        "padding_bottom": 88
       }
     },
     "zodiac_gallery": {
@@ -443,26 +427,16 @@
         "image_1": {
           "type": "image",
           "settings": {
-            "caption": "Aries Jewelry",
-            "image_alt": "Aries Jewelry",
             "image": "shopify://shop_images/Aries-jewelry.jpg"
           }
         },
         "image_2": {
           "type": "image",
-          "settings": {
-            "caption": "Cancer Jewelry",
-            "image_alt": "Cancer Jewelry",
-            "external_image_url": "https://www.sunrise-jewel.com/wp-content/uploads/2024/08/Cancer-Jewelry.webp"
-          }
+          "settings": {}
         },
         "image_3": {
           "type": "image",
-          "settings": {
-            "caption": "Taurus Jewelry",
-            "image_alt": "Taurus Jewelry",
-            "external_image_url": "https://www.sunrise-jewel.com/wp-content/uploads/2024/08/Taurus-Jewelry.webp"
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -474,6 +448,9 @@
       "settings": {
         "section_width": "page-width",
         "background_color": "#ffffff",
+        "heading": "",
+        "description": "",
+        "button_label": "",
         "animation_style": "fade-in",
         "desktop_layout": "grid",
         "desktop_columns": 3,
@@ -482,10 +459,7 @@
         "image_ratio": "landscape",
         "gap": 16,
         "padding_top": 0,
-        "padding_bottom": 88,
-        "heading": "",
-        "description": "",
-        "button_label": ""
+        "padding_bottom": 88
       }
     },
     "services": {
@@ -494,9 +468,9 @@
         "custom_service": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/custom-design-jewelry.jpg",
             "title": "Full Custom Jewelry Service",
             "description": "<p>Develop your own jewelry concepts, finishes and design details with practical support from sampling through production planning.</p>",
-            "image": "shopify://shop_images/custom-design-jewelry.jpg",
             "button_label": "Discuss Your Project",
             "button_style": "button-unstyled",
             "link": "shopify://pages/contact"
@@ -505,9 +479,9 @@
         "materials": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/pearl-materials.jpg",
             "title": "Using High-end Materials",
             "description": "<p>Explore sterling silver, gold, gold-plated constructions and other material directions based on your design and market position.</p>",
-            "image": "shopify://shop_images/pearl-materials.jpg",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -516,9 +490,9 @@
         "casting": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/3d-render-1.jpg",
             "title": "Casting Jewelry & 3D Printed",
             "description": "<p>Bring intricate silhouettes and personalized details into production with design preparation, prototyping and appropriate manufacturing methods.</p>",
-            "image": "shopify://shop_images/3d-render-1.jpg",
             "button_label": "",
             "button_style": "button-unstyled",
             "link": ""
@@ -536,29 +510,29 @@
         "background_color": "#f8f7f4",
         "text_color": "#17191a",
         "accent_color": "#c7a85e",
-        "eyebrow": "OUR MANUFACTURING SERVICES",
-        "heading": "Support for Your Personalized Jewelry Collection",
-        "description": "<p>Explore custom development, material options and practical production support for meaningful jewelry ranges.</p>",
-        "desktop_layout": "grid",
-        "desktop_columns": "3",
-        "mobile_layout": "carousel",
-        "mobile_columns": "1",
-        "image_ratio": "landscape",
-        "gap": 20,
-        "padding_top": 80,
-        "padding_bottom": 88,
         "intro_style": "style_1",
         "show_divider": false,
         "divider_color": "#D8D5CE",
+        "eyebrow": "OUR MANUFACTURING SERVICES",
+        "heading": "Support for Your Personalized Jewelry Collection",
+        "description": "<p>Explore custom development, material options and practical production support for meaningful jewelry ranges.</p>",
         "eyebrow_size": 12,
         "heading_size": 35,
         "body_size": 16,
         "card_title_size": 18,
         "card_body_size": 15,
         "animation_style": "fade-up",
+        "desktop_layout": "grid",
+        "desktop_columns": "3",
+        "mobile_layout": "carousel",
+        "mobile_columns": "1",
+        "image_ratio": "landscape",
         "image_width": 100,
         "card_text_alignment": "left",
-        "row_gap": 36
+        "gap": 20,
+        "row_gap": 36,
+        "padding_top": 80,
+        "padding_bottom": 88
       }
     },
     "contact": {

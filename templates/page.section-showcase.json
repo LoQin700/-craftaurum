@@ -1,6 +1,11 @@
 /*
- * Craftaurum self-built section QA showroom. Each type has its own editable instance.
- * Existing Shopify media paths are intentionally retained from source templates.
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
  */
 {
   "sections": {
@@ -104,19 +109,20 @@
       ],
       "name": "01 · 图片轮播",
       "settings": {
+        "section_width": "page-width",
         "heading": "01 | Trusted by Jewelry Partners Worldwide",
+        "heading_size": 35,
         "description": "<p>At Craftaurum, we work with jewelry brands and industry partners to bring thoughtful designs and reliable craftsmanship to life. We value long-term collaboration, consistent quality, and solutions tailored to each partner.</p>",
+        "body_size": 16,
         "disclaimer": "Selected partnerships are shown. Additional collaborations remain confidential under NDA.",
+        "disclaimer_size": 13,
+        "animation_style": "fade-up",
         "autoplay": true,
         "autoplay_speed": 3,
         "padding_top": 40,
         "padding_bottom": 20,
-        "mobile_columns": 1,
-        "mobile_layout": "carousel",
-        "heading_size": 35,
-        "body_size": 16,
-        "disclaimer_size": 13,
-        "animation_style": "fade-up"
+        "mobile_columns": 2,
+        "mobile_layout": "carousel"
       }
     },
     "image_text": {
@@ -139,6 +145,7 @@
         "top_button_style": "button",
         "body": "<p>Initials and names give customers a simple way to make everyday jewelry their own. Explore letter pendants, nameplate necklaces, monogram charms and coordinated bracelet or earring designs for your next collection.</p><p>We can discuss letterform direction, size, metal choices, surface finishes and stone accents, then develop samples to evaluate proportions and wearability before production.</p>",
         "image": "shopify://shop_images/custom-inital-necklace.jpg",
+        "external_image_url": "",
         "image_position": "right",
         "image_ratio": "landscape",
         "cta_label": "Explore Initial Jewelry Development",
@@ -218,7 +225,11 @@
       "settings": {
         "section_width": "page-width",
         "heading": "03 | What We Can Produce",
+        "heading_size": 35,
         "description": "<p>Explore the jewelry categories we can develop for brand and wholesale projects, from core commercial styles to more expressive artisanal concepts.</p>",
+        "body_size": 16,
+        "card_title_size": 18,
+        "animation_style": "soft-zoom",
         "background_color": "{{ settings.color_palette.background }}",
         "desktop_columns": 3,
         "desktop_layout": "grid",
@@ -227,11 +238,7 @@
         "overlay_opacity": 20,
         "gap": 16,
         "padding_top": 48,
-        "padding_bottom": 48,
-        "heading_size": 35,
-        "body_size": 16,
-        "card_title_size": 18,
-        "animation_style": "soft-zoom"
+        "padding_bottom": 48
       }
     },
     "jewelry_banner": {
@@ -267,7 +274,10 @@
       "settings": {
         "section_width": "full-width",
         "heading": "05 | From design concept to custom jewelry production.",
+        "heading_size": 35,
         "description": "<p>One clear process, developed around the needs of your collection.</p>",
+        "body_size": 16,
+        "animation_style": "fade-in",
         "button_label": "Discover Our Process",
         "button_link": "",
         "button_style": "button-secondary",
@@ -280,10 +290,7 @@
         "button_hover_text_color": "#17191a",
         "button_hover_border_color": "#c7a85e",
         "padding_top": 36,
-        "padding_bottom": 36,
-        "heading_size": 35,
-        "body_size": 16,
-        "animation_style": "fade-in"
+        "padding_bottom": 36
       }
     },
     "content_cards": {
@@ -489,17 +496,17 @@
         "icon_gap": 16,
         "column_gap": 32,
         "eyebrow": "WHY WORK WITH CRAFTAURUM",
+        "eyebrow_size": 12,
         "heading": "08 | OEM Jewellery Manufacturing Support",
+        "heading_size": 35,
         "description": "<p>A practical OEM partnership depends on craftsmanship, customization, clear standards and open communication throughout the project.</p>",
+        "body_size": 15,
+        "item_title_size": 18,
+        "animation_style": "fade-in",
         "desktop_columns": "4",
         "mobile_columns": "1",
         "padding_top": 72,
-        "padding_bottom": 72,
-        "eyebrow_size": 12,
-        "heading_size": 35,
-        "body_size": 15,
-        "item_title_size": 18,
-        "animation_style": "fade-in"
+        "padding_bottom": 72
       }
     },
     "image_cards": {
@@ -508,56 +515,56 @@
         "plated": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/plated-jewelry-2.jpg",
             "link": "",
             "title": "Plated Jewelry",
             "description": "<p>Plating colors and surface finishes tailored to the look of your collection.</p>",
             "horizontal_alignment": "left",
-            "vertical_position": "bottom",
-            "image": "shopify://shop_images/plated-jewelry-2.jpg"
+            "vertical_position": "bottom"
           }
         },
         "render3d": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/3d-render-1.jpg",
             "link": "",
             "title": "3D Render",
             "description": "<p>Refine proportion, structure and key details before physical sampling.</p>",
             "horizontal_alignment": "left",
-            "vertical_position": "bottom",
-            "image": "shopify://shop_images/3d-render-1.jpg"
+            "vertical_position": "bottom"
           }
         },
         "stone": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/gemstone-setting-400x400.jpg",
             "link": "",
             "title": "Stone Setting & Making",
             "description": "<p>Develop setting directions around the structure and visual balance of the piece.</p>",
             "horizontal_alignment": "left",
-            "vertical_position": "bottom",
-            "image": "shopify://shop_images/gemstone-setting-400x400.jpg"
+            "vertical_position": "bottom"
           }
         },
         "silver": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/custom-sterling-silver-jewelry-3.jpg",
             "link": "",
             "title": "Custom Sterling Silver Jewelry",
             "description": "<p>Develop silver-led collections around your own design, finish and brand direction.</p>",
             "horizontal_alignment": "left",
-            "vertical_position": "bottom",
-            "image": "shopify://shop_images/custom-sterling-silver-jewelry-3.jpg"
+            "vertical_position": "bottom"
           }
         },
         "gold": {
           "type": "card",
           "settings": {
+            "image": "shopify://shop_images/custom-gold-jewelry-2.jpg",
             "link": "",
             "title": "Custom Gold Jewelry",
             "description": "<p>Build refined gold jewelry concepts around proportion, craftsmanship and finishing.</p>",
             "horizontal_alignment": "left",
-            "vertical_position": "bottom",
-            "image": "shopify://shop_images/custom-gold-jewelry-2.jpg"
+            "vertical_position": "bottom"
           }
         }
       },
@@ -576,6 +583,11 @@
         "accent_color": "#c7a85e",
         "heading": "09 | Custom Jewelry Capabilities",
         "description": "<p>Focused development capabilities for custom collections, from digital refinement to finishing and production.</p>",
+        "heading_size": 35,
+        "body_size": 16,
+        "card_title_size": 22,
+        "card_body_size": 15,
+        "animation_style": "soft-zoom",
         "layout_style": "showcase",
         "desktop_columns": 3,
         "mobile_columns": "1",
@@ -585,17 +597,11 @@
         "overlay_opacity": 45,
         "content_padding": 24,
         "padding_top": 72,
-        "padding_bottom": 72,
-        "heading_size": 35,
-        "body_size": 16,
-        "card_title_size": 22,
-        "card_body_size": 15,
-        "animation_style": "soft-zoom"
+        "padding_bottom": 72
       }
     },
     "process_cards": {
       "type": "process-cards",
-      "name": "10 · 流程卡片",
       "blocks": {
         "communication": {
           "type": "step",
@@ -672,6 +678,7 @@
         "production",
         "delivery"
       ],
+      "name": "10 · 流程卡片",
       "settings": {
         "section_width": "page-width",
         "background_color": "{{ settings.color_palette.color3 }}",
@@ -680,6 +687,12 @@
         "eyebrow": "",
         "heading": "10 | High End Jewelry Manufacturing Process",
         "description": "<p>Six clear stages from first discussion to finished production.</p>",
+        "eyebrow_size": 12,
+        "heading_size": 35,
+        "body_size": 16,
+        "card_title_size": 20,
+        "card_body_size": 15,
+        "animation_style": "fade-up",
         "desktop_columns": "3",
         "mobile_layout": "carousel",
         "mobile_columns": "1",
@@ -688,13 +701,7 @@
         "card_text_alignment": "left",
         "gap": 24,
         "padding_top": 76,
-        "padding_bottom": 76,
-        "eyebrow_size": 12,
-        "heading_size": 35,
-        "body_size": 16,
-        "card_title_size": 20,
-        "card_body_size": 15,
-        "animation_style": "fade-up"
+        "padding_bottom": 76
       }
     },
     "image_gallery": {
@@ -735,6 +742,14 @@
       "settings": {
         "section_width": "page-width",
         "background_color": "#ffffff",
+        "intro_alignment": "left",
+        "heading": "",
+        "heading_size": 35,
+        "description": "",
+        "body_size": 16,
+        "button_label": "",
+        "button_style": "button-unstyled",
+        "link": "",
         "animation_style": "fade-in",
         "desktop_layout": "grid",
         "desktop_columns": 4,
@@ -1021,6 +1036,21 @@
         "padding_bottom": 68
       }
     },
+    "text_heading": {
+      "type": "text-heading",
+      "name": "17 · 标题说明",
+      "settings": {
+        "section_width": "page-width",
+        "heading": "17 | Editorial Heading & Introduction",
+        "heading_size": 35,
+        "description": "<p>Use this compact heading section to introduce a new jewelry manufacturing topic, product range or inquiry area.</p>",
+        "body_size": 16,
+        "animation_style": "fade-up",
+        "anchor_id": "section-heading-demo",
+        "padding_top": 48,
+        "padding_bottom": 24
+      }
+    },
     "editorial_contact": {
       "type": "editorial-contact",
       "name": "16 · 联系表单 - Editorial",
@@ -1038,21 +1068,6 @@
         "animation_style": "fade-up",
         "padding_top": 104,
         "padding_bottom": 104
-      }
-    },
-    "text_heading": {
-      "type": "text-heading",
-      "name": "17 · 标题说明",
-      "settings": {
-        "section_width": "page-width",
-        "heading": "17 | Editorial Heading & Introduction",
-        "heading_size": 35,
-        "description": "<p>Use this compact heading section to introduce a new jewelry manufacturing topic, product range or inquiry area.</p>",
-        "body_size": 16,
-        "animation_style": "fade-up",
-        "anchor_id": "section-heading-demo",
-        "padding_top": 48,
-        "padding_bottom": 24
       }
     }
   },
