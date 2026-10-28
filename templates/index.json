@@ -16,7 +16,7 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<p>OEM / ODM Custom Jewelry Manufacturing</p>",
+            "text": "<h1>OEM / ODM Custom Jewelry Manufacturing</h1>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
